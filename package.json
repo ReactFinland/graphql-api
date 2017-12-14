@@ -1,0 +1,24 @@
+{
+  "name": "@react-finland/graphql-api",
+  "version": "0.0.0",
+  "private": true,
+  "description": "React Finland GraphQL API",
+  "main": "./src",
+  "scripts": {
+    "format": "prettier ./src/**/{*.js,*.json} --write",
+    "test": "node tests/smoke.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ReactFinland/graphql-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ReactFinland/graphql-api/issues"
+  }
+}
