@@ -1,9 +1,5 @@
 *.log
-.antwar
 .eslintcache
-.idea
-books/
 build/
 node_modules/
-styles-old
-yarn.lock
+logs/
