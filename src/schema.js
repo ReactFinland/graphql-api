@@ -25,7 +25,8 @@ const typeDefs = `
     photo: String!,
     homepage: String,
     twitter: String,
-    github: String
+    github: String,
+    linkedin: String
   }
 
   type Schedule {
@@ -44,6 +45,11 @@ function generateQueries() {
   const ret = {};
 
   Object.keys(content2018).forEach(k => {
+    // Skip enums
+    if (k === "enums") {
+      return;
+    }
+
     ret[k] = () => Object.values(content2018[k]);
   });
 
