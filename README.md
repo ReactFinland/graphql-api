@@ -23,6 +23,10 @@ To see the query API:
         description
       }
     }
+  },
+  tickets {
+    name
+    link
   }
 }
 ```

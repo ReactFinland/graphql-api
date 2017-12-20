@@ -1,7 +1,7 @@
 // @flow
 const express = require("express");
 const graphql = require("express-graphql");
-const schema = require("./schema");
+const schema = require("@react-finland/content-2018/src/schema");
 
 function createRouter() {
   const router = new express.Router();
