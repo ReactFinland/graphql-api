@@ -13,6 +13,7 @@ To see the query API:
 {
   speakers {
     name
+    keywords
   },
   schedules {
     day,
