@@ -11,6 +11,12 @@ To see the query API:
 
 ```graphql
 {
+  partners {
+    name
+  }
+  organizers {
+    name
+  }
   speakers {
     name
     keywords
