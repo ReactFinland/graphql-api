@@ -18,6 +18,12 @@ You can access images through `http://localhost:3000/graphql-2018/images`. Examp
   }
   organizers {
     name
+    location {
+      country {
+        name
+        code
+      }
+    }
   }
   speakers {
     name
