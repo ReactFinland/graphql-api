@@ -1,4 +1,5 @@
 // @flow
+const path = require("path");
 const express = require("express");
 const graphql = require("express-graphql");
 const { makeExecutableSchema } = require("graphql-tools");
@@ -22,6 +23,18 @@ function createRouter() {
         },
       }),
     })
+  );
+
+  router.use(
+    "/graphql-2018/images",
+    express.static(
+      path.resolve(
+        __dirname,
+        "..",
+        "node_modules",
+        "@react-finland/content-2018/images"
+      )
+    )
   );
 
   return router;
