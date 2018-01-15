@@ -22,7 +22,7 @@
     "url": "https://github.com/ReactFinland/graphql-api/issues"
   },
   "dependencies": {
-    "@react-finland/content-2018": "^9.0.7",
+    "@react-finland/content-2018": "^9.0.8",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
     "express": "^4.16.2",
