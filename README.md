@@ -28,6 +28,11 @@ You can access images through `http://localhost:3000/graphql-2018/images`. Examp
   speakers {
     name
     keywords
+    presentations {
+      day
+      title
+      description
+    }
   },
   schedules {
     day,
