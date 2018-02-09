@@ -13,6 +13,11 @@ You can access images through `http://localhost:3000/graphql-2018/images`. Examp
 
 ```graphql
 {
+  pages {
+    id
+    title
+    description
+  }
   partners {
     name
   }
