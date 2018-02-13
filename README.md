@@ -53,5 +53,8 @@ You can access images through `http://localhost:3000/graphql-2018/images`. Examp
     name
     link
   }
+  page(id: "about") {
+    intro
+  }
 }
 ```
