@@ -17,9 +17,11 @@ function createRouter() {
     })
   );
 
+  const calendarFile = "calendar-2018.ics";
   router.all(
-    "/calendar-2018.ics",
+    `/${calendarFile}`,
     calendar({
+      filename: calendarFile,
       title: "React Finland 2018",
       location: "Valkoinen Sali, Aleksanterinkatu, Helsinki, Finland",
       schedules: content.schedules,
