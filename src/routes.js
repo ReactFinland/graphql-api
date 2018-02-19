@@ -2,11 +2,14 @@
 const path = require("path");
 const express = require("express");
 const graphql = require("express-graphql");
+const cors = require("cors");
 const { schema, content } = require("@react-finland/content-2018");
 const calendar = require("./calendar");
 
 function createRouter() {
   const router = new express.Router();
+
+  router.use(cors());
 
   router.all(
     "/graphql-2018",

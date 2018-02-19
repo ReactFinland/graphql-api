@@ -25,6 +25,7 @@
     "@react-finland/content-2018": "^12.0.3",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
     "graphql": "^0.13.1",
