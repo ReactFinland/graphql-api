@@ -3,12 +3,15 @@ const path = require("path");
 const express = require("express");
 const graphql = require("express-graphql");
 const cors = require("cors");
+const { redirectToHTTPS } = require("express-http-to-https");
 const { schema, content } = require("@react-finland/content-2018");
+
 const calendar = require("./calendar");
 
 function createRouter() {
   const router = new express.Router();
 
+  router.use(redirectToHTTPS([/localhost:(\d{4})/]));
   router.use(cors());
 
   router.all(
