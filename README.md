@@ -58,3 +58,13 @@ You can access images through `http://localhost:3000/graphql-2018/images`. Examp
   }
 }
 ```
+
+## Notes
+
+The API has been connected to the site using a webhook so that it builds whenever the API changes:
+
+```
+heroku webhooks:add -i api:build -l notify -u https://api.netlify.com/build_hooks/<get this from netlify> --appName react-finland-api
+```
+
+See also [Heroku documentation on webhooks](https://devcenter.heroku.com/articles/app-webhooks).
