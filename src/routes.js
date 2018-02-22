@@ -16,8 +16,8 @@ const herokuClient = new Heroku({ token: process.env.HEROKU_API_TOKEN });
 function createRouter() {
   const router = new express.Router();
 
-  router.use(redirectToHTTPS([/localhost:(\d{4})/]));
   router.use(cors());
+  router.use(redirectToHTTPS([/localhost:(\d{4})/]));
 
   router.all(
     "/graphql-2018",
