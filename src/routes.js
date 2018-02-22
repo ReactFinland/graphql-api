@@ -60,7 +60,7 @@ function createRouter() {
       "sha256=" +
       crypto
         .createHmac("sha256", process.env.SECRET)
-        .update(req.body)
+        .update(JSON.stringify(req.body))
         .digest("hex");
     const signature = req.get("x-npm-signature");
 
