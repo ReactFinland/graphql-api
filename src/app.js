@@ -2,7 +2,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const compression = require("compression");
-const { json } = require("body-parser");
+const { json, raw } = require("body-parser");
 const logger = require("./logger");
 const createRouter = require("./routes");
 
@@ -11,6 +11,9 @@ const createApp = () => {
 
   // Use compression (gzip) for responses.
   app.use(compression());
+
+  // Parse body for POST
+  app.use(raw());
 
   // Automatically decode json.
   app.use(json());

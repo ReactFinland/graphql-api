@@ -1,4 +1,5 @@
 // @flow
+const crypto = require("crypto");
 const path = require("path");
 const express = require("express");
 const graphql = require("express-graphql");
@@ -53,7 +54,14 @@ function createRouter() {
   router.post("/webhooks/restart-server", (req, res) => {
     const appId = process.env.HEROKU_APP_ID;
     const dynoId = process.env.HEROKU_DYNO_ID;
-    const secret = process.env.SECRET;
+
+    // https://github.com/npm/npm-hook-receiver/blob/master/index.js#L24
+    const secret =
+      "sha256=" +
+      crypto
+        .createHmac("sha256", process.env.SECRET)
+        .update(req.body)
+        .digest("hex");
     const signature = req.get("x-npm-signature");
 
     if (signature === secret) {
