@@ -52,19 +52,31 @@ function createRouter() {
   );
 
   router.post("/webhooks/restart-server", (req, res) => {
+    const body = req.body;
     const appId = process.env.HEROKU_APP_ID;
     const dynoId = process.env.HEROKU_DYNO_ID;
+
+    // Restarting is allowed only on publish
+    if (body.event !== "package:publish") {
+      res.sendStatus(401);
+    }
 
     // https://github.com/npm/npm-hook-receiver/blob/master/index.js#L24
     const secret =
       "sha256=" +
       crypto
         .createHmac("sha256", process.env.SECRET)
-        .update(JSON.stringify(req.body))
+        .update(JSON.stringify(body))
         .digest("hex");
     const signature = req.get("x-npm-signature");
 
+    logger.info(
+      `Trying to restart server with app id ${appId}, dyno id ${dynoId}`
+    );
+
     if (signature === secret) {
+      logger.info("Secret matched to signature, restarting");
+
       herokuClient
         .delete(`/apps/${appId}/dynos/${dynoId}`)
         .then(() => res.sendStatus(200))
