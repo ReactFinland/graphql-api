@@ -13,7 +13,11 @@ const createApp = () => {
   app.use(compression());
 
   // Automatically decode json.
-  app.use(json());
+  app.use(
+    json({
+      limit: "50mb",
+    })
+  );
 
   // Add custom configured logger (morgan through winston).
   app.use(
