@@ -77,7 +77,7 @@ See [wombat documentation for more](https://www.npmjs.com/package/wombat). The [
 The API has been connected to the site using a webhook so that it builds whenever the API changes:
 
 ```
-heroku webhooks:add -i api:app -l notify -u https://api.netlify.com/build_hooks/<get this from netlify> --appName react-finland-api
+heroku webhooks:add -i api:app -l notify -u https://api.netlify.com/build_hooks/<get this from netlify> --app react-finland-api
 ```
 
 See also [Heroku documentation on webhooks](https://devcenter.heroku.com/articles/app-webhooks).
