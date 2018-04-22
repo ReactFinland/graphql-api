@@ -34,7 +34,6 @@ function createRouter() {
     calendar({
       filename: calendarFile,
       title: "React Finland 2018",
-      location: "Valkoinen Sali, Aleksanterinkatu, Helsinki, Finland",
       schedules: content.schedules,
     })
   );
