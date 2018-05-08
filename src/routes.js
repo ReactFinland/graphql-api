@@ -10,6 +10,7 @@ const { schema, content } = require("@react-finland/content-2018");
 
 const calendar = require("./calendar");
 const logger = require("./logger");
+const rebuildSite = require("./rebuild-site");
 
 const herokuClient = new Heroku({ token: process.env.HEROKU_API_TOKEN });
 
@@ -78,7 +79,11 @@ function createRouter() {
 
       herokuClient
         .delete(`/apps/${appId}/dynos/${dynoId}`)
-        .then(() => res.sendStatus(200))
+        .then(() => {
+          rebuildSite(process.env.REBUILD_SITE);
+
+          res.sendStatus(200);
+        })
         .catch(err => {
           logger.error(err);
 
