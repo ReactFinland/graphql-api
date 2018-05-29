@@ -12,7 +12,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^1.12.1"
+    "prettier": "^1.13.2"
   },
   "repository": {
     "type": "git",
@@ -22,8 +22,8 @@
     "url": "https://github.com/ReactFinland/graphql-api/issues"
   },
   "dependencies": {
-    "@react-finland/content-2018": "^12.12.2",
-    "body-parser": "^1.18.2",
+    "@react-finland/content-2018": "^12.32.0",
+    "body-parser": "^1.18.3",
     "compression": "^1.7.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
@@ -34,8 +34,8 @@
     "heroku-client": "^3.0.6",
     "ical-generator": "^0.2.10",
     "morgan": "^1.9.0",
-    "npm": "^5.8.0",
-    "request": "^2.85.0",
+    "npm": "^5.10.0",
+    "request": "^2.87.0",
     "winston": "^2.4.2"
   }
 }
