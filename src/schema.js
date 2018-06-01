@@ -2,14 +2,18 @@ const { makeExecutableSchema } = require("graphql-tools");
 const conferences = require("./conferences");
 const series = require("./conferenceSeries");
 
+function getConference(id) {
+  if (conferences[id]) {
+    return conferences[id].content;
+  } else {
+    throw new Error("Unknown conference");
+  }
+}
+
 const resolvers = {
   Query: {
     conference(root, { id }) {
-      if (conferences[id]) {
-        return conferences[id].content;
-      } else {
-        throw new Error("Unknown conference");
-      }
+      return getConference(id);
     },
     allConferences() {
       return Object.keys(conferences).map(id => conferences[id].content);
@@ -23,6 +27,25 @@ const resolvers = {
     },
     allSeries() {
       return Object.keys(series).map(id => series[id]);
+    },
+    page(root, { conferenceId, id }) {
+      const conference = getConference(conferenceId);
+      return conference.pages.find(({ id: pageId }) => pageId === id);
+    },
+    schedule(root, { conferenceId, day }) {
+      const conference = getConference(conferenceId);
+      return conference.schedules.find(
+        ({ day: scheduleDay }) => scheduleDay === day
+      );
+    },
+    image(root, { conferenceId, image }, { hostname }) {
+      const conference = getConference(conferenceId);
+      return {
+        url: `${hostname}/images/${conferenceId}/${image}`,
+        requirePath: `${conference.packageName}/${
+          conference.staticFilePath
+        }/${image}`,
+      };
     },
   },
   Series: {
@@ -51,6 +74,9 @@ const typeDefs = `
     allConferences: [Conference!]
     series(id: ID!): Series
     allSeries: [Series!]
+    page(conferenceId: ID!, id: ID!): Page
+    image(conferenceId: ID!, image: String): Image
+    schedule(conferenceId: ID!, day: String!): Schedule
   }
 
   type Series {
@@ -81,7 +107,6 @@ const typeDefs = `
     silverSponsors: [Contact]
     bronzeSponsors: [Contact]
     pages: [Page]
-    page(id: String): Page
     presentations: [Session]
     schedules: [Schedule]
     speakers: [Contact]
@@ -174,6 +199,11 @@ const typeDefs = `
     amount: Int!
     currency: String!
     link: String
+  }
+
+  type Image {
+    url: String!
+    requirePath: String!
   }
 `;
 

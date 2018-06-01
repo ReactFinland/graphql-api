@@ -26,7 +26,7 @@ const createServer = async () => {
   await listen(port);
 
   logger.debug(
-    `Finished booting the server. The API is reachable at http://localhost:${port.toString()}/graphql-2018.`
+    `Finished booting the server. The API is reachable at http://localhost:${port.toString()}/graphql.`
   );
 
   // eslint-disable-line

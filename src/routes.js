@@ -23,11 +23,12 @@ function createRouter() {
 
   router.all(
     "/graphql",
-    graphql({
+    graphql(request => ({
       graphiql: true,
       pretty: true,
       schema: schema,
-    })
+      context: { hostname: getHostname(request) },
+    }))
   );
 
   router.all("/calendar/:id", (req, res) => {
@@ -139,6 +140,14 @@ function createRouter() {
   });
 
   return router;
+}
+
+function getHostname(req) {
+  if (process.env.HEROKU_HOSTNAME) {
+    return process.env.HEROKU_HOSTNAME;
+  } else {
+    return req.protocol + "://" + req.get("host");
+  }
 }
 
 module.exports = createRouter;
