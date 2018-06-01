@@ -24,7 +24,7 @@ function createRouter() {
   router.all(
     "/graphql",
     graphql({
-      graphiql: process.env.NODE_ENV === "development",
+      graphiql: true,
       pretty: true,
       schema: schema,
     })

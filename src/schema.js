@@ -1,5 +1,6 @@
 const { makeExecutableSchema } = require("graphql-tools");
 const conferences = require("./conferences");
+const series = require("./conferenceSeries");
 
 const resolvers = {
   Query: {
@@ -10,16 +11,52 @@ const resolvers = {
         throw new Error("Unknown conference");
       }
     },
-    conferences() {
+    allConferences() {
       return Object.keys(conferences).map(id => conferences[id].content);
+    },
+    series(root, { id }) {
+      if (series[id]) {
+        return series[id];
+      } else {
+        throw new Error("Unknown conference");
+      }
+    },
+    allSeries() {
+      return Object.keys(series).map(id => series[id]);
+    },
+  },
+  Series: {
+    conferences(series) {
+      return series.conferences.map(
+        conferenceId => conferences[conferenceId].content
+      );
+    },
+  },
+  Conference: {
+    series(conference) {
+      const id = conference.id;
+      for (const seriesId of Object.keys(series)) {
+        const oneSeries = series[seriesId];
+        if (oneSeries.conferences.indexOf(id) !== -1) {
+          return oneSeries;
+        }
+      }
     },
   },
 };
 
 const typeDefs = `
   type Query {
-    conference(id: String): Conference
-    conferences: [Conference]
+    conference(id: ID!): Conference
+    allConferences: [Conference!]
+    series(id: ID!): Series
+    allSeries: [Series!]
+  }
+
+  type Series {
+    id: ID!
+    name: String!
+    conferences: [Conference!]
   }
 
   type Conference {
@@ -29,6 +66,7 @@ const typeDefs = `
     packageName: String!
     staticFilePath: String!
     websiteUrl: String!
+    series: Series!
     breakfasts: [Session]
     coffeeBreaks: [Session]
     keynotes: [Session]
