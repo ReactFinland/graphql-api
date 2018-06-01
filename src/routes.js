@@ -6,7 +6,8 @@ const graphql = require("express-graphql");
 const cors = require("cors");
 const Heroku = require("heroku-client");
 const { redirectToHTTPS } = require("express-http-to-https");
-const { schema, content } = require("@react-finland/content-2018");
+const schema = require("./schema");
+const conferences = require("./conferences");
 
 const calendar = require("./calendar");
 const logger = require("./logger");
@@ -21,11 +22,51 @@ function createRouter() {
   router.use(redirectToHTTPS([/localhost:(\d{4})/]));
 
   router.all(
+    "/graphql",
+    graphql({
+      graphiql: process.env.NODE_ENV === "development",
+      pretty: true,
+      schema: schema,
+    })
+  );
+
+  router.all("/calendar/:id", (req, res) => {
+    const conference = conferences[req.params.id];
+    if (conference) {
+      calendar({
+        filename: `calendar-${conference.content.id}`,
+        title: conference.content.name,
+        schedules: conference.content.schedules,
+      })(req, res);
+    } else {
+      res.status(404).end("Not found");
+    }
+  });
+
+  router.use("/images/:id", (req, res, next) => {
+    const conference = conferences[req.params.id];
+    if (conference) {
+      express.static(
+        path.resolve(
+          __dirname,
+          "..",
+          "node_modules",
+          conference.content.packageName,
+          conference.content.staticFilePath
+        )
+      )(req, res, next);
+    } else {
+      res.status(404).end("Not found");
+    }
+  });
+
+  // Deprecated legacy APIs for React Europe 2018
+  router.all(
     "/graphql-2018",
     graphql({
       graphiql: process.env.NODE_ENV === "development",
       pretty: true,
-      schema: schema.executable(),
+      schema: conferences["react-finland-2018"].schema.executable(),
     })
   );
 
@@ -35,7 +76,7 @@ function createRouter() {
     calendar({
       filename: calendarFile,
       title: "React Finland 2018",
-      schedules: content.schedules,
+      schedules: conferences["react-finland-2018"].content.schedules,
     })
   );
 
