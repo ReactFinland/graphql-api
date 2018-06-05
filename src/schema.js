@@ -42,9 +42,6 @@ const resolvers = {
       const conference = getConference(conferenceId);
       return {
         url: `${hostname}/images/${conferenceId}/${image}`,
-        requirePath: `${conference.packageName}/${
-          conference.staticFilePath
-        }/${image}`,
       };
     },
   },
@@ -203,7 +200,6 @@ const typeDefs = `
 
   type Image {
     url: String!
-    requirePath: String!
   }
 `;
 
