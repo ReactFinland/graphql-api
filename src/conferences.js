@@ -1,3 +1,4 @@
 module.exports = {
-  ["react-finland-2018"]: require("@react-finland/content-2018"),
+  ["react-finland-2018"]: require("../content/react-finland-2018"),
+  ["graphql-finland-2018"]: require("../content/graphql-finland-2018"),
 };
