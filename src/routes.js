@@ -46,15 +46,10 @@ function createRouter() {
 
   router.use("/images/:id", (req, res, next) => {
     const conference = conferences[req.params.id];
+    console.log(path.resolve("./content", conference.content.id, "images"));
     if (conference) {
       express.static(
-        path.resolve(
-          __dirname,
-          "..",
-          "node_modules",
-          conference.content.packageName,
-          conference.content.staticFilePath
-        )
+        path.resolve("./content", conference.content.id, "images")
       )(req, res, next);
     } else {
       res.status(404).end("Not found");

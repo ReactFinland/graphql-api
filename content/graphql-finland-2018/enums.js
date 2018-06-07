@@ -8,4 +8,5 @@ module.exports = {
   PRESENTATION: "presentation",
   SILVER_SPONSOR: "silverSponsor",
   SPEAKER: "speaker",
+  WORKSHOP_HOST: "workshop_host",
 };
