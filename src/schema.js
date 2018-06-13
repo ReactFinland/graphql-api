@@ -113,6 +113,7 @@ const resolvers = {
       };
     },
     social(contact) {
+      const social = contact.social;
       const rules = {
         homepage: social.homepage,
         facebook: social.facebook && `https://facebook.com/${social.facebook}`,
