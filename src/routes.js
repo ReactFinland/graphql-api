@@ -27,7 +27,10 @@ function createRouter() {
       graphiql: true,
       pretty: true,
       schema: schema,
-      context: { hostname: getHostname(request) },
+      context: {
+        hostname: getHostname(request),
+        mediaUrl: `${getHostname(request)}/media`,
+      },
     }))
   );
 
@@ -44,16 +47,8 @@ function createRouter() {
     }
   });
 
-  router.use("/images/:id", (req, res, next) => {
-    const conference = conferences[req.params.id];
-    console.log(path.resolve("./content", conference.content.id, "images"));
-    if (conference) {
-      express.static(
-        path.resolve("./content", conference.content.id, "images")
-      )(req, res, next);
-    } else {
-      res.status(404).end("Not found");
-    }
+  router.use("/media/", (req, res, next) => {
+    express.static(path.resolve(__dirname, "../media"))(req, res, next);
   });
 
   // Deprecated legacy APIs for React Europe 2018

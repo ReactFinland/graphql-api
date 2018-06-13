@@ -5,7 +5,7 @@ module.exports = {
   name: "Sara Vieira",
   about:
     "Front-End Developer at @YLDio, open sorcerer, maker of useless modules, Blogger, Drummer and horror movie fan girl.",
-  image: "speakers/sara.jpg",
+  image: "graphql-finland-2018/speakers/sara.jpg",
   social: {
     homepage: "https://iamsaravieira.com/",
     twitter: "NikkitaFTW",

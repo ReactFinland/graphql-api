@@ -3,8 +3,9 @@ const keywords = require("../keywords");
 
 module.exports = {
   name: "Kadi Kraman",
-  about: "",
-  image: "speakers/kadi.jpg",
+  about:
+    "Kadi is a Software Engineer at Formidable, JavaScript enthusiast, believer in open source and a huge fan of sticking JavaScript on every possible platform.",
+  image: "graphql-finland-2018/speakers/kadi.jpg",
   social: {
     twitter: "kadikraman",
     github: "kadikraman",

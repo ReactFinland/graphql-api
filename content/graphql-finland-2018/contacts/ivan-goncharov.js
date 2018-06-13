@@ -5,7 +5,7 @@ module.exports = {
   name: "Ivan Goncharov",
   about:
     "Ivan is very active in GraphQL community and one of the core contributors to graphql-js. He is co-founder of APIs.guru which specializes in API consulting. During last few years they released a bunch of popular GraphQL tools including GraphQL Voyager.",
-  image: "speakers/ivan.jpg",
+  image: "graphql-finland-2018/speakers/ivan.jpg",
   social: {
     homepage: "https://apis.guru/",
     twitter: "@E1Goncharov",

@@ -107,9 +107,9 @@ const resolvers = {
     },
   },
   Contact: {
-    picture(contact, args, { hostname }) {
+    image(contact, args, { mediaUrl }) {
       return {
-        url: `${hostname}/images/${contact.conferenceId}/${contact.image}`,
+        url: `${mediaUrl}/${contact.image}`,
       };
     },
     social(contact) {
@@ -134,6 +134,13 @@ const resolvers = {
       });
 
       return result;
+    },
+  },
+  Location: {
+    image(contact, args, { mediaUrl }) {
+      return {
+        url: `${mediaUrl}/${contact.image}`,
+      };
     },
   },
   // TODO Fix
@@ -295,7 +302,7 @@ const typeDefs = `
   type Contact {
     name: String!
     about: String!
-    picture: Image
+    image: Image
     type: [String]
     social: Social
     keywords: [String]
@@ -320,7 +327,7 @@ const typeDefs = `
   type Location {
     name: String!
     about: String!
-    picture: Image
+    image: Image
     country: Country
     city: String
     address: String
