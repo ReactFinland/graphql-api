@@ -11,4 +11,5 @@ module.exports = {
   REASON: "Reason",
   STATE_MANAGEMENT: "State management",
   SPEC: "GraphQL Specification",
+  PRISMA: "Prisma",
 };

@@ -332,6 +332,7 @@ const typeDefs = `
     country: Country
     city: String
     address: String
+    social: Social
   }
 
   type Country {
