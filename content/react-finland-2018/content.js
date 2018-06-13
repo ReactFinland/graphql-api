@@ -33,9 +33,15 @@ module.exports = {
   id: "react-finland-2018",
   name: "React Finland 2018",
   year: "2018",
-  packageName: "@react-finland/content-2018",
-  staticFilePath: "images",
   websiteUrl: "https://react-finland.fi/",
+
+  contacts: require("./contacts"),
+  sessions: require("./sessions"),
+
+  // Backwards compat
+  _locations: require("./locations"),
+
+  // LEGACY
   breakfasts: require("./breakfasts"),
   coffeeBreaks: require("./coffee-breaks"),
   locations: resolveSocialLinks(require("./locations")),

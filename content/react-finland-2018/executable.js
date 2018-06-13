@@ -8,6 +8,9 @@ function executable() {
     resolvers: {
       Query: generateQueries(),
     },
+    resolverValidationOptions: {
+      allowResolversNotInSchema: true,
+    },
   });
 }
 

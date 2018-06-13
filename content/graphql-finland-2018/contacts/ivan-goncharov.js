@@ -1,4 +1,4 @@
-const enums = require("../enums");
+const enums = require("../../../src/enums");
 const keywords = require("../keywords");
 
 module.exports = {
@@ -19,5 +19,5 @@ module.exports = {
     city: "Lviv",
   },
   keywords: [keywords.GRAPHQL, keywords.GRAPHQLJS],
-  type: [enums.SPEAKER, enums.LIGHTNING],
+  type: [enums.SPEAKER, enums.LIGHTNING_TALK],
 };
