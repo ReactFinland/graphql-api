@@ -234,7 +234,7 @@ const typeDefs = `
     title: String!
     description: String
     keywords: [String]
-    location: Contact
+    location: Location
   }
 
   enum SessionType {
@@ -254,7 +254,7 @@ const typeDefs = `
     title: String!
     description: String
     keywords: [String]
-    location: Contact
+    location: Location
     speakers: [Contact]
     urls: TalkUrls
   }
@@ -266,7 +266,7 @@ const typeDefs = `
     title: String!
     description: String
     keywords: [String]
-    location: Contact
+    location: Location
     speakers: [Contact]
     tickets: [Ticket]
   }
@@ -278,7 +278,7 @@ const typeDefs = `
     title: String!
     description: String
     keywords: [String]
-    location: Contact
+    location: Location
   }
 
   type TalkUrls {
