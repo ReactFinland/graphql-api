@@ -3,10 +3,11 @@ const keywords = require("../keywords");
 
 module.exports = {
   name: "Adam Miskiewicz",
-  about: "Adam is an engineer at Airbnb.",
+  about:
+    "Adam Miskiewicz is a software engineer at Airbnb. Lover of his two dogs, JavaScript, and GraphQL.",
   image: "graphql-finland-2018/speakers/adam.jpg",
   social: {
-    homepage: "http://www.adammiskiewicz.com//",
+    homepage: "http://www.adammiskiewicz.com/",
     twitter: "@skevy",
     github: "skevy",
   },
