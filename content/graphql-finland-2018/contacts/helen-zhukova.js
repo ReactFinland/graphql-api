@@ -4,7 +4,7 @@ const keywords = require("../keywords");
 module.exports = {
   name: "Helen Zhukova",
   about:
-    "Helen creates user interfaces for Web and mobile mainly for live video streaming and video post-production for the movie studios. JavaScript is my first love but I am open to any technologies and skills that make my creations the best look and feel. I am a lifelong learner and I love to share my knowledge.",
+    "Helen creates user interfaces for Web and mobile mainly for live video streaming and video post-production for the movie studios. JavaScript is her first love but she is open to any technologies and skills that give her creations the best look and feel. She is a lifelong learner and loves to share her knowledge.",
   image: "graphql-finland-2018/speakers/helen.jpg",
   social: {
     twitter: "@zhukova_h",
