@@ -9,7 +9,7 @@ module.exports = {
   social: {
     homepage: "https://glennreyes.com/",
     twitter: "@glnnrys",
-    github: "glnnrys",
+    github: "glennreyes",
   },
   location: {
     country: {
