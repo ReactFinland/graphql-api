@@ -13,7 +13,7 @@ module.exports = {
   location: {
     country: {
       name: "UK",
-      code: "UK",
+      code: "GB",
     },
     city: "London",
   },

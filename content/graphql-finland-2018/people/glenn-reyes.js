@@ -14,7 +14,7 @@ module.exports = {
   location: {
     country: {
       name: "Austria",
-      code: "AU",
+      code: "AT",
     },
     city: "Vienna",
   },

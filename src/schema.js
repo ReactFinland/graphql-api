@@ -76,11 +76,16 @@ const resolvers = {
       return conference.bronzeSponsors;
     },
     speakers(conference) {
-      return conference.contacts.filter(
-        ({ type }) =>
-          (type && type.includes(enums.SPEAKER)) ||
-          (type && type.includes(enums.WORKSHOP_HOST))
-      );
+      return conference.contacts
+        .filter(
+          ({ type }) =>
+            (type && type.includes(enums.SPEAKER)) ||
+            (type && type.includes(enums.WORKSHOP_HOST))
+        )
+        .map(contact => ({
+          ...contact,
+          conference,
+        }));
     },
     talks(conference) {
       return conference.sessions.filter(
@@ -123,6 +128,36 @@ const resolvers = {
       });
 
       return result;
+    },
+    country(contact) {
+      if (!contact.country && contact.location) {
+        return contact.location.country;
+      } else {
+        return contact.country;
+      }
+    },
+    city(contact) {
+      if (!contact.city && contact.location) {
+        return contact.location.city;
+      } else {
+        return contact.city;
+      }
+    },
+    talks(contact) {
+      return contact.conference.sessions.filter(
+        ({ type, speakers }) =>
+          (type === enums.LIGHTNING_TALK ||
+            type === enums.TALK ||
+            type === enums.KEYNOTE) &&
+          speakers.find(({ name }) => name === contact.name)
+      );
+    },
+    workshops(contact) {
+      return contact.conference.sessions.filter(
+        ({ type, speakers }) =>
+          type === enums.WORKSHOP &&
+          speakers.find(({ name }) => name === contact.name)
+      );
     },
   },
   Location: {
