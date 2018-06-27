@@ -11,7 +11,7 @@ const conferences = require("./conferences");
 
 const calendar = require("./calendar");
 const logger = require("./logger");
-const rebuildSite = require("./rebuild-site");
+const rebuildSites = require("./rebuild-sites");
 
 const herokuClient = new Heroku({ token: process.env.HEROKU_API_TOKEN });
 
@@ -112,7 +112,7 @@ function createRouter() {
       herokuClient
         .delete(`/apps/${appId}/dynos/${dynoId}`)
         .then(() => {
-          rebuildSite(process.env.REBUILD_SITE);
+          rebuildSites(process.env.REBUILD_SITES);
 
           res.sendStatus(200);
         })

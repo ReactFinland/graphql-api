@@ -1,10 +1,15 @@
 const request = require("request");
 const logger = require("./logger");
 
+// Expects a comma separated string
+function rebuildSites(urls) {
+  urls.split(",").forEach(rebuildSite);
+}
+
 function rebuildSite(url) {
   request.post(url, err => {
     logger.error(err);
   });
 }
 
-module.exports = rebuildSite;
+module.exports = rebuildSites;
