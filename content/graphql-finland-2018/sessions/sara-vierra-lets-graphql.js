@@ -3,7 +3,7 @@ const enums = require("../../../src/enums");
 
 module.exports = {
   type: enums.WORKSHOP,
-  speakers: [require("../contacts/sara-vieira")],
+  speakers: [require("../people/sara-vieira")],
   title: "Let’s Learn GraphQL",
   description: `You signed up for this workshop because you are probably super excited about GraphQL and don’t know where to start.
   That’s exactly why GraphQL Finland has this workshop, so that you can learn some GraphQL before diving into the conference.
