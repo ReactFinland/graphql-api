@@ -3,7 +3,7 @@ const enums = require("../../../src/enums");
 
 module.exports = {
   type: enums.WORKSHOP,
-  speakers: [require("../contacts/nik-graf")],
+  speakers: [require("../people/nik-graf")],
   title: "Advanced GraphQL Concepts",
   description: `You understood the basics of GraphQL or even worked with it in a production environment? Then this workshop is for you. While GraphQL comes with many benefits it also requires some rethinking. For example how to secure your server from malicious queries or how to give different users access to different parts of the Schema.
 
