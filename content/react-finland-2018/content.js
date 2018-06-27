@@ -8,7 +8,7 @@ const organizers = people.filter(({ type }) =>
   type.some(equals(enums.ORGANIZER))
 );
 
-const sponsors = resolveSocialLinks(require("./sponsors"));
+// const sponsors = resolveSocialLinks(require("./sponsors"));
 const workshops = require("./workshops");
 
 const keynotes = talks.filter(({ type }) => type === enums.KEYNOTE);
@@ -16,18 +16,35 @@ const lightningTalks = talks.filter(
   ({ type }) => type === enums.LIGHTNING_TALK
 );
 const presentations = talks.filter(({ type }) => type === enums.PRESENTATION);
-const partners = sponsors.filter(({ type }) =>
-  type.some(equals(enums.PARTNER))
-);
-const goldSponsors = sponsors.filter(({ type }) =>
-  type.some(equals(enums.GOLD_SPONSOR))
-);
-const silverSponsors = sponsors.filter(({ type }) =>
-  type.some(equals(enums.SILVER_SPONSOR))
-);
-const bronzeSponsors = sponsors.filter(({ type }) =>
-  type.some(equals(enums.BRONZE_SPONSOR))
-);
+
+const allSponsors = require("../sponsors");
+const partners = resolveSocialLinks([
+  allSponsors.agentconf,
+  allSponsors.halfstack,
+  allSponsors.reactalicante,
+  allSponsors.reactdayberlin,
+  allSponsors.reactfest,
+  allSponsors.reactnativeeu,
+  allSponsors.reasonconf,
+  allSponsors.survivejs,
+  allSponsors.webexpo,
+]);
+const goldSponsors = resolveSocialLinks([
+  allSponsors.gofore,
+  allSponsors.solita,
+]);
+const silverSponsors = resolveSocialLinks([
+  allSponsors.elisa,
+  allSponsors.motley,
+  allSponsors.nitor,
+]);
+const bronzeSponsors = resolveSocialLinks([
+  allSponsors.alma,
+  allSponsors.geniem,
+  allSponsors.rohea,
+  allSponsors.verkkokauppa,
+]);
+const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
 module.exports = {
   id: "react-finland-2018",
@@ -35,7 +52,7 @@ module.exports = {
   year: "2018",
   websiteUrl: "https://react-finland.fi/",
 
-  contacts: require("./contacts"),
+  contacts: people.concat(sponsors),
   sessions: require("./sessions"),
 
   // Backwards compat

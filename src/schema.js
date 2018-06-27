@@ -56,42 +56,30 @@ const resolvers = {
       }
     },
     organizers(conference) {
-      return conference.contacts.filter(({ type }) =>
-        type.includes(enums.ORGANIZER)
+      return conference.contacts.filter(
+        ({ type }) => type && type.includes(enums.ORGANIZER)
       );
     },
     partners(conference) {
-      return conference.contacts.filter(({ type }) =>
-        type.includes(enums.PARTNER)
-      );
+      return conference.partners;
     },
     sponsors(conference) {
-      return conference.contacts.filter(
-        ({ type }) =>
-          type.includes(enums.GOLD_SPONSOR) ||
-          type.includes(enums.SILVER_SPONSOR) ||
-          type.includes(enums.BRONZE_SPONSOR)
-      );
+      return conference.sponsors;
     },
     goldSponsors(conference) {
-      return conference.contacts.filter(({ type }) =>
-        type.includes(enums.GOLD_SPONSOR)
-      );
+      return conference.goldSponsors;
     },
     silverSponsors(conference) {
-      return conference.contacts.filter(({ type }) =>
-        type.includes(enums.SILVER_SPONSOR)
-      );
+      return conference.silverSponsors;
     },
     bronzeSponsors(conference) {
-      return conference.contacts.filter(({ type }) =>
-        type.includes(enums.BRONZE_SPONSOR)
-      );
+      return conference.bronzeSponsors;
     },
     speakers(conference) {
       return conference.contacts.filter(
         ({ type }) =>
-          type.includes(enums.SPEAKER) || type.includes(enums.WORKSHOP_HOST)
+          (type && type.includes(enums.SPEAKER)) ||
+          (type && type.includes(enums.WORKSHOP_HOST))
       );
     },
     talks(conference) {

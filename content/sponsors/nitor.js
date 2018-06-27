@@ -1,10 +1,7 @@
-const enums = require("../enums");
-
 module.exports = {
   name: "Nitor",
   about: "Digital engineering",
   image: "sponsors/nitor.png",
-  type: [enums.SILVER_SPONSOR],
   social: {
     homepage: "https://www.nitor.com/en",
     facebook: "NitorCreations",

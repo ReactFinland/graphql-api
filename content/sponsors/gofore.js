@@ -1,10 +1,7 @@
-const enums = require("../enums");
-
 module.exports = {
   name: "Gofore",
   about: "We create tomorrow's digital services and work culture today",
   image: "sponsors/gofore.svg",
-  type: [enums.GOLD_SPONSOR],
   social: {
     homepage: "https://gofore.com/en/home/",
     facebook: "GoforeGroup",
