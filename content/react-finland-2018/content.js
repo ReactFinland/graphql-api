@@ -24,6 +24,7 @@ const partners = resolve.socialLinks([
   allSponsors.reactalicante,
   allSponsors.reactdayberlin,
   allSponsors.reactfest,
+  allSponsors.reactjsday,
   allSponsors.reactnativeeu,
   allSponsors.reasonconf,
   allSponsors.survivejs,
