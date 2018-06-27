@@ -1,16 +1,15 @@
-const resolve = require("../resolve");
 const people = require("./people");
 
 const allSponsors = require("../sponsors");
-const partners = resolve.socialLinks([
+const partners = [
   allSponsors.reactdayberlin,
   allSponsors.reactjsday,
   allSponsors.reactnativeeu,
   allSponsors.survivejs,
-]);
-const goldSponsors = resolve.socialLinks([]);
-const silverSponsors = resolve.socialLinks([]);
-const bronzeSponsors = resolve.socialLinks([]);
+];
+const goldSponsors = [];
+const silverSponsors = [];
+const bronzeSponsors = [];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
 module.exports = {

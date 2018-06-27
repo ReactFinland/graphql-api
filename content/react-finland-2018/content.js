@@ -1,7 +1,7 @@
 const resolve = require("../resolve");
 const schedules = require("./schedules");
 const talks = resolve.slideUrls(require("./talks"), schedules);
-const people = resolve.socialLinks(require("./people"));
+const people = require("./people");
 const enums = require("./enums");
 
 const speakers = people.filter(({ type }) => type.some(equals(enums.SPEAKER)));
@@ -18,7 +18,7 @@ const lightningTalks = talks.filter(
 const presentations = talks.filter(({ type }) => type === enums.PRESENTATION);
 
 const allSponsors = require("../sponsors");
-const partners = resolve.socialLinks([
+const partners = [
   allSponsors.agentconf,
   allSponsors.halfstack,
   allSponsors.reactalicante,
@@ -29,22 +29,19 @@ const partners = resolve.socialLinks([
   allSponsors.reasonconf,
   allSponsors.survivejs,
   allSponsors.webexpo,
-]);
-const goldSponsors = resolve.socialLinks([
-  allSponsors.gofore,
-  allSponsors.solita,
-]);
-const silverSponsors = resolve.socialLinks([
+];
+const goldSponsors = [allSponsors.gofore, allSponsors.solita];
+const silverSponsors = [
   allSponsors.elisa,
   allSponsors.motley,
   allSponsors.nitor,
-]);
-const bronzeSponsors = resolve.socialLinks([
+];
+const bronzeSponsors = [
   allSponsors.alma,
   allSponsors.geniem,
   allSponsors.rohea,
   allSponsors.verkkokauppa,
-]);
+];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
 module.exports = {
@@ -62,7 +59,7 @@ module.exports = {
   // LEGACY
   breakfasts: require("./breakfasts"),
   coffeeBreaks: require("./coffee-breaks"),
-  locations: resolve.socialLinks(require("./locations")),
+  locations: require("./locations"),
   keynotes,
   lightningTalks,
   lunches: require("./lunches"),
