@@ -7,8 +7,12 @@ function rebuildSites(urls) {
 }
 
 function rebuildSite(url) {
-  request.post(url, err => {
-    logger.error(err);
+  request.post(url, (err, rest) => {
+    if (err) {
+      logger.error(err);
+    }
+
+    console.log(rest);
   });
 }
 
