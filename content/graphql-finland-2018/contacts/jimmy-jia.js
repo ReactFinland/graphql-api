@@ -8,7 +8,7 @@ module.exports = {
   image: "graphql-finland-2018/speakers/jimmy.jpg",
   social: {
     homepage: "http://www.fashionablenonsense.com/",
-    twitter: "@jimmy_jia",
+    twitter: "jimmy_jia",
     github: "taion",
   },
   location: {

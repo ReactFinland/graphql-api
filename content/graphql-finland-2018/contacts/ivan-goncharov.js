@@ -8,7 +8,7 @@ module.exports = {
   image: "graphql-finland-2018/speakers/ivan.jpg",
   social: {
     homepage: "https://apis.guru/",
-    twitter: "@E1Goncharov",
+    twitter: "E1Goncharov",
     github: "IvanGoncharov",
   },
   location: {
