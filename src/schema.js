@@ -140,11 +140,7 @@ const resolvers = {
     WORKSHOP: "workshop",
   },
   ContactType: {
-    BRONZE_SPONSOR: "bronzeSponsor",
-    GOLD_SPONSOR: "goldSponsor",
     ORGANIZER: "organizer",
-    PARTNER: "partner",
-    SILVER_SPONSOR: "silverSponsor",
     SPEAKER: "speaker",
     LIGHTNING_TALK: "lightningTalk",
     TALK: "talk",
@@ -281,10 +277,6 @@ const typeDefs = `
     LIGHTNING_TALK
     KEYNOTE
     WORKSHOP
-    BRONZE_SPONSOR
-    SILVER_SPONSOR
-    GOLD_SPONSOR
-    PARTNER
     ORGANIZER
   }
 
