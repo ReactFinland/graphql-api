@@ -30,7 +30,6 @@
     "express-http-to-https": "^1.1.4",
     "graphql": "^0.13.2",
     "graphql-tools": "^2.24.0",
-    "heroku-client": "^3.0.6",
     "ical-generator": "^0.2.10",
     "morgan": "^1.9.0",
     "npm": "^5.10.0",
