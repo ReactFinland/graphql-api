@@ -6,6 +6,7 @@ const partners = [
   allSponsors.reactjsday,
   allSponsors.reactnativeeu,
   allSponsors.survivejs,
+  allSponsors.zapier,
 ];
 const goldSponsors = [];
 const silverSponsors = [];

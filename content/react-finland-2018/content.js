@@ -29,6 +29,7 @@ const partners = [
   allSponsors.reasonconf,
   allSponsors.survivejs,
   allSponsors.webexpo,
+  allSponsors.zapier,
 ];
 const goldSponsors = [allSponsors.gofore, allSponsors.solita];
 const silverSponsors = [
