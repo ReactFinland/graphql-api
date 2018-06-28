@@ -7,12 +7,12 @@ function rebuildSites(urls) {
 }
 
 function rebuildSite(url) {
-  request.post(url, (err, rest) => {
+  request.post(url, err => {
     if (err) {
-      logger.error(err);
+      return logger.error(err);
     }
 
-    console.log(rest);
+    logger.info(`rebuilt ${url}`);
   });
 }
 
