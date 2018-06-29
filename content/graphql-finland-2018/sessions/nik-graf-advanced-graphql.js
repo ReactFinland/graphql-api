@@ -20,6 +20,6 @@ Every topic is covered by a 20 minute presentation followed by a hands on exerci
 
 To goal is that by the end of the day you are way more comfortable making design decisions for your GraphQL environment.
 `,
-  keywords: [keywords.GRAPHQL, keywords.REACT],
+  keywords: [keywords.GRAPHQL],
   location: require("../locations/paasitorni"),
 };

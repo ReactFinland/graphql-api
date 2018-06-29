@@ -17,7 +17,7 @@ Here we will cover:
 
 You will leave knowing the basics of GraphQL and ready to enjoy the rest of the conference and build your awesome API’s and Apps using this amazing technology.
 
-This workshop is free. Tickets would be distributed through a diversity ticket program. Ticket will include a free ticket to the actual conference.
+This workshop is free. Tickets would be distributed through a diversity ticket program. Ticket will include a free ticket to the actual conference. [Apply for a diversity ticket](https://diversitytickets.org/events/184).
 `,
   keywords: [
     keywords.GRAPHQL,
