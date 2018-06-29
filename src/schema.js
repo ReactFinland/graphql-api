@@ -30,8 +30,12 @@ const resolvers = {
       return Object.keys(series).map(id => series[id]);
     },
     contact(root, { contactName, conferenceId }) {
-      const conf = getConference(conferenceId);
-      return conf.contacts.find(({ name }) => name === contactName);
+      const conference = getConference(conferenceId);
+
+      return {
+        conference,
+        ...conference.contacts.find(({ name }) => name === contactName),
+      };
     },
   },
   Series: {
