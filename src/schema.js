@@ -29,6 +29,10 @@ const resolvers = {
     allSeries() {
       return Object.keys(series).map(id => series[id]);
     },
+    contact(root, { contactName, conferenceId }) {
+      const conf = getConference(conferenceId);
+      return conf.contacts.find(({ name }) => name === contactName);
+    },
   },
   Series: {
     conferences(series) {
@@ -207,6 +211,7 @@ const typeDefs = `
     allConferences: [Conference!]
     series(id: ID!): Series
     allSeries: [Series!]
+    contact(conferenceId: ID!, contactName: String!): Contact
   }
 
   type Series {
