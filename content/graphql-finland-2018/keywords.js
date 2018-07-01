@@ -5,6 +5,7 @@ module.exports = {
   GRAPHQLJS: "graphql-js",
   CMS: "CMS",
   LEGACY: "Legacy",
+  POSTGRAPHILE: "PostGraphile",
   REACT: "React",
   REACT_NATIVE: "React Native",
   REACT_VR: "React VR",
