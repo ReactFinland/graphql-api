@@ -113,6 +113,13 @@ const resolvers = {
         url: `${mediaUrl}/${contact.image}`,
       };
     },
+    aboutShort(contact) {
+      if (contact.aboutShort) {
+        return contact.aboutShort;
+      } else {
+        return contact.about ? contact.about.split(".")[0] + "." : "";
+      }
+    },
     social(contact) {
       const social = contact.social;
       const rules = {
@@ -327,6 +334,7 @@ const typeDefs = `
   type Contact {
     name: String!
     about: String!
+    aboutShort: String!
     image: Image
     type: [String]
     social: Social
