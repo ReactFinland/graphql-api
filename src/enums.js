@@ -10,4 +10,7 @@ module.exports = {
   SPEAKER: "speaker",
   TALK: "talk",
   WORKSHOP: "workshop",
+  COFFEE_BREAK: "coffee_break",
+  LUNCH: "lunch",
+  BREAKFAST: "breakfast",
 };

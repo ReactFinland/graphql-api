@@ -1,3 +1,4 @@
+const _ = require("lodash");
 const { makeExecutableSchema } = require("graphql-tools");
 const conferences = require("./conferences");
 const series = require("./conferenceSeries");
@@ -182,23 +183,35 @@ const resolvers = {
       };
     },
   },
+  Interval: {
+    sessions(interval) {
+      return (interval.sessions || []).map(session => ({
+        ...session,
+        interval,
+      }));
+    },
+  },
   // TODO Fix
-  SessionType: {
-    KEYNOTE: "keynote",
-    LIGHTNING_TALK: "lightningTalk",
-    TALK: "talk",
-    WORKSHOP: "workshop",
-  },
-  ContactType: {
-    ORGANIZER: "organizer",
-    SPEAKER: "speaker",
-    LIGHTNING_TALK: "lightningTalk",
-    TALK: "talk",
-    WORKSHOP: "workshop",
-  },
+  SessionType: _.pick(enums, [
+    "TALK",
+    "LIGHTNING_TALK",
+    "KEYNOTE",
+    "WORKSHOP",
+    "BREAKFAST",
+    "LUNCH",
+    "COFFEE_BREAK",
+  ]),
+  ContactType: _.pick(enums, [
+    "SPEAKER",
+    "TALK",
+    "LIGHTNING_TALK",
+    "KEYNOTE",
+    "WORKSHOP",
+    "ORGANIZER",
+  ]),
   Session: {
     __resolveType(session) {
-      switch (session.i) {
+      switch (session.type) {
         case enums.TALK:
         case enums.LIGHTNING_TALK:
         case enums.KEYNOTE:
@@ -207,7 +220,7 @@ const resolvers = {
           return "Workshop";
         case enums.BREAKFAST:
         case enums.LUNCH:
-        case COFFEE_BREAK:
+        case enums.COFFEE_BREAK:
           return "Break";
         default:
           return null;
