@@ -20,7 +20,7 @@ module.exports = {
       end: "09:15",
       sessions: [
         {
-          type: enums.LIGHTNING_TALK,
+          type: enums.COFFEE_BREAK,
           title: "Opening ceremonies",
         },
       ],
@@ -31,7 +31,7 @@ module.exports = {
       sessions: [
         {
           type: enums.KEYNOTE,
-          title: "Keynote by mysterious unnannounced speaker",
+          title: "Keynote by Mysterious Unnannounced Speaker",
         },
       ],
     },
