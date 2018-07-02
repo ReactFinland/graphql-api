@@ -1,7 +1,6 @@
-const day = "2018-10-18";
-
 module.exports = {
-  day,
+  day: "2018-10-18",
+  description: "Workshop day",
   intervals: [
     {
       begin: "09:00",

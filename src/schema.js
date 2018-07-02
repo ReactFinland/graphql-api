@@ -266,6 +266,7 @@ const typeDefs = `
 
   type Schedule {
     day: String
+    description: String
     intervals: [Interval]
   }
 
