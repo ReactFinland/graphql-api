@@ -200,6 +200,9 @@ const resolvers = {
     "BREAKFAST",
     "LUNCH",
     "COFFEE_BREAK",
+    "ORGANIZATIONAL",
+    "PANEL",
+    "PARTY",
   ]),
   ContactType: _.pick(enums, [
     "SPEAKER",
@@ -215,12 +218,15 @@ const resolvers = {
         case enums.TALK:
         case enums.LIGHTNING_TALK:
         case enums.KEYNOTE:
+        case enums.ORGANIZATIONAL:
+        case enums.PANEL:
           return "Talk";
         case enums.WORKSHOP:
           return "Workshop";
         case enums.BREAKFAST:
         case enums.LUNCH:
         case enums.COFFEE_BREAK:
+        case enums.PARTY:
           return "Break";
         default:
           return null;
@@ -291,9 +297,12 @@ const typeDefs = `
     LIGHTNING_TALK
     KEYNOTE
     WORKSHOP
+    PANEL
     BREAKFAST
     LUNCH
     COFFEE_BREAK
+    ORGANIZATIONAL
+    PARTY
   }
 
   type Talk implements Session {

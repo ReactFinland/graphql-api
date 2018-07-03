@@ -11,7 +11,8 @@ module.exports = {
         {
           type: enums.BREAKFAST,
           title: "Registration, Finnish breakfast.",
-          description: "Trust me, it's the best.",
+          description:
+            "We are contractually obligated to say that it's the best",
         },
       ],
     },
@@ -20,7 +21,7 @@ module.exports = {
       end: "09:15",
       sessions: [
         {
-          type: enums.COFFEE_BREAK,
+          type: enums.ORGANIZATIONAL,
           title: "Opening ceremonies",
         },
       ],
@@ -31,7 +32,10 @@ module.exports = {
       sessions: [
         {
           type: enums.KEYNOTE,
-          title: "Keynote by Mysterious Unnannounced Speaker",
+          title: "Adopting GraphQL in large codebases",
+          description:
+            "Airbnb has more than 1 million non-node module lines of code. This is a story of how Airbnb adopted GraphQL within the scope of such codebase.",
+          speakers: [require("../people/adam-miskiewicz")],
         },
       ],
     },
@@ -53,7 +57,7 @@ module.exports = {
       sessions: [
         {
           type: enums.COFFEE_BREAK,
-          title: "Break",
+          title: "Relax and practice your Finnish",
         },
       ],
     },
@@ -74,7 +78,7 @@ module.exports = {
       sessions: [
         {
           type: enums.COFFEE_BREAK,
-          title: "Break",
+          title: "Relax and practice your Swedish (please don't)",
         },
       ],
     },
@@ -107,7 +111,7 @@ module.exports = {
       sessions: [
         {
           type: enums.TALK,
-          title: "Unnannounced, but fantastic",
+          title: "Unannounced, but fantastic talk",
           speakers: [require("../people/glenn-reyes")],
         },
       ],
@@ -129,7 +133,7 @@ module.exports = {
       sessions: [
         {
           type: enums.COFFEE_BREAK,
-          title: "Break",
+          title: "Continue relaxing",
         },
       ],
     },
@@ -139,7 +143,7 @@ module.exports = {
       sessions: [
         {
           type: enums.TALK,
-          title: "Unnannounced, but amazing",
+          title: "Unannounced, but amazing talk",
           speakers: [require("../people/eloy-duran")],
         },
       ],
@@ -161,7 +165,7 @@ module.exports = {
       sessions: [
         {
           type: enums.COFFEE_BREAK,
-          title: "Coffee Break",
+          title: "This one even has pastries!",
         },
       ],
     },
@@ -171,7 +175,7 @@ module.exports = {
       sessions: [
         {
           type: enums.TALK,
-          title: "Unnanounced, but mind-blowing",
+          title: "Unanounced, but mind-blowing talk by mystery speaker",
         },
       ],
     },
@@ -201,7 +205,7 @@ module.exports = {
       sessions: [
         {
           type: enums.COFFEE_BREAK,
-          title: "Break",
+          title: "Last one, I promise!",
         },
       ],
     },
@@ -211,8 +215,27 @@ module.exports = {
       sessions: [
         {
           type: enums.KEYNOTE,
-          title: "Adopting GraphQL in large codebases",
-          speakers: [require("../people/adam-miskiewicz")],
+          title: "Unannounced, but inspiring closing keynote",
+        },
+      ],
+    },
+    {
+      begin: "17:15",
+      end: "17:30",
+      sessions: [
+        {
+          type: enums.PANEL,
+          title: "Discussion panel with the speakers",
+        },
+      ],
+    },
+    {
+      begin: "18:00",
+      end: "24:00",
+      sessions: [
+        {
+          type: enums.PARTY,
+          title: "Afterparty and mörkis tomorrow",
         },
       ],
     },

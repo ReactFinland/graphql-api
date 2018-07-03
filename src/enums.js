@@ -13,4 +13,7 @@ module.exports = {
   COFFEE_BREAK: "coffee_break",
   LUNCH: "lunch",
   BREAKFAST: "breakfast",
+  ORGANIZATIONAL: "organizational",
+  PANEL: "panel",
+  PARTY: "party",
 };
