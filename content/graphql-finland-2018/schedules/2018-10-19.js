@@ -85,7 +85,7 @@ no niin (n) - maybe`,
         {
           type: enums.COFFEE_BREAK,
           title: "Break",
-          description: `Relax and practice your Swedish (please don't)
+          description: `Relax and practice your Swedish
 
 Jag talar inte svenska - I don't speak Swedish
 Jag har misslyckats obligatorisk svenska på universitetet - I have failed compulsory Swedish courses at the university`,
