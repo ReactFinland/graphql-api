@@ -57,7 +57,8 @@ module.exports = {
       sessions: [
         {
           type: enums.COFFEE_BREAK,
-          title: "Relax and practice your Finnish",
+          title: "Break",
+          description: "Relax and practice your Finnish",
         },
       ],
     },
@@ -78,7 +79,8 @@ module.exports = {
       sessions: [
         {
           type: enums.COFFEE_BREAK,
-          title: "Relax and practice your Swedish (please don't)",
+          title: "Break",
+          description: "Relax and practice your Swedish (please don't)",
         },
       ],
     },
@@ -133,7 +135,8 @@ module.exports = {
       sessions: [
         {
           type: enums.COFFEE_BREAK,
-          title: "Continue relaxing",
+          title: "Break",
+          description: "Continue relaxing",
         },
       ],
     },
@@ -165,7 +168,8 @@ module.exports = {
       sessions: [
         {
           type: enums.COFFEE_BREAK,
-          title: "This one even has pastries!",
+          title: "Break",
+          description: "This one even has pastries!",
         },
       ],
     },
@@ -205,7 +209,8 @@ module.exports = {
       sessions: [
         {
           type: enums.COFFEE_BREAK,
-          title: "Last one, I promise!",
+          title: "Break",
+          description: "Last one, I promise!",
         },
       ],
     },
@@ -225,7 +230,8 @@ module.exports = {
       sessions: [
         {
           type: enums.PANEL,
-          title: "Discussion panel with the speakers",
+          title: "Panel",
+          description: "Ask your questions and speakers will answer",
         },
       ],
     },
@@ -235,7 +241,9 @@ module.exports = {
       sessions: [
         {
           type: enums.PARTY,
-          title: "Afterparty and mörkis tomorrow",
+          title: "Afterparty",
+          description:
+            "Mörkis (n) - a feeling of regret for what you did at the party last night",
         },
       ],
     },
