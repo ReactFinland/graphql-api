@@ -1,7 +1,7 @@
 const enums = require("../../../src/enums");
 
 module.exports = {
-  day: "2018-10-18",
+  day: "2018-10-19",
   description: "Presentation day",
   intervals: [
     {
@@ -60,10 +60,12 @@ module.exports = {
           title: "Break",
           description: `Relax and practice your Finnish
 
-* kahvi (n) - coffee
-* no niin (n) - yes
-* no niin (n) - no
-* no niin (n) - maybe`,
+<dl  class="glossary">
+  <dt>kahvi</dt><dd>coffee</dd>
+  <dt>no niin</dt><dd>yes</dd>
+  <dt>no niin</dt><dd>no</dd>
+  <dt>no niin</dt><dd>maybe</dd>
+</dl>`,
         },
       ],
     },
@@ -87,8 +89,10 @@ module.exports = {
           title: "Break",
           description: `Relax and practice your Swedish
 
-* Jag talar inte svenska - I don't speak Swedish
-* Jag har misslyckats obligatorisk svenska på universitetet - I have failed compulsory Swedish courses at the university`,
+<dl  class="glossary">
+  <dt>Jag talar inte svenska<dt><dd>I don't speak Swedish</dd>
+  <dt>Jag har misslyckats obligatorisk svenska på universitetet</dt><dd>I have failed compulsory Swedish courses at the university</dd>
+</dl>`,
         },
       ],
     },
@@ -146,9 +150,11 @@ module.exports = {
           title: "Break",
           description: `Continue relaxing
 
-* JavaScript - jässä
-* Python - pewthon
-* Java - yava`,
+<dl class="glossary">
+  <dt>JavaScript</dt><dd>jässä</dd>
+  <dt>Python</dt><dd>pewthon</dd>
+  <dt>Java</dt><dd>yava</dd>
+</dl>`,
         },
       ],
     },
@@ -254,8 +260,12 @@ module.exports = {
         {
           type: enums.PARTY,
           title: "Afterparty",
-          description:
-            "Mörkis (n) - a feeling of regret for what you said or did at the party last night",
+          description: `Last chance to practice your Finnish!
+
+<dl  class="glossary">
+  <dt>Tuopi</dt><dd>a glass of a beverage (beer)</dd>
+  <dt>Mörkkis</dt><dd>a feeling of regret for what you said or did at the party last night</dd>
+</dl>`,
         },
       ],
     },
