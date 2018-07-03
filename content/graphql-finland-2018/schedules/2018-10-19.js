@@ -239,6 +239,7 @@ module.exports = {
         {
           type: enums.KEYNOTE,
           title: "Unannounced, but inspiring closing keynote",
+          speakers: [require("../people/dan-schafer")],
         },
       ],
     },
