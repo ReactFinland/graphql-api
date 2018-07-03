@@ -58,7 +58,12 @@ module.exports = {
         {
           type: enums.COFFEE_BREAK,
           title: "Break",
-          description: "Relax and practice your Finnish",
+          description: `Relax and practice your Finnish
+
+kahvi (n) - coffee
+no niin (n) - yes
+no niin (n) - no
+no niin (n) - maybe`,
         },
       ],
     },
@@ -80,7 +85,10 @@ module.exports = {
         {
           type: enums.COFFEE_BREAK,
           title: "Break",
-          description: "Relax and practice your Swedish (please don't)",
+          description: `Relax and practice your Swedish (please don't)
+
+Jag talar inte svenska - I don't speak Swedish
+Jag har misslyckats obligatorisk svenska på universitetet - I have failed compulsory Swedish courses at the university`,
         },
       ],
     },
@@ -136,7 +144,11 @@ module.exports = {
         {
           type: enums.COFFEE_BREAK,
           title: "Break",
-          description: "Continue relaxing",
+          description: `Continue relaxing
+
+JavaScript - jässä
+Python - pewthon
+Java - yava`,
         },
       ],
     },
@@ -169,7 +181,7 @@ module.exports = {
         {
           type: enums.COFFEE_BREAK,
           title: "Break",
-          description: "This one even has pastries!",
+          description: `This one even has pastries!`,
         },
       ],
     },
