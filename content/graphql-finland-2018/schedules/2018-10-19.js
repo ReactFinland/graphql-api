@@ -243,7 +243,7 @@ module.exports = {
           type: enums.PARTY,
           title: "Afterparty",
           description:
-            "Mörkis (n) - a feeling of regret for what you did at the party last night",
+            "Mörkis (n) - a feeling of regret for what you said or did at the party last night",
         },
       ],
     },
