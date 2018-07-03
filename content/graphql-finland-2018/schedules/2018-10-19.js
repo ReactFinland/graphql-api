@@ -60,10 +60,10 @@ module.exports = {
           title: "Break",
           description: `Relax and practice your Finnish
 
-kahvi (n) - coffee
-no niin (n) - yes
-no niin (n) - no
-no niin (n) - maybe`,
+* kahvi (n) - coffee
+* no niin (n) - yes
+* no niin (n) - no
+* no niin (n) - maybe`,
         },
       ],
     },
@@ -87,8 +87,8 @@ no niin (n) - maybe`,
           title: "Break",
           description: `Relax and practice your Swedish
 
-Jag talar inte svenska - I don't speak Swedish
-Jag har misslyckats obligatorisk svenska på universitetet - I have failed compulsory Swedish courses at the university`,
+* Jag talar inte svenska - I don't speak Swedish
+* Jag har misslyckats obligatorisk svenska på universitetet - I have failed compulsory Swedish courses at the university`,
         },
       ],
     },
@@ -146,9 +146,9 @@ Jag har misslyckats obligatorisk svenska på universitetet - I have failed compu
           title: "Break",
           description: `Continue relaxing
 
-JavaScript - jässä
-Python - pewthon
-Java - yava`,
+* JavaScript - jässä
+* Python - pewthon
+* Java - yava`,
         },
       ],
     },
