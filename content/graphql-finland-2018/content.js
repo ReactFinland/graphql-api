@@ -4,6 +4,7 @@ const allSponsors = require("../sponsors");
 const partners = [
   allSponsors.agentconf,
   allSponsors.halfstack,
+  allSponsors.postgraphile,
   allSponsors.reactalicante,
   allSponsors.reactdayberlin,
   allSponsors.reactjsday,
