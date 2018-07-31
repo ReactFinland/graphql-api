@@ -5,7 +5,7 @@ module.exports = {
   type: enums.WORKSHOP,
   speakers: [require("../people/mikhail-novikov")],
   title: "Building a GraphQL API with node.js",
-  description: `Learn how to build a GraphQL API from scratch using Node.js. This workshop is aimed at GraphQL beginners, but you probabyl have built an API server before. We'll go through the basics of building a GraphQL API server, wrap a REST API with it and then connect it to a database.
+  description: `Learn how to build a GraphQL API from scratch using Node.js. This workshop is aimed at GraphQL beginners, but you probably have built an API server before. We'll go through the basics of building a GraphQL API server, wrap a REST API with it and then connect it to a database.
 
 The following topics will be covered:
 
