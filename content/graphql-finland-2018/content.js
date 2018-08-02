@@ -3,7 +3,9 @@ const people = require("./people");
 const allSponsors = require("../sponsors");
 const partners = [
   allSponsors.agentconf,
+  allSponsors.apiops,
   allSponsors.halfstack,
+  allSponsors.osaango,
   allSponsors.postgraphile,
   allSponsors.reactalicante,
   allSponsors.reactdayberlin,
