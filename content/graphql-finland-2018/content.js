@@ -18,7 +18,7 @@ const partners = [
 ];
 const goldSponsors = [];
 const silverSponsors = [];
-const bronzeSponsors = [];
+const bronzeSponsors = [allSponsors.gatsby, allSponsors.prisma];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
 module.exports = {

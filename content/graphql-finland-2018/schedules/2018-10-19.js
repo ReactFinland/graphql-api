@@ -193,13 +193,8 @@ module.exports = {
     },
     {
       begin: "15:15",
-      end: "15:45",
-      sessions: [
-        {
-          type: enums.TALK,
-          title: "Unanounced, but mind-blowing talk by mystery speaker",
-        },
-      ],
+      end: "15:30",
+      sessions: [require("../sessions/johannes-schickling")],
     },
     {
       begin: "15:45",
