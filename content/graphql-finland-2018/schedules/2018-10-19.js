@@ -182,7 +182,7 @@ module.exports = {
     },
     {
       begin: "14:45",
-      end: "15:15",
+      end: "15:00",
       sessions: [
         {
           type: enums.COFFEE_BREAK,
@@ -192,9 +192,14 @@ module.exports = {
       ],
     },
     {
+      begin: "15:00",
+      end: "15:15",
+      sessions: [require("../sessions/johannes-schickling")],
+    },
+    {
       begin: "15:15",
       end: "15:30",
-      sessions: [require("../sessions/johannes-schickling")],
+      sessions: [require("../sessions/tanmai-gopal")],
     },
     {
       begin: "15:45",
