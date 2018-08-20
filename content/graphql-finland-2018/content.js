@@ -17,9 +17,10 @@ const partners = [
   allSponsors.yglfkyiv,
   allSponsors.zapier,
 ];
-const goldSponsors = [];
+const goldSponsors = [allSponsors.digia];
 const silverSponsors = [];
 const bronzeSponsors = [
+  allSponsors.amazon,
   allSponsors.gatsby,
   allSponsors.hasura,
   allSponsors.prisma,
