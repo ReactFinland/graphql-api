@@ -21,6 +21,7 @@ const goldSponsors = [allSponsors.digia];
 const silverSponsors = [];
 const bronzeSponsors = [
   allSponsors.amazon,
+  allSponsors.apollo,
   allSponsors.gatsby,
   allSponsors.hasura,
   allSponsors.prisma,
