@@ -11,7 +11,6 @@ module.exports = {
     twitter: "bebraw",
     medium: "@bebraw",
     github: "bebraw",
-    linkedin: "juhovepsalainen",
   },
   location: {
     country: {

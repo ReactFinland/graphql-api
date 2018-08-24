@@ -9,7 +9,6 @@ module.exports = {
     homepage: "",
     twitter: "toniristola",
     github: "tristola",
-    linkedin: "toniristola",
   },
   location: {
     country: {
