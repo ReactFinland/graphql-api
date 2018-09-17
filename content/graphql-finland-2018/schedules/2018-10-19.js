@@ -179,13 +179,7 @@ module.exports = {
     {
       begin: "15:00",
       end: "15:30",
-      sessions: [
-        {
-          type: enums.TALK,
-          title: "GraphQL Documentation",
-          speakers: [require("../people/carolyn-stransky")],
-        },
-      ],
+      sessions: [require("../sessions/carolyn-stransky")],
     },
     {
       begin: "15:30",

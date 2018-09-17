@@ -22,6 +22,7 @@ const silverSponsors = [];
 const bronzeSponsors = [
   allSponsors.amazon,
   allSponsors.apollo,
+  allSponsors.codento,
   allSponsors.gatsby,
   allSponsors.hasura,
   allSponsors.prisma,
