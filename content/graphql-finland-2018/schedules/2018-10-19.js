@@ -29,15 +29,7 @@ module.exports = {
     {
       begin: "09:15",
       end: "09:45",
-      sessions: [
-        {
-          type: enums.KEYNOTE,
-          title: "Adopting GraphQL in large codebases",
-          description:
-            "Airbnb has more than 1 million non-node module lines of code. This is a story of how Airbnb adopted GraphQL within the scope of such codebase.",
-          speakers: [require("../people/adam-miskiewicz")],
-        },
-      ],
+      sessions: [require("../sessions/adam-miskiewicz")],
     },
     {
       begin: "09:45",
