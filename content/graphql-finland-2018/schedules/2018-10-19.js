@@ -34,25 +34,12 @@ module.exports = {
     {
       begin: "09:45",
       end: "10:00",
-      sessions: [
-        {
-          type: enums.LIGHTNING_TALK,
-
-          title: "Reason and GraphQL",
-          speakers: [require("../people/nik-graf")],
-        },
-      ],
+      sessions: [require("../sessions/nik-graf")],
     },
     {
       begin: "10:15",
       end: "10:30",
-      sessions: [
-        {
-          type: enums.LIGHTNING_TALK,
-          title: "GraphQL CMS",
-          speakers: [require("../people/kadi-kraman")],
-        },
-      ],
+      sessions: [require("../sessions/kadi-kraman")],
     },
     {
       begin: "10:30",
@@ -95,13 +82,7 @@ module.exports = {
     {
       begin: "11:15",
       end: "11:45",
-      sessions: [
-        {
-          type: enums.TALK,
-          title: "Avoiding waterfall",
-          speakers: [require("../people/jimmy-jia")],
-        },
-      ],
+      sessions: [require("../sessions/jimmy-jia")],
     },
     {
       begin: "12:00",

@@ -12,11 +12,11 @@ module.exports = {
   },
   location: {
     country: {
-      name: "UK",
-      code: "GB",
+      name: "Estonia",
+      code: "EE",
     },
     city: "London",
   },
-  keywords: [keywords.GRAPHQL, keywords.CMS],
+  keywords: [keywords.GRAPHQL],
   type: [enums.SPEAKER, enums.LIGHTNING_TALK],
 };
