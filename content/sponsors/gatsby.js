@@ -1,7 +1,7 @@
 module.exports = {
   name: "Gatsby",
   about: "Modern Development, for the Content Web",
-  image: "sponsors/gatsby.svg",
+  image: "sponsors/gatsby.png",
   social: {
     homepage: "https://www.gatsbyjs.com/",
     github: "gatsbyjs",

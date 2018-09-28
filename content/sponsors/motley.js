@@ -1,7 +1,7 @@
 module.exports = {
   name: "Motley",
   about: "We create better futures for businesses",
-  image: "sponsors/motley.svg",
+  image: "sponsors/motley.png",
   social: {
     homepage: "https://motley.fi/",
     facebook: "Motleyagency",

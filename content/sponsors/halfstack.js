@@ -2,7 +2,7 @@ module.exports = {
   name: "HalfStack",
   about:
     "HalfStack is a one-day, single track, fun JS conf in a Shoreditch pub",
-  image: "sponsors/halfstack.svg",
+  image: "sponsors/halfstack.png",
   social: {
     homepage: "http://halfstackconf.com/",
     facebook: "halfstackconf",

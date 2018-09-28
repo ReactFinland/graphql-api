@@ -1,7 +1,7 @@
 module.exports = {
   name: "Prisma",
   about: "Build a GraphQL server with any database",
-  image: "sponsors/prisma.svg",
+  image: "sponsors/prisma.png",
   social: {
     homepage: "https://www.prisma.io/",
     github: "prismagraphql",

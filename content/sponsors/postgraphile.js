@@ -1,7 +1,7 @@
 module.exports = {
   name: "Postgraphile",
   about: "Instant GraphQL API for PostgreSQL database",
-  image: "sponsors/postgraphile.svg",
+  image: "sponsors/postgraphile.png",
   social: {
     homepage: "https://www.graphile.org/postgraphile/",
     twitter: "Benjie",
