@@ -12,6 +12,17 @@ function getConference(id) {
   }
 }
 
+function getSchedule(id, day) {
+  const conference = getConference(id);
+  const schedule = conference.schedules.find(c => c.day === day);
+
+  if (schedule) {
+    return schedule;
+  } else {
+    throw new Error("Invalid date");
+  }
+}
+
 const resolvers = {
   Query: {
     conference(root, { id }) {
@@ -37,6 +48,9 @@ const resolvers = {
         conference,
         ...conference.contacts.find(({ name }) => name === contactName),
       };
+    },
+    schedule(root, { conferenceId, day }) {
+      return getSchedule(conferenceId, day);
     },
   },
   Series: {
@@ -242,6 +256,7 @@ const typeDefs = `
     series(id: ID!): Series
     allSeries: [Series!]
     contact(conferenceId: ID!, contactName: String!): Contact
+    schedule(conferenceId: ID!, day: String!): Schedule
   }
 
   type Series {
