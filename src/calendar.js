@@ -30,7 +30,8 @@ function calendar({ filename, title, schedules }) {
 }
 
 function resolveLocation(location) {
-  const defaultLocation = "Valkoinen Sali, Aleksanterinkatu 16, Helsinki, Finland";
+  // TODO: Get the default from the current event!
+  const defaultLocation = "Helsinki Congress Paasitorni, Paasivuorenkatu 5 A, 00530 Helsinki, Finland";
 
   return location ? `${location.name}, ${location.address}, ${location.city}, ${location.country.name}` : defaultLocation;
 }
