@@ -19,5 +19,5 @@ module.exports = {
     city: "Vienna",
   },
   keywords: [keywords.GRAPHQL, keywords.GRAPHQLJS],
-  type: [enums.SPEAKER, enums.LIGHTNING_TALK],
+  type: [enums.SPEAKER, enums.fgTALK],
 };

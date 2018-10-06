@@ -20,5 +20,5 @@ module.exports = {
     city: "Vienna",
   },
   keywords: [keywords.TOOLING, keywords.WEBPACK],
-  type: [enums.ORGANIZER],
+  type: [enums.ORGANIZER, enums.WORKSHOP],
 };

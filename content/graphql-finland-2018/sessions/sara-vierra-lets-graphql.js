@@ -3,7 +3,7 @@ const enums = require("../../../src/enums");
 
 module.exports = {
   type: enums.WORKSHOP,
-  speakers: [require("../people/sara-vieira")],
+  speakers: [require("../people/juho-vepsalainen")],
   title: "Let’s Learn GraphQL",
   description: `
 So you want to learn GraphQL? That is awesome! But like any other technology it's not easy to get started and get the basics of it mainly because all the docs are spread all over the place.

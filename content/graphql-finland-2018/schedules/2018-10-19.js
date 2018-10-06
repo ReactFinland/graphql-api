@@ -32,9 +32,9 @@ module.exports = {
       sessions: [require("../sessions/adam-miskiewicz")],
     },
     {
-      begin: "09:45",
-      end: "10:00",
-      sessions: [require("../sessions/nik-graf")],
+      begin: "9:45",
+      end: "10:15",
+      sessions: [require("../sessions/ellie-day")],
     },
     {
       begin: "10:15",
@@ -43,7 +43,7 @@ module.exports = {
     },
     {
       begin: "10:30",
-      end: "10:45",
+      end: "11:00",
       sessions: [
         {
           type: enums.COFFEE_BREAK,
@@ -60,30 +60,16 @@ module.exports = {
       ],
     },
     {
-      begin: "10:45",
-      end: "11:00",
-      sessions: [
-        {
-          type: enums.LIGHTNING_TALK,
-          title: "Coming soon!",
-        },
-      ],
-    },
-    {
       begin: "11:00",
-      end: "11:15",
-      sessions: [
-        {
-          type: enums.LIGHTNING_TALK,
-          title: "Coming soon!",
-        },
-      ],
+      end: "11:30",
+      sessions: [require("../sessions/carolyn-stransky")],
     },
     {
-      begin: "11:15",
-      end: "11:45",
+      begin: "11:30",
+      end: "12:00",
       sessions: [require("../sessions/jimmy-jia")],
     },
+
     {
       begin: "12:00",
       end: "13:30",
@@ -99,38 +85,22 @@ module.exports = {
     {
       begin: "13:30",
       end: "14:00",
-      sessions: [
-        {
-          type: enums.TALK,
-          title: "Unannounced, but fantastic talk",
-          speakers: [require("../people/glenn-reyes")],
-        },
-      ],
+      sessions: [require("../sessions/glenn-reyes")],
     },
     {
       begin: "14:00",
       end: "14:15",
-      sessions: [
-        {
-          type: enums.LIGHTNING_TALK,
-          title: "Derived data with GraphQL",
-          speakers: [require("../people/helen-zhukova")],
-        },
-      ],
+      sessions: [require("../sessions/helen-zhukova")],
     },
     {
       begin: "14:15",
       end: "14:30",
-      sessions: [
-        {
-          type: enums.LIGHTNING_TALK,
-          title: "graphql-php",
-        },
-      ],
+      sessions: [require("../sessions/johannes-schickling")],
     },
+
     {
       begin: "14:30",
-      end: "14:45",
+      end: "15:00",
       sessions: [
         {
           type: enums.COFFEE_BREAK,
@@ -145,23 +115,28 @@ module.exports = {
       ],
     },
     {
-      begin: "14:45",
-      end: "15:00",
-      sessions: [require("../sessions/johannes-schickling")],
+      begin: "15:00",
+      end: "15:15",
+      sessions: [require("../sessions/ivan-goncharov")],
     },
     {
-      begin: "15:00",
+      begin: "15:15",
       end: "15:30",
-      sessions: [require("../sessions/carolyn-stransky")],
+      sessions: [require("../sessions/nik-graf")],
     },
     {
       begin: "15:30",
       end: "15:45",
-      sessions: [require("../sessions/ivan-goncharov")],
+      sessions: [require("../sessions/cristoffer-niska")],
     },
     {
       begin: "15:45",
       end: "16:00",
+      sessions: [require("../sessions/tanmai-gopal")],
+    },
+    {
+      begin: "16:00",
+      end: "16:30",
       sessions: [
         {
           type: enums.COFFEE_BREAK,
@@ -177,59 +152,19 @@ module.exports = {
       ],
     },
     {
-      begin: "16:00",
-      end: "16:30",
-      sessions: [
-        {
-          type: enums.TALK,
-          title: "Unannounced, but amazing talk",
-          speakers: [require("../people/eloy-duran")],
-        },
-      ],
-    },
-    {
       begin: "16:30",
-      end: "16:45",
-      sessions: [require("../sessions/tanmai-gopal")],
-    },
-
-    {
-      begin: "16:45",
       end: "17:00",
-      sessions: [require("../sessions/benjie-gillam.js")],
+      sessions: [require("../sessions/eloy-duran")],
     },
     {
       begin: "17:00",
       end: "17:15",
-      sessions: [
-        {
-          type: enums.COFFEE_BREAK,
-          title: "Break",
-          description: "Last one, I promise!",
-        },
-      ],
+      sessions: [require("../sessions/benjie-gillam.js")],
     },
     {
       begin: "17:15",
       end: "17:45",
-      sessions: [
-        {
-          type: enums.KEYNOTE,
-          title: "Unannounced, but inspiring closing keynote",
-          speakers: [require("../people/dan-schafer")],
-        },
-      ],
-    },
-    {
-      begin: "17:45",
-      end: "18:00",
-      sessions: [
-        {
-          type: enums.PANEL,
-          title: "Panel",
-          description: "Ask your questions and speakers will answer",
-        },
-      ],
+      sessions: [require("../sessions/dan-schafer")],
     },
     {
       begin: "18:00",
@@ -237,13 +172,16 @@ module.exports = {
       sessions: [
         {
           type: enums.PARTY,
-          title: "Afterparty",
+          title: "Afterparty at Gofore office",
           description: `Last chance to practice your Finnish!
 
 <dl  class="glossary">
   <dt>Tuopi</dt><dd>a glass of a beverage (beer)</dd>
   <dt>Mörkkis</dt><dd>a feeling of regret for what you said or did at the party last night</dd>
-</dl>`,
+</dl>
+
+Afterparty is graciously hosted by our sponsors Gofore and will be at their office (Urho Kekkosen katu 7B). There will be buses to take you there, alternatively you could walk.
+`,
         },
       ],
     },
