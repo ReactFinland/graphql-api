@@ -32,7 +32,7 @@ module.exports = {
       sessions: [require("../sessions/adam-miskiewicz")],
     },
     {
-      begin: "9:45",
+      begin: "09:45",
       end: "10:15",
       sessions: [require("../sessions/ellie-day")],
     },
