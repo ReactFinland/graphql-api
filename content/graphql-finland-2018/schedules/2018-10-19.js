@@ -97,9 +97,14 @@ module.exports = {
       end: "14:30",
       sessions: [require("../sessions/johannes-schickling")],
     },
-
     {
       begin: "14:30",
+      end: "14:45",
+      sessions: [require("../sessions/andrew-rhyne")],
+    },
+
+    {
+      begin: "14:45",
       end: "15:00",
       sessions: [
         {
