@@ -4,7 +4,7 @@ const speaker = require("../people/eloy-duran");
 
 module.exports = {
   speakers: [speaker],
-  title: "GraphQL Errors",
+  title: "Where art thou, my error?",
   description: "",
   type: enums.TALK,
   keywords: [keywords.GRAPHQL],
