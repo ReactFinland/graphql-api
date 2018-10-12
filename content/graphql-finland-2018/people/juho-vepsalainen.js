@@ -4,7 +4,7 @@ const keywords = require("../keywords");
 module.exports = {
   name: "Juho Vepsäläinen",
   about:
-    "Juho Vepsäläinen is behind the SurviveJS effort. In addition to being a core developer of Webpack, he has been active in the open source scene since the early 2000s. Blue Arrow Awards winner.",
+    "Juho Vepsäläinen is behind the SurviveJS effort. He has been active in the open source scene since the early 2000s and participated in projects like Blender and webpack as a core team member. Blue Arrow Awards winner.",
   image: "graphql-finland-2018/organizers/juho.jpg",
   social: {
     homepage: "https://survivejs.com/",
