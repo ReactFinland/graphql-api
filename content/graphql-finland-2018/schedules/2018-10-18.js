@@ -18,7 +18,7 @@ module.exports = {
       begin: "09:00",
       end: "11:30",
       sessions: [
-        require("../sessions/sara-vierra-lets-graphql"),
+        require("../sessions/juho-vepsalainen-intro-to-graphql"),
         require("../sessions/mikhail-novikov-building-graphql-server"),
         require("../sessions/marc-giroux-graphql-schema-design"),
         require("../sessions/nik-graf-advanced-graphql"),
@@ -38,7 +38,7 @@ module.exports = {
       begin: "12:30",
       end: "14:00",
       sessions: [
-        require("../sessions/sara-vierra-lets-graphql"),
+        require("../sessions/juho-vepsalainen-intro-to-graphql"),
         require("../sessions/mikhail-novikov-building-graphql-server"),
         require("../sessions/marc-giroux-graphql-schema-design"),
         require("../sessions/nik-graf-advanced-graphql"),
@@ -58,7 +58,7 @@ module.exports = {
       begin: "14:20",
       end: "15:40",
       sessions: [
-        require("../sessions/sara-vierra-lets-graphql"),
+        require("../sessions/juho-vepsalainen-intro-to-graphql"),
         require("../sessions/mikhail-novikov-building-graphql-server"),
         require("../sessions/marc-giroux-graphql-schema-design"),
         require("../sessions/nik-graf-advanced-graphql"),
