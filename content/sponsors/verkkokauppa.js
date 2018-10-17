@@ -1,7 +1,7 @@
 module.exports = {
   name: "Verkkokauppa",
   about: "Most likely always cheaper",
-  image: "sponsors/verkkokauppa.svg",
+  image: "sponsors/verkkokauppa.png",
   social: {
     homepage: "https://www.verkkokauppa.com/",
     facebook: "verkkokauppacom",

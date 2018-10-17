@@ -2,7 +2,7 @@ module.exports = {
   name: "Apollo",
   about:
     "We build Apollo Client, Engine, and Server to help you adopt GraphQL.",
-  image: "sponsors/apollo.svg",
+  image: "sponsors/apollo.png",
   social: {
     homepage: "https://www.apollographql.com/",
     twitter: "apollographql",

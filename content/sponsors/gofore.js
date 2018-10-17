@@ -1,7 +1,7 @@
 module.exports = {
   name: "Gofore",
   about: "We create tomorrow's digital services and work culture today",
-  image: "sponsors/gofore.svg",
+  image: "sponsors/gofore.png",
   social: {
     homepage: "https://gofore.com/en/home/",
     facebook: "GoforeGroup",

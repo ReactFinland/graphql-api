@@ -1,7 +1,7 @@
 module.exports = {
   name: "Solita",
   about: "Solita is a digital business company",
-  image: "sponsors/solita.svg",
+  image: "sponsors/solita.png",
   social: {
     homepage: "https://www.solita.fi/en/",
     facebook: "Solita",

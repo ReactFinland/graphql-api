@@ -4,7 +4,7 @@ module.exports = {
   name: "Elisa Appelsiini",
   about:
     "In addition to being a silver sponsor of the event, Elisa is supporting the event by providing space for our workshops",
-  image: "sponsors/elisa.svg",
+  image: "sponsors/elisa.png",
   social: sponsor.social,
   country: {
     name: "Finland",
