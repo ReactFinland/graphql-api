@@ -181,7 +181,7 @@ module.exports = {
           description: `Last chance to practice your Finnish!
 
 <dl  class="glossary">
-  <dt>Tuopi</dt><dd>a glass of a beverage (beer)</dd>
+  <dt>Tuoppi</dt><dd>a glass of a beverage (beer)</dd>
   <dt>Mörkkis</dt><dd>a feeling of regret for what you said or did at the party last night</dd>
 </dl>
 
