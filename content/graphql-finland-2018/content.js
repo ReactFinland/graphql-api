@@ -5,6 +5,7 @@ const partners = [
   allSponsors.agentconf,
   allSponsors.apiops,
   allSponsors.designsystemslondon,
+  allSponsors.elisa,
   allSponsors.halfstack,
   allSponsors.osaango,
   allSponsors.postgraphile,
