@@ -46,26 +46,15 @@ function createRouter() {
     express.static(path.resolve(__dirname, "../media"))(req, res, next);
   });
 
-  const calendarFile = "calendar-2018.ics";
+  // TODO: Make a better abstraction for this
+  const calendarFile = "calendar-2019.ics";
   router.all(
     `/${calendarFile}`,
     calendar({
       filename: calendarFile,
-      title: "React Finland 2018",
-      schedules: conferences["react-finland-2018"].schedules,
+      title: "React Finland 2019",
+      schedules: conferences["react-finland-2019"].schedules,
     })
-  );
-
-  router.use(
-    "/graphql-2018/images",
-    express.static(
-      path.resolve(
-        __dirname,
-        "..",
-        "node_modules",
-        "@react-finland/content-2018/images"
-      )
-    )
   );
 
   return router;

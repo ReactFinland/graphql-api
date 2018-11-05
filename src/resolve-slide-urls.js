@@ -1,6 +1,6 @@
 const resolveSessions = require("./sessions");
 
-function resolveSlideUrls(talks, schedules) {
+function resolveSlideUrls(talks, schedules, year) {
   const talksArray = Object.values(talks);
   const sessions = resolveSessions(schedules).filter(
     s => talksArray.indexOf(s) >= 0
@@ -14,14 +14,14 @@ function resolveSlideUrls(talks, schedules) {
       ...talk,
       urls: {
         ...talk.urls,
-        slides: resolveSlideUrl(index + 1, slug),
+        slides: resolveSlideUrl(index + 1, slug, year),
       },
     };
   });
 }
 
-function resolveSlideUrl(index, slug) {
-  return `https://slides.react-finland.fi/2018/${leftFill({
+function resolveSlideUrl(index, slug, year) {
+  return `https://slides.react-finland.fi/${year}/${leftFill({
     amount: 2,
     character: 0,
     input: index,
