@@ -1,5 +1,5 @@
-const enums = require("../src/enums");
-const keywords = require("../../keywords");
+const enums = require("../../src/enums");
+const keywords = require("../keywords");
 
 module.exports = {
   name: "Ellie Day",
