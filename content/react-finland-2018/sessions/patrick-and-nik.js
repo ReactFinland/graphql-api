@@ -1,6 +1,7 @@
-const keywords = require("../keywords");
+const enums = require("../../../src/enums");
 
 module.exports = {
+  type: enums.WORKSHOP,
   speakers: [
     require("../people/patrick-stapfer"),
     require("../people/nik-graf"),

@@ -1,6 +1,7 @@
-const keywords = require("../keywords");
+const enums = require("../../../src/enums");
 
 module.exports = {
+  type: enums.WORKSHOP,
   speakers: [require("../people/sara-vieira")],
   title: "Testing React",
   description: `In this workshop I will be going through unit testing in Javascript, how you can make it fun and meaningful for your app.

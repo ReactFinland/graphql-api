@@ -174,6 +174,7 @@ const resolvers = {
       }
     },
     talks(contact) {
+      // TODO: resolve.slideUrls(talks, schedules)
       return contact.conference.sessions.filter(
         ({ type, speakers }) =>
           (type === enums.LIGHTNING_TALK ||
