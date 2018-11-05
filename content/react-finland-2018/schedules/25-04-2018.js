@@ -1,18 +1,25 @@
-const day = "2018-04-25";
+const enums = require("../../../src/enums");
 
 module.exports = {
-  day,
+  day: "2018-04-25",
   intervals: [
     {
       begin: "08:00",
       end: "09:00",
-      sessions: [require("../breakfasts").find(o => o.day === day)],
+      sessions: [
+        {
+          type: enums.BREAKFAST,
+          title: "Registration, Finnish breakfast.",
+          description: "Trust me, it's the best.",
+        },
+      ],
     },
     {
       begin: "09:00",
       end: "09:15",
       sessions: [
         {
+          type: enums.ORGANIZATIONAL,
           title: "Opening ceremonies",
         },
       ],
@@ -20,76 +27,108 @@ module.exports = {
     {
       begin: "09:15",
       end: "09:45",
-      sessions: [require("../talks/jani-evakallio")],
+      sessions: [require("../sessions/jani-evakallio")],
     },
     {
       begin: "10:00",
       end: "10:45",
-      sessions: [require("../talks/christian-alfoni")],
+      sessions: [require("../sessions/christian-alfoni")],
     },
     {
       begin: "11:00",
+      end: "11:10",
+      sessions: [require("../sessions/michel-weststrate")],
+    },
+    {
+      begin: "11:10",
+      end: "11:20",
+      sessions: [require("../sessions/patrick-hund")],
+    },
+    {
+      begin: "11:20",
       end: "11:30",
-      sessions: [
-        {
-          title: "Lightning talks",
-        },
-        require("../talks/michel-weststrate"),
-        require("../talks/patrick-hund"),
-        require("../talks/eemeli-aro"),
-      ],
+      sessions: [require("../sessions/eemeli-aro")],
     },
     {
       begin: "11:30",
       end: "12:30",
-      sessions: [require("../lunches").find(o => o.day === day)],
+      sessions: [
+        {
+          type: enums.LUNCH,
+          title: "Lunch",
+          description: "It's functional. You are **not** supposed to like it.",
+        },
+      ],
     },
     {
       begin: "12:30",
       end: "13:15",
-      sessions: [require("../talks/kasia-jastrzebska")],
+      sessions: [require("../sessions/kasia-jastrzebska")],
     },
     {
       begin: "13:30",
       end: "14:15",
-      sessions: [require("../talks/sia-karamalegos")],
+      sessions: [require("../sessions/sia-karamalegos")],
     },
     {
       begin: "14:15",
       end: "14:45",
-      sessions: [require("../coffee-breaks").find(o => o.day === day)],
+      sessions: [
+        {
+          type: enums.COFFEE_BREAK,
+          title: "Coffee break",
+          description:
+            "We don't mind if you drink tea, though. Water is available as well.",
+        },
+      ],
     },
     {
       begin: "14:45",
       end: "15:30",
-      sessions: [require("../talks/sara-vieira")],
+      sessions: [require("../sessions/sara-vieira")],
     },
     {
       begin: "15:45",
       end: "16:15",
-      sessions: [require("../talks/rotem-mizrachi-meidan")],
+      sessions: [require("../sessions/rotem-mizrachi-meidan")],
     },
     {
       begin: "16:15",
       end: "16:45",
-      sessions: [require("../coffee-breaks").find(o => o.day === day)],
+      sessions: [
+        {
+          type: enums.COFFEE_BREAK,
+          title: "Coffee break",
+          description:
+            "Other beverages are available too although black coffee is our favorite.",
+        },
+      ],
     },
     {
       begin: "16:45",
+      end: "17:00",
+      sessions: [require("../sessions/andrey-okonetchnikov")],
+    },
+    {
+      begin: "17:00",
+      end: "17:15",
+      sessions: [require("../sessions/sven-sauleau")],
+    },
+    {
+      begin: "17:15",
       end: "17:30",
-      sessions: [
-        {
-          title: "Lightning talks",
-        },
-        require("../talks/andrey-okonetchnikov"),
-        require("../talks/sven-sauleau"),
-        require("../talks/eemeli-aro-2"),
-      ],
+      sessions: [require("../sessions/eemeli-aro-2")],
     },
     {
       begin: "17:30",
       end: "18:00",
-      sessions: [require("../panels").filter(o => o.day === day)[0]],
+      sessions: [
+        {
+          type: enums.PANEL,
+          title: "Panel",
+          description: "Panel discussion to end the day",
+        },
+      ],
     },
   ],
 };

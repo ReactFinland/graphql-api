@@ -1,38 +1,20 @@
 const enums = require("../../../src/enums");
+const keywords = require("../keywords");
+const speaker = require("../people/juho-vepsalainen");
 
 module.exports = {
-  type: enums.WORKSHOP,
-  speakers: [require("../people/juho-vepsalainen")],
-  title: "Webpack - The Good Parts",
-  description: `In this high-level overview you'll learn how to configure Webpack. Even if you know it already, there might be some surprises in store as you gain insight to the tool you otherwise might miss.
-
-The topics covered include:
-
-* Fundamental ideas of webpack
-* Development techniques
-* Build techniques
-* Asset management
-* Bundle/code splitting
-* Build analysis
-* Optimizing the build`,
-  tickets: [
-    {
-      ...require("../tickets/morning-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/ed-qbtu5iyy",
-    },
-    {
-      ...require("../tickets/morning-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/vwtcvheo28e",
-    },
-    {
-      ...require("../tickets/evening-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/hfbos2nheb0",
-    },
-    {
-      ...require("../tickets/evening-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/xaizfkm1nbe",
-    },
+  speakers: [speaker],
+  title: "Static Websites - The Final Frontier",
+  description:
+    "What was it like to build sites in the 90s? What did we learn? And how to do it now?",
+  type: enums.LIGHTNING_TALK,
+  keywords: [
+    keywords.REACT,
+    keywords.STATIC_SITE_GENERATATION,
+    keywords.WEBPACK,
   ],
-  keywords: require("../people/juho-vepsalainen").keywords,
-  location: require("../locations/elisa-appelsiini"),
+  urls: {
+    web:
+      "https://docs.google.com/presentation/d/1dYwzzByKugHIrfA48cdhV0N-b2S2Ms_Ojd8I4ux_QRg/edit?usp=sharing",
+  },
 };

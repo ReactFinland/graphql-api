@@ -1,28 +1,14 @@
 const enums = require("../../../src/enums");
+const speaker = require("../people/gant-laborde");
 
 module.exports = {
-  type: enums.WORKSHOP,
-  speakers: [require("../people/gant-laborde")],
-  title: "React Native",
-  description: `In this beginner workshop you will learn what React Native (RN) consists of, how to write basic applications, how to use Storybook with RN, how to test RN, and finally how to kickstart your own project.`,
-  tickets: [
-    {
-      ...require("../tickets/morning-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/mgxvr-pqelw",
-    },
-    {
-      ...require("../tickets/morning-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/mkvpkhbfxfo",
-    },
-    {
-      ...require("../tickets/evening-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/i0jwfrjd6so",
-    },
-    {
-      ...require("../tickets/evening-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/w-nkcuf9k-a",
-    },
-  ],
-  keywords: require("../people/gant-laborde").keywords,
-  location: require("../locations/valkoinen-sali"),
+  speakers: [speaker],
+  title: "React Native Ignite",
+  description:
+    "Life can be simple again. Haven’t we built the same house, or given the same haircut over and over? 80% of mobile app development is the same old song. So why is mobile so difficult/expensive? It’s not with React Native.\n\nLet's look at how simple it is to get started in React Native using Ignite CLI. Using Ignite, you can jump in with a popular combination of technologies, OR brew your own. Ignite is the freedom to learn and automate your mobile app.",
+  type: enums.TALK,
+  keywords: speaker.keywords,
+  urls: {
+    web: "https://slides.com/gantlaborde/bowser",
+  },
 };

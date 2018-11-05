@@ -1,30 +1,14 @@
 const enums = require("../../../src/enums");
+const speaker = require("../people/rotem-mizrachi-meidan");
 
 module.exports = {
-  type: enums.WORKSHOP,
-  speakers: [require("../people/rotem-mizrachi-meidan")],
-  title: "Advanced E2E Testing with Detox",
-  description: `In this workshop we will get to know the cool features hidden in Detox. By getting to know how Detox works and what makes it deterministic, you will be able write better and more stable tests.
+  speakers: [speaker],
+  title: "Detox: A year in. Building it, Testing with it",
+  description: `
+A year in, developing and using Detox in production taught us a lot. From designing its API to consuming it, testing real user scenarios to advanced mocking, we learned what makes sense when E2E testing an app and what doesn’t.
 
-You will either build a demo app to experiment with its features (basic and advanced), or work on your existing app’s test suite.
-  
-We will experiment with the following:
-
-1. Running app against mock server
-2. Mocking mechanisms: permissions, user notifications
-3. Understanding synchronization issues
-4. Debugging failed tests
-5. Stabilizing E2E builds in CI`,
-  tickets: [
-    {
-      ...require("../tickets/evening-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/lctskibt-fy",
-    },
-    {
-      ...require("../tickets/evening-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/ldpzefjkijm",
-    },
-  ],
-  keywords: require("../people/rotem-mizrachi-meidan").keywords,
-  location: require("../locations/valkoinen-sali"),
+In this talk, we’ll discuss how Detox works and what makes it deterministic, cover some advanced use cases and methodologies, go over new features and tease the ones that are upcoming.
+`,
+  type: enums.TALK,
+  keywords: speaker.keywords,
 };

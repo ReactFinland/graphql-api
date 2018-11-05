@@ -46,16 +46,6 @@ function createRouter() {
     express.static(path.resolve(__dirname, "../media"))(req, res, next);
   });
 
-  // Deprecated legacy APIs for React Finland 2018
-  router.all(
-    "/graphql-2018",
-    graphql({
-      graphiql: true,
-      pretty: true,
-      schema: conferences["react-finland-2018"].schema.executable(),
-    })
-  );
-
   const calendarFile = "calendar-2018.ics";
   router.all(
     `/${calendarFile}`,
