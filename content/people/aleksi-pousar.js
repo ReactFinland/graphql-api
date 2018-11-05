@@ -4,7 +4,7 @@ module.exports = {
   name: "Aleksi Pousar",
   about:
     "Aleksi Pousar works on the app and is the treasurer of the association.",
-  image: "organizers/aleksi.jpg",
+  image: "people/aleksi.jpg",
   social: {
     homepage: "https://aleksipousar.fi",
     twitter: "AleksiPousar",

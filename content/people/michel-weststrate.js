@@ -5,7 +5,7 @@ module.exports = {
   name: "Michel Weststrate",
   about:
     "Full-stack tech lead and open source evangelist at Mendix. Author of MobX, MobX-State-Tree and Immer. On a quest to make programming as natural as possible.",
-  image: "speakers/michel.jpg",
+  image: "people/michel.jpg",
   social: {
     homepage: "",
     twitter: "mweststrate",

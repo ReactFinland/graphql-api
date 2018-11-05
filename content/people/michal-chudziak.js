@@ -5,7 +5,7 @@ module.exports = {
   name: "Michał Chudziak",
   about:
     'Lead software engineer in Callstack - company which provides the highest-level consultancy services for React and React Native. Lover of GraphQL\'s simplicity and a big supporter of "learn once, write anywhere" motto.',
-  image: "speakers/michal.jpg",
+  image: "people/michal.jpg",
   social: {
     homepage: "http://callstack.com",
     twitter: "michal_chudziak",

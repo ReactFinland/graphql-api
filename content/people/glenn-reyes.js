@@ -5,7 +5,7 @@ module.exports = {
   name: "Glenn Reyes",
   about:
     "Glenn is a front-end Engineer, who builds modern user interfaces and apps with React & GraphQL, loves OSS, co-organizes ReactVienna meetups, and plays JM music on guitar.",
-  image: "speakers/glenn.jpg",
+  image: "people/glenn.jpg",
   social: {
     homepage: "https://glennreyes.com/",
     twitter: "glnnrys",

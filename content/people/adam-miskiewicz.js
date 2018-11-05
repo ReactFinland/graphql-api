@@ -5,7 +5,7 @@ module.exports = {
   name: "Adam Miskiewicz",
   about:
     "Adam Miskiewicz is a software engineer at Airbnb, lover of his two dogs, JavaScript, and GraphQL.",
-  image: "speakers/adam.jpg",
+  image: "people/adam.jpg",
   social: {
     homepage: "http://www.adammiskiewicz.com/",
     twitter: "skevy",

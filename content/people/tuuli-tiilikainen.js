@@ -3,7 +3,7 @@ const enums = require("../../src/enums");
 module.exports = {
   name: "Tuuli Tiilikainen",
   about: "",
-  image: "organizers/tuuli.jpg",
+  image: "people/tuuli.jpg",
   social: {
     homepage: "https://www.columbiaroad.com/people/tuuli-tiilikainen",
   },

@@ -3,7 +3,7 @@ const enums = require("../../src/enums");
 module.exports = {
   name: "Aarni Koskela",
   about: "Aarni works on the site and the app. Specializes in terrible puns.",
-  image: "organizers/aarni.jpg",
+  image: "people/aarni.jpg",
   social: {
     homepage: "",
     twitter: "akx",

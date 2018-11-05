@@ -5,7 +5,7 @@ module.exports = {
   name: "Kasia Jastrzębska",
   about:
     "Frontend developer with over 6 years of experience around various frameworks and libs knowledge in my basket (such as React+Redux, Polymer, Ember, Backbone). Always eager to go deeper ;D",
-  image: "speakers/kasia.jpg",
+  image: "people/kasia.jpg",
   social: {
     homepage: "",
     twitter: "kejt_bw",

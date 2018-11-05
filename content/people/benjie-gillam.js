@@ -5,7 +5,7 @@ module.exports = {
   name: "Benjie Gillam",
   about:
     "Benjie loves using and talking about GraphQL, Node.js, PostgreSQL and React; he is the maintainer of PostGraphile, the original instant GraphQL API for your Postgres database.",
-  image: "speakers/benjie.jpg",
+  image: "people/benjie.jpg",
   social: {
     homepage: "https://graphile.org/",
     twitter: "benjie",

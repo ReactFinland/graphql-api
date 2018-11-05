@@ -5,7 +5,7 @@ module.exports = {
   name: "Kadi Kraman",
   about:
     "Kadi is a Software Engineer at Formidable, JavaScript enthusiast, believer in open source and a huge fan of sticking JavaScript on every possible platform.",
-  image: "speakers/kadi.jpg",
+  image: "people/kadi.jpg",
   social: {
     twitter: "kadikraman",
     github: "kadikraman",

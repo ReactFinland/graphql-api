@@ -5,7 +5,7 @@ module.exports = {
   name: "Juho Vepsäläinen",
   about:
     "Juho Vepsäläinen is behind the SurviveJS effort. He has been active in the open source scene since the early 2000s and participated in projects like Blender and webpack as a core team member. Blue Arrow Awards winner.",
-  image: "organizers/juho.jpg",
+  image: "people/juho.jpg",
   social: {
     homepage: "https://survivejs.com/",
     twitter: "bebraw",

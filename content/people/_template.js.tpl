@@ -4,7 +4,7 @@ const keywords = require("../keywords");
 module.exports = {
   name: "",
   about: "",
-  image: "speakers/TODO.jpg", // TODO: Place image at root images/ and update name
+  image: "people/TODO.jpg", // TODO: Place image at root images/ and update name
   social: {
     homepage: "",
     twitter: "",
