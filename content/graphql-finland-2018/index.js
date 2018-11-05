@@ -1,5 +1,4 @@
-const people = require("../people"); // TODO: Filter based on sessions
-
+const people = require("../people");
 const allSponsors = require("../sponsors");
 const partners = [
   allSponsors.agentconf,
@@ -36,7 +35,14 @@ module.exports = {
   year: "2018",
   websiteUrl: "https://graphql-finland.fi/",
   locations: [require("../locations").paasitorni],
-  contacts: people.concat(sponsors),
+  organizers: [
+    people["aleksi-pousar"],
+    people["harri-maatta"],
+    people["juho-vepsalainen"],
+    people["mikhail-novikov"],
+    people["samuli-hakoniemi"],
+    people["tuuli-tiilikainen"],
+  ],
   schedules: require("./schedules"),
   sessions: require("./sessions"),
   tickets: require("./tickets"),

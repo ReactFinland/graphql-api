@@ -1,4 +1,4 @@
-const _ = require("lodash");
+const { flatMap, pick } = require("lodash");
 const { makeExecutableSchema } = require("graphql-tools");
 const conferences = require("./conferences");
 const series = require("./conferenceSeries");
@@ -43,10 +43,19 @@ const resolvers = {
     },
     contact(root, { contactName, conferenceId }) {
       const conference = getConference(conferenceId);
+      const sponsor = conference.sponsors.find(
+        ({ name }) => name === contactName
+      );
+      const organizer = Object.values(conference.organizers).find(
+        ({ name }) => name === contactName
+      );
+      const speaker = getSpeakers(conference.sessions).find(
+        ({ name }) => name === contactName
+      );
 
       return {
         conference,
-        ...conference.contacts.find(({ name }) => name === contactName),
+        ...(sponsor || organizer || speaker),
       };
     },
     schedule(root, { conferenceId, day }) {
@@ -77,9 +86,7 @@ const resolvers = {
       }
     },
     organizers(conference) {
-      return conference.contacts.filter(
-        ({ type }) => type && type.includes(enums.ORGANIZER)
-      );
+      return conference.organizers;
     },
     partners(conference) {
       return conference.partners;
@@ -97,16 +104,10 @@ const resolvers = {
       return conference.bronzeSponsors;
     },
     speakers(conference) {
-      return conference.contacts
-        .filter(
-          ({ type }) =>
-            (type && type.includes(enums.SPEAKER)) ||
-            (type && type.includes(enums.WORKSHOP_HOST))
-        )
-        .map(contact => ({
-          ...contact,
-          conference,
-        }));
+      return getSpeakers(conference.sessions).map(contact => ({
+        ...contact,
+        conference,
+      }));
     },
     talks(conference) {
       return conference.sessions.filter(
@@ -205,7 +206,7 @@ const resolvers = {
     },
   },
   // TODO Fix
-  SessionType: _.pick(enums, [
+  SessionType: pick(enums, [
     "TALK",
     "LIGHTNING_TALK",
     "KEYNOTE",
@@ -217,7 +218,7 @@ const resolvers = {
     "PANEL",
     "PARTY",
   ]),
-  ContactType: _.pick(enums, [
+  ContactType: pick(enums, [
     "SPEAKER",
     "TALK",
     "LIGHTNING_TALK",
@@ -420,6 +421,10 @@ const typeDefs = `
     url: String!
   }
 `;
+
+function getSpeakers(sessions) {
+  return flatMap(sessions, { speakers });
+}
 
 module.exports = makeExecutableSchema({
   typeDefs,
