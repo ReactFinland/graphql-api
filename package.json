@@ -10,7 +10,7 @@
     "watch": "npm-watch"
   },
   "watch": {
-    "start": "src/**/*.*"
+    "start": "{src,content}/**/*.*"
   },
   "keywords": [],
   "author": "",
