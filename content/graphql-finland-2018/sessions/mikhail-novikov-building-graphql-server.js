@@ -1,4 +1,4 @@
-const keywords = require("../keywords");
+const keywords = require("../../keywords");
 const enums = require("../../../src/enums");
 
 module.exports = {
