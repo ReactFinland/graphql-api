@@ -6,12 +6,17 @@
   "main": "./src",
   "scripts": {
     "start": "node ./src",
-    "format": "prettier ./src/**/*.js --write"
+    "format": "prettier ./src/**/*.js --write",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "start": "src/**/*.*"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "npm-watch": "^0.4.0",
     "prettier": "^1.13.2"
   },
   "repository": {
