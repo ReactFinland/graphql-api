@@ -7,7 +7,7 @@ module.exports = {
     "Ivan is very active in GraphQL community and one of the core contributors to graphql-js. He is co-founder of APIs.guru which specializes in API consulting. During last few years they released a bunch of popular GraphQL tools including GraphQL Voyager.",
   aboutShort:
     "Ivan is one of the core contributors to graphql-js and a co-founder of APIs.guru, which built GraphQL Voyager.",
-  image: "graphql-finland-2018/speakers/ivan.jpg",
+  image: "speakers/ivan.jpg",
   social: {
     homepage: "https://apis.guru/",
     twitter: "E1Goncharov",

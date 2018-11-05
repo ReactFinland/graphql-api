@@ -3,7 +3,7 @@ const enums = require("../../src/enums");
 module.exports = {
   name: "Samuli Hakoniemi",
   about: "",
-  image: "graphql-finland-2018/organizers/samuli.jpg",
+  image: "organizers/samuli.jpg",
   social: {
     homepage: "",
     twitter: "zvona",

@@ -7,7 +7,7 @@ module.exports = {
     "Johannes Schickling is the co-founder & CEO of Prisma, a GraphQL-based data layer for modern applications. Johannes is interested in Technology, Developer Tools, Open Source, Startups & Music.",
   aboutShort:
     "Johannes Schickling is the co-founder & CEO of Prisma, a GraphQL-based data layer for modern applications.",
-  image: "graphql-finland-2018/speakers/johannes.jpg",
+  image: "speakers/johannes.jpg",
   social: {
     homepage: "http://schickling.me/",
     twitter: "schickling",

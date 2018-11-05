@@ -5,7 +5,7 @@ module.exports = {
   name: "Christoffer Niska",
   about:
     "Tech leader with a passion for programming. Head of Tech at @digiaonline. Father of four. Open Source enthusiast. JavaScript Ninja. GraphQL evangelist.",
-  image: "graphql-finland-2018/speakers/crisu.jpg",
+  image: "speakers/crisu.jpg",
   social: {
     twitter: "Crisu83",
   },
