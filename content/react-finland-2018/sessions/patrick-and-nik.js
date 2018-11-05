@@ -3,8 +3,8 @@ const enums = require("../../../src/enums");
 module.exports = {
   type: enums.WORKSHOP,
   speakers: [
-    require("../people/patrick-stapfer"),
-    require("../people/nik-graf"),
+    require("../../people/patrick-stapfer"),
+    require("../../people/nik-graf"),
   ],
   title: "Getting Started with ReasonML & ReasonReact",
   description: `ReasonML is a new cool JavaScript-like language with a strong type-system and first level React bindings. As with every new language, there comes a new ecosystem and unfamiliar concepts with it.
@@ -42,6 +42,6 @@ In the end, ambitious attendees will be able to integrate Reason React component
       link: "https://ti.to/react-finland/2018/with/766bgaavf-q",
     },
   ],
-  keywords: require("../people/patrick-stapfer").keywords,
+  keywords: require("../../people/patrick-stapfer").keywords,
   location: require("../locations/elisa-appelsiini"),
 };

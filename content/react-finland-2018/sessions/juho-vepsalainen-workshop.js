@@ -2,7 +2,7 @@ const enums = require("../../../src/enums");
 
 module.exports = {
   type: enums.WORKSHOP,
-  speakers: [require("../people/juho-vepsalainen")],
+  speakers: [require("../../people/juho-vepsalainen")],
   title: "Webpack - The Good Parts",
   description: `In this high-level overview you'll learn how to configure Webpack. Even if you know it already, there might be some surprises in store as you gain insight to the tool you otherwise might miss.
 
@@ -33,6 +33,6 @@ The topics covered include:
       link: "https://ti.to/react-finland/2018/with/xaizfkm1nbe",
     },
   ],
-  keywords: require("../people/juho-vepsalainen").keywords,
+  keywords: require("../../people/juho-vepsalainen").keywords,
   location: require("../locations/elisa-appelsiini"),
 };

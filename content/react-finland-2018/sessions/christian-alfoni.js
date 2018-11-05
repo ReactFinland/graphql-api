@@ -1,5 +1,5 @@
 const enums = require("../../../src/enums");
-const speaker = require("../people/christian-alfoni");
+const speaker = require("../../people/christian-alfoni");
 
 module.exports = {
   speakers: [speaker],

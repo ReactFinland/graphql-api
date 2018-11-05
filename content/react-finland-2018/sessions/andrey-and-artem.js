@@ -3,8 +3,8 @@ const enums = require("../../../src/enums");
 module.exports = {
   type: enums.WORKSHOP,
   speakers: [
-    require("../people/andrey-okonetchnikov"),
-    require("../people/artem-sapegin"),
+    require("../../people/andrey-okonetchnikov"),
+    require("../../people/artem-sapegin"),
   ],
   title: "Styleguide-driven Development",
   description: `Web applications becoming bigger and more complex, and as they grow, the complexity of the User Interface, arguably the most important part of your application, increases. And with it, your responsibility as a UI developer.
@@ -39,8 +39,8 @@ module.exports = {
   ],
   keywords: [
     ...new Set(
-      require("../people/andrey-okonetchnikov").keywords,
-      require("../people/artem-sapegin").keywords
+      require("../../people/andrey-okonetchnikov").keywords,
+      require("../../people/artem-sapegin").keywords
     ),
   ],
   location: require("../locations/valkoinen-sali"),
