@@ -1,4 +1,4 @@
-const { flatMap, pick } = require("lodash");
+const { flatMap, get, pick } = require("lodash");
 const { makeExecutableSchema } = require("graphql-tools");
 const conferences = require("./conferences");
 const series = require("./conferenceSeries");
@@ -423,7 +423,7 @@ const typeDefs = `
 `;
 
 function getSpeakers(sessions) {
-  return flatMap(sessions, { speakers });
+  return flatMap(sessions, session => get(session, "speakers"));
 }
 
 module.exports = makeExecutableSchema({
