@@ -6,7 +6,7 @@ const enums = require("./enums");
 
 function getConference(id) {
   if (conferences[id]) {
-    return conferences[id].content;
+    return conferences[id];
   } else {
     throw new Error("Unknown conference");
   }
@@ -29,7 +29,7 @@ const resolvers = {
       return getConference(id);
     },
     allConferences() {
-      return Object.keys(conferences).map(id => conferences[id].content);
+      return Object.keys(conferences).map(id => conferences[id]);
     },
     series(root, { id }) {
       if (series[id]) {
@@ -55,9 +55,7 @@ const resolvers = {
   },
   Series: {
     conferences(series) {
-      return series.conferences.map(
-        conferenceId => conferences[conferenceId].content
-      );
+      return series.conferences.map(conferenceId => conferences[conferenceId]);
     },
   },
   Conference: {

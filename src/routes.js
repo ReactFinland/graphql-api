@@ -33,9 +33,9 @@ function createRouter() {
     const conference = conferences[req.params.id];
     if (conference) {
       calendar({
-        filename: `calendar-${conference.content.id}`,
-        title: conference.content.name,
-        schedules: conference.content.schedules,
+        filename: `calendar-${conference.id}`,
+        title: conference.name,
+        schedules: conference.schedules,
       })(req, res);
     } else {
       res.status(404).end("Not found");
@@ -52,7 +52,7 @@ function createRouter() {
     calendar({
       filename: calendarFile,
       title: "React Finland 2018",
-      schedules: conferences["react-finland-2018"].content.schedules,
+      schedules: conferences["react-finland-2018"].schedules,
     })
   );
 
