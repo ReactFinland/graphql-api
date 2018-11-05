@@ -1,7 +1,7 @@
 module.exports = {
   name: "Paasitorni Congress Hall",
   about: "Paasitorni is the main venue of the event.",
-  image: "graphql-finland-2018/location/paasitorni.jpg",
+  image: "locations/paasitorni.jpg",
   social: {
     homepage: "https://www.paasitorni.fi/",
   },
