@@ -43,5 +43,5 @@ module.exports = {
       require("../../people/artem-sapegin").keywords
     ),
   ],
-  location: require("../locations/valkoinen-sali"),
+  location: require("../../locations")["valkoinen-sali"],
 };

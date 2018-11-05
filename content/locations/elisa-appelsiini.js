@@ -1,4 +1,4 @@
-const sponsor = require("../../sponsors/elisa");
+const sponsor = require("../sponsors/elisa");
 
 module.exports = {
   name: "Elisa Appelsiini",

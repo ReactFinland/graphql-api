@@ -24,5 +24,5 @@ module.exports = {
     },
   ],
   keywords: require("../../people/gant-laborde").keywords,
-  location: require("../locations/valkoinen-sali"),
+  location: require("../../locations")["valkoinen-sali"],
 };

@@ -26,5 +26,5 @@ module.exports = {
     },
   ],
   keywords: require("../../people/sia-karamalegos").keywords,
-  location: require("../locations/elisa-appelsiini"),
+  location: require("../../locations")["elisa-appelsiini"],
 };

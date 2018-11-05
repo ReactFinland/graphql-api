@@ -1,4 +1,5 @@
-const people = require("./people");
+const locations = require("../locations");
+const people = require("../people"); // TODO: Filter based on sessions
 
 const allSponsors = require("../sponsors");
 const partners = [
@@ -33,7 +34,7 @@ module.exports = {
   name: "React Finland 2018",
   year: "2018",
   websiteUrl: "https://react-finland.fi/",
-  locations: require("./locations"),
+  locations: [locations["elisa-appelsiini"], locations["valkoinen-sali"]],
   contacts: people.concat(sponsors),
   schedules: require("./schedules"),
   sessions: require("./sessions"),

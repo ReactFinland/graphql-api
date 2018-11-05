@@ -26,5 +26,5 @@ We will experiment with the following:
     },
   ],
   keywords: require("../../people/rotem-mizrachi-meidan").keywords,
-  location: require("../locations/valkoinen-sali"),
+  location: require("../../locations")["valkoinen-sali"],
 };

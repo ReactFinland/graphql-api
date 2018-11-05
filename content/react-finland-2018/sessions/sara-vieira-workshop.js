@@ -22,5 +22,5 @@ By the end, we will implement all of this in continuous development with GitHub 
     },
   ],
   keywords: require("../../people/sara-vieira").keywords,
-  location: require("../locations/valkoinen-sali"),
+  location: require("../../locations")["valkoinen-sali"],
 };

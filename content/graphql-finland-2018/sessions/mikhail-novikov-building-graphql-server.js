@@ -24,5 +24,5 @@ At the end of the workshop you should be comfortable building a GraphQL API with
 This workshop is only offered as a bundle deal with a conference.
 `,
   keywords: [keywords.GRAPHQL],
-  location: require("../locations/paasitorni"),
+  location: require("../../locations").paasitorni,
 };

@@ -20,5 +20,5 @@ Alternating between presentations and hands on exercices, this workshop will cov
 
 For the exercices, we will only use the GraphQL SDL (Schema Definition Language), meaning you'll get to learn no matter what language you use to build your schema.`,
   keywords: [keywords.GRAPHQL, keywords.REACT],
-  location: require("../locations/paasitorni"),
+  location: require("../../locations").paasitorni,
 };

@@ -50,5 +50,5 @@ This workshop is free. Tickets would be distributed through a diversity ticket p
     keywords.APOLLO,
     keywords.PRISMA,
   ],
-  location: require("../locations/paasitorni"),
+  location: require("../../locations").paasitorni,
 };

@@ -1,4 +1,4 @@
-const people = require("./people");
+const people = require("../people"); // TODO: Filter based on sessions
 
 const allSponsors = require("../sponsors");
 const partners = [
@@ -35,7 +35,7 @@ module.exports = {
   name: "GraphQL Finland 2018",
   year: "2018",
   websiteUrl: "https://graphql-finland.fi/",
-  locations: require("./locations"),
+  locations: [require("../locations").paasitorni],
   contacts: people.concat(sponsors),
   schedules: require("./schedules"),
   sessions: require("./sessions"),

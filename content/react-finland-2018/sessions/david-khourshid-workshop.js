@@ -24,5 +24,5 @@ module.exports = {
     },
   ],
   keywords: require("../../people/david-khourshid").keywords,
-  location: require("../locations/elisa-appelsiini"),
+  location: require("../../locations")["elisa-appelsiini"],
 };

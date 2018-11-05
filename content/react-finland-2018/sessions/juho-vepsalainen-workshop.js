@@ -34,5 +34,5 @@ The topics covered include:
     },
   ],
   keywords: require("../../people/juho-vepsalainen").keywords,
-  location: require("../locations/elisa-appelsiini"),
+  location: require("../../locations")["elisa-appelsiini"],
 };
