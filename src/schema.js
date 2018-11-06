@@ -243,7 +243,7 @@ const resolvers = {
         case enums.PARTY:
           return "Break";
         default:
-          return null;
+          throw new Error(`Unknown session: ${session.type}`);
       }
     },
   },
