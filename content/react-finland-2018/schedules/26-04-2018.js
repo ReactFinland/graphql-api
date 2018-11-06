@@ -113,6 +113,7 @@ module.exports = {
       end: "18:45",
       sessions: [
         {
+          type: enums.ORGANIZATIONAL,
           title: "Buses leave to after party (Sea Life, Tivolikuja 10)",
         },
       ],
