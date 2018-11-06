@@ -1,7 +1,7 @@
 module.exports = {
   name: "React India",
   about: "The international React.js conference in Goa",
-  image: "sponsors/react-india.svg",
+  image: "sponsors/react-india.png",
   social: {
     homepage: "https://www.reactindia.io/",
     twitter: "react_india",
