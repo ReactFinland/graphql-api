@@ -2,6 +2,7 @@ const day = "2018-04-24";
 
 module.exports = {
   day,
+  description: "Workshop day",
   intervals: [
     {
       begin: "09:00",
