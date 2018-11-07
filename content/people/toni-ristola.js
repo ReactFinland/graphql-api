@@ -4,7 +4,7 @@ module.exports = {
   name: "Toni Ristola",
   about:
     "Toni Ristola is a Senior Software Engineer at Gofore and an organizer for the React Finland conf and contributor for the React Finland App.",
-  image: "graphql-finland/organizers/toni.png",
+  image: "people/toni.png",
   social: {
     homepage: "",
     twitter: "toniristola",
