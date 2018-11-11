@@ -18,5 +18,5 @@ module.exports = {
     city: "Amsterdam",
   },
   keywords: [keywords.GRAPHQL],
-  type: [enums.SPEAKER, enums.TALK],
+  type: [enums.SPEAKER],
 };
