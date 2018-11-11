@@ -6,6 +6,6 @@ module.exports = {
   speakers: [speaker],
   title: "Mysterious design talk",
   description: ``,
-  type: enums.PRESENTATION,
+  type: enums.TALK,
   keywords: [],
 };
