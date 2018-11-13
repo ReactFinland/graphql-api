@@ -8,6 +8,7 @@ module.exports = {
       sessions: [
         require("../sessions/andrey-okonetchnikov"),
         require("../sessions/artem-sapegin"),
+        require("../sessions/carolyn-stransky"),
         require("../sessions/tejas-kumar"),
       ],
     },
