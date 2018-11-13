@@ -2,7 +2,7 @@ const people = require("../people");
 const locations = require("../locations");
 
 const allSponsors = require("../sponsors");
-const partners = [allSponsors.reactindia];
+const partners = [allSponsors.reactindia, allSponsors.zapier];
 const goldSponsors = [];
 const silverSponsors = [];
 const bronzeSponsors = [];
