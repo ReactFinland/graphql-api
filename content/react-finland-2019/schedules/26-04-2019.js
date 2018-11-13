@@ -11,6 +11,7 @@ module.exports = {
         require("../sessions/kadi-kraman"),
         require("../sessions/manuel-matuzovic"),
         require("../sessions/sia-karamalegos"),
+        require("../sessions/varya-stepanova"),
       ],
     },
   ],
