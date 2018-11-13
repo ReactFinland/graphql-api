@@ -5,7 +5,10 @@ module.exports = {
     {
       begin: "09:00",
       end: "18:00",
-      sessions: [require("../sessions/anna-doubkova")],
+      sessions: [
+        require("../sessions/anna-doubkova"),
+        require("../sessions/david-khourshid"),
+      ],
     },
   ],
 };
