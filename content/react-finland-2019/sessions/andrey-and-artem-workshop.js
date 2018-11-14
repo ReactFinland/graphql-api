@@ -6,7 +6,7 @@ module.exports = {
     require("../../people/andrey-okonetchnikov"),
     require("../../people/artem-sapegin"),
   ],
-  title: "Styleguide-driven Development",
+  title: "Component-driven Development",
   description: `Web applications becoming bigger and more complex, and as they grow, the complexity of the User Interface, arguably the most important part of your application, increases. And with it, your responsibility as a UI developer.
 
   A traditional development workflow — change code, refresh the app in the browser, click-click-click to reproduce the desired state, repeat — doesn't work anymore. Tools like React hot loader make it faster but don't really fix the underlying issue.

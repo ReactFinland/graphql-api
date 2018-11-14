@@ -4,7 +4,7 @@ const speaker = require("../../people/artem-sapegin");
 
 module.exports = {
   speakers: [speaker],
-  title: "Mysterious design talk",
+  title: "Mysterious components talk",
   description: ``,
   type: enums.TALK,
   keywords: [],
