@@ -6,19 +6,23 @@ module.exports = {
     require("../../people/andrey-okonetchnikov"),
     require("../../people/artem-sapegin"),
   ],
-  title: "Component-driven Development",
-  description: `Web applications becoming bigger and more complex, and as they grow, the complexity of the User Interface, arguably the most important part of your application, increases. And with it, your responsibility as a UI developer.
+  title: "Design Systems for React Developers",
+  description: `Development of digital products is a complex process that involves multiple stakeholders and roles: managers, designers, engineers, QA, and customers. This increases the communication overhead, slows down the process, and oftentimes results and less than ideal user experience.
 
-  A traditional development workflow — change code, refresh the app in the browser, click-click-click to reproduce the desired state, repeat — doesn't work anymore. Tools like React hot loader make it faster but don't really fix the underlying issue.
+- How to communicate design ideas between different stakeholders effectively?
+- How to deliver consistent UI without constant supervising?
+- How to ensure same problems not being solved multiple times?
 
-  This workshop will help you:
+Design systems offer a systematic approach to the process of product creation. This approach establishes an organization-wide design language that can be backed into a UI library and the styleguide and becomes the single source of truth for the entire organization. Component libraries and living styleguides encourage reuse, promote consistency, improve team productivity, help to identify common patterns and solve similar problems only once.
 
-  * Understand what a design system is and how to start thinking in design constraints
-  * Analyze and split your UI into small reusable components
-  * Setup an environment to create components in isolation
-  * Create a living style guide and start building a component library
-  * Structure your application around components
-  * Write maintainable styles for your components based on the design system`,
+This workshop will show you how to:
+
+  - Understand what a design system is and how to start thinking in design constraints
+  - Analyze and split your UI into small reusable components
+  - Setup an environment to create components in isolation
+  - Create a living style guide and start building a component library
+  - Structure your application around components
+  - Write maintainable styles for your components based on the design system`,
   /*tickets: [
     {
       ...require("../tickets/morning-workshop")[0],
