@@ -13,6 +13,7 @@ module.exports = {
         require("../sessions/manuel-matuzovic"),
         require("../sessions/sia-karamalegos"),
         require("../sessions/varya-stepanova"),
+        require("../sessions/artem-zakharchenko"),
       ],
     },
   ],
