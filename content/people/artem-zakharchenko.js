@@ -10,7 +10,7 @@ module.exports = {
     homepage: "",
     twitter: "kettanaito",
     github: "kettanaito",
-    linkedin: "",
+    linkedin: "artem-zakharchenko",
   },
   location: {
     country: {
