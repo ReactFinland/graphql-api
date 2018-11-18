@@ -9,6 +9,7 @@ module.exports = {
         require("../sessions/andrey-okonetchnikov"),
         require("../sessions/artem-sapegin"),
         require("../sessions/carolyn-stransky"),
+        require("../sessions/glenn-reyes"),
         require("../sessions/monica-lent"),
         require("../sessions/tejas-kumar"),
         require("../sessions/tero-parviainen"),
