@@ -12,6 +12,7 @@ module.exports = {
         require("../sessions/glenn-reyes"),
         require("../sessions/monica-lent"),
         require("../sessions/tejas-kumar"),
+        require("../sessions/tomas-konrady"),
         require("../sessions/tero-parviainen"),
       ],
     },
