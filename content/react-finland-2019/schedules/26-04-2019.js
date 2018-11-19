@@ -18,6 +18,11 @@ module.exports = {
     },
     {
       begin: "09:15",
+      end: "09:45",
+      sessions: [require("../sessions/rick-hanlon")],
+    },
+    {
+      begin: "09:45",
       end: "18:00",
       sessions: [
         require("../sessions/anna-doubkova"),
