@@ -8,6 +8,7 @@ module.exports = {
   social: {
     twitter: "konnnyy",
     github: "tommmyy",
+    linkedin: "tomaskonrady",
   },
   location: {
     country: {
