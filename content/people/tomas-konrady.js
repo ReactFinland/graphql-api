@@ -15,7 +15,7 @@ module.exports = {
       name: "Czech Republic",
       code: "CZ",
     },
-    city: "Prague",
+    city: "Hradec Kralove",
   },
   keywords: [keywords.REACT, keywords.TOOLING],
   type: [enums.SPEAKER],
