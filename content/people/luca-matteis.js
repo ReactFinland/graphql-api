@@ -6,7 +6,6 @@ module.exports = {
   about: "Event Sourcing, Statecharts, Behavioral Programming.",
   image: "people/luca.jpg",
   social: {
-    homepage: "http://sapegin.me/",
     medium: "@lmatteis",
     twitter: "lmatteis",
     github: "lmatteis",
