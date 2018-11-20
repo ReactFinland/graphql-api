@@ -7,7 +7,7 @@ module.exports = {
   description: `
 In this workshop we will build a production-ready React app with GraphQL backend from the ground up. This workshop is targeted to engineers who want to learn to build a complete and full stack React app with GraphQL.
 
-## Topics covered
+### Topics covered
 
 - Fundamentals & GraphQL core concepts
 - Setting up the GraphQL Server with [Graphpack](https://github.com/glennreyes/graphpack)
@@ -19,7 +19,7 @@ In this workshop we will build a production-ready React app with GraphQL backend
 - Access control patterns using Context
 - Deployment with [ZEIT Now](https://zeit.co/now)
 
-## Prerequisites
+### Prerequisites
 
 Developers have basic knowledge about the core concepts of React. Bring your own laptop (I'm on Mac). Make sure, latest node and yarn or npm works on your machine.
 `,
