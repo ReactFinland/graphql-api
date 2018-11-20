@@ -3,10 +3,8 @@ const enums = require("../../../src/enums");
 module.exports = {
   type: enums.WORKSHOP,
   speakers: [require("../../people/glenn-reyes")],
-  title: "React for Beginners",
+  title: "React and GraphQL – From zero to production",
   description: `
-# React & GraphQL – From zero to production
-
 In this workshop we will build a production-ready React app with GraphQL backend from the ground up. This workshop is targeted to engineers who want to learn to build a complete and full stack React app with GraphQL.
 
 ## Topics covered
