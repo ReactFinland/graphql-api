@@ -3,8 +3,21 @@ const enums = require("../../../src/enums");
 module.exports = {
   type: enums.WORKSHOP,
   speakers: [require("../../people/nik-graf")],
-  title: "Advanced React",
-  description: ``,
+  title: "Advanced React – Suspense, Time Slicing, Hooks and more …",
+  description: `React has changed quite a lot in the past couple months. New lifecycle methods were released, Suspense and Time Slicing is around the corner and we even got a new API: React Hooks.
+
+In this workshop we build an application relying on new techniques. The examples will include challenges that include the following topics:
+
+- Async React (Suspense, Time Slicing)
+- Advanced React Hooks (useLayoutEffect, useReducer, …)
+- React.lazy
+- Refs
+- Context
+
+The workshop is targeting intermediate and experienced React developers, that are looking to not only learn the mentioned topics from a theoretical standpoint, but also try them out in practice.
+
+The wokshop is split into serveral modules. Each of them starts with a 20min presentation, 30-50min coding session and is followed by a 10min retrospective.
+`,
   /*tickets: [
     {
       ...require("../tickets/morning-workshop")[0],
