@@ -9,7 +9,7 @@ if (!fs.existsSync(directory)) {
   fs.mkdirSync(directory);
 }
 
-const logger = new winston.Logger({
+const logger = winston.createLogger({
   exitOnError: false,
   transports: [
     new winston.transports.Console({
