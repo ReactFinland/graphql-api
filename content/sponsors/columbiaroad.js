@@ -1,7 +1,7 @@
 module.exports = {
   name: "Columbia Road",
   about: "A Digital Growth Consultancy by Futurice",
-  image: "sponsors/columbia-road.png",
+  image: "sponsors/columbiaroad.png",
   social: {
     homepage: "https://www.columbiaroad.com/",
     facebook: "ColumbiaRoadCom",

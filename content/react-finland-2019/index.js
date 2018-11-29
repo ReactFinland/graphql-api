@@ -3,9 +3,9 @@ const locations = require("../locations");
 
 const allSponsors = require("../sponsors");
 const partners = [allSponsors.reactindia, allSponsors.zapier];
-const goldSponsors = [];
+const goldSponsors = [allSponsors.gofore, allSponsors.futurice];
 const silverSponsors = [];
-const bronzeSponsors = [];
+const bronzeSponsors = [allSponsors.columbiaroad];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
 module.exports = {
