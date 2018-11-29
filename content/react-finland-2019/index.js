@@ -4,7 +4,7 @@ const locations = require("../locations");
 const allSponsors = require("../sponsors");
 const partners = [allSponsors.reactindia, allSponsors.zapier];
 const goldSponsors = [allSponsors.gofore, allSponsors.futurice];
-const silverSponsors = [];
+const silverSponsors = [allSponsors.alma];
 const bronzeSponsors = [allSponsors.columbiaroad];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
