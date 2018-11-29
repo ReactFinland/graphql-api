@@ -6,7 +6,7 @@ module.exports = {
   about: "I write code and love life.",
   image: "people/tejas.jpg",
   social: {
-    homepage: "http://sapegin.me/",
+    homepage: "",
     twitter: "TejasKumar_",
     github: "tejasq",
   },
