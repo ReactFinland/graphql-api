@@ -1,4 +1,5 @@
 module.exports = {
+  ANIMATION: "animation",
   APOLLO: "Apollo",
   BABEL: "Babel",
   CEREBRAL: "Cerebral",
