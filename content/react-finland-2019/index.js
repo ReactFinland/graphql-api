@@ -2,7 +2,11 @@ const people = require("../people");
 const locations = require("../locations");
 
 const allSponsors = require("../sponsors");
-const partners = [allSponsors.reactindia, allSponsors.zapier];
+const partners = [
+  allSponsors.halfstack,
+  allSponsors.reactindia,
+  allSponsors.zapier,
+];
 const goldSponsors = [allSponsors.gofore, allSponsors.futurice];
 const silverSponsors = [allSponsors.alma];
 const bronzeSponsors = [allSponsors.columbiaroad];
