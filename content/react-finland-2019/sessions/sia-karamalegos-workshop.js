@@ -4,7 +4,7 @@ module.exports = {
   type: enums.WORKSHOP,
   speakers: [require("../../people/sia-karamalegos")],
   title: "Advanced Performance Tuning for React Applications",
-  description: `Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Eli Fitch and Jason Lengstorf will lead you through the process of:
+  description: `Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Sia will lead you through the process of:
 
 - Assessing an existing React app
 - Diagnosing performance problems
@@ -26,6 +26,8 @@ By the end of the workshop, you’ll be able to diagnose performance problems an
 **Prerequisites**: To attend this workshop, you must already have a working understanding of React and JavaScript in addition to HTML, CSS, and the command line. You must also have a basic understanding of Chrome DevTools, including inspecting an element and using the console. A basic understanding of webpack would also be helpful but is not required.
 
 **Preparation**: Please come with a laptop ready for development. You must have Chrome, the [React DevTools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en), and Node (v 8+) installed.
+
+This workshop was prepared in partnership with Eli Fitch and Jason Lengstorf.
 `,
   /*tickets: [
     {
