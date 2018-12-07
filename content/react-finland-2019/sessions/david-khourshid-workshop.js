@@ -3,8 +3,17 @@ const enums = require("../../../src/enums");
 module.exports = {
   type: enums.WORKSHOP,
   speakers: [require("../../people/david-khourshid")],
-  title: "Reactive State Machines and Statecharts",
-  description: `Managing the many user interface states of an application easily becomes complicated. We'll discover how some historical and important computer science concepts – state machines and statecharts – and a functional + reactive approach can make it much easier to understand, visualize, implement, and automatically create tests for complex user interfaces and flows.`,
+  title: "Modeling React Applications with Statecharts",
+  description: `Statecharts are a powerful, well-established formalism that describe even the most complex application behavior and logic in a visual, hierarchical, and deterministic way. In this workshop you will learn about finite state machines and statecharts, and apply them to real-life React applications in ways that will increase productivity and eliminate entire classes of possible bugs from your code.  You will also learn how to:
+
+- Refactor React applications of any size to use statecharts, piece by piece
+- Auto-generate full integration tests
+- Visualize application logic
+- Analyze statecharts to determine which user flows can be optimized
+- Identify all possible edge cases
+- Apply late-breaking changes and requirements methodically
+- Auto-generate designs of all possible component states with Storybook
+- Use advanced features of XState`,
   /*tickets: [
     {
       ...require("../tickets/morning-workshop")[0],
