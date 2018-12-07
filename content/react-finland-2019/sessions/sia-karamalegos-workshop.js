@@ -3,26 +3,27 @@ const enums = require("../../../src/enums");
 module.exports = {
   type: enums.WORKSHOP,
   speakers: [require("../../people/sia-karamalegos")],
-  title: "Get in the Fast Lane: Measuring React Performance",
-  description: `Are you losing revenue to performance? 53% of mobile site visits are abandoned if a page takes longer than 3 seconds to load. Pinterest reduced load times by 40% and saw a 15% increase in sign ups. Starbucks implemented a 2x faster time to interactive resulting in a 65% increase in rewards registrations. AliExpress reduced load by 36% and saw a 10.5% increase in orders.
+  title: "Advanced Performance Tuning for React Applications",
+  description: `Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Eli Fitch and Jason Lengstorf will lead you through the process of:
 
-Performance is important. Tooling can be hard. Do flame charts intimidate you? Come learn how to audit and fix common performance issues in React apps using the React Profiler, Chrome DevTools, Lighthouse, PageSpeed Insights, and webpagetest.org. During this hands-on, full-day workshop, you will learn how to:
+- Assessing an existing React app
+- Diagnosing performance problems
+- Prioritizing the fixes that will make the biggest impact
+- Implementing performance fixes
 
-- Optimize and familiarize yourself with your DevTools environment, including the React Profiler 
-- Understand which metrics matter 
-- Measure the performance of existing applications
-- Diagnose and prioritize performance problems
-- Implement performance fixes 
+During this full-day workshop, you’ll learn advanced techniques for improving the performance of React apps, including:
 
-We will profile real applications to both learn the tools of measurement as well as see real performance problems in action. By the end of this workshop, you will be familiar with the following performance concepts. Many will be covered in-depth with exercises, and others will be covered in an overview with resources to learn more.
+- Lazy loading resources & components (including React.lazy and Suspense)
+- Leveraging Service Workers for performance
+- Seamlessly preloading and prefetching assets
+- Automatically optimizing images and fonts
+- Mitigating the performance impact of third-party scripts
+- Code splitting and bundle optimization
+- Using psychological tricks to improve perceived performance
 
-- Latency and loading:  HTTP2, code splitting, caching and service workers, resource and priority hints, progressive rendering and lazy loading, third party scripts
-- Reducing code: tree shaking, responsible imports, performance budgets, differential serving
-- Assets: responsive images, font loading, network client hints
-- Buttery smooth UI:  long-running JavaScript
-- Perceived performance and UX
+By the end of the workshop, you’ll be able to diagnose performance problems and solve them with a combination of modern and time-tested performance techniques. You’ll also learn how to weigh the trade-offs of implementing fixes to ensure that both your apps and your teams perform well. The tools added to your toolbox will continue to serve you, your team, and your users for years to come.
 
-**Prerequisites**: To attend this workshop, you must already have a working understanding of React and JavaScript in addition to HTML, CSS, and the command line. You must also have a basic understanding of Chrome DevTools, including inspecting an element and using the console. You do not need advanced mastery of DevTools as we will be learning about the Network and Performance tabs plus other tools during this session. A basic understanding of webpack would also be helpful but is not required.
+**Prerequisites**: To attend this workshop, you must already have a working understanding of React and JavaScript in addition to HTML, CSS, and the command line. You must also have a basic understanding of Chrome DevTools, including inspecting an element and using the console. A basic understanding of webpack would also be helpful but is not required.
 
 **Preparation**: Please come with a laptop ready for development. You must have Chrome, the [React DevTools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en), and Node (v 8+) installed.
 `,
