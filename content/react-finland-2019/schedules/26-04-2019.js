@@ -37,6 +37,7 @@ module.exports = {
         require("../sessions/sia-karamalegos"),
         require("../sessions/varya-stepanova"),
         require("../sessions/artem-zakharchenko"),
+        require("../sessions/ville-immonen"),
       ],
     },
   ],
