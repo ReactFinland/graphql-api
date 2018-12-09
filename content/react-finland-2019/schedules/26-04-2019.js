@@ -30,6 +30,7 @@ module.exports = {
         require("../sessions/david-khourshid"),
         require("../sessions/kadi-kraman"),
         require("../sessions/luca-matteis"),
+        require("../sessions/nik-graf"),
         require("../sessions/maaret-pyhajarvi"),
         require("../sessions/manuel-matuzovic"),
         require("../sessions/sia-karamalegos"),
