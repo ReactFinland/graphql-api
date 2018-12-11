@@ -4,6 +4,18 @@ module.exports = {
   intervals: [
     {
       begin: "09:00",
+      end: "09:15",
+      sessions: [
+        {
+          speakers: [require("../../people/jani-evakallio")],
+          title: "Opening",
+          description: "Opening the day with Jani Eväkallio, our MC of the day",
+          type: enums.ORGANIZATIONAL,
+        },
+      ],
+    },
+    {
+      begin: "09:15",
       end: "18:00",
       sessions: [
         require("../sessions/andrey-okonetchnikov"),

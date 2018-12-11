@@ -11,7 +11,7 @@ module.exports = {
         {
           speakers: [require("../../people/sara-vieira")],
           title: "Opening",
-          description: "Opening the day with Sara Vieira, our MC",
+          description: "Opening the day with Sara Vieira, our MC of the day",
           type: enums.ORGANIZATIONAL,
         },
       ],
