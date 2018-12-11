@@ -11,9 +11,9 @@ module.exports = {
     twitter: "jamonholmgren",
     github: "jamonholmgren",
     facebook: "",
-    medium: "",
+    medium: "jamonholmgren",
     instagram: "",
-    linkedin: "",
+    linkedin: "jamonholmgren",
     youtube: "",
   },
   location: {
