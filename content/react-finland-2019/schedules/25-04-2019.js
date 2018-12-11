@@ -1,3 +1,5 @@
+const enums = require("../../../src/enums");
+
 module.exports = {
   day: "2019-04-25",
   description: "Presentation day",
