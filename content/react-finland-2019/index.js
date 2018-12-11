@@ -8,7 +8,7 @@ const partners = [
   allSponsors.reactindia,
   allSponsors.zapier,
 ];
-const goldSponsors = [allSponsors.gofore, allSponsors.futurice];
+const goldSponsors = [allSponsors.gofore, allSponsors.futurice, allSponsors.digia];
 const silverSponsors = [allSponsors.alma];
 const bronzeSponsors = [allSponsors.columbiaroad];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
