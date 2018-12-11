@@ -8,7 +8,11 @@ const partners = [
   allSponsors.reactindia,
   allSponsors.zapier,
 ];
-const goldSponsors = [allSponsors.gofore, allSponsors.futurice, allSponsors.digia];
+const goldSponsors = [
+  allSponsors.gofore,
+  allSponsors.futurice,
+  allSponsors.digia,
+];
 const silverSponsors = [allSponsors.alma];
 const bronzeSponsors = [allSponsors.columbiaroad];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
@@ -19,6 +23,7 @@ module.exports = {
   year: "2019",
   websiteUrl: "https://react-finland.fi/",
   locations: [locations.paasitorni],
+  mcs: [people["jani-evakallio"], people["sara-vieira"]],
   organizers: [
     people["aleksi-pousar"],
     people["harri-maatta"],

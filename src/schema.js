@@ -52,10 +52,13 @@ const resolvers = {
       const speaker = getSpeakers(conference.sessions).find(
         ({ name }) => name === contactName
       );
+      const mc = getSpeakers(conference.mcs).find(
+        ({ name }) => name === contactName
+      );
 
       return {
         conference,
-        ...(sponsor || organizer || speaker),
+        ...(sponsor || organizer || speaker || mc),
       };
     },
     schedule(root, { conferenceId, day }) {
@@ -87,6 +90,9 @@ const resolvers = {
     },
     organizers(conference) {
       return conference.organizers;
+    },
+    mcs(conference) {
+      return conference.mcs;
     },
     partners(conference) {
       return conference.partners;
@@ -273,6 +279,7 @@ const typeDefs = `
     series: Series!
     locations: [Location]
     organizers: [Contact]
+    mcs: [Contact]
     partners: [Contact]
     sponsors: [Contact]
     goldSponsors: [Contact]
