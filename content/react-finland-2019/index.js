@@ -14,7 +14,7 @@ const goldSponsors = [
   allSponsors.digia,
 ];
 const silverSponsors = [allSponsors.alma];
-const bronzeSponsors = [allSponsors.columbiaroad];
+const bronzeSponsors = [allSponsors.columbiaroad, allSponsors.formidable];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
 module.exports = {
