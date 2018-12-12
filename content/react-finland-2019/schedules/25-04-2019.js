@@ -18,17 +18,99 @@ module.exports = {
     },
     {
       begin: "09:15",
-      end: "18:00",
+      end: "10:30",
       sessions: [
-        require("../sessions/andrey-okonetchnikov"),
+        require("../sessions/rick-hanlon"),
+        require("../sessions/tomas-konrady"),
+        require("../sessions/tejas-kumar"),
+      ],
+    },
+    {
+      begin: "10:30",
+      end: "11:00",
+      sessions: [
+        {
+          type: enums.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee, live long and prosper",
+        },
+      ],
+    },
+    {
+      begin: "11:00",
+      end: "12:00",
+      sessions: [
         require("../sessions/artem-sapegin"),
+        require("../sessions/artem-zakharchenko"),
+        require("../sessions/bruno-lourenco"),
+      ],
+    },
+    {
+      begin: "12:00",
+      end: "13:30",
+      sessions: [
+        {
+          type: enums.LUNCH,
+          title: "Lunch",
+          description:
+            "Hopefully it's as disappointing as the one you had at GraphQL Finland",
+        },
+      ],
+    },
+    {
+      begin: "13:30",
+      end: "14:30",
+      sessions: [
+        require("../sessions/maaret-pyhajarvi"),
+        require("../sessions/manuel-matuzovic"),
+      ],
+    },
+    {
+      begin: "14:30",
+      end: "15:00",
+      sessions: [
+        {
+          type: enums.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee. Again.",
+        },
+      ],
+    },
+    {
+      begin: "15:00",
+      end: "16:00",
+      sessions: [
         require("../sessions/carolyn-stransky"),
         require("../sessions/glenn-reyes"),
+      ],
+    },
+    {
+      begin: "16:00",
+      end: "16:30",
+      sessions: [
+        {
+          type: enums.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee if you still can.",
+        },
+      ],
+    },
+    {
+      begin: "16:30",
+      end: "17:30",
+      sessions: [
         require("../sessions/mike-berman"),
-        require("../sessions/monica-lent"),
-        require("../sessions/tejas-kumar"),
-        require("../sessions/tomas-konrady"),
         require("../sessions/tero-parviainen"),
+      ],
+    },
+    {
+      begin: "17:30",
+      end: "18:00",
+      sessions: [
+        {
+          type: enums.ORGANIZATIONAL,
+          title: "Closing ceremonies",
+        },
       ],
     },
     {
