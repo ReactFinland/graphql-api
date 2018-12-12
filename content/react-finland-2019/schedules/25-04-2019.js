@@ -31,5 +31,18 @@ module.exports = {
         require("../sessions/tero-parviainen"),
       ],
     },
+    {
+      begin: "18:00",
+      end: "22:00",
+      sessions: [
+        {
+          speakers: [require("../../people/jani-evakallio")],
+          title: "#componentDidSmoosh",
+          description:
+            "React has a new lifecycle method, `componentDidSmoosh`. Learn all about it.",
+          type: enums.PARTY,
+        },
+      ],
+    },
   ],
 };
