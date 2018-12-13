@@ -20,6 +20,7 @@ module.exports = {
       begin: "09:15",
       end: "10:30",
       sessions: [
+        require("../sessions/michel-weststrate"),
         require("../sessions/david-khourshid"),
         require("../sessions/luca-matteis"),
       ],
