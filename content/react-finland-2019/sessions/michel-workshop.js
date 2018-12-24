@@ -7,7 +7,7 @@ module.exports = {
   description: `
 The JavaScript Eco System is moving to TypeScript. Fast. This workshop will get you up and running with the basic and more advanced patterns of TypeScript. Maybe you have a background in static typed languages. In that case will find some common ground in concepts like classes, interfaces and overloading. But TypeScript also has a some unique and powerful features, that fit very well with the dynamic nature of the JavaScript language. In this workshop we will cover them all.
 
-During this workshop we will cover:
+During this full-day workshop we will cover:
 
 - Getting started with TypeScript
 - TypeScript. Why? And when (not)?
