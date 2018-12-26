@@ -8,6 +8,7 @@ module.exports = {
   image: "people/michel.jpg",
   social: {
     homepage: "https://medium.com/@mweststrate",
+    medium: "@mweststrate",
     twitter: "mweststrate",
     github: "mweststrate",
     linkedin: "michel-weststrate-3558463",
