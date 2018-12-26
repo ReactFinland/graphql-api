@@ -7,7 +7,7 @@ module.exports = {
     "Full-stack tech lead and open source evangelist at Mendix. Author of MobX, MobX-State-Tree and Immer. On a quest to make programming as natural as possible.",
   image: "people/michel.jpg",
   social: {
-    homepage: "",
+    homepage: "https://medium.com/@mweststrate",
     twitter: "mweststrate",
     github: "mweststrate",
     linkedin: "michel-weststrate-3558463",
