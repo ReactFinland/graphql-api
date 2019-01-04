@@ -24,7 +24,6 @@ module.exports = {
         require("../sessions/michel-weststrate"),
         require("../sessions/david-khourshid"),
         require("../sessions/luca-matteis"),
-        require("../sessions/nik-graf"),
       ],
     },
     {
@@ -43,6 +42,7 @@ module.exports = {
       end: "12:15",
       title: "",
       sessions: [
+        require("../sessions/nik-graf"),
         require("../sessions/kadi-kraman"),
         require("../sessions/monica-lent"),
       ],

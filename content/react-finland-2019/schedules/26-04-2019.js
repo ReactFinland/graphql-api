@@ -22,7 +22,6 @@ module.exports = {
       title: "React Native",
       sessions: [
         require("../sessions/rick-hanlon"),
-        require("../sessions/juha-linnanen"),
         require("../sessions/jamon-holmgren"),
         require("../sessions/ville-immonen"),
       ],
@@ -43,6 +42,7 @@ module.exports = {
       end: "12:15",
       title: "Testing",
       sessions: [
+        require("../sessions/juha-linnanen"),
         require("../sessions/maaret-pyhajarvi"),
         require("../sessions/manuel-matuzovic"),
       ],
