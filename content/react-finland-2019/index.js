@@ -22,6 +22,7 @@ const bronzeSponsors = [
   allSponsors.columbiaroad,
   allSponsors.formidable,
   allSponsors.vincit,
+  allSponsors.wunder,
 ];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
