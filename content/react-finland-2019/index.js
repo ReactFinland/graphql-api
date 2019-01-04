@@ -40,6 +40,7 @@ module.exports = {
     people["juho-vepsalainen"],
     people["mikhail-novikov"],
     people["samuli-hakoniemi"],
+    people["toni-ristola"],
     people["tuuli-tiilikainen"],
   ],
   schedules: require("./schedules"),
