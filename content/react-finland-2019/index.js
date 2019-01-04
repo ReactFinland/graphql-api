@@ -15,6 +15,7 @@ const goldSponsors = [
 ];
 const silverSponsors = [
   allSponsors.alma,
+  allSponsors.nightingale,
   allSponsors.reaktor,
   allSponsors.solita,
 ];
