@@ -5,7 +5,11 @@ module.exports = {
   speakers: [require("../../people/michel-weststrate")],
   title: "TypeScript: From novice to expert",
   description: `
-The JavaScript Eco System is moving to TypeScript. Fast. This workshop will get you up and running with the basic and more advanced patterns of TypeScript. Maybe you have a background in static typed languages. In that case will find some common ground in concepts like classes, interfaces and overloading. But TypeScript also has a some unique and powerful features, that fit very well with the dynamic nature of the JavaScript language. In this workshop we will cover them all.
+The JavaScript ecosystem is moving to TypeScript. Fast. This workshop will get you up and running with the basic and more advanced patterns of the language.
+
+Maybe you have a background in static typed languages. In that case will find some common ground in concepts like classes, interfaces and overloading.
+
+TypeScript also has a some unique and powerful features, that fit very well with the dynamic nature of the JavaScript language. In this workshop we will cover them all.
 
 During this full-day workshop we will cover:
 
