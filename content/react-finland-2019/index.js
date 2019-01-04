@@ -13,7 +13,11 @@ const goldSponsors = [
   allSponsors.futurice,
   allSponsors.digia,
 ];
-const silverSponsors = [allSponsors.alma, allSponsors.reaktor];
+const silverSponsors = [
+  allSponsors.alma,
+  allSponsors.reaktor,
+  allSponsors.solita,
+];
 const bronzeSponsors = [
   allSponsors.columbiaroad,
   allSponsors.formidable,
