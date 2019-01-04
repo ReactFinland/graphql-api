@@ -18,16 +18,17 @@ module.exports = {
     },
     {
       begin: "09:15",
-      end: "10:30",
+      end: "10:45",
       sessions: [
-        require("../sessions/michel-weststrate"),
-        require("../sessions/david-khourshid"),
-        require("../sessions/luca-matteis"),
+        require("../sessions/rick-hanlon"),
+        require("../sessions/juha-linnanen"),
+        require("../sessions/jamon-holmgren"),
+        require("../sessions/ville-immonen"),
       ],
     },
     {
-      begin: "10:30",
-      end: "11:00",
+      begin: "10:45",
+      end: "11:15",
       sessions: [
         {
           type: enums.COFFEE_BREAK,
@@ -37,16 +38,15 @@ module.exports = {
       ],
     },
     {
-      begin: "11:00",
-      end: "12:00",
+      begin: "11:15",
+      end: "12:15",
       sessions: [
-        require("../sessions/kadi-kraman"),
-        require("../sessions/varya-stepanova"),
-        require("../sessions/andrey-okonetchnikov"),
+        require("../sessions/maaret-pyhajarvi"),
+        require("../sessions/manuel-matuzovic"),
       ],
     },
     {
-      begin: "12:00",
+      begin: "12:15",
       end: "13:30",
       sessions: [
         {
@@ -60,8 +60,8 @@ module.exports = {
       begin: "13:30",
       end: "14:30",
       sessions: [
-        require("../sessions/monica-lent"),
-        require("../sessions/nik-graf"),
+        require("../sessions/artem-sapegin"),
+        require("../sessions/artem-zakharchenko"),
       ],
     },
     {
@@ -98,9 +98,9 @@ module.exports = {
       begin: "16:30",
       end: "17:30",
       sessions: [
-        require("../sessions/ville-immonen"),
-        require("../sessions/juha-linnanen"),
-        require("../sessions/jamon-holmgren"),
+        require("../sessions/tomas-konrady"),
+        require("../sessions/tejas-kumar"),
+        require("../sessions/mike-berman"),
       ],
     },
     {
