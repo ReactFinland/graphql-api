@@ -19,6 +19,7 @@ module.exports = {
     {
       begin: "09:15",
       end: "10:45",
+      title: "State management",
       sessions: [
         require("../sessions/michel-weststrate"),
         require("../sessions/david-khourshid"),
@@ -40,6 +41,7 @@ module.exports = {
     {
       begin: "11:15",
       end: "12:15",
+      title: "",
       sessions: [
         require("../sessions/kadi-kraman"),
         require("../sessions/monica-lent"),
@@ -60,6 +62,7 @@ module.exports = {
     {
       begin: "13:30",
       end: "14:30",
+      title: "Design Systems",
       sessions: [
         require("../sessions/varya-stepanova"),
         require("../sessions/andrey-okonetchnikov"),
@@ -79,6 +82,7 @@ module.exports = {
     {
       begin: "15:00",
       end: "16:00",
+      title: "",
       sessions: [
         require("../sessions/carolyn-stransky"),
         require("../sessions/glenn-reyes"),
@@ -98,6 +102,7 @@ module.exports = {
     {
       begin: "16:30",
       end: "17:30",
+      title: "Visual",
       sessions: [
         require("../sessions/bruno-lourenco"),
         require("../sessions/tero-parviainen"),

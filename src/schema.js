@@ -301,6 +301,7 @@ const typeDefs = `
   type Interval {
     begin: String
     end: String
+    title: String
     sessions: [Session]
   }
 

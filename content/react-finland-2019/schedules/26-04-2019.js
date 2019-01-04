@@ -19,6 +19,7 @@ module.exports = {
     {
       begin: "09:15",
       end: "10:45",
+      title: "React Native",
       sessions: [
         require("../sessions/rick-hanlon"),
         require("../sessions/juha-linnanen"),
@@ -40,6 +41,7 @@ module.exports = {
     {
       begin: "11:15",
       end: "12:15",
+      title: "Testing",
       sessions: [
         require("../sessions/maaret-pyhajarvi"),
         require("../sessions/manuel-matuzovic"),
@@ -59,6 +61,7 @@ module.exports = {
     {
       begin: "13:30",
       end: "14:30",
+      title: "Design Systems",
       sessions: [
         require("../sessions/artem-sapegin"),
         require("../sessions/artem-zakharchenko"),
@@ -78,6 +81,7 @@ module.exports = {
     {
       begin: "15:00",
       end: "16:00",
+      title: "Performance",
       sessions: [
         require("../sessions/anna-doubkova"),
         require("../sessions/sia-karamalegos"),
@@ -97,6 +101,7 @@ module.exports = {
     {
       begin: "16:30",
       end: "17:30",
+      title: "Universal React",
       sessions: [
         require("../sessions/tomas-konrady"),
         require("../sessions/tejas-kumar"),
