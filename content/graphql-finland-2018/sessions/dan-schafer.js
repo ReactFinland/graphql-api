@@ -4,7 +4,7 @@ const speaker = require("../../people/dan-schafer");
 
 module.exports = {
   speakers: [speaker],
-  title: "Mysterious closing keynote",
+  title: "The Prehistory of GraphQL",
   description: "",
   type: enums.KEYNOTE,
   keywords: [keywords.GRAPHQL],
