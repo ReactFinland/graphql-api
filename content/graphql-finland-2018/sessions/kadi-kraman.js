@@ -10,4 +10,9 @@ module.exports = {
 This talk is about how tooling in GraphQL makes it reasonably straightforward to get your React Native app working offline.`,
   type: enums.LIGHTNING_TALK,
   keywords: [keywords.GRAPHQL],
+  urls: {
+    web: "",
+    slides: "http://slides.graphql-finland.fi/2018/03-kadi-kraman.pdf",
+    video: "https://www.youtube.com/watch?v=i4Cfq7hQiws",
+  },
 };

@@ -10,4 +10,9 @@ module.exports = {
 Besides that Reason shines even more so on the client. Send one quick introspection request and you get full autocompletion on your schema right in the browser.`,
   type: enums.LIGHTNING_TALK,
   keywords: [keywords.GRAPHQL],
+  urls: {
+    web: "",
+    slides: "http://slides.graphql-finland.fi/2018/11-nik-graf.pdf",
+    video: "https://www.youtube.com/watch?v=tUIvl2pe8CQ",
+  },
 };
