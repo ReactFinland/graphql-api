@@ -10,7 +10,7 @@ module.exports = {
         require("../sessions/david-khourshid-workshop"),
         require("../sessions/glenn-reyes-workshop"),
         require("../sessions/nik-workshop"),
-        // require("../sessions/michel-workshop"),
+        require("../sessions/michel-workshop"),
         require("../sessions/patrick-workshop"),
         require("../sessions/sia-karamalegos-workshop"),
       ],
