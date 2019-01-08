@@ -6,6 +6,7 @@ const partners = [
   allSponsors.halfstack,
   allSponsors.reasonconf,
   allSponsors.reactindia,
+  allSponsors.survivejs,
   allSponsors.typeof,
   allSponsors.zapier,
 ];
