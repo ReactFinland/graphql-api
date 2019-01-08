@@ -6,6 +6,7 @@ const partners = [
   allSponsors.halfstack,
   allSponsors.reasonconf,
   allSponsors.reactindia,
+  allSponsors.typeof,
   allSponsors.zapier,
 ];
 const goldSponsors = [
