@@ -13,4 +13,9 @@ module.exports = {
 `,
   type: enums.LIGHTNING_TALK,
   keywords: [keywords.GRAPHQL],
+  urls: {
+    web: "",
+    slides: "http://slides.graphql-finland.fi/2018/13-tanmai-gopal.pdf",
+    video: "https://www.youtube.com/watch?v=bQLwmYFdCFQ",
+  },
 };
