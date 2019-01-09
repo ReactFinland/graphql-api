@@ -1,14 +1,11 @@
-// @flow
-const crypto = require("crypto");
-const path = require("path");
-const express = require("express");
-const graphql = require("express-graphql");
-const cors = require("cors");
-const { redirectToHTTPS } = require("express-http-to-https");
-const schema = require("./schema");
-const conferences = require("./conferences");
-
-const calendar = require("./calendar");
+import cors from "cors";
+import express from "express";
+import graphql from "express-graphql";
+import { redirectToHTTPS } from "express-http-to-https";
+import * as path from "path";
+import calendar from "./calendar";
+import conferences from "./conferences";
+import schema from "./schema";
 
 function createRouter() {
   const router = new express.Router();
@@ -21,7 +18,7 @@ function createRouter() {
     graphql(request => ({
       graphiql: true,
       pretty: true,
-      schema: schema,
+      schema,
       context: {
         hostname: getHostname(request),
         mediaUrl: `${getHostname(request)}/media`,
@@ -68,4 +65,4 @@ function getHostname(req) {
   }
 }
 
-module.exports = createRouter;
+export default createRouter;

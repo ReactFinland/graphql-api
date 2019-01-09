@@ -1,6 +1,6 @@
-const logger = require("./logger");
-const createServer = require("./server");
-const rebuildSites = require("./rebuild-sites");
+import logger from "./logger";
+import rebuildSites from "./rebuild-sites";
+import createServer from "./server";
 
 (async () => {
   logger.debug("Starting application");

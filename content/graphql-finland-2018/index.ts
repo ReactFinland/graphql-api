@@ -1,5 +1,6 @@
-const people = require("../people");
-const allSponsors = require("../sponsors");
+import people from "../people";
+import allSponsors from "../sponsors";
+
 const partners = [
   allSponsors.agentconf,
   allSponsors.apiops,
@@ -29,7 +30,7 @@ const bronzeSponsors = [
 ];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
-module.exports = {
+export default {
   id: "graphql-finland-2018",
   name: "GraphQL Finland 2018",
   year: "2018",

@@ -1,7 +1,7 @@
-const people = require("../people");
-const locations = require("../locations");
+import locations from "../locations";
+import people from "../people";
+import allSponsors from "../sponsors";
 
-const allSponsors = require("../sponsors");
 const partners = [
   allSponsors.agentconf,
   allSponsors.halfstack,
@@ -29,7 +29,7 @@ const bronzeSponsors = [
 ];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
-module.exports = {
+export default {
   id: "react-finland-2018",
   name: "React Finland 2018",
   year: "2018",

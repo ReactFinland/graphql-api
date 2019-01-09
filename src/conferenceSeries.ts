@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   ["react-finland"]: {
     id: "react-finland",
     name: "React Finland",

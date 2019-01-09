@@ -1,9 +1,8 @@
-// @flow
 // https://github.com/amazeeio/lagoon/blob/master/services/api/src/server.js
-const http = require("http");
-const util = require("util");
-const logger = require("./logger");
-const createApp = require("./app");
+import * as http from "http";
+import * as util from "util";
+import createApp from "./app";
+import logger from "./logger";
 
 const normalizePort = value => {
   const port = parseInt(value, 10);
@@ -33,4 +32,4 @@ const createServer = async () => {
   return server;
 };
 
-module.exports = createServer;
+export default createServer;

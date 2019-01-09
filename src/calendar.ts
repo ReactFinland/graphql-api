@@ -1,4 +1,4 @@
-const ical = require("ical-generator");
+import * as ical from "ical-generator";
 
 function calendar({ filename, title, schedules }) {
   const timezone = "+03:00"; // EEST
@@ -31,9 +31,14 @@ function calendar({ filename, title, schedules }) {
 
 function resolveLocation(location) {
   // TODO: Get the default from the current event!
-  const defaultLocation = "Helsinki Congress Paasitorni, Paasivuorenkatu 5 A, 00530 Helsinki, Finland";
+  const defaultLocation =
+    "Helsinki Congress Paasitorni, Paasivuorenkatu 5 A, 00530 Helsinki, Finland";
 
-  return location ? `${location.name}, ${location.address}, ${location.city}, ${location.country.name}` : defaultLocation;
+  return location
+    ? `${location.name}, ${location.address}, ${location.city}, ${
+        location.country.name
+      }`
+    : defaultLocation;
 }
 
-module.exports = calendar;
+export default calendar;

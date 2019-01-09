@@ -1,5 +1,5 @@
-const request = require("request");
-const logger = require("./logger");
+import request from "request";
+import logger from "./logger";
 
 // Expects a comma separated string
 function rebuildSites(urls) {
@@ -12,8 +12,8 @@ function rebuildSite(url) {
       return logger.error(err);
     }
 
-    logger.info(`rebuilt ${url}`);
+    return logger.info(`rebuilt ${url}`);
   });
 }
 
-module.exports = rebuildSites;
+export default rebuildSites;

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   BRONZE_SPONSOR: "bronzeSponsor",
   GOLD_SPONSOR: "goldSponsor",
   KEYNOTE: "keynote",

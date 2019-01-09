@@ -1,8 +1,8 @@
-const { flatMap, get, pick, uniq } = require("lodash");
-const { makeExecutableSchema } = require("graphql-tools");
-const conferences = require("./conferences");
-const series = require("./conferenceSeries");
-const enums = require("./enums");
+import { makeExecutableSchema } from "graphql-tools";
+import { flatMap, get, pick, uniq } from "lodash";
+import conferences from "./conferences";
+import series from "./conferenceSeries";
+import enums from "./enums";
 
 function getConference(id) {
   if (conferences[id]) {
@@ -434,7 +434,7 @@ function getSpeakers(sessions) {
   return uniq(flatMap(sessions, session => get(session, "speakers")));
 }
 
-module.exports = makeExecutableSchema({
+export default makeExecutableSchema({
   typeDefs,
   resolvers,
 });

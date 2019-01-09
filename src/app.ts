@@ -1,10 +1,9 @@
-// @flow
-const express = require("express");
-const morgan = require("morgan");
-const compression = require("compression");
-const { json } = require("body-parser");
-const logger = require("./logger");
-const createRouter = require("./routes");
+import { json } from "body-parser";
+import compression from "compression";
+import express from "express";
+import morgan from "morgan";
+import logger from "./logger";
+import createRouter from "./routes";
 
 const createApp = () => {
   const app = express();
@@ -34,4 +33,4 @@ const createApp = () => {
   return app;
 };
 
-module.exports = createApp;
+export default createApp;
