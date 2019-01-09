@@ -5,7 +5,7 @@
     "target": "es5",
     "strict": true,
     "sourceMap": true,
-    "outDir": "lib",
+    "outDir": "build",
     "typeRoots": ["node_modules/@types"],
     "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
