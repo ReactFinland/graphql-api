@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Marc-André Giroux",
   about:
     "A Jazz guitarist turned developer, Marc-André is currently working at GitHub, where he is trying to help building better APIs. He is currently writing a book, [The Little Book of GraphQL Design](https://book.graphqlschemadesign.com/). When he's not hacking on or thinking about GraphQL, you might find him throwing heavy weights above his head.",

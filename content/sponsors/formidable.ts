@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Formidable",
   about: "The JavaScript Consultancy trusted by engineers",
   image: "sponsors/formidable.svg",

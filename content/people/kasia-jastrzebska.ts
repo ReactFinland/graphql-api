@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Kasia Jastrzębska",
   about:
     "Frontend developer with over 6 years of experience around various frameworks and libs knowledge in my basket (such as React+Redux, Polymer, Ember, Backbone). Always eager to go deeper ;D",

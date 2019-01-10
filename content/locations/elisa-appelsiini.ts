@@ -1,6 +1,6 @@
-const sponsor = require("../sponsors/elisa");
+import sponsor from "../sponsors/elisa";
 
-module.exports = {
+export default {
   name: "Elisa Appelsiini",
   about:
     "In addition to being a silver sponsor of the event, Elisa is supporting the event by providing space for our workshops",
@@ -12,5 +12,4 @@ module.exports = {
   },
   city: "Helsinki",
   address: "Kaarlenkatu 11",
-  keywords: sponsor.keywords,
 };

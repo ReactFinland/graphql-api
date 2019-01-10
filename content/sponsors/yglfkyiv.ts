@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "YGLF Kyiv",
   about: "Community event built by developers for developers",
   image: "sponsors/yglf.jpg",

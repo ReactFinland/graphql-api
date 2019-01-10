@@ -9,6 +9,7 @@ export default {
   SPEAKER: "speaker",
   TALK: "talk",
   WORKSHOP: "workshop",
+  WORKSHOP_HOST: "workshop_host",
   COFFEE_BREAK: "coffee_break",
   LUNCH: "lunch",
   BREAKFAST: "breakfast",

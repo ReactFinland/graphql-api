@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Gatsby",
   about: "Modern Development, for the Content Web",
   image: "sponsors/gatsby.svg",

@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Michał Chudziak",
   about:
     'Lead software engineer in Callstack - company which provides the highest-level consultancy services for React and React Native. Lover of GraphQL\'s simplicity and a big supporter of "learn once, write anywhere" motto.',

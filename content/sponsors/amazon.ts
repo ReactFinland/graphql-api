@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Amazon Web Services",
   about:
     "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. ",

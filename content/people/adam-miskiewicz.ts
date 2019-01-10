@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Adam Miskiewicz",
   about:
     "Adam Miskiewicz is a software engineer at Airbnb, lover of his two dogs, JavaScript, and GraphQL.",

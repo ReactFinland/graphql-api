@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "React Day Berlin",
   about: "Fully Packed Day of Your Favorite React Content",
   image: "sponsors/react-day-berlin.png",

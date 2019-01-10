@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Columbia Road",
   about: "A Digital Growth Consultancy by Futurice",
   image: "sponsors/columbiaroad.svg",

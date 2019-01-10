@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Michel Weststrate",
   about:
     "Full-stack tech lead and open source evangelist at Mendix. Author of MobX, MobX-State-Tree and Immer. On a quest to make programming as natural as possible.",

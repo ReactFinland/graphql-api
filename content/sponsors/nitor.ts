@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Nitor",
   about: "Digital engineering",
   image: "sponsors/nitor.png",

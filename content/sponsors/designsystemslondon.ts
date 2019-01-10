@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Design Systems London",
   about: "Open-source conference for the design systems community",
   image: "sponsors/designsystemslondon.png",

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Agent Conf",
   about: "The international event for coding inspiration",
   image: "sponsors/agent.png",

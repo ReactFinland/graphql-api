@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "ReactJs Day",
   about: "ReactJS Day is a one-day, single track conference in Verona",
   image: "sponsors/reactjsday.png",

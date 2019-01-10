@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "SurviveJS",
   about: "SurviveJS will take you from a JavaScript apprentice to master",
   image: "sponsors/survivejs.svg",

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "React Alicante",
   about: "The international React.js conference in Spain",
   image: "sponsors/react-alicante.svg",

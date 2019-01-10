@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Geniem",
   about: "Creative Web Development",
   image: "sponsors/geniem.svg",

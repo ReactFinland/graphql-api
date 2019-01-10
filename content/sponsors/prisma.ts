@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Prisma",
   about: "Build a GraphQL server with any database",
   image: "sponsors/prisma.svg",

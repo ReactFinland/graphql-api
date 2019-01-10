@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Wunder",
   about: "Your partner in digital change",
   image: "sponsors/wunder.svg",

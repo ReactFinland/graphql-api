@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Digia",
   about: "Smoother digital world",
   image: "sponsors/digia.png",

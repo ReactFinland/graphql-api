@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "ReasonConf",
   about:
     "World’s first Reason conference for web-developers & OCaml enthusiasts",

@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Ville Immonen",
   about: "Software developer who works on developer tools at Expo. Formerly co-founded Reindex, a hosted GraphQL service. Likes good coffee, snowboarding and surfing. Lives in Finland with his family.",
   image: "people/ville.jpg",

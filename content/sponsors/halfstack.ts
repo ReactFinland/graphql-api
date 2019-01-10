@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "HalfStack",
   about:
     "HalfStack is a one-day, single track, fun JS conf in a Shoreditch pub",

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "React Native EU",
   about:
     "First community conference in Europe, focused exclusively on React Native. Community, core contributors, insights, networking and tons of knowledge.",

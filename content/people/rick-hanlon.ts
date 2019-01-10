@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Rick Hanlon",
   about:
     "Engineer @Facebook · Core @fbjest 🃏 · http://my.pronoun.is/he  · fly and fresh · EST. AKRON",

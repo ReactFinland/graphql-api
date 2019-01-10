@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Ellie Day",
   about:
     "Ellie is a technologist, product engineer, speaker, teacher, and more. Currently, she works at Atlassian as a senior software engineer on the Statuspage team. In her spare time. she's the director of Women Who Code SF and helps early stage software teams scale their software platforms. Previously, she worked at Mavenlink, building highly usable and performant web products, like Full-Cycle Resource Management. Before Mavenlink, she led platform development for mRelief (YC W16), a tech non-profit, that has helped hundreds of thousands of low-income Americans get access to public assistance.",

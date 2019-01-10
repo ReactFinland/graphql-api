@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Nightingale Health",
   about:
     "Nightingale Health is aiming to solve the world’s biggest health issue",

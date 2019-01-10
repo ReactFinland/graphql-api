@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Osaango",
   about:
     "Learn the next big thing - Skills & Methods for API, Platform and AI Economy",

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Apollo",
   about:
     "We build Apollo Client, Engine, and Server to help you adopt GraphQL.",

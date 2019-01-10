@@ -1,7 +1,6 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from "../../src/enums";
 
-module.exports = {
+export default {
   name: "Anna Doubková",
   about: "Senior software engineer at Hive.",
   image: "people/anna.jpg",

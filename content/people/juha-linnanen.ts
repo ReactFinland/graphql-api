@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Juha Linnanen",
   about: "Mobile dev enthusiast, boardgamer and mtg cuber.",
   image: "people/juha.jpg",

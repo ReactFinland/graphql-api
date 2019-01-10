@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Alma Media",
   about: "Courage to grow",
   image: "sponsors/alma.png",

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Hasura",
   about: "Instant Realtime GraphQL on Postgres",
   image: "sponsors/hasura.png",

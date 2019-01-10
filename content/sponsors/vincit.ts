@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Vincit",
   about: "Not Another Software Company",
   image: "sponsors/vincit.svg",

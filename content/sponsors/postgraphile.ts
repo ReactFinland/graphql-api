@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Postgraphile",
   about: "Instant GraphQL API for PostgreSQL database",
   image: "sponsors/postgraphile.svg",

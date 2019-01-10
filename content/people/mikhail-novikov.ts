@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Mikhail Novikov",
   about:
     "Mikhail is a GraphQL hipster. He started GraphQL startup before GraphQL was ever public. The startup failed, but Mikhail has been active in GraphQL community ever since, working on tools like Schema Stitching and Apollo Launchpad. He is one of the organizers of GraphQL Finland.",

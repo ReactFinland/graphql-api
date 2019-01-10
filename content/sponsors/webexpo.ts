@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "WebExpo",
   about: "The web event of the year",
   image: "sponsors/webexpo.png",

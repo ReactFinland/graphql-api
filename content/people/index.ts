@@ -1,1 +1,1 @@
-module.exports = require("require-dir")();
+export default require("require-dir")();

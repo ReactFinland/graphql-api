@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "React India",
   about: "The international React.js conference in Goa",
   image: "sponsors/react-india.svg",

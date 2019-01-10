@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Valkoinen Sali",
   about: "Valkoinen Sali is the main venue of the event.",
   social: {

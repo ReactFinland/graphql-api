@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Mike Berman",
   about: "Engineer @ Facebook, former organizer of Sydney Zombie Walk, & big fan of breakfast foods • 🎹 • ‍🤹 • ⛷ • 🦘🇦🇺‍",
   image: "people/mike.jpg",

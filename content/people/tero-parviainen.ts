@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Tero Parviainen",
   about:
     "Software developer, music hacker, and writer. Building the design tools of the future at @CreativeDotAI. ",

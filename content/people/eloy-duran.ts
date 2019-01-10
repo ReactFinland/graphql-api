@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Eloy Durán",
   about:
     "Eloy works at Artsy, where they’ve been using GraphQL in novel ways since its inception. Being big on ‘OSS by default’, for instance creating CocoaPods, he came to the JavaScript ecosystem from a native background via React Native and chose Relay as the place where in the React/GraphQL community he can best contribute.",

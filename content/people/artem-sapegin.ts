@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Artem Sapegin",
   about:
     "Artem is a frontend developer living in Berlin, passionate photographer and owner of crazy dogs. Creator of React Styleguidist.",

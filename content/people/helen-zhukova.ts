@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Helen Zhukova",
   about:
     "Helen creates user interfaces for Web and mobile mainly for live video streaming and video post-production for the movie studios. JavaScript is her first love but she is open to any technologies and skills that give her creations the best look and feel. She is a lifelong learner and loves to share her knowledge.",

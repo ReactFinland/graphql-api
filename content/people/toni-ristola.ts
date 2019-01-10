@@ -1,6 +1,6 @@
-const enums = require("../../src/enums");
+import enums from '../../src/enums';
 
-module.exports = {
+export default {
   name: "Toni Ristola",
   about:
     "Toni Ristola is a Software Architect at Robu Oy and an organizer for the React Finland conference and contributor for the React Finland App.",

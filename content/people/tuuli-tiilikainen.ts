@@ -1,6 +1,6 @@
-const enums = require("../../src/enums");
+import enums from '../../src/enums';
 
-module.exports = {
+export default {
   name: "Tuuli Tiilikainen",
   about: "",
   image: "people/tuuli.jpg",

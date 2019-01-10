@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Gofore",
   about: "We create tomorrow's digital services and work culture today",
   image: "sponsors/gofore.svg",

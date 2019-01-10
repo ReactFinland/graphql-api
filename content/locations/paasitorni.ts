@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Paasitorni Congress Hall",
   about: "Paasitorni is the main venue of the event.",
   image: "locations/paasitorni.jpg",

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Zapier",
   about: "Makes you happier :)",
   image: "sponsors/zapier.png",

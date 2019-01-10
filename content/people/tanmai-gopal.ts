@@ -1,7 +1,7 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import enums from '../../src/enums';
+import keywords from '../keywords';
 
-module.exports = {
+export default {
   name: "Tanmai Gopal",
   about:
     "Tanmai is the co-founder of hasura.io. He is a StackOverflow powered fullstack, polyglot developer whose areas of interest and work span react, GraphQL, nodejs, python, haskell, docker, postgres, kubernetes. He is passionate about making it easy to build things and is the instructor of India's largest MOOC imad.tech with over 250,000 students.",

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "typeof",
   about: "typeof is a web craftsmanship conference",
   image: "sponsors/typeof.svg",

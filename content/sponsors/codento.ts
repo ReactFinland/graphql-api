@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Codento",
   about: "A Change Agent's Right Hand.",
   image: "sponsors/codento.png",

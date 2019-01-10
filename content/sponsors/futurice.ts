@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "Futurice",
   about: "You can’t predict the future. Are you prepared to define it?",
   image: "sponsors/futurice.svg",

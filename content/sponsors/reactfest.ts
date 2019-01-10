@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   name: "ReactFest",
   about: "A one day open-source ReactJS conference - festival",
   image: "sponsors/react-fest.png",
