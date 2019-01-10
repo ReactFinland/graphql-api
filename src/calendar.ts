@@ -1,4 +1,4 @@
-import * as ical from "ical-generator";
+import ical from "ical-generator";
 
 function calendar({ filename, title, schedules }) {
   const timezone = "+03:00"; // EEST
