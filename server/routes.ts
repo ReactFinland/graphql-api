@@ -5,10 +5,13 @@ import { redirectToHTTPS } from "express-http-to-https";
 import * as path from "path";
 import calendar from "./calendar";
 import conferences from "./conferences";
-import schema from "./schema";
+import generateSchema from "./schema";
 
-function createRouter() {
+async function createRouter() {
   const router = new express.Router();
+  const schema = await generateSchema();
+
+  console.log("schema", schema);
 
   router.use(cors());
   router.use(redirectToHTTPS([/localhost:(\d{4})/]));

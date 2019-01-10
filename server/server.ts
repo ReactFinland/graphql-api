@@ -14,11 +14,12 @@ const normalizePort = value => {
   return false;
 };
 
-const createServer = async () => {
+async function createServer() {
   logger.debug("Starting to boot the server.");
 
   const port = normalizePort(process.env.PORT || "3000");
-  const server = http.createServer(createApp());
+  const app = await createApp();
+  const server = http.createServer(app);
 
   // $FlowIgnore https://github.com/facebook/flow/pull/4176
   const listen = util.promisify(server.listen).bind(server);
@@ -30,6 +31,6 @@ const createServer = async () => {
 
   // eslint-disable-line
   return server;
-};
+}
 
 export default createServer;

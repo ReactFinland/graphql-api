@@ -5,7 +5,7 @@ import morgan from "morgan";
 import logger from "./logger";
 import createRouter from "./routes";
 
-const createApp = () => {
+async function createApp() {
   const app = express();
 
   // Use compression (gzip) for responses.
@@ -27,10 +27,11 @@ const createApp = () => {
     })
   );
 
-  // Add routes.
-  app.use("/", createRouter());
+  const routes = await createRouter();
+
+  app.use("/", routes);
 
   return app;
-};
+}
 
 export default createApp;

@@ -12,7 +12,8 @@
     "noImplicitReturns": true,
     "noImplicitAny": false,
     "noUnusedLocals": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "experimentalDecorators": true
   },
-  "include": ["content/**/*.ts", "src/**/*.ts"]
+  "include": ["server/**/*.ts"]
 }
