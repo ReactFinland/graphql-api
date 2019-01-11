@@ -3,26 +3,24 @@ const keywords = require("../keywords");
 
 module.exports = {
   name: "Ville Immonen",
-  about:
-    "Developer @expo • Dad • Co-founder @reindexio • React Native • GraphQL • JavaScript • Coffee",
+  about: "Software developer who works on developer tools at Expo. Formerly co-founded Reindex, a hosted GraphQL service. Likes good coffee, snowboarding and surfing. Lives in Finland with his family.",
   image: "people/ville.jpg",
   social: {
-    homepage: "",
     twitter: "VilleImmonen",
     github: "fson",
-    facebook: "",
-    medium: "",
-    instagram: "",
-    linkedin: "",
-    youtube: "",
   },
   location: {
     country: {
-      name: "Finland", // TODO: Country name
-      code: "FI", // TODO: Two-letter country code
+      name: "Finland",
+      code: "FI",
     },
-    city: "Helsinki",
+    city: "Espoo",
   },
-  keywords: [keywords.REACT, keywords.REACT_NATIVE],
+  keywords: [
+    keywords.REACT,
+    keywords.REACT_NATIVE,
+    keywords.TOOLING,
+    keywords.UNIVERSAL_REACT,
+  ],
   type: [enums.SPEAKER],
 };
