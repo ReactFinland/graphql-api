@@ -40,7 +40,7 @@ module.exports = {
     {
       begin: "11:15",
       end: "12:15",
-      title: "",
+      title: "Case Studies",
       sessions: [
         require("../sessions/nik-graf"),
         require("../sessions/kadi-kraman"),

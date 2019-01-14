@@ -82,7 +82,7 @@ module.exports = {
     {
       begin: "15:00",
       end: "16:00",
-      title: "",
+      title: "Tooling",
       sessions: [
         require("../sessions/carolyn-stransky"),
         require("../sessions/glenn-reyes"),
