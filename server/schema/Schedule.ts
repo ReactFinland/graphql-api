@@ -14,7 +14,7 @@ export class Schedule {
   public intervals?: [Interval];
 }
 
-@Resolver()
+@Resolver(_ => Schedule)
 export class ScheduleResolver {
   @Query(_ => Schedule)
   public schedule(

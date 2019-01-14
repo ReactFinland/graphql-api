@@ -16,7 +16,7 @@ export class Interval {
   public sessions!: [ISession];
 }
 
-@Resolver()
+@Resolver(_ => Interval)
 export class IntervalResolver {
   @FieldResolver(_ => [ISession])
   public sessions(@Root() interval: Interval) {

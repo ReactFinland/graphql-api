@@ -35,7 +35,7 @@ export class Location {
   public social?: Social;
 }
 
-@Resolver()
+@Resolver(_ => Location)
 export class LocationResolver {
   @FieldResolver(_ => Image)
   public image(@Root() location: Location, @Ctx() ctx: IContext) {

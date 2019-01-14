@@ -13,9 +13,9 @@ import conferences from "../conferences";
 import series from "./conferenceSeries";
 import { Contact } from "./Contact";
 import { Location } from "./Location";
-import { ISession, SessionType, Talk, Workshop } from "./Session";
-import { Series } from "./Series";
 import { Schedule } from "./Schedule";
+import { Series } from "./Series";
+import { ISession, SessionType, Talk, Workshop } from "./Session";
 import { Ticket } from "./Ticket";
 
 @ObjectType()
@@ -78,7 +78,7 @@ export class Conference {
   public tickets?: [Ticket];
 }
 
-@Resolver()
+@Resolver(_ => Conference)
 export class ConferenceResolver {
   @Query(_ => Conference)
   public conference(@Arg("id") id: string) {

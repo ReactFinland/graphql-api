@@ -67,7 +67,7 @@ export class Contact {
   public city?: string;
 }
 
-@Resolver()
+@Resolver(_ => Contact)
 export class ContactResolver {
   @Query(_ => Contact)
   public contact(

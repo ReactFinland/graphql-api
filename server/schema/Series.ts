@@ -24,7 +24,7 @@ export class Series {
   public conferences!: [string];
 }
 
-@Resolver()
+@Resolver(_ => Series)
 export class SeriesResolver {
   @Query(_ => Series)
   public series(@Arg("id") id: string) {
