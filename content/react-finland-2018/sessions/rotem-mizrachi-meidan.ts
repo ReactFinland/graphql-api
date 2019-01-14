@@ -9,6 +9,6 @@ A year in, developing and using Detox in production taught us a lot. From design
 
 In this talk, we’ll discuss how Detox works and what makes it deterministic, cover some advanced use cases and methodologies, go over new features and tease the ones that are upcoming.
 `,
-  type: enums.TALK,
+  type: SessionType.TALK,
   keywords: speaker.keywords,
 };

@@ -6,7 +6,7 @@ export default {
   speakers: [speaker],
   title: "Where art thou, my error?",
   description: "",
-  type: enums.TALK,
+  type: SessionType.TALK,
   keywords: [keywords.GRAPHQL],
   urls: {
     web: "",

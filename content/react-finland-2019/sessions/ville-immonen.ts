@@ -6,6 +6,6 @@ export default {
   speakers: [speaker],
   title: "Mysterious Expo talk",
   description: ``,
-  type: enums.TALK,
+  type: SessionType.TALK,
   keywords: [keywords.REACT_NATIVE],
 };

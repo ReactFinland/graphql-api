@@ -301,7 +301,7 @@ abstract class ISession {
   public location?: Location;
 }
 
-enum SessionType {
+export enum SessionType {
   TALK,
   LIGHTNING_TALK,
   KEYNOTE,
@@ -378,7 +378,7 @@ export class TalkUrls {
   public video?: string;
 }
 
-enum ContactType {
+export enum ContactType {
   SPEAKER,
   TALK,
   LIGHTNING_TALK,

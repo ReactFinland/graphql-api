@@ -1,4 +1,4 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 import andrey from "../../people/andrey-okonetchnikov";
 import artem from "../../people/artem-sapegin";
 

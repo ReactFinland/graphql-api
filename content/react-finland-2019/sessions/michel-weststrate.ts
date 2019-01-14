@@ -1,4 +1,4 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 import speaker from "../../people/michel-weststrate";
 
 export default {
