@@ -5,20 +5,22 @@ function calendar({ filename, title, schedules }) {
   const domain = "https://react-finland.fi";
   const cal = ical({ domain, name: title });
 
-  schedules.forEach(({ day, intervals }) => {
-    intervals.forEach(({ begin, end, sessions }) => {
-      sessions.forEach(({ title: summary, description, location }) => {
-        cal.createEvent({
-          start: new Date(`${day}T${begin}${timezone}`),
-          end: new Date(`${day}T${end}${timezone}`),
-          summary,
-          description,
-          location: resolveLocation(location),
-          url: domain,
+  if (Array.isArray(schedules)) {
+    schedules.forEach(({ day, intervals }) => {
+      intervals.forEach(({ begin, end, sessions }) => {
+        sessions.forEach(({ title: summary, description, location }) => {
+          cal.createEvent({
+            start: new Date(`${day}T${begin}${timezone}`),
+            end: new Date(`${day}T${end}${timezone}`),
+            summary,
+            description,
+            location: resolveLocation(location),
+            url: domain,
+          });
         });
       });
     });
-  });
+  }
 
   return (_, response) => {
     response.writeHead(200, {

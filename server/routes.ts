@@ -11,8 +11,6 @@ async function createRouter() {
   const router = new express.Router();
   const schema = await generateSchema();
 
-  console.log("schema", schema);
-
   router.use(cors());
   router.use(redirectToHTTPS([/localhost:(\d{4})/]));
 
@@ -31,6 +29,7 @@ async function createRouter() {
 
   router.all("/calendar/:id", (req, res) => {
     const conference = conferences[req.params.id];
+
     if (conference) {
       calendar({
         filename: `calendar-${conference.id}`,
