@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Tejas Kumar",
@@ -18,5 +18,5 @@ export default {
     city: "Berlin",
   },
   keywords: [keywords.REACT, keywords.TOOLING],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

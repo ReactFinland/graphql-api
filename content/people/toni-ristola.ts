@@ -1,4 +1,4 @@
-import enums from '../../src/enums';
+import { ContactType } from "../../server/schema";
 
 export default {
   name: "Toni Ristola",
@@ -18,5 +18,5 @@ export default {
     },
   },
   keywords: [],
-  type: [enums.ORGANIZER, enums.SPEAKER],
+  type: [ContactType.ORGANIZER, ContactType.SPEAKER],
 };

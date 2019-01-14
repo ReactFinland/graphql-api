@@ -1,12 +1,12 @@
-import enums from '../../../src/enums';
-import keywords from '../../keywords';
-import speaker from '../../people/dan-schafer';
+import enums from "../../../src/enums";
+import keywords from "../../keywords";
+import speaker from "../../people/dan-schafer";
 
 export default {
   speakers: [speaker],
   title: "The Prehistory of GraphQL",
   description: "",
-  type: enums.KEYNOTE,
+  type: ContactType.KEYNOTE,
   keywords: [keywords.GRAPHQL],
   urls: {
     web: "",

@@ -19,5 +19,5 @@ export default {
     city: "Vienna",
   },
   keywords: [keywords.GRAPHQL, keywords.GRAPHQLJS],
-  type: [enums.SPEAKER, enums.TALK],
+  type: [ContactType.SPEAKER, ContactType.TALK],
 };

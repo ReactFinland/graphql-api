@@ -1,7 +1,7 @@
-import enums from '../../../src/enums';
+import enums from "../../../src/enums";
 
 export default {
-  type: enums.WORKSHOP,
+  type: ContactType.WORKSHOP,
   speakers: [require("../../people/patrick-stapfer")],
   title: "Getting Started with ReasonML & ReasonReact",
   description: `ReasonML is a new cool JavaScript-like language with a strong type-system and first level React bindings. As with every new language, there comes a new ecosystem and unfamiliar concepts with it.

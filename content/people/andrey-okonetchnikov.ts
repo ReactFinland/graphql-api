@@ -24,5 +24,5 @@ export default {
     keywords.STYLE_GUIDES,
     keywords.TOOLING,
   ],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

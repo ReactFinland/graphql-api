@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Sara Vieira",
@@ -20,5 +20,5 @@ export default {
     city: "",
   },
   keywords: [keywords.REACT, keywords.TESTING],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

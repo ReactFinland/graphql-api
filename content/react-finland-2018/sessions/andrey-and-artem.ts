@@ -3,7 +3,7 @@ import andrey from "../../people/andrey-okonetchnikov";
 import artem from "../../people/artem-sapegin";
 
 export default {
-  type: enums.WORKSHOP,
+  type: ContactType.WORKSHOP,
   speakers: [andrey, artem],
   title: "Styleguide-driven Development",
   description: `Web applications becoming bigger and more complex, and as they grow, the complexity of the User Interface, arguably the most important part of your application, increases. And with it, your responsibility as a UI developer.

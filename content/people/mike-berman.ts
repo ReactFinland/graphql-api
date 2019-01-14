@@ -1,9 +1,10 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Mike Berman",
-  about: "Engineer @ Facebook, former organizer of Sydney Zombie Walk, & big fan of breakfast foods • 🎹 • ‍🤹 • ⛷ • 🦘🇦🇺‍",
+  about:
+    "Engineer @ Facebook, former organizer of Sydney Zombie Walk, & big fan of breakfast foods • 🎹 • ‍🤹 • ⛷ • 🦘🇦🇺‍",
   image: "people/mike.jpg",
   social: {
     homepage: "https://berman.xyz",
@@ -19,5 +20,5 @@ export default {
     city: "London",
   },
   keywords: [keywords.REACT, keywords.REDUX],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

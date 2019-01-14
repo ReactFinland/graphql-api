@@ -1,12 +1,12 @@
-import enums from '../../../src/enums';
-import keywords from '../../keywords';
-import speaker from '../../people/christoffer-niska';
+import enums from "../../../src/enums";
+import keywords from "../../keywords";
+import speaker from "../../people/christoffer-niska";
 
 export default {
   speakers: [speaker],
   title: "graphql-php",
   description: "",
-  type: enums.LIGHTNING_TALK,
+  type: ContactType.LIGHTNING_TALK,
   keywords: [keywords.GRAPHQL],
   urls: {
     web: "",

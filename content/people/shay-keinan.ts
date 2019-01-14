@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Shay Keinan",
@@ -20,5 +20,5 @@ export default {
     city: "Tel Aviv",
   },
   keywords: [keywords.REACT, keywords.REACT_VR],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

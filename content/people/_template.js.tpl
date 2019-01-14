@@ -23,5 +23,5 @@ module.exports = {
     city: "", // TODO: City name
   },
   keywords: [keywords.REACT], // TODO: check keywords for more
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

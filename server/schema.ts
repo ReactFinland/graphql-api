@@ -384,6 +384,7 @@ export enum ContactType {
   LIGHTNING_TALK,
   KEYNOTE,
   WORKSHOP,
+  WORKSHOP_HOST,
   ORGANIZER,
 }
 

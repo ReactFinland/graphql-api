@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Marc-André Giroux",
@@ -21,5 +21,5 @@ export default {
     city: "Montreal",
   },
   keywords: [keywords.GRAPHQL, keywords.GRAPHQLJS],
-  type: [enums.SPEAKER, enums.WORKSHOP_HOST],
+  type: [ContactType.SPEAKER, ContactType.WORKSHOP_HOST],
 };

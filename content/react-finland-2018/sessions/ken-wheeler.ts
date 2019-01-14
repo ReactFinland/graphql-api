@@ -1,5 +1,5 @@
-import enums from '../../../src/enums';
-import speaker from '../../people/ken-wheeler';
+import enums from "../../../src/enums";
+import speaker from "../../people/ken-wheeler";
 
 export default {
   speakers: [speaker],
@@ -9,7 +9,7 @@ This talk will examine how React changed the front end landscape as we know it. 
 
 But most importantly, we will take a look at the core idea of React, and why it transcends language or rendering target and posit on what that means going forward, including what React might look like years from now.
   `,
-  type: enums.KEYNOTE,
+  type: ContactType.KEYNOTE,
   keywords: speaker.keywords,
   urls: {
     web: "https://reactfinland.surge.sh/",

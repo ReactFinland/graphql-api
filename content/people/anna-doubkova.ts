@@ -16,5 +16,5 @@ export default {
     city: "London",
   },
   keywords: [],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

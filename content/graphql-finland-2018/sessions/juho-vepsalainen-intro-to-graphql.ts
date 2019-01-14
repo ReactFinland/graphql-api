@@ -1,8 +1,8 @@
-import keywords from '../../keywords';
-import enums from '../../../src/enums';
+import keywords from "../../keywords";
+import enums from "../../../src/enums";
 
 export default {
-  type: enums.WORKSHOP,
+  type: ContactType.WORKSHOP,
   speakers: [require("../../people/juho-vepsalainen")],
   title: "Let’s Learn GraphQL",
   description: `

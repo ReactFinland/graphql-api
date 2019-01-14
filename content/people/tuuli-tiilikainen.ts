@@ -1,4 +1,4 @@
-import enums from '../../src/enums';
+import { ContactType } from "../../server/schema";
 
 export default {
   name: "Tuuli Tiilikainen",
@@ -14,5 +14,5 @@ export default {
     },
   },
   keywords: [],
-  type: [enums.ORGANIZER],
+  type: [ContactType.ORGANIZER],
 };

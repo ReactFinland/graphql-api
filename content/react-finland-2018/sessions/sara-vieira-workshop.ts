@@ -1,7 +1,7 @@
-import enums from '../../../src/enums';
+import enums from "../../../src/enums";
 
 export default {
-  type: enums.WORKSHOP,
+  type: ContactType.WORKSHOP,
   speakers: [require("../../people/sara-vieira")],
   title: "Testing React",
   description: `In this workshop I will be going through unit testing in Javascript, how you can make it fun and meaningful for your app.

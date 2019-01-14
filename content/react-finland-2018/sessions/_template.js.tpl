@@ -8,6 +8,6 @@ module.exports = {
   speakers: [speaker],
   title: "", // The title of the session goes here
   description: "", // Session description goes here. ES6 template and markdown work
-  type: SessionType.TALK, // enums.LIGHTNING_TALK, enums.KEYNOTE, enums.WORKSHOP are possible too
+  type: SessionType.TALK, // ContactType.LIGHTNING_TALK, ContactType.KEYNOTE, ContactType.WORKSHOP are possible too
   keywords: speaker.keywords,
 };

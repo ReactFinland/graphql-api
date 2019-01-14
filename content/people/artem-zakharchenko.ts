@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Artem Zakharchenko",
@@ -20,5 +20,5 @@ export default {
     city: "Prague",
   },
   keywords: [keywords.REACT, keywords.STYLING, keywords.TOOLING],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

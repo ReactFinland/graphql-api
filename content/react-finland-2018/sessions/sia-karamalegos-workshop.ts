@@ -1,7 +1,7 @@
-import enums from '../../../src/enums';
+import enums from "../../../src/enums";
 
 export default {
-  type: enums.WORKSHOP,
+  type: ContactType.WORKSHOP,
   speakers: [require("../../people/sia-karamalegos")],
   title: "Universal React Apps Using Next.js",
   description: `Every user’s hardware is different, and processing speed can hinder user experience on client-side rendered React applications. Server-side rendering and code-splitting can drastically improve user experience by minimizing the work that the client has to do.

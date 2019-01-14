@@ -1,7 +1,7 @@
-import enums from '../../../src/enums';
+import enums from "../../../src/enums";
 
 export default {
-  type: enums.WORKSHOP,
+  type: ContactType.WORKSHOP,
   speakers: [require("../../people/glenn-reyes")],
   title: "React and GraphQL – From zero to production",
   description: `

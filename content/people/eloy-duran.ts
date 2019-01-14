@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Eloy Durán",
@@ -18,5 +18,5 @@ export default {
     city: "Amsterdam",
   },
   keywords: [keywords.GRAPHQL],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

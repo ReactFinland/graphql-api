@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Kasia Jastrzębska",
@@ -20,5 +20,5 @@ export default {
     city: "Gdansk",
   },
   keywords: [keywords.REACT, keywords.SSR, keywords.STYLING],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

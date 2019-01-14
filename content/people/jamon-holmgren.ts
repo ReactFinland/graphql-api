@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Jamon Holmgren",
@@ -24,5 +24,5 @@ export default {
     city: "Vancouver",
   },
   keywords: [keywords.REACT, keywords.REACT_NATIVE],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

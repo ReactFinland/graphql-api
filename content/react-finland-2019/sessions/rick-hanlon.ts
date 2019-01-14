@@ -5,6 +5,6 @@ export default {
   speakers: [speaker],
   title: "Mysterious keynote",
   description: ``,
-  type: enums.KEYNOTE,
+  type: ContactType.KEYNOTE,
   keywords: [],
 };

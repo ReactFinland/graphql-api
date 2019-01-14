@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Rick Hanlon",
@@ -19,5 +19,5 @@ export default {
     city: "Manhattan, New York",
   },
   keywords: [keywords.REACT, keywords.TESTING, keywords.TOOLING],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

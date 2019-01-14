@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Carolyn Stransky",
@@ -18,5 +18,5 @@ export default {
     city: "Berlin",
   },
   keywords: [keywords.GRAPHQL, keywords.GRAPHQLJS],
-  type: [enums.SPEAKER, enums.TALK],
+  type: [ContactType.SPEAKER, ContactType.TALK],
 };

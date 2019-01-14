@@ -5,6 +5,6 @@ export default {
   speakers: [speaker],
   title: "Mysterious talk",
   description: ``,
-  type: enums.LIGHTNING_TALK,
+  type: ContactType.LIGHTNING_TALK,
   keywords: [],
 };

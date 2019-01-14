@@ -1,12 +1,12 @@
-import enums from '../../../src/enums';
-import keywords from '../../keywords';
-import speaker from '../../people/helen-zhukova';
+import enums from "../../../src/enums";
+import keywords from "../../keywords";
+import speaker from "../../people/helen-zhukova";
 
 export default {
   speakers: [speaker],
   title: "(Un)expected use of GraphQL",
   description: "",
-  type: enums.LIGHTNING_TALK,
+  type: ContactType.LIGHTNING_TALK,
   keywords: [keywords.GRAPHQL],
   urls: {
     web: "",

@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Mikhail Novikov",
@@ -21,5 +21,5 @@ export default {
     city: "Helsinki",
   },
   keywords: [keywords.GRAPHQL, keywords.CMS],
-  type: [enums.WORKSHOP_HOST, enums.ORGANIZER],
+  type: [ContactType.WORKSHOP_HOST, ContactType.ORGANIZER],
 };

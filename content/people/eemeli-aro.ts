@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Eemeli Aro",
@@ -19,5 +19,5 @@ export default {
     city: "Helsinki",
   },
   keywords: [keywords.TOOLING, keywords.REACT],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

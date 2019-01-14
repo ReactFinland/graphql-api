@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Dan Schafer",
@@ -18,5 +18,5 @@ export default {
     city: "San Francisco",
   },
   keywords: [keywords.GRAPHQL],
-  type: [enums.SPEAKER, enums.KEYNOTE],
+  type: [ContactType.SPEAKER, ContactType.KEYNOTE],
 };

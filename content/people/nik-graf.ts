@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Nik Graf",
@@ -27,5 +27,5 @@ export default {
     keywords.REACT,
     keywords.REACT_VR,
   ],
-  type: [enums.SPEAKER, enums.TALK, enums.WORKSHOP],
+  type: [ContactType.SPEAKER, ContactType.TALK, ContactType.WORKSHOP],
 };

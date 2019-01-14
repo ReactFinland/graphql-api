@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Maaret Pyhäjärvi",
@@ -20,5 +20,5 @@ export default {
     city: "Helsinki",
   },
   keywords: [keywords.REACT, keywords.TESTING],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

@@ -1,9 +1,10 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Jani Eväkallio",
-  about: "Jani is a small-town Finnish boy far from home. Today he leads a team building cross-stack React mobile and web apps at Formidable London and, in his spare time, performs improvised comedy and speaks at conferences advocating for the React ecosystem, particularly React Native and GraphQL.",
+  about:
+    "Jani is a small-town Finnish boy far from home. Today he leads a team building cross-stack React mobile and web apps at Formidable London and, in his spare time, performs improvised comedy and speaks at conferences advocating for the React ecosystem, particularly React Native and GraphQL.",
   image: "people/jani.jpg",
   social: {
     homepage: "",
@@ -19,5 +20,5 @@ export default {
     city: "London",
   },
   keywords: [keywords.REACT],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };

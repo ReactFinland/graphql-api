@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Johannes Schickling",
@@ -21,5 +21,5 @@ export default {
     city: "Berlin",
   },
   keywords: [keywords.GRAPHQL],
-  type: [enums.SPEAKER, enums.LIGHTNING_TALK],
+  type: [ContactType.SPEAKER, ContactType.LIGHTNING_TALK],
 };

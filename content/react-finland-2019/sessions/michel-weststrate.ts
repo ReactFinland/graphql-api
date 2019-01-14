@@ -22,6 +22,6 @@ Reflection on the past often gives clues about the future:
 Expect a highly personal talk about a successful open source project. 
 Some first hand experiences from an author that still tries to figure out how much of all that is just dumb luck in the end :).
 `,
-  type: enums.KEYNOTE,
+  type: ContactType.KEYNOTE,
   keywords: [],
 };

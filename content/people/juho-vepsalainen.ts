@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Juho Vepsäläinen",
@@ -21,5 +21,5 @@ export default {
     city: "Vienna",
   },
   keywords: [keywords.TOOLING, keywords.WEBPACK],
-  type: [enums.ORGANIZER, enums.SPEAKER, enums.WORKSHOP_HOST],
+  type: [ContactType.ORGANIZER, ContactType.SPEAKER, ContactType.WORKSHOP_HOST],
 };

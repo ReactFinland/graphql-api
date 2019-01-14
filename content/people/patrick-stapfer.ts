@@ -1,5 +1,5 @@
-import enums from '../../src/enums';
-import keywords from '../keywords';
+import { ContactType } from "../../server/schema";
+import keywords from "../keywords";
 
 export default {
   name: "Patrick Stapfer",
@@ -20,5 +20,5 @@ export default {
     city: "Vienna",
   },
   keywords: [keywords.REACT, keywords.REASON],
-  type: [enums.SPEAKER],
+  type: [ContactType.SPEAKER],
 };
