@@ -1,6 +1,6 @@
-import locations from "../locations";
-import people from "../people";
-import allSponsors from "../sponsors";
+import * as locations from "../locations";
+import * as people from "../people";
+import * as allSponsors from "../sponsors";
 
 const partners = [
   allSponsors.agentconf,
@@ -56,7 +56,7 @@ export default {
   ],
   schedules: require("./schedules"),
   sessions: require("./sessions"),
-  tickets: require("./tickets"),
+  tickets: {},
   sponsors,
   partners,
   goldSponsors,

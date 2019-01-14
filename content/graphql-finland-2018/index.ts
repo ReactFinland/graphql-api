@@ -1,5 +1,5 @@
-import people from "../people";
-import allSponsors from "../sponsors";
+import * as people from "../people";
+import * as allSponsors from "../sponsors";
 
 const partners = [
   allSponsors.agentconf,

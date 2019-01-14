@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const camelCase = require("camelcase");
 const flatmap = require("flatmap");
 const glob = require("glob");
 const groupBy = require("lodash.groupby");
@@ -7,13 +8,23 @@ const mri = require("mri");
 const argv = process.argv.slice(2);
 
 function main() {
-  const rootDirs = mri(argv)._;
+  const args = mri(argv, {
+    default: {
+      format: "ts",
+      verbose: false,
+    },
+    boolean: ["verbose"],
+    string: ["format"],
+  });
+  const { _: rootDirs, format, verbose } = args;
 
-  const filenames = flatmap(rootDirs, dir => glob.sync(`${dir}/**/*`));
+  const filenames = flatmap(rootDirs, dir =>
+    glob.sync(`${dir}/**/*.${format}`)
+  );
   const categorizedFilenames = categorize(filenames);
-  const indexFiles = generateIndices(categorizedFilenames);
+  const indexFiles = generateIndices(categorizedFilenames, format);
 
-  writeFiles(indexFiles);
+  writeFiles(indexFiles, verbose);
 }
 
 function categorize(filenames) {
@@ -27,7 +38,7 @@ function categorize(filenames) {
   );
 }
 
-function generateIndices(categorizedFilenames) {
+function generateIndices(categorizedFilenames, format) {
   return Object.keys(categorizedFilenames)
     .map(dirname => {
       const files = categorizedFilenames[dirname].filter(
@@ -39,7 +50,7 @@ function generateIndices(categorizedFilenames) {
       }
 
       return {
-        filename: path.join(dirname, `index${files[0].extname}`),
+        name: path.join(dirname, `index.${format}`),
         content: generateIndex(files.map(f => f.basename)),
       };
     })
@@ -49,11 +60,18 @@ function generateIndices(categorizedFilenames) {
 function generateIndex(basenames) {
   return basenames
     .map(
-      basename => `export { default as "${basename}" } from "./${basename}";`
+      basename =>
+        `export { default as ${camelCase(basename)} } from "./${basename}";`
     )
     .join("\n");
 }
 
-function writeFiles() {}
+function writeFiles(indexFiles, verbose) {
+  indexFiles.forEach(
+    file =>
+      (verbose && console.log(`Writing ${file.name}`)) ||
+      fs.writeFileSync(file.name, file.content, "utf8")
+  );
+}
 
 main();

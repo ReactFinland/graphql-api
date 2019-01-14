@@ -5,6 +5,7 @@ export default {
   image: "sponsors/rohea.png",
   social: {
     homepage: "http://www.rohea.com/",
+    twitter: "",
   },
   location: {
     country: {
