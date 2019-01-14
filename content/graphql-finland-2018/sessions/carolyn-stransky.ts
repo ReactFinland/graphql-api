@@ -1,6 +1,6 @@
-import enums from '../../../src/enums';
-import keywords from '../../keywords';
-import speaker from '../../people/carolyn-stransky';
+import { SessionType } from "../../../server/schema";
+import keywords from "../../keywords";
+import speaker from "../../people/carolyn-stransky";
 
 export default {
   speakers: [speaker],

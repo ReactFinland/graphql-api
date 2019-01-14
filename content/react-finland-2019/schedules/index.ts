@@ -1,6 +1,6 @@
-import { SessionType } from "../../server/schema";
-import * as people from "../people";
-import * as sessions from "./sessions";
+import { SessionType } from "../../../server/schema";
+import * as people from "../../people";
+import * as sessions from "../sessions";
 
 const workshops = [
   sessions.andreyAndArtemWorkshop,

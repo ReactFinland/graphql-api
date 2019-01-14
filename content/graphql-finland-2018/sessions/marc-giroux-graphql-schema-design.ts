@@ -1,8 +1,8 @@
 import keywords from "../../keywords";
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/marc-andre-giroux")],
   title: "GraphQL Schema Design",
   description: `Building a brand new GraphQL API? Migrating from a REST API? If you are interested in designing a GraphQL schema that is great to use by clients and stands the test of time, this workshop is for you.

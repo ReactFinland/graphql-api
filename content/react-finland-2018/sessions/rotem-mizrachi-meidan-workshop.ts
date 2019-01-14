@@ -1,7 +1,7 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/rotem-mizrachi-meidan")],
   title: "Advanced E2E Testing with Detox",
   description: `In this workshop we will get to know the cool features hidden in Detox. By getting to know how Detox works and what makes it deterministic, you will be able write better and more stable tests.

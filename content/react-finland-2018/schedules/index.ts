@@ -1,5 +1,5 @@
-import { SessionType } from "../../server/schema";
-import * as sessions from "./sessions";
+import { SessionType } from "../../../server/schema";
+import * as sessions from "../sessions";
 
 const workshopDay = {
   day: "2018-04-24",

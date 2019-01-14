@@ -1,4 +1,4 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 import keywords from "../../keywords";
 import speaker from "../../people/tanmai-gopal";
 
@@ -11,7 +11,7 @@ export default {
 * Modelling and manipulating the GraphQL AST with algebraic data types
 * Software Transactional Memory: Concurrency constructs for scaling graphql subscriptions
 `,
-  type: ContactType.LIGHTNING_TALK,
+  type: SessionType.LIGHTNING_TALK,
   keywords: [keywords.GRAPHQL],
   urls: {
     web: "",

@@ -1,4 +1,4 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 import speaker from "../../people/ken-wheeler";
 
 export default {
@@ -9,7 +9,7 @@ This talk will examine how React changed the front end landscape as we know it. 
 
 But most importantly, we will take a look at the core idea of React, and why it transcends language or rendering target and posit on what that means going forward, including what React might look like years from now.
   `,
-  type: ContactType.KEYNOTE,
+  type: SessionType.KEYNOTE,
   keywords: speaker.keywords,
   urls: {
     web: "https://reactfinland.surge.sh/",

@@ -1,8 +1,8 @@
 import keywords from "../../keywords";
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/nik-graf")],
   title: "Advanced GraphQL Concepts",
   description: `You understood the basics of GraphQL or even worked with it in a production environment? Then this workshop is for you. While GraphQL comes with many benefits it also requires some rethinking. For example how to secure your server from malicious queries or how to give different users access to different parts of the Schema.

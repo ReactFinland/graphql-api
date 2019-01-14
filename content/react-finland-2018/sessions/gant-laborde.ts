@@ -1,5 +1,5 @@
-import enums from '../../../src/enums';
-import speaker from '../../people/gant-laborde';
+import { SessionType } from "../../../server/schema";
+import speaker from "../../people/gant-laborde";
 
 export default {
   speakers: [speaker],

@@ -5,6 +5,6 @@ export default {
   speakers: [speaker],
   title: "Mysterious talk",
   description: ``,
-  type: ContactType.LIGHTNING_TALK,
+  type: SessionType.LIGHTNING_TALK,
   keywords: [],
 };

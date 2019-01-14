@@ -1,7 +1,9 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
+import { paasitorni } from "../../locations";
+import { siaKaramalegos } from "../../people";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/sia-karamalegos")],
   title: "Advanced Performance Tuning for React Applications",
   description: `Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Sia will lead you through the process of:
@@ -47,6 +49,6 @@ This workshop was prepared in partnership with Eli Fitch and Jason Lengstorf.
       link: "https://ti.to/react-finland/2018/with/m3kenzkowg0",
     },
   ],*/
-  keywords: require("../../people/sia-karamalegos").keywords,
-  location: require("../../locations")["paasitorni"],
+  keywords: siaKaramalegos.keywords,
+  location: paasitorni,
 };

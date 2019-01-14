@@ -1,8 +1,8 @@
 import keywords from "../../keywords";
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/mikhail-novikov")],
   title: "Building a GraphQL API with node.js",
   description: `Learn how to build a GraphQL API from scratch using Node.js. This workshop is aimed at GraphQL beginners, but you probably have built an API server before. We'll go through the basics of building a GraphQL API server, wrap a REST API with it and then connect it to a database.

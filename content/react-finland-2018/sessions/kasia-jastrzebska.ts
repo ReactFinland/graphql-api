@@ -1,5 +1,5 @@
-import enums from '../../../src/enums';
-import speaker from '../../people/kasia-jastrzebska';
+import { SessionType } from "../../../server/schema";
+import speaker from "../../people/kasia-jastrzebska";
 
 export default {
   speakers: [speaker],

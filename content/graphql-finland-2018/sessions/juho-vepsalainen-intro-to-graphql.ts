@@ -1,8 +1,8 @@
 import keywords from "../../keywords";
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/juho-vepsalainen")],
   title: "Let’s Learn GraphQL",
   description: `

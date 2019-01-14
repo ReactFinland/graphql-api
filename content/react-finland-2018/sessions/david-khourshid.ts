@@ -1,5 +1,5 @@
-import enums from '../../../src/enums';
-import speaker from '../../people/david-khourshid';
+import { SessionType } from "../../../server/schema";
+import speaker from "../../people/david-khourshid";
 
 export default {
   speakers: [speaker],

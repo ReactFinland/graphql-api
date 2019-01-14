@@ -1,7 +1,9 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
+import { paasitorni } from "../../locations";
+import { michelWeststrate } from "../../people";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/michel-weststrate")],
   title: "TypeScript: From novice to expert",
   description: `
@@ -46,6 +48,6 @@ Pre-requisites: Familiarity with JavaScript and modern syntax features (ES2015).
       link: "https://ti.to/react-finland/2018/with/766bgaavf-q",
     },
   ],*/
-  keywords: require("../../people/michel-weststrate").keywords,
-  location: require("../../locations")["paasitorni"],
+  keywords: michelWeststrate.keywords,
+  location: paasitorni,
 };

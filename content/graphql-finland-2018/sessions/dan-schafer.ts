@@ -1,4 +1,4 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 import keywords from "../../keywords";
 import speaker from "../../people/dan-schafer";
 
@@ -6,7 +6,7 @@ export default {
   speakers: [speaker],
   title: "The Prehistory of GraphQL",
   description: "",
-  type: ContactType.KEYNOTE,
+  type: SessionType.KEYNOTE,
   keywords: [keywords.GRAPHQL],
   urls: {
     web: "",

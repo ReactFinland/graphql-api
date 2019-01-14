@@ -1,4 +1,4 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 import speaker from "../../people/jani-evakallio";
 
 export default {
@@ -8,6 +8,6 @@ export default {
 When React was first introduced, it was ridiculed for going against established web development best practices as we knew them. Five years later, React is the gold standard for how we create user interfaces. 
 
 Along the way, we’ve discovered a new set of tools, design patterns and programming techniques. In this talk, we’ll explore how we can apply the React philosophy to software engineering problems far beyond the React ecosystem.`,
-  type: ContactType.KEYNOTE,
+  type: SessionType.KEYNOTE,
   keywords: speaker.keywords,
 };

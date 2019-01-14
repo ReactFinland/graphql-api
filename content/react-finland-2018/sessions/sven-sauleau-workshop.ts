@@ -1,7 +1,7 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/sven-sauleau")],
   title: "Babel",
   description: `

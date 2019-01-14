@@ -5,6 +5,6 @@ export default {
   speakers: [speaker],
   title: "Mysterious keynote",
   description: ``,
-  type: ContactType.KEYNOTE,
+  type: SessionType.KEYNOTE,
   keywords: [],
 };

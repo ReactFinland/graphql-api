@@ -1,7 +1,9 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
+import { paasitorni } from "../../locations";
+import { glennReyes } from "../../people";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/glenn-reyes")],
   title: "React and GraphQL – From zero to production",
   description: `
@@ -41,6 +43,6 @@ Developers have basic knowledge about the core concepts of React. Bring your own
       link: "https://ti.to/react-finland/2018/with/m3kenzkowg0",
     },
   ],*/
-  keywords: require("../../people/glenn-reyes").keywords,
-  location: require("../../locations")["paasitorni"],
+  keywords: glennReyes.keywords,
+  location: paasitorni,
 };

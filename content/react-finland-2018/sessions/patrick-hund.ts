@@ -1,4 +1,4 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 import speaker from "../../people/patrick-hund";
 
 export default {
@@ -9,7 +9,7 @@ With React 16.3, the context API has been completely revamped. This talk will de
 case for context: Putting ad placements on your web page to *get rich quick!* You'll learn how easy 
 it is to use context now and how to migrate your old context code to the new API.
   `,
-  type: ContactType.LIGHTNING_TALK,
+  type: SessionType.LIGHTNING_TALK,
   keywords: speaker.keywords,
   urls: {
     web:

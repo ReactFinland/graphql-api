@@ -1,5 +1,5 @@
-import enums from '../../../src/enums';
-import speaker from '../../people/rotem-mizrachi-meidan';
+import { SessionType } from "../../../server/schema";
+import speaker from "../../people/rotem-mizrachi-meidan";
 
 export default {
   speakers: [speaker],

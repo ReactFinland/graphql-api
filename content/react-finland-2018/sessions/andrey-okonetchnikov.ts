@@ -1,4 +1,4 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 import keywords from "../../keywords";
 import speaker from "../../people/andrey-okonetchnikov";
 
@@ -12,6 +12,6 @@ With a wrong workflow linting can be really a pain and will slow you and your te
 This talk is a quick introduction into how [🚫💩 lint-staged](https://github.com/okonet/lint-staged) — a node.js library I created and maintain — can improve developer experience in historically pita field — linting. 
   
 Coupled with tools that analyze and improve the code like ESLint, Stylelint, Prettier and Jest, you'll witness how much difference can a small tool like this make.`,
-  type: ContactType.LIGHTNING_TALK,
+  type: SessionType.LIGHTNING_TALK,
   keywords: [keywords.CODE_QUALITY, keywords.LINTING],
 };

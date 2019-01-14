@@ -1,7 +1,9 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
+import { paasitorni } from "../../locations";
+import { nikGraf } from "../../people";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/nik-graf")],
   title: "Advanced React – Suspense, Time Slicing, Hooks and more …",
   description: `React has changed quite a lot in the past couple months. New lifecycle methods were released, Suspense and Time Slicing is around the corner and we even got a new API: React Hooks.
@@ -36,6 +38,6 @@ The workshop is split into several modules. Each of them starts with a 20 min pr
       link: "https://ti.to/react-finland/2018/with/766bgaavf-q",
     },
   ],*/
-  keywords: require("../../people/nik-graf").keywords,
-  location: require("../../locations")["paasitorni"],
+  keywords: nikGraf.keywords,
+  location: paasitorni,
 };

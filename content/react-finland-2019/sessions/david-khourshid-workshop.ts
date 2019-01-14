@@ -1,7 +1,9 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
+import { paasitorni } from "../../locations";
+import { davidKhourshid } from "../../people";
 
 export default {
-  type: ContactType.WORKSHOP,
+  type: SessionType.WORKSHOP,
   speakers: [require("../../people/david-khourshid")],
   title: "Modeling React Applications with Statecharts",
   description: `Statecharts are a powerful, well-established formalism that describe even the most complex application behavior and logic in a visual, hierarchical, and deterministic way. In this workshop you will learn about finite state machines and statecharts, and apply them to real-life React applications in ways that will increase productivity and eliminate entire classes of possible bugs from your code.  You will also learn how to:
@@ -32,6 +34,6 @@ export default {
       link: "https://ti.to/react-finland/2018/with/duwuhyzgmq8",
     },
   ],*/
-  keywords: require("../../people/david-khourshid").keywords,
-  location: require("../../locations")["paasitorni"],
+  keywords: davidKhourshid.keywords,
+  location: paasitorni,
 };

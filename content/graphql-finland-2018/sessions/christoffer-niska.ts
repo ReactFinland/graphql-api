@@ -1,4 +1,4 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 import keywords from "../../keywords";
 import speaker from "../../people/christoffer-niska";
 
@@ -6,7 +6,7 @@ export default {
   speakers: [speaker],
   title: "graphql-php",
   description: "",
-  type: ContactType.LIGHTNING_TALK,
+  type: SessionType.LIGHTNING_TALK,
   keywords: [keywords.GRAPHQL],
   urls: {
     web: "",

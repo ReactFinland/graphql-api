@@ -1,4 +1,4 @@
-import enums from "../../../src/enums";
+import { SessionType } from "../../../server/schema";
 import speaker from "../../people/toni-ristola";
 
 export default {
@@ -6,6 +6,6 @@ export default {
   title: "React Finland App - Lessons learned",
   description:
     "The first app that we could publish to App Store and play store, and what we learned on the way.",
-  type: ContactType.LIGHTNING_TALK,
+  type: SessionType.LIGHTNING_TALK,
   keywords: speaker.keywords,
 };
