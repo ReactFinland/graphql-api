@@ -13,6 +13,7 @@
     "noImplicitAny": false,
     "noUnusedLocals": true,
     "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },
   "include": ["server/**/*.ts"]
