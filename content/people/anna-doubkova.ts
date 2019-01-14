@@ -1,4 +1,4 @@
-import enums from "../../src/enums";
+import { ContactType } from "../../server/schema";
 
 export default {
   name: "Anna Doubková",

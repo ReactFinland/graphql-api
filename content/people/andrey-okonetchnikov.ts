@@ -1,4 +1,4 @@
-import enums from "../../src/enums";
+import { ContactType } from "../../server/schema";
 import keywords from "../keywords";
 
 export default {
