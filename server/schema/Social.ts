@@ -2,30 +2,30 @@ import { Field, ObjectType } from "type-graphql";
 
 @ObjectType()
 export class Social {
-  @Field()
+  @Field(_ => String)
   public homepage?: string;
 
-  @Field()
+  @Field(_ => String)
   public twitter?: string;
 
-  @Field()
+  @Field(_ => String)
   public github?: string;
 
-  @Field()
+  @Field(_ => String)
   public facebook?: string;
 
-  @Field()
+  @Field(_ => String)
   public medium?: string;
 
-  @Field()
+  @Field(_ => String)
   public instagram?: string;
 
-  @Field()
+  @Field(_ => String)
   public linkedin?: string;
 
-  @Field()
+  @Field(_ => String)
   public youtube?: string;
 
-  @Field()
+  @Field(_ => String)
   public vk?: string;
 }

@@ -2,6 +2,6 @@ import { Field, ObjectType } from "type-graphql";
 
 @ObjectType()
 export class Image {
-  @Field()
+  @Field(_ => String)
   public url!: string;
 }

@@ -4,10 +4,10 @@ import { Interval } from "./Interval";
 
 @ObjectType()
 export class Schedule {
-  @Field()
+  @Field(_ => String)
   public day?: string;
 
-  @Field()
+  @Field(_ => String)
   public description?: string;
 
   @Field(_ => [Interval])

@@ -13,10 +13,10 @@ import { Social } from "./Social";
 
 @ObjectType()
 export class Location {
-  @Field()
+  @Field(_ => String)
   public name!: string;
 
-  @Field()
+  @Field(_ => String)
   public about!: string;
 
   @Field(_ => Image)
@@ -25,10 +25,10 @@ export class Location {
   @Field(_ => Country)
   public country?: Country;
 
-  @Field()
+  @Field(_ => String)
   public city?: string;
 
-  @Field()
+  @Field(_ => String)
   public address?: string;
 
   @Field(_ => Social)

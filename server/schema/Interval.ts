@@ -3,13 +3,13 @@ import { ISession } from "./Session";
 
 @ObjectType()
 export class Interval {
-  @Field()
+  @Field(_ => String)
   public begin?: string;
 
-  @Field()
+  @Field(_ => String)
   public end?: string;
 
-  @Field()
+  @Field(_ => String)
   public title?: string;
 
   @Field(_ => [ISession])
