@@ -6,8 +6,9 @@ import { IntervalResolver } from "./Interval";
 import { LocationResolver } from "./Location";
 import { ScheduleResolver } from "./Schedule";
 import { SeriesResolver } from "./Series";
+import { SessionType } from "./Session";
 
-export { ContactType };
+export { ContactType, SessionType };
 
 export default async function generateSchema() {
   return await buildSchema({
