@@ -52,6 +52,7 @@
     "lodash": "^4.17.11",
     "morgan": "^1.9.1",
     "npm": "^6.4.1",
+    "reflect-metadata": "^0.1.12",
     "request": "^2.88.0",
     "rimraf": "^2.6.3",
     "type-graphql": "^0.16.0",

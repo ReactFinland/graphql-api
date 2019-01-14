@@ -1,4 +1,5 @@
 import { flatMap, get, uniq } from "lodash";
+import "reflect-metadata";
 import {
   Arg,
   buildSchema,
