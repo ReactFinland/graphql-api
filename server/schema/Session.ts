@@ -21,13 +21,13 @@ export abstract class ISession {
   @Field(_ => Interval)
   public interval!: Interval;
 
-  @Field()
+  @Field(_ => String)
   public title!: string;
 
-  @Field()
+  @Field(_ => String)
   public description?: string;
 
-  @Field()
+  @Field(_ => [String])
   public keywords?: [string];
 
   @Field(_ => Location)
@@ -52,6 +52,18 @@ registerEnumType(SessionType, {
   description: "Type of the session",
 });
 
+@ObjectType()
+export class TalkUrls {
+  @Field()
+  public web?: string;
+
+  @Field()
+  public slides?: string;
+
+  @Field()
+  public video?: string;
+}
+
 @ObjectType({ implements: ISession })
 export class Talk implements ISession {
   public type!: SessionType;
@@ -69,17 +81,6 @@ export class Talk implements ISession {
   public urls?: TalkUrls;
 }
 
-@ObjectType()
-export class TalkUrls {
-  @Field()
-  public web?: string;
-
-  @Field()
-  public slides?: string;
-
-  @Field()
-  public video?: string;
-}
 @ObjectType({ implements: ISession })
 export class Workshop implements ISession {
   public type!: SessionType;

@@ -33,25 +33,25 @@ registerEnumType(ContactType, {
 
 @ObjectType()
 export class Contact {
-  @Field()
+  @Field(_ => String)
   public name!: string;
 
-  @Field()
+  @Field(_ => String)
   public about!: string;
 
-  @Field()
+  @Field(_ => String)
   public aboutShort!: string;
 
   @Field(_ => Image)
   public image?: Image;
 
-  @Field()
+  @Field(_ => [String])
   public type?: [string];
 
-  @Field()
+  @Field(_ => Social)
   public social!: Social;
 
-  @Field()
+  @Field(_ => [String])
   public keywords?: [string];
 
   @Field(_ => [Talk])
@@ -63,7 +63,7 @@ export class Contact {
   @Field(_ => Country)
   public country?: Country;
 
-  @Field()
+  @Field(_ => String)
   public city?: string;
 }
 
