@@ -1,5 +1,9 @@
+import * as locations from "../locations";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
+import * as schedules from "./schedules";
+import * as sessions from "./sessions";
+import * as tickets from "./tickets";
 
 const partners = [
   allSponsors.agentconf,
@@ -35,7 +39,7 @@ export default {
   name: "GraphQL Finland 2018",
   year: "2018",
   websiteUrl: "https://graphql-finland.fi/",
-  locations: [require("../locations").paasitorni],
+  locations: [locations],
   organizers: [
     people["aleksi-pousar"],
     people["harri-maatta"],
@@ -44,9 +48,9 @@ export default {
     people["samuli-hakoniemi"],
     people["tuuli-tiilikainen"],
   ],
-  schedules: require("./schedules"),
-  sessions: require("./sessions"),
-  tickets: require("./tickets"),
+  schedules,
+  sessions,
+  tickets,
   sponsors,
   partners,
   goldSponsors,
