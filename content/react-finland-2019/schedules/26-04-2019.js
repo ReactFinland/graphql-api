@@ -40,11 +40,11 @@ module.exports = {
     {
       begin: "11:15",
       end: "12:15",
-      title: "Testing",
+      title: "",
       sessions: [
-        require("../sessions/juha-linnanen"),
-        require("../sessions/maaret-pyhajarvi"),
-        require("../sessions/manuel-matuzovic"),
+        require("../sessions/nik-graf"),
+        require("../sessions/kadi-kraman"),
+        require("../sessions/monica-lent"),
       ],
     },
     {
