@@ -12,7 +12,7 @@
     "watch": "npm-watch"
   },
   "watch": {
-    "start": "{src,content}/**/!(index).*"
+    "start": "src/**/*|content/**/!index.ts"
   },
   "keywords": [],
   "author": "",
