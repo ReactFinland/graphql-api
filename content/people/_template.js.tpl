@@ -1,10 +1,13 @@
-const enums = require("../../src/enums");
-const keywords = require("../keywords");
+import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
+import keywords from "../keywords";
 
-module.exports = {
+export default {
   name: "",
   about: "",
-  image: "people/TODO.jpg", // TODO: Place image at root images/ and update name
+  image: {
+    url: "people/TODO.jpg", // TODO: Place image at root images/ and update name
+  },
   social: {
     homepage: "",
     twitter: "",
@@ -24,4 +27,4 @@ module.exports = {
   },
   keywords: [keywords.REACT], // TODO: check keywords for more
   type: [ContactType.SPEAKER],
-};
+} as Contact;

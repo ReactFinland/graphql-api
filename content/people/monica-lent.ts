@@ -1,11 +1,14 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Monica Lent",
   about:
     "Frontend Lead @SumUp. Balcony-gardener, and taco fanatic from Tucson, Arizona. I like cycling, craft beer, picnics, and knitwear. IPAs ⟩ IDEs.",
-  image: "people/monica.jpg",
+  image: {
+    url: "people/monica.jpg",
+  },
   social: {
     homepage: "https://monicalent.com/",
     twitter: "monicalent",
@@ -21,4 +24,4 @@ export default {
   },
   keywords: [keywords.REACT, keywords.STYLING, keywords.TOOLING],
   type: [ContactType.SPEAKER],
-};
+} as Contact;

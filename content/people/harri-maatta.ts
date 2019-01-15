@@ -1,10 +1,13 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 
 export default {
   name: "Harri Määttä",
   about:
     "Mobile Developer. Also DevOps Specialist. Otherwise nice guy. Lives in Helsinki, so can help with local issues (=I know bars!)",
-  image: "people/harri.jpg",
+  image: {
+    url: "people/harri.jpg",
+  },
   social: {
     homepage: "",
     twitter: "HarriMaatta",
@@ -19,4 +22,4 @@ export default {
   },
   keywords: [],
   type: [ContactType.ORGANIZER],
-};
+} as Contact;

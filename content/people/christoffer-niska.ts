@@ -1,11 +1,14 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Christoffer Niska",
   about:
     "Tech leader with a passion for programming. Head of Tech at @digiaonline. Father of four. Open Source enthusiast. JavaScript Ninja. GraphQL evangelist.",
-  image: "people/crisu.jpg",
+  image: {
+    url: "people/crisu.jpg",
+  },
   social: {
     twitter: "Crisu83",
   },
@@ -18,4 +21,4 @@ export default {
   },
   keywords: [keywords.GRAPHQL],
   type: [ContactType.SPEAKER, ContactType.LIGHTNING_TALK],
-};
+} as Contact;

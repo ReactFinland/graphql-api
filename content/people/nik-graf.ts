@@ -1,4 +1,5 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
@@ -6,8 +7,10 @@ export default {
   about:
     "Nik cares about good UX and development tools. He co-created several popular open source projects like DraftJS Plugins and Polished. Nik participated in Stripe’s Open Source Retreat and joined Serverless Inc. to deploy auto-scaling infrastructures. In his spare-time he enjoys writing code in Reason and play with WebVR as well as organising the ReactJS Vienna meetup.",
   aboutShort:
-    "Nik cares about good UX and development tools. He co-created several popular open source projects like DraftJS Plugins and Polished. Nik isa also organizer of Reason Conf and React JS Vienna meetup.",
-  image: "people/nik.jpg",
+    "Nik cares about good UX and development tools. He co-created several popular open source projects like DraftJS Plugins and Polished. Nik isa also organizer of Reason Conf and React Vienna meetup.",
+  image: {
+    url: "people/nik.jpg",
+  },
   social: {
     homepage: "http://www.nikgraf.com/",
     twitter: "nikgraf",
@@ -28,4 +31,4 @@ export default {
     keywords.REACT_VR,
   ],
   type: [ContactType.SPEAKER, ContactType.TALK, ContactType.WORKSHOP],
-};
+} as Contact;

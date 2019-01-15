@@ -1,11 +1,14 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Tero Parviainen",
   about:
     "Software developer, music hacker, and writer. Building the design tools of the future at @CreativeDotAI. ",
-  image: "people/tero.jpg",
+  image: {
+    url: "people/tero.jpg",
+  },
   social: {
     homepage: "https://teropa.info",
     twitter: "teropa",
@@ -20,4 +23,4 @@ export default {
   },
   keywords: [keywords.REACT],
   type: [ContactType.SPEAKER],
-};
+} as Contact;

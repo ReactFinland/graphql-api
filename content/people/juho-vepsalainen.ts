@@ -1,11 +1,14 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Juho Vepsäläinen",
   about:
     "Juho Vepsäläinen is behind the SurviveJS effort. He has been active in the open source scene since the early 2000s and participated in projects like Blender and webpack as a core team member. Blue Arrow Awards winner.",
-  image: "people/juho.jpg",
+  image: {
+    url: "people/juho.jpg",
+  },
   social: {
     homepage: "https://survivejs.com/",
     twitter: "bebraw",
@@ -22,4 +25,4 @@ export default {
   },
   keywords: [keywords.TOOLING, keywords.WEBPACK],
   type: [ContactType.ORGANIZER, ContactType.SPEAKER, ContactType.WORKSHOP_HOST],
-};
+} as Contact;

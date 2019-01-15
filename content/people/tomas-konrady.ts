@@ -1,10 +1,13 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Tomáš Konrády",
   about: "Developer... (and artist a bit)",
-  image: "people/tomas.jpg",
+  image: {
+    url: "people/tomas.jpg",
+  },
   social: {
     twitter: "konnnyy",
     github: "tommmyy",
@@ -19,4 +22,4 @@ export default {
   },
   keywords: [keywords.REACT, keywords.TOOLING],
   type: [ContactType.SPEAKER],
-};
+} as Contact;

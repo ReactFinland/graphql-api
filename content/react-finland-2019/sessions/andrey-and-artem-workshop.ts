@@ -1,4 +1,6 @@
 import { SessionType } from "../../../server/schema";
+import { Workshop } from "../../../server/schema/Session";
+import keywords from "../../keywords";
 import { paasitorni } from "../../locations";
 import andrey from "../../people/andrey-okonetchnikov";
 import artem from "../../people/artem-sapegin";
@@ -41,6 +43,11 @@ This workshop will show you how to:
       link: "https://ti.to/react-finland/2018/with/vll01sed0uq",
     },
   ],*/
-  keywords: [...new Set(andrey.keywords.concat(artem.keywords))],
+  keywords: [
+    keywords.REACT,
+    keywords.STYLING,
+    keywords.STYLE_GUIDES,
+    keywords.TOOLING,
+  ],
   location: paasitorni,
-};
+} as Workshop;

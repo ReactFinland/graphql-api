@@ -1,4 +1,5 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
@@ -7,7 +8,9 @@ export default {
     "A Jazz guitarist turned developer, Marc-André is currently working at GitHub, where he is trying to help building better APIs. He is currently writing a book, [The Little Book of GraphQL Design](https://book.graphqlschemadesign.com/). When he's not hacking on or thinking about GraphQL, you might find him throwing heavy weights above his head.",
   aboutShort:
     "A Jazz guitarist turned developer, Marc-André is currently working at GitHub, where he is trying to help building better APIs. He is currently writing a book, The Little Book of GraphQL Design.",
-  image: "people/marc.jpg",
+  image: {
+    url: "people/marc.jpg",
+  },
   social: {
     homepage: "http://mgiroux.me/",
     twitter: "__xuorig__",
@@ -22,4 +25,4 @@ export default {
   },
   keywords: [keywords.GRAPHQL, keywords.GRAPHQLJS],
   type: [ContactType.SPEAKER, ContactType.WORKSHOP_HOST],
-};
+} as Contact;

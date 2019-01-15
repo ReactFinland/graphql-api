@@ -1,10 +1,13 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Bruno Lourenço",
   about: "",
-  image: "people/bruno.jpg",
+  image: {
+    url: "people/bruno.jpg",
+  },
   social: {
     homepage: "",
     twitter: "brunnolou",
@@ -20,4 +23,4 @@ export default {
   },
   keywords: [keywords.REACT],
   type: [ContactType.SPEAKER],
-};
+} as Contact;

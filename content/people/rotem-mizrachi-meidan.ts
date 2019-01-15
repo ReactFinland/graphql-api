@@ -1,11 +1,14 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Rotem Mizrachi-Meidan",
   about:
     "Rotem is a Software Engineer, open source advocate, passionate about Android, React Native, mobile performance, writing developer tools and Lego! In his current position at Wix, Rotem is working with React Native, writing infrastructure and testing tools.",
-  image: "people/rotem.jpg",
+  image: {
+    url: "people/rotem.jpg",
+  },
   social: {
     homepage: "",
     twitter: "rotemmiz",
@@ -27,4 +30,4 @@ export default {
     keywords.TOOLING,
   ],
   type: [ContactType.SPEAKER],
-};
+} as Contact;

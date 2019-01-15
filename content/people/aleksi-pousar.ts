@@ -1,10 +1,13 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 
 export default {
   name: "Aleksi Pousar",
   about:
     "Aleksi Pousar works on the app and is the treasurer of the association.",
-  image: "people/aleksi.jpg",
+  image: {
+    url: "people/aleksi.jpg",
+  },
   social: {
     homepage: "https://aleksipousar.fi",
     twitter: "AleksiPousar",
@@ -19,4 +22,4 @@ export default {
   },
   keywords: [],
   type: [ContactType.ORGANIZER],
-};
+} as Contact;

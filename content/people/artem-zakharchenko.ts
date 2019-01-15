@@ -1,11 +1,14 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Artem Zakharchenko",
   about:
     "Full-stack JavaScript engineer, doctor, musician, designer. Walking the marvelous road of learning.",
-  image: "people/artem-z.jpg",
+  image: {
+    url: "people/artem-z.jpg",
+  },
   social: {
     homepage: "",
     twitter: "kettanaito",
@@ -21,4 +24,4 @@ export default {
   },
   keywords: [keywords.REACT, keywords.STYLING, keywords.TOOLING],
   type: [ContactType.SPEAKER],
-};
+} as Contact;

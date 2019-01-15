@@ -1,10 +1,13 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Juha Linnanen",
   about: "Mobile dev enthusiast, boardgamer and mtg cuber.",
-  image: "people/juha.jpg",
+  image: {
+    url: "people/juha.jpg",
+  },
   social: {
     homepage: "",
     twitter: "pillar15",
@@ -20,4 +23,4 @@ export default {
   },
   keywords: [keywords.REACT, keywords.REACT_NATIVE],
   type: [ContactType.SPEAKER],
-};
+} as Contact;

@@ -1,9 +1,12 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 
 export default {
   name: "Aarni Koskela",
   about: "Aarni works on the site and the app. Specializes in terrible puns.",
-  image: "people/aarni.jpg",
+  image: {
+    url: "people/aarni.jpg",
+  },
   social: {
     homepage: "",
     twitter: "akx",
@@ -18,4 +21,4 @@ export default {
   },
   keywords: [],
   type: [ContactType.ORGANIZER],
-};
+} as Contact;

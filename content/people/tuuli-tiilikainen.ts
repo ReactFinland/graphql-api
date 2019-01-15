@@ -1,9 +1,12 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 
 export default {
   name: "Tuuli Tiilikainen",
   about: "",
-  image: "people/tuuli.jpg",
+  image: {
+    url: "people/tuuli.jpg",
+  },
   social: {
     homepage: "https://www.columbiaroad.com/people/tuuli-tiilikainen",
   },
@@ -15,4 +18,4 @@ export default {
   },
   keywords: [],
   type: [ContactType.ORGANIZER],
-};
+} as Contact;

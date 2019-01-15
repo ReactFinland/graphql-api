@@ -1,7 +1,11 @@
+import { Location } from "../../server/schema/Location";
+
 export default {
   name: "Paasitorni Congress Hall",
   about: "Paasitorni is the main venue of the event.",
-  image: "locations/paasitorni.jpg",
+  image: {
+    url: "locations/paasitorni.jpg",
+  },
   social: {
     homepage: "https://www.paasitorni.fi/",
   },
@@ -11,4 +15,4 @@ export default {
   },
   city: "Helsinki",
   address: "Paasivuorenkatu 5 A",
-};
+} as Location;

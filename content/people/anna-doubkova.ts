@@ -1,9 +1,12 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 
 export default {
   name: "Anna Doubková",
   about: "Senior software engineer at Hive.",
-  image: "people/anna.jpg",
+  image: {
+    url: "people/anna.jpg",
+  },
   social: {
     twitter: "lithinn",
     github: "lithin",
@@ -17,4 +20,4 @@ export default {
   },
   keywords: [],
   type: [ContactType.SPEAKER],
-};
+} as Contact;

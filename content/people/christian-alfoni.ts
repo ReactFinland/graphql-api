@@ -1,11 +1,14 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Christian Alfoni",
   about:
     "Christian has been crunching JavaScript for about 8 years. In the recent years open source and writing articles has become a passion. Throwing bad and not so bad ideas out there to see what is valuable to people. Author of Cerebral, created Webpackbin and JSBlog... amongst other things.",
-  image: "people/christian.jpg",
+  image: {
+    url: "people/christian.jpg",
+  },
   social: {
     homepage: "http://www.christianalfoni.com/",
     twitter: "christianalfoni",
@@ -20,4 +23,4 @@ export default {
   },
   keywords: [keywords.CEREBRAL, keywords.REACT, keywords.STATE_MANAGEMENT],
   type: [ContactType.SPEAKER],
-};
+} as Contact;

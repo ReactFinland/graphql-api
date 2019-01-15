@@ -1,11 +1,14 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
 export default {
   name: "Maaret Pyhäjärvi",
   about:
     "Feedback fairy with a day-job at F-Secure as Eng Manager. Tester, (Polyglot) Programmer, Speaker, Author, Conference Organizer. She/Her.",
-  image: "people/maaret.jpg",
+  image: {
+    url: "people/maaret.jpg",
+  },
   social: {
     homepage: "http://maaretp.com/",
     twitter: "maaretp",
@@ -21,4 +24,4 @@ export default {
   },
   keywords: [keywords.REACT, keywords.TESTING],
   type: [ContactType.SPEAKER],
-};
+} as Contact;

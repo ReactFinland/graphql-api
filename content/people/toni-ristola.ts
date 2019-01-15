@@ -1,10 +1,13 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 
 export default {
   name: "Toni Ristola",
   about:
     "Toni Ristola is a Software Architect at Robu Oy and an organizer for the React Finland conference and contributor for the React Finland App.",
-  image: "people/toni.png",
+  image: {
+    url: "people/toni.png",
+  },
   social: {
     homepage: "",
     twitter: "toniristola",
@@ -19,4 +22,4 @@ export default {
   },
   keywords: [],
   type: [ContactType.ORGANIZER, ContactType.SPEAKER],
-};
+} as Contact;

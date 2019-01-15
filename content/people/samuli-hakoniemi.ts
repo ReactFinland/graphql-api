@@ -1,9 +1,12 @@
 import { ContactType } from "../../server/schema";
+import { Contact } from "../../server/schema/Contact";
 
 export default {
   name: "Samuli Hakoniemi",
   about: "",
-  image: "people/samuli.jpg",
+  image: {
+    url: "people/samuli.jpg",
+  },
   social: {
     homepage: "",
     twitter: "zvona",
@@ -18,4 +21,4 @@ export default {
   },
   keywords: [],
   type: [ContactType.ORGANIZER],
-};
+} as Contact;
