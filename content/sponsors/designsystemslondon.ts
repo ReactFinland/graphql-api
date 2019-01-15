@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Design Systems London",
   about: "Open-source conference for the design systems community",
-  image: "sponsors/designsystemslondon.png",
+  image: {
+    url: "sponsors/designsystemslondon.png",
+  },
   social: {
     homepage: "https://www.designsystemslondon.com/",
     twitter: "DSLconf",
@@ -13,4 +17,4 @@ export default {
     },
     city: "London",
   },
-};
+} as Contact;

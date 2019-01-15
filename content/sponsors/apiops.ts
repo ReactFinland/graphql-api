@@ -1,8 +1,12 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Apiops Meetup",
   about:
     "APIOps is about automation of any step of API design, development, onboarding, security or management.",
-  image: "sponsors/apiops.png",
+  image: {
+    url: "sponsors/apiops.png",
+  },
   social: {
     homepage: "https://www.meetup.com/Apiops-Helsinki/",
   },
@@ -13,4 +17,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

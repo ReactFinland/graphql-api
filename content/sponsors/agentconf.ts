@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Agent Conf",
   about: "The international event for coding inspiration",
-  image: "sponsors/agent.png",
+  image: {
+    url: "sponsors/agent.png",
+  },
   social: {
     homepage: "https://www.agent.sh/",
     facebook: "agentsh",
@@ -15,4 +19,4 @@ export default {
     },
     city: "Dornbirn",
   },
-};
+} as Contact;

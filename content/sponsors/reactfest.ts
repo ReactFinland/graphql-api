@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "ReactFest",
   about: "A one day open-source ReactJS conference - festival",
-  image: "sponsors/react-fest.png",
+  image: {
+    url: "sponsors/react-fest.png",
+  },
   social: {
     homepage: "https://reactfest.com/",
     youtube: "UCjO-zVjLvkrh8-DT9wZCHTQ",
@@ -15,4 +19,4 @@ export default {
     },
     city: "London",
   },
-};
+} as Contact;

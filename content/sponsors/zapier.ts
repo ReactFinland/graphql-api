@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Zapier",
   about: "Makes you happier :)",
-  image: "sponsors/zapier.png",
+  image: {
+    url: "sponsors/zapier.png",
+  },
   social: {
     homepage: "https://www.zapier.com/",
     facebook: "ZapierApp",
@@ -16,4 +20,4 @@ export default {
     },
     city: "San Francisco",
   },
-};
+} as Contact;

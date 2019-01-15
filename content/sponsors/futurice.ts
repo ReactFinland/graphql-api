@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Futurice",
   about: "You can’t predict the future. Are you prepared to define it?",
-  image: "sponsors/futurice.svg",
+  image: {
+    url: "sponsors/futurice.svg",
+  },
   social: {
     homepage: "https://www.futurice.com/",
     facebook: "futurice",
@@ -19,4 +23,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "React Day Berlin",
   about: "Fully Packed Day of Your Favorite React Content",
-  image: "sponsors/react-day-berlin.png",
+  image: {
+    url: "sponsors/react-day-berlin.png",
+  },
   social: {
     homepage: "https://reactday.berlin/",
     facebook: "reactdayberlin",
@@ -15,4 +19,4 @@ export default {
     },
     city: "Berlin",
   },
-};
+} as Contact;

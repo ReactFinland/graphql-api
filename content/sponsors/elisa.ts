@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Elisa",
   about: "Experiences and productivity",
-  image: "sponsors/elisa.svg",
+  image: {
+    url: "sponsors/elisa.svg",
+  },
   social: {
     homepage: "https://elisa.fi/",
     facebook: "elisasuomi",
@@ -19,4 +23,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

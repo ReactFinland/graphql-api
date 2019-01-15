@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Prisma",
   about: "Build a GraphQL server with any database",
-  image: "sponsors/prisma.svg",
+  image: {
+    url: "sponsors/prisma.svg",
+  },
   social: {
     homepage: "https://www.prisma.io/",
     github: "prismagraphql",
@@ -14,4 +18,4 @@ export default {
     },
     city: "San Francisco",
   },
-};
+} as Contact;

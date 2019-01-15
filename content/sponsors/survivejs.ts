@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "SurviveJS",
   about: "SurviveJS will take you from a JavaScript apprentice to master",
-  image: "sponsors/survivejs.svg",
+  image: {
+    url: "sponsors/survivejs.svg",
+  },
   social: {
     homepage: "https://survivejs.com/",
     twitter: "survivejs",
@@ -13,4 +17,4 @@ export default {
     },
     city: "Vienna",
   },
-};
+} as Contact;

@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Solita",
   about: "Solita is a digital business company",
-  image: "sponsors/solita.svg",
+  image: {
+    url: "sponsors/solita.svg",
+  },
   social: {
     homepage: "https://www.solita.fi/en/",
     facebook: "Solita",
@@ -18,4 +22,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

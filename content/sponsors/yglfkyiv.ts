@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "YGLF Kyiv",
   about: "Community event built by developers for developers",
-  image: "sponsors/yglf.jpg",
+  image: {
+    url: "sponsors/yglf.jpg",
+  },
   social: {
     homepage: "http://yglf.com.ua/",
     facebook: "yglf.kyiv",
@@ -15,4 +19,4 @@ export default {
     },
     city: "Kiev",
   },
-};
+} as Contact;

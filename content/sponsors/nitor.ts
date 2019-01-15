@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Nitor",
   about: "Digital engineering",
-  image: "sponsors/nitor.png",
+  image: {
+    url: "sponsors/nitor.png",
+  },
   social: {
     homepage: "https://www.nitor.com/en",
     facebook: "NitorCreations",
@@ -17,4 +21,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

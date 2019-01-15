@@ -1,8 +1,12 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Rohea",
   about:
     "ROHEA is a Finnish tech company that makes demanding software simple, scalable and usable for everyday needs.",
-  image: "sponsors/rohea.png",
+  image: {
+    url: "sponsors/rohea.png",
+  },
   social: {
     homepage: "http://www.rohea.com/",
     twitter: "",
@@ -14,4 +18,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

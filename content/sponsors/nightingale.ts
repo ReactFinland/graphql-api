@@ -1,8 +1,12 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Nightingale Health",
   about:
     "Nightingale Health is aiming to solve the world’s biggest health issue",
-  image: "sponsors/nightingale.svg",
+  image: {
+    url: "sponsors/nightingale.svg",
+  },
   social: {
     homepage: "https://nightingalehealth.com/",
     facebook: "",
@@ -18,4 +22,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

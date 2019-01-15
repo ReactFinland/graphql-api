@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Motley",
   about: "We create better futures for businesses",
-  image: "sponsors/motley.svg",
+  image: {
+    url: "sponsors/motley.svg",
+  },
   social: {
     homepage: "https://motley.fi/",
     facebook: "Motleyagency",
@@ -17,4 +21,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

@@ -1,8 +1,12 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Osaango",
   about:
     "Learn the next big thing - Skills & Methods for API, Platform and AI Economy",
-  image: "sponsors/osaango.png",
+  image: {
+    url: "sponsors/osaango.png",
+  },
   social: {
     homepage: "https://www.osaango.com/",
   },
@@ -13,4 +17,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Columbia Road",
   about: "A Digital Growth Consultancy by Futurice",
-  image: "sponsors/columbiaroad.svg",
+  image: {
+    url: "sponsors/columbiaroad.svg",
+  },
   social: {
     homepage: "https://www.columbiaroad.com/",
     facebook: "ColumbiaRoadCom",
@@ -19,4 +23,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

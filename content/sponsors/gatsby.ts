@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Gatsby",
   about: "Modern Development, for the Content Web",
-  image: "sponsors/gatsby.svg",
+  image: {
+    url: "sponsors/gatsby.svg",
+  },
   social: {
     homepage: "https://www.gatsbyjs.com/",
     github: "gatsbyjs",
@@ -14,4 +18,4 @@ export default {
     },
     city: "San Francisco",
   },
-};
+} as Contact;

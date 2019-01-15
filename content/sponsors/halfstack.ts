@@ -1,8 +1,12 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "HalfStack",
   about:
     "HalfStack is a one-day, single track, fun JS conf in a Shoreditch pub",
-  image: "sponsors/halfstack.svg",
+  image: {
+    url: "sponsors/halfstack.svg",
+  },
   social: {
     homepage: "http://halfstackconf.com/",
     facebook: "halfstackconf",
@@ -16,4 +20,4 @@ export default {
     },
     city: "London",
   },
-};
+} as Contact;

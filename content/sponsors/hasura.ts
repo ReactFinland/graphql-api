@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Hasura",
   about: "Instant Realtime GraphQL on Postgres",
-  image: "sponsors/hasura.png",
+  image: {
+    url: "sponsors/hasura.png",
+  },
   social: {
     homepage: "https://hasura.io/",
     twitter: "hasurahq",
@@ -14,4 +18,4 @@ export default {
     },
     city: "Bangalore",
   },
-};
+} as Contact;

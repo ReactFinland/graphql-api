@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "WebExpo",
   about: "The web event of the year",
-  image: "sponsors/webexpo.png",
+  image: {
+    url: "sponsors/webexpo.png",
+  },
   social: {
     homepage: "https://www.webexpo.net/",
     facebook: "WebExpo",
@@ -15,4 +19,4 @@ export default {
     },
     city: "Prague",
   },
-};
+} as Contact;

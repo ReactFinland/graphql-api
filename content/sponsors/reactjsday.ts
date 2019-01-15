@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "ReactJs Day",
   about: "ReactJS Day is a one-day, single track conference in Verona",
-  image: "sponsors/reactjsday.png",
+  image: {
+    url: "sponsors/reactjsday.png",
+  },
   social: {
     homepage: "http://reactjsday.it/",
     facebook: "reactjsday",
@@ -16,4 +20,4 @@ export default {
     },
     city: "Verona",
   },
-};
+} as Contact;

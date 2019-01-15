@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Verkkokauppa",
   about: "Most likely always cheaper",
-  image: "sponsors/verkkokauppa.svg",
+  image: {
+    url: "sponsors/verkkokauppa.svg",
+  },
   social: {
     homepage: "https://www.verkkokauppa.com/",
     facebook: "verkkokauppacom",
@@ -18,4 +22,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

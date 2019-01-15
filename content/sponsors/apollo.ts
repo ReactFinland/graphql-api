@@ -1,8 +1,12 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Apollo",
   about:
     "We build Apollo Client, Engine, and Server to help you adopt GraphQL.",
-  image: "sponsors/apollo.svg",
+  image: {
+    url: "sponsors/apollo.svg",
+  },
   social: {
     homepage: "https://www.apollographql.com/",
     twitter: "apollographql",
@@ -15,4 +19,4 @@ export default {
     },
     city: "San Francisco",
   },
-};
+} as Contact;

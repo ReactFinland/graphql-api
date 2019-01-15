@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Reaktor",
   about: "We realize visions.",
-  image: "sponsors/reaktor.svg",
+  image: {
+    url: "sponsors/reaktor.svg",
+  },
   social: {
     homepage: "https://www.reaktor.com/",
     facebook: "",
@@ -18,4 +22,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Formidable",
   about: "The JavaScript Consultancy trusted by engineers",
-  image: "sponsors/formidable.svg",
+  image: {
+    url: "sponsors/formidable.svg",
+  },
   social: {
     homepage: "https://formidable.com/",
     github: "formidablelabs",
@@ -18,4 +22,4 @@ export default {
     },
     city: "Seattle",
   },
-};
+} as Contact;

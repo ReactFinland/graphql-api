@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Geniem",
   about: "Creative Web Development",
-  image: "sponsors/geniem.svg",
+  image: {
+    url: "sponsors/geniem.svg",
+  },
   social: {
     homepage: "https://www.geniem.fi/in-english/",
     facebook: "geniemfi",
@@ -15,4 +19,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

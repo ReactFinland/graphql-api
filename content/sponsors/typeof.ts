@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "typeof",
   about: "typeof is a web craftsmanship conference",
-  image: "sponsors/typeof.svg",
+  image: {
+    url: "sponsors/typeof.svg",
+  },
   social: {
     homepage: "https://typeofconf.com/",
     facebook: "typeofconf",
@@ -15,4 +19,4 @@ export default {
     },
     city: "Porto",
   },
-};
+} as Contact;

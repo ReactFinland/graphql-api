@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Wunder",
   about: "Your partner in digital change",
-  image: "sponsors/wunder.svg",
+  image: {
+    url: "sponsors/wunder.svg",
+  },
   social: {
     homepage: "https://wunder.io/",
     facebook: "wunder.io",
@@ -17,4 +21,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

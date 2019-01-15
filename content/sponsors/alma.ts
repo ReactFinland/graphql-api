@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Alma Media",
   about: "Courage to grow",
-  image: "sponsors/alma.png",
+  image: {
+    url: "sponsors/alma.png",
+  },
   social: {
     homepage: "https://www.almamedia.fi/",
     facebook: "almamedia",
@@ -16,4 +20,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;

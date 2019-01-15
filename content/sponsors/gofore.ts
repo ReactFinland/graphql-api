@@ -1,7 +1,11 @@
+import { Contact } from "../../server/schema/Contact";
+
 export default {
   name: "Gofore",
   about: "We create tomorrow's digital services and work culture today",
-  image: "sponsors/gofore.svg",
+  image: {
+    url: "sponsors/gofore.svg",
+  },
   social: {
     homepage: "https://gofore.com/en/home/",
     facebook: "GoforeGroup",
@@ -18,4 +22,4 @@ export default {
     },
     city: "Helsinki",
   },
-};
+} as Contact;
