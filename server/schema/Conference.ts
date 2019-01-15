@@ -152,7 +152,7 @@ export class ConferenceResolver {
 
   @FieldResolver(_ => [Talk])
   public talks(@Root() conference: Conference) {
-    return conference.sessions.filter(
+    return Object.values(conference.sessions).filter(
       ({ type }) =>
         type === SessionType.LIGHTNING_TALK ||
         type === SessionType.TALK ||
@@ -162,7 +162,7 @@ export class ConferenceResolver {
 
   @FieldResolver(_ => [Workshop])
   public workshops(@Root() conference: Conference) {
-    return conference.sessions.filter(
+    return Object.values(conference.sessions).filter(
       ({ type }) => type === SessionType.WORKSHOP
     );
   }
@@ -177,5 +177,7 @@ export function getConference(id): Conference {
 }
 
 export function getSpeakers(sessions) {
-  return uniq(flatMap(sessions, session => get(session, "speakers")));
+  return uniq(
+    flatMap(Object.values(sessions), session => get(session, "speakers"))
+  );
 }

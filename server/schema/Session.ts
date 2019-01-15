@@ -5,21 +5,13 @@ import {
   registerEnumType,
 } from "type-graphql";
 import { Contact } from "./Contact";
-import { Interval } from "./Interval";
 import { Location } from "./Location";
-import { Schedule } from "./Schedule";
 import { Ticket } from "./Ticket";
 
 @InterfaceType()
 export abstract class ISession {
   @Field(_ => SessionType)
   public type!: SessionType;
-
-  @Field(_ => Schedule)
-  public schedule!: Schedule;
-
-  @Field(_ => Interval)
-  public interval!: Interval;
 
   @Field(_ => String)
   public title!: string;
@@ -28,7 +20,7 @@ export abstract class ISession {
   public description?: string;
 
   @Field(_ => [String])
-  public keywords?: [string];
+  public keywords?: string[];
 
   @Field(_ => Location)
   public location?: Location;
@@ -67,15 +59,13 @@ export class TalkUrls {
 @ObjectType({ implements: ISession })
 export class Talk implements ISession {
   public type!: SessionType;
-  public schedule!: Schedule;
-  public interval!: Interval;
   public title!: string;
   public description?: string;
-  public keywords?: [string];
+  public keywords?: string[];
   public location?: Location;
 
   @Field(_ => [Contact])
-  public speakers?: [Contact];
+  public speakers?: Contact[];
 
   @Field(_ => TalkUrls)
   public urls?: TalkUrls;
@@ -84,15 +74,13 @@ export class Talk implements ISession {
 @ObjectType({ implements: ISession })
 export class Workshop implements ISession {
   public type!: SessionType;
-  public schedule!: Schedule;
-  public interval!: Interval;
   public title!: string;
   public description?: string;
-  public keywords?: [string];
+  public keywords?: string[];
   public location?: Location;
 
   @Field(_ => [Contact])
-  public speakers?: [Contact];
+  public speakers?: Contact[];
 
   @Field(_ => [Ticket])
   public tickets?: [Ticket];
@@ -101,10 +89,8 @@ export class Workshop implements ISession {
 @ObjectType({ implements: ISession })
 export class Break implements ISession {
   public type!: SessionType;
-  public schedule!: Schedule;
-  public interval!: Interval;
   public title!: string;
   public description?: string;
-  public keywords?: [string];
+  public keywords?: string[];
   public location?: Location;
 }

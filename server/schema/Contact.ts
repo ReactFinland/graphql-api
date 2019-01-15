@@ -40,19 +40,19 @@ export class Contact {
   public about!: string;
 
   @Field(_ => String)
-  public aboutShort!: string;
+  public aboutShort?: string;
 
   @Field(_ => Image)
   public image?: Image;
 
-  @Field(_ => [String])
-  public type?: [string];
+  @Field(_ => [ContactType])
+  public type?: ContactType[];
 
   @Field(_ => Social)
   public social!: Social;
 
   @Field(_ => [String])
-  public keywords?: [string];
+  public keywords?: string[];
 
   @Field(_ => [Talk])
   public talks?: [Talk];
@@ -151,7 +151,7 @@ export class ContactResolver {
   @FieldResolver(_ => [Talk])
   public talks(@Root() contact: Contact) {
     // TODO: resolve.slideUrls(talks, schedules)
-    return contact.conference.sessions.filter(
+    return Object.values(contact.conference.sessions).filter(
       ({ type, speakers }) =>
         (type === SessionType.LIGHTNING_TALK ||
           type === SessionType.TALK ||
@@ -162,7 +162,7 @@ export class ContactResolver {
 
   @FieldResolver(_ => [Workshop])
   public workshops(@Root() contact: Contact) {
-    return contact.conference.sessions.filter(
+    return Object.values(contact.conference.sessions).filter(
       ({ type, speakers }) =>
         type === SessionType.WORKSHOP &&
         speakers.find(({ name }) => name === contact.name)
