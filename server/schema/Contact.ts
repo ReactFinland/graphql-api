@@ -81,9 +81,11 @@ export class ContactResolver {
     const organizer = Object.values(conference.organizers).find(
       ({ name }) => name === contactName
     );
-    const speaker = getSpeakers(conference.sessions).find(
-      ({ name }) => name === contactName
-    );
+    const speaker =
+      getSpeakers(conference.talks).find(({ name }) => name === contactName) ||
+      getSpeakers(conference.workshops).find(
+        ({ name }) => name === contactName
+      );
     const mc =
       conference.mcs && conference.mcs.find(({ name }) => name === contactName);
 

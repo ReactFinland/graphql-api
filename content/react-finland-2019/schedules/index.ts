@@ -1,17 +1,10 @@
 import { SessionType } from "../../../server/schema";
 import { Schedule } from "../../../server/schema/Schedule";
 import * as people from "../../people";
-import * as sessions from "../sessions";
+import * as talks from "../talks";
+import * as allWorkshops from "../workshops";
 
-const workshops = [
-  sessions.andreyAndArtemWorkshop,
-  sessions.davidKhourshidWorkshop,
-  sessions.glennReyesWorkshop,
-  sessions.nikWorkshop,
-  sessions.michelWorkshop,
-  sessions.patrickWorkshop,
-  sessions.siaKaramalegosWorkshop,
-];
+const workshops = Object.values(allWorkshops);
 
 const workshopDay: Schedule = {
   day: "2019-04-24",
@@ -89,7 +82,7 @@ const presentationDay1: Schedule = {
       end: "09:15",
       sessions: [
         {
-          speakers: [people.janiEvakallio],
+          people: [people.janiEvakallio],
           title: "Opening",
           description: "Opening the day with Jani Eväkallio, our MC of the day",
           type: SessionType.ORGANIZATIONAL,
@@ -101,9 +94,9 @@ const presentationDay1: Schedule = {
       end: "10:45",
       title: "State management",
       sessions: [
-        sessions.michelWeststrate,
-        sessions.davidKhourshid,
-        sessions.lucaMatteis,
+        talks.michelWeststrate,
+        talks.davidKhourshid,
+        talks.lucaMatteis,
       ],
     },
     {
@@ -122,9 +115,9 @@ const presentationDay1: Schedule = {
       end: "12:15",
       title: "Testing",
       sessions: [
-        sessions.juhaLinnanen,
-        sessions.maaretPyhajarvi,
-        sessions.manuelMatuzovic,
+        talks.juhaLinnanen,
+        talks.maaretPyhajarvi,
+        talks.manuelMatuzovic,
       ],
     },
     {
@@ -143,7 +136,7 @@ const presentationDay1: Schedule = {
       begin: "13:30",
       end: "14:30",
       title: "Design Systems",
-      sessions: [sessions.varyaStepanova, sessions.andreyOkonetchnikov],
+      sessions: [talks.varyaStepanova, talks.andreyOkonetchnikov],
     },
     {
       begin: "14:30",
@@ -160,7 +153,7 @@ const presentationDay1: Schedule = {
       begin: "15:00",
       end: "16:00",
       title: "Case Studies",
-      sessions: [sessions.nikGraf, sessions.kadiKraman, sessions.glennReyes,
+      sessions: [talks.nikGraf, talks.kadiKraman, talks.glennReyes],
     },
     {
       begin: "16:00",
@@ -177,7 +170,7 @@ const presentationDay1: Schedule = {
       begin: "16:30",
       end: "17:30",
       title: "Visual",
-      sessions: [sessions.brunoLourenco, sessions.teroParviainen],
+      sessions: [talks.brunoLourenco, talks.teroParviainen],
     },
     {
       begin: "17:30",
@@ -194,7 +187,7 @@ const presentationDay1: Schedule = {
       end: "22:00",
       sessions: [
         {
-          speakers: [people.janiEvakallio],
+          people: [people.janiEvakallio],
           title: "#componentDidSmoosh",
           description:
             "React has a new lifecycle method, `componentDidSmoosh`. Learn all about it.",
@@ -214,7 +207,7 @@ const presentationDay2: Schedule = {
       end: "09:15",
       sessions: [
         {
-          speakers: [people.saraVieira],
+          people: [people.saraVieira],
           title: "Opening",
           description: "Opening the day with Sara Vieira, our MC of the day",
           type: SessionType.ORGANIZATIONAL,
@@ -225,11 +218,7 @@ const presentationDay2: Schedule = {
       begin: "09:15",
       end: "10:45",
       title: "React Native",
-      sessions: [
-        sessions.rickHanlon,
-        sessions.jamonHolmgren,
-        sessions.villeImmonen,
-      ],
+      sessions: [talks.rickHanlon, talks.jamonHolmgren, talks.villeImmonen],
     },
     {
       begin: "10:45",
@@ -246,7 +235,7 @@ const presentationDay2: Schedule = {
       begin: "11:15",
       end: "12:15",
       title: "Tooling",
-      sessions: [sessions.carolynStransky, sessions.monicaLent],
+      sessions: [talks.carolynStransky, talks.monicaLent],
     },
     {
       begin: "12:15",
@@ -263,7 +252,7 @@ const presentationDay2: Schedule = {
       begin: "13:30",
       end: "14:30",
       title: "Design Systems",
-      sessions: [sessions.artemSapegin, sessions.artemZakharchenko],
+      sessions: [talks.artemSapegin, talks.artemZakharchenko],
     },
     {
       begin: "14:30",
@@ -280,7 +269,7 @@ const presentationDay2: Schedule = {
       begin: "15:00",
       end: "16:00",
       title: "Performance",
-      sessions: [sessions.annaDoubkova, sessions.siaKaramalegos],
+      sessions: [talks.annaDoubkova, talks.siaKaramalegos],
     },
     {
       begin: "16:00",
@@ -297,11 +286,7 @@ const presentationDay2: Schedule = {
       begin: "16:30",
       end: "17:30",
       title: "Universal React",
-      sessions: [
-        sessions.tomasKonrady,
-        sessions.tejasKumar,
-        sessions.mikeBerman,
-      ],
+      sessions: [talks.tomasKonrady, talks.tejasKumar, talks.mikeBerman],
     },
     {
       begin: "17:30",

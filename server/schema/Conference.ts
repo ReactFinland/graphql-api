@@ -15,7 +15,7 @@ import { Contact } from "./Contact";
 import { Location } from "./Location";
 import { Schedule } from "./Schedule";
 import { Series } from "./Series";
-import { ISession, ISessions, SessionType, Talk, Workshop } from "./Session";
+import { ISession, Talk, Workshop } from "./Session";
 import { Ticket } from "./Ticket";
 
 @ObjectType()
@@ -31,9 +31,6 @@ export class Conference {
 
   @Field(_ => String)
   public websiteUrl!: string;
-
-  // @Field(_ => Series)
-  // public series!: Series;
 
   @Field(_ => [Location])
   public locations?: Location[];
@@ -61,9 +58,6 @@ export class Conference {
 
   @Field(_ => [Schedule])
   public schedules!: Schedule[];
-
-  @Field(_ => [ISession])
-  public sessions!: ISessions;
 
   @Field(_ => [Contact])
   public speakers?: Contact[];
@@ -104,27 +98,13 @@ export class ConferenceResolver {
 
   @FieldResolver(_ => [Contact])
   public speakers(@Root() conference: Conference) {
-    return getSpeakers(conference.sessions).map(contact => ({
+    const talkSpeakers = getSpeakers(conference.talks);
+    const workshopSpeakers = getSpeakers(conference.workshops);
+
+    return talkSpeakers.concat(workshopSpeakers).map(contact => ({
       ...contact,
       conference,
     }));
-  }
-
-  @FieldResolver(_ => [Talk])
-  public talks(@Root() conference: Conference): Talk[] {
-    return Object.values(conference.sessions).filter(
-      ({ type }) =>
-        type === SessionType.LIGHTNING_TALK ||
-        type === SessionType.TALK ||
-        type === SessionType.KEYNOTE
-    );
-  }
-
-  @FieldResolver(_ => [Workshop])
-  public workshops(@Root() conference: Conference): Workshop[] {
-    return Object.values(conference.sessions).filter(
-      ({ type }) => type === SessionType.WORKSHOP
-    );
   }
 }
 
@@ -136,8 +116,6 @@ export function getConference(id): Conference {
   }
 }
 
-export function getSpeakers(sessions: ISessions) {
-  return uniq(
-    flatMap(Object.values(sessions), session => get(session, "speakers"))
-  );
+export function getSpeakers(sessions?: ISession[]) {
+  return uniq(flatMap(sessions, session => get(session, "speakers")));
 }

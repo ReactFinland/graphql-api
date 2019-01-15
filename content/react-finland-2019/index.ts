@@ -3,7 +3,8 @@ import * as locations from "../locations";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
 import schedules from "./schedules";
-import * as sessions from "./sessions";
+import * as talks from "./talks";
+import * as workshops from "./workshops";
 
 const partners = [
   allSponsors.agentconf,
@@ -58,7 +59,8 @@ export default {
     people.tuuliTiilikainen,
   ],
   schedules,
-  sessions,
+  talks: Object.values(talks),
+  workshops: Object.values(workshops),
   tickets: [],
   sponsors,
   partners,
