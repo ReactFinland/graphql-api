@@ -1,11 +1,11 @@
 import { SessionType } from "../../../server/schema";
-import { Workshop } from "../../../server/schema/Session";
+import { Session } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
 import { glennReyes } from "../../people";
 
-export default {
+const workshop: Session = {
   type: SessionType.WORKSHOP,
-  speakers: [require("../../people/glenn-reyes")],
+  people: [glennReyes],
   title: "React and GraphQL – From zero to production",
   description: `
 In this workshop we will build a production-ready React app with GraphQL backend from the ground up. This workshop is targeted to engineers who want to learn to build a complete and full stack React app with GraphQL.
@@ -28,4 +28,6 @@ Developers have basic knowledge about the core concepts of React. Bring your own
 `,
   keywords: glennReyes.keywords,
   location: paasitorni,
-} as Workshop;
+};
+
+export default workshop;

@@ -1,13 +1,13 @@
 import { SessionType } from "../../../server/schema";
-import { Workshop } from "../../../server/schema/Session";
+import { Session } from "../../../server/schema/Session";
 import keywords from "../../keywords";
 import { paasitorni } from "../../locations";
 import andrey from "../../people/andrey-okonetchnikov";
 import artem from "../../people/artem-sapegin";
 
-export default {
+const workshop: Session = {
   type: SessionType.WORKSHOP,
-  speakers: [andrey, artem],
+  people: [andrey, artem],
   title: "Design Systems for React Developers",
   description: `Development of digital products is a complex process that involves multiple stakeholders and roles: managers, designers, engineers, QA, and customers. This increases the communication overhead, slows down the process, and oftentimes results and less than ideal user experience.
 
@@ -32,4 +32,6 @@ This workshop will show you how to:
     keywords.TOOLING,
   ],
   location: paasitorni,
-} as Workshop;
+};
+
+export default workshop;

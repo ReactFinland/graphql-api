@@ -1,11 +1,11 @@
 import { SessionType } from "../../../server/schema";
-import { Talk } from "../../../server/schema/Session";
+import { Session } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
 import { nikGraf } from "../../people";
 
-export default {
+const workshop: Session = {
   type: SessionType.WORKSHOP,
-  speakers: [require("../../people/nik-graf")],
+  people: [nikGraf],
   title: "Advanced React – Suspense, Time Slicing, Hooks and more …",
   description: `React has changed quite a lot in the past couple months. New lifecycle methods were released, Suspense and Time Slicing is around the corner and we even got a new API: React Hooks.
 
@@ -23,4 +23,6 @@ The workshop is split into several modules. Each of them starts with a 20 min pr
 `,
   keywords: nikGraf.keywords,
   location: paasitorni,
-} as Talk;
+};
+
+export default workshop;

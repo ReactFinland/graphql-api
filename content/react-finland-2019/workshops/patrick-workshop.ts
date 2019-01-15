@@ -1,11 +1,11 @@
 import { SessionType } from "../../../server/schema";
-import { Workshop } from "../../../server/schema/Session";
+import { Session } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
 import { patrickStapfer } from "../../people";
 
-export default {
+const workshop: Session = {
   type: SessionType.WORKSHOP,
-  speakers: [require("../../people/patrick-stapfer")],
+  people: [patrickStapfer],
   title: "Getting Started with ReasonML & ReasonReact",
   description: `ReasonML is a new cool JavaScript-like language with a strong type-system and first level React bindings. As with every new language, there comes a new ecosystem and unfamiliar concepts with it.
 
@@ -24,24 +24,8 @@ In more detail, the workshop will cover following topics:
 - Interoperability with existing JavaScript
 
 In the end, ambitious attendees will be able to integrate Reason React components in their existing React codebase without interrupting the existing development workflows.`,
-  /*tickets: [
-    {
-      ...require("../tickets/morning-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/gjzhvxpdmuu",
-    },
-    {
-      ...require("../tickets/morning-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/ype-9yteewo",
-    },
-    {
-      ...require("../tickets/evening-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/zcsd4ygn7jo",
-    },
-    {
-      ...require("../tickets/evening-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/766bgaavf-q",
-    },
-  ],*/
   keywords: patrickStapfer.keywords,
   location: paasitorni,
-} as Workshop;
+};
+
+export default workshop;

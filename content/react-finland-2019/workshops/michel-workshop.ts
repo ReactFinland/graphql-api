@@ -1,11 +1,11 @@
 import { SessionType } from "../../../server/schema";
-import { Workshop } from "../../../server/schema/Session";
+import { Session } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
 import { michelWeststrate } from "../../people";
 
-export default {
+const workshop: Session = {
   type: SessionType.WORKSHOP,
-  speakers: [require("../../people/michel-weststrate")],
+  people: [michelWeststrate],
   title: "TypeScript: From novice to expert",
   description: `
 The JavaScript ecosystem is moving to TypeScript. Fast. This workshop will get you up and running with the basic and more advanced patterns of the language.
@@ -33,4 +33,6 @@ Pre-requisites: Familiarity with JavaScript and modern syntax features (ES2015).
 `,
   keywords: michelWeststrate.keywords,
   location: paasitorni,
-} as Workshop;
+};
+
+export default workshop;

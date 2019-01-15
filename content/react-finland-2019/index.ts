@@ -42,7 +42,7 @@ const bronzeSponsors = [
 ];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
-export default {
+const conference: Conference = {
   id: "react-finland-2019",
   name: "React Finland 2019",
   year: "2019",
@@ -67,4 +67,6 @@ export default {
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
-} as Conference;
+};
+
+export default conference;

@@ -1,13 +1,13 @@
 import { SessionType } from "../../../server/schema";
-import { Workshop } from "../../../server/schema/Session";
+import { Session } from "../../../server/schema/Session";
 import keywords from "../../keywords";
 import { valkoinenSali } from "../../locations";
 import andrey from "../../people/andrey-okonetchnikov";
 import artem from "../../people/artem-sapegin";
 
-export default {
+const workshop: Session = {
   type: SessionType.WORKSHOP,
-  speakers: [andrey, artem],
+  people: [andrey, artem],
   title: "Styleguide-driven Development",
   description: `Web applications becoming bigger and more complex, and as they grow, the complexity of the User Interface, arguably the most important part of your application, increases. And with it, your responsibility as a UI developer.
 
@@ -28,4 +28,6 @@ export default {
     keywords.TOOLING,
   ],
   location: valkoinenSali,
-} as Workshop;
+};
+
+export default workshop;

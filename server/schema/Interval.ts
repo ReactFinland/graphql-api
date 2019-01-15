@@ -1,5 +1,5 @@
 import { Field, FieldResolver, ObjectType, Resolver, Root } from "type-graphql";
-import { Break, ISession, Talk, Workshop } from "./Session";
+import { Session } from "./Session";
 
 @ObjectType()
 export class Interval {
@@ -12,13 +12,13 @@ export class Interval {
   @Field(_ => String)
   public title?: string;
 
-  @Field(_ => [ISession])
-  public sessions!: Array<Break | Talk | Workshop>;
+  @Field(_ => [Session])
+  public sessions!: Session[];
 }
 
 @Resolver(_ => Interval)
 export class IntervalResolver {
-  @FieldResolver(_ => [ISession])
+  @FieldResolver(_ => [Session])
   public sessions(@Root() interval: Interval) {
     return interval.sessions.map(session => ({
       ...session,

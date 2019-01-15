@@ -13,7 +13,6 @@ import { getConference, getSpeakers } from "./Conference";
 import { IContext } from "./Context";
 import { Country } from "./Country";
 import { Image } from "./Image";
-import { Talk, Workshop } from "./Session";
 import { Social } from "./Social";
 
 export enum ContactType {
@@ -53,12 +52,6 @@ export class Contact {
 
   @Field(_ => [String])
   public keywords?: string[];
-
-  @Field(_ => [Talk])
-  public talks?: [Talk];
-
-  @Field(_ => [Workshop])
-  public workshops?: [Workshop];
 
   @Field(_ => Country)
   public country?: Country;
@@ -146,28 +139,4 @@ export class ContactResolver {
   public city(@Root() contact: Contact) {
     return contact.city;
   }
-
-  // FIXME: See if these are still needed
-  /*
-  @FieldResolver(_ => [Talk])
-  public talks(@Root() contact: Contact) {
-    // TODO: resolve.slideUrls(talks, schedules)
-    return contact.conference.sessions.filter(
-      ({ type, speakers }) =>
-        (type === SessionType.LIGHTNING_TALK ||
-          type === SessionType.TALK ||
-          type === SessionType.KEYNOTE) &&
-        speakers.find(({ name }) => name === contact.name)
-    );
-  }
-
-  @FieldResolver(_ => [Workshop])
-  public workshops(@Root() contact: Contact) {
-    return contact.conference.sessions.filter(
-      ({ type, speakers }) =>
-        type === SessionType.WORKSHOP &&
-        speakers.find(({ name }) => name === contact.name)
-    );
-  }
-  */
 }

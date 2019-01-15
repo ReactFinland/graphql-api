@@ -1,11 +1,11 @@
 import { SessionType } from "../../../server/schema";
-import { Workshop } from "../../../server/schema/Session";
+import { Session } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
 import { siaKaramalegos } from "../../people";
 
-export default {
+const workshop: Session = {
   type: SessionType.WORKSHOP,
-  speakers: [require("../../people/sia-karamalegos")],
+  people: [siaKaramalegos],
   title: "Advanced Performance Tuning for React Applications",
   description: `Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Sia will lead you through the process of:
 
@@ -32,24 +32,8 @@ By the end of the workshop, you’ll be able to diagnose performance problems an
 
 This workshop was prepared in partnership with Eli Fitch and Jason Lengstorf.
 `,
-  /*tickets: [
-    {
-      ...require("../tickets/morning-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/kmogtpeshgs",
-    },
-    {
-      ...require("../tickets/morning-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/y11c-klqvss",
-    },
-    {
-      ...require("../tickets/evening-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/c4g-t75rfog",
-    },
-    {
-      ...require("../tickets/evening-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/m3kenzkowg0",
-    },
-  ],*/
   keywords: siaKaramalegos.keywords,
   location: paasitorni,
-} as Workshop;
+};
+
+export default workshop;

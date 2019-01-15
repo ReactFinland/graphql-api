@@ -15,7 +15,7 @@ import { Contact } from "./Contact";
 import { Location } from "./Location";
 import { Schedule } from "./Schedule";
 import { Series } from "./Series";
-import { ISession, Talk, Workshop } from "./Session";
+import { Session } from "./Session";
 import { Ticket } from "./Ticket";
 
 @ObjectType()
@@ -62,11 +62,11 @@ export class Conference {
   @Field(_ => [Contact])
   public speakers?: Contact[];
 
-  @Field(_ => [Talk])
-  public talks?: Talk[];
+  @Field(_ => [Session])
+  public talks?: Session[];
 
-  @Field(_ => [Workshop])
-  public workshops?: Workshop[];
+  @Field(_ => [Session])
+  public workshops?: Session[];
 
   @Field(_ => [Ticket])
   public tickets?: Ticket[];
@@ -116,6 +116,6 @@ export function getConference(id): Conference {
   }
 }
 
-export function getSpeakers(sessions?: ISession[]) {
+export function getSpeakers(sessions?: Session[]) {
   return uniq(flatMap(sessions, session => get(session, "speakers")));
 }

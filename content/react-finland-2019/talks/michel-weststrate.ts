@@ -1,9 +1,9 @@
 import { SessionType } from "../../../server/schema";
-import { Talk } from "../../../server/schema/Session";
+import { Session } from "../../../server/schema/Session";
 import speaker from "../../people/michel-weststrate";
 
-export default {
-  speakers: [speaker],
+const talk: Session = {
+  people: [speaker],
   title: "MobX - The Journey",
   description: `
 MobX is downloaded a million times per month, and used by many large and small companies, such as Microsoft, Amazon, Lyft, SAP and DICE.
@@ -25,4 +25,6 @@ Some first hand experiences from an author that still tries to figure out how mu
 `,
   type: SessionType.KEYNOTE,
   keywords: [],
-} as Talk;
+};
+
+export default talk;
