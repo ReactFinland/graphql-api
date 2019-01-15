@@ -2,7 +2,7 @@ import { Conference } from "../../server/schema/Conference";
 import * as locations from "../locations";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
-import * as schedules from "./schedules";
+import schedules from "./schedules";
 import * as sessions from "./sessions";
 
 const partners = [
@@ -57,7 +57,7 @@ export default {
     people.toniRistola,
     people.tuuliTiilikainen,
   ],
-  schedules: Object.values(schedules),
+  schedules,
   sessions: Object.values(sessions),
   tickets: [],
   sponsors,

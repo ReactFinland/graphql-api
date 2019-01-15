@@ -1,5 +1,5 @@
 import { Field, FieldResolver, ObjectType, Resolver, Root } from "type-graphql";
-import { Break, Talk, Workshop } from "./Session";
+import { Break, ISession, Talk, Workshop } from "./Session";
 
 @ObjectType()
 export class Interval {
