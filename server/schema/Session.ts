@@ -26,6 +26,10 @@ export abstract class ISession {
   public location?: Location;
 }
 
+export interface ISessions {
+  [key: string]: ISession;
+}
+
 export enum SessionType {
   TALK,
   LIGHTNING_TALK,

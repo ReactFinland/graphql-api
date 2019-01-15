@@ -84,9 +84,8 @@ export class ContactResolver {
     const speaker = getSpeakers(conference.sessions).find(
       ({ name }) => name === contactName
     );
-    const mc = getSpeakers(conference.mcs).find(
-      ({ name }) => name === contactName
-    );
+    const mc =
+      conference.mcs && conference.mcs.find(({ name }) => name === contactName);
 
     return {
       conference,

@@ -15,7 +15,7 @@ import { Contact } from "./Contact";
 import { Location } from "./Location";
 import { Schedule } from "./Schedule";
 import { Series } from "./Series";
-import { ISession, SessionType, Talk, Workshop } from "./Session";
+import { ISession, ISessions, SessionType, Talk, Workshop } from "./Session";
 import { Ticket } from "./Ticket";
 
 @ObjectType()
@@ -63,7 +63,7 @@ export class Conference {
   public schedules!: Schedule[];
 
   @Field(_ => [ISession])
-  public sessions!: ISession[];
+  public sessions!: ISessions;
 
   @Field(_ => [Contact])
   public speakers?: Contact[];
@@ -102,46 +102,6 @@ export class ConferenceResolver {
     }
   }
 
-  @FieldResolver(_ => [Location])
-  public locations(@Root() conference: Conference) {
-    return conference.locations;
-  }
-
-  @FieldResolver(_ => [Contact])
-  public organizers(@Root() conference: Conference) {
-    return conference.organizers;
-  }
-
-  @FieldResolver(_ => [Contact])
-  public mcs(@Root() conference: Conference) {
-    return conference.mcs;
-  }
-
-  @FieldResolver(_ => [Contact])
-  public partners(@Root() conference: Conference) {
-    return conference.partners;
-  }
-
-  @FieldResolver(_ => [Contact])
-  public sponsors(@Root() conference: Conference) {
-    return conference.sponsors;
-  }
-
-  @FieldResolver(_ => [Contact])
-  public goldSponsors(@Root() conference: Conference) {
-    return conference.goldSponsors;
-  }
-
-  @FieldResolver(_ => [Contact])
-  public silverSponsors(@Root() conference: Conference) {
-    return conference.silverSponsors;
-  }
-
-  @FieldResolver(_ => [Contact])
-  public bronzeSponsors(@Root() conference: Conference) {
-    return conference.bronzeSponsors;
-  }
-
   @FieldResolver(_ => [Contact])
   public speakers(@Root() conference: Conference) {
     return getSpeakers(conference.sessions).map(contact => ({
@@ -151,8 +111,8 @@ export class ConferenceResolver {
   }
 
   @FieldResolver(_ => [Talk])
-  public talks(@Root() conference: Conference) {
-    return conference.sessions.filter(
+  public talks(@Root() conference: Conference): Talk[] {
+    return Object.values(conference.sessions).filter(
       ({ type }) =>
         type === SessionType.LIGHTNING_TALK ||
         type === SessionType.TALK ||
@@ -161,8 +121,8 @@ export class ConferenceResolver {
   }
 
   @FieldResolver(_ => [Workshop])
-  public workshops(@Root() conference: Conference) {
-    return conference.sessions.filter(
+  public workshops(@Root() conference: Conference): Workshop[] {
+    return Object.values(conference.sessions).filter(
       ({ type }) => type === SessionType.WORKSHOP
     );
   }
@@ -176,6 +136,8 @@ export function getConference(id): Conference {
   }
 }
 
-export function getSpeakers(sessions) {
-  return uniq(flatMap(sessions, session => get(session, "speakers")));
+export function getSpeakers(sessions: ISessions) {
+  return uniq(
+    flatMap(Object.values(sessions), session => get(session, "speakers"))
+  );
 }

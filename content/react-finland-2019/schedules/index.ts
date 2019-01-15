@@ -316,4 +316,4 @@ const presentationDay2: Schedule = {
   ],
 };
 
-export default [workshopDay, presentationDay1, presentationDay2] as Schedule[];
+export default [workshopDay, presentationDay1, presentationDay2];

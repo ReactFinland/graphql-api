@@ -58,7 +58,7 @@ export default {
     people.tuuliTiilikainen,
   ],
   schedules,
-  sessions: Object.values(sessions),
+  sessions,
   tickets: [],
   sponsors,
   partners,
