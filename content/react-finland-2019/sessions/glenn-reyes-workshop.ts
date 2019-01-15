@@ -1,4 +1,5 @@
 import { SessionType } from "../../../server/schema";
+import { Workshop } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
 import { glennReyes } from "../../people";
 
@@ -25,24 +26,6 @@ In this workshop we will build a production-ready React app with GraphQL backend
 
 Developers have basic knowledge about the core concepts of React. Bring your own laptop (I'm on Mac). Make sure, latest node and yarn or npm works on your machine.
 `,
-  /*tickets: [
-    {
-      ...require("../tickets/morning-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/kmogtpeshgs",
-    },
-    {
-      ...require("../tickets/morning-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/y11c-klqvss",
-    },
-    {
-      ...require("../tickets/evening-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/c4g-t75rfog",
-    },
-    {
-      ...require("../tickets/evening-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/m3kenzkowg0",
-    },
-  ],*/
   keywords: glennReyes.keywords,
   location: paasitorni,
-};
+} as Workshop;

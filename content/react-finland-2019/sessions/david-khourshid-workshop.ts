@@ -1,4 +1,5 @@
 import { SessionType } from "../../../server/schema";
+import { Workshop } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
 import { davidKhourshid } from "../../people";
 
@@ -36,4 +37,4 @@ export default {
   ],*/
   keywords: davidKhourshid.keywords,
   location: paasitorni,
-};
+} as Workshop;

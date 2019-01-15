@@ -11,7 +11,7 @@ export class Schedule {
   public description?: string;
 
   @Field(_ => [Interval])
-  public intervals?: [Interval];
+  public intervals?: Interval[];
 }
 
 @Resolver(_ => Schedule)

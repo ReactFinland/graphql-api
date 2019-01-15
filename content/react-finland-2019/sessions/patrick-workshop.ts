@@ -1,4 +1,5 @@
 import { SessionType } from "../../../server/schema";
+import { Workshop } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
 import { patrickStapfer } from "../../people";
 
@@ -43,4 +44,4 @@ In the end, ambitious attendees will be able to integrate Reason React component
   ],*/
   keywords: patrickStapfer.keywords,
   location: paasitorni,
-};
+} as Workshop;

@@ -1,4 +1,5 @@
 import { SessionType } from "../../../server/schema";
+import { Talk } from "../../../server/schema/Session";
 import speaker from "../../people/anna-doubkova";
 
 export default {
@@ -7,4 +8,4 @@ export default {
   description: ``,
   type: SessionType.TALK,
   keywords: [],
-};
+} as Talk;

@@ -32,50 +32,50 @@ export class Conference {
   @Field(_ => String)
   public websiteUrl!: string;
 
-  @Field(_ => Series)
-  public series!: Series;
+  // @Field(_ => Series)
+  // public series!: Series;
 
   @Field(_ => [Location])
-  public locations?: [Location];
+  public locations?: Location[];
 
   @Field(_ => [Contact])
-  public organizers!: [Contact];
+  public organizers!: Contact[];
 
   @Field(_ => [Contact])
-  public mcs?: [Contact];
+  public mcs?: Contact[];
 
   @Field(_ => [Contact])
-  public partners?: [Contact];
+  public partners?: Contact[];
 
   @Field(_ => [Contact])
-  public sponsors!: [Contact];
+  public sponsors!: Contact[];
 
   @Field(_ => [Contact])
-  public goldSponsors?: [Contact];
+  public goldSponsors?: Contact[];
 
   @Field(_ => [Contact])
-  public silverSponsors?: [Contact];
+  public silverSponsors?: Contact[];
 
   @Field(_ => [Contact])
-  public bronzeSponsors?: [Contact];
+  public bronzeSponsors?: Contact[];
 
   @Field(_ => [Schedule])
-  public schedules!: [Schedule];
+  public schedules!: Schedule[];
 
   @Field(_ => [ISession])
-  public sessions!: [ISession];
+  public sessions!: ISession[];
 
   @Field(_ => [Contact])
-  public speakers?: [Contact];
+  public speakers?: Contact[];
 
   @Field(_ => [Talk])
-  public talks?: [Talk];
+  public talks?: Talk[];
 
   @Field(_ => [Workshop])
-  public workshops?: [Workshop];
+  public workshops?: Workshop[];
 
   @Field(_ => [Ticket])
-  public tickets?: [Ticket];
+  public tickets?: Ticket[];
 }
 
 @Resolver(_ => Conference)
@@ -152,7 +152,7 @@ export class ConferenceResolver {
 
   @FieldResolver(_ => [Talk])
   public talks(@Root() conference: Conference) {
-    return Object.values(conference.sessions).filter(
+    return conference.sessions.filter(
       ({ type }) =>
         type === SessionType.LIGHTNING_TALK ||
         type === SessionType.TALK ||
@@ -162,7 +162,7 @@ export class ConferenceResolver {
 
   @FieldResolver(_ => [Workshop])
   public workshops(@Root() conference: Conference) {
-    return Object.values(conference.sessions).filter(
+    return conference.sessions.filter(
       ({ type }) => type === SessionType.WORKSHOP
     );
   }
@@ -177,7 +177,5 @@ export function getConference(id): Conference {
 }
 
 export function getSpeakers(sessions) {
-  return uniq(
-    flatMap(Object.values(sessions), session => get(session, "speakers"))
-  );
+  return uniq(flatMap(sessions, session => get(session, "speakers")));
 }

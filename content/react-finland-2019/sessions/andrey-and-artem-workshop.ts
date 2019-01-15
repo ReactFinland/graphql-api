@@ -25,24 +25,6 @@ This workshop will show you how to:
   - Create a living style guide and start building a component library
   - Structure your application around components
   - Write maintainable styles for your components based on the design system`,
-  /*tickets: [
-    {
-      ...require("../tickets/morning-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/psj-1zlofwo",
-    },
-    {
-      ...require("../tickets/morning-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/qvu9ipia14e",
-    },
-    {
-      ...require("../tickets/evening-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/ip0xmn7dg2q",
-    },
-    {
-      ...require("../tickets/evening-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/vll01sed0uq",
-    },
-  ],*/
   keywords: [
     keywords.REACT,
     keywords.STYLING,

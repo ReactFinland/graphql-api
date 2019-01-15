@@ -1,3 +1,4 @@
+import { Conference } from "../../server/schema/Conference";
 import * as locations from "../locations";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
@@ -56,12 +57,12 @@ export default {
     people.toniRistola,
     people.tuuliTiilikainen,
   ],
-  schedules,
-  sessions,
-  tickets: {},
+  schedules: Object.values(schedules),
+  sessions: Object.values(sessions),
+  tickets: [],
   sponsors,
   partners,
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
-};
+} as Conference;

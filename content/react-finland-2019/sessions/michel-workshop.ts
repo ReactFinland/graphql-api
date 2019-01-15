@@ -1,4 +1,5 @@
 import { SessionType } from "../../../server/schema";
+import { Workshop } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
 import { michelWeststrate } from "../../people";
 
@@ -30,24 +31,6 @@ Michel has been working with TypeScript full-time for the last 3 years. He autho
 
 Pre-requisites: Familiarity with JavaScript and modern syntax features (ES2015).
 `,
-  /*tickets: [
-    {
-      ...require("../tickets/morning-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/gjzhvxpdmuu",
-    },
-    {
-      ...require("../tickets/morning-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/ype-9yteewo",
-    },
-    {
-      ...require("../tickets/evening-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/zcsd4ygn7jo",
-    },
-    {
-      ...require("../tickets/evening-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/766bgaavf-q",
-    },
-  ],*/
   keywords: michelWeststrate.keywords,
   location: paasitorni,
-};
+} as Workshop;

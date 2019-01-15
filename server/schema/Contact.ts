@@ -151,7 +151,7 @@ export class ContactResolver {
   @FieldResolver(_ => [Talk])
   public talks(@Root() contact: Contact) {
     // TODO: resolve.slideUrls(talks, schedules)
-    return Object.values(contact.conference.sessions).filter(
+    return contact.conference.sessions.filter(
       ({ type, speakers }) =>
         (type === SessionType.LIGHTNING_TALK ||
           type === SessionType.TALK ||
@@ -162,7 +162,7 @@ export class ContactResolver {
 
   @FieldResolver(_ => [Workshop])
   public workshops(@Root() contact: Contact) {
-    return Object.values(contact.conference.sessions).filter(
+    return contact.conference.sessions.filter(
       ({ type, speakers }) =>
         type === SessionType.WORKSHOP &&
         speakers.find(({ name }) => name === contact.name)

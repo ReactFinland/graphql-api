@@ -1,4 +1,5 @@
 import { SessionType } from "../../../server/schema";
+import { Talk } from "../../../server/schema/Session";
 import speaker from "../../people/michel-weststrate";
 
 export default {
@@ -24,4 +25,4 @@ Some first hand experiences from an author that still tries to figure out how mu
 `,
   type: SessionType.KEYNOTE,
   keywords: [],
-};
+} as Talk;

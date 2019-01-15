@@ -1,4 +1,5 @@
 import { SessionType } from "../../../server/schema";
+import { Schedule } from "../../../server/schema/Schedule";
 import * as people from "../../people";
 import * as sessions from "../sessions";
 
@@ -12,7 +13,7 @@ const workshops = [
   sessions.siaKaramalegosWorkshop,
 ];
 
-const workshopDay = {
+const workshopDay: Schedule = {
   day: "2019-04-24",
   description: "Workshop day",
   intervals: [
@@ -79,7 +80,7 @@ const workshopDay = {
   ],
 };
 
-const presentationDay1 = {
+const presentationDay1: Schedule = {
   day: "2019-04-25",
   description: "Presentation day",
   intervals: [
@@ -204,7 +205,7 @@ const presentationDay1 = {
   ],
 };
 
-const presentationDay2 = {
+const presentationDay2: Schedule = {
   day: "2019-04-26",
   description: "Presentation day",
   intervals: [

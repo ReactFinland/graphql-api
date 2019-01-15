@@ -1,4 +1,5 @@
 import { SessionType } from "../../../server/schema";
+import { Workshop } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
 import { siaKaramalegos } from "../../people";
 
@@ -51,4 +52,4 @@ This workshop was prepared in partnership with Eli Fitch and Jason Lengstorf.
   ],*/
   keywords: siaKaramalegos.keywords,
   location: paasitorni,
-};
+} as Workshop;

@@ -1,4 +1,7 @@
 import { SessionType } from "../../../server/schema";
+import { Workshop } from "../../../server/schema/Session";
+import keywords from "../../keywords";
+import { valkoinenSali } from "../../locations";
 import andrey from "../../people/andrey-okonetchnikov";
 import artem from "../../people/artem-sapegin";
 
@@ -18,24 +21,11 @@ export default {
   * Create a living style guide and start building a component library
   * Structure your application around components
   * Write maintainable styles for your components based on the design system`,
-  tickets: [
-    {
-      ...require("../tickets/morning-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/psj-1zlofwo",
-    },
-    {
-      ...require("../tickets/morning-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/qvu9ipia14e",
-    },
-    {
-      ...require("../tickets/evening-workshop")[0],
-      link: "https://ti.to/react-finland/2018/with/ip0xmn7dg2q",
-    },
-    {
-      ...require("../tickets/evening-workshop")[1],
-      link: "https://ti.to/react-finland/2018/with/vll01sed0uq",
-    },
+  keywords: [
+    keywords.REACT,
+    keywords.STYLING,
+    keywords.STYLE_GUIDES,
+    keywords.TOOLING,
   ],
-  keywords: [...new Set(andrey.keywords.concat(artem.keywords))],
-  location: require("../../locations")["valkoinen-sali"],
-};
+  location: valkoinenSali,
+} as Workshop;
