@@ -29,19 +29,19 @@ export class Session {
   @Field(_ => String)
   public title!: string;
 
-  @Field(_ => String)
+  @Field(_ => String, { nullable: true })
   public description?: string;
 
-  @Field(_ => [String])
+  @Field(_ => [String], { nullable: true })
   public keywords?: string[];
 
-  @Field(_ => Location)
+  @Field(_ => Location, { nullable: true })
   public location?: Location;
 
-  @Field(_ => [Contact])
+  @Field(_ => [Contact], { nullable: true })
   public people?: Contact[];
 
-  @Field(_ => SessionUrls)
+  @Field(_ => SessionUrls, { nullable: true })
   public urls?: SessionUrls;
 }
 
