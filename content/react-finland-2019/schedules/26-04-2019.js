@@ -40,11 +40,10 @@ module.exports = {
     {
       begin: "11:15",
       end: "12:15",
-      title: "Case Studies",
+      title: "Tooling",
       sessions: [
-        require("../sessions/nik-graf"),
-        require("../sessions/kadi-kraman"),
-        require("../sessions/monica-lent"),
+        require("../sessions/carolyn-stransky"),
+        require("../sessions/glenn-reyes"),
       ],
     },
     {

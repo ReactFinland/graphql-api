@@ -82,10 +82,11 @@ module.exports = {
     {
       begin: "15:00",
       end: "16:00",
-      title: "Tooling",
+      title: "Case Studies",
       sessions: [
-        require("../sessions/carolyn-stransky"),
-        require("../sessions/glenn-reyes"),
+        require("../sessions/nik-graf"),
+        require("../sessions/kadi-kraman"),
+        require("../sessions/monica-lent"),
       ],
     },
     {
