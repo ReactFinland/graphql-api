@@ -1,4 +1,11 @@
-import { Field, ObjectType, registerEnumType } from "type-graphql";
+import {
+  Field,
+  FieldResolver,
+  ObjectType,
+  registerEnumType,
+  Resolver,
+  Root,
+} from "type-graphql";
 import { Contact } from "./Contact";
 import { Location } from "./Location";
 
@@ -36,6 +43,14 @@ export class Session {
 
   @Field(_ => SessionUrls)
   public urls?: SessionUrls;
+}
+
+@Resolver(_ => Session)
+export class SessionResolver {
+  @FieldResolver(_ => [Contact], { deprecationReason: "Use `people` instead" })
+  public speakers(@Root() session: Session) {
+    return session.people;
+  }
 }
 
 export enum SessionType {
