@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "Osaango",
   about:
     "Learn the next big thing - Skills & Methods for API, Platform and AI Economy",
@@ -17,4 +17,6 @@ export default {
     },
     city: "Helsinki",
   },
-} as Contact;
+};
+
+export default sponsor;

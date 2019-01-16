@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "Hasura",
   about: "Instant Realtime GraphQL on Postgres",
   image: {
@@ -18,4 +18,6 @@ export default {
     },
     city: "Bangalore",
   },
-} as Contact;
+};
+
+export default sponsor;

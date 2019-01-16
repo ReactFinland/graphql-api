@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "Apiops Meetup",
   about:
     "APIOps is about automation of any step of API design, development, onboarding, security or management.",
@@ -17,4 +17,6 @@ export default {
     },
     city: "Helsinki",
   },
-} as Contact;
+};
+
+export default sponsor;

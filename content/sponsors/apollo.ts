@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "Apollo",
   about:
     "We build Apollo Client, Engine, and Server to help you adopt GraphQL.",
@@ -19,4 +19,6 @@ export default {
     },
     city: "San Francisco",
   },
-} as Contact;
+};
+
+export default sponsor;

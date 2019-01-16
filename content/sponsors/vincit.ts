@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "Vincit",
   about: "Not Another Software Company",
   image: {
@@ -21,4 +21,6 @@ export default {
     },
     city: "Tampere",
   },
-} as Contact;
+};
+
+export default sponsor;

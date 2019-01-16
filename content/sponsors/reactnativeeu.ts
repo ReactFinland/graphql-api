@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "React Native EU",
   about:
     "First community conference in Europe, focused exclusively on React Native. Community, core contributors, insights, networking and tons of knowledge.",
@@ -18,4 +18,6 @@ export default {
     },
     city: "Wrocław",
   },
-} as Contact;
+};
+
+export default sponsor;

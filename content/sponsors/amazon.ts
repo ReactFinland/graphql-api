@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "Amazon Web Services",
   about:
     "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. ",
@@ -18,4 +18,6 @@ export default {
     },
     city: "Seattle",
   },
-} as Contact;
+};
+
+export default sponsor;

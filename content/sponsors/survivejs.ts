@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "SurviveJS",
   about: "SurviveJS will take you from a JavaScript apprentice to master",
   image: {
@@ -17,4 +17,6 @@ export default {
     },
     city: "Vienna",
   },
-} as Contact;
+};
+
+export default sponsor;

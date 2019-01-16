@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "Zapier",
   about: "Makes you happier :)",
   image: {
@@ -20,4 +20,6 @@ export default {
     },
     city: "San Francisco",
   },
-} as Contact;
+};
+
+export default sponsor;

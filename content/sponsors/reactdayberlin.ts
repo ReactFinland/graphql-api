@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "React Day Berlin",
   about: "Fully Packed Day of Your Favorite React Content",
   image: {
@@ -19,4 +19,6 @@ export default {
     },
     city: "Berlin",
   },
-} as Contact;
+};
+
+export default sponsor;

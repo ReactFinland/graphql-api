@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "ReasonConf",
   about:
     "World’s first Reason conference for web-developers & OCaml enthusiasts",
@@ -20,4 +20,6 @@ export default {
     },
     city: "Vienna",
   },
-} as Contact;
+};
+
+export default sponsor;

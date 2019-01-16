@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "Nightingale Health",
   about:
     "Nightingale Health is aiming to solve the world’s biggest health issue",
@@ -22,4 +22,6 @@ export default {
     },
     city: "Helsinki",
   },
-} as Contact;
+};
+
+export default sponsor;

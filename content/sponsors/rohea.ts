@@ -1,6 +1,6 @@
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const sponsor: Contact = {
   name: "Rohea",
   about:
     "ROHEA is a Finnish tech company that makes demanding software simple, scalable and usable for everyday needs.",
@@ -18,4 +18,6 @@ export default {
     },
     city: "Helsinki",
   },
-} as Contact;
+};
+
+export default sponsor;
