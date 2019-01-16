@@ -1,7 +1,9 @@
 import { SessionType } from "../../../server/schema";
-import * as sessions from "../sessions";
+import { Schedule } from "../../../server/schema/Schedule";
+import * as talks from "../talks";
+import * as workshops from "../workshops";
 
-const workshopDay = {
+const workshopDay: Schedule = {
   day: "2018-04-24",
   description: "Workshop day",
   intervals: [
@@ -9,38 +11,38 @@ const workshopDay = {
       begin: "09:00",
       end: "13:00",
       sessions: [
-        sessions.andreyAndArtem,
-        sessions.davidKhourshidWorkshop,
-        sessions.gantLabordeWorkshop,
-        sessions.juhoVepsalainenWorkshop,
-        sessions.patrickAndNik,
-        sessions.saraVieiraWorkshop,
-        sessions.siaKaramalegosWorkshop,
+        workshops.andreyAndArtemWorkshop,
+        workshops.davidKhourshidWorkshop,
+        workshops.gantLabordeWorkshop,
+        workshops.juhoVepsalainenWorkshop,
+        workshops.patrickAndNikWorkshop,
+        workshops.saraVieiraWorkshop,
+        workshops.siaKaramalegosWorkshop,
       ],
     },
     {
       begin: "14:00",
       end: "18:00",
       sessions: [
-        sessions.andreyAndArtem,
-        sessions.davidKhourshidWorkshop,
-        sessions.gantLabordeWorkshop,
-        sessions.juhoVepsalainenWorkshop,
-        sessions.patrickAndNik,
-        sessions.rotemMizrachiMeidanWorkshop,
-        sessions.siaKaramalegosWorkshop,
-        sessions.svenSauleauWorkshop,
+        workshops.andreyAndArtemWorkshop,
+        workshops.davidKhourshidWorkshop,
+        workshops.gantLabordeWorkshop,
+        workshops.juhoVepsalainenWorkshop,
+        workshops.patrickAndNikWorkshop,
+        workshops.rotemMizrachiMeidanWorkshop,
+        workshops.siaKaramalegosWorkshop,
+        workshops.svenSauleauWorkshop,
       ],
     },
     {
       begin: "09:00",
       end: "18:00",
-      sessions: [sessions.michelWeststrateWorkshop],
+      sessions: [workshops.michelWeststrateWorkshop],
     },
   ],
 };
 
-const presentationDay1 = {
+const presentationDay1: Schedule = {
   day: "2018-04-25",
   description: "Presentation day",
   intervals: [
@@ -68,27 +70,27 @@ const presentationDay1 = {
     {
       begin: "09:15",
       end: "09:45",
-      sessions: [sessions.janiEvakallio],
+      sessions: [talks.janiEvakallio],
     },
     {
       begin: "10:00",
       end: "10:45",
-      sessions: [sessions.christianAlfoni],
+      sessions: [talks.christianAlfoni],
     },
     {
       begin: "11:00",
       end: "11:10",
-      sessions: [sessions.michelWeststrate],
+      sessions: [talks.michelWeststrate],
     },
     {
       begin: "11:10",
       end: "11:20",
-      sessions: [sessions.patrickHund],
+      sessions: [talks.patrickHund],
     },
     {
       begin: "11:20",
       end: "11:30",
-      sessions: [sessions.eemeliAro],
+      sessions: [talks.eemeliAro],
     },
     {
       begin: "11:30",
@@ -104,12 +106,12 @@ const presentationDay1 = {
     {
       begin: "12:30",
       end: "13:15",
-      sessions: [sessions.kasiaJastrzebska],
+      sessions: [talks.kasiaJastrzebska],
     },
     {
       begin: "13:30",
       end: "14:15",
-      sessions: [sessions.siaKaramalegos],
+      sessions: [talks.siaKaramalegos],
     },
     {
       begin: "14:15",
@@ -126,12 +128,12 @@ const presentationDay1 = {
     {
       begin: "14:45",
       end: "15:30",
-      sessions: [sessions.saraVieira],
+      sessions: [talks.saraVieira],
     },
     {
       begin: "15:45",
       end: "16:15",
-      sessions: [sessions.rotemMizrachiMeidan],
+      sessions: [talks.rotemMizrachiMeidan],
     },
     {
       begin: "16:15",
@@ -148,17 +150,17 @@ const presentationDay1 = {
     {
       begin: "16:45",
       end: "17:00",
-      sessions: [sessions.andreyOkonetchnikov],
+      sessions: [talks.andreyOkonetchnikov],
     },
     {
       begin: "17:00",
       end: "17:15",
-      sessions: [sessions.svenSauleau],
+      sessions: [talks.svenSauleau],
     },
     {
       begin: "17:15",
       end: "17:30",
-      sessions: [sessions.eemeliAro2],
+      sessions: [talks.eemeliAro2],
     },
     {
       begin: "17:30",
@@ -174,7 +176,7 @@ const presentationDay1 = {
   ],
 };
 
-const presentationDay2 = {
+const presentationDay2: Schedule = {
   day: "2018-04-26",
   description: "Presentation day",
   intervals: [
@@ -202,22 +204,22 @@ const presentationDay2 = {
     {
       begin: "09:15",
       end: "09:45",
-      sessions: [sessions.kenWheeler],
+      sessions: [talks.kenWheeler],
     },
     {
       begin: "09:45",
       end: "10:00",
-      sessions: [sessions.juhoVepsalainen],
+      sessions: [talks.juhoVepsalainen],
     },
     {
       begin: "10:15",
       end: "10:45",
-      sessions: [sessions.nikGraf],
+      sessions: [talks.nikGraf],
     },
     {
       begin: "11:00",
       end: "11:30",
-      sessions: [sessions.patrickStapfer],
+      sessions: [talks.patrickStapfer],
     },
     {
       begin: "11:30",
@@ -233,12 +235,12 @@ const presentationDay2 = {
     {
       begin: "12:30",
       end: "13:15",
-      sessions: [sessions.davidKhourshid],
+      sessions: [talks.davidKhourshid],
     },
     {
       begin: "13:30",
       end: "14:15",
-      sessions: [sessions.shayKeinan],
+      sessions: [talks.shayKeinan],
     },
     {
       begin: "14:15",
@@ -255,22 +257,22 @@ const presentationDay2 = {
     {
       begin: "14:45",
       end: "15:15",
-      sessions: [sessions.michalChudziak],
+      sessions: [talks.michalChudziak],
     },
     {
       begin: "15:15",
       end: "15:30",
-      sessions: [sessions.toniRistola],
+      sessions: [talks.toniRistola],
     },
     {
       begin: "15:45",
       end: "16:30",
-      sessions: [sessions.gantLaborde],
+      sessions: [talks.gantLaborde],
     },
     {
       begin: "16:45",
       end: "17:00",
-      sessions: [sessions.varyaStepanova],
+      sessions: [talks.varyaStepanova],
     },
     {
       begin: "17:00",
