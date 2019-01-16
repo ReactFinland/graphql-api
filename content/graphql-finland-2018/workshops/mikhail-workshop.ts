@@ -1,9 +1,12 @@
-import keywords from "../../keywords";
 import { SessionType } from "../../../server/schema";
+import { Session } from "../../../server/schema/Session";
+import keywords from "../../keywords";
+import { paasitorni } from "../../locations";
+import mikhail from "../../people/mikhail-novikov";
 
-export default {
+const workshop: Session = {
   type: SessionType.WORKSHOP,
-  speakers: [require("../../people/mikhail-novikov")],
+  people: [mikhail],
   title: "Building a GraphQL API with node.js",
   description: `Learn how to build a GraphQL API from scratch using Node.js. This workshop is aimed at GraphQL beginners, but you probably have built an API server before. We'll go through the basics of building a GraphQL API server, wrap a REST API with it and then connect it to a database.
 
@@ -24,5 +27,7 @@ At the end of the workshop you should be comfortable building a GraphQL API with
 This workshop is only offered as a bundle deal with a conference.
 `,
   keywords: [keywords.GRAPHQL],
-  location: require("../../locations").paasitorni,
+  location: paasitorni,
 };
+
+export default workshop;

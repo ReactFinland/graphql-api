@@ -1,9 +1,10 @@
 import { SessionType } from "../../../server/schema";
+import { Session } from "../../../server/schema/Session";
 import keywords from "../../keywords";
 import speaker from "../../people/helen-zhukova";
 
-export default {
-  speakers: [speaker],
+const talk: Session = {
+  people: [speaker],
   title: "(Un)expected use of GraphQL",
   description: "",
   type: SessionType.LIGHTNING_TALK,
@@ -14,3 +15,5 @@ export default {
     video: "https://www.youtube.com/watch?v=9KG8mqo1iE0",
   },
 };
+
+export default talk;

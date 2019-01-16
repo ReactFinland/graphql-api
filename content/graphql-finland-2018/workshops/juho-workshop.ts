@@ -1,9 +1,12 @@
-import keywords from "../../keywords";
 import { SessionType } from "../../../server/schema";
+import { Session } from "../../../server/schema/Session";
+import keywords from "../../keywords";
+import { paasitorni } from "../../locations";
+import juho from "../../people/juho-vepsalainen";
 
-export default {
+const workshop: Session = {
   type: SessionType.WORKSHOP,
-  speakers: [require("../../people/juho-vepsalainen")],
+  people: [juho],
   title: "Let’s Learn GraphQL",
   description: `
 So you want to learn GraphQL? That is awesome! But like any other technology it's not easy to get started and get the basics of it mainly because all the docs are spread all over the place.
@@ -50,5 +53,7 @@ This workshop is free. Tickets would be distributed through a diversity ticket p
     keywords.APOLLO,
     keywords.PRISMA,
   ],
-  location: require("../../locations").paasitorni,
+  location: paasitorni,
 };
+
+export default workshop;

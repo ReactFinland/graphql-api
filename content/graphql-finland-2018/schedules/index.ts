@@ -1,14 +1,11 @@
 import { SessionType } from "../../../server/schema";
-import * as sessions from "../sessions";
+import { Schedule } from "../../../server/schema/Schedule";
+import * as talks from "../talks";
+import * as allWorkshops from "../workshops";
 
-const workshops = [
-  sessions.juhoVepsalainenIntroToGraphql,
-  sessions.nikGrafAdvancedGraphql,
-  sessions.marcGirouxGraphqlSchemaDesign,
-  sessions.mikhailNovikovBuildingGraphqlServer,
-];
+const workshops = Object.values(allWorkshops);
 
-const workshopDay = {
+const workshopDay: Schedule = {
   day: "2018-10-18",
   description: "Workshop day",
   intervals: [
@@ -75,7 +72,7 @@ const workshopDay = {
   ],
 };
 
-const presentationDay = {
+const presentationDay: Schedule = {
   day: "2018-10-19",
   description: "Presentation day",
   intervals: [
@@ -104,17 +101,17 @@ const presentationDay = {
     {
       begin: "09:15",
       end: "09:45",
-      sessions: [sessions.adamMiskiewicz],
+      sessions: [talks.adamMiskiewicz],
     },
     {
       begin: "09:45",
       end: "10:15",
-      sessions: [sessions.ellieDay],
+      sessions: [talks.ellieDay],
     },
     {
       begin: "10:15",
       end: "10:30",
-      sessions: [sessions.kadiKraman],
+      sessions: [talks.kadiKraman],
     },
     {
       begin: "10:30",
@@ -137,12 +134,12 @@ const presentationDay = {
     {
       begin: "11:00",
       end: "11:30",
-      sessions: [sessions.carolynStransky],
+      sessions: [talks.carolynStransky],
     },
     {
       begin: "11:30",
       end: "12:00",
-      sessions: [sessions.jimmyJia],
+      sessions: [talks.jimmyJia],
     },
 
     {
@@ -160,22 +157,22 @@ const presentationDay = {
     {
       begin: "13:30",
       end: "14:00",
-      sessions: [sessions.glennReyes],
+      sessions: [talks.glennReyes],
     },
     {
       begin: "14:00",
       end: "14:15",
-      sessions: [sessions.helenZhukova],
+      sessions: [talks.helenZhukova],
     },
     {
       begin: "14:15",
       end: "14:30",
-      sessions: [sessions.johannesSchickling],
+      sessions: [talks.johannesSchickling],
     },
     {
       begin: "14:30",
       end: "14:45",
-      sessions: [sessions.andrewRhyne],
+      sessions: [talks.andrewRhyne],
     },
 
     {
@@ -197,22 +194,22 @@ const presentationDay = {
     {
       begin: "15:00",
       end: "15:15",
-      sessions: [sessions.ivanGoncharov],
+      sessions: [talks.ivanGoncharov],
     },
     {
       begin: "15:15",
       end: "15:30",
-      sessions: [sessions.nikGraf],
+      sessions: [talks.nikGraf],
     },
     {
       begin: "15:30",
       end: "15:45",
-      sessions: [sessions.christofferNiska],
+      sessions: [talks.christofferNiska],
     },
     {
       begin: "15:45",
       end: "16:00",
-      sessions: [sessions.tanmaiGopal],
+      sessions: [talks.tanmaiGopal],
     },
     {
       begin: "16:00",
@@ -234,17 +231,17 @@ const presentationDay = {
     {
       begin: "16:30",
       end: "17:00",
-      sessions: [sessions.eloyDuran],
+      sessions: [talks.eloyDuran],
     },
     {
       begin: "17:00",
       end: "17:15",
-      sessions: [sessions.benjieGillam],
+      sessions: [talks.benjieGillam],
     },
     {
       begin: "17:15",
       end: "17:45",
-      sessions: [sessions.danSchafer],
+      sessions: [talks.danSchafer],
     },
     {
       begin: "18:00",

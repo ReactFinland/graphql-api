@@ -1,9 +1,10 @@
 import { SessionType } from "../../../server/schema";
+import { Session } from "../../../server/schema/Session";
 import keywords from "../../keywords";
 import speaker from "../../people/nik-graf";
 
-export default {
-  speakers: [speaker],
+const talk: Session = {
+  people: [speaker],
   title: "Reason and GraphQL",
   description: `Using Reason's type inference we can create GraphQL servers with 100% type coverage. Regardless if we compile to Node.js or native binaries using Reason we can do this with ease.
 
@@ -16,3 +17,5 @@ Besides that Reason shines even more so on the client. Send one quick introspect
     video: "https://www.youtube.com/watch?v=tUIvl2pe8CQ",
   },
 };
+
+export default talk;

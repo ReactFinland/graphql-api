@@ -1,9 +1,10 @@
 import { SessionType } from "../../../server/schema";
+import { Session } from "../../../server/schema/Session";
 import keywords from "../../keywords";
 import speaker from "../../people/eloy-duran";
 
-export default {
-  speakers: [speaker],
+const talk: Session = {
+  people: [speaker],
   title: "Where art thou, my error?",
   description: "",
   type: SessionType.TALK,
@@ -14,3 +15,5 @@ export default {
     video: "https://www.youtube.com/watch?v=qKA-n8p-sNc",
   },
 };
+
+export default talk;

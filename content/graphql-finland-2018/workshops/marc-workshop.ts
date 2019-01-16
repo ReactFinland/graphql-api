@@ -1,9 +1,12 @@
-import keywords from "../../keywords";
 import { SessionType } from "../../../server/schema";
+import { Session } from "../../../server/schema/Session";
+import keywords from "../../keywords";
+import { paasitorni } from "../../locations";
+import marc from "../../people/marc-andre-giroux";
 
-export default {
+const workshop: Session = {
   type: SessionType.WORKSHOP,
-  speakers: [require("../../people/marc-andre-giroux")],
+  people: [marc],
   title: "GraphQL Schema Design",
   description: `Building a brand new GraphQL API? Migrating from a REST API? If you are interested in designing a GraphQL schema that is great to use by clients and stands the test of time, this workshop is for you.
 
@@ -20,5 +23,7 @@ Alternating between presentations and hands on exercices, this workshop will cov
 
 For the exercices, we will only use the GraphQL SDL (Schema Definition Language), meaning you'll get to learn no matter what language you use to build your schema.`,
   keywords: [keywords.GRAPHQL, keywords.REACT],
-  location: require("../../locations").paasitorni,
+  location: paasitorni,
 };
+
+export default workshop;

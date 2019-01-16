@@ -1,9 +1,10 @@
+import { Conference } from "../../server/schema/Conference";
 import * as locations from "../locations";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
-import * as schedules from "./schedules";
-import * as sessions from "./sessions";
-import * as tickets from "./tickets";
+import schedules from "./schedules";
+import * as talks from "./talks";
+import * as workshops from "./workshops";
 
 const partners = [
   allSponsors.agentconf,
@@ -34,7 +35,7 @@ const bronzeSponsors = [
 ];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
-export default {
+const conference: Conference = {
   id: "graphql-finland-2018",
   name: "GraphQL Finland 2018",
   year: "2018",
@@ -49,11 +50,13 @@ export default {
     people.tuuliTiilikainen,
   ],
   schedules,
-  sessions,
-  tickets,
+  talks: Object.values(talks),
+  workshops: Object.values(workshops),
   sponsors,
   partners,
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
 };
+
+export default conference;

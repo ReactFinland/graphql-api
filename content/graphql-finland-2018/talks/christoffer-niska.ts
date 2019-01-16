@@ -1,9 +1,10 @@
 import { SessionType } from "../../../server/schema";
+import { Session } from "../../../server/schema/Session";
 import keywords from "../../keywords";
 import speaker from "../../people/christoffer-niska";
 
-export default {
-  speakers: [speaker],
+const talk: Session = {
+  people: [speaker],
   title: "graphql-php",
   description: "",
   type: SessionType.LIGHTNING_TALK,
@@ -14,3 +15,5 @@ export default {
     video: "https://www.youtube.com/watch?v=WDGj0zbEjL8",
   },
 };
+
+export default talk;
