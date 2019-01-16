@@ -1,4 +1,4 @@
-import { flatMap, get, uniq } from "lodash";
+import { flatMap, uniq } from "lodash";
 import {
   Arg,
   Field,
@@ -16,7 +16,6 @@ import { Location } from "./Location";
 import { Schedule } from "./Schedule";
 import { Series } from "./Series";
 import { Session } from "./Session";
-import { Ticket } from "./Ticket";
 
 @ObjectType()
 export class Conference {
@@ -63,13 +62,10 @@ export class Conference {
   public speakers?: Contact[];
 
   @Field(_ => [Session])
-  public talks?: Session[];
+  public talks!: Session[];
 
   @Field(_ => [Session])
-  public workshops?: Session[];
-
-  @Field(_ => [Ticket])
-  public tickets?: Ticket[];
+  public workshops!: Session[];
 }
 
 @Resolver(_ => Conference)
@@ -101,10 +97,7 @@ export class ConferenceResolver {
     const talkSpeakers = getSpeakers(conference.talks);
     const workshopSpeakers = getSpeakers(conference.workshops);
 
-    return talkSpeakers.concat(workshopSpeakers).map(contact => ({
-      ...contact,
-      conference,
-    }));
+    return talkSpeakers.concat(workshopSpeakers);
   }
 }
 
@@ -116,6 +109,6 @@ export function getConference(id): Conference {
   }
 }
 
-export function getSpeakers(sessions?: Session[]) {
-  return uniq(flatMap(sessions, session => get(session, "speakers")));
+export function getSpeakers(sessions?: Session[]): Contact[] {
+  return uniq(flatMap(sessions, session => session.people || []));
 }

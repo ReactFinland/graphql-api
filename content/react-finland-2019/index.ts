@@ -61,7 +61,6 @@ const conference: Conference = {
   schedules,
   talks: Object.values(talks),
   workshops: Object.values(workshops),
-  tickets: [],
   sponsors,
   partners,
   goldSponsors,
