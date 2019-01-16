@@ -14,6 +14,7 @@ import { getConference, getSpeakers } from "./Conference";
 import { IContext } from "./Context";
 import { Country } from "./Country";
 import { Image } from "./Image";
+import { Location } from "./Location";
 import { Social } from "./Social";
 
 export enum ContactType {
@@ -54,11 +55,8 @@ export class Contact {
   @Field(_ => [String])
   public keywords?: string[];
 
-  @Field(_ => Country)
-  public country?: Country;
-
-  @Field(_ => String)
-  public city?: string;
+  @Field(_ => Location)
+  public location!: Location;
 }
 
 @Resolver(_ => Contact)
@@ -131,13 +129,8 @@ export class ContactResolver {
     return result;
   }
 
-  @FieldResolver(_ => Country)
+  @FieldResolver(_ => Country, { deprecationReason: "Use `location` instead" })
   public country(@Root() contact: Contact) {
-    return contact.country;
-  }
-
-  @FieldResolver(_ => String)
-  public city(@Root() contact: Contact) {
-    return contact.city;
+    return contact.location.country;
   }
 }

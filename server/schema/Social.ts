@@ -28,4 +28,10 @@ export class Social {
 
   @Field(_ => String, { nullable: true })
   public vk?: string;
+
+  @Field(_ => String, { nullable: true })
+  public pinterest?: string;
+
+  @Field(_ => String, { nullable: true })
+  public vimeo?: string;
 }

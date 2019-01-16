@@ -3,7 +3,6 @@ import { buildSchema } from "type-graphql";
 import { ConferenceResolver } from "./Conference";
 import { ContactResolver, ContactType } from "./Contact";
 import { IntervalResolver } from "./Interval";
-import { LocationResolver } from "./Location";
 import { ScheduleResolver } from "./Schedule";
 import { SeriesResolver } from "./Series";
 import { SessionResolver, SessionType } from "./Session";
@@ -16,7 +15,6 @@ export default async function generateSchema() {
       ConferenceResolver,
       ContactResolver,
       IntervalResolver,
-      LocationResolver,
       ScheduleResolver,
       SeriesResolver,
       SessionResolver,
