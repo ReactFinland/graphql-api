@@ -1,4 +1,4 @@
-import { Arg, Field, ObjectType, Query, Resolver } from "type-graphql";
+import { Arg, Field, ID, ObjectType, Query, Resolver } from "type-graphql";
 import { getConference } from "./Conference";
 import { Interval } from "./Interval";
 
@@ -18,7 +18,7 @@ export class Schedule {
 export class ScheduleResolver {
   @Query(_ => Schedule)
   public schedule(
-    @Arg("conferenceId") conferenceId: string,
+    @Arg("conferenceId", _ => ID) conferenceId: string,
     @Arg("day") day: string
   ) {
     return getSchedule(conferenceId, day);

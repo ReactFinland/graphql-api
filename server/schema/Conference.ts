@@ -75,7 +75,7 @@ export class Conference {
 @Resolver(_ => Conference)
 export class ConferenceResolver {
   @Query(_ => Conference)
-  public conference(@Arg("id") id: string) {
+  public conference(@Arg("id", _ => ID) id: string) {
     return getConference(id);
   }
 

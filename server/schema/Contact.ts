@@ -3,6 +3,7 @@ import {
   Ctx,
   Field,
   FieldResolver,
+  ID,
   ObjectType,
   Query,
   registerEnumType,
@@ -65,7 +66,7 @@ export class ContactResolver {
   @Query(_ => Contact)
   public contact(
     @Arg("contactName") contactName: string,
-    @Arg("conferenceId") conferenceId: string
+    @Arg("conferenceId", _ => ID) conferenceId: string
   ) {
     const conference = getConference(conferenceId);
     const sponsor = conference.sponsors.find(
