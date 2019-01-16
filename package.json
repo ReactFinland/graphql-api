@@ -7,8 +7,9 @@
   "scripts": {
     "generate:indices": "node utils/generate-indices.js content --verbose",
     "build": "npm run generate:indices && rimraf build && tsc",
-    "start": "npm run build && node ./build/server",
-    "format": "prettier ./src/**/*.js --write"
+    "start": "npm run build && node ./build/server.js",
+    "format": "prettier ./src/**/*.js --write",
+    "watch": "tsc-watch --onSuccess \"node ./build/server\" --onFailure \"echo Beep! Compilation Failed\""
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "lodash.groupby": "^4.6.0",
     "mri": "^1.1.4",
     "prettier": "^1.15.2",
+    "tsc-watch": "^1.0.31",
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.17.0",
     "tslint-plugin-prettier": "^2.0.1",
