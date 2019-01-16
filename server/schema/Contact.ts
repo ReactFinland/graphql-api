@@ -1,3 +1,4 @@
+import { flatMap } from "lodash";
 import {
   Arg,
   Ctx,
@@ -10,11 +11,13 @@ import {
   Resolver,
   Root,
 } from "type-graphql";
+import conferences from "../conferences";
 import { getConference, getSpeakers } from "./Conference";
 import { IContext } from "./Context";
 import { Country } from "./Country";
 import { Image } from "./Image";
 import { Location } from "./Location";
+import { Session } from "./Session";
 import { Social } from "./Social";
 
 export enum ContactType {
@@ -80,11 +83,14 @@ export class ContactResolver {
       );
     const mc =
       conference.mcs && conference.mcs.find(({ name }) => name === contactName);
+    const contact = sponsor || organizer || speaker || mc;
 
-    return {
-      conference,
-      ...(sponsor || organizer || speaker || mc),
-    };
+    if (!contact) {
+      throw new Error(`Contact ${contactName} wasn't found!`);
+    }
+
+    // FIXME: This contains all talks/workshops - likely we should filter based on conferenceId?
+    return contact;
   }
 
   @FieldResolver(_ => Image)
@@ -132,5 +138,27 @@ export class ContactResolver {
   @FieldResolver(_ => Country, { deprecationReason: "Use `location` instead" })
   public country(@Root() contact: Contact) {
     return contact.location.country;
+  }
+
+  @FieldResolver(_ => [Session])
+  public talks(@Root() contact: Contact) {
+    const talks = flatMap(conferences, ({ talks }) => talks);
+    const talksWithContact = talks.filter(
+      ({ people }) =>
+        people && people.find(person => person.name === contact.name)
+    );
+
+    return talksWithContact;
+  }
+
+  @FieldResolver(_ => [Session])
+  public workshops(@Root() contact: Contact) {
+    const workshops = flatMap(conferences, ({ workshops }) => workshops);
+    const workshopsWithContact = workshops.filter(
+      ({ people }) =>
+        people && people.find(person => person.name === contact.name)
+    );
+
+    return workshopsWithContact;
   }
 }
