@@ -43,7 +43,7 @@ export class Contact {
   public aboutShort?: string;
 
   @Field(_ => Image)
-  public image?: Image;
+  public image!: Image;
 
   @Field(_ => [ContactType])
   public type?: ContactType[];
@@ -92,7 +92,7 @@ export class ContactResolver {
   @FieldResolver(_ => Image)
   public image(@Root() contact: Contact, @Ctx() ctx: IContext) {
     return {
-      url: `${ctx.mediaUrl}/${contact.image}`,
+      url: `${ctx.mediaUrl}/${contact.image.url}`,
     };
   }
 
