@@ -1,6 +1,7 @@
 import { Location } from "../../server/schema/Location";
 
-export default {
+// FIXME: These should be Contacts instead -> Location can become simpler again
+const location: Location = {
   name: "Paasitorni Congress Hall",
   about: "Paasitorni is the main venue of the event.",
   image: {
@@ -15,4 +16,6 @@ export default {
   },
   city: "Helsinki",
   address: "Paasivuorenkatu 5 A",
-} as Location;
+};
+
+export default location;

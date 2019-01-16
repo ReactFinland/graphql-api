@@ -1,6 +1,6 @@
 import { Location } from "../../server/schema/Location";
 
-export default {
+const location: Location = {
   name: "Valkoinen Sali",
   about: "Valkoinen Sali is the main venue of the event.",
   social: {
@@ -12,4 +12,6 @@ export default {
   },
   city: "Helsinki",
   address: "Aleksanterinkatu 16",
-} as Location;
+};
+
+export default location;
