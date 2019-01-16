@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Michel Weststrate",
   about:
     "Full-stack tech lead and open source evangelist at Mendix. Author of MobX, MobX-State-Tree and Immer. On a quest to make programming as natural as possible.",
@@ -31,4 +31,6 @@ export default {
     keywords.STATE_MANAGEMENT,
   ],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Christoffer Niska",
   about:
     "Tech leader with a passion for programming. Head of Tech at @digiaonline. Father of four. Open Source enthusiast. JavaScript Ninja. GraphQL evangelist.",
@@ -21,4 +21,6 @@ export default {
   },
   keywords: [keywords.GRAPHQL],
   type: [ContactType.SPEAKER, ContactType.LIGHTNING_TALK],
-} as Contact;
+};
+
+export default person;

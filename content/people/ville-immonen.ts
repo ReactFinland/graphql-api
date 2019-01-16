@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Ville Immonen",
   about:
     "Software developer who works on developer tools at Expo. Formerly co-founded Reindex, a hosted GraphQL service. Likes good coffee, snowboarding and surfing. Lives in Finland with his family.",
@@ -27,4 +27,6 @@ export default {
     keywords.UNIVERSAL_REACT,
   ],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

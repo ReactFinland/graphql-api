@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Bruno Lourenço",
   about: "",
   image: {
@@ -23,4 +23,6 @@ export default {
   },
   keywords: [keywords.REACT],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

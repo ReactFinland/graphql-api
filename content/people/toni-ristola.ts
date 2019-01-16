@@ -1,7 +1,7 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const person: Contact = {
   name: "Toni Ristola",
   about:
     "Toni Ristola is a Software Architect at Robu Oy and an organizer for the React Finland conference and contributor for the React Finland App.",
@@ -22,4 +22,6 @@ export default {
   },
   keywords: [],
   type: [ContactType.ORGANIZER, ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

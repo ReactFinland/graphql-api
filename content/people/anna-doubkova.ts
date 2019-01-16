@@ -1,7 +1,7 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 
-export default {
+const person: Contact = {
   name: "Anna Doubková",
   about: "Senior software engineer at Hive.",
   image: {
@@ -20,4 +20,6 @@ export default {
   },
   keywords: [],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

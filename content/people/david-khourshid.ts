@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "David Khourshid",
   about:
     "David Khourshid is a Florida-based web developer for Microsoft, a tech author, and speaker. Also a fervent open-source contributor, he is passionate about JavaScript, CSS, animation, innovative user interfaces, and cutting-edge front-end technologies. When not behind a computer keyboard, he’s behind a piano keyboard or traveling.",
@@ -24,4 +24,6 @@ export default {
   },
   keywords: [keywords.REACT, keywords.STATE_MANAGEMENT],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

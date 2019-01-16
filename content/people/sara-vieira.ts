@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Sara Vieira",
   about:
     "Front-End Developer at @YLDio, open sorcerer, maker of useless modules, Blogger, Drummer and horror movie fan girl.",
@@ -24,4 +24,6 @@ export default {
   },
   keywords: [keywords.REACT, keywords.TESTING],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

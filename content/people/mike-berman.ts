@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Mike Berman",
   about:
     "Engineer @ Facebook, former organizer of Sydney Zombie Walk, & big fan of breakfast foods • 🎹 • ‍🤹 • ⛷ • 🦘🇦🇺‍",
@@ -24,4 +24,6 @@ export default {
   },
   keywords: [keywords.REACT, keywords.REDUX],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

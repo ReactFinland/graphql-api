@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Sven Sauleau",
   about:
     "Sven is a software engineer living in France and mostly working with Golang and JavaScript. OSS enthusiast and one of the persons behind Babel.",
@@ -23,4 +23,6 @@ export default {
   },
   keywords: [keywords.BABEL, keywords.TOOLING],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

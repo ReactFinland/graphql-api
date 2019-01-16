@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Artem Sapegin",
   about:
     "Artem is a frontend developer living in Berlin, passionate photographer and owner of crazy dogs. Creator of React Styleguidist.",
@@ -30,4 +30,6 @@ export default {
     keywords.TOOLING,
   ],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

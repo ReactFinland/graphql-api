@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Benjie Gillam",
   about:
     "Benjie loves using and talking about GraphQL, Node.js, PostgreSQL and React; he is the maintainer of PostGraphile, the original instant GraphQL API for your Postgres database.",
@@ -24,4 +24,6 @@ export default {
   },
   keywords: [keywords.GRAPHQL],
   type: [ContactType.SPEAKER, ContactType.LIGHTNING_TALK],
-} as Contact;
+};
+
+export default person;

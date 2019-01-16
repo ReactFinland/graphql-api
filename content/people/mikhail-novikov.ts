@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Mikhail Novikov",
   about:
     "Mikhail is a GraphQL hipster. He started GraphQL startup before GraphQL was ever public. The startup failed, but Mikhail has been active in GraphQL community ever since, working on tools like Schema Stitching and Apollo Launchpad. He is one of the organizers of GraphQL Finland.",
@@ -25,4 +25,6 @@ export default {
   },
   keywords: [keywords.GRAPHQL, keywords.CMS],
   type: [ContactType.WORKSHOP_HOST, ContactType.ORGANIZER],
-} as Contact;
+};
+
+export default person;

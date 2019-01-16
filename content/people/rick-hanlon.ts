@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Rick Hanlon",
   about:
     "Engineer @Facebook · Core @fbjest 🃏 · http://my.pronoun.is/he  · fly and fresh · EST. AKRON",
@@ -23,4 +23,6 @@ export default {
   },
   keywords: [keywords.REACT, keywords.TESTING, keywords.TOOLING],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

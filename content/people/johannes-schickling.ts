@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Johannes Schickling",
   about:
     "Johannes Schickling is the co-founder & CEO of Prisma, a GraphQL-based data layer for modern applications. Johannes is interested in Technology, Developer Tools, Open Source, Startups & Music.",
@@ -25,4 +25,6 @@ export default {
   },
   keywords: [keywords.GRAPHQL],
   type: [ContactType.SPEAKER, ContactType.LIGHTNING_TALK],
-} as Contact;
+};
+
+export default person;

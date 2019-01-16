@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Tero Parviainen",
   about:
     "Software developer, music hacker, and writer. Building the design tools of the future at @CreativeDotAI. ",
@@ -23,4 +23,6 @@ export default {
   },
   keywords: [keywords.REACT],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

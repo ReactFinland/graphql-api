@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Jani Eväkallio",
   about:
     "Jani is a small-town Finnish boy far from home. Today he leads a team building cross-stack React mobile and web apps at Formidable London and, in his spare time, performs improvised comedy and speaks at conferences advocating for the React ecosystem, particularly React Native and GraphQL.",
@@ -24,4 +24,6 @@ export default {
   },
   keywords: [keywords.REACT],
   type: [ContactType.SPEAKER],
-} as Contact;
+};
+
+export default person;

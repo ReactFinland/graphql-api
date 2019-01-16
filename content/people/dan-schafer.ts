@@ -2,7 +2,7 @@ import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
 import keywords from "../keywords";
 
-export default {
+const person: Contact = {
   name: "Dan Schafer",
   about:
     "Dan Schafer is a software engineer at Facebook and a co-creator of GraphQL. He worked on the original GraphQL API for Facebook News Feed, developed Facebook’s GraphQL API Design principles, expanded GraphQL to support Mutations and Subscriptions, and contributed to the initial release of the GraphQL specification and reference implementation. Currently, he’s a tech lead on the Product Foundation team at Facebook, focused on building end-to-end client frameworks for development of the Facebook apps.",
@@ -22,4 +22,6 @@ export default {
   },
   keywords: [keywords.GRAPHQL],
   type: [ContactType.SPEAKER, ContactType.KEYNOTE],
-} as Contact;
+};
+
+export default person;
