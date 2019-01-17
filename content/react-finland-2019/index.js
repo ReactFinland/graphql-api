@@ -4,6 +4,7 @@ const locations = require("../locations");
 const allSponsors = require("../sponsors");
 const partners = [
   allSponsors.halfstack,
+  allSponsors.jscamp,
   allSponsors.reasonconf,
   allSponsors.reactindia,
   allSponsors.survivejs,
