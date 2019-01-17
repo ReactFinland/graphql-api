@@ -10,6 +10,7 @@ const partners = [
   allSponsors.typeof,
   allSponsors.zapier,
   allSponsors.reactdayberlin,
+  allSponsors.reactnativeeu,
   allSponsors.webexpo,
 ];
 const goldSponsors = [
