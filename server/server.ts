@@ -21,7 +21,6 @@ async function createServer() {
   const app = await createApp();
   const server = http.createServer(app);
 
-  // $FlowIgnore https://github.com/facebook/flow/pull/4176
   const listen = util.promisify(server.listen).bind(server);
   await listen(port);
 
