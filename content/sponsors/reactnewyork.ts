@@ -1,7 +1,11 @@
-module.exports = {
+import { Contact } from "../../server/schema/Contact";
+
+const sponsor: Contact = {
   name: "React New York",
   about: "The international event for coding inspiration",
-  image: "sponsors/reactnewyork.svg",
+  image: {
+    url: "sponsors/reactnewyork.svg",
+  },
   social: {
     homepage: "https://reactnewyork.com/",
     facebook: "",
@@ -16,3 +20,5 @@ module.exports = {
     city: "New York",
   },
 };
+
+export default sponsor;
