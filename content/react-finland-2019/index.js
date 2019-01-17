@@ -7,6 +7,8 @@ const partners = [
   allSponsors.jscamp,
   allSponsors.reasonconf,
   allSponsors.reactindia,
+  allSponsors.reactnewyork,
+  allSponsors.reactnorway,
   allSponsors.survivejs,
   allSponsors.typeof,
   allSponsors.zapier,
