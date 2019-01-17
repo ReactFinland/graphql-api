@@ -43,7 +43,7 @@ module.exports = {
       title: "Tooling",
       sessions: [
         require("../sessions/carolyn-stransky"),
-        require("../sessions/glenn-reyes"),
+        require("../sessions/monica-lent"),
       ],
     },
     {
