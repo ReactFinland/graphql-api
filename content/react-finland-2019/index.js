@@ -9,6 +9,7 @@ const partners = [
   allSponsors.survivejs,
   allSponsors.typeof,
   allSponsors.zapier,
+  allSponsors.reactalicante,
   allSponsors.reactdayberlin,
   allSponsors.reactnativeeu,
   allSponsors.webexpo,
