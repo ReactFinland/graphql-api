@@ -1,6 +1,15 @@
 import ical from "ical-generator";
+import { Schedule } from "./schema/Schedule";
 
-function calendar({ filename, title, schedules }) {
+function calendar({
+  filename,
+  title,
+  schedules,
+}: {
+  filename: string;
+  title: string;
+  schedules: Schedule[];
+}) {
   const timezone = "+03:00"; // EEST
   const domain = "https://react-finland.fi";
   const cal = ical({ domain, name: title });

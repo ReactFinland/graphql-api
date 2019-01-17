@@ -1,4 +1,6 @@
-export default {
+const conferenceSeries: {
+  [key: string]: { id: string; name: string; conferences: string[] };
+} = {
   ["react-finland"]: {
     id: "react-finland",
     name: "React Finland",
@@ -10,3 +12,5 @@ export default {
     conferences: ["graphql-finland-2018"],
   },
 };
+
+export default conferenceSeries;

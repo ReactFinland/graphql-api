@@ -90,6 +90,8 @@ export class ConferenceResolver {
         return oneSeries;
       }
     }
+
+    return;
   }
 
   @FieldResolver(_ => [Contact])
@@ -101,7 +103,7 @@ export class ConferenceResolver {
   }
 }
 
-export function getConference(id): Conference {
+export function getConference(id: string): Conference {
   if (conferences[id]) {
     return conferences[id];
   } else {

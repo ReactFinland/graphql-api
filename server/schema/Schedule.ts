@@ -24,7 +24,7 @@ export class ScheduleResolver {
     return getSchedule(conferenceId, day);
   }
 }
-function getSchedule(id, day) {
+function getSchedule(id: string, day: string) {
   const conference = getConference(id);
   const schedule = conference.schedules.find(c => c.day === day);
 

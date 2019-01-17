@@ -4,8 +4,8 @@ import * as util from "util";
 import createApp from "./app";
 import logger from "./logger";
 
-const normalizePort = value => {
-  const port = parseInt(value, 10);
+const normalizePort = (value: string) => {
+  const port = Number(value);
 
   if (!isNaN(port) && port > 0) {
     return port;

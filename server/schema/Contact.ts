@@ -111,8 +111,11 @@ export class ContactResolver {
 
   @FieldResolver(_ => Social)
   public social(@Root() contact: Contact) {
+    interface IRules {
+      [key: string]: string | undefined;
+    }
     const social = contact.social;
-    const rules = {
+    const rules: IRules = {
       homepage: social.homepage,
       facebook: social.facebook && `https://facebook.com/${social.facebook}`,
       github: social.github && `https://github.com/${social.github}`,
@@ -124,7 +127,7 @@ export class ContactResolver {
       youtube: social.youtube && `https://www.youtube.com/${social.youtube}`,
       vk: social.vk && `https://vk.com/${social.vk}`,
     };
-    const result = {};
+    const result: IRules = {};
 
     Object.keys(social).forEach(media => {
       if (rules[media]) {
