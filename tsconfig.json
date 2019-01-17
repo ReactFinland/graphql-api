@@ -10,7 +10,7 @@
     "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noUnusedLocals": true,
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,

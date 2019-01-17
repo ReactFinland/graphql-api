@@ -8,6 +8,7 @@ import conferences from "./conferences";
 import generateSchema from "./schema";
 
 async function createRouter() {
+  // @ts-ignore
   const router = new express.Router();
   const schema = await generateSchema();
 
