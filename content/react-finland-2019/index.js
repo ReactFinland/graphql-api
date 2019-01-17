@@ -3,6 +3,7 @@ const locations = require("../locations");
 
 const allSponsors = require("../sponsors");
 const partners = [
+  allSponsors.agentconf,
   allSponsors.halfstack,
   allSponsors.jscamp,
   allSponsors.reasonconf,
