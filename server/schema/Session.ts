@@ -49,7 +49,7 @@ export class Session {
 export class SessionResolver {
   @FieldResolver(_ => [Contact], { deprecationReason: "Use `people` instead" })
   public speakers(@Root() session: Session) {
-    return session.people;
+    return session.people || [];
   }
 }
 
