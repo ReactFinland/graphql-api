@@ -31,34 +31,34 @@ export class Conference {
   @Field(_ => String)
   public websiteUrl!: string;
 
-  @Field(_ => [Location])
+  @Field(_ => [Location], { nullable: true })
   public locations?: Location[];
 
   @Field(_ => [Contact])
   public organizers!: Contact[];
 
-  @Field(_ => [Contact])
+  @Field(_ => [Contact], { nullable: true })
   public mcs?: Contact[];
 
-  @Field(_ => [Contact])
+  @Field(_ => [Contact], { nullable: true })
   public partners?: Contact[];
 
   @Field(_ => [Contact])
   public sponsors!: Contact[];
 
-  @Field(_ => [Contact])
+  @Field(_ => [Contact], { nullable: true })
   public goldSponsors?: Contact[];
 
-  @Field(_ => [Contact])
+  @Field(_ => [Contact], { nullable: true })
   public silverSponsors?: Contact[];
 
-  @Field(_ => [Contact])
+  @Field(_ => [Contact], { nullable: true })
   public bronzeSponsors?: Contact[];
 
   @Field(_ => [Schedule])
   public schedules!: Schedule[];
 
-  @Field(_ => [Contact])
+  @Field(_ => [Contact], { nullable: true })
   public speakers?: Contact[];
 
   @Field(_ => [Session])
