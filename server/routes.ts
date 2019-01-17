@@ -17,6 +17,12 @@ async function createRouter() {
 
   router.all(
     "/graphql",
+    (req, res, next) => {
+      // Patch for app query. Once the app is updated, this can go away.
+      req.body.query = patchQuery(req.body.query);
+
+      next();
+    },
     graphql(request => ({
       graphiql: true,
       pretty: true,
@@ -66,6 +72,82 @@ function getHostname(req) {
   } else {
     return req.protocol + "://" + req.get("host");
   }
+}
+
+function patchQuery(query) {
+  const q = `
+  {
+    conference(id: "react-finland-2019") {
+      schedules {
+      day,
+        intervals {
+          begin
+          end
+          sessions {
+            title
+            description
+            type
+            ... on Workshop {
+                speakers {
+                  name
+                  image {
+                    url
+                  }
+                }
+              }
+              ... on Talk {
+                speakers {
+                  name
+                  image {
+                    url
+                  }
+                }
+              }
+            location {
+              name,
+              city,
+              address
+            }
+          }
+        }
+      }
+    }
+  }
+  `;
+
+  if (q.replace(/(\n| )*/g, "") === query.replace(/(\n| )*/g, "")) {
+    return `
+    {
+      conference(id: "react-finland-2019") {
+        schedules {
+          day
+          intervals {
+            begin
+            end
+            sessions {
+              title
+              description
+              type
+              speakers {
+                name
+                image {
+                  url
+                }
+              }
+              location {
+                name
+                city
+                address
+              }
+            }
+          }
+        }
+      }
+    }
+    `;
+  }
+
+  return query;
 }
 
 export default createRouter;
