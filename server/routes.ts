@@ -48,9 +48,8 @@ async function createRouter() {
     }
   });
 
-  router.use("/media/", (req, res, next) => {
-    express.static(path.resolve(__dirname, "../media"))(req, res, next);
-  });
+  // FIXME: Resolve media path against project root, not module as this is brittle
+  router.use("/media", express.static(path.resolve(__dirname, "../../media")));
 
   // TODO: Make a better abstraction for this
   const calendarFile = "calendar-2019.ics";
