@@ -74,6 +74,8 @@ function getHostname(req) {
   }
 }
 
+// FIXME: Ideally this should traverse query tree and replace
+// .. on Workshop and ... on Talk with a single query.
 function patchQuery(query) {
   const q = `
   {
