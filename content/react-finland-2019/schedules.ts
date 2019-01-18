@@ -136,7 +136,7 @@ const presentationDay1: Schedule = {
       begin: "13:30",
       end: "14:30",
       title: "Design Systems",
-      sessions: [talks.varyaStepanova, talks.andreyOkonetchnikov],
+      sessions: [talks.andreyOkonetchnikov, talks.varyaStepanova],
     },
     {
       begin: "14:30",
