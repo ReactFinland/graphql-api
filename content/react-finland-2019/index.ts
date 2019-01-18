@@ -10,6 +10,7 @@ const partners = [
   allSponsors.agentconf,
   allSponsors.halfstack,
   allSponsors.jscamp,
+  allSponsors.jskongress,
   allSponsors.reasonconf,
   allSponsors.reactindia,
   allSponsors.reactnewyork,
