@@ -11,13 +11,13 @@ import { Location } from "./Location";
 
 @ObjectType()
 export class SessionUrls {
-  @Field()
+  @Field(_ => String, { nullable: true })
   public web?: string;
 
-  @Field()
+  @Field(_ => String, { nullable: true })
   public slides?: string;
 
-  @Field()
+  @Field(_ => String, { nullable: true })
   public video?: string;
 }
 
