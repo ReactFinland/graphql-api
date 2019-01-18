@@ -1,7 +1,7 @@
-import { SessionType } from "../../../server/schema";
-import { Schedule } from "../../../server/schema/Schedule";
-import * as talks from "../talks";
-import * as workshops from "../workshops";
+import { SessionType } from "../../server/schema";
+import { Schedule } from "../../server/schema/Schedule";
+import * as talks from "./talks";
+import * as workshops from "./workshops";
 
 const workshopDay: Schedule = {
   day: "2018-04-24",

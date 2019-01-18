@@ -1,8 +1,8 @@
-import { SessionType } from "../../../server/schema";
-import { Schedule } from "../../../server/schema/Schedule";
-import * as people from "../../people";
-import * as talks from "../talks";
-import * as allWorkshops from "../workshops";
+import { SessionType } from "../../server/schema";
+import { Schedule } from "../../server/schema/Schedule";
+import * as people from "../people";
+import * as talks from "./talks";
+import * as allWorkshops from "./workshops";
 
 const workshops = Object.values(allWorkshops);
 

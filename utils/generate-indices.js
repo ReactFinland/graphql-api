@@ -18,7 +18,10 @@ function main() {
   });
   const { _: rootDirs, format, verbose } = args;
 
-  const filenames = flatmap(rootDirs, dir =>
+  const indexableDirs = flatmap(rootDirs, dir =>
+    glob.sync(`${dir}/**/.index-modules`)
+  ).map(p => path.dirname(p));
+  const filenames = flatmap(indexableDirs, dir =>
     glob.sync(`${dir}/**/*.${format}`)
   );
   const categorizedFilenames = categorize(filenames);
