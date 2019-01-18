@@ -7,8 +7,8 @@
   "scripts": {
     "generate:indices": "node utils/generate-indices.js content --verbose",
     "build": "npm run generate:indices && rimraf build && tsc",
-    "start": "npm run build && node ./build/server.js",
-    "heroku:start": "tsc && node ./build/server.js",
+    "start": "npm run build && node ./build/server",
+    "heroku:start": "tsc && node ./build/server",
     "format": "prettier ./src/**/*.js --write",
     "watch": "tsc-watch --onSuccess \"node ./build/server\" --onFailure \"echo Beep! Compilation Failed\""
   },
