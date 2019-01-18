@@ -79,7 +79,7 @@ function patchQuery(query) {
   {
     conference(id: "react-finland-2019") {
       schedules {
-      day,
+        day
         intervals {
           begin
           end
@@ -88,24 +88,24 @@ function patchQuery(query) {
             description
             type
             ... on Workshop {
-                speakers {
-                  name
-                  image {
-                    url
-                  }
+              speakers {
+                name
+                image {
+                  url
                 }
               }
-              ... on Talk {
-                speakers {
-                  name
-                  image {
-                    url
-                  }
+            }
+            ... on Talk {
+              speakers {
+                name
+                image {
+                  url
                 }
               }
+            }
             location {
-              name,
-              city,
+              name
+              city
               address
             }
           }
