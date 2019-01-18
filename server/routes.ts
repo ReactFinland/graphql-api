@@ -115,6 +115,10 @@ function patchQuery(query) {
   }
   `;
 
+  if (!query) {
+    return query;
+  }
+
   if (q.replace(/(\n| )*/g, "") === query.replace(/(\n| )*/g, "")) {
     return `
     {
