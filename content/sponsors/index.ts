@@ -16,6 +16,7 @@ export { default as gofore } from "./gofore";
 export { default as halfstack } from "./halfstack";
 export { default as hasura } from "./hasura";
 export { default as jscamp } from "./jscamp";
+export { default as jskongress } from "./jskongress";
 export { default as motley } from "./motley";
 export { default as nightingale } from "./nightingale";
 export { default as nitor } from "./nitor";
