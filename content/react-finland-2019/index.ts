@@ -36,6 +36,7 @@ const silverSponsors = [
   allSponsors.solita,
 ];
 const bronzeSponsors = [
+  allSponsors.codento,
   allSponsors.columbiaroad,
   allSponsors.formidable,
   allSponsors.vincit,
