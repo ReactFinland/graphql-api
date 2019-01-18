@@ -5,19 +5,36 @@
   "description": "React Finland GraphQL API",
   "main": "./src",
   "scripts": {
-    "start": "node ./src",
+    "generate:indices": "node utils/generate-indices.js content --verbose",
+    "build": "npm run generate:indices && rimraf build && tsc",
+    "start": "npm run build && node ./build/server.js",
     "format": "prettier ./src/**/*.js --write",
-    "watch": "npm-watch"
-  },
-  "watch": {
-    "start": "{src,content}/**/*.*"
+    "watch": "tsc-watch --onSuccess \"node ./build/server\" --onFailure \"echo Beep! Compilation Failed\""
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "npm-watch": "^0.5.0",
-    "prettier": "^1.15.2"
+    "@types/compression": "0.0.36",
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.0",
+    "@types/express-graphql": "^0.6.2",
+    "@types/lodash": "^4.14.119",
+    "@types/moment": "^2.13.0",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^10.12.18",
+    "@types/request": "^2.48.1",
+    "camelcase": "^5.0.0",
+    "flatmap": "0.0.3",
+    "glob": "^7.1.3",
+    "lodash.groupby": "^4.6.0",
+    "mri": "^1.1.4",
+    "prettier": "^1.15.2",
+    "tsc-watch": "^1.0.31",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.2.2"
   },
   "repository": {
     "type": "git",
@@ -34,13 +51,14 @@
     "express-graphql": "^0.7.1",
     "express-http-to-https": "^1.1.4",
     "graphql": "^14.0.2",
-    "graphql-tools": "^4.0.3",
-    "ical-generator": "^1.3.1",
+    "ical-generator": "^1.4.3",
     "lodash": "^4.17.11",
     "morgan": "^1.9.1",
     "npm": "^6.4.1",
+    "reflect-metadata": "^0.1.12",
     "request": "^2.88.0",
-    "require-dir": "^1.2.0",
+    "rimraf": "^2.6.3",
+    "type-graphql": "^0.16.0",
     "winston": "^3.1.0"
   }
 }
