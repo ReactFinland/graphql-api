@@ -11,7 +11,7 @@ const talk: Session = {
   keywords: [keywords.GRAPHQL],
   urls: {
     web: "",
-    slides: "",
+    slides: "http://slides.graphql-finland.fi/2018/01-adam-miskiewicz.pdf",
     video: "https://www.youtube.com/watch?v=8KLwLzRlETc",
   },
 };
