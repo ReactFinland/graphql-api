@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Andrey Okonetchnikov",
@@ -22,10 +22,10 @@ const person: Contact = {
     city: "Vienna",
   },
   keywords: [
-    keywords.REACT,
-    keywords.STYLING,
-    keywords.STYLE_GUIDES,
-    keywords.TOOLING,
+    Keyword.REACT,
+    Keyword.STYLING,
+    Keyword.STYLE_GUIDES,
+    Keyword.TOOLING,
   ],
   type: [ContactType.SPEAKER],
 };

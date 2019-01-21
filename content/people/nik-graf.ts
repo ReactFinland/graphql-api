@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Nik Graf",
@@ -24,12 +24,7 @@ const person: Contact = {
     },
     city: "Vienna",
   },
-  keywords: [
-    keywords.REASON,
-    keywords.GRAPHQL,
-    keywords.REACT,
-    keywords.REACT_VR,
-  ],
+  keywords: [Keyword.REASON, Keyword.GRAPHQL, Keyword.REACT, Keyword.REACT_VR],
   type: [ContactType.SPEAKER, ContactType.TALK, ContactType.WORKSHOP],
 };
 

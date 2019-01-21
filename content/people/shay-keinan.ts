@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Shay Keinan",
@@ -22,7 +22,7 @@ const person: Contact = {
     },
     city: "Tel Aviv",
   },
-  keywords: [keywords.REACT, keywords.REACT_VR],
+  keywords: [Keyword.REACT, Keyword.REACT_VR],
   type: [ContactType.SPEAKER],
 };
 

@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
+import Keyword from "../../../server/schema/keywords";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
 import { paasitorni } from "../../locations";
 import andrey from "../../people/andrey-okonetchnikov";
 import artem from "../../people/artem-sapegin";
@@ -26,10 +26,10 @@ This workshop will show you how to:
   - Structure your application around components
   - Write maintainable styles for your components based on the design system`,
   keywords: [
-    keywords.REACT,
-    keywords.STYLING,
-    keywords.STYLE_GUIDES,
-    keywords.TOOLING,
+    Keyword.REACT,
+    Keyword.STYLING,
+    Keyword.STYLE_GUIDES,
+    Keyword.TOOLING,
   ],
   location: paasitorni,
 };

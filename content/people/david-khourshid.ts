@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "David Khourshid",
@@ -22,7 +22,7 @@ const person: Contact = {
     },
     city: "Orlando",
   },
-  keywords: [keywords.REACT, keywords.STATE_MANAGEMENT],
+  keywords: [Keyword.REACT, Keyword.STATE_MANAGEMENT],
   type: [ContactType.SPEAKER],
 };
 

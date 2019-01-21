@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Patrick Hund",
@@ -26,7 +26,7 @@ const person: Contact = {
     },
     city: "Berlin",
   },
-  keywords: [keywords.LEGACY, keywords.REACT, keywords.REDUX],
+  keywords: [Keyword.LEGACY, Keyword.REACT, Keyword.REDUX],
   type: [ContactType.SPEAKER],
 };
 

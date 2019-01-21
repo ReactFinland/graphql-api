@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
+import Keyword from "../../../server/schema/keywords";
 import speaker from "../../people/benjie-gillam";
 
 const talk: Session = {
@@ -8,7 +8,7 @@ const talk: Session = {
   title: "Database-first GraphQL Development",
   description: `Learn how a database-centric approach to GraphQL API development can give your engineers more time to focus on the important parts of your application. Topics covered include authorization, adhering to GraphQL best practices, embracing the power of PostgreSQL, and avoiding common pitfalls.`,
   type: SessionType.LIGHTNING_TALK,
-  keywords: [keywords.GRAPHQL],
+  keywords: [Keyword.GRAPHQL],
   urls: {
     web: "",
     slides: "http://slides.graphql-finland.fi/2018/15-benjie-gillam.pdf",

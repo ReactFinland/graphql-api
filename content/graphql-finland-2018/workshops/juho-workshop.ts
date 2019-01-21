@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
+import Keyword from "../../../server/schema/keywords";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
 import { paasitorni } from "../../locations";
 import juho from "../../people/juho-vepsalainen";
 
@@ -47,12 +47,7 @@ After that we will jump to the frontend using React and Apollo to query and muta
 
 This workshop is free. Tickets would be distributed through a diversity ticket program. Ticket will include a free ticket to the actual conference. [Apply for a diversity ticket](https://diversitytickets.org/events/184).
 `,
-  keywords: [
-    keywords.GRAPHQL,
-    keywords.REACT,
-    keywords.APOLLO,
-    keywords.PRISMA,
-  ],
+  keywords: [Keyword.GRAPHQL, Keyword.REACT, Keyword.APOLLO, Keyword.PRISMA],
   location: paasitorni,
 };
 

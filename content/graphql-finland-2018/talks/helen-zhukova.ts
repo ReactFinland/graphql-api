@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
+import Keyword from "../../../server/schema/keywords";
 import speaker from "../../people/helen-zhukova";
 
 const talk: Session = {
@@ -8,7 +8,7 @@ const talk: Session = {
   title: "(Un)expected use of GraphQL",
   description: "",
   type: SessionType.LIGHTNING_TALK,
-  keywords: [keywords.GRAPHQL],
+  keywords: [Keyword.GRAPHQL],
   urls: {
     web: "",
     slides: "http://slides.graphql-finland.fi/2018/07-helen-zhukova.pdf",

@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
+import Keyword from "../../../server/schema/keywords";
 import speaker from "../../people/andrew-rhyne";
 
 const talk: Session = {
@@ -9,7 +9,7 @@ const talk: Session = {
   description:
     "GraphQL makes real-time easy with it's Subscriptions support, but how easy is it to build a backend that puts real-time data first?  With event sourcing, it's easier than you think!  The ability to easily subscribe to data changes and have blazing-fast reads on our data sets at Gatsby enables our team to build a sophisticated cloud-native offering that is flexible for even the most demanding product requirements.  Join Andrew as he gives a thirty-thousand foot overview of event sourcing and how naturally it fits with GraphQL and subscriptions.",
   type: SessionType.LIGHTNING_TALK,
-  keywords: [keywords.GRAPHQL],
+  keywords: [Keyword.GRAPHQL],
   urls: {
     web: "",
     slides: "http://slides.graphql-finland.fi/2018/09-andrew-rhyne.pdf",

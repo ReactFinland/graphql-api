@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Artem Sapegin",
@@ -23,11 +23,11 @@ const person: Contact = {
     city: "Berlin",
   },
   keywords: [
-    keywords.REACT,
-    keywords.STYLING,
-    keywords.STYLEGUIDIST,
-    keywords.STYLE_GUIDES,
-    keywords.TOOLING,
+    Keyword.REACT,
+    Keyword.STYLING,
+    Keyword.STYLEGUIDIST,
+    Keyword.STYLE_GUIDES,
+    Keyword.TOOLING,
   ],
   type: [ContactType.SPEAKER],
 };

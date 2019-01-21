@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Ivan Goncharov",
@@ -23,7 +23,7 @@ const person: Contact = {
     },
     city: "Lviv",
   },
-  keywords: [keywords.GRAPHQL, keywords.GRAPHQLJS],
+  keywords: [Keyword.GRAPHQL, Keyword.GRAPHQLJS],
   type: [ContactType.SPEAKER, ContactType.LIGHTNING_TALK],
 };
 

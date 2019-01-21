@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Juho Vepsäläinen",
@@ -23,7 +23,7 @@ const person: Contact = {
     },
     city: "Vienna",
   },
-  keywords: [keywords.TOOLING, keywords.WEBPACK],
+  keywords: [Keyword.TOOLING, Keyword.WEBPACK],
   type: [ContactType.ORGANIZER, ContactType.SPEAKER, ContactType.WORKSHOP_HOST],
 };
 

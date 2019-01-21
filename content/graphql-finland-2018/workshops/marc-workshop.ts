@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
+import Keyword from "../../../server/schema/keywords";
 import { paasitorni } from "../../locations";
 import marc from "../../people/marc-andre-giroux";
 
@@ -22,7 +22,7 @@ Alternating between presentations and hands on exercices, this workshop will cov
 * Many other great practices used in the largest GraphQL APIs out there!
 
 For the exercices, we will only use the GraphQL SDL (Schema Definition Language), meaning you'll get to learn no matter what language you use to build your schema.`,
-  keywords: [keywords.GRAPHQL, keywords.REACT],
+  keywords: [Keyword.GRAPHQL, Keyword.REACT],
   location: paasitorni,
 };
 

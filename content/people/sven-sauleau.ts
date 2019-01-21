@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Sven Sauleau",
@@ -21,7 +21,7 @@ const person: Contact = {
     },
     city: "",
   },
-  keywords: [keywords.BABEL, keywords.TOOLING],
+  keywords: [Keyword.BABEL, Keyword.TOOLING],
   type: [ContactType.SPEAKER],
 };
 

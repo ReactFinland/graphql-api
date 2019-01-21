@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "",
@@ -25,7 +25,7 @@ const person: Contact = {
     },
     city: "", // TODO: City name
   },
-  keywords: [keywords.REACT], // TODO: check keywords for more
+  keywords: [Keyword.REACT], // TODO: check keywords for more
   type: [ContactType.SPEAKER],
 };
 

@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
+import Keyword from "../../../server/schema/keywords";
 import speaker from "../../people/eloy-duran";
 
 const talk: Session = {
@@ -8,7 +8,7 @@ const talk: Session = {
   title: "Where art thou, my error?",
   description: "",
   type: SessionType.TALK,
-  keywords: [keywords.GRAPHQL],
+  keywords: [Keyword.GRAPHQL],
   urls: {
     web: "",
     slides: "http://slides.graphql-finland.fi/2018/14-eloy-duran.pdf",

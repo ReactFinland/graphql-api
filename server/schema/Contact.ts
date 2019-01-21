@@ -16,6 +16,7 @@ import { getConference, getSpeakers } from "./Conference";
 import { IContext } from "./Context";
 import { Country } from "./Country";
 import { Image } from "./Image";
+import Keyword from "./keywords";
 import { Location } from "./Location";
 import { Session } from "./Session";
 import { Social } from "./Social";
@@ -56,7 +57,7 @@ export class Contact {
   public social!: Social;
 
   @Field(_ => [String])
-  public keywords?: string[];
+  public keywords?: Keyword[];
 
   @Field(_ => Location)
   public location!: Location;

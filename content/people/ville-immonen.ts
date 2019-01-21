@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Ville Immonen",
@@ -21,10 +21,10 @@ const person: Contact = {
     city: "Espoo",
   },
   keywords: [
-    keywords.REACT,
-    keywords.REACT_NATIVE,
-    keywords.TOOLING,
-    keywords.UNIVERSAL_REACT,
+    Keyword.REACT,
+    Keyword.REACT_NATIVE,
+    Keyword.TOOLING,
+    Keyword.UNIVERSAL_REACT,
   ],
   type: [ContactType.SPEAKER],
 };

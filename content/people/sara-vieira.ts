@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Sara Vieira",
@@ -22,7 +22,7 @@ const person: Contact = {
     },
     city: "",
   },
-  keywords: [keywords.REACT, keywords.TESTING],
+  keywords: [Keyword.REACT, Keyword.TESTING],
   type: [ContactType.SPEAKER],
 };
 

@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Maaret Pyhäjärvi",
@@ -22,7 +22,7 @@ const person: Contact = {
     },
     city: "Helsinki",
   },
-  keywords: [keywords.REACT, keywords.TESTING],
+  keywords: [Keyword.REACT, Keyword.TESTING],
   type: [ContactType.SPEAKER],
 };
 

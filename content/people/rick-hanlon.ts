@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Rick Hanlon",
@@ -21,7 +21,7 @@ const person: Contact = {
     },
     city: "Manhattan, New York",
   },
-  keywords: [keywords.REACT, keywords.TESTING, keywords.TOOLING],
+  keywords: [Keyword.REACT, Keyword.TESTING, Keyword.TOOLING],
   type: [ContactType.SPEAKER],
 };
 

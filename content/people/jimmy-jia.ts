@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Jimmy Jia",
@@ -21,7 +21,7 @@ const person: Contact = {
     },
     city: "New York",
   },
-  keywords: [keywords.GRAPHQL],
+  keywords: [Keyword.GRAPHQL],
   type: [ContactType.SPEAKER, ContactType.TALK],
 };
 

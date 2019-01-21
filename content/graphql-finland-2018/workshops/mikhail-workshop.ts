@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
+import Keyword from "../../../server/schema/keywords";
 import { paasitorni } from "../../locations";
 import mikhail from "../../people/mikhail-novikov";
 
@@ -26,7 +26,7 @@ At the end of the workshop you should be comfortable building a GraphQL API with
 
 This workshop is only offered as a bundle deal with a conference.
 `,
-  keywords: [keywords.GRAPHQL],
+  keywords: [Keyword.GRAPHQL],
   location: paasitorni,
 };
 

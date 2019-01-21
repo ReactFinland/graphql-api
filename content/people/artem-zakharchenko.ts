@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Artem Zakharchenko",
@@ -22,7 +22,7 @@ const person: Contact = {
     },
     city: "Prague",
   },
-  keywords: [keywords.REACT, keywords.STYLING, keywords.TOOLING],
+  keywords: [Keyword.REACT, Keyword.STYLING, Keyword.TOOLING],
   type: [ContactType.SPEAKER],
 };
 

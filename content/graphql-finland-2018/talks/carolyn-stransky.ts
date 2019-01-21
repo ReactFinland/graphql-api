@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
+import Keyword from "../../../server/schema/keywords";
 import speaker from "../../people/carolyn-stransky";
 
 const talk: Session = {
@@ -10,7 +10,7 @@ const talk: Session = {
 
 Consider this talk a voyage through the ups and downs of learning GraphQL. Along the way, we’ll touch on the major pain points faced by GraphQL beginners and how we can better enable our docs for learning and comprehension.`,
   type: SessionType.TALK,
-  keywords: [keywords.GRAPHQL],
+  keywords: [Keyword.GRAPHQL],
   urls: {
     web: "",
     slides: "http://slides.graphql-finland.fi/2018/04-carolyn-stransky.pdf",

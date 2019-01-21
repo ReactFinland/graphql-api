@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Michel Weststrate",
@@ -24,11 +24,11 @@ const person: Contact = {
     city: "Amsterdam",
   },
   keywords: [
-    keywords.IMMER,
-    keywords.MOBX,
-    keywords.MOBX_STATE_TREE,
-    keywords.REACT,
-    keywords.STATE_MANAGEMENT,
+    Keyword.IMMER,
+    Keyword.MOBX,
+    Keyword.MOBX_STATE_TREE,
+    Keyword.REACT,
+    Keyword.STATE_MANAGEMENT,
   ],
   type: [ContactType.SPEAKER],
 };

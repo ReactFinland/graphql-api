@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Tejas Kumar",
@@ -20,7 +20,7 @@ const person: Contact = {
     },
     city: "Berlin",
   },
-  keywords: [keywords.REACT, keywords.TOOLING],
+  keywords: [Keyword.REACT, Keyword.TOOLING],
   type: [ContactType.SPEAKER],
 };
 

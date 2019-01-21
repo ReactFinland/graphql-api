@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
+import Keyword from "../../../server/schema/keywords";
 import speaker from "../../people/jamon-holmgren";
 
 const talk: Session = {
@@ -8,7 +8,7 @@ const talk: Session = {
   title: "Mysterious Ignite talk",
   description: ``,
   type: SessionType.TALK,
-  keywords: [keywords.REACT_NATIVE],
+  keywords: [Keyword.REACT_NATIVE],
 };
 
 export default talk;

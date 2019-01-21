@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Bruno Lourenço",
@@ -21,7 +21,7 @@ const person: Contact = {
     },
     city: "Braga",
   },
-  keywords: [keywords.REACT],
+  keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };
 

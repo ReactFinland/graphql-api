@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Christoffer Niska",
@@ -19,7 +19,7 @@ const person: Contact = {
     },
     city: "Helsinki",
   },
-  keywords: [keywords.GRAPHQL],
+  keywords: [Keyword.GRAPHQL],
   type: [ContactType.SPEAKER, ContactType.LIGHTNING_TALK],
 };
 

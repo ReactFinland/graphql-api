@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Rotem Mizrachi-Meidan",
@@ -23,11 +23,11 @@ const person: Contact = {
     city: "Tel Aviv",
   },
   keywords: [
-    keywords.DETOX,
-    keywords.REACT,
-    keywords.REACT_NATIVE,
-    keywords.TESTING,
-    keywords.TOOLING,
+    Keyword.DETOX,
+    Keyword.REACT,
+    Keyword.REACT_NATIVE,
+    Keyword.TESTING,
+    Keyword.TOOLING,
   ],
   type: [ContactType.SPEAKER],
 };

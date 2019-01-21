@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
+import Keyword from "../../../server/schema/keywords";
 import { paasitorni } from "../../locations";
 import nik from "../../people/nik-graf";
 
@@ -23,7 +23,7 @@ Every topic is covered by a 20 minute presentation followed by a hands on exerci
 
 To goal is that by the end of the day you are way more comfortable making design decisions for your GraphQL environment.
 `,
-  keywords: [keywords.GRAPHQL],
+  keywords: [Keyword.GRAPHQL],
   location: paasitorni,
 };
 

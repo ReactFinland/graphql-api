@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Michał Chudziak",
@@ -22,7 +22,7 @@ const person: Contact = {
     },
     city: "Wrocław",
   },
-  keywords: [keywords.REACT, keywords.REACT_NATIVE],
+  keywords: [Keyword.REACT, Keyword.REACT_NATIVE],
   type: [ContactType.SPEAKER],
 };
 

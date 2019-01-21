@@ -1,6 +1,6 @@
 import { ContactType } from "../../server/schema";
 import { Contact } from "../../server/schema/Contact";
-import keywords from "../keywords";
+import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Christian Alfoni",
@@ -21,7 +21,7 @@ const person: Contact = {
     },
     city: "Trondheim",
   },
-  keywords: [keywords.CEREBRAL, keywords.REACT, keywords.STATE_MANAGEMENT],
+  keywords: [Keyword.CEREBRAL, Keyword.REACT, Keyword.STATE_MANAGEMENT],
   type: [ContactType.SPEAKER],
 };
 

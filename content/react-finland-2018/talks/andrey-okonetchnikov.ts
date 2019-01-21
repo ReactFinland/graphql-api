@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
+import Keyword from "../../../server/schema/keywords";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
 import speaker from "../../people/andrey-okonetchnikov";
 
 const talk: Session = {
@@ -14,7 +14,7 @@ This talk is a quick introduction into how [🚫💩 lint-staged](https://github
   
 Coupled with tools that analyze and improve the code like ESLint, Stylelint, Prettier and Jest, you'll witness how much difference can a small tool like this make.`,
   type: SessionType.LIGHTNING_TALK,
-  keywords: [keywords.CODE_QUALITY, keywords.LINTING],
+  keywords: [Keyword.CODE_QUALITY, Keyword.LINTING],
 };
 
 export default talk;

@@ -1,6 +1,6 @@
 import { SessionType } from "../../../server/schema";
 import { Session } from "../../../server/schema/Session";
-import keywords from "../../keywords";
+import Keyword from "../../../server/schema/keywords";
 import speaker from "../../people/nik-graf";
 
 const talk: Session = {
@@ -10,7 +10,7 @@ const talk: Session = {
 
 Besides that Reason shines even more so on the client. Send one quick introspection request and you get full autocompletion on your schema right in the browser.`,
   type: SessionType.LIGHTNING_TALK,
-  keywords: [keywords.GRAPHQL],
+  keywords: [Keyword.GRAPHQL],
   urls: {
     web: "",
     slides: "http://slides.graphql-finland.fi/2018/11-nik-graf.pdf",

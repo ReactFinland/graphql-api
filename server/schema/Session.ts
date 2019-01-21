@@ -7,6 +7,7 @@ import {
   Root,
 } from "type-graphql";
 import { Contact } from "./Contact";
+import Keyword from "./keywords";
 import { Location } from "./Location";
 
 @ObjectType()
@@ -33,7 +34,7 @@ export class Session {
   public description?: string;
 
   @Field(_ => [String], { nullable: true })
-  public keywords?: string[];
+  public keywords?: Keyword[];
 
   @Field(_ => Location, { nullable: true })
   public location?: Location;
