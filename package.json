@@ -7,6 +7,7 @@
   "scripts": {
     "generate:indices": "node utils/generate-indices.js content --verbose",
     "build": "npm run generate:indices && rimraf build && tsc",
+    "lint": "tslint --config tslint.json content/**/*.ts server/**/*.ts --fix",
     "start": "npm run build && node ./build/server",
     "heroku:start": "tsc && node ./build/server",
     "format": "prettier ./src/**/*.js --write",
