@@ -1,6 +1,7 @@
 import { Url } from "@okgrow/graphql-scalars";
 import { GraphQLScalarType, Kind } from "graphql";
 
+// TODO: Url is GraphQLScalarType already so shouldn't we reuse it here as well?
 const UrlScalar = new GraphQLScalarType({
   name: "Url",
   description: "Url scalar type",
