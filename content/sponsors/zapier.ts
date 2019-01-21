@@ -9,7 +9,7 @@ const sponsor: Contact = {
   social: {
     homepage: "https://www.zapier.com/",
     facebook: "ZapierApp",
-    linkedin: "zapier",
+    linkedin: "company/zapier",
     twitter: "zapier",
     youtube: "ZapierApp",
   },

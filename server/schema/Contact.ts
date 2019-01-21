@@ -120,8 +120,8 @@ export class ContactResolver {
       homepage: social.homepage,
       facebook: social.facebook && `https://facebook.com/${social.facebook}`,
       github: social.github && `https://github.com/${social.github}`,
-      linkedin: social.linkedin && `https://linkedin.com/${social.linkedin}`,
-      medium: social.medium && `https://medium.com/${social.medium}`,
+      linkedin: resolveLinkedin(social.linkedin),
+      medium: social.medium && `https:// medium.com/${social.medium}`,
       instagram:
         social.instagram && `https://instagram.com/${social.instagram}`,
       twitter: social.twitter && `https://twitter.com/${social.twitter}`,
@@ -165,4 +165,16 @@ export class ContactResolver {
 
     return workshopsWithContact;
   }
+}
+
+function resolveLinkedin(linkedin?: string): string {
+  if (!linkedin) {
+    return "";
+  }
+
+  if (linkedin.startsWith("company")) {
+    return `https://linkedin.com/${linkedin}`;
+  }
+
+  return `https://linkedin.com/in/${linkedin}`;
 }
