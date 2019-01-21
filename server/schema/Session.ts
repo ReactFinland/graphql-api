@@ -1,3 +1,4 @@
+import { Url } from "@okgrow/graphql-scalars";
 import {
   Field,
   FieldResolver,
@@ -9,17 +10,18 @@ import {
 import { Contact } from "./Contact";
 import Keyword from "./keywords";
 import { Location } from "./Location";
+import { UrlScalar } from "./scalars";
 
 @ObjectType()
 export class SessionUrls {
-  @Field(_ => String, { nullable: true })
-  public web?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public web?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public slides?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public slides?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public video?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public video?: Url;
 }
 
 @ObjectType()

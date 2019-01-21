@@ -1,3 +1,4 @@
+import { Url } from "@okgrow/graphql-scalars";
 import { flatMap, uniq } from "lodash";
 import {
   Arg,
@@ -13,10 +14,10 @@ import conferences from "../conferences";
 import series from "./conferenceSeries";
 import { Contact } from "./Contact";
 import { Location } from "./Location";
+import { UrlScalar } from "./scalars";
 import { Schedule } from "./Schedule";
 import { Series } from "./Series";
 import { Session } from "./Session";
-
 @ObjectType()
 export class Conference {
   @Field(_ => ID)
@@ -28,8 +29,8 @@ export class Conference {
   @Field(_ => String)
   public year!: string;
 
-  @Field(_ => String)
-  public websiteUrl!: string;
+  @Field(_ => UrlScalar)
+  public websiteUrl!: Url;
 
   @Field(_ => [Location], { nullable: true })
   public locations?: Location[];

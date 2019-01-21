@@ -1,37 +1,39 @@
+import { Url } from "@okgrow/graphql-scalars";
 import { Field, ObjectType } from "type-graphql";
+import { UrlScalar } from "./scalars";
 
 @ObjectType()
 export class Social {
-  @Field(_ => String, { nullable: true })
-  public homepage?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public homepage?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public twitter?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public twitter?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public github?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public github?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public facebook?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public facebook?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public medium?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public medium?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public instagram?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public instagram?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public linkedin?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public linkedin?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public youtube?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public youtube?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public vk?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public vk?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public pinterest?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public pinterest?: Url;
 
-  @Field(_ => String, { nullable: true })
-  public vimeo?: string;
+  @Field(_ => UrlScalar, { nullable: true })
+  public vimeo?: Url;
 }

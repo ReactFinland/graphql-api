@@ -1,7 +1,9 @@
+import { Url } from "@okgrow/graphql-scalars";
 import { Field, ObjectType } from "type-graphql";
+import { UrlScalar } from "./scalars";
 
 @ObjectType()
 export class Image {
-  @Field(_ => String)
-  public url!: string;
+  @Field(_ => UrlScalar)
+  public url!: Url;
 }
