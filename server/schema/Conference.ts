@@ -100,7 +100,7 @@ export class ConferenceResolver {
     const talkSpeakers = getSpeakers(conference.talks);
     const workshopSpeakers = getSpeakers(conference.workshops);
 
-    return talkSpeakers.concat(workshopSpeakers);
+    return uniq(talkSpeakers.concat(workshopSpeakers));
   }
 }
 
