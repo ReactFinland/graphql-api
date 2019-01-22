@@ -1,3 +1,5 @@
+[![build status](https://secure.travis-ci.org/ReactFinland/graphql-api.svg)](http://travis-ci.org/ReactFinland/graphql-api)
+
 # GraphQL API for React Finland 2018
 
 Simple GraphQL API for the conference.
