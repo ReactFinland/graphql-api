@@ -9,7 +9,7 @@
     "build": "npm run generate:indices && rimraf build && tsc",
     "lint": "tslint --config tslint.json content/**/*.ts server/**/*.ts --fix",
     "start": "npm run build && node ./build/server",
-    "heroku:start": "tsc && node ./build/server",
+    "heroku:start": "node ./build/server",
     "format": "prettier ./src/**/*.js --write",
     "watch": "tsc-watch --onSuccess \"node ./build/server\" --onFailure \"echo Beep! Compilation Failed\""
   },
