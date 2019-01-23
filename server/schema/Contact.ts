@@ -1,4 +1,4 @@
-import { flatMap } from "lodash";
+import { flatMap, uniq } from "lodash";
 import {
   Arg,
   Ctx,
@@ -11,8 +11,8 @@ import {
   Resolver,
   Root,
 } from "type-graphql";
-import conferences from "../conferences";
-import { getConference, getSpeakers } from "./Conference";
+// import conferences from "../conferences";
+import { Conference, getConference } from "./Conference";
 import { IContext } from "./Context";
 import { Country } from "./Country";
 import { Image } from "./Image";
@@ -61,6 +61,14 @@ export class Contact {
 
   @Field(_ => Location)
   public location!: Location;
+
+  // Derived at getSpeakers
+  @Field(_ => [Session])
+  public talks?: Session[];
+
+  // Derived at getSpeakers
+  @Field(_ => [Session])
+  public workshops?: Session[];
 }
 
 @Resolver(_ => Contact)
@@ -78,8 +86,10 @@ export class ContactResolver {
       ({ name }) => name === contactName
     );
     const speaker =
-      getSpeakers(conference.talks).find(({ name }) => name === contactName) ||
-      getSpeakers(conference.workshops).find(
+      getSpeakers(conference, conference.talks).find(
+        ({ name }) => name === contactName
+      ) ||
+      getSpeakers(conference, conference.workshops).find(
         ({ name }) => name === contactName
       );
     const mc =
@@ -143,28 +153,6 @@ export class ContactResolver {
   public country(@Root() contact: Contact) {
     return contact.location.country;
   }
-
-  @FieldResolver(_ => [Session])
-  public talks(@Root() contact: Contact) {
-    const talks = flatMap(conferences, ({ talks }) => talks);
-    const talksWithContact = talks.filter(
-      ({ people }) =>
-        people && people.find(person => person.name === contact.name)
-    );
-
-    return talksWithContact;
-  }
-
-  @FieldResolver(_ => [Session])
-  public workshops(@Root() contact: Contact) {
-    const workshops = flatMap(conferences, ({ workshops }) => workshops);
-    const workshopsWithContact = workshops.filter(
-      ({ people }) =>
-        people && people.find(person => person.name === contact.name)
-    );
-
-    return workshopsWithContact;
-  }
 }
 
 function resolveLinkedin(linkedin?: string): string {
@@ -177,4 +165,24 @@ function resolveLinkedin(linkedin?: string): string {
   }
 
   return `https://linkedin.com/in/${linkedin}`;
+}
+
+// TODO: Maybe this should check both talks/workshops at once?
+export function getSpeakers(
+  conference: Conference,
+  sessions?: Session[]
+): Contact[] {
+  const speakers = uniq(flatMap(sessions, session => session.people || []));
+
+  return speakers.map(speaker => ({
+    ...speaker,
+    talks: conference.talks.filter(
+      ({ people }) =>
+        people && people.find(person => person.name === speaker.name)
+    ),
+    workshops: conference.workshops.filter(
+      ({ people }) =>
+        people && people.find(person => person.name === speaker.name)
+    ),
+  }));
 }

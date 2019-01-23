@@ -1,5 +1,5 @@
 import { Url } from "@okgrow/graphql-scalars";
-import { flatMap, uniq } from "lodash";
+import { uniq } from "lodash";
 import {
   Arg,
   Field,
@@ -12,7 +12,7 @@ import {
 } from "type-graphql";
 import conferences from "../conferences";
 import series from "./conferenceSeries";
-import { Contact } from "./Contact";
+import { Contact, getSpeakers } from "./Contact";
 import { Location } from "./Location";
 import { UrlScalar } from "./scalars";
 import { Schedule } from "./Schedule";
@@ -97,8 +97,8 @@ export class ConferenceResolver {
 
   @FieldResolver(_ => [Contact])
   public speakers(@Root() conference: Conference) {
-    const talkSpeakers = getSpeakers(conference.talks);
-    const workshopSpeakers = getSpeakers(conference.workshops);
+    const talkSpeakers = getSpeakers(conference, conference.talks);
+    const workshopSpeakers = getSpeakers(conference, conference.workshops);
 
     return uniq(talkSpeakers.concat(workshopSpeakers));
   }
@@ -110,8 +110,4 @@ export function getConference(id: string): Conference {
   } else {
     throw new Error("Unknown conference");
   }
-}
-
-export function getSpeakers(sessions?: Session[]): Contact[] {
-  return uniq(flatMap(sessions, session => session.people || []));
 }
