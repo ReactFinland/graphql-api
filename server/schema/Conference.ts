@@ -1,5 +1,4 @@
 import { Url } from "@okgrow/graphql-scalars";
-import { uniq } from "lodash";
 import {
   Arg,
   Field,
@@ -97,10 +96,7 @@ export class ConferenceResolver {
 
   @FieldResolver(_ => [Contact])
   public speakers(@Root() conference: Conference) {
-    const talkSpeakers = getSpeakers(conference, conference.talks);
-    const workshopSpeakers = getSpeakers(conference, conference.workshops);
-
-    return uniq(talkSpeakers.concat(workshopSpeakers));
+    return getSpeakers(conference);
   }
 }
 

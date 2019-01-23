@@ -1,4 +1,4 @@
-import { flatMap, uniq } from "lodash";
+import { flatMap, uniqBy } from "lodash";
 import {
   Arg,
   Ctx,
@@ -85,13 +85,9 @@ export class ContactResolver {
     const organizer = Object.values(conference.organizers).find(
       ({ name }) => name === contactName
     );
-    const speaker =
-      getSpeakers(conference, conference.talks).find(
-        ({ name }) => name === contactName
-      ) ||
-      getSpeakers(conference, conference.workshops).find(
-        ({ name }) => name === contactName
-      );
+    const speaker = getSpeakers(conference).find(
+      ({ name }) => name === contactName
+    );
     const mc =
       conference.mcs && conference.mcs.find(({ name }) => name === contactName);
     const contact = sponsor || organizer || speaker || mc;
@@ -168,11 +164,21 @@ function resolveLinkedin(linkedin?: string): string {
 }
 
 // TODO: Maybe this should check both talks/workshops at once?
-export function getSpeakers(
+export function getSpeakers(conference: Conference): Contact[] {
+  const talkSpeakers = getSessionSpeakers(conference, conference.talks);
+  const workshopSpeakers = getSessionSpeakers(conference, conference.workshops);
+
+  return uniqBy(talkSpeakers.concat(workshopSpeakers), "name");
+}
+
+export function getSessionSpeakers(
   conference: Conference,
   sessions?: Session[]
 ): Contact[] {
-  const speakers = uniq(flatMap(sessions, session => session.people || []));
+  const speakers = uniqBy(
+    flatMap(sessions, session => session.people || []),
+    "name"
+  );
 
   return speakers.map(speaker => ({
     ...speaker,
