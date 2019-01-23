@@ -1,1 +1,0 @@
-{"version":3,"file":"conferences.js","sourceRoot":"","sources":["../../server/conferences.ts"],"names":[],"mappings":";;;;;AAAA,2FAAiE;AACjE,uFAA6D;AAC7D,uFAA6D;AAG7D,MAAM,WAAW,GAAiC;IAChD,CAAC,oBAAoB,CAAC,EAAE,4BAAgB;IACxC,CAAC,oBAAoB,CAAC,EAAE,4BAAgB;IACxC,CAAC,sBAAsB,CAAC,EAAE,8BAAkB;CAC7C,CAAC;AAEF,kBAAe,WAAW,CAAC"}
