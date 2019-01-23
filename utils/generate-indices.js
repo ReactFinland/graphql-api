@@ -61,12 +61,14 @@ function generateIndices(categorizedFilenames, format) {
 }
 
 function generateIndex(basenames) {
-  return basenames
-    .map(
-      basename =>
-        `export { default as ${camelCase(basename)} } from "./${basename}";`
-    )
-    .join("\n");
+  return (
+    basenames
+      .map(
+        basename =>
+          `export { default as ${camelCase(basename)} } from "./${basename}";`
+      )
+      .join("\n") + "\n"
+  );
 }
 
 function writeFiles(indexFiles, verbose) {
