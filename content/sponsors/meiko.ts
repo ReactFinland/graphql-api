@@ -7,7 +7,7 @@ const sponsor: Contact = {
     url: "sponsors/meiko.svg",
   },
   social: {
-    homepage: "https://meiko.fi/",
+    homepage: "https://meiko.fi?from=reactfinland2019",
     facebook: "",
     instagram: "",
     twitter: "",
