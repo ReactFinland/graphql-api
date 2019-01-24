@@ -40,6 +40,7 @@ const bronzeSponsors = [
   allSponsors.codento,
   allSponsors.columbiaroad,
   allSponsors.formidable,
+  allSponsors.netum,
   allSponsors.meiko,
   allSponsors.vincit,
   allSponsors.wunder,
