@@ -2,14 +2,14 @@ import { Contact } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
   name: "Meiko",
-  about: "Tailored digital advantage",
+  about: "Digital tailor for visionaries.",
   image: {
     url: "sponsors/meiko.svg",
   },
   social: {
     homepage: "https://meiko.fi/",
-    facebook: "",
-    instagram: "",
+    facebook: "https://www.facebook.com/meiko.fi/",
+    instagram: "https://www.instagram.com/meikofi/?hl=fi",
     twitter: "",
   },
   location: {
