@@ -1,4 +1,5 @@
 enum Keyword {
+  ANIMATION,
   APOLLO,
   BABEL,
   BEHAVIORAL_PROGRAMMING,
