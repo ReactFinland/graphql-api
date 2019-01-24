@@ -7,6 +7,9 @@ import calendar from "./calendar";
 import conferences from "./conferences";
 import generateSchema from "./schema";
 
+// FIXME: Resolve media path against project root, not module as this is brittle
+const projectRoot = path.resolve(__dirname, "../../");
+
 async function createRouter() {
   // @ts-ignore
   const router = new express.Router();
@@ -29,7 +32,7 @@ async function createRouter() {
       schema,
       context: {
         hostname: getHostname(request),
-        mediaUrl: `${getHostname(request)}/media`,
+        mediaPath: path.join(projectRoot, "media"),
       },
     }))
   );
@@ -47,9 +50,6 @@ async function createRouter() {
       res.status(404).end("Not found");
     }
   });
-
-  // FIXME: Resolve media path against project root, not module as this is brittle
-  router.use("/media", express.static(path.resolve(__dirname, "../../media")));
 
   // TODO: Make a better abstraction for this
   const calendarFile = "calendar-2019.ics";

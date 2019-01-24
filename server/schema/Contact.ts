@@ -11,13 +11,13 @@ import {
   Resolver,
   Root,
 } from "type-graphql";
-// import conferences from "../conferences";
 import { Conference, getConference } from "./Conference";
 import { IContext } from "./Context";
 import { Country } from "./Country";
 import { Image } from "./Image";
 import Keyword from "./keywords";
 import { Location } from "./Location";
+import resolveImage from "./resolve-image";
 import { Session } from "./Session";
 import { Social } from "./Social";
 
@@ -96,14 +96,13 @@ export class ContactResolver {
       throw new Error(`Contact ${contactName} wasn't found!`);
     }
 
-    // FIXME: This contains all talks/workshops - likely we should filter based on conferenceId?
     return contact;
   }
 
   @FieldResolver(_ => Image)
-  public image(@Root() contact: Contact, @Ctx() ctx: IContext) {
+  public async image(@Root() contact: Contact, @Ctx() ctx: IContext) {
     return {
-      url: `${ctx.mediaUrl}/${contact.image.url}`,
+      url: await resolveImage(ctx.mediaPath, contact.image.url),
     };
   }
 

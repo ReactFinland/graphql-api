@@ -1,6 +1,15 @@
-import { Field, ObjectType } from "type-graphql";
+import {
+  Ctx,
+  Field,
+  FieldResolver,
+  ObjectType,
+  Resolver,
+  Root,
+} from "type-graphql";
+import { IContext } from "./Context";
 import { Country } from "./Country";
 import { Image } from "./Image";
+import resolveImage from "./resolve-image";
 import { Social } from "./Social";
 
 @ObjectType()
@@ -25,4 +34,16 @@ export class Location {
 
   @Field(_ => String)
   public address?: string;
+}
+
+@Resolver(_ => Location)
+export class LocationResolver {
+  @FieldResolver(_ => Image)
+  public async image(@Root() location: Location, @Ctx() ctx: IContext) {
+    return {
+      url: location.image
+        ? await resolveImage(ctx.mediaPath, location.image.url)
+        : "",
+    };
+  }
 }

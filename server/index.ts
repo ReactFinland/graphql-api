@@ -1,9 +1,14 @@
 import dotenv from "dotenv";
+import * as path from "path";
+
+// FIXME: Resolve against project root, not module as this is brittle
+dotenv.config({
+  path: path.resolve(__dirname, "../../.env"),
+});
+
 import logger from "./logger";
 import rebuildSites from "./rebuild-sites";
 import createServer from "./server";
-
-dotenv.config();
 
 (async () => {
   logger.debug("Starting application");
