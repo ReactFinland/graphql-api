@@ -1,6 +1,9 @@
+import dotenv from "dotenv";
 import logger from "./logger";
 import rebuildSites from "./rebuild-sites";
 import createServer from "./server";
+
+dotenv.config();
 
 (async () => {
   logger.debug("Starting application");
