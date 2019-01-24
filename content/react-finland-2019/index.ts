@@ -11,6 +11,7 @@ const partners = [
   allSponsors.halfstack,
   allSponsors.jscamp,
   allSponsors.jskongress,
+  allSponsors.koodiasuomesta,
   allSponsors.reasonconf,
   allSponsors.reactindia,
   allSponsors.reactnewyork,
