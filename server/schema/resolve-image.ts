@@ -1,7 +1,6 @@
 import cloudinary from "cloudinary";
 import * as path from "path";
 import { env } from "process";
-import urlExists from "url-exists";
 
 cloudinary.config({
   cloud_name: env.CLOUDINARY_CLOUD_NAME,
@@ -9,17 +8,38 @@ cloudinary.config({
   api_secret: env.CLOUDINARY_API_SECRET,
 });
 
-async function resolveImage(mediaPath, url) {
-  const source = path.join(mediaPath, url);
-  const id = url.split("?")[0].replace(/\//g, "-");
-  const cloudinaryUrl = cloudinary.url(id);
+let resourceIds: string[] = [];
 
-  if (!(await assetExists(cloudinaryUrl))) {
+function initImageRegistry() {
+  cloudinary.api.resources(
+    result => {
+      if (!result.resources) {
+        throw new Error("No image resources!");
+      }
+
+      resourceIds = result.resources.map(resource => resource.public_id);
+    },
+    {
+      max_results: 500,
+    }
+  );
+}
+
+// FIXME: Likely this should be called somewhere else (app init)
+initImageRegistry();
+
+async function resolveImage(mediaPath, url) {
+  const source: string = path.join(mediaPath, url);
+  const resourceId: string = url.split("?")[0].replace(/\//g, "-");
+
+  if (!resourceIds.find(id => id === resourceId)) {
     try {
       const uploadedAsset = await cloudinary.v2.uploader.upload(source, {
         overwrite: true,
-        public_id: id,
+        public_id: resourceId,
       });
+
+      resourceIds.push(resourceId);
 
       return uploadedAsset.secure_url;
     } catch (err) {
@@ -27,19 +47,7 @@ async function resolveImage(mediaPath, url) {
     }
   }
 
-  return cloudinaryUrl;
+  return cloudinary.url(resourceId);
 }
 
-function assetExists(url) {
-  return new Promise((resolve, reject) => {
-    urlExists(url, (err, exists) => {
-      if (err) {
-        return reject(err);
-      }
-
-      resolve(exists);
-    });
-  });
-}
-
-export default resolveImage;
+export { initImageRegistry, resolveImage };

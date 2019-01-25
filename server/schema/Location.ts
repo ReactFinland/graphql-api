@@ -9,7 +9,7 @@ import {
 import { IContext } from "./Context";
 import { Country } from "./Country";
 import { Image } from "./Image";
-import resolveImage from "./resolve-image";
+import { resolveImage } from "./resolve-image";
 import { Social } from "./Social";
 
 @ObjectType()

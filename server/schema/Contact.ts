@@ -17,7 +17,7 @@ import { Country } from "./Country";
 import { Image } from "./Image";
 import Keyword from "./keywords";
 import { Location } from "./Location";
-import resolveImage from "./resolve-image";
+import { resolveImage } from "./resolve-image";
 import { Session } from "./Session";
 import { Social } from "./Social";
 
