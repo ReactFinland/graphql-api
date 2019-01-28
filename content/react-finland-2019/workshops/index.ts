@@ -3,5 +3,4 @@ export { default as davidKhourshidWorkshop } from "./david-khourshid-workshop";
 export { default as glennReyesWorkshop } from "./glenn-reyes-workshop";
 export { default as michelWorkshop } from "./michel-workshop";
 export { default as nikWorkshop } from "./nik-workshop";
-export { default as patrickWorkshop } from "./patrick-workshop";
 export { default as siaKaramalegosWorkshop } from "./sia-karamalegos-workshop";
