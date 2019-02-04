@@ -3,6 +3,7 @@ export { default as alma } from "./alma";
 export { default as amazon } from "./amazon";
 export { default as apiops } from "./apiops";
 export { default as apollo } from "./apollo";
+export { default as cai } from "./cai";
 export { default as codento } from "./codento";
 export { default as columbiaroad } from "./columbiaroad";
 export { default as designsystemslondon } from "./designsystemslondon";
