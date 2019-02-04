@@ -12,6 +12,7 @@ export { default as formidable } from "./formidable";
 export { default as futurice } from "./futurice";
 export { default as gatsby } from "./gatsby";
 export { default as geniem } from "./geniem";
+export { default as ginetta } from "./ginetta";
 export { default as gofore } from "./gofore";
 export { default as halfstack } from "./halfstack";
 export { default as hasura } from "./hasura";
