@@ -39,6 +39,7 @@ const silverSponsors = [
 const bronzeSponsors = [
   allSponsors.codento,
   allSponsors.columbiaroad,
+  allSponsors.fb,
   allSponsors.formidable,
   allSponsors.ginetta,
   allSponsors.netum,
