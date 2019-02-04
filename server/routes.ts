@@ -2,7 +2,9 @@ import cors from "cors";
 import express from "express";
 import graphql from "express-graphql";
 import { redirectToHTTPS } from "express-http-to-https";
+import proxy from "http-proxy-middleware";
 import * as path from "path";
+import process from "process";
 import calendar from "./calendar";
 import conferences from "./conferences";
 import generateSchema from "./schema";
@@ -14,6 +16,8 @@ async function createRouter() {
   // @ts-ignore
   const router = new express.Router();
   const schema = await generateSchema();
+  const mediaUrl = "/media";
+  const mediaPath = path.join(projectRoot, "media");
 
   router.use(cors());
   router.use(redirectToHTTPS([/localhost:(\d{4})/]));
@@ -26,17 +30,41 @@ async function createRouter() {
 
       next();
     },
-    graphql(request => ({
-      graphiql: true,
-      pretty: true,
-      schema,
-      context: {
-        hostname: getHostname(request),
-        mediaPath: path.join(projectRoot, "media"),
-      },
-    }))
+    graphql(request => {
+      const hostname = getHostname(request);
+
+      return {
+        graphiql: true,
+        pretty: true,
+        schema,
+        context: {
+          hostname,
+          mediaPath,
+          mediaUrl: `${hostname}${mediaUrl}`,
+        },
+      };
+    })
   );
 
+  routeMedia(router, mediaUrl, mediaPath);
+  routeCalendar(router);
+
+  return router;
+}
+
+function routeMedia(router, mediaUrl, mediaPath) {
+  if (process.env.PROXY_CLOUDINARY) {
+    // TODO: Use other asset path for this so it can be tested on server
+    router.all(
+      `${mediaUrl}/*`,
+      proxy({ target: "https://res.cloudinary.com" })
+    );
+  } else {
+    router.use(mediaUrl, express.static(mediaPath));
+  }
+}
+
+function routeCalendar(router) {
   router.all("/calendar/:id", (req, res) => {
     const conference = conferences[req.params.id];
 
@@ -61,8 +89,6 @@ async function createRouter() {
       schedules: conferences["react-finland-2019"].schedules,
     })
   );
-
-  return router;
 }
 
 function getHostname(req) {

@@ -102,7 +102,7 @@ export class ContactResolver {
   @FieldResolver(_ => Image)
   public async image(@Root() contact: Contact, @Ctx() ctx: IContext) {
     return {
-      url: await resolveImage(ctx.mediaPath, contact.image.url),
+      url: await resolveImage(ctx.mediaUrl, ctx.mediaPath, contact.image.url),
     };
   }
 

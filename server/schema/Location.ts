@@ -42,7 +42,7 @@ export class LocationResolver {
   public async image(@Root() location: Location, @Ctx() ctx: IContext) {
     return {
       url: location.image
-        ? await resolveImage(ctx.mediaPath, location.image.url)
+        ? await resolveImage(ctx.mediaUrl, ctx.mediaPath, location.image.url)
         : "",
     };
   }

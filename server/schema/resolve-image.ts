@@ -8,7 +8,7 @@ cloudinary.config({
   api_secret: env.CLOUDINARY_API_SECRET,
 });
 
-let resourceIds: string[] = [];
+let resources: Array<{ id: string; url: string }> = [];
 
 function initImageRegistry() {
   cloudinary.api.resources(
@@ -17,7 +17,10 @@ function initImageRegistry() {
         throw new Error("No image resources!");
       }
 
-      resourceIds = result.resources.map(resource => resource.public_id);
+      resources = result.resources.map(resource => ({
+        id: resource.public_id,
+        url: resource.secure_url,
+      }));
     },
     {
       max_results: 500,
@@ -28,26 +31,36 @@ function initImageRegistry() {
 // FIXME: Likely this should be called somewhere else (app init)
 initImageRegistry();
 
-async function resolveImage(mediaPath, url) {
+async function resolveImage(mediaUrl: string, mediaPath: string, url: string) {
   const source: string = path.join(mediaPath, url);
-  const resourceId: string = url.split("?")[0].replace(/\//g, "-");
 
-  if (!resourceIds.find(id => id === resourceId)) {
+  // TODO: Figure out how to derive the same resource id as cloudinary does
+  const resourceId: string = url.split("?")[0].replace(/\//g, "-");
+  const matchedResource = resources.find(
+    resource => resource.id === resourceId
+  );
+
+  if (!matchedResource) {
     try {
       const uploadedAsset = await cloudinary.v2.uploader.upload(source, {
         overwrite: true,
         public_id: resourceId,
       });
+      const imageUrl = uploadedAsset.secure_url;
 
-      resourceIds.push(resourceId);
+      resources.push({ id: resourceId, url: imageUrl });
 
-      return uploadedAsset.secure_url;
+      return imageUrl;
     } catch (err) {
       throw new Error(err.message);
     }
   }
 
-  return cloudinary.url(resourceId);
+  if (process.env.PROXY_CLOUDINARY) {
+    return `${mediaUrl}${matchedResource.url.split("res.cloudinary.com")[1]}`;
+  }
+
+  return `${mediaUrl}/${url}`;
 }
 
 export { initImageRegistry, resolveImage };
