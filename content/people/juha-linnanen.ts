@@ -12,7 +12,7 @@ const person: Contact = {
     homepage: "",
     twitter: "pillar15",
     github: "eduplus",
-    linkedin: "https://www.linkedin.com/in/juha-linnanen/",
+    linkedin: "juha-linnanen",
   },
   location: {
     country: {
