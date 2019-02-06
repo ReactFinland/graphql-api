@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Juha Linnanen",
-  about: "Mobile dev enthusiast, boardgamer and mtg cuber.",
+  about: "Head of mobile dev @GoforeGroup. React Native & Android background.",
   image: {
     url: "people/juha.jpg",
   },
@@ -12,7 +12,7 @@ const person: Contact = {
     homepage: "",
     twitter: "pillar15",
     github: "eduplus",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/juha-linnanen/",
   },
   location: {
     country: {
