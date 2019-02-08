@@ -73,6 +73,8 @@ CLOUDINARY_API_SECRET=<get from Cloudinary account>
 
 Also remember to set the same on the host of the API.
 
+> You can access images through `http://localhost:3000/graphql-2018/images`. Example: `http://localhost:3000/graphql-2018/images/ken.jpg`.
+
 ## Webhooks
 
 ### Heroku to Netlify
