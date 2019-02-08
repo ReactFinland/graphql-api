@@ -56,11 +56,13 @@ async function resolveImage(mediaUrl: string, mediaPath: string, url: string) {
     }
   }
 
-  if (process.env.PROXY_CLOUDINARY) {
-    return `${mediaUrl}${matchedResource.url.split("res.cloudinary.com")[1]}`;
-  }
+  // if (process.env.PROXY_CLOUDINARY) {
+  return `https://res.cloudinary.com${mediaUrl}${
+    matchedResource.url.split("res.cloudinary.com")[1]
+  }`;
+  // }
 
-  return `${mediaUrl}/${url}`;
+  // return `${mediaUrl}/${url}`;
 }
 
 export { initImageRegistry, resolveImage };

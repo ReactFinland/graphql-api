@@ -17,7 +17,6 @@ import { Country } from "./Country";
 import { Image } from "./Image";
 import Keyword from "./keywords";
 import { Location } from "./Location";
-import { resolveImage } from "./resolve-image";
 import { Session } from "./Session";
 import { Social } from "./Social";
 
@@ -100,9 +99,9 @@ export class ContactResolver {
   }
 
   @FieldResolver(_ => Image)
-  public async image(@Root() contact: Contact, @Ctx() ctx: IContext) {
+  public image(@Root() contact: Contact, @Ctx() ctx: IContext) {
     return {
-      url: await resolveImage(ctx.mediaUrl, ctx.mediaPath, contact.image.url),
+      url: `${ctx.mediaUrl}/${contact.image.url}`,
     };
   }
 

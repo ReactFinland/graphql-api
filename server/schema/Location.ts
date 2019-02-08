@@ -9,7 +9,6 @@ import {
 import { IContext } from "./Context";
 import { Country } from "./Country";
 import { Image } from "./Image";
-import { resolveImage } from "./resolve-image";
 import { Social } from "./Social";
 
 @ObjectType()
@@ -39,11 +38,9 @@ export class Location {
 @Resolver(_ => Location)
 export class LocationResolver {
   @FieldResolver(_ => Image)
-  public async image(@Root() location: Location, @Ctx() ctx: IContext) {
+  public image(@Root() location: Location, @Ctx() ctx: IContext) {
     return {
-      url: location.image
-        ? await resolveImage(ctx.mediaUrl, ctx.mediaPath, location.image.url)
-        : "",
+      url: location.image ? `${ctx.mediaUrl}/${location.image.url}` : "",
     };
   }
 }
