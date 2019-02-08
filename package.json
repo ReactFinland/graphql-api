@@ -19,6 +19,7 @@
   "devDependencies": {
     "@types/compression": "0.0.36",
     "@types/cors": "^2.8.4",
+    "@types/dotenv": "^6.1.0",
     "@types/express": "^4.16.1",
     "@types/express-graphql": "^0.6.2",
     "@types/lodash": "^4.14.120",
@@ -49,8 +50,10 @@
   "dependencies": {
     "@okgrow/graphql-scalars": "^0.4.3",
     "body-parser": "^1.18.3",
+    "cloudinary": "^1.13.2",
     "compression": "^1.7.3",
     "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "express-http-to-https": "^1.1.4",

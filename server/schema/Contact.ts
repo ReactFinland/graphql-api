@@ -11,7 +11,6 @@ import {
   Resolver,
   Root,
 } from "type-graphql";
-// import conferences from "../conferences";
 import { Conference, getConference } from "./Conference";
 import { IContext } from "./Context";
 import { Country } from "./Country";
@@ -96,7 +95,6 @@ export class ContactResolver {
       throw new Error(`Contact ${contactName} wasn't found!`);
     }
 
-    // FIXME: This contains all talks/workshops - likely we should filter based on conferenceId?
     return contact;
   }
 

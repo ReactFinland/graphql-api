@@ -9,8 +9,6 @@ To see the query API:
 1.  `NODE_ENV="development" npm start`
 2.  `http://localhost:3000/graphql-2018` or `http://localhost:3000/calendar-2018.ics` (calendar)
 
-You can access images through `http://localhost:3000/graphql-2018/images`. Example: `http://localhost:3000/graphql-2018/images/ken.jpg`.
-
 **Example query:**
 
 ```graphql
@@ -60,6 +58,22 @@ You can access images through `http://localhost:3000/graphql-2018/images`. Examp
   }
 }
 ```
+
+## Image Processing
+
+The images are pushed to [Cloudinary](https://cloudinary.com/) and it's used as our image CDN. Remember to set `.env` for local development if you want to use images:
+
+**.env**
+
+```
+CLOUDINARY_CLOUD_NAME=react-finland
+CLOUDINARY_API_KEY=<get from Cloudinary account>
+CLOUDINARY_API_SECRET=<get from Cloudinary account>
+```
+
+Also remember to set the same on the host of the API.
+
+> You can access images through `http://localhost:3000/graphql-2018/images`. Example: `http://localhost:3000/graphql-2018/images/ken.jpg`.
 
 ## Webhooks
 

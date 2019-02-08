@@ -3,14 +3,22 @@ import express from "express";
 import graphql from "express-graphql";
 import { redirectToHTTPS } from "express-http-to-https";
 import * as path from "path";
+import process from "process";
 import calendar from "./calendar";
 import conferences from "./conferences";
+import logger from "./logger";
+import { resolveImage } from "./resolve-image";
 import generateSchema from "./schema";
+
+// FIXME: Resolve media path against project root, not module as this is brittle
+const projectRoot = path.resolve(__dirname, "../../");
 
 async function createRouter() {
   // @ts-ignore
   const router = new express.Router();
   const schema = await generateSchema();
+  const mediaUrl = "/media";
+  const mediaPath = path.join(projectRoot, "media");
 
   router.use(cors());
   router.use(redirectToHTTPS([/localhost:(\d{4})/]));
@@ -23,17 +31,49 @@ async function createRouter() {
 
       next();
     },
-    graphql(request => ({
-      graphiql: true,
-      pretty: true,
-      schema,
-      context: {
-        hostname: getHostname(request),
-        mediaUrl: `${getHostname(request)}/media`,
-      },
-    }))
+    graphql(request => {
+      const hostname = getHostname(request);
+
+      return {
+        graphiql: true,
+        pretty: true,
+        schema,
+        context: {
+          hostname,
+          mediaUrl: `${hostname}${mediaUrl}`,
+        },
+      };
+    })
   );
 
+  routeMedia(router, mediaUrl, mediaPath);
+  routeCalendar(router);
+
+  return router;
+}
+
+function routeMedia(router, mediaUrl, mediaPath) {
+  router.all(`${mediaUrl}/*`, async (req, res, next) => {
+    const asset = req.params["0"];
+
+    try {
+      const url = await resolveImage(mediaPath, asset);
+
+      // TODO: This is where it would be possible to intercept and cache
+      // so we don't hit Cloudinary CDN.
+      // Likely we want something like images.react-finland.fi and then use
+      // that as a bucket for some CDN (Cloudflare?) to decouple images from
+      // the API.
+      res.redirect(url);
+    } catch (err) {
+      logger.error(err);
+
+      next();
+    }
+  });
+}
+
+function routeCalendar(router) {
   router.all("/calendar/:id", (req, res) => {
     const conference = conferences[req.params.id];
 
@@ -48,9 +88,6 @@ async function createRouter() {
     }
   });
 
-  // FIXME: Resolve media path against project root, not module as this is brittle
-  router.use("/media", express.static(path.resolve(__dirname, "../../media")));
-
   // TODO: Make a better abstraction for this
   const calendarFile = "calendar-2019.ics";
   router.all(
@@ -61,8 +98,6 @@ async function createRouter() {
       schedules: conferences["react-finland-2019"].schedules,
     })
   );
-
-  return router;
 }
 
 function getHostname(req) {
