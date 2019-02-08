@@ -59,6 +59,20 @@ To see the query API:
 }
 ```
 
+## Image Processing
+
+The images are pushed to [Cloudinary](https://cloudinary.com/) and it's used as our image CDN. Remember to set `.env` for local development if you want to use images:
+
+**.env**
+
+```
+CLOUDINARY_CLOUD_NAME=react-finland
+CLOUDINARY_API_KEY=<get from Cloudinary account>
+CLOUDINARY_API_SECRET=<get from Cloudinary account>
+```
+
+Also remember to set the same on the host of the API.
+
 ## Webhooks
 
 ### Heroku to Netlify
