@@ -31,7 +31,7 @@ function initImageRegistry() {
 // FIXME: Likely this should be called somewhere else (app init)
 initImageRegistry();
 
-async function resolveImage(mediaUrl: string, mediaPath: string, url: string) {
+async function resolveImage(mediaPath: string, url: string) {
   const source: string = path.join(mediaPath, url);
 
   // TODO: Figure out how to derive the same resource id as cloudinary does
@@ -56,13 +56,7 @@ async function resolveImage(mediaUrl: string, mediaPath: string, url: string) {
     }
   }
 
-  // if (process.env.PROXY_CLOUDINARY) {
-  return `https://res.cloudinary.com${mediaUrl}${
-    matchedResource.url.split("res.cloudinary.com")[1]
-  }`;
-  // }
-
-  // return `${mediaUrl}/${url}`;
+  return matchedResource.url;
 }
 
 export { initImageRegistry, resolveImage };

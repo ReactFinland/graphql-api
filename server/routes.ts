@@ -2,22 +2,13 @@ import cors from "cors";
 import express from "express";
 import graphql from "express-graphql";
 import { redirectToHTTPS } from "express-http-to-https";
-import proxy from "express-request-proxy";
 import * as path from "path";
 import process from "process";
-import redis from "redis";
-import redisStreams from "redis-streams";
 import calendar from "./calendar";
 import conferences from "./conferences";
 import logger from "./logger";
 import { resolveImage } from "./resolve-image";
 import generateSchema from "./schema";
-
-redisStreams(redis);
-
-const redisClient = redis.createClient({ return_buffers: true });
-
-redisClient.on("error", err => logger.error("Redis error " + err));
 
 // FIXME: Resolve media path against project root, not module as this is brittle
 const projectRoot = path.resolve(__dirname, "../../");
@@ -61,40 +52,29 @@ async function createRouter() {
   return router;
 }
 
-// Should images be resolved here instead of graphql?
 function routeMedia(router, mediaUrl, mediaPath) {
-  // if (process.env.PROXY_CLOUDINARY) {
-  // TODO: Use other asset path for this so it can be tested on server
-  router.all(
-    `${mediaUrl}/*`,
-    async (req, res, next) => {
-      logger.info("resolve media");
-      logger.info(req.url);
-      logger.info(req.params);
+  if (process.env.PROXY_CLOUDINARY) {
+    router.all(`${mediaUrl}/*`, async (req, res, next) => {
       const asset = req.params["0"];
-      logger.info(asset);
 
       try {
-        req.url = await resolveImage(mediaUrl, mediaPath, asset);
+        const url = await resolveImage(mediaPath, asset);
+
+        // TODO: This is where it would be possible to intercept and cache
+        // so we don't hit Cloudinary CDN.
+        // Likely we want something like images.react-finland.fi and then use
+        // that as a bucket for some CDN (Cloudflare?) to decouple images from
+        // the API.
+        res.redirect(url);
       } catch (err) {
         logger.error(err);
+
+        next();
       }
-
-      // TODO: Push the images to cloudflare CDN here and proxy to
-      // them through the server
-
-      logger.info(req.url);
-
-      next();
-    },
-    proxy({
-      cache: redisClient,
-      url: "*",
-    })
-  );
-  /*} else {
+    });
+  } else {
     router.use(mediaUrl, express.static(mediaPath));
-  }*/
+  }
 }
 
 function routeCalendar(router) {

@@ -9,8 +9,6 @@ To see the query API:
 1.  `NODE_ENV="development" npm start`
 2.  `http://localhost:3000/graphql-2018` or `http://localhost:3000/calendar-2018.ics` (calendar)
 
-> For Redis caching for images to work, run Redis locally. [More info](https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298).
-
 **Example query:**
 
 ```graphql
