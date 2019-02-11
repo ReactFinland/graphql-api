@@ -1,10 +1,7 @@
 import graphql from "express-graphql";
 import process from "process";
-import generateSchema from "../schema";
 
-async function routeGraphQL(router, mediaUrl) {
-  const schema = await generateSchema();
-
+function routeGraphQL(router, schema, mediaUrl) {
   router.all(
     "/graphql",
     (req, res, next) => {

@@ -1,5 +1,5 @@
-import { SessionType } from "../../../server/schema";
-import { Session } from "../../../server/schema/Session";
+
+import { Session, SessionType } from "../../../server/schema/Session";
 
 // TODO: Update to point to the right speaker
 import speaker from "../../people/<speaker>";
