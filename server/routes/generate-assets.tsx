@@ -5,13 +5,15 @@ import GeneratePresentation from "./generate-assets/presentation";
 import GenerateSchedule from "./generate-assets/schedule";
 import GenerateText from "./generate-assets/text";
 
-function routeAssetGenerator(router) {
+function routeAssetGenerator(router, schema) {
   router.get("/generate-assets", (req, res) => {
     res.status(200).send(renderMarkup(renderToString(GenerateAssets())));
   });
 
-  router.get("/generate-assets/badges", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(GenerateBadges())));
+  router.get("/generate-assets/badges", async (req, res) => {
+    res
+      .status(200)
+      .send(renderMarkup(renderToString(await GenerateBadges(schema))));
   });
 
   router.get("/generate-assets/schedule", (req, res) => {

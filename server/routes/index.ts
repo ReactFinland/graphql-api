@@ -14,7 +14,7 @@ const projectRoot = path.resolve(__dirname, "../../../");
 async function createRouter() {
   // @ts-ignore
   const router = new express.Router();
-
+  const schema = await generateSchema();
   const mediaUrl = "/media";
   const mediaPath = path.join(projectRoot, "media");
 
@@ -22,8 +22,8 @@ async function createRouter() {
   router.use(redirectToHTTPS([/localhost:(\d{4})/]));
 
   routeCalendar(router);
-  routeGenerateAssets(router);
-  routeGraphQL(router, await generateSchema(), mediaUrl);
+  routeGenerateAssets(router, schema);
+  routeGraphQL(router, schema, mediaUrl);
   routeMedia(router, mediaUrl, mediaPath);
 
   return router;
