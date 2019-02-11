@@ -46,10 +46,32 @@ async function createRouter() {
     })
   );
 
+  routeAssetGenerator(router);
   routeMedia(router, mediaUrl, mediaPath);
   routeCalendar(router);
 
   return router;
+}
+
+function routeAssetGenerator(router) {
+  router.get("/generate-assets", (req, res) => {
+    // TODO: Generate a script and link to it here.
+    res.status(200).send(renderMarkup("hello world"));
+  });
+}
+
+function renderMarkup(html) {
+  return `<!DOCTYPE html>
+<html>
+  <head>
+    <title>Asset generator</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="app">${html}</div>
+    <script src="./index.js"></script>
+  </body>
+</html>`;
 }
 
 function routeMedia(router, mediaUrl, mediaPath) {
