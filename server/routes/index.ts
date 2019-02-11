@@ -2,8 +2,8 @@ import cors from "cors";
 import express from "express";
 import { redirectToHTTPS } from "express-http-to-https";
 import * as path from "path";
-import routeAssetGenerator from "./asset-generator";
 import routeCalendar from "./calendar";
+import routeGenerateAssets from "./generate-assets";
 import routeGraphQL from "./graphql";
 import routeMedia from "./media";
 
@@ -19,8 +19,8 @@ async function createRouter() {
   router.use(cors());
   router.use(redirectToHTTPS([/localhost:(\d{4})/]));
 
-  await routeAssetGenerator(router);
   await routeCalendar(router);
+  await routeGenerateAssets(router);
   await routeGraphQL(router, mediaUrl);
   await routeMedia(router, mediaUrl, mediaPath);
 
