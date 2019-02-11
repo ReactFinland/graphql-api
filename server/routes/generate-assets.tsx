@@ -1,5 +1,9 @@
-import * as React from "react";
 import { renderToString } from "react-dom/server";
+import GenerateBadges from "./generate-assets/badges";
+import GenerateAssets from "./generate-assets/index";
+import GeneratePresentation from "./generate-assets/presentation";
+import GenerateSchedule from "./generate-assets/schedule";
+import GenerateText from "./generate-assets/text";
 
 function routeAssetGenerator(router) {
   router.get("/generate-assets", (req, res) => {
@@ -21,47 +25,6 @@ function routeAssetGenerator(router) {
   router.get("/generate-assets/text", (req, res) => {
     res.status(200).send(renderMarkup(renderToString(GenerateText())));
   });
-}
-
-function GenerateAssets() {
-  return (
-    <ul>
-      <li>
-        <a href="./badges">Generate badges</a>
-      </li>
-      <li>
-        <a href="./schedule">Generate a schedule poster</a>
-      </li>
-      <li>
-        <a href="./presentation#0">Generate a presentation with speakers</a>
-      </li>
-      <li>
-        <a href="./text#'Speakers' room">Generate a speakers' room poster</a>
-      </li>
-      <li>
-        <a href="./text#←">Generate a left arrow poster</a>
-      </li>
-      <li>
-        <a href="./text#→">Generate a right arrow poster</a>
-      </li>
-    </ul>
-  );
-}
-
-function GenerateBadges() {
-  return <div>generate badges</div>;
-}
-
-function GenerateSchedule() {
-  return <div>generate schedule</div>;
-}
-
-function GeneratePresentation() {
-  return <div>generate presentation</div>;
-}
-
-function GenerateText() {
-  return <div>generate text</div>;
 }
 
 function renderMarkup(html) {
