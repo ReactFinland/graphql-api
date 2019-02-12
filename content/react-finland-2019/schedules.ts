@@ -75,7 +75,7 @@ const workshopDay: Schedule = {
 
 const presentationDay1: Schedule = {
   day: "2019-04-25",
-  description: "Presentation day",
+  description: "First conference day",
   intervals: [
     {
       begin: "09:00",
@@ -200,7 +200,7 @@ const presentationDay1: Schedule = {
 
 const presentationDay2: Schedule = {
   day: "2019-04-26",
-  description: "Presentation day",
+  description: "Second conference day",
   intervals: [
     {
       begin: "09:00",
