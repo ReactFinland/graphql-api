@@ -17,8 +17,10 @@ function routeAssetGenerator(router, schema) {
       .send(renderMarkup(renderToString(await GenerateBadges(schema))));
   });
 
-  router.get("/generate-assets/schedule", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(GenerateSchedule())));
+  router.get("/generate-assets/schedule", async (req, res) => {
+    res
+      .status(200)
+      .send(renderMarkup(renderToString(await GenerateSchedule(schema))));
   });
 
   router.get("/generate-assets/presentation", (req, res) => {
