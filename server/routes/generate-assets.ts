@@ -39,7 +39,6 @@ function renderMarkup(html) {
     </head>
     <body>
       <div id="app">${html}</div>
-      <script src="./index.js"></script>
       ${getRefreshUrl()}
     </body>
   </html>`;
