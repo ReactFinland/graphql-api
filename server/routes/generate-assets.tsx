@@ -1,4 +1,3 @@
-import process from "process";
 import { renderToString } from "react-dom/server";
 import GenerateBadges from "./generate-assets/badges";
 import GenerateAssets from "./generate-assets/index";
@@ -41,17 +40,8 @@ function renderMarkup(html) {
     </head>
     <body>
       <div id="app">${html}</div>
-      ${getRefreshUrl()}
     </body>
   </html>`;
-}
-
-function getRefreshUrl() {
-  if (process.env.NODE_ENV === "production") {
-    return "";
-  }
-
-  return `<script src="${process.env.BROWSER_REFRESH_URL}"></script>`;
 }
 
 export default routeAssetGenerator;
