@@ -22,7 +22,14 @@ async function createServer() {
   const server = http.createServer(app);
 
   const listen = util.promisify(server.listen).bind(server);
-  await listen(port);
+
+  try {
+    await listen(port);
+  } catch (err) {
+    logger.error(err);
+
+    process.exit(1);
+  }
 
   logger.debug(
     `Finished booting the server. The API is reachable at http://localhost:${port.toString()}/graphql.`

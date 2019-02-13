@@ -1,5 +1,6 @@
 import { graphql } from "graphql";
 import * as React from "react";
+import logger from "../../logger";
 
 async function GenerateSchedule(schema) {
   const result = await graphql(
@@ -31,7 +32,7 @@ async function GenerateSchedule(schema) {
     }
   );
 
-  console.log(result);
+  logger.info(result);
 
   return <div>generate schedule</div>;
 }

@@ -10,6 +10,12 @@ import logger from "./logger";
 import rebuildSites from "./rebuild-sites";
 import createServer from "./server";
 
+process.on("SIGINT", () => {
+  logger.info("\nGracefully shutting down from SIGINT (Ctrl-C)");
+
+  process.exit(1);
+});
+
 (async () => {
   logger.debug("Starting application");
 
