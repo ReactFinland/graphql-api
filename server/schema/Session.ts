@@ -57,16 +57,16 @@ export class SessionResolver {
 }
 
 export enum SessionType {
-  TALK,
-  LIGHTNING_TALK,
-  KEYNOTE,
-  WORKSHOP,
-  PANEL,
-  BREAKFAST,
-  LUNCH,
-  COFFEE_BREAK,
-  ORGANIZATIONAL,
-  PARTY,
+  TALK = "TALK",
+  LIGHTNING_TALK = "LIGHTNING_TALK",
+  KEYNOTE = "KEYNOTE",
+  WORKSHOP = "WORKSHOP",
+  PANEL = "PANEL",
+  BREAKFAST = "BREAKFAST",
+  LUNCH = "LUNCH",
+  COFFEE_BREAK = "COFFEE_BREAK",
+  ORGANIZATIONAL = "ORGANIZATIONAL",
+  PARTY = "PARTY",
 }
 
 registerEnumType(SessionType, {

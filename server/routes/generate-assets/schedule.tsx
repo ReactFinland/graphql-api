@@ -1,8 +1,10 @@
 import { css, Global } from "@emotion/core";
 import styled from "@emotion/styled";
+import * as CSS from "csstype";
 import { graphql } from "graphql";
 import * as React from "react";
 import emoji from "react-easy-emoji";
+import { SessionType } from "../../schema/Session";
 
 const SchedulePageContainer = styled.div`
   background-image: linear-gradient(
@@ -84,8 +86,8 @@ const ScheduleContainerItem = styled.div`
 `;
 
 interface ScheduleTitleProps {
-  color: string; // FIXME: Use csstype CSS color type here
-  type: string; // FIXME: Use the proper enum here instead
+  color: CSS.Color;
+  type: SessionType;
 }
 
 const ScheduleTitle = styled.dt`
@@ -94,7 +96,12 @@ const ScheduleTitle = styled.dt`
   font-size: 150%;
   font-family: monospace;
   color: ${({ color, type }: ScheduleTitleProps) =>
-    ["breakfast", "coffee_break", "party", "lunch"].includes(type)
+    [
+      SessionType.BREAKFAST,
+      SessionType.COFFEE_BREAK,
+      SessionType.PARTY,
+      SessionType.LUNCH,
+    ].includes(type)
       ? color
       : "inherit"};
 `;
@@ -113,6 +120,7 @@ function Schedule({ theme, intervals }) {
     return null;
   }
 
+  // TODO: How to handle multiple sessions at once?
   return (
     <ScheduleContainer>
       {intervals.map(({ begin, end, sessions }, i) => (
@@ -120,7 +128,7 @@ function Schedule({ theme, intervals }) {
           <ScheduleTitle
             key={`dt-${i}`}
             color={theme.secondaryColor}
-            type={sessions[0].type.toLowerCase()}
+            type={sessions[0].type}
           >
             {begin}-{end}
           </ScheduleTitle>
