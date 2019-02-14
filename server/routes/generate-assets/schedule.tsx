@@ -80,9 +80,13 @@ const ScheduleContainerItem = styled.div`
   font-size: 83%;
 `;
 
-const ScheduleTitle = styled.dt``;
+const ScheduleTitle = styled.dt`
+  display: inline;
+`;
 
-const ScheduleDefinition = styled.dd``;
+const ScheduleDefinition = styled.dd`
+  display: inline;
+`;
 
 function Schedule({ intervals }) {
   if (!intervals) {
