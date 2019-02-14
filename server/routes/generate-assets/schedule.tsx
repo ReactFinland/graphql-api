@@ -41,7 +41,7 @@ const SchedulePageContent = styled.div`
   padding-top: 0.25cm;
   padding-right: 0cm;
   padding-bottom: 0.25cm;
-  background-color: $bgColor;
+  background-color: white;
   height: 13.5cm;
   clip-path: polygon(0 0, 100% 1cm, 100% 100%, 0 calc(100% - 1cm));
   z-index: 1;
@@ -82,10 +82,18 @@ const ScheduleContainerItem = styled.div`
 
 const ScheduleTitle = styled.dt`
   display: inline;
+  overflow: hidden;
+  font-size: 150%;
+  font-family: monospace;
 `;
 
 const ScheduleDefinition = styled.dd`
   display: inline;
+  font-size: 99%;
+  margin-left: 0cm;
+  text-align: left;
+  overflow: hidden;
+  line-height: 1.45;
 `;
 
 function Schedule({ intervals }) {
