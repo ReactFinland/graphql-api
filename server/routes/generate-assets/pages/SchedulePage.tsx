@@ -35,7 +35,6 @@ const SchedulePageHeader = styled.h1`
 const SchedulePageContent = styled.div`
   position: relative;
   margin: 0;
-  margin-top: 1.8cm;
   margin-left: 0.5cm;
   margin-right: 0.5cm;
   padding-left: 0.25cm;
@@ -48,15 +47,15 @@ const SchedulePageContent = styled.div`
   z-index: 1;
 `;
 
-function SchedulePage({ intervals, conferenceLogo, conferenceName, theme }) {
+function SchedulePage({ intervals, conferenceLogo, theme }) {
   if (!intervals) {
     return null;
   }
 
   return (
     <SchedulePageContainer>
-      <SchedulePageLogo src={conferenceLogo} alt={conferenceName} />
-      <SchedulePageHeader>{conferenceName} - Schedule</SchedulePageHeader>
+      <SchedulePageLogo src={conferenceLogo} />
+      <SchedulePageHeader>Schedule</SchedulePageHeader>
       <SchedulePageContent>
         <Schedule theme={theme} intervals={intervals} />
       </SchedulePageContent>

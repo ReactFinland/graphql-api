@@ -18,17 +18,23 @@ const conferenceSeries: {
       textColor: "#111",
       backgroundColor: "#eee",
       blackLogoWithText: {
-        url: "react-finland/logo/v2/logo-black-with-text.svg",
+        url: "/media/react-finland/logo/v2/logo-black-with-text.svg",
       },
-      blackLogoWithoutText: { url: "react-finland/logo/v2/logo-black.svg" },
+      blackLogoWithoutText: {
+        url: "/media/react-finland/logo/v2/logo-black.svg",
+      },
       coloredLogoWithText: {
-        url: "react-finland/logo/v2/logo-colored-with-text.svg",
+        url: "/media/react-finland/logo/v2/logo-colored-with-text.svg",
       },
-      coloredLogoWithoutText: { url: "react-finland/logo/v2/logo-colored.svg" },
+      coloredLogoWithoutText: {
+        url: "/media/react-finland/logo/v2/logo-colored.svg",
+      },
       whiteLogoWithText: {
-        url: "react-finland/logo/v2/logo-white-with-text.svg",
+        url: "/media/react-finland/logo/v2/logo-white-with-text.svg",
       },
-      whiteLogoWithoutText: { url: "react-finland/logo/v2/logo-white.svg" },
+      whiteLogoWithoutText: {
+        url: "/media/react-finland/logo/v2/logo-white.svg",
+      },
     },
   },
   ["graphql-finland"]: {
@@ -41,19 +47,23 @@ const conferenceSeries: {
       textColor: "#233239",
       backgroundColor: "#eee",
       blackLogoWithText: {
-        url: "graphql-finland/logo/v2/logo-black-with-text.svg",
+        url: "/media/graphql-finland/logo/v1/logo-black-with-text.svg",
       },
-      blackLogoWithoutText: { url: "graphql-finland/logo/v2/logo-black.svg" },
+      blackLogoWithoutText: {
+        url: "/media/graphql-finland/logo/v1/logo-black.svg",
+      },
       coloredLogoWithText: {
-        url: "graphql-finland/logo/v2/logo-colored-with-text.svg",
+        url: "/media/graphql-finland/logo/v1/logo-colored-with-text.svg",
       },
       coloredLogoWithoutText: {
-        url: "graphql-finland/logo/v2/logo-colored.svg",
+        url: "/media/graphql-finland/logo/v1/logo-colored.svg",
       },
       whiteLogoWithText: {
-        url: "graphql-finland/logo/v2/logo-white-with-text.svg",
+        url: "/media/graphql-finland/logo/v1/logo-white-with-text.svg",
       },
-      whiteLogoWithoutText: { url: "graphql-finland/logo/v2/logo-white.svg" },
+      whiteLogoWithoutText: {
+        url: "/media/graphql-finland/logo/v1/logo-white.svg",
+      },
     },
   },
 };

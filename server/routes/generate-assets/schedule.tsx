@@ -5,7 +5,7 @@ import SchedulePage from "./pages/SchedulePage";
 async function GenerateSchedule(connect) {
   const result = await connect(
     `
-      query PageQuery($conferenceId: ID!, $day: String!) {
+      query PageQuery($conferenceSeriesId: ID!, $conferenceId: ID!, $day: String!) {
         schedule(conferenceId: $conferenceId, day: $day) {
           day
           description
@@ -21,31 +21,32 @@ async function GenerateSchedule(connect) {
             }
           }
         }
+        theme(conferenceId: $conferenceSeriesId) {
+          primaryColor
+          secondaryColor
+          textColor
+          backgroundColor
+          whiteLogoWithText {
+            url
+          }
+        }
       }
     `,
     {
+      conferenceSeriesId: "graphql-finland",
       conferenceId: "graphql-finland-2018",
       day: "2018-10-19",
     }
   );
 
-  // FIXME: Load theme from the API
-  // TODO: Move fonts to theme
-  const theme = {
-    primaryColor: "#e10098",
-    secondaryColor: "#e10098",
-    textColor: "#233239",
-    backgroundColor: "#eee",
-  };
-  const conferenceLogo = "TODO"; // FIXME
-  const conferenceName = "TODO"; // FIXME
+  const data = result.data || {};
+  const theme = data.theme;
   return (
     <>
       <GlobalStyles theme={theme} />
       <SchedulePage
-        intervals={result.data && result.data.schedule.intervals}
-        conferenceLogo={conferenceLogo}
-        conferenceName={conferenceName}
+        intervals={data.schedule.intervals}
+        conferenceLogo={theme.whiteLogoWithText.url}
         theme={theme}
       />
     </>

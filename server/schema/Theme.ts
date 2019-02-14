@@ -2,6 +2,7 @@ import { Arg, Field, ID, ObjectType, Query, Resolver } from "type-graphql";
 import allSeries from "./conferenceSeries";
 import { Image } from "./Image";
 
+// TODO: Add fonts here (name + path)
 @ObjectType()
 export class Theme {
   @Field(_ => String)
