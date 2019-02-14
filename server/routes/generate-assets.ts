@@ -1,3 +1,4 @@
+import process from "process";
 import { renderToString } from "react-dom/server";
 import GenerateBadges from "./generate-assets/badges";
 import GenerateAssets from "./generate-assets/index";
@@ -37,11 +38,40 @@ function renderMarkup(html) {
     <head>
       <title>Asset generator</title>
       <meta charset="utf-8" />
+      ${reloadPage()}
     </head>
     <body>
       <div id="app">${html}</div>
     </body>
   </html>`;
+}
+
+function reloadPage() {
+  if (process.env.NODE_ENV === "production") {
+    return;
+  }
+
+  return `
+    <script>
+      let previousVersion;
+
+      setInterval(() => {
+        fetch('/ping').then(response => response.json())
+        .then(({ serverVersion }) => {
+          if (previousVersion) {
+            if (previousVersion !== serverVersion) {
+              location.reload();
+            }
+          }
+          else {
+            previousVersion = serverVersion;
+          }
+        }).catch(err => {
+          // It's fine.
+        })
+      }, 500);
+    </script>
+  `;
 }
 
 export default routeAssetGenerator;

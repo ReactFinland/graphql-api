@@ -26,6 +26,13 @@ async function createRouter() {
   routeGraphQL(router, schema, mediaUrl);
   routeMedia(router, mediaUrl, mediaPath);
 
+  // TODO: Move to a module
+  if (process.env.NODE_ENV !== "production") {
+    const serverVersion = new Date().toString();
+
+    router.get("/ping", (req, res) => res.status(200).json({ serverVersion }));
+  }
+
   return router;
 }
 
