@@ -1,10 +1,12 @@
 import { SessionType } from "../../../server/schema";
+import Keyword from "../../../server/schema/keywords";
 import { Session } from "../../../server/schema/Session";
 import speaker from "../../people/andrey-okonetchnikov";
 
 const talk: Session = {
   people: [speaker],
-  title: "A Common Design Language. Let Designers and Developers talk to each other.",
+  title:
+    "A Common Design Language. Let Designers and Developers talk to each other.",
   description: `“Should designers code?” or “Should coders design?”—these two eternal questions are being asked for years with no particular answer given.
 
 - How to let developers know what typography style or button variance they should be using on this particular screen?
@@ -15,7 +17,7 @@ In order to answer those questions designers and developers have to speak the sa
 
 UI components and pattern libraries can provide this intermediate abstraction and be a common language for both designers and developers.`,
   type: SessionType.TALK,
-  keywords: ['Design Systems'],
+  keywords: [Keyword.DESIGN_SYSTEMS],
 };
 
 export default talk;
