@@ -48,7 +48,7 @@ const SchedulePageContent = styled.div`
   z-index: 1;
 `;
 
-function SchedulePage({ intervals, conferenceLogo, conferenceName }) {
+function SchedulePage({ intervals, conferenceLogo, conferenceName, theme }) {
   if (!intervals) {
     return null;
   }
@@ -58,7 +58,7 @@ function SchedulePage({ intervals, conferenceLogo, conferenceName }) {
       <SchedulePageLogo src={conferenceLogo} alt={conferenceName} />
       <SchedulePageHeader>{conferenceName} - Schedule</SchedulePageHeader>
       <SchedulePageContent>
-        <Schedule intervals={intervals} />
+        <Schedule theme={theme} intervals={intervals} />
       </SchedulePageContent>
       {/*<SponsorsContainer /> FIXME */}
     </SchedulePageContainer>
@@ -81,11 +81,20 @@ const ScheduleContainerItem = styled.div`
   font-size: 83%;
 `;
 
+interface ScheduleTitleProps {
+  color: string; // FIXME: Use csstype CSS color type here
+  type: string; // FIXME: Use the proper enum here instead
+}
+
 const ScheduleTitle = styled.dt`
   display: inline;
   overflow: hidden;
   font-size: 150%;
   font-family: monospace;
+  color: ${({ color, type }: ScheduleTitleProps) =>
+    ["breakfast", "coffee_break", "party", "lunch"].includes(type)
+      ? color
+      : "inherit"};
 `;
 
 const ScheduleDefinition = styled.dd`
@@ -97,7 +106,7 @@ const ScheduleDefinition = styled.dd`
   line-height: 1.45;
 `;
 
-function Schedule({ intervals }) {
+function Schedule({ theme, intervals }) {
   if (!intervals) {
     return null;
   }
@@ -106,7 +115,11 @@ function Schedule({ intervals }) {
     <ScheduleContainer>
       {intervals.map(({ begin, end, sessions }, i) => (
         <ScheduleContainerItem key={`schedule-container-${i}`}>
-          <ScheduleTitle key={`dt-${i}`}>
+          <ScheduleTitle
+            key={`dt-${i}`}
+            color={theme.secondaryColor}
+            type={sessions[0].type.toLowerCase()}
+          >
             {begin}-{end}
           </ScheduleTitle>
           <ScheduleDefinition key={`dd-${i}`}>
@@ -176,6 +189,14 @@ async function GenerateSchedule(schema) {
     }
   );
 
+  // FIXME: Load theme from the API
+  // TODO: Move fonts to theme
+  const theme = {
+    primaryColor: "#e10098",
+    secondaryColor: "#e10098",
+    textColor: "#233239",
+    backgroundColor: "#eee",
+  };
   const conferenceLogo = "TODO"; // FIXME
   const conferenceName = "TODO"; // FIXME
   return (
@@ -208,7 +229,7 @@ async function GenerateSchedule(schema) {
 
           body {
             font-family: "Finlandica", sans-serif;
-            background: #eee;
+            background: ${theme.backgroundColor};
           }
 
           h1,
@@ -226,6 +247,7 @@ async function GenerateSchedule(schema) {
         intervals={result.data && result.data.schedule.intervals}
         conferenceLogo={conferenceLogo}
         conferenceName={conferenceName}
+        theme={theme}
       />
     </>
   );
