@@ -69,6 +69,7 @@
     "npm": "^6.7.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-easy-emoji": "^1.2.0",
     "reflect-metadata": "^0.1.13",
     "request": "^2.88.0",
     "rimraf": "^2.6.3",

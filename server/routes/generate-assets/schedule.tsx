@@ -2,6 +2,7 @@ import { css, Global } from "@emotion/core";
 import styled from "@emotion/styled";
 import { graphql } from "graphql";
 import * as React from "react";
+import emoji from "react-easy-emoji";
 
 const SchedulePageContainer = styled.div`
   background-image: linear-gradient(
@@ -36,6 +37,7 @@ const SchedulePageHeader = styled.h1`
 const SchedulePageContent = styled.div`
   position: relative;
   margin: 0;
+  margin-top: 1.8cm;
   margin-left: 0.5cm;
   margin-right: 0.5cm;
   padding-left: 0.25cm;
@@ -133,30 +135,33 @@ function Schedule({ theme, intervals }) {
   );
 }
 
-// FIXME
-// TODO: Port ScheduleIcon to the project
 function SessionTitle({ title, type, people }) {
   return (
     <h3>
-      {title} {people && `- ${people[0].name}`}
+      {title} {people && `- ${people[0].name}`} <ScheduleIcon type={type} />
     </h3>
   );
-  /*return (
-    <h3 className={cx(className, styles.sessionIntervalTitle)}>
-      {type === "COFFEE_BREAK" ||
-      type === "PARTY" ||
-      type === "LUNCH" ||
-      type === "BREAKFAST" ? (
-        <div className={styles.specialSession}>
-          {title} <ScheduleIcon type={type} />
-        </div>
-      ) : (
-        <>
-          {title} {people && `- ${people[0].name}`} <ScheduleIcon type={type} />
-        </>
-      )}
-    </h3>
-  );*/
+}
+
+function ScheduleIcon({ type }) {
+  const scheduleTypes = {
+    KEYNOTE: { icon: "🗝", title: "Keynote" },
+    LIGHTNING_TALK: { icon: "⚡️", title: "Lightning talk" },
+    TALK: { icon: "🎙", title: "Presentation" },
+    PANEL: { icon: "🙋", title: "Panel" },
+    WORKSHOP: { icon: "👩‍💻", title: "Workshop" },
+    COFFEE_BREAK: { icon: "☕", title: "Coffee break" },
+    BREAKFAST: { icon: "🥐", title: "Breakfast" },
+    LUNCH: { icon: "🍕", title: "Lunch" },
+    ORGANIZATIONAL: { icon: "💤", title: "Organizational" },
+    PARTY: { icon: "🎉", title: "Party at Gofore office" },
+  };
+
+  return (
+    <span title={scheduleTypes[type].title}>
+      {emoji(scheduleTypes[type].icon)}
+    </span>
+  );
 }
 
 async function GenerateSchedule(schema) {
