@@ -1,3 +1,4 @@
+import { graphql } from "graphql";
 import process from "process";
 import { renderToString } from "react-dom/server";
 import GenerateBadges from "./generate-assets/badges";
@@ -6,7 +7,16 @@ import GeneratePresentation from "./generate-assets/presentation";
 import GenerateSchedule from "./generate-assets/schedule";
 import GenerateText from "./generate-assets/text";
 
+function createConnect(schema) {
+  const connect = (query, context) =>
+    graphql(schema, query, null, null, context);
+
+  return connect;
+}
+
 function routeAssetGenerator(router, schema) {
+  const connect = createConnect(schema);
+
   router.get("/generate-assets", (req, res) => {
     res.status(200).send(renderMarkup(renderToString(GenerateAssets())));
   });
@@ -14,13 +24,13 @@ function routeAssetGenerator(router, schema) {
   router.get("/generate-assets/badges", async (req, res) => {
     res
       .status(200)
-      .send(renderMarkup(renderToString(await GenerateBadges(schema))));
+      .send(renderMarkup(renderToString(await GenerateBadges(connect))));
   });
 
   router.get("/generate-assets/schedule", async (req, res) => {
     res
       .status(200)
-      .send(renderMarkup(renderToString(await GenerateSchedule(schema))));
+      .send(renderMarkup(renderToString(await GenerateSchedule(connect))));
   });
 
   router.get("/generate-assets/presentation", (req, res) => {

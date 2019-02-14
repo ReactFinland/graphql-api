@@ -1,11 +1,9 @@
-import { graphql } from "graphql";
 import * as React from "react";
 import GlobalStyles from "./components/GlobalStyles";
 import SchedulePage from "./pages/SchedulePage";
 
-async function GenerateSchedule(schema) {
-  const result = await graphql(
-    schema,
+async function GenerateSchedule(connect) {
+  const result = await connect(
     `
       query PageQuery($conferenceId: ID!, $day: String!) {
         schedule(conferenceId: $conferenceId, day: $day) {
@@ -25,8 +23,6 @@ async function GenerateSchedule(schema) {
         }
       }
     `,
-    null,
-    null,
     {
       conferenceId: "graphql-finland-2018",
       day: "2018-10-19",
