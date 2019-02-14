@@ -210,6 +210,16 @@ async function GenerateSchedule(schema) {
             font-family: "Finlandica", sans-serif;
             background: #eee;
           }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          html,
+          body {
+            padding: 0;
+            margin: 0;
+          }
         `}
       />
       <SchedulePage
