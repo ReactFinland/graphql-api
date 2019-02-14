@@ -1,5 +1,6 @@
 import { Arg, Field, ID, ObjectType, Query, Resolver } from "type-graphql";
 import allSeries from "./conferenceSeries";
+import { Image } from "./Image";
 
 @ObjectType()
 export class Theme {
@@ -14,6 +15,24 @@ export class Theme {
 
   @Field(_ => String)
   public backgroundColor!: string;
+
+  @Field(_ => Image)
+  public blackLogoWithoutText!: Image;
+
+  @Field(_ => Image)
+  public blackLogoWithText!: Image;
+
+  @Field(_ => Image)
+  public coloredLogoWithoutText!: Image;
+
+  @Field(_ => Image)
+  public coloredLogoWithText!: Image;
+
+  @Field(_ => Image)
+  public whiteLogoWithoutText!: Image;
+
+  @Field(_ => Image)
+  public whiteLogoWithText!: Image;
 }
 
 @Resolver(_ => Theme)
