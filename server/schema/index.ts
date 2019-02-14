@@ -8,6 +8,7 @@ import { UrlScalar } from "./scalars";
 import { ScheduleResolver } from "./Schedule";
 import { SeriesResolver } from "./Series";
 import { SessionResolver } from "./Session";
+import { ThemeResolver } from "./Theme";
 
 export default async function generateSchema() {
   return await buildSchema({
@@ -18,6 +19,7 @@ export default async function generateSchema() {
       ScheduleResolver,
       SeriesResolver,
       SessionResolver,
+      ThemeResolver,
     ],
     scalarsMap: [{ type: Url, scalar: UrlScalar }],
   });
