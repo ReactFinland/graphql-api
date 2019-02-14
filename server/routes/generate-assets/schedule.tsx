@@ -1,3 +1,4 @@
+import { css, Global } from "@emotion/core";
 import styled from "@emotion/styled";
 import { graphql } from "graphql";
 import * as React from "react";
@@ -178,11 +179,45 @@ async function GenerateSchedule(schema) {
   const conferenceLogo = "TODO"; // FIXME
   const conferenceName = "TODO"; // FIXME
   return (
-    <SchedulePage
-      intervals={result.data && result.data.schedule.intervals}
-      conferenceLogo={conferenceLogo}
-      conferenceName={conferenceName}
-    />
+    <>
+      <Global
+        styles={css`
+          @font-face {
+            font-family: "Finlandica";
+            src: url("/media/fonts/finlandica-regular.eot");
+            src: url("/media/fonts/finlandica-regular.eot?#iefix")
+                format("embedded-opentype"),
+              url("/media/fonts/finlandica-regular.woff2") format("woff2"),
+              url("/media/fonts/finlandica-regular.woff") format("woff"),
+              url("/media/fonts/finlandica-regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+          }
+
+          @font-face {
+            font-family: "Finlandica Bold";
+            src: url("/media/fonts/finlandica-bold.eot");
+            src: url("/media/fonts/finlandica-bold.eot?#iefix")
+                format("embedded-opentype"),
+              url("/media/fonts/finlandica-bold.woff2") format("woff2"),
+              url("/media/fonts/finlandica-bold.woff") format("woff"),
+              url("/media/fonts/finlandica-bold.ttf") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+          }
+
+          body {
+            font-family: "Finlandica", sans-serif;
+            background: #eee;
+          }
+        `}
+      />
+      <SchedulePage
+        intervals={result.data && result.data.schedule.intervals}
+        conferenceLogo={conferenceLogo}
+        conferenceName={conferenceName}
+      />
+    </>
   );
 }
 
