@@ -106,9 +106,9 @@ function renderMarkup(html) {
   </html>`;
 }
 
-function reloadPage() {
+function reloadPage(): string {
   if (process.env.NODE_ENV === "production") {
-    return;
+    return "";
   }
 
   return `
