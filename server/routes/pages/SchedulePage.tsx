@@ -1,14 +1,24 @@
 import styled from "@emotion/styled";
+import { Color } from "csstype";
+import hexToRgba from "hex-to-rgba";
 import * as React from "react";
 import Schedule from "../components/Schedule";
 import Sponsors from "../components/Sponsors";
 
+interface SchedulePageContainerProps {
+  primaryColor: Color;
+  secondaryColor: Color;
+}
+
 const SchedulePageContainer = styled.div`
-  background-image: linear-gradient(
-      rgb(243, 153, 153),
-      rgba(183, 37, 136, 0.79)
+  background-image: ${({
+    primaryColor,
+    secondaryColor,
+  }: SchedulePageContainerProps) => `linear-gradient(
+      ${primaryColor},
+      ${hexToRgba(secondaryColor, 0.79)}
     ),
-    url("/media/assets/wave.svg");
+    url("/media/assets/wave.svg")`};
   background-size: cover;
   position: relative;
   margin: auto;
@@ -43,7 +53,7 @@ const SchedulePageContent = styled.div`
   padding-right: 0cm;
   padding-bottom: 0.25cm;
   background-color: white;
-  height: 13.5cm;
+  height: 11.5cm;
   clip-path: polygon(0 0, 100% 1cm, 100% 100%, 0 calc(100% - 1cm));
   z-index: 1;
 `;
@@ -54,7 +64,10 @@ function SchedulePage({ intervals, conferenceLogo, theme, sponsors }) {
   }
 
   return (
-    <SchedulePageContainer>
+    <SchedulePageContainer
+      primaryColor={theme.primaryColor}
+      secondaryColor={theme.secondaryColor}
+    >
       <SchedulePageLogo src={conferenceLogo} />
       <SchedulePageHeader>Schedule</SchedulePageHeader>
       <SchedulePageContent>

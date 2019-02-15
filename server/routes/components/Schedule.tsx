@@ -9,7 +9,7 @@ const ScheduleContainer = styled.dl`
   width: 100%;
   display: flex;
   flex-flow: column wrap;
-  height: 11.7cm;
+  height: 10cm;
 `;
 
 const ScheduleContainerItem = styled.div`
@@ -36,6 +36,7 @@ const ScheduleTitle = styled.dt`
       SessionType.COFFEE_BREAK,
       SessionType.PARTY,
       SessionType.LUNCH,
+      SessionType.ORGANIZATIONAL,
     ].includes(type)
       ? color
       : "inherit"};

@@ -36,12 +36,6 @@ const SponsorContent = styled.img`
   margin: ${({ type }: SponsorContentProps) => sponsorRules[type].margin};
 `;
 
-/*
-const SponsorContent = ({ src, name, props }: SponsorContentProps) => (
-  <img alt={name} className={styles.sponsorsLogo} src={src} {...props} />
-);
-*/
-
 interface SponsorProps {
   name: string;
   about: string;

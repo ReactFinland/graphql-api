@@ -20,10 +20,11 @@ async function routeAssetGenerator(router, schema) {
   });
 
   router.get("/generate-assets/schedule", async (req, res) => {
+    // TODO: Parse these from query + expose them to the user
     const connect = await createConnect(schema, queries, {
-      conferenceSeriesId: "graphql-finland",
-      conferenceId: "graphql-finland-2018",
-      day: "2018-10-19",
+      conferenceSeriesId: "react-finland",
+      conferenceId: "react-finland-2019",
+      day: "2019-04-25",
     });
     const { schedule, theme } = connect(queries.scheduleQuery);
     const sponsors = connect(queries.sponsorQuery).conference;
