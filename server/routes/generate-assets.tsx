@@ -3,11 +3,11 @@ import process from "process";
 import * as React from "react";
 import { renderToString } from "react-dom/server";
 import GlobalStyles from "./components/GlobalStyles";
-import GenerateBadges from "./generate-assets/badges";
-import GenerateAssets from "./generate-assets/index";
-import GeneratePresentation from "./generate-assets/presentation";
-import GenerateText from "./generate-assets/text";
+import BadgesPage from "./pages/BadgesPage";
+import IndexPage from "./pages/IndexPage";
+import PresentationPage from "./pages/PresentationPage";
 import SchedulePage from "./pages/SchedulePage";
+import TextPage from "./pages/TextPage";
 import scheduleQuery from "./queries/scheduleQuery";
 
 function createConnect(schema) {
@@ -21,11 +21,11 @@ function routeAssetGenerator(router, schema) {
   const connect = createConnect(schema);
 
   router.get("/generate-assets", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(GenerateAssets())));
+    res.status(200).send(renderMarkup(renderToString(<IndexPage />)));
   });
 
   router.get("/generate-assets/badges", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(GenerateBadges())));
+    res.status(200).send(renderMarkup(renderToString(<BadgesPage />)));
   });
 
   // TODO: Fetch the data here
@@ -59,11 +59,11 @@ function routeAssetGenerator(router, schema) {
   });
 
   router.get("/generate-assets/presentation", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(GeneratePresentation())));
+    res.status(200).send(renderMarkup(renderToString(<PresentationPage />)));
   });
 
   router.get("/generate-assets/text", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(GenerateText())));
+    res.status(200).send(renderMarkup(renderToString(<TextPage />)));
   });
 }
 
