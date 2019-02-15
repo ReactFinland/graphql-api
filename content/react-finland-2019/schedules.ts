@@ -113,16 +113,12 @@ const presentationDay1: Schedule = {
     {
       begin: "11:15",
       end: "12:15",
-      title: "Testing",
-      sessions: [
-        talks.juhaLinnanen,
-        talks.maaretPyhajarvi,
-        talks.manuelMatuzovic,
-      ],
+      title: "Design Systems",
+      sessions: [talks.andreyOkonetchnikov, talks.varyaStepanova],
     },
     {
       begin: "12:15",
-      end: "13:30",
+      end: "13:15",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -133,10 +129,14 @@ const presentationDay1: Schedule = {
       ],
     },
     {
-      begin: "13:30",
+      begin: "13:15",
       end: "14:30",
-      title: "Design Systems",
-      sessions: [talks.andreyOkonetchnikov, talks.varyaStepanova],
+      title: "Testing",
+      sessions: [
+        talks.juhaLinnanen,
+        talks.maaretPyhajarvi,
+        talks.manuelMatuzovic,
+      ],
     },
     {
       begin: "14:30",
@@ -234,12 +234,12 @@ const presentationDay2: Schedule = {
     {
       begin: "11:15",
       end: "12:15",
-      title: "Tooling",
-      sessions: [talks.carolynStransky, talks.monicaLent],
+      title: "Styling",
+      sessions: [talks.artemSapegin, talks.artemZakharchenko],
     },
     {
       begin: "12:15",
-      end: "13:30",
+      end: "13:15",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -249,10 +249,10 @@ const presentationDay2: Schedule = {
       ],
     },
     {
-      begin: "13:30",
+      begin: "13:15",
       end: "14:30",
-      title: "Design Systems",
-      sessions: [talks.artemSapegin, talks.artemZakharchenko],
+      title: "Tooling",
+      sessions: [talks.carolynStransky, talks.monicaLent],
     },
     {
       begin: "14:30",
