@@ -28,9 +28,7 @@ function routeAssetGenerator(router, schema) {
     res.status(200).send(renderMarkup(renderToString(<BadgesPage />)));
   });
 
-  // TODO: Fetch the data here
   router.get("/generate-assets/schedule", async (req, res) => {
-    // TODO: Parse context data from a query and expose it to UI
     const result = await connect(
       scheduleQuery,
       {
