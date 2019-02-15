@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import * as path from "path";
+import "reflect-metadata"; // Needed by type-graphql
 
 // FIXME: Resolve against project root, not module as this is brittle
 dotenv.config({

@@ -1,5 +1,4 @@
 import { Url } from "@okgrow/graphql-scalars";
-import "reflect-metadata";
 import { buildSchema } from "type-graphql";
 import { ConferenceResolver } from "./Conference";
 import { ContactResolver } from "./Contact";
