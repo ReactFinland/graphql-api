@@ -1,11 +1,14 @@
 import { graphql } from "graphql";
 import process from "process";
+import * as React from "react";
 import { renderToString } from "react-dom/server";
+import GlobalStyles from "./components/GlobalStyles";
 import GenerateBadges from "./generate-assets/badges";
 import GenerateAssets from "./generate-assets/index";
 import GeneratePresentation from "./generate-assets/presentation";
-import GenerateSchedule from "./generate-assets/schedule";
 import GenerateText from "./generate-assets/text";
+import SchedulePage from "./pages/SchedulePage";
+import scheduleQuery from "./queries/scheduleQuery";
 
 function createConnect(schema) {
   const connect = (query, context) =>
@@ -21,16 +24,38 @@ function routeAssetGenerator(router, schema) {
     res.status(200).send(renderMarkup(renderToString(GenerateAssets())));
   });
 
-  router.get("/generate-assets/badges", async (req, res) => {
-    res
-      .status(200)
-      .send(renderMarkup(renderToString(await GenerateBadges(connect))));
+  router.get("/generate-assets/badges", (req, res) => {
+    res.status(200).send(renderMarkup(renderToString(GenerateBadges())));
   });
 
+  // TODO: Fetch the data here
   router.get("/generate-assets/schedule", async (req, res) => {
-    res
-      .status(200)
-      .send(renderMarkup(renderToString(await GenerateSchedule(connect))));
+    // TODO: Parse context data from a query and expose it to UI
+    const result = await connect(
+      scheduleQuery,
+      {
+        conferenceSeriesId: "graphql-finland",
+        conferenceId: "graphql-finland-2018",
+        day: "2018-10-19",
+      }
+    );
+    const data = result.data || {};
+    const theme = data.theme;
+
+    res.status(200).send(
+      renderMarkup(
+        renderToString(
+          <>
+            <GlobalStyles theme={theme} />
+            <SchedulePage
+              intervals={data.schedule.intervals}
+              conferenceLogo={theme.whiteLogoWithText.url}
+              theme={theme}
+            />
+          </>
+        )
+      )
+    );
   });
 
   router.get("/generate-assets/presentation", (req, res) => {

@@ -7,7 +7,8 @@ const Button = styled.button`
   padding: 1em;
 `;
 
-async function GenerateBadges(connect) {
+// TODO: This should receive data needed to render the badges
+function GenerateBadges() {
   // TODO: Add a private API for fetching tickets. Port the initial
   // solution from the old asset generator
   /*
