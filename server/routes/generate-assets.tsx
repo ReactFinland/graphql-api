@@ -8,18 +8,9 @@ import IndexPage from "./pages/IndexPage";
 import PresentationPage from "./pages/PresentationPage";
 import SchedulePage from "./pages/SchedulePage";
 import TextPage from "./pages/TextPage";
-import scheduleQuery from "./queries/scheduleQuery";
+import * as queries from "./queries";
 
-function createConnect(schema) {
-  const connect = (query, context) =>
-    graphql(schema, query, null, null, context);
-
-  return connect;
-}
-
-function routeAssetGenerator(router, schema) {
-  const connect = createConnect(schema);
-
+async function routeAssetGenerator(router, schema) {
   router.get("/generate-assets", (req, res) => {
     res.status(200).send(renderMarkup(renderToString(<IndexPage />)));
   });
@@ -29,16 +20,12 @@ function routeAssetGenerator(router, schema) {
   });
 
   router.get("/generate-assets/schedule", async (req, res) => {
-    const result = await connect(
-      scheduleQuery,
-      {
-        conferenceSeriesId: "graphql-finland",
-        conferenceId: "graphql-finland-2018",
-        day: "2018-10-19",
-      }
-    );
-    const data = result.data || {};
-    const theme = data.theme;
+    const connect = await createConnect(schema, queries, {
+      conferenceSeriesId: "graphql-finland",
+      conferenceId: "graphql-finland-2018",
+      day: "2018-10-19",
+    });
+    const { schedule, theme } = connect(queries.scheduleQuery);
 
     res.status(200).send(
       renderMarkup(
@@ -46,7 +33,7 @@ function routeAssetGenerator(router, schema) {
           <>
             <GlobalStyles theme={theme} />
             <SchedulePage
-              intervals={data.schedule.intervals}
+              intervals={schedule.intervals}
               conferenceLogo={theme.whiteLogoWithText.url}
               theme={theme}
             />
@@ -63,6 +50,37 @@ function routeAssetGenerator(router, schema) {
   router.get("/generate-assets/text", (req, res) => {
     res.status(200).send(renderMarkup(renderToString(<TextPage />)));
   });
+}
+
+// Cache query results so connect can be used in a synchronous way
+// later in the code.
+async function createConnect(
+  schema,
+  queries: { [key: string]: string },
+  context
+) {
+  const results = {};
+
+  await Promise.all(
+    Object.values(queries).map(query =>
+      graphql(schema, query, null, null, context).then(result => ({
+        query,
+        data: result.data,
+      }))
+    )
+  ).then(values => {
+    values.forEach(({ query, data }) => {
+      results[query] = data;
+    });
+  });
+
+  await Object.values(queries).forEach(async query => {
+    const result = await graphql(schema, query, null, null, context);
+
+    results[query] = result.data;
+  });
+
+  return query => results[query];
 }
 
 function renderMarkup(html) {
