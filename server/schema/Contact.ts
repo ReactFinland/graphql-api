@@ -100,8 +100,9 @@ export class ContactResolver {
 
   @FieldResolver(_ => Image)
   public image(@Root() contact: Contact, @Ctx() ctx: IContext) {
+    // FIXME: Figure out why ctx can be missing
     return {
-      url: `${ctx.mediaUrl}/${contact.image.url}`,
+      url: `${ctx ? ctx.mediaUrl : "/media"}/${contact.image.url}`,
     };
   }
 

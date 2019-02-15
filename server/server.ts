@@ -1,6 +1,3 @@
-// https://github.com/amazeeio/lagoon/blob/master/services/api/src/server.js
-import * as http from "http";
-import * as util from "util";
 import createApp from "./app";
 import logger from "./logger";
 
@@ -19,14 +16,19 @@ async function createServer() {
 
   const port = normalizePort(process.env.PORT || "3000");
   const app = await createApp();
-  const server = http.createServer(app);
+  let server;
 
-  const listen = util.promisify(server.listen).bind(server);
-  await listen(port);
+  try {
+    server = app.listen(port, () =>
+      logger.debug(
+        `Finished booting the server. The API is reachable at http://localhost:${port.toString()}/graphql.`
+      )
+    );
+  } catch (err) {
+    logger.error(err);
 
-  logger.debug(
-    `Finished booting the server. The API is reachable at http://localhost:${port.toString()}/graphql.`
-  );
+    process.exit(1);
+  }
 
   // eslint-disable-line
   return server;

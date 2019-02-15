@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "jsx": "react",
     "lib": ["es2017", "esnext.asynciterable"],
     "target": "es2017",
     "strict": true,

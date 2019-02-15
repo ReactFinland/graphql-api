@@ -1,5 +1,33 @@
 import ical from "ical-generator";
-import { Schedule } from "./schema/Schedule";
+import conferences from "../conferences";
+import { Schedule } from "../schema/Schedule";
+
+function routeCalendar(router) {
+  router.all("/calendar/:id", (req, res) => {
+    const conference = conferences[req.params.id];
+
+    if (conference) {
+      calendar({
+        filename: `calendar-${conference.id}`,
+        title: conference.name,
+        schedules: conference.schedules,
+      })(req, res);
+    } else {
+      res.status(404).end("Not found");
+    }
+  });
+
+  // TODO: Make a better abstraction for this
+  const calendarFile = "calendar-2019.ics";
+  router.all(
+    `/${calendarFile}`,
+    calendar({
+      filename: calendarFile,
+      title: "React Finland 2019",
+      schedules: conferences["react-finland-2019"].schedules,
+    })
+  );
+}
 
 function calendar({
   filename,
@@ -52,4 +80,4 @@ function resolveLocation(location) {
     : defaultLocation;
 }
 
-export default calendar;
+export default routeCalendar;

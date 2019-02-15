@@ -1,5 +1,4 @@
-import { SessionType } from "../../../server/schema";
-import { Session } from "../../../server/schema/Session";
+import { Session, SessionType } from "../../../server/schema/Session";
 import Keyword from "../../../server/schema/keywords";
 import speaker from "../../people/ellie-day";
 
