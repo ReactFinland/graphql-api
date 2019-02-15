@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import * as React from "react";
 import Schedule from "../components/Schedule";
+import Sponsors from "../components/Sponsors";
 
 const SchedulePageContainer = styled.div`
   background-image: linear-gradient(
@@ -47,7 +48,7 @@ const SchedulePageContent = styled.div`
   z-index: 1;
 `;
 
-function SchedulePage({ intervals, conferenceLogo, theme }) {
+function SchedulePage({ intervals, conferenceLogo, theme, sponsors }) {
   if (!intervals) {
     return null;
   }
@@ -59,7 +60,7 @@ function SchedulePage({ intervals, conferenceLogo, theme }) {
       <SchedulePageContent>
         <Schedule theme={theme} intervals={intervals} />
       </SchedulePageContent>
-      {/*<SponsorsContainer /> FIXME */}
+      <Sponsors {...sponsors} />
     </SchedulePageContainer>
   );
 }

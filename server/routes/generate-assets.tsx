@@ -26,6 +26,7 @@ async function routeAssetGenerator(router, schema) {
       day: "2018-10-19",
     });
     const { schedule, theme } = connect(queries.scheduleQuery);
+    const sponsors = connect(queries.sponsorQuery).conference;
 
     res.status(200).send(
       renderMarkup(
@@ -36,6 +37,7 @@ async function routeAssetGenerator(router, schema) {
               intervals={schedule.intervals}
               conferenceLogo={theme.whiteLogoWithText.url}
               theme={theme}
+              sponsors={sponsors}
             />
           </>
         )
@@ -63,10 +65,16 @@ async function createConnect(
 
   await Promise.all(
     Object.values(queries).map(query =>
-      graphql(schema, query, null, null, context).then(result => ({
-        query,
-        data: result.data,
-      }))
+      graphql(schema, query, null, null, context).then(({ data, errors }) => {
+        if (errors) {
+          throw new Error(errors && errors.toString());
+        }
+
+        return {
+          query,
+          data,
+        };
+      })
     )
   ).then(values => {
     values.forEach(({ query, data }) => {
