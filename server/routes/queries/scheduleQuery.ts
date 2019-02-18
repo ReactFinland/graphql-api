@@ -1,5 +1,5 @@
 const scheduleQuery = `
-query PageQuery($conferenceId: ID!, $day: String!) {
+query ScheduleQuery($conferenceId: ID!, $day: String!) {
   schedule(conferenceId: $conferenceId, day: $day) {
     day
     description

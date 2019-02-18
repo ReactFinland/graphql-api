@@ -2,6 +2,7 @@ import { graphql } from "graphql";
 import process from "process";
 import * as React from "react";
 import { renderToString } from "react-dom/server";
+import ConferenceSelector from "./components/ConferenceSelector";
 import GlobalStyles from "./components/GlobalStyles";
 import BadgesPage from "./pages/BadgesPage";
 import IndexPage from "./pages/IndexPage";
@@ -22,7 +23,12 @@ async function routeAssetGenerator(router, schema) {
 
   router.get("/generate-assets/schedule", async (req, res) => {
     let connect;
-    const day = "2019-04-25";
+    // TODO: Parse these from query + expose them to the user
+    const selection = {
+      conferenceSeriesId: "react-finland",
+      conferenceId: "react-finland-2019",
+      day: "2019-04-25",
+    };
     try {
       connect = await createConnect(
         schema,
@@ -31,11 +37,7 @@ async function routeAssetGenerator(router, schema) {
           themeQuery: queries.themeQuery,
           sponsorQuery: queries.sponsorQuery,
         },
-        {
-          conferenceSeriesId: "react-finland",
-          conferenceId: "react-finland-2019",
-          day,
-        }
+        selection
       );
     } catch (err) {
       return res.status(404);
@@ -44,14 +46,20 @@ async function routeAssetGenerator(router, schema) {
     const { schedule } = connect(queries.scheduleQuery);
     const { theme } = connect(queries.themeQuery);
     const sponsors = connect(queries.sponsorQuery).conference;
+    const conferenceSeries = connect(queries.conferenceDayQuery).allSeries;
 
+    // TODO: Set up interactive rendering for the selector
     res.status(200).send(
       renderMarkup(
         renderToString(
           <>
+            <ConferenceSelector
+              conferenceSeries={conferenceSeries}
+              selection={selection}
+            />
             <GlobalStyles theme={theme} />
             <SchedulePage
-              day={parseDay(day)}
+              day={parseDay(selection.day)}
               intervals={schedule.intervals}
               theme={theme}
               sponsors={sponsors}
