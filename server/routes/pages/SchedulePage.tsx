@@ -48,10 +48,7 @@ const SchedulePageContent = styled.div`
   margin: 0;
   margin-left: 0.5cm;
   margin-right: 0.5cm;
-  padding-left: 0.25cm;
-  padding-top: 0.25cm;
-  padding-right: 0cm;
-  padding-bottom: 0.25cm;
+  padding: 0.25cm;
   background-color: white;
   height: 11.5cm;
   clip-path: polygon(0 0, 100% 1cm, 100% 100%, 0 calc(100% - 1cm));
