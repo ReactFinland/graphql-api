@@ -56,7 +56,6 @@ function Schedule({ theme, intervals }) {
     return null;
   }
 
-  // TODO: How to handle multiple sessions at once?
   return (
     <ScheduleContainer>
       {intervals.map(({ begin, end, sessions }, i) => (
@@ -82,7 +81,7 @@ function Schedule({ theme, intervals }) {
 function SessionTitle({ title, type, people }) {
   return (
     <h3>
-      {title} {people && `- ${people[0].name}`} <ScheduleIcon type={type} />
+      {title} {people && `― ${people[0].name}`} <ScheduleIcon type={type} />
     </h3>
   );
 }

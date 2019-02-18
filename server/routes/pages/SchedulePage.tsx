@@ -58,7 +58,7 @@ const SchedulePageContent = styled.div`
   z-index: 1;
 `;
 
-function SchedulePage({ intervals, theme, sponsors }) {
+function SchedulePage({ intervals, theme, sponsors, day }) {
   if (!intervals) {
     return null;
   }
@@ -69,7 +69,7 @@ function SchedulePage({ intervals, theme, sponsors }) {
       secondaryColor={theme.secondaryColor}
     >
       <SchedulePageLogo src={theme.whiteLogoWithText.url} />
-      <SchedulePageHeader>Schedule</SchedulePageHeader>
+      <SchedulePageHeader>Schedule{day ? ` ― ${day}` : ""}</SchedulePageHeader>
       <SchedulePageContent>
         <Schedule theme={theme} intervals={intervals} />
       </SchedulePageContent>

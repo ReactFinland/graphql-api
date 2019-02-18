@@ -22,6 +22,7 @@ async function routeAssetGenerator(router, schema) {
 
   router.get("/generate-assets/schedule", async (req, res) => {
     let connect;
+    const day = "2019-04-25";
     try {
       connect = await createConnect(
         schema,
@@ -33,7 +34,7 @@ async function routeAssetGenerator(router, schema) {
         {
           conferenceSeriesId: "react-finland",
           conferenceId: "react-finland-2019",
-          day: "2019-04-25",
+          day,
         }
       );
     } catch (err) {
@@ -50,6 +51,7 @@ async function routeAssetGenerator(router, schema) {
           <>
             <GlobalStyles theme={theme} />
             <SchedulePage
+              day={parseDay(day)}
               intervals={schedule.intervals}
               theme={theme}
               sponsors={sponsors}
@@ -117,6 +119,14 @@ function dayToFinnishLocale(day: string): string {
   const date = new Date(day);
 
   return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+}
+
+// This uses Finnish day format given ICU (i18n) isn't default in Node and
+// it's complex to set up.
+function parseDay(day) {
+  const d = new Date(day);
+
+  return `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
 }
 
 // Cache query results so connect can be used in a synchronous way
