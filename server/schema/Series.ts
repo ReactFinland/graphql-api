@@ -20,8 +20,8 @@ export class Series {
   @Field(_ => String)
   public name!: string;
 
-  @Field(_ => [String])
-  public conferences!: [string];
+  @Field(_ => [Conference])
+  public conferences!: [Conference];
 }
 
 @Resolver(_ => Series)
@@ -42,6 +42,8 @@ export class SeriesResolver {
 
   @FieldResolver(_ => [Conference])
   public conferences(@Root() series: Series) {
-    return series.conferences.map(conferenceId => conferences[conferenceId]);
+    return Object.values(conferences).filter(
+      conference => series.name === conference.series
+    );
   }
 }

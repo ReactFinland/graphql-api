@@ -37,6 +37,7 @@ const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
 const conference: Conference = {
   id: "graphql-finland-2018",
+  series: "GraphQL Finland",
   name: "GraphQL Finland 2018",
   year: "2018",
   websiteUrl: "https://graphql-finland.fi/",

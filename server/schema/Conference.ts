@@ -23,6 +23,9 @@ export class Conference {
   public id!: string;
 
   @Field(_ => String)
+  public series!: string;
+
+  @Field(_ => String)
   public name!: string;
 
   @Field(_ => String)

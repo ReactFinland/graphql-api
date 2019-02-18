@@ -53,6 +53,7 @@ const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
 const conference: Conference = {
   id: "react-finland-2019",
+  series: "React Finland",
   name: "React Finland 2019",
   year: "2019",
   websiteUrl: "https://react-finland.fi/",

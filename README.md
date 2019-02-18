@@ -56,6 +56,12 @@ To see the query API:
   page(id: "about") {
     intro
   }
+  allSeries {
+    name
+    conferences {
+      name
+    }
+  }
 }
 ```
 
