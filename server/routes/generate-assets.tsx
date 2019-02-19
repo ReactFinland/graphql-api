@@ -119,7 +119,7 @@ async function routeAssetGenerator(router, schema) {
               />
             </Interactive>
             <SchedulePage
-              day={parseDay(selection.day)}
+              day={dayToFinnishLocale(selection.day)}
               intervals={schedule.intervals}
               theme={theme}
               sponsors={sponsors}
@@ -241,19 +241,12 @@ async function routeAssetGenerator(router, schema) {
   });
 }
 
-// TODO: Combine with below
+// This uses Finnish day format given ICU (i18n) isn't default in Node and
+// it's complex to set up.
 function dayToFinnishLocale(day: string): string {
   const date = new Date(day);
 
   return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
-}
-
-// This uses Finnish day format given ICU (i18n) isn't default in Node and
-// it's complex to set up.
-function parseDay(day) {
-  const d = new Date(day);
-
-  return `${d.getDate()}.${d.getMonth() + 1}.${d.getFullYear()}`;
 }
 
 // Cache query results so connect can be used in a synchronous way
