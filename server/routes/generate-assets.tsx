@@ -34,6 +34,7 @@ async function routeAssetGenerator(router, schema) {
       connect = await createConnect(
         schema,
         {
+          conferenceDayQuery: queries.conferenceDayQuery,
           scheduleQuery: queries.scheduleQuery,
           themeQuery: queries.themeQuery,
           sponsorQuery: queries.sponsorQuery,
