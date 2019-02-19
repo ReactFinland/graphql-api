@@ -41,8 +41,7 @@
     "tsc-watch": "^1.1.39",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "^3.3.3"
+    "tslint-plugin-prettier": "^2.0.1"
   },
   "repository": {
     "type": "git",
@@ -76,6 +75,7 @@
     "request": "^2.88.0",
     "rimraf": "^2.6.3",
     "type-graphql": "^0.16.0",
+    "typescript": "^3.3.3",
     "uglify-es": "^3.3.9",
     "winston": "^3.2.1"
   },
