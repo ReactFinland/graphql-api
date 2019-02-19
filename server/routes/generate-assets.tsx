@@ -23,11 +23,19 @@ async function routeAssetGenerator(router, schema) {
   router.get("/generate-assets/schedule", async (req, res) => {
     let connect;
     try {
-      connect = await createConnect(schema, queries, {
-        conferenceSeriesId: "react-finland",
-        conferenceId: "react-finland-2019",
-        day: "2019-04-25",
-      });
+      connect = await createConnect(
+        schema,
+        {
+          scheduleQuery: queries.scheduleQuery,
+          themeQuery: queries.themeQuery,
+          sponsorQuery: queries.sponsorQuery,
+        },
+        {
+          conferenceSeriesId: "react-finland",
+          conferenceId: "react-finland-2019",
+          day: "2019-04-25",
+        }
+      );
     } catch (err) {
       return res.status(404);
     }
