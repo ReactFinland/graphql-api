@@ -1,5 +1,5 @@
 const scheduleQuery = `
-query PageQuery($conferenceSeriesId: ID!, $conferenceId: ID!, $day: String!) {
+query PageQuery($conferenceId: ID!, $day: String!) {
   schedule(conferenceId: $conferenceId, day: $day) {
     day
     description
@@ -13,15 +13,6 @@ query PageQuery($conferenceSeriesId: ID!, $conferenceId: ID!, $day: String!) {
           name
         }
       }
-    }
-  }
-  theme(conferenceId: $conferenceSeriesId) {
-    primaryColor
-    secondaryColor
-    textColor
-    backgroundColor
-    whiteLogoWithText {
-      url
     }
   }
 }

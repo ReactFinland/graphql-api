@@ -32,7 +32,8 @@ async function routeAssetGenerator(router, schema) {
       return res.status(404);
     }
 
-    const { schedule, theme } = connect(queries.scheduleQuery);
+    const { schedule } = connect(queries.scheduleQuery);
+    const { theme } = connect(queries.themeQuery);
     const sponsors = connect(queries.sponsorQuery).conference;
 
     res.status(200).send(
@@ -42,7 +43,6 @@ async function routeAssetGenerator(router, schema) {
             <GlobalStyles theme={theme} />
             <SchedulePage
               intervals={schedule.intervals}
-              conferenceLogo={theme.whiteLogoWithText.url}
               theme={theme}
               sponsors={sponsors}
             />
@@ -66,8 +66,12 @@ async function routeAssetGenerator(router, schema) {
       // TODO: Parse these from query + expose them to the user
       connect = await createConnect(
         schema,
-        { speakerTalkQuery: queries.speakerTalkQuery },
         {
+          speakerTalkQuery: queries.speakerTalkQuery,
+          themeQuery: queries.themeQuery,
+        },
+        {
+          conferenceSeriesId: "react-finland",
           conferenceId: "react-finland-2019",
           contactName: "Carolyn Stransky",
         }
@@ -77,12 +81,18 @@ async function routeAssetGenerator(router, schema) {
     }
 
     const { contact } = connect(queries.speakerTalkQuery);
+    const { theme } = connect(queries.themeQuery);
 
-    res
-      .status(200)
-      .send(
-        renderMarkup(renderToString(<SpeakerTweetPage speaker={contact} />))
-      );
+    res.status(200).send(
+      renderMarkup(
+        renderToString(
+          <>
+            <GlobalStyles theme={theme} />
+            <SpeakerTweetPage speaker={contact} theme={theme} />
+          </>
+        )
+      )
+    );
   });
 }
 
