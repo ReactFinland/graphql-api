@@ -69,6 +69,7 @@ async function routeAssetGenerator(router, schema) {
         {
           speakerTalkQuery: queries.speakerTalkQuery,
           themeQuery: queries.themeQuery,
+          conferenceDaysQuery: queries.conferenceDaysQuery,
         },
         {
           conferenceSeriesId: "react-finland",
@@ -80,6 +81,10 @@ async function routeAssetGenerator(router, schema) {
       return res.status(404);
     }
 
+    const {
+      conference: { schedules },
+    } = connect(queries.conferenceDaysQuery);
+    const conferenceDays = schedules.map(({ day }) => dayToFinnishLocale(day));
     const { contact } = connect(queries.speakerTalkQuery);
     const { theme } = connect(queries.themeQuery);
 
@@ -88,12 +93,22 @@ async function routeAssetGenerator(router, schema) {
         renderToString(
           <>
             <GlobalStyles theme={theme} />
-            <SpeakerTweetPage speaker={contact} theme={theme} />
+            <SpeakerTweetPage
+              speaker={contact}
+              theme={theme}
+              conferenceDays={conferenceDays}
+            />
           </>
         )
       )
     );
   });
+}
+
+function dayToFinnishLocale(day: string): string {
+  const date = new Date(day);
+
+  return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
 }
 
 // Cache query results so connect can be used in a synchronous way

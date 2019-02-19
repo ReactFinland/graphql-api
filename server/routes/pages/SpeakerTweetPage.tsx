@@ -25,11 +25,18 @@ const TweetPageContainer = styled.div`
   height: 440px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-columns: 1.1fr 0.9fr;
+  color: white;
 `;
 
 const TweetInfoContainer = styled.div`
   padding: 3em;
+`;
+
+const TweetRow = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 `;
 
 const TweetLogo = styled.img`
@@ -37,33 +44,45 @@ const TweetLogo = styled.img`
   margin-left: -0.5em;
 `;
 
+const TweetConferenceDays = styled.h3``;
+
 const TweetImage = styled.img`
   width: 100%;
   box-sizing: border-box;
   padding: 2em;
-  clip-path: circle(10.5em at center);
+  clip-path: circle(10em at center);
 `;
 
 const TweetSpeakerName = styled.h1`
   padding-top: 1em;
-  color: white;
   font-size: 300%;
 `;
 
 const TweetSpeakerTalk = styled.h2`
   padding-top: 2em;
-  color: white;
   font-size: 200%;
 `;
 
-function SpeakerTweetPage({ speaker: { name, image, talks }, theme }) {
+function SpeakerTweetPage({
+  conferenceDays,
+  speaker: { name, image, talks },
+  theme,
+}) {
+  const firstDay = conferenceDays[0];
+  const lastDay = conferenceDays[conferenceDays.length - 1];
+
   return (
     <TweetPageContainer
       primaryColor={theme.primaryColor}
       secondaryColor={theme.secondaryColor}
     >
       <TweetInfoContainer>
-        <TweetLogo src={theme.whiteLogoWithText.url} />
+        <TweetRow>
+          <TweetLogo src={theme.whiteLogoWithText.url} />
+          <TweetConferenceDays>
+            {firstDay}-{lastDay}
+          </TweetConferenceDays>
+        </TweetRow>
         <TweetSpeakerName>{name}</TweetSpeakerName>
         <TweetSpeakerTalk>{talks[0].title}</TweetSpeakerTalk>
       </TweetInfoContainer>
