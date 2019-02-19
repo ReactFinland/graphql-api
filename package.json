@@ -64,6 +64,7 @@
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "express-http-to-https": "^1.1.4",
+    "fuse-box": "^3.7.1",
     "graphql": "^14.1.1",
     "hex-to-rgba": "^1.0.2",
     "ical-generator": "^1.5.0",
@@ -77,6 +78,7 @@
     "request": "^2.88.0",
     "rimraf": "^2.6.3",
     "type-graphql": "^0.16.0",
+    "uglify-es": "^3.3.9",
     "winston": "^3.2.1"
   },
   "husky": {

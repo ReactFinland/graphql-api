@@ -5,4 +5,5 @@ logs/
 build/
 media/scripts/
 .env
+.fusebox
 

@@ -1,7 +1,30 @@
 // import * as React from "react";
 // import * as fs from 'fs'
+import { FuseBox, QuantumPlugin } from "fuse-box";
 
 function Interactive({ children, component }) {
+  const fuse = FuseBox.init({
+    target: "browser@es6",
+    homeDir: __dirname,
+    output: "scripts/$name.js",
+    plugins: [
+      QuantumPlugin({
+        uglify: true,
+        treeshake: true,
+        bakeApiIntoBundle: component,
+      }),
+    ],
+  });
+
+  fuse
+    .bundle(component)
+    .cache(false)
+    .instructions(`> index.ts`);
+
+  // TODO: This is async -> Script path might not be ready on response
+  // due to a race condition -> Elevate bundling?
+  fuse.run().then(() => console.log("done"));
+
   /*
   try {
     const pathToComponent = require.resolve(component);
