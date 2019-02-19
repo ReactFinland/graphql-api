@@ -7,6 +7,7 @@ import BadgesPage from "./pages/BadgesPage";
 import IndexPage from "./pages/IndexPage";
 import PresentationPage from "./pages/PresentationPage";
 import SchedulePage from "./pages/SchedulePage";
+import SpeakerTweetPage from "./pages/SpeakerTweetPage";
 import TextPage from "./pages/TextPage";
 import * as queries from "./queries";
 
@@ -52,6 +53,10 @@ async function routeAssetGenerator(router, schema) {
 
   router.get("/generate-assets/text", (req, res) => {
     res.status(200).send(renderMarkup(renderToString(<TextPage />)));
+  });
+
+  router.get("/generate-assets/speaker-tweet", (req, res) => {
+    res.status(200).send(renderMarkup(renderToString(<SpeakerTweetPage />)));
   });
 }
 
