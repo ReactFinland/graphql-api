@@ -4,6 +4,7 @@ import * as React from "react";
 import { renderToString } from "react-dom/server";
 import ConferenceSelector from "./components/ConferenceSelector";
 import GlobalStyles from "./components/GlobalStyles";
+import Interactive from "./components/Interactive";
 import BadgesPage from "./pages/BadgesPage";
 import IndexPage from "./pages/IndexPage";
 import PresentationPage from "./pages/PresentationPage";
@@ -53,10 +54,12 @@ async function routeAssetGenerator(router, schema) {
       renderMarkup(
         renderToString(
           <>
-            <ConferenceSelector
-              conferenceSeries={conferenceSeries}
-              selection={selection}
-            />
+            <Interactive component="./ConferenceSelector">
+              <ConferenceSelector
+                conferenceSeries={conferenceSeries}
+                selection={selection}
+              />
+            </Interactive>
             <GlobalStyles theme={theme} />
             <SchedulePage
               day={parseDay(selection.day)}
