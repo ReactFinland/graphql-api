@@ -1,7 +1,11 @@
 import * as React from "react";
 
-function SpeakerTweetPage() {
-  return <div>generate tweet</div>;
+function SpeakerTweetPage({ speaker: { name, image, talks } }) {
+  return (
+    <div>
+      {name} <img src={image.url} />
+    </div>
+  );
 }
 
 export default SpeakerTweetPage;

@@ -21,12 +21,17 @@ async function routeAssetGenerator(router, schema) {
   });
 
   router.get("/generate-assets/schedule", async (req, res) => {
-    // TODO: Parse these from query + expose them to the user
-    const connect = await createConnect(schema, queries, {
-      conferenceSeriesId: "react-finland",
-      conferenceId: "react-finland-2019",
-      day: "2019-04-25",
-    });
+    let connect;
+    try {
+      connect = await createConnect(schema, queries, {
+        conferenceSeriesId: "react-finland",
+        conferenceId: "react-finland-2019",
+        day: "2019-04-25",
+      });
+    } catch (err) {
+      return res.status(404);
+    }
+
     const { schedule, theme } = connect(queries.scheduleQuery);
     const sponsors = connect(queries.sponsorQuery).conference;
 
@@ -55,8 +60,29 @@ async function routeAssetGenerator(router, schema) {
     res.status(200).send(renderMarkup(renderToString(<TextPage />)));
   });
 
-  router.get("/generate-assets/speaker-tweet", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(<SpeakerTweetPage />)));
+  router.get("/generate-assets/speaker-tweet", async (req, res) => {
+    let connect;
+    try {
+      // TODO: Parse these from query + expose them to the user
+      connect = await createConnect(
+        schema,
+        { speakerTalkQuery: queries.speakerTalkQuery },
+        {
+          conferenceId: "react-finland-2019",
+          contactName: "Carolyn Stransky",
+        }
+      );
+    } catch (err) {
+      return res.status(404);
+    }
+
+    const { contact } = connect(queries.speakerTalkQuery);
+
+    res
+      .status(200)
+      .send(
+        renderMarkup(renderToString(<SpeakerTweetPage speaker={contact} />))
+      );
   });
 }
 
