@@ -14,12 +14,68 @@ import TextPage from "./pages/TextPage";
 import * as queries from "./queries";
 
 async function routeAssetGenerator(router, schema) {
-  router.get("/generate-assets", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(<IndexPage />)));
+  router.get("/generate-assets", async (req, res) => {
+    let connect;
+
+    try {
+      connect = await createConnect(
+        schema,
+        {
+          themeQuery: queries.themeQuery,
+        },
+        {
+          conferenceSeriesId: "react-finland",
+        }
+      );
+    } catch (err) {
+      return res.status(404);
+    }
+
+    const { theme } = connect(queries.themeQuery);
+
+    res.status(200).send(
+      renderMarkup(
+        renderToString(
+          <>
+            <GlobalStyles theme={theme} />
+            <IndexPage />
+          </>
+        ),
+        req.url
+      )
+    );
   });
 
-  router.get("/generate-assets/badges", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(<BadgesPage />)));
+  router.get("/generate-assets/badges", async (req, res) => {
+    let connect;
+
+    try {
+      connect = await createConnect(
+        schema,
+        {
+          themeQuery: queries.themeQuery,
+        },
+        {
+          conferenceSeriesId: "react-finland",
+        }
+      );
+    } catch (err) {
+      return res.status(404);
+    }
+
+    const { theme } = connect(queries.themeQuery);
+
+    res.status(200).send(
+      renderMarkup(
+        renderToString(
+          <>
+            <GlobalStyles theme={theme} />
+            <BadgesPage />
+          </>
+        ),
+        req.url
+      )
+    );
   });
 
   router.get("/generate-assets/schedule", async (req, res) => {
@@ -55,13 +111,13 @@ async function routeAssetGenerator(router, schema) {
       renderMarkup(
         renderToString(
           <>
+            <GlobalStyles theme={theme} />
             <Interactive component="./ConferenceSelector">
               <ConferenceSelector
                 conferenceSeries={conferenceSeries}
                 selection={selection}
               />
             </Interactive>
-            <GlobalStyles theme={theme} />
             <SchedulePage
               day={parseDay(selection.day)}
               intervals={schedule.intervals}
@@ -69,17 +125,74 @@ async function routeAssetGenerator(router, schema) {
               sponsors={sponsors}
             />
           </>
-        )
+        ),
+        req.url
       )
     );
   });
 
-  router.get("/generate-assets/presentation", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(<PresentationPage />)));
+  router.get("/generate-assets/presentation", async (req, res) => {
+    let connect;
+
+    try {
+      connect = await createConnect(
+        schema,
+        {
+          themeQuery: queries.themeQuery,
+        },
+        {
+          conferenceSeriesId: "react-finland",
+        }
+      );
+    } catch (err) {
+      return res.status(404);
+    }
+
+    const { theme } = connect(queries.themeQuery);
+
+    res.status(200).send(
+      renderMarkup(
+        renderToString(
+          <>
+            <GlobalStyles theme={theme} />
+            <PresentationPage />
+          </>
+        ),
+        req.url
+      )
+    );
   });
 
-  router.get("/generate-assets/text", (req, res) => {
-    res.status(200).send(renderMarkup(renderToString(<TextPage />)));
+  router.get("/generate-assets/text", async (req, res) => {
+    let connect;
+
+    try {
+      connect = await createConnect(
+        schema,
+        {
+          themeQuery: queries.themeQuery,
+        },
+        {
+          conferenceSeriesId: "react-finland",
+        }
+      );
+    } catch (err) {
+      return res.status(404);
+    }
+
+    const { theme } = connect(queries.themeQuery);
+
+    res.status(200).send(
+      renderMarkup(
+        renderToString(
+          <>
+            <GlobalStyles theme={theme} />
+            <TextPage />
+          </>
+        ),
+        req.url
+      )
+    );
   });
 
   router.get("/generate-assets/speaker-tweet", async (req, res) => {
@@ -121,12 +234,14 @@ async function routeAssetGenerator(router, schema) {
               conferenceDays={conferenceDays}
             />
           </>
-        )
+        ),
+        req.url
       )
     );
   });
 }
 
+// TODO: Combine with below
 function dayToFinnishLocale(day: string): string {
   const date = new Date(day);
 
@@ -178,12 +293,13 @@ async function createConnect(
   return query => results[query];
 }
 
-function renderMarkup(html) {
+function renderMarkup(html, hostname) {
   return `<!DOCTYPE html>
   <html>
     <head>
       <title>Asset generator</title>
       <meta charset="utf-8" />
+      <base href="${hostname}/" />
       ${reloadPage()}
     </head>
     <body>
