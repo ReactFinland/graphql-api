@@ -252,7 +252,11 @@ const presentationDay2: Schedule = {
       begin: "13:15",
       end: "14:30",
       title: "Tooling",
-      sessions: [talks.carolynStransky, talks.monicaLent],
+      sessions: [
+        talks.carolynStransky,
+        talks.monicaLent,
+        talks.bohdanLiashenko,
+      ],
     },
     {
       begin: "14:30",

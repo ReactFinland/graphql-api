@@ -2,6 +2,7 @@ export { default as andreyOkonetchnikov } from "./andrey-okonetchnikov";
 export { default as annaDoubkova } from "./anna-doubkova";
 export { default as artemSapegin } from "./artem-sapegin";
 export { default as artemZakharchenko } from "./artem-zakharchenko";
+export { default as bohdanLiashenko } from "./bohdan-liashenko";
 export { default as brunoLourenco } from "./bruno-lourenco";
 export { default as carolynStransky } from "./carolyn-stransky";
 export { default as davidKhourshid } from "./david-khourshid";
