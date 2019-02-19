@@ -76,7 +76,10 @@ function writeFiles(indexFiles, verbose) {
     const oldContent = fs.readFileSync(file.name, { encoding: "utf8" });
     const contentDiffers = file.content.trim() !== oldContent.trim();
 
-    if (contentDiffers && verbose && console.log(`Writing ${file.name}`)) {
+    if (contentDiffers) {
+      if (verbose) {
+        console.log(`Writing ${file.name}`);
+      }
       fs.writeFileSync(file.name, file.content, "utf8");
     }
   });
