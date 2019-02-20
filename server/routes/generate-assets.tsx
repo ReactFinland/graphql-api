@@ -18,64 +18,32 @@ async function routeAssetGenerator(router, schema) {
     let connect;
 
     try {
-      connect = await createConnect(
-        schema,
-        {
-          themeQuery: queries.themeQuery,
-        },
-        {
-          conferenceSeriesId: "react-finland",
-        }
-      );
+      connect = await createConnect(schema, [queries.themeQuery], {
+        conferenceSeriesId: "react-finland",
+      });
     } catch (err) {
       return res.status(404);
     }
 
     const { theme } = connect(queries.themeQuery);
 
-    res.status(200).send(
-      renderMarkup(
-        renderToString(
-          <>
-            <GlobalStyles theme={theme} />
-            <IndexPage />
-          </>
-        ),
-        req.url
-      )
-    );
+    res.status(200).send(renderPage(req.url, theme, <IndexPage />));
   });
 
   router.get("/generate-assets/badges", async (req, res) => {
     let connect;
 
     try {
-      connect = await createConnect(
-        schema,
-        {
-          themeQuery: queries.themeQuery,
-        },
-        {
-          conferenceSeriesId: "react-finland",
-        }
-      );
+      connect = await createConnect(schema, [queries.themeQuery], {
+        conferenceSeriesId: "react-finland",
+      });
     } catch (err) {
       return res.status(404);
     }
 
     const { theme } = connect(queries.themeQuery);
 
-    res.status(200).send(
-      renderMarkup(
-        renderToString(
-          <>
-            <GlobalStyles theme={theme} />
-            <BadgesPage />
-          </>
-        ),
-        req.url
-      )
-    );
+    res.status(200).send(renderPage(req.url, theme, <BadgesPage />));
   });
 
   router.get("/generate-assets/schedule", async (req, res) => {
@@ -89,12 +57,12 @@ async function routeAssetGenerator(router, schema) {
     try {
       connect = await createConnect(
         schema,
-        {
-          conferenceDayQuery: queries.conferenceDayQuery,
-          scheduleQuery: queries.scheduleQuery,
-          themeQuery: queries.themeQuery,
-          sponsorQuery: queries.sponsorQuery,
-        },
+        [
+          queries.conferenceDayQuery,
+          queries.scheduleQuery,
+          queries.themeQuery,
+          queries.sponsorQuery,
+        ],
         selection
       );
     } catch (err) {
@@ -108,25 +76,24 @@ async function routeAssetGenerator(router, schema) {
 
     // TODO: Set up interactive rendering for the selector
     res.status(200).send(
-      renderMarkup(
-        renderToString(
-          <>
-            <GlobalStyles theme={theme} />
-            <Interactive component="./ConferenceSelector">
-              <ConferenceSelector
-                conferenceSeries={conferenceSeries}
-                selection={selection}
-              />
-            </Interactive>
-            <SchedulePage
-              day={dayToFinnishLocale(selection.day)}
-              intervals={schedule.intervals}
-              theme={theme}
-              sponsors={sponsors}
+      renderPage(
+        req.url,
+        theme,
+        <>
+          {" "}
+          <Interactive component="./ConferenceSelector">
+            <ConferenceSelector
+              conferenceSeries={conferenceSeries}
+              selection={selection}
             />
-          </>
-        ),
-        req.url
+          </Interactive>
+          <SchedulePage
+            day={dayToFinnishLocale(selection.day)}
+            intervals={schedule.intervals}
+            theme={theme}
+            sponsors={sponsors}
+          />
+        </>
       )
     );
   });
@@ -135,64 +102,32 @@ async function routeAssetGenerator(router, schema) {
     let connect;
 
     try {
-      connect = await createConnect(
-        schema,
-        {
-          themeQuery: queries.themeQuery,
-        },
-        {
-          conferenceSeriesId: "react-finland",
-        }
-      );
+      connect = await createConnect(schema, [queries.themeQuery], {
+        conferenceSeriesId: "react-finland",
+      });
     } catch (err) {
       return res.status(404);
     }
 
     const { theme } = connect(queries.themeQuery);
 
-    res.status(200).send(
-      renderMarkup(
-        renderToString(
-          <>
-            <GlobalStyles theme={theme} />
-            <PresentationPage />
-          </>
-        ),
-        req.url
-      )
-    );
+    res.status(200).send(renderPage(req.url, theme, <PresentationPage />));
   });
 
   router.get("/generate-assets/text", async (req, res) => {
     let connect;
 
     try {
-      connect = await createConnect(
-        schema,
-        {
-          themeQuery: queries.themeQuery,
-        },
-        {
-          conferenceSeriesId: "react-finland",
-        }
-      );
+      connect = await createConnect(schema, [queries.themeQuery], {
+        conferenceSeriesId: "react-finland",
+      });
     } catch (err) {
       return res.status(404);
     }
 
     const { theme } = connect(queries.themeQuery);
 
-    res.status(200).send(
-      renderMarkup(
-        renderToString(
-          <>
-            <GlobalStyles theme={theme} />
-            <TextPage />
-          </>
-        ),
-        req.url
-      )
-    );
+    res.status(200).send(renderPage(req.url, theme, <TextPage />));
   });
 
   router.get("/generate-assets/speaker-tweet", async (req, res) => {
@@ -201,11 +136,11 @@ async function routeAssetGenerator(router, schema) {
       // TODO: Parse these from query + expose them to the user
       connect = await createConnect(
         schema,
-        {
-          speakerTalkQuery: queries.speakerTalkQuery,
-          themeQuery: queries.themeQuery,
-          conferenceDaysQuery: queries.conferenceDaysQuery,
-        },
+        [
+          queries.speakerTalkQuery,
+          queries.themeQuery,
+          queries.conferenceDaysQuery,
+        ],
         {
           conferenceSeriesId: "react-finland",
           conferenceId: "react-finland-2019",
@@ -223,21 +158,19 @@ async function routeAssetGenerator(router, schema) {
     const { contact } = connect(queries.speakerTalkQuery);
     const { theme } = connect(queries.themeQuery);
 
-    res.status(200).send(
-      renderMarkup(
-        renderToString(
-          <>
-            <GlobalStyles theme={theme} />
-            <SpeakerTweetPage
-              speaker={contact}
-              theme={theme}
-              conferenceDays={conferenceDays}
-            />
-          </>
-        ),
-        req.url
-      )
-    );
+    res
+      .status(200)
+      .send(
+        renderPage(
+          req.url,
+          theme,
+          <SpeakerTweetPage
+            speaker={contact}
+            theme={theme}
+            conferenceDays={conferenceDays}
+          />
+        )
+      );
   });
 }
 
@@ -251,15 +184,11 @@ function dayToFinnishLocale(day: string): string {
 
 // Cache query results so connect can be used in a synchronous way
 // later in the code.
-async function createConnect(
-  schema,
-  queries: { [key: string]: string },
-  context
-) {
+async function createConnect(schema, queries: string[], context) {
   const results = {};
 
   await Promise.all(
-    Object.values(queries).map(query =>
+    queries.map(query =>
       graphql(schema, query, null, null, context).then(({ data, errors }) => {
         if (errors) {
           throw new Error(errors && errors.toString());
@@ -284,6 +213,18 @@ async function createConnect(
   });
 
   return query => results[query];
+}
+
+function renderPage(baseUrl, theme, page) {
+  return renderMarkup(
+    renderToString(
+      <>
+        <GlobalStyles theme={theme} />
+        {page}
+      </>
+    ),
+    baseUrl
+  );
 }
 
 function renderMarkup(html, hostname) {
