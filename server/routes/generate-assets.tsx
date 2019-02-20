@@ -4,7 +4,7 @@ import * as React from "react";
 import { renderToString } from "react-dom/server";
 import ConferenceSelector from "./components/ConferenceSelector";
 import GlobalStyles from "./components/GlobalStyles";
-import Interactive from "./components/Interactive";
+import createInteractive from "./components/Interactive";
 import BadgesPage from "./pages/BadgesPage";
 import IndexPage from "./pages/IndexPage";
 import PresentationPage from "./pages/PresentationPage";
@@ -13,7 +13,9 @@ import SpeakerTweetPage from "./pages/SpeakerTweetPage";
 import TextPage from "./pages/TextPage";
 import * as queries from "./queries";
 
-async function routeAssetGenerator(router, schema) {
+async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
+  const Interactive = createInteractive(projectRoot, scriptRoot);
+
   router.get("/generate-assets", async (req, res) => {
     let connect;
 
@@ -73,6 +75,7 @@ async function routeAssetGenerator(router, schema) {
     const { theme } = connect(queries.themeQuery);
     const sponsors = connect(queries.sponsorQuery).conference;
     const conferenceSeries = connect(queries.conferenceDayQuery).allSeries;
+    const conferenceProps = { conferenceSeries, selection };
 
     // TODO: Set up interactive rendering for the selector
     res.status(200).send(
@@ -81,11 +84,8 @@ async function routeAssetGenerator(router, schema) {
         theme,
         <>
           {" "}
-          <Interactive component="./ConferenceSelector">
-            <ConferenceSelector
-              conferenceSeries={conferenceSeries}
-              selection={selection}
-            />
+          <Interactive component="./ConferenceSelector" props={conferenceProps}>
+            <ConferenceSelector {...conferenceProps} />
           </Interactive>
           <SchedulePage
             day={dayToFinnishLocale(selection.day)}

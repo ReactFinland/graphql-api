@@ -18,15 +18,17 @@ async function createRouter() {
   const schema = await generateSchema();
   const mediaUrl = "/media";
   const mediaPath = path.join(projectRoot, "media");
+  const scriptPath = path.join(projectRoot, ".scripts");
 
   router.use(cors());
   router.use(redirectToHTTPS([/localhost:(\d{4})/]));
 
   routeCalendar(router);
-  routeGenerateAssets(router, schema);
+  routeGenerateAssets(router, schema, projectRoot, scriptPath);
   routeGraphQL(router, schema, mediaUrl);
   routeMedia(router, mediaUrl, mediaPath);
   routePing(router);
+  router.use("/scripts", express.static(scriptPath));
 
   return router;
 }

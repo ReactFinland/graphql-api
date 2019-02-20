@@ -6,4 +6,5 @@ build/
 media/scripts/
 .env
 .fusebox
+.scripts
 

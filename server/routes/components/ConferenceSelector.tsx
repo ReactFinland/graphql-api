@@ -38,10 +38,12 @@ function getOptions(values, selectionId) {
 }
 
 function Select({ options }) {
+  // TODO: Figure out selections
+  // defaultValue={options.filter(({ selected }) => selected)[0].value}
   return (
-    <select onChange={value => console.log("changed to", value)}>
-      {options.map(({ value, label, selected }) => (
-        <option key={value} value={value} selected={selected}>
+    <select onChange={event => console.log("changed to", event)}>
+      {options.map(({ value, label }) => (
+        <option key={value} value={value}>
           {label}
         </option>
       ))}
