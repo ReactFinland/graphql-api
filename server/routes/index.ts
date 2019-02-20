@@ -7,6 +7,7 @@ import routeCalendar from "./calendar";
 import routeGenerateAssets from "./generate-assets";
 import routeGraphQL from "./graphql";
 import routeMedia from "./media";
+import routePing from "./ping";
 
 // FIXME: Resolve media path against project root, not module as this is brittle
 const projectRoot = path.resolve(__dirname, "../../../");
@@ -25,13 +26,7 @@ async function createRouter() {
   routeGenerateAssets(router, schema);
   routeGraphQL(router, schema, mediaUrl);
   routeMedia(router, mediaUrl, mediaPath);
-
-  // TODO: Move to a module
-  if (process.env.NODE_ENV !== "production") {
-    const serverVersion = new Date().toString();
-
-    router.get("/ping", (req, res) => res.status(200).json({ serverVersion }));
-  }
+  routePing(router);
 
   return router;
 }
