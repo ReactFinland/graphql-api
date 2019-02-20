@@ -1,12 +1,15 @@
-// import * as React from "react";
-// import * as fs from 'fs'
 import { FuseBox, QuantumPlugin } from "fuse-box";
+import * as path from "path";
+import * as React from "react";
 
 function Interactive({ children, component }) {
+  // TODO: Figure out where to write the script so the server can find it
+  // Maybe some dot directory in the project root for now?
+  const target = path.join("scripts", component) + ".js";
   const fuse = FuseBox.init({
     target: "browser@es6",
-    homeDir: __dirname,
-    output: "scripts/$name.js",
+    homeDir: __dirname, // TODO: Set this to tmp dir
+    output: target,
     plugins: [
       QuantumPlugin({
         uglify: true,
@@ -19,6 +22,7 @@ function Interactive({ children, component }) {
   fuse
     .bundle(component)
     .cache(false)
+    // TODO: This should point to a tmpfile in homeDir that loads component
     .instructions(`> index.ts`);
 
   // TODO: This is async -> Script path might not be ready on response
@@ -37,7 +41,12 @@ function Interactive({ children, component }) {
   }
 */
 
-  return children;
+  return (
+    <>
+      <script src={target} />
+      {children}
+    </>
+  );
 }
 
 // TODO
