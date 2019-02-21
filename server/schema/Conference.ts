@@ -31,6 +31,9 @@ export class Conference {
   @Field(_ => String)
   public year!: string;
 
+  @Field(_ => String)
+  public slogan!: string;
+
   @Field(_ => UrlScalar)
   public websiteUrl!: Url;
 

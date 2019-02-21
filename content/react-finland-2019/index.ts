@@ -56,6 +56,7 @@ const conference: Conference = {
   id: "react-finland-2019",
   series: "React Finland",
   name: "React Finland 2019",
+  slogan: "Learn More about React, Explore Finland.",
   year: "2019",
   websiteUrl: "https://react-finland.fi/",
   locations: [locations.paasitorni],

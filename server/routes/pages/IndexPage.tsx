@@ -7,6 +7,9 @@ function IndexPage() {
         <a href="./badges">Generate badges</a>
       </li>
       <li>
+        <a href="./header">Generate a header</a>
+      </li>
+      <li>
         <a href="./speaker-tweet">Generate speaker tweets</a>
       </li>
       <li>
