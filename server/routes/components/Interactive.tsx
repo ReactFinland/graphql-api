@@ -1,10 +1,13 @@
 import * as fs from "fs";
 import { FuseBox } from "fuse-box";
 import { trimStart } from "lodash";
+import mkdirp from "mkdirp";
 import * as path from "path";
 import * as React from "react";
 
 function createInteractive(projectRoot, scriptRoot) {
+  mkdirp.sync(scriptRoot);
+
   return function Interactive({ children, component, props }) {
     const indexName = `${component}.index.ts`;
     const indexPath = path.join(scriptRoot, indexName);
