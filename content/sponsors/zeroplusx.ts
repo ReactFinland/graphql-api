@@ -1,0 +1,25 @@
+import { Contact } from "../../server/schema/Contact";
+
+const sponsor: Contact = {
+  name: "0+X",
+  about:
+    "0+X is a technology company offering consultants and experts in full-stack, mobile and big-data development to companies in Scandinavia.",
+  image: {
+    url: "sponsors/zeroplusx.svg",
+  },
+  social: {
+    homepage: "https://www.0x.se/",
+    facebook: "",
+    instagram: "",
+    twitter: "",
+  },
+  location: {
+    country: {
+      name: "Sweden",
+      code: "SE",
+    },
+    city: "Stockholm",
+  },
+};
+
+export default sponsor;
