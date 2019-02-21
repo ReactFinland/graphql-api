@@ -1,4 +1,5 @@
 import { graphql } from "graphql";
+import { trimEnd } from "lodash";
 import process from "process";
 import * as React from "react";
 import { renderToString } from "react-dom/server";
@@ -279,13 +280,17 @@ function renderMarkup(html, hostname) {
     <head>
       <title>Asset generator</title>
       <meta charset="utf-8" />
-      <base href="${hostname}/" />
+      <base href="${cleanBase(hostname)}/" />
       ${reloadPage()}
     </head>
     <body>
       <div id="app">${html}</div>
     </body>
   </html>`;
+}
+
+function cleanBase(hostname) {
+  return trimEnd(hostname.split("?")[0], "/");
 }
 
 function reloadPage(): string {
