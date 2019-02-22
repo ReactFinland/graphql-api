@@ -11,7 +11,12 @@ if (!fs.existsSync(directory)) {
 }
 
 const ignorePing = format(info => {
-  if (isString(info.message) && info.message.includes("GET /ping ")) {
+  const message = info.message;
+
+  if (
+    isString(message) &&
+    ["GET /ping ", "GET /media"].some(match => message.includes(match))
+  ) {
     return false;
   }
 
