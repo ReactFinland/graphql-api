@@ -1,4 +1,4 @@
-import { json } from "body-parser";
+import { json, urlencoded } from "body-parser";
 import compression from "compression";
 import express from "express";
 import morgan from "morgan";
@@ -15,6 +15,13 @@ async function createApp() {
   app.use(
     json({
       limit: "50mb",
+    })
+  );
+
+  // Automatically decode POST.
+  app.use(
+    urlencoded({
+      extended: true,
     })
   );
 
