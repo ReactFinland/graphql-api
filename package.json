@@ -66,6 +66,7 @@
     "graphql": "^14.1.1",
     "hex-to-rgba": "^1.0.2",
     "ical-generator": "^1.5.0",
+    "isvalid": "^2.1.0",
     "lodash": "^4.17.11",
     "mkdirp": "^0.5.1",
     "morgan": "^1.9.1",

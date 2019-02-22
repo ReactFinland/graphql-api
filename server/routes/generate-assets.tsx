@@ -1,4 +1,5 @@
 import { graphql } from "graphql";
+import { validate } from "isvalid";
 import { trimEnd } from "lodash";
 import process from "process";
 import * as React from "react";
@@ -47,54 +48,73 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
     res.status(200).send(renderPage(req.url, theme, <BadgesPage />));
   });
 
-  router.get("/generate-assets/schedule", async (req, res) => {
-    // TODO: Parse these from query + expose them to the user
-    const selection = {
-      conferenceSeriesId: "react-finland",
-      conferenceId: "react-finland-2019",
-      day: "2019-04-25",
-    };
+  interface ScheduleQuery {
+    conferenceSeriesId: string;
+    conferenceId: string;
+    day: string;
+  }
 
-    const [err, connect] = await connection(
-      [
-        queries.conferenceDayQuery,
-        queries.scheduleQuery,
-        queries.themeQuery,
-        queries.sponsorQuery,
-      ],
-      selection
-    );
+  router.get(
+    "/generate-assets/schedule",
+    validate.query({
+      conferenceSeriesId: { type: String, default: "" },
+      conferenceId: { type: String, default: "" },
+      day: { type: String, default: "" },
+    }),
+    async (req, res) => {
+      const query: ScheduleQuery = req.query;
+      const parameters: ScheduleQuery = Object.values(query).some(Boolean)
+        ? query
+        : {
+            conferenceSeriesId: "react-finland",
+            conferenceId: "react-finland-2019",
+            day: "2019-04-25",
+          };
 
-    if (err) {
-      return res.status(400).send();
+      const [err, connect] = await connection(
+        [
+          queries.conferenceDayQuery,
+          queries.scheduleQuery,
+          queries.themeQuery,
+          queries.sponsorQuery,
+        ],
+        parameters
+      );
+
+      if (err) {
+        return res.status(400).send();
+      }
+
+      const { schedule } = connect(queries.scheduleQuery);
+      const { theme } = connect(queries.themeQuery);
+      const sponsors = connect(queries.sponsorQuery).conference;
+      const conferenceSeries = connect(queries.conferenceDayQuery).allSeries;
+      const conferenceProps = { conferenceSeries, selection: parameters };
+
+      // TODO: Set up interactive rendering for the selector
+      res.status(200).send(
+        renderPage(
+          req.url,
+          theme,
+          <>
+            {" "}
+            <Interactive
+              component="./ConferenceSelector"
+              props={conferenceProps}
+            >
+              <ConferenceSelector {...conferenceProps} />
+            </Interactive>
+            <SchedulePage
+              day={dayToFinnishLocale(parameters.day)}
+              intervals={schedule.intervals}
+              theme={theme}
+              sponsors={sponsors}
+            />
+          </>
+        )
+      );
     }
-
-    const { schedule } = connect(queries.scheduleQuery);
-    const { theme } = connect(queries.themeQuery);
-    const sponsors = connect(queries.sponsorQuery).conference;
-    const conferenceSeries = connect(queries.conferenceDayQuery).allSeries;
-    const conferenceProps = { conferenceSeries, selection };
-
-    // TODO: Set up interactive rendering for the selector
-    res.status(200).send(
-      renderPage(
-        req.url,
-        theme,
-        <>
-          {" "}
-          <Interactive component="./ConferenceSelector" props={conferenceProps}>
-            <ConferenceSelector {...conferenceProps} />
-          </Interactive>
-          <SchedulePage
-            day={dayToFinnishLocale(selection.day)}
-            intervals={schedule.intervals}
-            theme={theme}
-            sponsors={sponsors}
-          />
-        </>
-      )
-    );
-  });
+  );
 
   router.get("/generate-assets/presentation", async (req, res) => {
     const [err, connect] = await connection([queries.themeQuery], {
