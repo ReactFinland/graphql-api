@@ -26,7 +26,7 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
         conferenceSeriesId: "react-finland",
       });
     } catch (err) {
-      return res.status(404);
+      return res.status(404).send();
     }
 
     const { theme } = connect(queries.themeQuery);
@@ -70,7 +70,7 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
         selection
       );
     } catch (err) {
-      return res.status(404);
+      return res.status(400).send();
     }
 
     const { schedule } = connect(queries.scheduleQuery);
@@ -108,7 +108,7 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
         conferenceSeriesId: "react-finland",
       });
     } catch (err) {
-      return res.status(404);
+      return res.status(400).send();
     }
 
     const { theme } = connect(queries.themeQuery);
@@ -124,7 +124,7 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
         conferenceSeriesId: "react-finland",
       });
     } catch (err) {
-      return res.status(404);
+      return res.status(400).send();
     }
 
     const { theme } = connect(queries.themeQuery);
@@ -150,7 +150,7 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
         }
       );
     } catch (err) {
-      return res.status(404);
+      return res.status(400).send();
     }
 
     const {
@@ -188,7 +188,7 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
         }
       );
     } catch (err) {
-      return res.status(404);
+      return res.status(400).send();
     }
 
     const {
