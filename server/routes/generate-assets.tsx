@@ -17,16 +17,15 @@ import * as queries from "./queries";
 
 async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
   const Interactive = createInteractive(projectRoot, scriptRoot);
+  const connection = createConnection(schema);
 
   router.get("/generate-assets", async (req, res) => {
-    let connect;
+    const [err, connect] = await connection([queries.themeQuery], {
+      conferenceSeriesId: "react-finland",
+    });
 
-    try {
-      connect = await createConnect(schema, [queries.themeQuery], {
-        conferenceSeriesId: "react-finland",
-      });
-    } catch (err) {
-      return res.status(404).send();
+    if (err) {
+      return res.status(400).send();
     }
 
     const { theme } = connect(queries.themeQuery);
@@ -35,14 +34,12 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
   });
 
   router.get("/generate-assets/badges", async (req, res) => {
-    let connect;
+    const [err, connect] = await connection([queries.themeQuery], {
+      conferenceSeriesId: "react-finland",
+    });
 
-    try {
-      connect = await createConnect(schema, [queries.themeQuery], {
-        conferenceSeriesId: "react-finland",
-      });
-    } catch (err) {
-      return res.status(404);
+    if (err) {
+      return res.status(400).send();
     }
 
     const { theme } = connect(queries.themeQuery);
@@ -51,25 +48,24 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
   });
 
   router.get("/generate-assets/schedule", async (req, res) => {
-    let connect;
     // TODO: Parse these from query + expose them to the user
     const selection = {
       conferenceSeriesId: "react-finland",
       conferenceId: "react-finland-2019",
       day: "2019-04-25",
     };
-    try {
-      connect = await createConnect(
-        schema,
-        [
-          queries.conferenceDayQuery,
-          queries.scheduleQuery,
-          queries.themeQuery,
-          queries.sponsorQuery,
-        ],
-        selection
-      );
-    } catch (err) {
+
+    const [err, connect] = await connection(
+      [
+        queries.conferenceDayQuery,
+        queries.scheduleQuery,
+        queries.themeQuery,
+        queries.sponsorQuery,
+      ],
+      selection
+    );
+
+    if (err) {
       return res.status(400).send();
     }
 
@@ -101,13 +97,11 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
   });
 
   router.get("/generate-assets/presentation", async (req, res) => {
-    let connect;
+    const [err, connect] = await connection([queries.themeQuery], {
+      conferenceSeriesId: "react-finland",
+    });
 
-    try {
-      connect = await createConnect(schema, [queries.themeQuery], {
-        conferenceSeriesId: "react-finland",
-      });
-    } catch (err) {
+    if (err) {
       return res.status(400).send();
     }
 
@@ -117,13 +111,11 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
   });
 
   router.get("/generate-assets/text", async (req, res) => {
-    let connect;
+    const [err, connect] = await connection([queries.themeQuery], {
+      conferenceSeriesId: "react-finland",
+    });
 
-    try {
-      connect = await createConnect(schema, [queries.themeQuery], {
-        conferenceSeriesId: "react-finland",
-      });
-    } catch (err) {
+    if (err) {
       return res.status(400).send();
     }
 
@@ -133,23 +125,20 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
   });
 
   router.get("/generate-assets/speaker-tweet", async (req, res) => {
-    let connect;
-    try {
-      // TODO: Parse these from query + expose them to the user
-      connect = await createConnect(
-        schema,
-        [
-          queries.speakerTalkQuery,
-          queries.themeQuery,
-          queries.conferenceDaysQuery,
-        ],
-        {
-          conferenceSeriesId: "react-finland",
-          conferenceId: "react-finland-2019",
-          contactName: "Carolyn Stransky",
-        }
-      );
-    } catch (err) {
+    const [err, connect] = await connection(
+      [
+        queries.speakerTalkQuery,
+        queries.themeQuery,
+        queries.conferenceDaysQuery,
+      ],
+      {
+        conferenceSeriesId: "react-finland",
+        conferenceId: "react-finland-2019",
+        contactName: "Carolyn Stransky",
+      }
+    );
+
+    if (err) {
       return res.status(400).send();
     }
 
@@ -176,18 +165,15 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
   });
 
   router.get("/generate-assets/header", async (req, res) => {
-    let connect;
-    try {
-      // TODO: Parse these from query + expose them to the user
-      connect = await createConnect(
-        schema,
-        [queries.themeQuery, queries.conferenceDaysQuery],
-        {
-          conferenceSeriesId: "react-finland",
-          conferenceId: "react-finland-2019",
-        }
-      );
-    } catch (err) {
+    const [err, connect] = await connection(
+      [queries.themeQuery, queries.conferenceDaysQuery],
+      {
+        conferenceSeriesId: "react-finland",
+        conferenceId: "react-finland-2019",
+      }
+    );
+
+    if (err) {
       return res.status(400).send();
     }
 
@@ -227,6 +213,16 @@ function dayToFinnishLocale(day: string): string {
   const date = new Date(day);
 
   return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+}
+
+function createConnection(schema) {
+  return async function connection(queries: string[], parameters: {}) {
+    try {
+      return [null, await createConnect(schema, queries, parameters)];
+    } catch (err) {
+      return [err, null];
+    }
+  };
 }
 
 // Cache query results so connect can be used in a synchronous way
