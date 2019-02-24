@@ -49,6 +49,9 @@ interface ThemeSelectorProps {
   selectedTheme: Theme["id"];
 }
 
+// TODO: Add basic state management so selected theme can be changed
+// without having to refresh the entire page (onChange handler +
+// propagation to parent)
 function ThemeSelector({ themes, selectedTheme }: ThemeSelectorProps) {
   return (
     <Select
