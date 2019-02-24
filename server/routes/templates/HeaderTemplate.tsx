@@ -6,6 +6,7 @@ import * as React from "react";
 import { Conference } from "../../schema/Conference";
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
+import { dayToFinnishLocale } from "../date-utils";
 import conferenceDaysQuery from "../queries/conferenceDaysQuery";
 
 interface HeaderContainerProps {
@@ -119,13 +120,6 @@ function HeaderTemplate({ conference, theme, coupon }: HeaderTemplateProps) {
       </SecondaryRow>
     </HeaderPageContainer>
   );
-}
-
-// TODO: Use browser here instead?
-function dayToFinnishLocale(day: string): string {
-  const date = new Date(day);
-
-  return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
 }
 
 export default connect(

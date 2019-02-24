@@ -7,7 +7,6 @@ import BadgesPage from "./pages/BadgesPage";
 import IndexPage from "./pages/IndexPage";
 import PresentationPage from "./pages/PresentationPage";
 import SchedulePage from "./pages/SchedulePage";
-import SpeakerTweetPage from "./pages/SpeakerTweetPage";
 import TextPage from "./pages/TextPage";
 import * as queries from "./queries";
 import renderPage from "./render-page";
@@ -136,46 +135,6 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
     const { theme } = connect(queries.themeQuery);
 
     res.status(200).send(renderPage(req.url, theme, <TextPage />));
-  });
-
-  router.get("/generate-assets/speaker-tweet", async (req, res) => {
-    const [err, connect] = await connection(
-      [
-        queries.speakerTalkQuery,
-        queries.themeQuery,
-        queries.conferenceDaysQuery,
-      ],
-      {
-        conferenceSeriesId: "react-finland",
-        conferenceId: "react-finland-2019",
-        contactName: "Carolyn Stransky",
-      }
-    );
-
-    if (err) {
-      return res.status(400).send();
-    }
-
-    const {
-      conference: { schedules },
-    } = connect(queries.conferenceDaysQuery);
-    const conferenceDays = schedules.map(({ day }) => dayToFinnishLocale(day));
-    const { contact } = connect(queries.speakerTalkQuery);
-    const { theme } = connect(queries.themeQuery);
-
-    res
-      .status(200)
-      .send(
-        renderPage(
-          req.url,
-          theme,
-          <SpeakerTweetPage
-            speaker={contact}
-            theme={theme}
-            conferenceDays={conferenceDays}
-          />
-        )
-      );
   });
 }
 

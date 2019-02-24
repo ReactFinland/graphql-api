@@ -6,41 +6,6 @@ import AssetDesignerPage from "./pages/AssetDesignerPage";
 import * as queries from "./queries";
 import renderPage from "./render-page";
 
-// HeaderTemplate data reqs
-/*
-    const [err, connect] = await connection(
-      [queries.themeQuery, queries.conferenceDaysQuery],
-      {
-        conferenceSeriesId: "react-finland",
-        conferenceId: "react-finland-2019",
-      }
-    );
-
-    if (err) {
-      return res.status(400).send();
-    }
-
-    const {
-      conference: { locations, schedules, slogan },
-    } = connect(queries.conferenceDaysQuery);
-    const location = locations[0]
-      ? {
-          city: locations[0].city,
-          country: locations[0].country.name,
-        }
-      : {};
-    const conferenceDays = schedules.map(({ day }) => dayToFinnishLocale(day));
-    const { theme } = connect(queries.themeQuery)
-
-
-    // We can use browser here instead?
-function dayToFinnishLocale(day: string): string {
-  const date = new Date(day);
-
-  return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
-}
-*/
-
 async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
   const Interactive = createInteractive(projectRoot, scriptRoot, __dirname);
   const connection = createConnection(schema);
@@ -51,6 +16,8 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
       conferenceSeriesId: { type: String, default: "react-finland" },
       conferenceId: { type: String, default: "react-finland-2019" },
       templateId: { type: String, default: "theme" },
+      // TODO
+      contactName: { type: String, default: "Carolyn Stransky" },
     }),
     async (req, res) => {
       const selected = req.query;

@@ -1,10 +1,13 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
+import { map } from "lodash";
 import * as React from "react";
+import { Conference } from "../../schema/Conference";
 import { Contact } from "../../schema/Contact";
-import { Schedule } from "../../schema/Schedule";
 import { Theme } from "../../schema/Theme";
+import connect from "../components/connect";
+import { dayToFinnishLocale } from "../date-utils";
 
 interface TweetPageContainerProps {
   primaryColor: Color;
@@ -69,17 +72,25 @@ const TweetSpeakerTalk = styled.h2`
   font-size: 200%;
 `;
 
-interface SpeakerTweetPageProps {
-  conferenceDays: Schedule[];
-  speaker: Contact;
+interface SpeakerTweetTemplateProps {
+  conference?: Conference;
+  contact?: Contact;
   theme: Theme;
 }
 
-function SpeakerTweetPage({
-  conferenceDays,
-  speaker: { name, image, talks },
+function SpeakerTweetTemplate({
+  conference,
+  contact,
   theme,
-}: SpeakerTweetPageProps) {
+}: SpeakerTweetTemplateProps) {
+  const { name, image, talks } = contact || {
+    name: "",
+    image: { url: "" },
+    talks: [],
+  };
+  const { schedules } = conference || { schedules: [] };
+  const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
+
   const firstDay = conferenceDays[0];
   const lastDay = conferenceDays[conferenceDays.length - 1];
 
@@ -97,7 +108,7 @@ function SpeakerTweetPage({
         </TweetRow>
         <TweetSpeakerName>{name}</TweetSpeakerName>
         <TweetSpeakerTalk>
-          {Array.isArray(talks) && talks[0].title}
+          {Array.isArray(talks) && talks.length > 0 && talks[0].title}
         </TweetSpeakerTalk>
       </TweetInfoContainer>
       <TweetImageContainer>
@@ -107,4 +118,33 @@ function SpeakerTweetPage({
   );
 }
 
-export default SpeakerTweetPage;
+export default connect(
+  "/graphql",
+  `
+query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
+  contact(contactName: $contactName, conferenceId: $conferenceId) {
+    name
+    image {
+      url
+    }
+    talks {
+      title
+    }
+  }
+  conference(id: $conferenceId) {
+    slogan
+    schedules {
+      day
+    }
+    locations {
+      city
+      country {
+        name
+      }
+    }
+  }
+}
+  `,
+  {},
+  ({ selected }) => ({ ...selected })
+)(SpeakerTweetTemplate);
