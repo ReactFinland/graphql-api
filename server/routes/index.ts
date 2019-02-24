@@ -5,7 +5,6 @@ import * as path from "path";
 import generateSchema from "../schema";
 import routeAssetDesigner from "./asset-designer";
 import routeCalendar from "./calendar";
-import routeGenerateAssets from "./generate-assets";
 import routeGraphQL from "./graphql";
 import routeMedia from "./media";
 import routePing from "./ping";
@@ -26,7 +25,6 @@ async function createRouter() {
 
   routeAssetDesigner(router, schema, projectRoot, scriptPath);
   routeCalendar(router);
-  routeGenerateAssets(router, schema, projectRoot, scriptPath);
   routeGraphQL(router, schema, mediaUrl);
   routeMedia(router, mediaUrl, mediaPath);
   routePing(router);
