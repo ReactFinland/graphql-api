@@ -18,24 +18,24 @@ export class Colors {
 }
 
 @ObjectType()
+export class WithWithoutText {
+  @Field(_ => Image)
+  public withoutText!: Image;
+
+  @Field(_ => Image)
+  public withText!: Image;
+}
+
+@ObjectType()
 export class Logos {
-  @Field(_ => Image)
-  public blackWithoutText!: Image;
+  @Field(_ => WithWithoutText)
+  public black!: WithWithoutText;
 
-  @Field(_ => Image)
-  public blackWithText!: Image;
+  @Field(_ => WithWithoutText)
+  public colored!: WithWithoutText;
 
-  @Field(_ => Image)
-  public coloredWithoutText!: Image;
-
-  @Field(_ => Image)
-  public coloredWithText!: Image;
-
-  @Field(_ => Image)
-  public whiteWithoutText!: Image;
-
-  @Field(_ => Image)
-  public whiteWithText!: Image;
+  @Field(_ => WithWithoutText)
+  public white!: WithWithoutText;
 }
 
 // TODO: Add fonts here (name + path)

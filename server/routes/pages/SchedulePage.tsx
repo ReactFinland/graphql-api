@@ -79,7 +79,7 @@ function SchedulePage({ intervals, theme, sponsors, day }: SchedulePageProps) {
       primaryColor={theme.colors.primary}
       secondaryColor={theme.colors.secondary}
     >
-      <SchedulePageLogo src={theme.logos.whiteWithText.url} />
+      <SchedulePageLogo src={theme.logos.white.withText.url} />
       <SchedulePageHeader>Schedule{day ? ` ― ${day}` : ""}</SchedulePageHeader>
       <SchedulePageContent>
         <Schedule theme={theme} intervals={intervals} />

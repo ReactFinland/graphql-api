@@ -90,7 +90,7 @@ function SpeakerTweetPage({
     >
       <TweetInfoContainer>
         <TweetRow>
-          <TweetLogo src={theme.logos.whiteWithText.url} />
+          <TweetLogo src={theme.logos.white.withText.url} />
           <TweetConferenceDays>
             {firstDay}-{lastDay}
           </TweetConferenceDays>

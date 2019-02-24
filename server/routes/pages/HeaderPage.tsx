@@ -93,7 +93,7 @@ function HeaderPage({
       secondaryColor={theme.colors.secondary}
     >
       <PrimaryRow>
-        <HeaderLogo src={theme.logos.whiteWithText.url} />
+        <HeaderLogo src={theme.logos.white.withText.url} />
         <HeaderInfoContainer>
           <HeaderConferenceDays>
             {firstDay}-{lastDay}

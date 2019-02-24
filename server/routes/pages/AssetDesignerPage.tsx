@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
+import { map } from "lodash";
 import { complement, invert } from "polished";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
@@ -21,11 +22,13 @@ const ThemeTemplateContainer = styled.main`
 `;
 const ThemeTemplateHeader = styled.h1``;
 
-const ColorContainer = styled.section`
+const ColorsContainer = styled.section`
   margin-top: 1em;
   margin-bottom: 1em;
 `;
-const ColorHeader = styled.h2``;
+const ColorHeader = styled.h2`
+  margin-bottom: 0.5em;
+`;
 
 interface ColorProps {
   color: Color;
@@ -36,45 +39,76 @@ const Color = styled.div`
   width: 8em;
   height: 8em;
   background-color: ${({ color }: ColorProps) => color};
-  color: ${({ color }: ColorProps) => complement(invert(color))};
+  color: ${({ color }: ColorProps) =>
+    tryTo(() => complement(invert(color)), "")};
 `;
 
-const LogoContainer = styled.section`
+const LogosContainer = styled.section`
   margin-top: 1em;
   margin-bottom: 1em;
 `;
-const LogoHeader = styled.h2``;
+const LogoHeader = styled.h2`
+  margin-bottom: 0.5em;
+`;
 
 interface LogoProps {
-  field: string;
+  property: string;
   src: string;
 }
+const LogoContainer = styled.section`
+  margin-right: 1em;
+  display: inline-block;
+  vertical-align: top;
+  font-style: italic;
+`;
 const Logo = styled.img`
   max-width: 8em;
   max-height: 8em;
-  vertical-align: top;
-  /*background-color: ${() => "black"};*/
-  alt: ${({ field }: LogoProps) => field};
+  background-color: ${({ property }: LogoProps) =>
+    tryTo(() => invert(property), "")};
 `;
+const LogoLabel = styled.label``;
+
+function tryTo(fn, defaultValue) {
+  try {
+    return fn();
+  } catch (err) {
+    return defaultValue;
+  }
+}
+
+interface ThemeTemplateProps {
+  theme: Theme;
+}
 
 function ThemeTemplate({ theme }: ThemeTemplateProps) {
   return (
     <ThemeTemplateContainer>
       <ThemeTemplateHeader>Theme</ThemeTemplateHeader>
-      <ColorContainer>
+      <ColorsContainer>
         <ColorHeader>Colors</ColorHeader>
-        {Object.keys(theme.colors).map(color => (
-          <Color color={theme.colors[color]} key={color}>
-            {color}
+        {map(theme.colors, (color, colorProperty) => (
+          <Color color={color} key={color}>
+            {colorProperty}
           </Color>
         ))}
-      </ColorContainer>
-      <LogoContainer>
+      </ColorsContainer>
+      <LogosContainer>
         <LogoHeader>Logos</LogoHeader>
-        {Object.keys(theme.logos).map(logo => (
-          <Logo field={logo} key={logo} src={theme.logos[logo].url} />
-        ))}
-      </LogoContainer>
+        {map(theme.logos, (logo, logoProperty) =>
+          map(logo, (image, imageProperty) => (
+            <LogoContainer>
+              <LogoLabel>{`${logoProperty}.${imageProperty}`}</LogoLabel>
+              <Logo
+                property={logoProperty}
+                key={image.url}
+                src={image.url}
+                alt={`${logoProperty}.${imageProperty}`}
+              />
+            </LogoContainer>
+          ))
+        )}
+      </LogosContainer>
     </ThemeTemplateContainer>
   );
 }
