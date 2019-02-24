@@ -8,7 +8,22 @@ query ThemeQuery($conferenceSeriesId: ID!) {
       background
     }
     logos {
+      blackWithText {
+        url
+      }
+      blackWithoutText {
+        url
+      }
+      coloredWithText {
+        url
+      }
+      coloredWithoutText {
+        url
+      }
       whiteWithText {
+        url
+      }
+      whiteWithoutText {
         url
       }
     }
