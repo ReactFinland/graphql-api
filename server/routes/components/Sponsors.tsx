@@ -7,6 +7,7 @@ import Sponsor from "./Sponsor";
 const SponsorsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
   justify-items: center;
   margin-left: 0.5cm;
   margin-right: 0.5cm;
