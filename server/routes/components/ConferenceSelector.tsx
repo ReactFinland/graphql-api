@@ -1,3 +1,4 @@
+import queryString from "query-string";
 import * as React from "react";
 
 function ConferenceSelector({ conferenceSeries, selection }) {
@@ -14,12 +15,15 @@ function ConferenceSelector({ conferenceSeries, selection }) {
   return (
     <>
       <Select
+        field="conferenceSeriesId"
         options={getOptions(conferenceSeries, selection.conferenceSeriesId)}
       />
       <Select
+        field="conferenceId"
         options={getOptions(relatedConferences, selection.conferenceId)}
       />
       <Select
+        field="day"
         options={getOptions(
           selectedDay.map(({ day }) => ({ id: day, name: day })),
           selection.day
@@ -37,11 +41,22 @@ function getOptions(values, selectionId) {
   }));
 }
 
-function Select({ options }) {
+function Select({ field, options }) {
   return (
-    <select onChange={value => console.log("changed to", value)}>
+    <select
+      onChange={({ target: { value } }) => {
+        location.search = queryString.stringify({
+          ...queryString.parse(location.search),
+          [field]: value,
+        });
+
+        // TODO: If series or conference is changed,
+        // clean selections after?
+      }}
+      value={options.filter(({ selected }) => selected)[0].value}
+    >
       {options.map(({ value, label, selected }) => (
-        <option key={value} value={value} selected={selected}>
+        <option key={value} value={value}>
           {label}
         </option>
       ))}

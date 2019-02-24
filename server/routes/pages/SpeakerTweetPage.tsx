@@ -46,11 +46,14 @@ const TweetLogo = styled.img`
 
 const TweetConferenceDays = styled.h3``;
 
+const TweetImageContainer = styled.div`
+  padding: 3em;
+`;
+
 const TweetImage = styled.img`
   width: 100%;
   box-sizing: border-box;
-  padding: 2em;
-  clip-path: circle(10em at center);
+  clip-path: circle(9em at center);
 `;
 
 const TweetSpeakerName = styled.h1`
@@ -59,7 +62,7 @@ const TweetSpeakerName = styled.h1`
 `;
 
 const TweetSpeakerTalk = styled.h2`
-  padding-top: 2em;
+  padding-top: 0.5em;
   font-size: 200%;
 `;
 
@@ -86,7 +89,9 @@ function SpeakerTweetPage({
         <TweetSpeakerName>{name}</TweetSpeakerName>
         <TweetSpeakerTalk>{talks[0].title}</TweetSpeakerTalk>
       </TweetInfoContainer>
-      <TweetImage src={image.url} />
+      <TweetImageContainer>
+        <TweetImage src={image.url} />
+      </TweetImageContainer>
     </TweetPageContainer>
   );
 }

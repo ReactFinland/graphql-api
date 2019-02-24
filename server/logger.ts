@@ -10,8 +10,13 @@ if (!fs.existsSync(directory)) {
   fs.mkdirSync(directory);
 }
 
-const ignorePing = format(info => {
-  if (isString(info.message) && info.message.includes("GET /ping ")) {
+const ignorePingAndMedia = format(info => {
+  const message = info.message;
+
+  if (
+    isString(message) &&
+    ["GET /ping ", "GET /media"].some(match => message.includes(match))
+  ) {
     return false;
   }
 
@@ -20,7 +25,7 @@ const ignorePing = format(info => {
 
 const logger = createLogger({
   exitOnError: false,
-  format: format.combine(ignorePing(), format.json()),
+  format: format.combine(ignorePingAndMedia(), format.json()),
   transports: [
     new transports.Console({
       level: "debug",

@@ -26,12 +26,13 @@ function routeGraphQL(router, schema, mediaUrl) {
   );
 }
 
+// TODO: Move to utils
 function getHostname(req) {
   if (process.env.HEROKU_HOSTNAME) {
     return process.env.HEROKU_HOSTNAME;
-  } else {
-    return req.protocol + "://" + req.get("host");
   }
+
+  return req.protocol + "://" + req.get("host");
 }
 
 // FIXME: Ideally this should traverse query tree and replace

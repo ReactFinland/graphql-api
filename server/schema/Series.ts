@@ -27,7 +27,7 @@ export class Series {
 @Resolver(_ => Series)
 export class SeriesResolver {
   @Query(_ => Series)
-  public series(@Arg("id") id: string) {
+  public series(@Arg("id", _ => ID) id: string) {
     if (series[id]) {
       return series[id];
     } else {
