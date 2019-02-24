@@ -24,18 +24,19 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
     const { theme } = connect(queries.themeQuery);
     const { themes } = connect(queries.themesQuery);
 
-    res.status(200).send(
-      renderPage(
-        req.url,
-        theme,
-        <Interactive
-          relativeComponentPath="./pages/AssetDesignerPage"
-          props={{ theme, themes }}
-        >
-          <AssetDesignerPage theme={theme} themes={themes} />
-        </Interactive>
-      )
-    );
+    res
+      .status(200)
+      .send(
+        renderPage(
+          req.url,
+          theme,
+          <Interactive
+            relativeComponentPath="./pages/AssetDesignerPage"
+            props={{ theme, themes }}
+            component={AssetDesignerPage}
+          />
+        )
+      );
   });
 }
 

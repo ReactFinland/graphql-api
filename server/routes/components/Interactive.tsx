@@ -8,15 +8,19 @@ import * as React from "react";
 function createInteractive(projectRoot, scriptRoot, componentRoot) {
   mkdirp.sync(scriptRoot);
 
-  return function Interactive({ children, relativeComponentPath, props = {} }) {
-    const component = path.basename(relativeComponentPath);
-    const indexName = `${component}.index.ts`;
+  return function Interactive({
+    component,
+    relativeComponentPath,
+    props = {},
+  }) {
+    const componentName = path.basename(relativeComponentPath);
+    const indexName = `${componentName}.index.ts`;
     const indexPath = path.join(scriptRoot, indexName);
     const absoluteComponentPath = path.join(
       componentRoot,
       relativeComponentPath
     );
-    const outputPath = path.join(scriptRoot, component) + ".js";
+    const outputPath = path.join(scriptRoot, componentName) + ".js";
     const scriptPath = `/${trimStart(
       path.relative(projectRoot, outputPath),
       "."
@@ -24,7 +28,7 @@ function createInteractive(projectRoot, scriptRoot, componentRoot) {
 
     fs.writeFileSync(
       indexPath,
-      renderScript(absoluteComponentPath, component, props)
+      renderScript(absoluteComponentPath, componentName, props)
     );
 
     // TODO: Likely we should use Preact here (alias?)
@@ -36,7 +40,7 @@ function createInteractive(projectRoot, scriptRoot, componentRoot) {
     });
 
     fuse
-      .bundle(component)
+      .bundle(componentName)
       .cache(false) // TODO: Enable cache again?
       .instructions(`> ${indexName}`);
 
@@ -49,7 +53,7 @@ function createInteractive(projectRoot, scriptRoot, componentRoot) {
     // only after the div has been created! Otherwise hydration fails.
     return (
       <>
-        <div id={component}>{children}</div>
+        <div id={componentName}>{React.createElement(component, props)}</div>
         <script src={scriptPath} />
       </>
     );

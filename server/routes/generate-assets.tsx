@@ -97,9 +97,8 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
             <Interactive
               relativeComponentPath="./components/ConferenceSelector"
               props={conferenceProps}
-            >
-              <ConferenceSelector {...conferenceProps} />
-            </Interactive>
+              component={ConferenceSelector}
+            />
             <SchedulePage
               day={dayToFinnishLocale(parameters.day)}
               intervals={schedule.intervals}
