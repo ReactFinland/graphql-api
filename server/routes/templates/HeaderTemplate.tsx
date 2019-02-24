@@ -69,7 +69,34 @@ const HeaderCoupon = styled.h3`
   font-family: "Courier New", Courier, monospace;
 `;
 
-interface HeaderPageProps {
+interface HeaderTemplateConnectProps {
+  theme: Theme;
+  // TODO: Share the type from the backend
+  selected: {
+    conferenceSeriesId: string;
+    conferenceId: string;
+    templateId: string; // One of templates
+  };
+}
+
+// TODO: Connect to data now
+function HeaderTemplateConnect({
+  theme,
+  selected,
+}: HeaderTemplateConnectProps) {
+  return (
+    <HeaderTemplate
+      conferenceDays={[]}
+      location={{}}
+      theme={theme}
+      slogan=""
+      coupon=""
+    />
+  );
+}
+
+// TODO: Likely this should connect to data it needs
+interface HeaderTemplateProps {
   conferenceDays: Schedule[];
   location: Location;
   theme: Theme;
@@ -77,13 +104,13 @@ interface HeaderPageProps {
   coupon: string;
 }
 
-function HeaderPage({
+function HeaderTemplate({
   conferenceDays,
   location,
   theme,
   slogan,
   coupon,
-}: HeaderPageProps) {
+}: HeaderTemplateProps) {
   const firstDay = conferenceDays[0];
   const lastDay = conferenceDays[conferenceDays.length - 1];
 
@@ -113,4 +140,4 @@ function HeaderPage({
   );
 }
 
-export default HeaderPage;
+export default HeaderTemplateConnect;

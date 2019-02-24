@@ -29,13 +29,18 @@ const Main = styled.main`
 `;
 
 interface AssetDesignerPageProps {
-  selectedTemplate: string; // One of templates
+  // TODO: Share the type from the backend
+  selected: {
+    conferenceSeriesId: string;
+    conferenceId: string;
+    templateId: string; // One of templates
+  };
   theme: Theme;
   themes: Theme[];
 }
 
 function AssetDesignerPage({
-  selectedTemplate,
+  selected,
   theme,
   themes,
 }: AssetDesignerPageProps) {
@@ -54,12 +59,17 @@ function AssetDesignerPage({
           <SidebarHeader>Templates</SidebarHeader>
           <TemplateSelector
             templates={Object.keys(templates)}
-            selectedTemplate={selectedTemplate}
+            selectedTemplate={selected.templateId}
           />
         </SidebarItem>
       </Sidebar>
       <Main>
-        <templates.theme theme={theme} />
+        {templates[selected.templateId]
+          ? React.createElement(templates[selected.templateId], {
+              selected,
+              theme,
+            })
+          : "No template found!"}
       </Main>
     </article>
   );

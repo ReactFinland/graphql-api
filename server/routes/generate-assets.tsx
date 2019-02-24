@@ -4,7 +4,6 @@ import ConferenceSelector from "./components/ConferenceSelector";
 import createInteractive from "./components/Interactive";
 import createConnection from "./create-connection";
 import BadgesPage from "./pages/BadgesPage";
-import HeaderPage from "./pages/HeaderPage";
 import IndexPage from "./pages/IndexPage";
 import PresentationPage from "./pages/PresentationPage";
 import SchedulePage from "./pages/SchedulePage";
@@ -174,48 +173,6 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
             speaker={contact}
             theme={theme}
             conferenceDays={conferenceDays}
-          />
-        )
-      );
-  });
-
-  router.get("/generate-assets/header", async (req, res) => {
-    const [err, connect] = await connection(
-      [queries.themeQuery, queries.conferenceDaysQuery],
-      {
-        conferenceSeriesId: "react-finland",
-        conferenceId: "react-finland-2019",
-      }
-    );
-
-    if (err) {
-      return res.status(400).send();
-    }
-
-    const {
-      conference: { locations, schedules, slogan },
-    } = connect(queries.conferenceDaysQuery);
-    const location = locations[0]
-      ? {
-          city: locations[0].city,
-          country: locations[0].country.name,
-        }
-      : {};
-    const conferenceDays = schedules.map(({ day }) => dayToFinnishLocale(day));
-    const { theme } = connect(queries.themeQuery);
-
-    res
-      .status(200)
-      .send(
-        renderPage(
-          req.url,
-          theme,
-          <HeaderPage
-            theme={theme}
-            conferenceDays={conferenceDays}
-            location={location}
-            slogan={slogan}
-            coupon="PITERJS"
           />
         )
       );

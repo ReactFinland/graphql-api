@@ -1,3 +1,4 @@
+import HeaderTemplate from "./HeaderTemplate";
 import ThemeTemplate from "./ThemeTemplate";
 
-export { ThemeTemplate as theme };
+export { HeaderTemplate as header, ThemeTemplate as theme };
