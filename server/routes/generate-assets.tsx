@@ -14,7 +14,7 @@ import * as queries from "./queries";
 import renderPage from "./render-page";
 
 async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
-  const Interactive = createInteractive(projectRoot, scriptRoot);
+  const Interactive = createInteractive(projectRoot, scriptRoot, __dirname);
   const connection = createConnection(schema);
 
   router.get("/generate-assets", async (req, res) => {
@@ -95,7 +95,7 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
           theme,
           <>
             <Interactive
-              component="./ConferenceSelector"
+              relativeComponentPath="./components/ConferenceSelector"
               props={conferenceProps}
             >
               <ConferenceSelector {...conferenceProps} />

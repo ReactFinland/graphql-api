@@ -4,8 +4,9 @@ import * as React from "react";
 import { Theme } from "../../schema/Theme";
 import ThemeTemplate from "../templates/ThemeTemplate";
 
-interface GenerateTextProps {
+interface AssetDesignerPageProps {
   theme: Theme;
+  themes: Theme[];
 }
 
 interface SidebarProps {
@@ -28,7 +29,7 @@ const Main = styled.main`
   display: inline-block;
 `;
 
-function GenerateText({ theme }: GenerateTextProps) {
+function AssetDesignerPage({ theme, themes }: AssetDesignerPageProps) {
   // TODO: This renders just ThemeTemplate for now -> generalize
   return (
     <article>
@@ -43,4 +44,4 @@ function GenerateText({ theme }: GenerateTextProps) {
   );
 }
 
-export default GenerateText;
+export default AssetDesignerPage;

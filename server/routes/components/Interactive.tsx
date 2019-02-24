@@ -5,20 +5,27 @@ import mkdirp from "mkdirp";
 import * as path from "path";
 import * as React from "react";
 
-function createInteractive(projectRoot, scriptRoot) {
+function createInteractive(projectRoot, scriptRoot, componentRoot) {
   mkdirp.sync(scriptRoot);
 
-  return function Interactive({ children, component, props = {} }) {
+  return function Interactive({ children, relativeComponentPath, props = {} }) {
+    const component = path.basename(relativeComponentPath);
     const indexName = `${component}.index.ts`;
     const indexPath = path.join(scriptRoot, indexName);
-    const componentPath = path.join(__dirname, component);
+    const absoluteComponentPath = path.join(
+      componentRoot,
+      relativeComponentPath
+    );
     const outputPath = path.join(scriptRoot, component) + ".js";
     const scriptPath = `/${trimStart(
       path.relative(projectRoot, outputPath),
       "."
     )}`;
 
-    fs.writeFileSync(indexPath, renderScript(componentPath, component, props));
+    fs.writeFileSync(
+      indexPath,
+      renderScript(absoluteComponentPath, component, props)
+    );
 
     // TODO: Likely we should use Preact here (alias?)
     const fuse = FuseBox.init({

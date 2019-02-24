@@ -88,17 +88,16 @@ function ThemeTemplate({ theme }: ThemeTemplateProps) {
       <LogosContainer>
         <LogoHeader>Logos</LogoHeader>
         {map(theme.logos, (logo, logoProperty) =>
-          map(logo, (image, imageProperty) => (
-            <LogoContainer>
-              <LogoLabel>{`${logoProperty}.${imageProperty}`}</LogoLabel>
-              <Logo
-                property={logoProperty}
-                key={image.url}
-                src={image.url}
-                alt={`${logoProperty}.${imageProperty}`}
-              />
-            </LogoContainer>
-          ))
+          map(logo, (image, imageProperty) => {
+            const property = `${logoProperty}.${imageProperty}`;
+
+            return (
+              <LogoContainer key={property}>
+                <LogoLabel>{property}</LogoLabel>
+                <Logo property={logoProperty} src={image.url} alt={property} />
+              </LogoContainer>
+            );
+          })
         )}
       </LogosContainer>
     </ThemeTemplateContainer>
