@@ -18,7 +18,9 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
 
     const { theme } = connect(queries.themeQuery);
 
-    res.status(200).send(renderPage(req.url, theme, <AssetDesignerPage />));
+    res
+      .status(200)
+      .send(renderPage(req.url, theme, <AssetDesignerPage theme={theme} />));
   });
 }
 
