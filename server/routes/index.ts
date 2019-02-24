@@ -3,6 +3,7 @@ import express from "express";
 import { redirectToHTTPS } from "express-http-to-https";
 import * as path from "path";
 import generateSchema from "../schema";
+import routeAssetDesigner from "./asset-designer";
 import routeCalendar from "./calendar";
 import routeGenerateAssets from "./generate-assets";
 import routeGraphQL from "./graphql";
@@ -23,6 +24,7 @@ async function createRouter() {
   router.use(cors());
   router.use(redirectToHTTPS([/localhost:(\d{4})/]));
 
+  routeAssetDesigner(router, schema, projectRoot, scriptPath);
   routeCalendar(router);
   routeGenerateAssets(router, schema, projectRoot, scriptPath);
   routeGraphQL(router, schema, mediaUrl);

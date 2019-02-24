@@ -1,12 +1,8 @@
-import { graphql } from "graphql";
 import { validate } from "isvalid";
-import { trimEnd } from "lodash";
-import process from "process";
 import * as React from "react";
-import { renderToString } from "react-dom/server";
 import ConferenceSelector from "./components/ConferenceSelector";
-import GlobalStyles from "./components/GlobalStyles";
 import createInteractive from "./components/Interactive";
+import createConnection from "./create-connection";
 import BadgesPage from "./pages/BadgesPage";
 import HeaderPage from "./pages/HeaderPage";
 import IndexPage from "./pages/IndexPage";
@@ -15,6 +11,7 @@ import SchedulePage from "./pages/SchedulePage";
 import SpeakerTweetPage from "./pages/SpeakerTweetPage";
 import TextPage from "./pages/TextPage";
 import * as queries from "./queries";
+import renderPage from "./render-page";
 
 async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
   const Interactive = createInteractive(projectRoot, scriptRoot);
@@ -233,108 +230,6 @@ function dayToFinnishLocale(day: string): string {
   const date = new Date(day);
 
   return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
-}
-
-function createConnection(schema) {
-  return async function connection(queries: string[], parameters: {}) {
-    try {
-      return [null, await createConnect(schema, queries, parameters)];
-    } catch (err) {
-      return [err, null];
-    }
-  };
-}
-
-// Cache query results so connect can be used in a synchronous way
-// later in the code.
-async function createConnect(schema, queries: string[], context) {
-  const results = {};
-
-  await Promise.all(
-    queries.map(query =>
-      graphql(schema, query, null, null, context).then(({ data, errors }) => {
-        if (errors) {
-          throw new Error(errors && errors.toString());
-        }
-
-        return {
-          query,
-          data,
-        };
-      })
-    )
-  ).then(values => {
-    values.forEach(({ query, data }) => {
-      results[query] = data;
-    });
-  });
-
-  await Object.values(queries).forEach(async query => {
-    const result = await graphql(schema, query, null, null, context);
-
-    results[query] = result.data;
-  });
-
-  return query => results[query];
-}
-
-function renderPage(baseUrl, theme, page) {
-  return renderMarkup(
-    renderToString(
-      <>
-        <GlobalStyles theme={theme} />
-        {page}
-      </>
-    ),
-    baseUrl
-  );
-}
-
-function renderMarkup(html, hostname) {
-  return `<!DOCTYPE html>
-  <html>
-    <head>
-      <title>Asset generator</title>
-      <meta charset="utf-8" />
-      <base href="${cleanBase(hostname)}/" />
-      ${reloadPage()}
-    </head>
-    <body>
-      <div id="app">${html}</div>
-    </body>
-  </html>`;
-}
-
-function cleanBase(hostname) {
-  return trimEnd(hostname.split("?")[0], "/");
-}
-
-function reloadPage(): string {
-  if (process.env.NODE_ENV === "production") {
-    return "";
-  }
-
-  return `
-    <script>
-      let previousVersion;
-
-      setInterval(() => {
-        fetch('/ping').then(response => response.json())
-        .then(({ serverVersion }) => {
-          if (previousVersion) {
-            if (previousVersion !== serverVersion) {
-              location.reload();
-            }
-          }
-          else {
-            previousVersion = serverVersion;
-          }
-        }).catch(err => {
-          // It's fine.
-        })
-      }, 500);
-    </script>
-  `;
 }
 
 export default routeAssetGenerator;
