@@ -18,7 +18,11 @@ function Select({ field, options, selected }: SelectProps) {
           [field]: value,
         });
       }}
-      value={selected || options.filter(({ selected }) => selected)[0].value}
+      value={
+        selected ||
+        (options.length > 0 &&
+          options.filter(({ selected }) => selected)[0].value)
+      }
     >
       {options.map(({ value, label }) => (
         <option key={value} value={value}>

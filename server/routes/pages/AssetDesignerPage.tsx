@@ -3,12 +3,7 @@ import { Color } from "csstype";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
 import Select from "../components/Select";
-import ThemeTemplate from "../templates/ThemeTemplate";
-
-interface AssetDesignerPageProps {
-  theme: Theme;
-  themes: Theme[];
-}
+import * as templates from "../templates";
 
 interface SidebarProps {
   backgroundColor: Color;
@@ -23,22 +18,48 @@ const Sidebar = styled.aside`
   position: sticky;
   background-color: ${({ backgroundColor }: SidebarProps) => backgroundColor};
 `;
-const SidebarHeader = styled.h1``;
+const SidebarHeader = styled.h2``;
+const SidebarItem = styled.div`
+  margin-top: 1em;
+  margin-bottom: 1em;
+`;
 
 const Main = styled.main`
   display: inline-block;
 `;
 
-function AssetDesignerPage({ theme, themes }: AssetDesignerPageProps) {
+interface AssetDesignerPageProps {
+  selectedTemplate: string; // One of templates
+  theme: Theme;
+  themes: Theme[];
+}
+
+function AssetDesignerPage({
+  selectedTemplate,
+  theme,
+  themes,
+}: AssetDesignerPageProps) {
   // TODO: This renders just ThemeTemplate for now -> generalize
   return (
     <article>
       <Sidebar backgroundColor={theme.colors.background}>
         <SidebarHeader>Asset designer</SidebarHeader>
-        <ThemeSelector themes={themes} selectedTheme={theme.id} />
+
+        <SidebarItem>
+          <SidebarHeader>Themes</SidebarHeader>
+          <ThemeSelector themes={themes} selectedTheme={theme.id} />
+        </SidebarItem>
+
+        <SidebarItem>
+          <SidebarHeader>Templates</SidebarHeader>
+          <TemplateSelector
+            templates={Object.keys(templates)}
+            selectedTemplate={selectedTemplate}
+          />
+        </SidebarItem>
       </Sidebar>
       <Main>
-        <ThemeTemplate theme={theme} />
+        <templates.theme theme={theme} />
       </Main>
     </article>
   );
@@ -61,6 +82,30 @@ function ThemeSelector({ themes, selectedTheme }: ThemeSelectorProps) {
         label: theme.id,
       }))}
       selected={selectedTheme}
+    />
+  );
+}
+
+interface TemplateSelectorProps {
+  templates: string[];
+  selectedTemplate: string;
+}
+
+// TODO: Add basic state management so selected theme can be changed
+// without having to refresh the entire page (onChange handler +
+// propagation to parent)
+function TemplateSelector({
+  templates,
+  selectedTemplate,
+}: TemplateSelectorProps) {
+  return (
+    <Select
+      field="templateId"
+      options={templates.map(template => ({
+        value: template,
+        label: template,
+      }))}
+      selected={selectedTemplate}
     />
   );
 }

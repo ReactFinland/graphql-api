@@ -14,18 +14,22 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
     "/asset-designer",
     validate.query({
       conferenceSeriesId: { type: String, default: "react-finland" },
+      templateId: { type: String, default: "theme" },
     }),
     async (req, res) => {
+      const query = req.query;
+
       // TODO: Redirect with query visible instead of defaulting?
       const [err, connect] = await connection(
         [queries.themeQuery, queries.themesQuery],
-        req.query
+        query
       );
 
       if (err) {
         return res.status(400).send();
       }
 
+      const selectedTemplate = query.templateId;
       const { theme } = connect(queries.themeQuery);
       const { themes } = connect(queries.themesQuery);
 
@@ -37,7 +41,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
             theme,
             <Interactive
               relativeComponentPath="./pages/AssetDesignerPage"
-              props={{ theme, themes }}
+              props={{ theme, themes, selectedTemplate }}
               component={AssetDesignerPage}
             />
           )
