@@ -1,5 +1,6 @@
 const themeFragment = `
 fragment themeFragment on Theme {
+  id
   colors {
     primary
     secondary
