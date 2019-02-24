@@ -9,9 +9,9 @@ const sponsor: Contact = {
   },
   social: {
     homepage: "https://www.0x.se/",
-    facebook: "",
+    facebook: "0plusx",
     instagram: "",
-    twitter: "",
+    twitter: "0plusX",
   },
   location: {
     country: {
