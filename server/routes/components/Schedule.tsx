@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import * as CSS from "csstype";
 import * as React from "react";
 import emoji from "react-easy-emoji";
-import { SessionType } from "../../schema/Session";
+import SessionType from "../../schema/SessionType";
 
 const ScheduleContainer = styled.dl`
   margin-top: 1cm;

@@ -11,6 +11,7 @@ import { Contact } from "./Contact";
 import Keyword from "./keywords";
 import { Location } from "./Location";
 import { UrlScalar } from "./scalars";
+import SessionType from "./SessionType";
 
 @ObjectType()
 export class SessionUrls {
@@ -56,20 +57,10 @@ export class SessionResolver {
   }
 }
 
-export enum SessionType {
-  TALK = "TALK",
-  LIGHTNING_TALK = "LIGHTNING_TALK",
-  KEYNOTE = "KEYNOTE",
-  WORKSHOP = "WORKSHOP",
-  PANEL = "PANEL",
-  BREAKFAST = "BREAKFAST",
-  LUNCH = "LUNCH",
-  COFFEE_BREAK = "COFFEE_BREAK",
-  ORGANIZATIONAL = "ORGANIZATIONAL",
-  PARTY = "PARTY",
-}
-
 registerEnumType(SessionType, {
   name: "SessionType",
   description: "Type of the session",
 });
+
+// Backwards-compatibility with content. TODO: refactor out
+export { SessionType };

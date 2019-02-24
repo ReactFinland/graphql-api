@@ -10,7 +10,7 @@ function connect(apiUrl, query, variables = {}, propsToVars = props => props) {
       data: {};
     }
 
-    class Connect extends React.Component<{}, ConnectState> {
+    class Connect<P = {}> extends React.Component<P, ConnectState> {
       public state: ConnectState = {
         data: {},
       };

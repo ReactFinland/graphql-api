@@ -10,6 +10,14 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
   const Interactive = createInteractive(projectRoot, scriptRoot, __dirname);
   const connection = createConnection(schema);
 
+  interface AssetQuery {
+    conferenceSeriesId: string;
+    conferenceId: string;
+    templateId: string;
+    contactName: string;
+    day: string;
+  }
+
   router.get(
     "/asset-designer",
     validate.query({
@@ -18,9 +26,11 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
       templateId: { type: String, default: "theme" },
       // TODO
       contactName: { type: String, default: "Carolyn Stransky" },
+      // TODO:
+      day: { type: String, default: "2019-04-25" },
     }),
     async (req, res) => {
-      const selected = req.query;
+      const selected: AssetQuery = req.query;
 
       // TODO: Redirect with query visible instead of defaulting?
       const [err, connect] = await connection(
