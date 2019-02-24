@@ -11,16 +11,19 @@ function createInteractive(projectRoot, scriptRoot, componentRoot) {
   return function Interactive({
     component,
     relativeComponentPath,
+    componentHash = "",
     props = {},
   }) {
-    const componentName = path.basename(relativeComponentPath);
+    const componentName = `${path.basename(
+      relativeComponentPath
+    )}${componentHash}`;
     const indexName = `${componentName}.index.ts`;
     const indexPath = path.join(scriptRoot, indexName);
     const absoluteComponentPath = path.join(
       componentRoot,
       relativeComponentPath
     );
-    const outputPath = path.join(scriptRoot, componentName) + ".js";
+    const outputPath = `${path.join(scriptRoot, componentName)}.js`;
     const scriptPath = `/${trimStart(
       path.relative(projectRoot, outputPath),
       "."
