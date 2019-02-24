@@ -56,7 +56,7 @@ const conferenceSeries: {
       id: "graphql-finland",
       colors: {
         primary: "#e10098",
-        secondary: "#e10098",
+        secondary: "#ff1eb6",
         text: "#233239",
         background: "#eee",
       },

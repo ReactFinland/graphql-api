@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Color } from "csstype";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
+import Select from "../components/Select";
 import ThemeTemplate from "../templates/ThemeTemplate";
 
 interface AssetDesignerPageProps {
@@ -23,7 +24,6 @@ const Sidebar = styled.aside`
   background-color: ${({ backgroundColor }: SidebarProps) => backgroundColor};
 `;
 const SidebarHeader = styled.h1``;
-const ThemeSelector = styled.select``;
 
 const Main = styled.main`
   display: inline-block;
@@ -35,12 +35,30 @@ function AssetDesignerPage({ theme, themes }: AssetDesignerPageProps) {
     <article>
       <Sidebar backgroundColor={theme.colors.background}>
         <SidebarHeader>Asset designer</SidebarHeader>
-        <ThemeSelector />
+        <ThemeSelector themes={themes} selectedTheme={theme.id} />
       </Sidebar>
       <Main>
         <ThemeTemplate theme={theme} />
       </Main>
     </article>
+  );
+}
+
+interface ThemeSelectorProps {
+  themes: Theme[];
+  selectedTheme: Theme["id"];
+}
+
+function ThemeSelector({ themes, selectedTheme }: ThemeSelectorProps) {
+  return (
+    <Select
+      field="conferenceSeriesId"
+      options={themes.map(theme => ({
+        value: theme.id,
+        label: theme.id,
+      }))}
+      selected={selectedTheme}
+    />
   );
 }
 
