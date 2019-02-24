@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Bohdan Liashenko",
-  about: "Bohdan is a frontend developer living in Stockholm. Creator of codecrumbs, js2flowchart, Under the hood ReactJS.",
+  about:
+    "Bohdan is a frontend developer living in Stockholm. Creator of codecrumbs, js2flowchart, Under the hood ReactJS.",
   image: {
     url: "people/bohdan.jpg",
   },
@@ -24,10 +25,7 @@ const person: Contact = {
     },
     city: "Stockholm",
   },
-  keywords: [
-    Keyword.REACT,
-    Keyword.TOOLING
-  ],
+  keywords: [Keyword.REACT, Keyword.TOOLING],
   type: [ContactType.SPEAKER],
 };
 
