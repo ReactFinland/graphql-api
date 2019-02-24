@@ -1,4 +1,3 @@
-// TODO: Add a fragment for logo lookups
 const themeQuery = `
 query ThemeQuery($conferenceSeriesId: ID!) {
   theme(conferenceId: $conferenceSeriesId) {
@@ -10,30 +9,24 @@ query ThemeQuery($conferenceSeriesId: ID!) {
     }
     logos {
       black {
-        withText {
-          url
-        }
-        withoutText {
-          url
-        }
+        ...logoFragment
       }
       colored {
-        withText {
-          url
-        }
-        withoutText {
-          url
-        }
+        ...logoFragment
       }
       white {
-        withText {
-          url
-        }
-        withoutText {
-          url
-        }
+        ...logoFragment
       }
     }
+  }
+}
+
+fragment logoFragment on WithWithoutText {
+  withText {
+    url
+  }
+  withoutText {
+    url
   }
 }
 `;
