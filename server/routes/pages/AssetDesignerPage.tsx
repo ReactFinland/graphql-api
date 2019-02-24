@@ -25,7 +25,10 @@ const SidebarItem = styled.div`
 `;
 
 const Main = styled.main`
+  margin-top: 1em;
   display: inline-block;
+  overflow: auto;
+  width: calc(100% - 10em);
 `;
 
 interface AssetDesignerPageProps {

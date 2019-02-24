@@ -65,6 +65,7 @@
     "express-http-to-https": "^1.1.4",
     "fuse-box": "^3.7.1",
     "graphql": "^14.1.1",
+    "graphql-request": "^1.8.2",
     "hex-to-rgba": "^1.0.2",
     "ical-generator": "^1.5.0",
     "isvalid": "^2.1.0",
