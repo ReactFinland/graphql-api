@@ -41,6 +41,9 @@ export class Logos {
 // TODO: Add fonts here (name + path)
 @ObjectType()
 export class Theme {
+  @Field(_ => ID)
+  public id!: string;
+
   @Field(_ => Colors)
   public colors!: Colors;
 
@@ -50,6 +53,11 @@ export class Theme {
 
 @Resolver(_ => Theme)
 export class ThemeResolver {
+  @Query(_ => [Theme])
+  public themes() {
+    return Object.values(allSeries).map(({ theme }) => theme);
+  }
+
   @Query(_ => Theme)
   public theme(@Arg("conferenceId", _ => ID) conferenceId: string) {
     const series = allSeries[conferenceId];

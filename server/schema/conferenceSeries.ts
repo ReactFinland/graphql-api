@@ -13,6 +13,7 @@ const conferenceSeries: {
     name: "React Finland",
     conferences: ["react-finland-2018", "react-finland-2019"],
     theme: {
+      id: "react-finland",
       colors: {
         primary: "#002fa9",
         secondary: "#5297e9",
@@ -52,6 +53,7 @@ const conferenceSeries: {
     name: "GraphQL Finland",
     conferences: ["graphql-finland-2018"],
     theme: {
+      id: "graphql-finland",
       colors: {
         primary: "#e10098",
         secondary: "#e10098",

@@ -81,6 +81,7 @@ export class ConferenceResolver {
     return getConference(id);
   }
 
+  // TODO: Deprecate and rename as conferences()
   @Query(_ => [Conference])
   public allConferences() {
     return Object.keys(conferences).map(id => conferences[id]);
