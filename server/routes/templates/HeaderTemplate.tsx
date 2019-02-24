@@ -122,9 +122,14 @@ function HeaderTemplate({ conference, theme, coupon }: HeaderTemplateProps) {
   );
 }
 
-export default connect(
+const ConnectedHeaderTemplate = connect(
   "/graphql",
   conferenceDaysQuery,
   {},
   ({ selected }) => ({ ...selected })
 )(HeaderTemplate);
+
+// TODO: Better use enums here
+ConnectedHeaderTemplate.variables = ["conferenceId"];
+
+export default ConnectedHeaderTemplate;

@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import { Color } from "csstype";
+import { Color, WidthProperty } from "csstype";
+import { map, pickBy } from "lodash";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
 import Select from "../components/Select";
@@ -7,29 +8,38 @@ import * as templates from "../templates";
 
 interface SidebarProps {
   backgroundColor: Color;
+  width: WidthProperty<string>;
 }
 
 const Sidebar = styled.aside`
   padding: 1em;
   display: inline-block;
   vertical-align: top;
+  width: ${({ width }) => width};
   height: 100vh;
-  width: 10em;
   position: sticky;
-  background-color: ${({ backgroundColor }: SidebarProps) => backgroundColor};
-`;
+  background-color: ${({ backgroundColor }) => backgroundColor};
+` as React.FC<SidebarProps>;
 const SidebarHeader = styled.h2``;
 const SidebarItem = styled.div`
   margin-top: 1em;
   margin-bottom: 1em;
 `;
 
+interface MainProps {
+  width: WidthProperty<string>;
+}
+
 const Main = styled.main`
   margin-top: 1em;
   display: inline-block;
   overflow: auto;
-  width: calc(100% - 10em);
-`;
+  width: ${({ width }) => width};
+` as React.FC<MainProps>;
+
+const SelectorLabel = styled.label``;
+
+const VariableContainer = styled.div``;
 
 interface AssetDesignerPageProps {
   // TODO: Share the type from the backend
@@ -47,10 +57,16 @@ function AssetDesignerPage({
   theme,
   themes,
 }: AssetDesignerPageProps) {
-  // TODO: This renders just ThemeTemplate for now -> generalize
+  // TODO: Type
+  const template = templates[selected.templateId] || <NoTemplateFound />;
+  const variables = template.variables
+    ? pickBy(selected, (option, key) => template.variables.indexOf(key) >= 0)
+    : {};
+  const sideBarWidth = "15em";
+
   return (
     <article>
-      <Sidebar backgroundColor={theme.colors.background}>
+      <Sidebar backgroundColor={theme.colors.background} width={sideBarWidth}>
         <SidebarHeader>Asset designer</SidebarHeader>
 
         <SidebarItem>
@@ -65,17 +81,36 @@ function AssetDesignerPage({
             selectedTemplate={selected.templateId}
           />
         </SidebarItem>
+
+        {variables && (
+          <SidebarItem>
+            <SidebarHeader>Variables</SidebarHeader>
+
+            {map(variables, (variable, field) => (
+              <VariableContainer key={field}>
+                <SelectorLabel>{field}</SelectorLabel>
+                <VariableSelector
+                  field={field}
+                  options={[]}
+                  selectedVariable={variable}
+                />
+              </VariableContainer>
+            ))}
+          </SidebarItem>
+        )}
       </Sidebar>
-      <Main>
-        {templates[selected.templateId]
-          ? React.createElement(templates[selected.templateId], {
-              selected,
-              theme,
-            })
-          : "No template found!"}
+      <Main width={`calc(100% - ${sideBarWidth})`}>
+        {React.createElement(template, {
+          selected,
+          theme,
+        })}
       </Main>
     </article>
   );
+}
+
+function NoTemplateFound() {
+  return <>No template found!</>;
 }
 
 interface ThemeSelectorProps {
@@ -121,6 +156,16 @@ function TemplateSelector({
       selected={selectedTemplate}
     />
   );
+}
+
+interface VariableSelector {
+  field: string;
+  options: string[];
+  selectedVariable: string;
+}
+
+function VariableSelector({ field, options, selectedVariable }) {
+  return <Select field={field} options={options} selected={selectedVariable} />;
 }
 
 export default AssetDesignerPage;

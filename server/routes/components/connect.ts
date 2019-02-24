@@ -11,6 +11,7 @@ function connect(apiUrl, query, variables = {}, propsToVars = props => props) {
     }
 
     class Connect<P = {}> extends React.Component<P, ConnectState> {
+      public static variables: string[];
       public state: ConnectState = {
         data: {},
       };
