@@ -8,7 +8,7 @@ import * as React from "react";
 function createInteractive(projectRoot, scriptRoot) {
   mkdirp.sync(scriptRoot);
 
-  return function Interactive({ children, component, props }) {
+  return function Interactive({ children, component, props = {} }) {
     const indexName = `${component}.index.ts`;
     const indexPath = path.join(scriptRoot, indexName);
     const componentPath = path.join(__dirname, component);

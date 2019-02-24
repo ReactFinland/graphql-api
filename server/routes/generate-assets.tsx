@@ -94,7 +94,6 @@ async function routeAssetGenerator(router, schema, projectRoot, scriptRoot) {
           req.url,
           theme,
           <>
-            {" "}
             <Interactive
               component="./ConferenceSelector"
               props={conferenceProps}
