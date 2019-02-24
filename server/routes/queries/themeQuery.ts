@@ -1,34 +1,13 @@
+import themeFragment from "./fragments/themeFragment";
+
 const themeQuery = `
 query ThemeQuery($conferenceSeriesId: ID!) {
   theme(conferenceId: $conferenceSeriesId) {
-    colors {
-      primary
-      secondary
-      text
-      background
-    }
-    logos {
-      black {
-        ...logoFragment
-      }
-      colored {
-        ...logoFragment
-      }
-      white {
-        ...logoFragment
-      }
-    }
+    ...themeFragment
   }
 }
 
-fragment logoFragment on WithWithoutText {
-  withText {
-    url
-  }
-  withoutText {
-    url
-  }
-}
+${themeFragment}
 `;
 
 export default themeQuery;
