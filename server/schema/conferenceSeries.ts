@@ -13,27 +13,38 @@ const conferenceSeries: {
     name: "React Finland",
     conferences: ["react-finland-2018", "react-finland-2019"],
     theme: {
-      primaryColor: "#002fa9",
-      secondaryColor: "#5297e9",
-      textColor: "#111",
-      backgroundColor: "#eee",
-      blackLogoWithText: {
-        url: "/media/react-finland/logo/v2/logo-black-with-text.svg",
+      id: "react-finland",
+      colors: {
+        primary: "#002fa9",
+        secondary: "#5297e9",
+        text: "#111",
+        background: "#eee",
       },
-      blackLogoWithoutText: {
-        url: "/media/react-finland/logo/v2/logo-black.svg",
-      },
-      coloredLogoWithText: {
-        url: "/media/react-finland/logo/v2/logo-colored-with-text.svg",
-      },
-      coloredLogoWithoutText: {
-        url: "/media/react-finland/logo/v2/logo-colored.svg",
-      },
-      whiteLogoWithText: {
-        url: "/media/react-finland/logo/v2/logo-white-with-text.svg",
-      },
-      whiteLogoWithoutText: {
-        url: "/media/react-finland/logo/v2/logo-white.svg",
+      logos: {
+        black: {
+          withText: {
+            url: "/media/react-finland/logo/v2/logo-black-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/react-finland/logo/v2/logo-black.svg",
+          },
+        },
+        colored: {
+          withText: {
+            url: "/media/react-finland/logo/v2/logo-colored-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/react-finland/logo/v2/logo-colored.svg",
+          },
+        },
+        white: {
+          withText: {
+            url: "/media/react-finland/logo/v2/logo-white-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/react-finland/logo/v2/logo-white.svg",
+          },
+        },
       },
     },
   },
@@ -42,27 +53,38 @@ const conferenceSeries: {
     name: "GraphQL Finland",
     conferences: ["graphql-finland-2018"],
     theme: {
-      primaryColor: "#e10098",
-      secondaryColor: "#e10098",
-      textColor: "#233239",
-      backgroundColor: "#eee",
-      blackLogoWithText: {
-        url: "/media/graphql-finland/logo/v1/logo-black-with-text.svg",
+      id: "graphql-finland",
+      colors: {
+        primary: "#e10098",
+        secondary: "#ff1eb6",
+        text: "#233239",
+        background: "#eee",
       },
-      blackLogoWithoutText: {
-        url: "/media/graphql-finland/logo/v1/logo-black.svg",
-      },
-      coloredLogoWithText: {
-        url: "/media/graphql-finland/logo/v1/logo-colored-with-text.svg",
-      },
-      coloredLogoWithoutText: {
-        url: "/media/graphql-finland/logo/v1/logo-colored.svg",
-      },
-      whiteLogoWithText: {
-        url: "/media/graphql-finland/logo/v1/logo-white-with-text.svg",
-      },
-      whiteLogoWithoutText: {
-        url: "/media/graphql-finland/logo/v1/logo-white.svg",
+      logos: {
+        black: {
+          withText: {
+            url: "/media/graphql-finland/logo/v1/logo-black-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/graphql-finland/logo/v1/logo-black.svg",
+          },
+        },
+        colored: {
+          withText: {
+            url: "/media/graphql-finland/logo/v1/logo-colored-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/graphql-finland/logo/v1/logo-colored.svg",
+          },
+        },
+        white: {
+          withText: {
+            url: "/media/graphql-finland/logo/v1/logo-white-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/graphql-finland/logo/v1/logo-white.svg",
+          },
+        },
       },
     },
   },

@@ -4,6 +4,7 @@ import scheduleQuery from "./scheduleQuery";
 import speakerTalkQuery from "./speakerTalkQuery";
 import sponsorQuery from "./sponsorQuery";
 import themeQuery from "./themeQuery";
+import themesQuery from "./themesQuery";
 
 export {
   conferenceDayQuery,
@@ -12,4 +13,5 @@ export {
   speakerTalkQuery,
   sponsorQuery,
   themeQuery,
+  themesQuery,
 };

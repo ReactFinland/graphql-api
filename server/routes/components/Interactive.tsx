@@ -5,20 +5,34 @@ import mkdirp from "mkdirp";
 import * as path from "path";
 import * as React from "react";
 
-function createInteractive(projectRoot, scriptRoot) {
+function createInteractive(projectRoot, scriptRoot, componentRoot) {
   mkdirp.sync(scriptRoot);
 
-  return function Interactive({ children, component, props }) {
-    const indexName = `${component}.index.ts`;
+  return function Interactive({
+    component,
+    relativeComponentPath,
+    componentHash = "",
+    props = {},
+  }) {
+    const componentName = `${path.basename(
+      relativeComponentPath
+    )}${componentHash}`;
+    const indexName = `${componentName}.index.ts`;
     const indexPath = path.join(scriptRoot, indexName);
-    const componentPath = path.join(__dirname, component);
-    const outputPath = path.join(scriptRoot, component) + ".js";
+    const absoluteComponentPath = path.join(
+      componentRoot,
+      relativeComponentPath
+    );
+    const outputPath = `${path.join(scriptRoot, componentName)}.js`;
     const scriptPath = `/${trimStart(
       path.relative(projectRoot, outputPath),
       "."
     )}`;
 
-    fs.writeFileSync(indexPath, renderScript(componentPath, component, props));
+    fs.writeFileSync(
+      indexPath,
+      renderScript(absoluteComponentPath, componentName, props)
+    );
 
     // TODO: Likely we should use Preact here (alias?)
     const fuse = FuseBox.init({
@@ -29,7 +43,7 @@ function createInteractive(projectRoot, scriptRoot) {
     });
 
     fuse
-      .bundle(component)
+      .bundle(componentName)
       .cache(false) // TODO: Enable cache again?
       .instructions(`> ${indexName}`);
 
@@ -42,7 +56,7 @@ function createInteractive(projectRoot, scriptRoot) {
     // only after the div has been created! Otherwise hydration fails.
     return (
       <>
-        <div id={component}>{children}</div>
+        <div id={componentName}>{React.createElement(component, props)}</div>
         <script src={scriptPath} />
       </>
     );

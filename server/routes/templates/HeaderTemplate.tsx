@@ -1,13 +1,20 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
+import { get, map } from "lodash";
 import * as React from "react";
+import { Conference } from "../../schema/Conference";
+import { Theme } from "../../schema/Theme";
+import connect from "../components/connect";
+import { dayToFinnishLocale } from "../date-utils";
+import conferenceDaysQuery from "../queries/conferenceDaysQuery";
 
 interface HeaderContainerProps {
   primaryColor: Color;
   secondaryColor: Color;
 }
 
+// TODO: Move texture to the theme API
 const HeaderPageContainer = styled.div`
   background-image: ${({
     primaryColor,
@@ -66,17 +73,36 @@ const HeaderCoupon = styled.h3`
   font-family: "Courier New", Courier, monospace;
 `;
 
-function HeaderPage({ conferenceDays, location, theme, slogan, coupon }) {
+interface HeaderTemplateProps {
+  conference?: Conference;
+  theme?: Theme;
+  coupon?: string; // TODO: Get from selected? Expose to the user somehow
+}
+
+function HeaderTemplate({ conference, theme, coupon }: HeaderTemplateProps) {
+  const { locations, schedules, slogan } = conference || {
+    locations: [],
+    schedules: [],
+    slogan: "",
+  };
+  const location =
+    locations && locations.length > 0 && locations[0]
+      ? {
+          city: locations[0].city,
+          country: locations[0].country && locations[0].country.name,
+        }
+      : {};
+  const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
   const firstDay = conferenceDays[0];
   const lastDay = conferenceDays[conferenceDays.length - 1];
 
   return (
     <HeaderPageContainer
-      primaryColor={theme.primaryColor}
-      secondaryColor={theme.secondaryColor}
+      primaryColor={get(theme, "colors.primary")}
+      secondaryColor={get(theme, "colors.secondary")}
     >
       <PrimaryRow>
-        <HeaderLogo src={theme.whiteLogoWithText.url} />
+        <HeaderLogo src={get(theme, "logos.white.withText.url")} />
         <HeaderInfoContainer>
           <HeaderConferenceDays>
             {firstDay}-{lastDay}
@@ -88,12 +114,17 @@ function HeaderPage({ conferenceDays, location, theme, slogan, coupon }) {
       </PrimaryRow>
       <SecondaryRow>
         <HeaderSlogan>{slogan}</HeaderSlogan>
-        <HeaderCoupon>
-          Use discount code {coupon} for a 10% discount!
-        </HeaderCoupon>
+        {coupon && (
+          <HeaderCoupon>Use {coupon} for a 10% discount!</HeaderCoupon>
+        )}
       </SecondaryRow>
     </HeaderPageContainer>
   );
 }
 
-export default HeaderPage;
+export default connect(
+  "/graphql",
+  conferenceDaysQuery,
+  {},
+  ({ selected }) => ({ ...selected })
+)(HeaderTemplate);

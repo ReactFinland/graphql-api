@@ -1,7 +1,13 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
+import { map } from "lodash";
 import * as React from "react";
+import { Conference } from "../../schema/Conference";
+import { Contact } from "../../schema/Contact";
+import { Theme } from "../../schema/Theme";
+import connect from "../components/connect";
+import { dayToFinnishLocale } from "../date-utils";
 
 interface TweetPageContainerProps {
   primaryColor: Color;
@@ -66,28 +72,44 @@ const TweetSpeakerTalk = styled.h2`
   font-size: 200%;
 `;
 
-function SpeakerTweetPage({
-  conferenceDays,
-  speaker: { name, image, talks },
+interface SpeakerTweetTemplateProps {
+  conference?: Conference;
+  contact?: Contact;
+  theme: Theme;
+}
+
+function SpeakerTweetTemplate({
+  conference,
+  contact,
   theme,
-}) {
+}: SpeakerTweetTemplateProps) {
+  const { name, image, talks } = contact || {
+    name: "",
+    image: { url: "" },
+    talks: [],
+  };
+  const { schedules } = conference || { schedules: [] };
+  const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
+
   const firstDay = conferenceDays[0];
   const lastDay = conferenceDays[conferenceDays.length - 1];
 
   return (
     <TweetPageContainer
-      primaryColor={theme.primaryColor}
-      secondaryColor={theme.secondaryColor}
+      primaryColor={theme.colors.primary}
+      secondaryColor={theme.colors.secondary}
     >
       <TweetInfoContainer>
         <TweetRow>
-          <TweetLogo src={theme.whiteLogoWithText.url} />
+          <TweetLogo src={theme.logos.white.withText.url} />
           <TweetConferenceDays>
             {firstDay}-{lastDay}
           </TweetConferenceDays>
         </TweetRow>
         <TweetSpeakerName>{name}</TweetSpeakerName>
-        <TweetSpeakerTalk>{talks[0].title}</TweetSpeakerTalk>
+        <TweetSpeakerTalk>
+          {Array.isArray(talks) && talks.length > 0 && talks[0].title}
+        </TweetSpeakerTalk>
       </TweetInfoContainer>
       <TweetImageContainer>
         <TweetImage src={image.url} />
@@ -96,4 +118,33 @@ function SpeakerTweetPage({
   );
 }
 
-export default SpeakerTweetPage;
+export default connect(
+  "/graphql",
+  `
+query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
+  contact(contactName: $contactName, conferenceId: $conferenceId) {
+    name
+    image {
+      url
+    }
+    talks {
+      title
+    }
+  }
+  conference(id: $conferenceId) {
+    slogan
+    schedules {
+      day
+    }
+    locations {
+      city
+      country {
+        name
+      }
+    }
+  }
+}
+  `,
+  {},
+  ({ selected }) => ({ ...selected })
+)(SpeakerTweetTemplate);

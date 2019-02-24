@@ -1,5 +1,5 @@
-import queryString from "query-string";
 import * as React from "react";
+import Select from "./Select";
 
 function ConferenceSelector({ conferenceSeries, selection }) {
   const selectedConferenceSeries = conferenceSeries.find(
@@ -39,29 +39,6 @@ function getOptions(values, selectionId) {
     label: name,
     selected: id === selectionId,
   }));
-}
-
-function Select({ field, options }) {
-  return (
-    <select
-      onChange={({ target: { value } }) => {
-        location.search = queryString.stringify({
-          ...queryString.parse(location.search),
-          [field]: value,
-        });
-
-        // TODO: If series or conference is changed,
-        // clean selections after?
-      }}
-      value={options.filter(({ selected }) => selected)[0].value}
-    >
-      {options.map(({ value, label, selected }) => (
-        <option key={value} value={value}>
-          {label}
-        </option>
-      ))}
-    </select>
-  );
 }
 
 export default ConferenceSelector;

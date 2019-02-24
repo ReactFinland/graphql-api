@@ -30,6 +30,10 @@ function GlobalStyles({ theme }) {
           font-style: normal;
         }
 
+        * {
+          box-sizing: border-box;
+        }
+
         body {
           font-family: "Finlandica", sans-serif;
           background: ${theme.backgroundColor};
