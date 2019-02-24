@@ -11,7 +11,7 @@ function connect(apiUrl, query, variables = {}, propsToVars = props => props) {
     }
 
     class Connect<P = {}> extends React.Component<P, ConnectState> {
-      public static variables: string[];
+      public static variables: Array<{ id: string; query: string }>;
       public state: ConnectState = {
         data: {},
       };
@@ -26,12 +26,12 @@ function connect(apiUrl, query, variables = {}, propsToVars = props => props) {
       public render() {
         if (this.state.data === null) {
           return null;
-        } else {
-          return React.createElement(component, {
-            ...this.props,
-            ...this.state.data,
-          });
         }
+
+        return React.createElement(component, {
+          ...this.props,
+          ...this.state.data,
+        });
       }
       public fetchData() {
         if (propsToVars) {
@@ -40,6 +40,7 @@ function connect(apiUrl, query, variables = {}, propsToVars = props => props) {
             ...propsToVars(this.props),
           };
         }
+
         return request(apiUrl, query, variables).then(data => {
           queryCache = data;
 

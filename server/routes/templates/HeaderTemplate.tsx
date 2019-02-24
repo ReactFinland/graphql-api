@@ -130,6 +130,16 @@ const ConnectedHeaderTemplate = connect(
 )(HeaderTemplate);
 
 // TODO: Better use enums here
-ConnectedHeaderTemplate.variables = ["conferenceId"];
+ConnectedHeaderTemplate.variables = [
+  {
+    id: "conferenceId",
+    query: `query ConferenceIdQuery {  
+  allConferences {
+    id
+    name
+  }
+}`,
+  },
+];
 
 export default ConnectedHeaderTemplate;

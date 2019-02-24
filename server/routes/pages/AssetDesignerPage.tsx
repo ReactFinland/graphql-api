@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 import { Color, WidthProperty } from "csstype";
-import { map, pickBy } from "lodash";
+import { map } from "lodash";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
+import connect from "../components/connect";
 import Select from "../components/Select";
 import * as templates from "../templates";
 
@@ -59,9 +60,11 @@ function AssetDesignerPage({
 }: AssetDesignerPageProps) {
   // TODO: Type
   const template = templates[selected.templateId] || <NoTemplateFound />;
-  const variables = template.variables
-    ? pickBy(selected, (option, key) => template.variables.indexOf(key) >= 0)
-    : {};
+  const variables = template.variables.map(variable => ({
+    id: variable.id,
+    query: variable.query,
+    value: selected[variable.id],
+  })); // TODO: Overlay to selection
   const sideBarWidth = "15em";
 
   return (
@@ -86,13 +89,13 @@ function AssetDesignerPage({
           <SidebarItem>
             <SidebarHeader>Variables</SidebarHeader>
 
-            {map(variables, (variable, field) => (
-              <VariableContainer key={field}>
-                <SelectorLabel>{field}</SelectorLabel>
+            {map(variables, variable => (
+              <VariableContainer key={variable.id}>
+                <SelectorLabel>{variable.id}</SelectorLabel>
                 <VariableSelector
-                  field={field}
-                  options={[]}
-                  selectedVariable={variable}
+                  field={variable.id}
+                  selectedVariable={variable.value}
+                  query={variable.query}
                 />
               </VariableContainer>
             ))}
@@ -162,10 +165,31 @@ interface VariableSelector {
   field: string;
   options: string[];
   selectedVariable: string;
+  query: string;
 }
 
-function VariableSelector({ field, options, selectedVariable }) {
-  return <Select field={field} options={options} selected={selectedVariable} />;
+function VariableSelector({ field, selectedVariable, query }) {
+  const ConnectedSelect = connect(
+    "/graphql",
+    query
+  )(({ allConferences }) => {
+    return (
+      <Select
+        field={field}
+        options={
+          allConferences
+            ? allConferences.map(({ id, name }) => ({
+                value: id,
+                label: name,
+              }))
+            : []
+        }
+        selected={selectedVariable}
+      />
+    );
+  });
+
+  return <ConnectedSelect />;
 }
 
 export default AssetDesignerPage;
