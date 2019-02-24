@@ -2,6 +2,9 @@ import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import * as React from "react";
+import { Location } from "../../schema/Location";
+import { Schedule } from "../../schema/Schedule";
+import { Theme } from "../../schema/Theme";
 
 interface HeaderContainerProps {
   primaryColor: Color;
@@ -66,17 +69,31 @@ const HeaderCoupon = styled.h3`
   font-family: "Courier New", Courier, monospace;
 `;
 
-function HeaderPage({ conferenceDays, location, theme, slogan, coupon }) {
+interface HeaderPageProps {
+  conferenceDays: Schedule[];
+  location: Location;
+  theme: Theme;
+  slogan: string;
+  coupon: string;
+}
+
+function HeaderPage({
+  conferenceDays,
+  location,
+  theme,
+  slogan,
+  coupon,
+}: HeaderPageProps) {
   const firstDay = conferenceDays[0];
   const lastDay = conferenceDays[conferenceDays.length - 1];
 
   return (
     <HeaderPageContainer
-      primaryColor={theme.primaryColor}
-      secondaryColor={theme.secondaryColor}
+      primaryColor={theme.colors.primary}
+      secondaryColor={theme.colors.secondary}
     >
       <PrimaryRow>
-        <HeaderLogo src={theme.whiteLogoWithText.url} />
+        <HeaderLogo src={theme.logos.whiteWithText.url} />
         <HeaderInfoContainer>
           <HeaderConferenceDays>
             {firstDay}-{lastDay}

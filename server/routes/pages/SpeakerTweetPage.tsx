@@ -2,6 +2,9 @@ import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import * as React from "react";
+import { Contact } from "../../schema/Contact";
+import { Schedule } from "../../schema/Schedule";
+import { Theme } from "../../schema/Theme";
 
 interface TweetPageContainerProps {
   primaryColor: Color;
@@ -66,28 +69,36 @@ const TweetSpeakerTalk = styled.h2`
   font-size: 200%;
 `;
 
+interface SpeakerTweetPageProps {
+  conferenceDays: Schedule[];
+  speaker: Contact;
+  theme: Theme;
+}
+
 function SpeakerTweetPage({
   conferenceDays,
   speaker: { name, image, talks },
   theme,
-}) {
+}: SpeakerTweetPageProps) {
   const firstDay = conferenceDays[0];
   const lastDay = conferenceDays[conferenceDays.length - 1];
 
   return (
     <TweetPageContainer
-      primaryColor={theme.primaryColor}
-      secondaryColor={theme.secondaryColor}
+      primaryColor={theme.colors.primary}
+      secondaryColor={theme.colors.secondary}
     >
       <TweetInfoContainer>
         <TweetRow>
-          <TweetLogo src={theme.whiteLogoWithText.url} />
+          <TweetLogo src={theme.logos.whiteWithText.url} />
           <TweetConferenceDays>
             {firstDay}-{lastDay}
           </TweetConferenceDays>
         </TweetRow>
         <TweetSpeakerName>{name}</TweetSpeakerName>
-        <TweetSpeakerTalk>{talks[0].title}</TweetSpeakerTalk>
+        <TweetSpeakerTalk>
+          {Array.isArray(talks) && talks[0].title}
+        </TweetSpeakerTalk>
       </TweetInfoContainer>
       <TweetImageContainer>
         <TweetImage src={image.url} />

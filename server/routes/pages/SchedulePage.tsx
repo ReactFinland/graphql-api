@@ -2,6 +2,9 @@ import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import * as React from "react";
+import { Conference } from "../../schema/Conference";
+import { Schedule as ISchedule } from "../../schema/Schedule";
+import { Theme } from "../../schema/Theme";
 import Schedule from "../components/Schedule";
 import Sponsors from "../components/Sponsors";
 
@@ -55,17 +58,28 @@ const SchedulePageContent = styled.div`
   z-index: 1;
 `;
 
-function SchedulePage({ intervals, theme, sponsors, day }) {
+interface SchedulePageProps {
+  intervals: ISchedule[];
+  theme: Theme;
+  sponsors: {
+    goldSponsors: Conference["goldSponsors"];
+    silverSponsors: Conference["silverSponsors"];
+    bronzeSponsors: Conference["bronzeSponsors"];
+  };
+  day: string;
+}
+
+function SchedulePage({ intervals, theme, sponsors, day }: SchedulePageProps) {
   if (!intervals) {
     return null;
   }
 
   return (
     <SchedulePageContainer
-      primaryColor={theme.primaryColor}
-      secondaryColor={theme.secondaryColor}
+      primaryColor={theme.colors.primary}
+      secondaryColor={theme.colors.secondary}
     >
-      <SchedulePageLogo src={theme.whiteLogoWithText.url} />
+      <SchedulePageLogo src={theme.logos.whiteWithText.url} />
       <SchedulePageHeader>Schedule{day ? ` ― ${day}` : ""}</SchedulePageHeader>
       <SchedulePageContent>
         <Schedule theme={theme} intervals={intervals} />
