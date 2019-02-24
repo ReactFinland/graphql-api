@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Bohdan Liashenko",
   about:
-    "Bohdan is a frontend developer living in Stockholm. Creator of codecrumbs, js2flowchart, Under the hood ReactJS.",
+    "Bohdan is a frontend developer at 0+X, a consultancy firm based in Stockholm. He’s passionate about software delivery processes and believes there is still a room for improvements. Creator of codecrumbs, js2flowchart, Under the hood ReactJS.",
   image: {
     url: "people/bohdan.jpg",
   },
