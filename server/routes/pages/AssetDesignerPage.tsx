@@ -60,11 +60,13 @@ function AssetDesignerPage({
 }: AssetDesignerPageProps) {
   // TODO: Type
   const template = templates[selected.templateId] || <NoTemplateFound />;
-  const variables = template.variables.map(variable => ({
-    id: variable.id,
-    query: variable.query,
-    value: selected[variable.id],
-  })); // TODO: Overlay to selection
+  const variables = template.variables
+    ? template.variables.map(variable => ({
+        id: variable.id,
+        query: variable.query,
+        value: selected[variable.id],
+      }))
+    : []; // TODO: Overlay to selection
   const sideBarWidth = "15em";
 
   return (
@@ -85,7 +87,7 @@ function AssetDesignerPage({
           />
         </SidebarItem>
 
-        {variables && (
+        {variables.length > 0 && (
           <SidebarItem>
             <SidebarHeader>Variables</SidebarHeader>
 
@@ -128,10 +130,14 @@ function ThemeSelector({ themes, selectedTheme }: ThemeSelectorProps) {
   return (
     <Select
       field="conferenceSeriesId"
-      options={themes.map(theme => ({
-        value: theme.id,
-        label: theme.id,
-      }))}
+      options={
+        themes
+          ? themes.map(theme => ({
+              value: theme.id,
+              label: theme.id,
+            }))
+          : []
+      }
       selected={selectedTheme}
     />
   );
@@ -152,10 +158,14 @@ function TemplateSelector({
   return (
     <Select
       field="templateId"
-      options={templates.map(template => ({
-        value: template,
-        label: template,
-      }))}
+      options={
+        templates
+          ? templates.map(template => ({
+              value: template,
+              label: template,
+            }))
+          : []
+      }
       selected={selectedTemplate}
     />
   );
