@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { Color, WidthProperty } from "csstype";
+import domToImage from "dom-to-image";
+import { saveAs } from "file-saver";
 import { map } from "lodash";
 import queryString from "query-string";
 import * as React from "react";
@@ -24,7 +26,6 @@ const Sidebar = styled.aside`
 ` as React.FC<SidebarProps>;
 const SidebarHeader = styled.h2``;
 const SidebarItem = styled.div`
-  margin-top: 1em;
   margin-bottom: 1em;
 `;
 
@@ -33,11 +34,12 @@ interface MainProps {
 }
 
 const Main = styled.main`
-  margin-top: 1em;
   display: inline-block;
   overflow: auto;
   width: ${({ width }) => width};
 ` as React.FC<MainProps>;
+
+const ExportButton = styled.button``;
 
 const SelectorLabel = styled.label``;
 
@@ -68,11 +70,38 @@ function AssetDesignerPage({
       }))
     : []; // TODO: Overlay to selection
   const sideBarWidth = "15em";
+  const assetDesignTemplateId = "asset-design-template-id";
 
   return (
     <article>
       <Sidebar backgroundColor={theme.colors.background} width={sideBarWidth}>
         <SidebarHeader>Asset designer</SidebarHeader>
+
+        <SidebarItem>
+          <ExportButton
+            onClick={() => {
+              const domNode = document.getElementById(assetDesignTemplateId);
+
+              if (domNode) {
+                // Remove possible margin as that crops output
+                const oldMargin = domNode.style.margin;
+                domNode.style.margin = "inherit";
+
+                domToImage
+                  .toBlob(domNode)
+                  .then(blob => {
+                    // TODO: Figure out a nice way to determine a good default name
+                    saveAs(blob, "design.png");
+
+                    domNode.style.margin = oldMargin;
+                  })
+                  .catch(err => console.error(err));
+              }
+            }}
+          >
+            Export Image
+          </ExportButton>
+        </SidebarItem>
 
         <SidebarItem>
           <SidebarHeader>Themes</SidebarHeader>
@@ -111,6 +140,7 @@ function AssetDesignerPage({
         {React.createElement(template, {
           selected,
           theme,
+          id: assetDesignTemplateId,
         })}
       </Main>
     </article>

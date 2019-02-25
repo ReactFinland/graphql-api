@@ -66,6 +66,7 @@ interface ScheduleTemplateProps {
   theme: Theme;
   day: string;
   conferenceId: string;
+  id: string;
 }
 
 const ConnectedSponsors = connect(
@@ -79,9 +80,11 @@ function ScheduleTemplate({
   theme,
   day,
   conferenceId,
+  id,
 }: ScheduleTemplateProps) {
   return (
     <ScheduleTemplateContainer
+      id={id}
       primaryColor={theme.colors.primary}
       secondaryColor={theme.colors.secondary}
     >
@@ -103,8 +106,9 @@ const ConnectedScheduleTemplate = connect(
   scheduleQuery,
   {},
   ({ selected }) => ({ ...selected })
-)(({ schedule, theme, selected }) => (
+)(({ schedule, theme, selected, id }) => (
   <ScheduleTemplate
+    id={id}
     theme={theme}
     day={schedule && dayToFinnishLocale(schedule.day)}
     conferenceId={selected.conferenceId}

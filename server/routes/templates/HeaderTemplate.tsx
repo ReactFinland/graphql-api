@@ -77,9 +77,15 @@ interface HeaderTemplateProps {
   conference?: Conference;
   theme?: Theme;
   coupon?: string; // TODO: Get from selected? Expose to the user somehow
+  id: string;
 }
 
-function HeaderTemplate({ conference, theme, coupon }: HeaderTemplateProps) {
+function HeaderTemplate({
+  conference,
+  theme,
+  coupon,
+  id,
+}: HeaderTemplateProps) {
   const { locations, schedules, slogan } = conference || {
     locations: [],
     schedules: [],
@@ -98,6 +104,7 @@ function HeaderTemplate({ conference, theme, coupon }: HeaderTemplateProps) {
 
   return (
     <HeaderPageContainer
+      id={id}
       primaryColor={get(theme, "colors.primary")}
       secondaryColor={get(theme, "colors.secondary")}
     >

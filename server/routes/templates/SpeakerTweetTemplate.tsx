@@ -26,6 +26,7 @@ const TweetPageContainer = styled.div`
   background-size: cover;
   position: relative;
   margin: auto;
+  margin-top: 1em;
   padding: 0;
   width: 880px;
   height: 440px;
@@ -76,12 +77,14 @@ interface SpeakerTweetTemplateProps {
   conference?: Conference;
   contact?: Contact;
   theme: Theme;
+  id: string;
 }
 
 function SpeakerTweetTemplate({
   conference,
   contact,
   theme,
+  id,
 }: SpeakerTweetTemplateProps) {
   const { name, image, talks } = contact || {
     name: "",
@@ -96,6 +99,7 @@ function SpeakerTweetTemplate({
 
   return (
     <TweetPageContainer
+      id={id}
       primaryColor={theme.colors.primary}
       secondaryColor={theme.colors.secondary}
     >

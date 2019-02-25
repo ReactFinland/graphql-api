@@ -71,11 +71,12 @@ function tryTo(fn, defaultValue) {
 
 interface ThemeTemplateProps {
   theme: Theme;
+  id: string;
 }
 
-function ThemeTemplate({ theme }: ThemeTemplateProps) {
+function ThemeTemplate({ id, theme }: ThemeTemplateProps) {
   return (
-    <ThemeTemplateContainer>
+    <ThemeTemplateContainer id={id}>
       <ThemeTemplateHeader>Theme</ThemeTemplateHeader>
       <ColorsContainer>
         <ColorHeader>Colors</ColorHeader>
