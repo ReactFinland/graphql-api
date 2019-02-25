@@ -34,7 +34,7 @@ const TweetPageContainer = styled.div`
 `;
 
 const TweetInfoContainer = styled.div`
-  padding: 3em;
+  padding: 3em 0 3em 3em;
 `;
 
 const TweetRow = styled.div`
