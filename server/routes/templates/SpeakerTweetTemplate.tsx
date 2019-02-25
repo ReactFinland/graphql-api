@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
-import { map } from "lodash";
+import { get, map } from "lodash";
 import * as React from "react";
 import { Conference } from "../../schema/Conference";
 import { Contact } from "../../schema/Contact";
@@ -118,7 +118,7 @@ function SpeakerTweetTemplate({
   );
 }
 
-export default connect(
+const ConnectedSpeakerTweetTemplate = connect(
   "/graphql",
   `
 query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
@@ -148,3 +148,46 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
   {},
   ({ selected }) => ({ ...selected })
 )(SpeakerTweetTemplate);
+
+// TODO: Better use enums here
+ConnectedSpeakerTweetTemplate.variables = [
+  {
+    id: "conferenceId",
+    query: `query ConferenceIdQuery {  
+  allConferences {
+    id
+    name
+  }
+}`,
+    mapToCollection({ allConferences }) {
+      return allConferences;
+    },
+    mapToOption({ id, name }) {
+      return {
+        value: id,
+        label: name,
+      };
+    },
+  },
+  {
+    id: "contactName",
+    query: `query SpeakerQuery($conferenceId: ID!) {
+  conference(id: $conferenceId) {
+    speakers {
+      name
+    }
+  }
+}`,
+    mapToCollection({ conference, ...rest }) {
+      return get(conference, "speakers", []);
+    },
+    mapToOption({ name }) {
+      return {
+        value: name,
+        label: name,
+      };
+    },
+  },
+];
+
+export default ConnectedSpeakerTweetTemplate;

@@ -10,14 +10,7 @@ interface SelectProps {
 
 function Select({ onChange, options, selected }: SelectProps) {
   return (
-    <select
-      onChange={onChange}
-      value={
-        selected ||
-        (options.length > 0 &&
-          options.filter(({ selected }) => selected)[0].value)
-      }
-    >
+    <select onChange={onChange} value={selected || getSelectedValue(options)}>
       {options.map(({ value, label }) => (
         <option key={value} value={value}>
           {label}
@@ -25,6 +18,20 @@ function Select({ onChange, options, selected }: SelectProps) {
       ))}
     </select>
   );
+}
+
+function getSelectedValue(options) {
+  if (options.length <= 0) {
+    return;
+  }
+  const selectedOptions = options.filter(({ selected }) => selected);
+
+  if (selectedOptions.length <= 0) {
+    return;
+  }
+
+  // TODO: This picks just the first one. Likely we should not even do this.
+  return selectedOptions[0].value;
 }
 
 export default Select;
