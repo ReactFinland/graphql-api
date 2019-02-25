@@ -34,10 +34,8 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
       conferenceSeriesId: { type: String, default: "react-finland" },
       conferenceId: { type: String, default: "react-finland-2019" },
       templateId: { type: String, default: "theme" },
-      // TODO
-      contactName: { type: String, default: "Carolyn Stransky" },
-      // TODO:
-      day: { type: String, default: "2019-04-25" },
+      contactName: { type: String, default: "Carolyn Stransky" }, // TODO
+      day: { type: String, default: "" },
     }),
     async (req, res) => {
       const selected: AssetQuery = req.query;

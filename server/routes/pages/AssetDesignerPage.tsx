@@ -211,7 +211,11 @@ function VariableSelector({
 
     return (
       <Select
-        options={collection ? collection.map(mapToOption) : []}
+        options={
+          collection
+            ? [{ value: "", label: "" }].concat(collection.map(mapToOption))
+            : []
+        }
         selected={selectedVariable}
         onChange={onSelectChange(field)}
       />

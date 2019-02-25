@@ -47,11 +47,13 @@ function connect(apiUrl, query, variables = {}, propsToVars = props => props) {
           };
         }
 
-        return request(apiUrl, query, variables).then(data => {
-          queryCache = data;
+        return request(apiUrl, query, variables)
+          .then(data => {
+            queryCache = data;
 
-          return { data };
-        });
+            return { data };
+          })
+          .catch(err => console.error(err));
       }
     }
 
