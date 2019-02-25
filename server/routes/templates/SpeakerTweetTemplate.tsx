@@ -25,9 +25,6 @@ const TweetPageContainer = styled.div`
     url("/media/assets/wave.svg")`};
   background-size: cover;
   position: relative;
-  margin: auto;
-  margin-top: 1em;
-  padding: 0;
   width: 880px;
   height: 440px;
   overflow: hidden;

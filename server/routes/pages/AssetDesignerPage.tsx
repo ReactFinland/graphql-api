@@ -10,16 +10,24 @@ import connect from "../components/connect";
 import Select from "../components/Select";
 import * as templates from "../templates";
 
+interface AssetDesignerContainerProps {
+  width: WidthProperty<string>;
+}
+
+// TODO: Extract sidebar width
+const AssetDesignerContainer = styled.article`
+  display: grid;
+  grid-template-columns: ${({ width }) => width} 1fr;
+  align-items: center;
+` as React.FC<AssetDesignerContainerProps>;
+
 interface SidebarProps {
   backgroundColor: Color;
-  width: WidthProperty<string>;
 }
 
 const Sidebar = styled.aside`
   padding: 1em;
-  display: inline-block;
   vertical-align: top;
-  width: ${({ width }) => width};
   height: 100vh;
   position: sticky;
   background-color: ${({ backgroundColor }) => backgroundColor};
@@ -29,15 +37,10 @@ const SidebarItem = styled.div`
   margin-bottom: 1em;
 `;
 
-interface MainProps {
-  width: WidthProperty<string>;
-}
-
 const Main = styled.main`
-  display: inline-block;
   overflow: auto;
-  width: ${({ width }) => width};
-` as React.FC<MainProps>;
+  margin: auto;
+`;
 
 const ExportButton = styled.button``;
 
@@ -73,8 +76,8 @@ function AssetDesignerPage({
   const assetDesignTemplateId = "asset-design-template-id";
 
   return (
-    <article>
-      <Sidebar backgroundColor={theme.colors.background} width={sideBarWidth}>
+    <AssetDesignerContainer width={sideBarWidth}>
+      <Sidebar backgroundColor={theme.colors.background}>
         <SidebarHeader>Asset designer</SidebarHeader>
 
         <SidebarItem>
@@ -83,17 +86,11 @@ function AssetDesignerPage({
               const domNode = document.getElementById(assetDesignTemplateId);
 
               if (domNode) {
-                // Remove possible margin as that crops output
-                const oldMargin = domNode.style.margin;
-                domNode.style.margin = "inherit";
-
                 domToImage
                   .toBlob(domNode)
                   .then(blob => {
                     // TODO: Figure out a nice way to determine a good default name
                     saveAs(blob, "design.png");
-
-                    domNode.style.margin = oldMargin;
                   })
                   .catch(err => console.error(err));
               }
@@ -136,14 +133,14 @@ function AssetDesignerPage({
           </SidebarItem>
         )}
       </Sidebar>
-      <Main width={`calc(100% - ${sideBarWidth})`}>
+      <Main>
         {React.createElement(template, {
           selected,
           theme,
           id: assetDesignTemplateId,
         })}
       </Main>
-    </article>
+    </AssetDesignerContainer>
   );
 }
 

@@ -9,9 +9,7 @@ interface ThemeTemplateProps {
   theme: Theme;
 }
 
-const ThemeTemplateContainer = styled.section`
-  margin: 2em;
-`;
+const ThemeTemplateContainer = styled.section``;
 const ThemeTemplateHeader = styled.h1``;
 
 const ColorsContainer = styled.section`

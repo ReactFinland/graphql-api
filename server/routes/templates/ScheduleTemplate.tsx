@@ -27,7 +27,6 @@ const ScheduleTemplateContainer = styled.div`
     url("/media/assets/wave.svg")`};
   background-size: cover;
   position: relative;
-  margin: auto;
   padding: 0;
   width: 28.8cm;
   height: 20.4cm;

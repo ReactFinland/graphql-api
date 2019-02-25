@@ -26,8 +26,6 @@ const HeaderPageContainer = styled.div`
     url("/media/assets/wave.svg")`};
   background-size: cover;
   position: relative;
-  margin: auto;
-  padding: 0;
   width: 1024px;
   height: 512px;
   overflow: hidden;
