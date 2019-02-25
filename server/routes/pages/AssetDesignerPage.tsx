@@ -63,8 +63,7 @@ function AssetDesignerPage({
   const template = templates[selected.templateId] || <NoTemplateFound />;
   const variables = template.variables
     ? template.variables.map(variable => ({
-        id: variable.id,
-        query: variable.query,
+        ...variable,
         value: selected[variable.id],
       }))
     : []; // TODO: Overlay to selection
@@ -96,9 +95,12 @@ function AssetDesignerPage({
               <VariableContainer key={variable.id}>
                 <SelectorLabel>{variable.id}</SelectorLabel>
                 <VariableSelector
+                  selected={selected}
                   field={variable.id}
                   selectedVariable={variable.value}
                   query={variable.query}
+                  mapToCollection={variable.mapToCollection}
+                  mapToOption={variable.mapToOption}
                 />
               </VariableContainer>
             ))}
@@ -182,27 +184,34 @@ function TemplateSelector({
 }
 
 interface VariableSelector {
+  selected: AssetDesignerPageProps["selected"];
   field: string;
   options: string[];
   selectedVariable: string;
   query: string;
+  // TODO: Use the same type as in connect
+  mapToCollection: (result: any) => any;
+  mapToOption: (result: any) => { value: any; label: any };
 }
 
-function VariableSelector({ field, selectedVariable, query }) {
+function VariableSelector({
+  selected,
+  field,
+  selectedVariable,
+  query,
+  mapToCollection,
+  mapToOption,
+}) {
   const ConnectedSelect = connect(
     "/graphql",
-    query
-  )(({ allConferences }) => {
+    query,
+    selected
+  )(result => {
+    const collection = mapToCollection(result);
+
     return (
       <Select
-        options={
-          allConferences
-            ? allConferences.map(({ id, name }) => ({
-                value: id,
-                label: name,
-              }))
-            : []
-        }
+        options={collection ? collection.map(mapToOption) : []}
         selected={selectedVariable}
         onChange={onSelectChange(field)}
       />

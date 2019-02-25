@@ -139,6 +139,15 @@ ConnectedHeaderTemplate.variables = [
     name
   }
 }`,
+    mapToCollection({ allConferences }) {
+      return allConferences;
+    },
+    mapToOption({ id, name }) {
+      return {
+        value: id,
+        label: name,
+      };
+    },
   },
 ];
 

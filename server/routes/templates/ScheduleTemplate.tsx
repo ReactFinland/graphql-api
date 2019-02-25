@@ -1,12 +1,14 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
+import { get } from "lodash";
 import * as React from "react";
 import { Schedule as ISchedule } from "../../schema/Schedule";
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
 import Schedule from "../components/Schedule";
 import Sponsors from "../components/Sponsors";
+import { dayToFinnishLocale } from "../date-utils";
 import scheduleQuery from "../queries/scheduleQuery";
 import sponsorQuery from "../queries/sponsorQuery";
 interface SchedulePageContainerProps {
@@ -96,16 +98,59 @@ function ScheduleTemplate({
 }
 
 // TODO: Drop as ISchedule cast
-export default connect(
+const ConnectedScheduleTemplate = connect(
   "/graphql",
   scheduleQuery,
   {},
   ({ selected }) => ({ ...selected })
-)(({ schedule, theme, day, selected }) => (
+)(({ schedule, theme, selected }) => (
   <ScheduleTemplate
     theme={theme}
-    day={day}
+    day={schedule && dayToFinnishLocale(schedule.day)}
     conferenceId={selected.conferenceId}
     intervals={schedule && (schedule.intervals as ISchedule[])}
   />
 ));
+
+// TODO: Better use enums here
+ConnectedScheduleTemplate.variables = [
+  {
+    id: "conferenceId",
+    query: `query ConferenceIdQuery {  
+  allConferences {
+    id
+    name
+  }
+}`,
+    mapToCollection({ allConferences }) {
+      return allConferences;
+    },
+    mapToOption({ id, name }) {
+      return {
+        value: id,
+        label: name,
+      };
+    },
+  },
+  {
+    id: "day",
+    query: `query DayQuery($conferenceId: ID!) {
+  conference(id: $conferenceId) {
+    schedules {
+      day
+    }
+  }
+}`,
+    mapToCollection({ conference }) {
+      return get(conference, "schedules", []);
+    },
+    mapToOption({ day }) {
+      return {
+        value: day,
+        label: day,
+      };
+    },
+  },
+];
+
+export default ConnectedScheduleTemplate;
