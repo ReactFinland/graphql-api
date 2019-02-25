@@ -167,7 +167,16 @@ function TemplateSelector({
           : []
       }
       selected={selectedTemplate}
-      onChange={onSelectChange("templateId")}
+      onChange={({ target: { value } }) => {
+        const search = queryString.parse(location.search);
+
+        // Retain only conferenceSeriesId + replace templateId.
+        // Otherwise selection might be invalid.
+        location.search = queryString.stringify({
+          conferenceSeriesId: search.conferenceSeriesId,
+          templateId: value,
+        });
+      }}
     />
   );
 }
