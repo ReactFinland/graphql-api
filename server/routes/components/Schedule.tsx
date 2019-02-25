@@ -12,6 +12,7 @@ const ScheduleContainer = styled.dl`
   height: 10cm;
 `;
 
+// TODO: Set margin-top: -1em; for the first one of these
 const ScheduleContainerItem = styled.div`
   width: 50%;
   margin-bottom: 0.25cm;

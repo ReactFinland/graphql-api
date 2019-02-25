@@ -1,23 +1,17 @@
-import queryString from "query-string";
 import * as React from "react";
 
 // TODO: Add generics
 // TODO: Drop selected from options?
 interface SelectProps {
-  field: string;
+  onChange: React.SelectHTMLAttributes<HTMLSelectElement>["onChange"];
   options: Array<{ value: any; label: any; selected?: boolean }>;
   selected?: any; // One of options
 }
 
-function Select({ field, options, selected }: SelectProps) {
+function Select({ onChange, options, selected }: SelectProps) {
   return (
     <select
-      onChange={({ target: { value } }) => {
-        location.search = queryString.stringify({
-          ...queryString.parse(location.search),
-          [field]: value,
-        });
-      }}
+      onChange={onChange}
       value={
         selected ||
         (options.length > 0 &&

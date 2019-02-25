@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Color, WidthProperty } from "csstype";
 import { map } from "lodash";
+import queryString from "query-string";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
@@ -129,7 +130,6 @@ interface ThemeSelectorProps {
 function ThemeSelector({ themes, selectedTheme }: ThemeSelectorProps) {
   return (
     <Select
-      field="conferenceSeriesId"
       options={
         themes
           ? themes.map(theme => ({
@@ -139,6 +139,7 @@ function ThemeSelector({ themes, selectedTheme }: ThemeSelectorProps) {
           : []
       }
       selected={selectedTheme}
+      onChange={onSelectChange("conferenceSeriesId")}
     />
   );
 }
@@ -157,7 +158,6 @@ function TemplateSelector({
 }: TemplateSelectorProps) {
   return (
     <Select
-      field="templateId"
       options={
         templates
           ? templates.map(template => ({
@@ -167,6 +167,7 @@ function TemplateSelector({
           : []
       }
       selected={selectedTemplate}
+      onChange={onSelectChange("templateId")}
     />
   );
 }
@@ -185,7 +186,6 @@ function VariableSelector({ field, selectedVariable, query }) {
   )(({ allConferences }) => {
     return (
       <Select
-        field={field}
         options={
           allConferences
             ? allConferences.map(({ id, name }) => ({
@@ -195,11 +195,21 @@ function VariableSelector({ field, selectedVariable, query }) {
             : []
         }
         selected={selectedVariable}
+        onChange={onSelectChange(field)}
       />
     );
   });
 
   return <ConnectedSelect />;
+}
+
+function onSelectChange(field) {
+  return ({ target: { value } }) => {
+    location.search = queryString.stringify({
+      ...queryString.parse(location.search),
+      [field]: value,
+    });
+  };
 }
 
 export default AssetDesignerPage;
