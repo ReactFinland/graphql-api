@@ -2,7 +2,9 @@ import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import { get } from "lodash";
+import { desaturate } from "polished";
 import * as React from "react";
+
 import { Schedule as ISchedule } from "../../schema/Schedule";
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
@@ -22,7 +24,7 @@ const ScheduleTemplateContainer = styled.div`
     secondaryColor,
   }: SchedulePageContainerProps) => `linear-gradient(
       ${primaryColor},
-      ${hexToRgba(secondaryColor, 0.79)}
+      ${desaturate(0.8, hexToRgba(secondaryColor, 0.79))}
     ),
     url("/media/assets/wave.svg")`};
   background-size: cover;

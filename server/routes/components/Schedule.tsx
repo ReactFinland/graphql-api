@@ -9,7 +9,7 @@ const ScheduleContainer = styled.dl`
   width: 100%;
   display: flex;
   flex-flow: column wrap;
-  height: 10cm;
+  height: 9.75cm;
 `;
 
 const ScheduleContainerItem = styled.div`
@@ -85,7 +85,7 @@ function Schedule({ theme, intervals }) {
 function SessionTitle({ title, type, people }) {
   return (
     <h3>
-      {title} {people && `― ${people[0].name}`} <ScheduleIcon type={type} />
+      {title} {people && `- ${people[0].name}`} <ScheduleIcon type={type} />
     </h3>
   );
 }
