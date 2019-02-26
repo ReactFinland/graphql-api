@@ -18,7 +18,7 @@ export { default as mikeBerman } from "./mike-berman";
 export { default as monicaLent } from "./monica-lent";
 export { default as nikGraf } from "./nik-graf";
 export { default as rickHanlon } from "./rick-hanlon";
-export { default as siaKaramalegos } from "./sia-karamalegos";
+export { default as svenSauleau } from "./sven-sauleau";
 export { default as tejasKumar } from "./tejas-kumar";
 export { default as teroParviainen } from "./tero-parviainen";
 export { default as tomasKonrady } from "./tomas-konrady";

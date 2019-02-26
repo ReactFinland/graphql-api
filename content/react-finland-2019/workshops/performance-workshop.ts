@@ -1,10 +1,10 @@
 import { Session, SessionType } from "../../../server/schema/Session";
 import { paasitorni } from "../../locations";
-import { siaKaramalegos } from "../../people";
+import { saraVieira } from "../../people";
 
 const workshop: Session = {
   type: SessionType.WORKSHOP,
-  people: [siaKaramalegos],
+  people: [saraVieira],
   title: "Advanced Performance Tuning for React Applications",
   description: `Getting performance right is hard, even when we have the luxury of starting our apps from scratch. It’s even harder when the ideal crashes headlong into reality, and we need to improve the performance of existing apps, as is so often the case. In this workshop, Sia will lead you through the process of:
 
@@ -31,7 +31,7 @@ By the end of the workshop, you’ll be able to diagnose performance problems an
 
 This workshop was prepared in partnership with Eli Fitch and Jason Lengstorf.
 `,
-  keywords: siaKaramalegos.keywords,
+  keywords: saraVieira.keywords,
   location: paasitorni,
 };
 

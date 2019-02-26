@@ -273,7 +273,7 @@ const presentationDay2: Schedule = {
       begin: "15:00",
       end: "16:00",
       title: "Performance",
-      sessions: [talks.annaDoubkova, talks.siaKaramalegos],
+      sessions: [talks.annaDoubkova, talks.svenSauleau],
     },
     {
       begin: "16:00",
