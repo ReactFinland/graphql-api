@@ -36,4 +36,7 @@ export class Social {
 
   @Field(_ => UrlScalar, { nullable: true })
   public vimeo?: Url;
+
+  @Field(_ => UrlScalar, { nullable: true })
+  public dribble?: Url;
 }
