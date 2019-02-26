@@ -13,10 +13,17 @@ const SponsorsContainer = styled.div`
   margin-right: 0.5cm;
 `;
 
-const GoldSponsors = styled.div``;
-const SilverSponsors = styled.div``;
-const BronzeSponsors = styled.div``;
-const SponsorsList = styled.section``;
+const GoldSponsors = styled.section``;
+const SilverSponsors = styled.section`
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+`;
+const BronzeSponsors = styled.section`
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+`;
 
 interface SponsorsProps {
   goldSponsors?: Contact[];
@@ -32,31 +39,25 @@ const Sponsors = ({
 }: SponsorsProps) => (
   <SponsorsContainer>
     <GoldSponsors>
-      <SponsorsList>
-        <Contacts
-          items={goldSponsors}
-          render={Sponsor}
-          renderProps={{ type: "gold" }}
-        />
-      </SponsorsList>
+      <Contacts
+        items={goldSponsors}
+        render={Sponsor}
+        renderProps={{ type: "gold" }}
+      />
     </GoldSponsors>
     <SilverSponsors>
-      <SponsorsList>
-        <Contacts
-          items={silverSponsors}
-          render={Sponsor}
-          renderProps={{ type: "silver" }}
-        />
-      </SponsorsList>
+      <Contacts
+        items={silverSponsors}
+        render={Sponsor}
+        renderProps={{ type: "silver" }}
+      />
     </SilverSponsors>
     <BronzeSponsors>
-      <SponsorsList>
-        <Contacts
-          items={bronzeSponsors}
-          render={Sponsor}
-          renderProps={{ type: "bronze" }}
-        />
-      </SponsorsList>
+      <Contacts
+        items={bronzeSponsors}
+        render={Sponsor}
+        renderProps={{ type: "bronze" }}
+      />
     </BronzeSponsors>
   </SponsorsContainer>
 );
