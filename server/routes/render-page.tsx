@@ -18,7 +18,7 @@ function renderPage(baseUrl, theme, page) {
 
 function renderMarkup(html, hostname) {
   const env =
-    process.env.NODE_ENV === "production" ? "production" : "development";
+    process.env.NODE_ENV === "production" ? "production.min" : "development";
 
   return `<!DOCTYPE html>
   <html>
