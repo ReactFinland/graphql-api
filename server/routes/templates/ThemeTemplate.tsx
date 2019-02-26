@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
-import { map } from "lodash";
+import map from "lodash/map";
 import { complement, invert } from "polished";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";

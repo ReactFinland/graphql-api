@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
-import { get } from "lodash";
+import get from "lodash/get";
 import { desaturate } from "polished";
 import * as React from "react";
 

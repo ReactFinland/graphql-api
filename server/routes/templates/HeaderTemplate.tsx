@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
-import { get, map } from "lodash";
+import get from "lodash/get";
+import map from "lodash/map";
 import * as React from "react";
 import { Conference } from "../../schema/Conference";
 import { Theme } from "../../schema/Theme";

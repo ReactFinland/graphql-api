@@ -1,4 +1,4 @@
-import { trimEnd } from "lodash";
+import trimEnd from "lodash/trimEnd";
 import process from "process";
 import * as React from "react";
 import { renderToString } from "react-dom/server";

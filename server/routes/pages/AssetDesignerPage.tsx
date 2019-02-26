@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Color, WidthProperty } from "csstype";
 import domToImage from "dom-to-image";
 import { saveAs } from "file-saver";
-import { map } from "lodash";
+import map from "lodash/map";
 import queryString from "query-string";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";

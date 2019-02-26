@@ -1,4 +1,5 @@
-import { flatMap, uniqBy } from "lodash";
+import flatMap from "lodash/flatMap";
+import uniqBy from "lodash/uniqBy";
 import {
   Arg,
   Ctx,

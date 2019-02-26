@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import { FuseBox } from "fuse-box";
-import { trimStart } from "lodash";
+import trimStart from "lodash/trimStart";
 import mkdirp from "mkdirp";
 import * as path from "path";
 import * as React from "react";

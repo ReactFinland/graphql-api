@@ -3,7 +3,7 @@ const path = require("path");
 const camelCase = require("camelcase");
 const flatmap = require("flatmap");
 const glob = require("glob");
-const groupBy = require("lodash.groupby");
+const { groupBy } = require("lodash");
 const mri = require("mri");
 const argv = process.argv.slice(2);
 
