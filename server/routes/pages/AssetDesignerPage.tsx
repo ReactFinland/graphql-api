@@ -14,7 +14,6 @@ interface AssetDesignerContainerProps {
   width: WidthProperty<string>;
 }
 
-// TODO: Extract sidebar width
 const AssetDesignerContainer = styled.article`
   display: grid;
   grid-template-columns: ${({ width }) => width} 1fr;
@@ -178,6 +177,12 @@ interface TemplateSelectorProps {
   selectedTemplate: string;
 }
 
+const TemplateSelectorContainer = styled.div``;
+const TemplateSelectorSelectedOption = styled.div``;
+const TemplateSelectorOption = styled.a`
+  display: block;
+`;
+
 // TODO: Add basic state management so selected theme can be changed
 // without having to refresh the entire page (onChange handler +
 // propagation to parent)
@@ -186,27 +191,34 @@ function TemplateSelector({
   selectedTemplate,
 }: TemplateSelectorProps) {
   return (
-    <Select
-      options={
-        templates
-          ? templates.map(template => ({
-              value: template,
-              label: template,
-            }))
-          : []
-      }
-      selected={selectedTemplate}
-      onChange={({ target: { value } }) => {
-        const search = queryString.parse(location.search);
+    <TemplateSelectorContainer>
+      {templates.map(templateId =>
+        templateId === selectedTemplate ? (
+          <TemplateSelectorSelectedOption key={templateId}>
+            {templateId}
+          </TemplateSelectorSelectedOption>
+        ) : (
+          <TemplateSelectorOption
+            key={templateId}
+            href="#"
+            onClick={e => {
+              e.preventDefault();
 
-        // Retain only conferenceSeriesId + replace templateId.
-        // Otherwise selection might be invalid.
-        location.search = queryString.stringify({
-          conferenceSeriesId: search.conferenceSeriesId,
-          templateId: value,
-        });
-      }}
-    />
+              const search = queryString.parse(location.search);
+
+              // Retain only conferenceSeriesId + replace templateId.
+              // Otherwise selection might be invalid.
+              location.search = queryString.stringify({
+                conferenceSeriesId: search.conferenceSeriesId,
+                templateId,
+              });
+            }}
+          >
+            {templateId}
+          </TemplateSelectorOption>
+        )
+      )}
+    </TemplateSelectorContainer>
   );
 }
 
