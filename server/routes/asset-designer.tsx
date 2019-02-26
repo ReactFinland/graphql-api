@@ -97,7 +97,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
 }
 
 function getAdditionalQueryParameters(template) {
-  if (!template) {
+  if (!template || !template.variables) {
     return {};
   }
 
