@@ -1,4 +1,5 @@
 import { request } from "graphql-request";
+import isEqual from "lodash/isEqual";
 import * as React from "react";
 
 // TODO: Extract apiUrl to context?
@@ -29,6 +30,11 @@ function connect(apiUrl, query, variables = {}, propsToVars = props => props) {
       }
       public componentDidMount() {
         this.fetchData().then(data => this.setState(() => data));
+      }
+      public componentDidUpdate(prevProps) {
+        if (!isEqual(prevProps, this.props)) {
+          this.fetchData().then(data => this.setState(() => data));
+        }
       }
       public render() {
         if (this.state.data === null) {

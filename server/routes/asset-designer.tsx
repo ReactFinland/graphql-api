@@ -71,6 +71,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
         return res.status(400).send();
       }
 
+      // TODO: Drop theme from here and handle <GlobalStyles /> inside asset designer
       const { theme } = connect(queries.themeQuery);
       const { themes } = connect(queries.themesQuery);
 
@@ -82,7 +83,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
           theme,
           <Interactive
             relativeComponentPath="./pages/AssetDesignerPage"
-            props={{ theme, themes, selected }}
+            props={{ themes, initialSelected: selected }}
             component={AssetDesignerPage}
             componentHash={crypto
               .createHash("md5")

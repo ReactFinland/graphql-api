@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Color, WidthProperty } from "csstype";
 import domToImage from "dom-to-image";
 import { saveAs } from "file-saver";
+import createHistory from "history/createBrowserHistory";
 import map from "lodash/map";
 import queryString from "query-string";
 import * as React from "react";
@@ -47,28 +48,62 @@ const SelectorLabel = styled.label``;
 
 const VariableContainer = styled.div``;
 
+// TODO: Share the type from the backend
+
+interface Selected {
+  conferenceSeriesId: string;
+  conferenceId: string;
+  templateId: string; // One of templates
+}
+
+enum ActionTypes {
+  UPDATE_FIELD,
+}
+
+// TODO: Fetch new data
+function assetDesignerReducer(state: Selected, action) {
+  const { field, value } = action;
+
+  switch (action.type) {
+    case ActionTypes.UPDATE_FIELD:
+      updateQuery(field, value);
+
+      return { ...state, [field]: value };
+    default:
+      throw new Error("No matching reducer found!");
+  }
+}
+
+function updateQuery(field: string, value: string) {
+  const history = createHistory();
+  const query = queryString.stringify({
+    ...queryString.parse(location.search),
+    [field]: value,
+  });
+  history.push(`?${query}`);
+}
+
 interface AssetDesignerPageProps {
-  // TODO: Share the type from the backend
-  selected: {
-    conferenceSeriesId: string;
-    conferenceId: string;
-    templateId: string; // One of templates
-  };
-  theme: Theme;
+  initialSelected: Selected;
   themes: Theme[];
 }
 
 function AssetDesignerPage({
-  selected,
-  theme,
+  initialSelected,
   themes,
 }: AssetDesignerPageProps) {
+  const [state, dispatch] = React.useReducer(
+    assetDesignerReducer,
+    initialSelected
+  );
+  const theme = themes.find(({ id }) => state.conferenceSeriesId === id);
+
   // TODO: Type
-  const template = templates[selected.templateId] || <NoTemplateFound />;
+  const template = templates[state.templateId] || <NoTemplateFound />;
   const variables = template.variables
     ? template.variables.map(variable => ({
         ...variable,
-        value: selected[variable.id],
+        value: state[variable.id],
       }))
     : []; // TODO: Overlay to selection
   const sideBarWidth = "15em";
@@ -76,7 +111,7 @@ function AssetDesignerPage({
 
   return (
     <AssetDesignerContainer width={sideBarWidth}>
-      <Sidebar backgroundColor={theme.colors.background}>
+      <Sidebar backgroundColor={theme ? theme.colors.background : ""}>
         <SidebarHeader>Asset designer</SidebarHeader>
 
         <SidebarItem>
@@ -101,14 +136,20 @@ function AssetDesignerPage({
 
         <SidebarItem>
           <SidebarHeader>Themes</SidebarHeader>
-          <ThemeSelector themes={themes} selectedTheme={theme.id} />
+          <ThemeSelector
+            themes={themes}
+            selectedTheme={state.conferenceSeriesId}
+            onChange={(field, value) =>
+              dispatch({ type: ActionTypes.UPDATE_FIELD, field, value })
+            }
+          />
         </SidebarItem>
 
         <SidebarItem>
           <SidebarHeader>Templates</SidebarHeader>
           <TemplateSelector
             templates={Object.keys(templates)}
-            selectedTemplate={selected.templateId}
+            selectedTemplate={state.templateId}
           />
         </SidebarItem>
 
@@ -120,13 +161,20 @@ function AssetDesignerPage({
               <VariableContainer key={variable.id}>
                 <SelectorLabel>{variable.id}</SelectorLabel>
                 <VariableSelector
-                  selected={selected}
+                  selected={state}
                   field={variable.id}
                   selectedVariable={variable.value}
                   query={variable.query}
                   mapToCollection={variable.mapToCollection}
                   mapToOption={variable.mapToOption}
                   validation={variable.validation}
+                  onChange={(field, value) =>
+                    dispatch({
+                      type: ActionTypes.UPDATE_FIELD,
+                      field,
+                      value,
+                    })
+                  }
                 />
               </VariableContainer>
             ))}
@@ -135,7 +183,7 @@ function AssetDesignerPage({
       </Sidebar>
       <Main>
         {React.createElement(template, {
-          selected,
+          selected: state,
           theme,
           id: assetDesignTemplateId,
         })}
@@ -151,12 +199,14 @@ function NoTemplateFound() {
 interface ThemeSelectorProps {
   themes: Theme[];
   selectedTheme: Theme["id"];
+  onChange: (field: string, value: string) => void;
 }
 
-// TODO: Add basic state management so selected theme can be changed
-// without having to refresh the entire page (onChange handler +
-// propagation to parent)
-function ThemeSelector({ themes, selectedTheme }: ThemeSelectorProps) {
+function ThemeSelector({
+  themes,
+  selectedTheme,
+  onChange,
+}: ThemeSelectorProps) {
   return (
     <Select
       options={
@@ -168,7 +218,9 @@ function ThemeSelector({ themes, selectedTheme }: ThemeSelectorProps) {
           : []
       }
       selected={selectedTheme}
-      onChange={onSelectChange("conferenceSeriesId")}
+      onChange={({ target: { value } }) => {
+        onChange("conferenceSeriesId", value);
+      }}
     />
   );
 }
@@ -184,9 +236,6 @@ const TemplateSelectorOption = styled.a`
   display: block;
 `;
 
-// TODO: Add basic state management so selected theme can be changed
-// without having to refresh the entire page (onChange handler +
-// propagation to parent)
 function TemplateSelector({
   templates,
   selectedTemplate,
@@ -224,7 +273,7 @@ function TemplateSelector({
 }
 
 interface VariableSelector {
-  selected: AssetDesignerPageProps["selected"];
+  selected: AssetDesignerPageProps["initialSelected"];
   field: string;
   options: string[];
   selectedVariable: string;
@@ -233,6 +282,7 @@ interface VariableSelector {
   mapToCollection: (result: any) => any;
   mapToOption: (result: any) => { value: any; label: any };
   validation: { type: any; default: string };
+  onChange: (field: string, value: string) => void;
 }
 
 function VariableSelector({
@@ -243,17 +293,18 @@ function VariableSelector({
   mapToCollection,
   mapToOption,
   validation,
+  onChange,
 }) {
   if (!query) {
     if (validation.type === String) {
-      // TODO: Better submit on return or change queries so it doesn't
-      // refresh the entire page
       return (
         <input
           type="text"
           value={selectedVariable}
           placeholder={validation.default}
-          onChange={onSelectChange(field)}
+          onChange={({ target: { value } }) => {
+            onChange(field, value);
+          }}
         />
       );
     }
@@ -274,21 +325,14 @@ function VariableSelector({
             : []
         }
         selected={selectedVariable}
-        onChange={onSelectChange(field)}
+        onChange={({ target: { value } }) => {
+          onChange(field, value);
+        }}
       />
     );
   });
 
   return <ConnectedSelect />;
-}
-
-function onSelectChange(field) {
-  return ({ target: { value } }) => {
-    location.search = queryString.stringify({
-      ...queryString.parse(location.search),
-      [field]: value,
-    });
-  };
 }
 
 export default AssetDesignerPage;
