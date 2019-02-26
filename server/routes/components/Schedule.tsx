@@ -1,8 +1,11 @@
 import styled from "@emotion/styled";
 import * as CSS from "csstype";
+import map from "lodash/map";
 import * as React from "react";
 import emoji from "react-easy-emoji";
+import { Interval } from "../../schema/Interval";
 import SessionType from "../../schema/SessionType";
+import { Theme } from "../../schema/Theme";
 
 const ScheduleContainer = styled.dl`
   margin-top: 1cm;
@@ -55,18 +58,23 @@ const ScheduleDefinition = styled.dd`
   line-height: 1.45;
 `;
 
-function Schedule({ theme, intervals }) {
+interface ScheduleProps {
+  theme: Theme;
+  intervals: Interval[];
+}
+
+function Schedule({ theme, intervals }: ScheduleProps) {
   if (!intervals) {
     return null;
   }
 
   return (
     <ScheduleContainer>
-      {intervals.map(({ begin, end, sessions }, i) => (
+      {map(intervals, ({ begin, end, sessions }, i) => (
         <ScheduleContainerItem key={`schedule-container-${i}`}>
           <ScheduleTitle
             key={`dt-${i}`}
-            color={theme.secondaryColor}
+            color={theme.colors.secondary}
             type={sessions[0].type}
           >
             {begin}-{end}

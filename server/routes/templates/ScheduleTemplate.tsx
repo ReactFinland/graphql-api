@@ -4,8 +4,7 @@ import hexToRgba from "hex-to-rgba";
 import get from "lodash/get";
 import desaturate from "polished/lib/color/desaturate";
 import * as React from "react";
-
-import { Schedule as ISchedule } from "../../schema/Schedule";
+import { Interval } from "../../schema/Interval";
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
 import Schedule from "../components/Schedule";
@@ -63,7 +62,7 @@ const ScheduleTemplateContent = styled.div`
 `;
 
 interface ScheduleTemplateProps {
-  intervals?: ISchedule[];
+  intervals?: Interval[];
   theme: Theme;
   day: string;
   conferenceId: string;
@@ -101,7 +100,6 @@ function ScheduleTemplate({
   );
 }
 
-// TODO: Drop as ISchedule cast
 const ConnectedScheduleTemplate = connect(
   "/graphql",
   scheduleQuery,
@@ -113,7 +111,7 @@ const ConnectedScheduleTemplate = connect(
     theme={theme}
     day={schedule && dayToFinnishLocale(schedule.day)}
     conferenceId={selected.conferenceId}
-    intervals={schedule && (schedule.intervals as ISchedule[])}
+    intervals={get(schedule, "intervals")}
   />
 ));
 
