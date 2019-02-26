@@ -13,10 +13,11 @@ function connect(apiUrl, query, variables = {}, propsToVars = props => props) {
     class Connect<P = {}> extends React.Component<P, ConnectState> {
       public static variables: Array<{
         id: string;
-        query: string;
+        query?: string;
         // TODO: Type better
-        mapToCollection: (result: any) => any;
-        mapToOption: (result: any) => { value: any; label: any };
+        mapToCollection?: (result: any) => any;
+        mapToOption?: (result: any) => { value: any; label: any };
+        validation?: { type: any; default: any };
       }>;
       public state: ConnectState = {
         data: {},

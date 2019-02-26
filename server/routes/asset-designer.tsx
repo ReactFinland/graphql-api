@@ -1,13 +1,15 @@
 import crypto from "crypto";
 import expeditousEngineMemory from "expeditious-engine-memory";
 import getExpeditiousCache from "express-expeditious";
-import { validate } from "isvalid";
+import isvalid from "isvalid";
+import fromPairs from "lodash/fromPairs";
 import * as React from "react";
 import createInteractive from "./components/Interactive";
 import createConnection from "./create-connection";
 import AssetDesignerPage from "./pages/AssetDesignerPage";
 import * as queries from "./queries";
 import renderPage from "./render-page";
+import * as templates from "./templates";
 
 const cache = getExpeditiousCache({
   namespace: "assetdesignercache",
@@ -30,13 +32,32 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
   router.get(
     "/asset-designer",
     cache.withTtl("1 hour"),
-    validate.query({
-      conferenceSeriesId: { type: String, default: "react-finland" },
-      conferenceId: { type: String, default: "react-finland-2019" },
-      templateId: { type: String, default: "theme" },
-      contactName: { type: String, default: "" },
-      day: { type: String, default: "" },
-    }),
+    async (req, res, next) => {
+      const query = req.query;
+      const selectedTemplate = templates[query.templateId];
+      const additionalQueryParameters = getAdditionalQueryParameters(
+        selectedTemplate
+      );
+
+      isvalid(query, {
+        conferenceSeriesId: { type: String, default: "react-finland" },
+        conferenceId: { type: String, default: "react-finland-2019" },
+        templateId: { type: String, default: "theme" },
+        contactName: { type: String, default: "" },
+        day: { type: String, default: "" },
+        ...additionalQueryParameters,
+      })
+        .then(query => {
+          req.query = query;
+
+          next();
+        })
+        .catch(err => {
+          req.query = undefined;
+
+          next(err);
+        });
+    },
     async (req, res) => {
       const selected: AssetQuery = req.query;
 
@@ -71,6 +92,18 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
         )
       );
     }
+  );
+}
+
+function getAdditionalQueryParameters(template) {
+  if (!template) {
+    return {};
+  }
+
+  return fromPairs(
+    template.variables
+      .map(({ id, validation }) => (id && validation ? [id, validation] : null))
+      .filter(Boolean)
   );
 }
 

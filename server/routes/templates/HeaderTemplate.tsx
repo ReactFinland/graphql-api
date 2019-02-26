@@ -75,15 +75,18 @@ const HeaderCoupon = styled.h3`
 interface HeaderTemplateProps {
   conference?: Conference;
   theme?: Theme;
-  coupon?: string; // TODO: Get from selected? Expose to the user somehow
   id: string;
+  selected: {
+    coupon?: string;
+    discountPercentage?: string;
+  };
 }
 
 function HeaderTemplate({
   conference,
   theme,
-  coupon,
   id,
+  selected: { coupon, discountPercentage },
 }: HeaderTemplateProps) {
   const { locations, schedules, slogan } = conference || {
     locations: [],
@@ -121,7 +124,9 @@ function HeaderTemplate({
       <SecondaryRow>
         <HeaderSlogan>{slogan}</HeaderSlogan>
         {coupon && (
-          <HeaderCoupon>Use {coupon} for a 10% discount!</HeaderCoupon>
+          <HeaderCoupon>
+            Use {coupon} for a {discountPercentage}% discount!
+          </HeaderCoupon>
         )}
       </SecondaryRow>
     </HeaderPageContainer>
@@ -154,6 +159,14 @@ ConnectedHeaderTemplate.variables = [
         label: name,
       };
     },
+  },
+  {
+    id: "coupon",
+    validation: { type: String, default: "" },
+  },
+  {
+    id: "discountPercentage",
+    validation: { type: String, default: "" },
   },
 ];
 

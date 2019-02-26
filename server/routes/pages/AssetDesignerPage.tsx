@@ -126,6 +126,7 @@ function AssetDesignerPage({
                   query={variable.query}
                   mapToCollection={variable.mapToCollection}
                   mapToOption={variable.mapToOption}
+                  validation={variable.validation}
                 />
               </VariableContainer>
             ))}
@@ -231,6 +232,7 @@ interface VariableSelector {
   // TODO: Use the same type as in connect
   mapToCollection: (result: any) => any;
   mapToOption: (result: any) => { value: any; label: any };
+  validation: { type: any; default: string };
 }
 
 function VariableSelector({
@@ -240,7 +242,23 @@ function VariableSelector({
   query,
   mapToCollection,
   mapToOption,
+  validation,
 }) {
+  if (!query) {
+    if (validation.type === String) {
+      // TODO: Better submit on return or change queries so it doesn't
+      // refresh the entire page
+      return (
+        <input
+          type="text"
+          value={selectedVariable}
+          placeholder={validation.default}
+          onChange={onSelectChange(field)}
+        />
+      );
+    }
+  }
+
   const ConnectedSelect = connect(
     "/graphql",
     query,
