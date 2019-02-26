@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Varya Stepanova",
   about:
-    "Varya Stepanova is a developer enthusiast for modular web and pattern libraries. She loves automation, also in the development processes, strongly believes in open-source community and likes social media. Originally from Russia, she now lives in Helsinki with her family and two cats.",
+    "Varya Stepanova is a design systems expert from Helsinki. She has a long history working in a field of component-focused UI design and development, creating helpful tooling for the subject and spreading the practices across large organizations. Nowadays her focus is bringing design systems to the next level of success which includes cooperative work in the company development community and bridging the gap for designers, developers, and business specialists.",
   image: {
     url: "people/varya.jpg",
   },
