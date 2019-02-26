@@ -17,11 +17,16 @@ function renderPage(baseUrl, theme, page) {
 }
 
 function renderMarkup(html, hostname) {
+  const env =
+    process.env.NODE_ENV === "production" ? "production" : "development";
+
   return `<!DOCTYPE html>
   <html>
     <head>
       <title>Asset generator</title>
       <meta charset="utf-8" />
+      <script crossorigin src="https://unpkg.com/react@16/umd/react.${env}.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.${env}.js"></script>
       <base href="${cleanBase(hostname)}/" />
       ${reloadPage()}
     </head>

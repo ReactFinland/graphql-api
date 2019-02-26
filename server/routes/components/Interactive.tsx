@@ -39,6 +39,14 @@ function createInteractive(projectRoot, scriptRoot, componentRoot) {
       target: "browser@es6",
       homeDir: scriptRoot,
       output: `${scriptRoot}/$name.js`,
+      shim: {
+        react: {
+          exports: "React",
+        },
+        "react-dom": {
+          exports: "ReactDOM",
+        },
+      },
       // TODO: Apply terser to minify
     });
 
