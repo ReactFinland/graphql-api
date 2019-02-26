@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import get from "lodash/get";
-import { desaturate } from "polished";
+import desaturate from "polished/lib/color/desaturate";
 import * as React from "react";
 
 import { Schedule as ISchedule } from "../../schema/Schedule";
