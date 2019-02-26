@@ -11,6 +11,7 @@ import { dayToFinnishLocale } from "../date-utils";
 import conferenceDaysQuery from "../queries/conferenceDaysQuery";
 
 interface HeaderContainerProps {
+  id: string;
   primaryColor: Color;
   secondaryColor: Color;
   useTwitterHeader: boolean;
@@ -28,33 +29,61 @@ const HeaderPageContainer = styled.div`
     url("/media/assets/wave.svg")`};
   background-size: cover;
   position: relative;
-  width: ${({ useTwitterHeader }) => (useTwitterHeader ? "1500px" : "1024px")};
-  height: ${({ useTwitterHeader }) => (useTwitterHeader ? "500px" : "512px")};
+  width: ${({ useTwitterHeader }: HeaderContainerProps) =>
+    useTwitterHeader ? "1500px" : "1024px"};
+  height: ${({ useTwitterHeader }: HeaderContainerProps) =>
+    useTwitterHeader ? "500px" : "512px"};
   overflow: hidden;
   color: white;
+` as React.FC<HeaderContainerProps>;
+
+const TwitterOverlay = styled.div`
+  position: absolute;
+  bottom: 0;
+  background-color: #ff00008f;
+  width: 450px;
+  height: 200px;
+  z-index: 1;
 `;
+
+interface PrimaryRowProps {
+  useTwitterHeader: boolean;
+}
 
 const PrimaryRow = styled.div`
   display: grid;
-  grid-template-columns: 1.4fr 0.6fr;
-`;
+  grid-template-columns: ${({ useTwitterHeader }: PrimaryRowProps) =>
+    useTwitterHeader ? "1fr 0.2fr" : "1.4fr 0.6fr"};
+` as React.FC<PrimaryRowProps>;
+
+interface SecondaryRowProps {
+  useTwitterHeader: boolean;
+}
 
 const SecondaryRow = styled.div`
   display: grid;
-  padding-left: 5em;
-`;
+  padding-left: ${({ useTwitterHeader }: SecondaryRowProps) =>
+    useTwitterHeader ? "30em" : "5em"};
+` as React.FC<SecondaryRowProps>;
 
 const HeaderInfoContainer = styled.div`
   text-align: right;
   padding-right: 50px;
 `;
 
+interface HeaderLogoProps {
+  src: string;
+  useTwitterHeader: boolean;
+}
+
 const HeaderLogo = styled.img`
   padding-left: 3em;
   padding-right: 3em;
   padding-top: 1.8em;
   width: 100%;
-`;
+  height: ${({ useTwitterHeader }: HeaderLogoProps) =>
+    useTwitterHeader ? "20em" : ""};
+` as React.FC<HeaderLogoProps>;
 
 const HeaderConferenceDays = styled.h1`
   padding-top: 2em;
@@ -81,6 +110,7 @@ interface HeaderTemplateProps {
     coupon?: string;
     discountPercentage?: string;
     useTwitterHeader: boolean;
+    showTwitterSafeArea: boolean;
   };
 }
 
@@ -88,7 +118,12 @@ function HeaderTemplate({
   conference,
   theme,
   id,
-  selected: { coupon, discountPercentage, useTwitterHeader },
+  selected: {
+    coupon,
+    discountPercentage,
+    useTwitterHeader,
+    showTwitterSafeArea,
+  },
 }: HeaderTemplateProps) {
   const { locations, schedules, slogan } = conference || {
     locations: [],
@@ -113,8 +148,12 @@ function HeaderTemplate({
       secondaryColor={get(theme, "colors.secondary")}
       useTwitterHeader={useTwitterHeader}
     >
-      <PrimaryRow>
-        <HeaderLogo src={get(theme, "logos.white.withText.url")} />
+      {showTwitterSafeArea && <TwitterOverlay />}
+      <PrimaryRow useTwitterHeader={useTwitterHeader}>
+        <HeaderLogo
+          src={get(theme, "logos.white.withText.url")}
+          useTwitterHeader={useTwitterHeader}
+        />
         <HeaderInfoContainer>
           <HeaderConferenceDays>
             {firstDay}-{lastDay}
@@ -124,7 +163,7 @@ function HeaderTemplate({
           </HeaderLocation>
         </HeaderInfoContainer>
       </PrimaryRow>
-      <SecondaryRow>
+      <SecondaryRow useTwitterHeader={useTwitterHeader}>
         <HeaderSlogan>{slogan}</HeaderSlogan>
         {coupon && (
           <HeaderCoupon>
@@ -173,6 +212,10 @@ ConnectedHeaderTemplate.variables = [
   },
   {
     id: "useTwitterHeader",
+    validation: { type: Boolean, default: false },
+  },
+  {
+    id: "showTwitterSafeArea",
     validation: { type: Boolean, default: false },
   },
 ];
