@@ -7,6 +7,7 @@
     "prettier": true,
     "no-shadowed-variable": false,
     "object-literal-sort-keys": false,
-    "max-classes-per-file": false
+    "max-classes-per-file": false,
+    "no-console": false
   }
 }
