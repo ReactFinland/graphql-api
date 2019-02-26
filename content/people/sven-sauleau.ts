@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Sven Sauleau",
   about:
-    "Sven is french software engineer, fascinated by JavaScript engines and apparently trains. OSS enthusiast; working on JavaScript, Babel, Webpack, WebAssembly and some bits of Rust.",
+    "Sven is a French software engineer, fascinated by JavaScript engines and apparently trains. OSS enthusiast; working on JavaScript, Babel, Webpack, WebAssembly and some bits of Rust.",
   image: {
     url: "people/sven.jpg",
   },
