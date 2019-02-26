@@ -13,6 +13,7 @@ import conferenceDaysQuery from "../queries/conferenceDaysQuery";
 interface HeaderContainerProps {
   primaryColor: Color;
   secondaryColor: Color;
+  useTwitterHeader: boolean;
 }
 
 // TODO: Move texture to the theme API
@@ -27,8 +28,8 @@ const HeaderPageContainer = styled.div`
     url("/media/assets/wave.svg")`};
   background-size: cover;
   position: relative;
-  width: 1024px;
-  height: 512px;
+  width: ${({ useTwitterHeader }) => (useTwitterHeader ? "1500px" : "1024px")};
+  height: ${({ useTwitterHeader }) => (useTwitterHeader ? "500px" : "512px")};
   overflow: hidden;
   color: white;
 `;
@@ -79,6 +80,7 @@ interface HeaderTemplateProps {
   selected: {
     coupon?: string;
     discountPercentage?: string;
+    useTwitterHeader: boolean;
   };
 }
 
@@ -86,7 +88,7 @@ function HeaderTemplate({
   conference,
   theme,
   id,
-  selected: { coupon, discountPercentage },
+  selected: { coupon, discountPercentage, useTwitterHeader },
 }: HeaderTemplateProps) {
   const { locations, schedules, slogan } = conference || {
     locations: [],
@@ -109,6 +111,7 @@ function HeaderTemplate({
       id={id}
       primaryColor={get(theme, "colors.primary")}
       secondaryColor={get(theme, "colors.secondary")}
+      useTwitterHeader={useTwitterHeader}
     >
       <PrimaryRow>
         <HeaderLogo src={get(theme, "logos.white.withText.url")} />
@@ -167,6 +170,10 @@ ConnectedHeaderTemplate.variables = [
   {
     id: "discountPercentage",
     validation: { type: String, default: "" },
+  },
+  {
+    id: "useTwitterHeader",
+    validation: { type: Boolean, default: false },
   },
 ];
 

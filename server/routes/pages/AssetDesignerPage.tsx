@@ -308,6 +308,20 @@ function VariableSelector({
         />
       );
     }
+    if (validation.type === Boolean) {
+      return (
+        <input
+          type="checkbox"
+          checked={selectedVariable}
+          onChange={({ target: { checked } }) => {
+            onChange(field, checked);
+          }}
+        />
+      );
+    }
+
+    console.error(`Type ${validation.type} hasn't been implemented yet`);
+    return null;
   }
 
   const ConnectedSelect = connect(
