@@ -4,21 +4,21 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Sven Sauleau",
   about:
-    "Sven is a software engineer living in France and mostly working with Golang and JavaScript. OSS enthusiast and one of the persons behind Babel.",
+    "Sven is french software engineer, fascinated by JavaScript engines and apparently trains. OSS enthusiast; working on JavaScript, Babel, Webpack, WebAssembly and some bits of Rust.",
   image: {
     url: "people/sven.jpg",
   },
   social: {
-    homepage: "http://www.xtuc.fr/",
+    homepage: "https://sauleau.com",
     twitter: "svensauleau",
     github: "xtuc",
   },
   location: {
     country: {
-      name: "France",
-      code: "FR",
+      name: "United Kingdom",
+      code: "UK",
     },
-    city: "",
+    city: "London",
   },
   keywords: [Keyword.BABEL, Keyword.TOOLING],
   type: [ContactType.SPEAKER],
