@@ -124,10 +124,13 @@ interface BadgeProps {
   attendee: Attendee;
 }
 
-function Badge({
-  logo,
-  attendee: { type, name, twitter, company },
-}: BadgeProps) {
+function Badge({ logo, attendee }: BadgeProps) {
+  if (!attendee) {
+    return <>No attendee!</>;
+  }
+
+  const { type, name, twitter, company } = attendee;
+
   return (
     <BadgeContainer>
       <BadgeLogo src={logo} />

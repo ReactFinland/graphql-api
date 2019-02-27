@@ -7,6 +7,7 @@ import map from "lodash/map";
 import queryString from "query-string";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
+import * as components from "../components";
 import connect from "../components/connect";
 import Select from "../components/Select";
 import * as templates from "../templates";
@@ -101,9 +102,12 @@ function AssetDesignerPage({
   const theme = themes.find(({ id }) => state.conferenceSeriesId === id);
 
   // TODO: Type
-  const template = templates[state.selectionId] || NoTemplateFound;
-  const variables = template.variables
-    ? template.variables.map(variable => ({
+  const selection =
+    templates[state.selectionId] ||
+    components[state.selectionId] ||
+    NoSelectionFound;
+  const variables = selection.variables
+    ? selection.variables.map(variable => ({
         ...variable,
         value: state[variable.id],
       }))
@@ -126,7 +130,7 @@ function AssetDesignerPage({
                   .toBlob(domNode)
                   .then(blob => {
                     // TODO: Improve this further (i.e. name of the speaker for tweets etc.)
-                    saveAs(blob, `${template.filename}.png`);
+                    saveAs(blob, `${selection.filename}.png`);
                   })
                   .catch(err => console.error(err));
               }
@@ -149,21 +153,19 @@ function AssetDesignerPage({
 
         <SidebarItem>
           <SidebarHeader>Templates</SidebarHeader>
-          <TemplateSelector
+          <ComponentSelector
             templates={Object.keys(templates)}
             selectedTemplate={state.selectionId}
           />
         </SidebarItem>
 
-        {/*
         <SidebarItem>
           <SidebarHeader>Components</SidebarHeader>
           <ComponentSelector
-            templates={Object.keys(templates)}
-            selectedComponent={state.componentId}
+            templates={Object.keys(components)}
+            selectedTemplate={state.selectionId}
           />
         </SidebarItem>
-        */}
 
         {variables.length > 0 && (
           <SidebarItem>
@@ -194,7 +196,7 @@ function AssetDesignerPage({
         )}
       </Sidebar>
       <Main>
-        {React.createElement(template, {
+        {React.createElement(selection, {
           selected: state,
           theme,
           id: assetDesignTemplateId,
@@ -204,8 +206,8 @@ function AssetDesignerPage({
   );
 }
 
-function NoTemplateFound() {
-  return <>No template found!</>;
+function NoSelectionFound() {
+  return <>No selection found!</>;
 }
 
 interface ThemeSelectorProps {
@@ -237,30 +239,30 @@ function ThemeSelector({
   );
 }
 
-interface TemplateSelectorProps {
+interface ComponentSelectorProps {
   templates: string[];
   selectedTemplate: string;
 }
 
-const TemplateSelectorContainer = styled.div``;
-const TemplateSelectorSelectedOption = styled.div``;
-const TemplateSelectorOption = styled.a`
+const ComponentSelectorContainer = styled.div``;
+const ComponentSelectorSelectedOption = styled.div``;
+const ComponentSelectorOption = styled.a`
   display: block;
 `;
 
-function TemplateSelector({
+function ComponentSelector({
   templates,
   selectedTemplate,
-}: TemplateSelectorProps) {
+}: ComponentSelectorProps) {
   return (
-    <TemplateSelectorContainer>
+    <ComponentSelectorContainer>
       {templates.map(templateId =>
         templateId === selectedTemplate ? (
-          <TemplateSelectorSelectedOption key={templateId}>
+          <ComponentSelectorSelectedOption key={templateId}>
             {templateId}
-          </TemplateSelectorSelectedOption>
+          </ComponentSelectorSelectedOption>
         ) : (
-          <TemplateSelectorOption
+          <ComponentSelectorOption
             key={templateId}
             href="#"
             onClick={e => {
@@ -268,7 +270,7 @@ function TemplateSelector({
 
               const search = queryString.parse(location.search);
 
-              // Retain only conferenceSeriesId + replace templateId.
+              // Retain only conferenceSeriesId + replace selectionId.
               // Otherwise selection might be invalid.
               location.search = queryString.stringify({
                 conferenceSeriesId: search.conferenceSeriesId,
@@ -277,10 +279,10 @@ function TemplateSelector({
             }}
           >
             {templateId}
-          </TemplateSelectorOption>
+          </ComponentSelectorOption>
         )
       )}
-    </TemplateSelectorContainer>
+    </ComponentSelectorContainer>
   );
 }
 
