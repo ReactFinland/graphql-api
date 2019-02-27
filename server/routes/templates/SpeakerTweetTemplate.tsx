@@ -118,9 +118,10 @@ function SpeakerTweetTemplate({
     talks: [],
   };
   const talkTitle = Array.isArray(talks) && talks.length > 0 && talks[0].title;
-  const tweetTextToCopy = `Learn more about ${talkTitle} by ${name} in ${
-    conference.name
-  } (${firstDay}-${lastDay})`;
+  // TODO: Set up conference.hashtag (should not contain #)
+  const tweetTextToCopy = `Learn more about ${talkTitle} by ${name} at #${conference.name
+    .split(" ")
+    .join("")} (${firstDay}-${lastDay})`;
 
   return (
     <TweetTemplateContainer>
