@@ -118,7 +118,7 @@ function AssetDesignerPage({
   // TODO: Construct variables based on this metadata
   // Likely this should be named as variables as well and use
   // the same shape (no need to do a separate system)
-  console.log("attendee", selection.props.attendee._fields);
+  // console.log("attendee", selection.props.attendee._fields);
 
   return (
     <AssetDesignerContainer width={sideBarWidth}>
