@@ -46,7 +46,10 @@ const ExportButton = styled.button``;
 
 const SelectorLabel = styled.label``;
 
-const VariableContainer = styled.div``;
+const VariableContainer = styled.div`
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+`;
 
 // TODO: Share the type from the backend
 
@@ -106,7 +109,7 @@ function AssetDesignerPage({
         value: state[variable.id],
       }))
     : []; // TODO: Overlay to selection
-  const sideBarWidth = "15em";
+  const sideBarWidth = "18em";
   const assetDesignTemplateId = "asset-design-template-id";
 
   return (
@@ -333,6 +336,7 @@ function VariableSelector({
 
     return (
       <Select
+        width="100%"
         options={
           collection
             ? [{ value: "", label: "" }].concat(collection.map(mapToOption))
