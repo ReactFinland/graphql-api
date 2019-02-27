@@ -144,4 +144,10 @@ function Badge({ logo, attendee }: BadgeProps) {
   );
 }
 
+// TODO: Port to variables scheme
+Badge.props = {
+  logo: String,
+  attendee: Attendee,
+};
+
 export default Badge;

@@ -4,6 +4,7 @@ import getExpeditiousCache from "express-expeditious";
 import isvalid from "isvalid";
 import fromPairs from "lodash/fromPairs";
 import * as React from "react";
+import "reflect-metadata"; // Needed for introspecting classes
 import createInteractive from "./components/Interactive";
 import createConnection from "./create-connection";
 import AssetDesignerPage from "./pages/AssetDesignerPage";

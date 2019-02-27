@@ -8,7 +8,18 @@ TypeGraphQL = {
   Authorized: dummyDecorator,
   Ctx: dummyDecorator,
   registerEnumType: dummyFn,
-  Field: dummyDecorator,
+  Field: typeFn => (instance, field) => {
+    Object.defineProperty(instance.__proto__, "_fields", {
+      enumerable: false,
+      writable: true,
+    });
+
+    const fields = instance.__proto__._fields || {};
+    instance.__proto__._fields = {
+      ...fields,
+      [field]: typeFn(),
+    };
+  },
   FieldResolver: dummyDecorator,
   Info: dummyDecorator,
   InputType: dummyDecorator,
