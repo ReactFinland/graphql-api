@@ -156,6 +156,16 @@ function AssetDesignerPage({
           />
         </SidebarItem>
 
+        {/*
+        <SidebarItem>
+          <SidebarHeader>Components</SidebarHeader>
+          <ComponentSelector
+            templates={Object.keys(templates)}
+            selectedComponent={state.componentId}
+          />
+        </SidebarItem>
+        */}
+
         {variables.length > 0 && (
           <SidebarItem>
             <SidebarHeader>Variables</SidebarHeader>
