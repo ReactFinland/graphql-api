@@ -2,10 +2,17 @@ import trimEnd from "lodash/trimEnd";
 import process from "process";
 import * as React from "react";
 import { renderToString } from "react-dom/server";
+import { Theme } from "../schema/Theme";
 import GlobalStyles from "./components/GlobalStyles";
 
-function renderPage(baseUrl, theme, page) {
+function renderPage(
+  title: string,
+  baseUrl: string,
+  theme: Theme,
+  page: JSX.Element
+) {
   return renderMarkup(
+    title,
     renderToString(
       <>
         <GlobalStyles theme={theme} />
@@ -16,14 +23,14 @@ function renderPage(baseUrl, theme, page) {
   );
 }
 
-function renderMarkup(html, hostname) {
+function renderMarkup(title: string, html: string, hostname: string): string {
   const env =
     process.env.NODE_ENV === "production" ? "production.min" : "development";
 
   return `<!DOCTYPE html>
   <html>
     <head>
-      <title>Asset generator</title>
+      <title>${title}</title>
       <meta charset="utf-8" />
       <script crossorigin src="https://unpkg.com/react@16/umd/react.${env}.js"></script>
       <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.${env}.js"></script>
@@ -36,7 +43,7 @@ function renderMarkup(html, hostname) {
   </html>`;
 }
 
-function cleanBase(hostname) {
+function cleanBase(hostname: string): string {
   return trimEnd(hostname.split("?")[0], "/");
 }
 

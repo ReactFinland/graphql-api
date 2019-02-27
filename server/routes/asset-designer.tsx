@@ -79,6 +79,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
       // each needs a unique identifier based on the query (differing part)
       res.status(200).send(
         renderPage(
+          "Asset designer",
           req.url,
           theme,
           <Interactive
