@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import hexToRgba from "hex-to-rgba";
 import * as React from "react";
+import { Attendee } from "../../schema/Attendee";
 import { Theme } from "../../schema/Theme";
 
 const BadgeContainer = styled.section`
@@ -15,6 +16,7 @@ const BadgeContainer = styled.section`
   height: 14.4cm;
   overflow: hidden;
 
+  /* Hole for lanyard */
   &::after {
     position: relative;
     top: -13.7cm;
@@ -25,24 +27,6 @@ const BadgeContainer = styled.section`
     border-radius: 50%;
     content: "";
     z-index: 5;
-  }
-
-  h2,
-  h3,
-  h4 {
-    margin: 0 !important;
-  }
-
-  dl,
-  dt,
-  dd {
-    display: inline;
-    margin: 0;
-    padding: 0;
-  }
-
-  dt {
-    opacity: 0.5;
   }
 `;
 
@@ -108,6 +92,10 @@ const BadgeContent = styled.div`
   z-index: 1;
 `;
 
+const BadgeLogo = styled.img`
+  margin-top: 0.5em;
+`;
+
 const BadgeName = styled.h2`
   display: block;
   font-size: 135%;
@@ -133,20 +121,18 @@ const BadgeType = styled.h3`
 
 interface BadgeProps {
   logo: Theme["logos"]["white"]["withText"]["url"];
-  attendee: any; // TODO
+  attendee: Attendee;
 }
 
 function Badge({
   logo,
-  attendee: { type, firstName, lastName, twitter, company },
+  attendee: { type, name, twitter, company },
 }: BadgeProps) {
   return (
     <BadgeContainer>
-      <img src={logo} />
+      <BadgeLogo src={logo} />
       <BadgeContent>
-        <BadgeName>
-          {firstName} {lastName}
-        </BadgeName>
+        <BadgeName>{name}</BadgeName>
         {twitter && <BadgeTwitter>@{twitter}</BadgeTwitter>}
         {company && <BadgeCompany>{company}</BadgeCompany>}
       </BadgeContent>

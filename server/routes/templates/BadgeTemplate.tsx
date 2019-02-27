@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 // import flatten from "lodash/flatten";
 // import map from "lodash/map";
 import * as React from "react";
+import { Attendee, AttendeeType } from "../../schema/Attendee";
 import { Theme } from "../../schema/Theme";
 import Badge from "../components/Badge";
 // import { Color } from "csstype";
@@ -16,39 +17,35 @@ interface BadgeTemplateProps {
 const BadgeTemplateContainer = styled.section``;
 
 interface BadgeTemplateProps {
-  tickets: any; // TODO: Set up API
+  attendees: Attendee[];
   theme: Theme;
   id: string;
 }
 
-const defaultTickets = [
+const defaultAttendees: Attendee[] = [
   {
-    firstName: "John",
-    lastName: "Longsurname-Anotherlongone",
+    name: "John Longsurname-Anotherlongone",
     twitter: "johndoe",
     company: "John Doe Enterprises",
-    type: "speaker",
+    type: AttendeeType.ATTENDEE,
   },
   {
-    firstName: "Jane",
-    lastName: "Doe",
+    name: "Jane Doe",
     twitter: "johndoe",
     company: "John Doe Enterprises",
-    type: "organizer",
+    type: AttendeeType.ORGANIZER,
   },
   {
-    firstName: "John",
-    lastName: "Doedoedoedoedoedoedoe",
+    name: "John Doedoedoedoedoedoedoe",
     twitter: "johndoe",
     company: "John Doe Enterprises",
-    type: "attendee",
+    type: AttendeeType.SPEAKER,
   },
   {
-    firstName: "John-Jack-Jim-Joe-Joel-Jeff",
-    lastName: "Doe",
+    name: "John-Jack-Jim-Joe-Joel-Jeff Doe",
     twitter: "johndoe",
     company: "John & Son Doe Enterprises & Co.",
-    type: "sponsor",
+    type: AttendeeType.SPONSOR,
   },
 ];
 
@@ -56,13 +53,13 @@ const defaultTickets = [
 function BadgeTemplate({
   id,
   theme,
-  tickets = defaultTickets,
+  attendees = defaultAttendees,
 }: BadgeTemplateProps) {
   // const pages = chunk(getBadgeData(tickets, badgesPerPage), badgesPerPage);
 
   return (
     <BadgeTemplateContainer id={id}>
-      <Badge logo={theme.logos.white.withText.url} attendee={tickets[0]} />
+      <Badge logo={theme.logos.white.withText.url} attendee={attendees[0]} />
     </BadgeTemplateContainer>
   );
 

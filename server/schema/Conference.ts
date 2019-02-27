@@ -10,6 +10,7 @@ import {
   Root,
 } from "type-graphql";
 import conferences from "../conferences";
+import { Attendee } from "./Attendee";
 import series from "./conferenceSeries";
 import { Contact, getSessionSpeakers } from "./Contact";
 import { Location } from "./Location";
@@ -72,6 +73,9 @@ export class Conference {
 
   @Field(_ => [Session])
   public workshops!: Session[];
+
+  @Field(_ => [Attendee])
+  public attendees?: Attendee[];
 }
 
 @Resolver(_ => Conference)
@@ -104,6 +108,12 @@ export class ConferenceResolver {
   @FieldResolver(_ => [Contact])
   public speakers(@Root() conference: Conference) {
     return getSessionSpeakers(conference, conference.talks);
+  }
+
+  // TODO: Resolve against CSV based on a convention
+  @FieldResolver(_ => [Attendee])
+  public attendees(@Root() conference: Conference) {
+    return [];
   }
 }
 
