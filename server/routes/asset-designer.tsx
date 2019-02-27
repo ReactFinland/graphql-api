@@ -24,7 +24,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
   interface AssetQuery {
     conferenceSeriesId: string;
     conferenceId: string;
-    templateId: string;
+    selectionId: string;
     contactName: string;
     day: string;
   }
@@ -34,15 +34,15 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
     cache.withTtl("1 hour"),
     async (req, res, next) => {
       const query = req.query;
-      const selectedTemplate = templates[query.templateId];
+      const selectedComponent = templates[query.selectionId];
       const additionalQueryParameters = getAdditionalQueryParameters(
-        selectedTemplate
+        selectedComponent
       );
 
       isvalid(query, {
         conferenceSeriesId: { type: String, default: "react-finland" },
         conferenceId: { type: String, default: "react-finland-2019" },
-        templateId: { type: String, default: "ThemeTemplate" },
+        selectionId: { type: String, default: "ThemeTemplate" },
         contactName: { type: String, default: "" },
         day: { type: String, default: "" },
         ...additionalQueryParameters,

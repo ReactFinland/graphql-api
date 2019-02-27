@@ -52,11 +52,10 @@ const VariableContainer = styled.div`
 `;
 
 // TODO: Share the type from the backend
-
 interface Selected {
   conferenceSeriesId: string;
   conferenceId: string;
-  templateId: string; // One of templates
+  selectionId: string; // One of templates
 }
 
 enum ActionTypes {
@@ -102,7 +101,7 @@ function AssetDesignerPage({
   const theme = themes.find(({ id }) => state.conferenceSeriesId === id);
 
   // TODO: Type
-  const template = templates[state.templateId] || NoTemplateFound;
+  const template = templates[state.selectionId] || NoTemplateFound;
   const variables = template.variables
     ? template.variables.map(variable => ({
         ...variable,
@@ -152,7 +151,7 @@ function AssetDesignerPage({
           <SidebarHeader>Templates</SidebarHeader>
           <TemplateSelector
             templates={Object.keys(templates)}
-            selectedTemplate={state.templateId}
+            selectedTemplate={state.selectionId}
           />
         </SidebarItem>
 
@@ -273,7 +272,7 @@ function TemplateSelector({
               // Otherwise selection might be invalid.
               location.search = queryString.stringify({
                 conferenceSeriesId: search.conferenceSeriesId,
-                templateId,
+                selectionId: templateId,
               });
             }}
           >
