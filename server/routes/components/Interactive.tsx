@@ -40,6 +40,10 @@ function createInteractive(projectRoot, scriptRoot, componentRoot) {
       homeDir: scriptRoot,
       output: `${scriptRoot}/$name.js`,
       shim: {
+        "type-graphql": {
+          source: path.join(projectRoot, "shims/type-graphql.js"),
+          exports: "TypeGraphQL",
+        },
         react: {
           exports: "React",
         },

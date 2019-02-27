@@ -6,7 +6,6 @@ import createHistory from "history/createBrowserHistory";
 import map from "lodash/map";
 import queryString from "query-string";
 import * as React from "react";
-import "reflect-metadata"; // Needed by type-graphql
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
 import Select from "../components/Select";
