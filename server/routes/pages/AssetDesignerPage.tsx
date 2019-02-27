@@ -338,6 +338,10 @@ function VariableSelector({
         />
       );
     }
+    if (validation.type._fields) {
+      // TODO: Construct fields recursively now
+      console.log("validating object", validation.type._fields);
+    }
 
     console.error(`Type ${validation.type} hasn't been implemented yet`);
     return null;
