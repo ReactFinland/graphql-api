@@ -42,7 +42,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
       isvalid(query, {
         conferenceSeriesId: { type: String, default: "react-finland" },
         conferenceId: { type: String, default: "react-finland-2019" },
-        templateId: { type: String, default: "theme" },
+        templateId: { type: String, default: "ThemeTemplate" },
         contactName: { type: String, default: "" },
         day: { type: String, default: "" },
         ...additionalQueryParameters,

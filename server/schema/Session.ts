@@ -1,12 +1,5 @@
 import { Url } from "@okgrow/graphql-scalars";
-import {
-  Field,
-  FieldResolver,
-  ObjectType,
-  registerEnumType,
-  Resolver,
-  Root,
-} from "type-graphql";
+import { Field, FieldResolver, ObjectType, Resolver, Root } from "type-graphql";
 import { Contact } from "./Contact";
 import Keyword from "./keywords";
 import { Location } from "./Location";
@@ -56,11 +49,6 @@ export class SessionResolver {
     return session.people || [];
   }
 }
-
-registerEnumType(SessionType, {
-  name: "SessionType",
-  description: "Type of the session",
-});
 
 // Backwards-compatibility with content. TODO: refactor out
 export { SessionType };

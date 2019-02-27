@@ -5,9 +5,9 @@ import SpeakerTweetTemplate from "./SpeakerTweetTemplate";
 import ThemeTemplate from "./ThemeTemplate";
 
 export {
-  BadgeTemplate as badge,
-  HeaderTemplate as header,
-  ThemeTemplate as theme,
-  ScheduleTemplate as schedule,
-  SpeakerTweetTemplate as speakerTweet,
+  BadgeTemplate,
+  HeaderTemplate,
+  ThemeTemplate,
+  ScheduleTemplate,
+  SpeakerTweetTemplate,
 };

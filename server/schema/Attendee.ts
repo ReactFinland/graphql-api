@@ -1,4 +1,4 @@
-import { Field, ObjectType, registerEnumType } from "type-graphql";
+import { Field, ObjectType } from "type-graphql";
 
 export enum AttendeeType {
   ATTENDEE = "ATTENDEE",
@@ -7,10 +7,6 @@ export enum AttendeeType {
   ORGANIZER = "ORGANIZER",
 }
 
-registerEnumType(AttendeeType, {
-  name: "AttendeeType",
-  description: "Type of the attendee",
-});
 @ObjectType()
 export class Attendee {
   @Field(_ => AttendeeType)

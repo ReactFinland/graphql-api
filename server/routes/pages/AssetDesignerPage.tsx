@@ -6,6 +6,7 @@ import createHistory from "history/createBrowserHistory";
 import map from "lodash/map";
 import queryString from "query-string";
 import * as React from "react";
+import "reflect-metadata"; // Needed by type-graphql
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
 import Select from "../components/Select";
@@ -102,7 +103,7 @@ function AssetDesignerPage({
   const theme = themes.find(({ id }) => state.conferenceSeriesId === id);
 
   // TODO: Type
-  const template = templates[state.templateId] || <NoTemplateFound />;
+  const template = templates[state.templateId] || NoTemplateFound;
   const variables = template.variables
     ? template.variables.map(variable => ({
         ...variable,
