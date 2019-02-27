@@ -4,11 +4,14 @@ import hexToRgba from "hex-to-rgba";
 import get from "lodash/get";
 import map from "lodash/map";
 import * as React from "react";
+import CopyToClipboard from "react-copy-to-clipboard";
 import { Conference } from "../../schema/Conference";
 import { Contact } from "../../schema/Contact";
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
 import { dayToFinnishLocale } from "../date-utils";
+
+const TweetTemplateContainer = styled.div``;
 
 interface TweetPageContainerProps {
   primaryColor: Color;
@@ -36,6 +39,15 @@ const TweetPageContainer = styled.div`
 
 const TweetInfoContainer = styled.div`
   padding: 3em 0 3em 3em;
+`;
+
+const TweetContainer = styled.div`
+  margin-top: 2em;
+`;
+const TweetText = styled.span`
+  margin-right: 0.5em;
+  padding: 0.25em;
+  background-color: #fff6c8;
 `;
 
 const TweetRow = styled.div`
@@ -84,39 +96,55 @@ function SpeakerTweetTemplate({
   theme,
   id,
 }: SpeakerTweetTemplateProps) {
+  if (!conference) {
+    return null;
+  }
+
+  const { schedules } = conference;
+  const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
+  const firstDay = conferenceDays[0];
+  const lastDay = conferenceDays[conferenceDays.length - 1];
   const { name, image, talks } = contact || {
     name: "",
     image: { url: "" },
     talks: [],
   };
-  const { schedules } = conference || { schedules: [] };
-  const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
-
-  const firstDay = conferenceDays[0];
-  const lastDay = conferenceDays[conferenceDays.length - 1];
+  const talkTitle = Array.isArray(talks) && talks.length > 0 && talks[0].title;
+  const tweetTextToCopy = `Learn more about ${talkTitle} by ${name} in ${
+    conference.name
+  } (${firstDay}-${lastDay})`;
 
   return (
-    <TweetPageContainer
-      id={id}
-      primaryColor={theme.colors.primary}
-      secondaryColor={theme.colors.secondary}
-    >
-      <TweetInfoContainer>
-        <TweetRow>
-          <TweetLogo src={theme.logos.white.withText.url} />
-          <TweetConferenceDays>
-            {firstDay}-{lastDay}
-          </TweetConferenceDays>
-        </TweetRow>
-        <TweetSpeakerName>{name}</TweetSpeakerName>
-        <TweetSpeakerTalk>
-          {Array.isArray(talks) && talks.length > 0 && talks[0].title}
-        </TweetSpeakerTalk>
-      </TweetInfoContainer>
-      <TweetImageContainer>
-        <TweetImage src={image.url} />
-      </TweetImageContainer>
-    </TweetPageContainer>
+    <TweetTemplateContainer>
+      <TweetPageContainer
+        id={id}
+        primaryColor={theme.colors.primary}
+        secondaryColor={theme.colors.secondary}
+      >
+        <TweetInfoContainer>
+          <TweetRow>
+            <TweetLogo src={theme.logos.white.withText.url} />
+            <TweetConferenceDays>
+              {firstDay}-{lastDay}
+            </TweetConferenceDays>
+          </TweetRow>
+          <TweetSpeakerName>{name}</TweetSpeakerName>
+          <TweetSpeakerTalk>{talkTitle}</TweetSpeakerTalk>
+        </TweetInfoContainer>
+        <TweetImageContainer>
+          <TweetImage src={image.url} />
+        </TweetImageContainer>
+      </TweetPageContainer>
+      <TweetContainer>
+        <TweetText>{tweetTextToCopy}</TweetText>
+        <CopyToClipboard
+          text={tweetTextToCopy}
+          onCopy={() => alert("Copied to clipboard")}
+        >
+          <button>&#x2398;</button>
+        </CopyToClipboard>
+      </TweetContainer>
+    </TweetTemplateContainer>
   );
 }
 
@@ -134,6 +162,7 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
     }
   }
   conference(id: $conferenceId) {
+    name
     slogan
     schedules {
       day
