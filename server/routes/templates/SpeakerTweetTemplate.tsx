@@ -42,12 +42,20 @@ const TweetInfoContainer = styled.div`
 `;
 
 const TweetContainer = styled.div`
+  position: relative;
   margin-top: 2em;
+  padding: 0.25em;
+  max-width: 880px;
+  background-color: #fff6c8;
 `;
 const TweetText = styled.span`
   margin-right: 0.5em;
-  padding: 0.25em;
-  background-color: #fff6c8;
+`;
+const TweetCopyButton = styled.button`
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
 `;
 
 const TweetRow = styled.div`
@@ -141,7 +149,7 @@ function SpeakerTweetTemplate({
           text={tweetTextToCopy}
           onCopy={() => alert("Copied to clipboard")}
         >
-          <button>&#x2398;</button>
+          <TweetCopyButton>&#x2398;</TweetCopyButton>
         </CopyToClipboard>
       </TweetContainer>
     </TweetTemplateContainer>
