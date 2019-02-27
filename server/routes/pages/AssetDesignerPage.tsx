@@ -123,8 +123,8 @@ function AssetDesignerPage({
                 domToImage
                   .toBlob(domNode)
                   .then(blob => {
-                    // TODO: Figure out a nice way to determine a good default name
-                    saveAs(blob, "design.png");
+                    // TODO: Improve this further (i.e. name of the speaker for tweets etc.)
+                    saveAs(blob, `${template.filename}.png`);
                   })
                   .catch(err => console.error(err));
               }

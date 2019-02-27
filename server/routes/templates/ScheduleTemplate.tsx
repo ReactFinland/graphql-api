@@ -115,6 +115,8 @@ const ConnectedScheduleTemplate = connect(
   />
 ));
 
+ConnectedScheduleTemplate.filename = "schedule";
+
 // TODO: Better use enums here
 ConnectedScheduleTemplate.variables = [
   {

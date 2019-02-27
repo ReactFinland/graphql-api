@@ -180,6 +180,8 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
   ({ selected }) => ({ ...selected })
 )(SpeakerTweetTemplate);
 
+ConnectedSpeakerTweetTemplate.filename = "speaker-tweet";
+
 // TODO: Better use enums here
 ConnectedSpeakerTweetTemplate.variables = [
   {

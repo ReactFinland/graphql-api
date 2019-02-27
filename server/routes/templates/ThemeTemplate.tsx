@@ -104,4 +104,6 @@ function ThemeTemplate({ id, theme }: ThemeTemplateProps) {
   );
 }
 
+ThemeTemplate.filename = "theme";
+
 export default ThemeTemplate;

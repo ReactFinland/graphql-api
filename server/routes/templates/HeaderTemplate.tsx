@@ -182,6 +182,8 @@ const ConnectedHeaderTemplate = connect(
   ({ selected }) => ({ ...selected })
 )(HeaderTemplate);
 
+ConnectedHeaderTemplate.filename = "header";
+
 // TODO: Better use enums here
 ConnectedHeaderTemplate.variables = [
   {
