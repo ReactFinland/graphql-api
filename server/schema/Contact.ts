@@ -62,11 +62,9 @@ export class Contact {
   @Field(_ => Location)
   public location!: Location;
 
-  // Derived at getSpeakers
   @Field(_ => [Session])
   public talks?: Session[];
 
-  // Derived at getSpeakers
   @Field(_ => [Session])
   public workshops?: Session[];
 }
@@ -85,12 +83,16 @@ export class ContactResolver {
     const organizer = Object.values(conference.organizers).find(
       ({ name }) => name === contactName
     );
-    const speaker = getSpeakers(conference).find(
+    const speaker = getSessionSpeakers(conference, conference.talks).find(
       ({ name }) => name === contactName
     );
+    const workshopInstructor = getSessionSpeakers(
+      conference,
+      conference.workshops
+    ).find(({ name }) => name === contactName);
     const mc =
       conference.mcs && conference.mcs.find(({ name }) => name === contactName);
-    const contact = sponsor || organizer || speaker || mc;
+    const contact = sponsor || organizer || speaker || workshopInstructor || mc;
 
     if (!contact) {
       throw new Error(`Contact ${contactName} wasn't found!`);
@@ -161,14 +163,6 @@ function resolveLinkedin(linkedin?: string): string {
   }
 
   return `https://linkedin.com/in/${linkedin}`;
-}
-
-// TODO: Maybe this should check both talks/workshops at once?
-export function getSpeakers(conference: Conference): Contact[] {
-  const talkSpeakers = getSessionSpeakers(conference, conference.talks);
-  const workshopSpeakers = getSessionSpeakers(conference, conference.workshops);
-
-  return uniqBy(talkSpeakers.concat(workshopSpeakers), "name");
 }
 
 export function getSessionSpeakers(

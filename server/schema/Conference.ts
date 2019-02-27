@@ -11,7 +11,7 @@ import {
 } from "type-graphql";
 import conferences from "../conferences";
 import series from "./conferenceSeries";
-import { Contact, getSpeakers } from "./Contact";
+import { Contact, getSessionSpeakers } from "./Contact";
 import { Location } from "./Location";
 import { UrlScalar } from "./scalars";
 import { Schedule } from "./Schedule";
@@ -103,7 +103,7 @@ export class ConferenceResolver {
 
   @FieldResolver(_ => [Contact])
   public speakers(@Root() conference: Conference) {
-    return getSpeakers(conference);
+    return getSessionSpeakers(conference, conference.talks);
   }
 }
 
