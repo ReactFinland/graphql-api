@@ -23,11 +23,14 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
   const connection = createConnection(schema);
 
   interface AssetQuery {
-    conferenceSeriesId: string;
-    conferenceId: string;
-    selectionId: string;
-    contactName: string;
-    day: string;
+    selected: {
+      conferenceSeriesId: string;
+      conferenceId: string;
+      selectionId: string;
+      contactName: string;
+      day: string;
+    };
+    variables: { [key: string]: any };
   }
 
   router.get(
@@ -36,17 +39,32 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
     async (req, res, next) => {
       const query = req.query;
       const selectedComponent = templates[query.selectionId];
-      const additionalQueryParameters = getAdditionalQueryParameters(
-        selectedComponent
-      );
+      const variables = getAdditionalQueryParameters(selectedComponent);
 
       isvalid(query, {
-        conferenceSeriesId: { type: String, default: "react-finland" },
-        conferenceId: { type: String, default: "react-finland-2019" },
-        selectionId: { type: String, default: "ThemeTemplate" },
-        contactName: { type: String, default: "" },
-        day: { type: String, default: "" },
-        ...additionalQueryParameters,
+        type: Object,
+        unknownKeys: "remove", // allow/deny/remove
+        schema: {
+          selected: {
+            type: Object,
+            schema: {
+              conferenceSeriesId: String,
+              conferenceId: String,
+              selectionId: String,
+              contactName: String,
+              day: String,
+            },
+            default: {
+              conferenceSeriesId: "react-finland",
+              conferenceId: "react-finland-2019",
+              selectionId: "ThemeTemplate",
+            },
+          },
+          variables: {
+            type: Object,
+            schema: variables,
+          },
+        },
       })
         .then(query => {
           req.query = query;
@@ -60,7 +78,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
         });
     },
     async (req, res) => {
-      const selected: AssetQuery = req.query;
+      const { selected, variables }: AssetQuery = req.query;
 
       // TODO: Redirect with query visible instead of defaulting?
       const [err, connect] = await connection(
@@ -85,7 +103,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
           theme,
           <Interactive
             relativeComponentPath="./pages/AssetDesignerPage"
-            props={{ themes, initialSelected: selected }}
+            props={{ themes, initialState: { selected, variables } }}
             component={AssetDesignerPage}
             componentHash={crypto
               .createHash("md5")

@@ -48,25 +48,33 @@ const ExportButton = styled.button``;
 const VariableContainer = styled.div``;
 
 // TODO: Share the type from the backend
-interface Selected {
-  conferenceSeriesId: string;
-  conferenceId: string;
-  selectionId: string; // One of templates
+interface DesignerState {
+  selected: {
+    conferenceSeriesId: string;
+    conferenceId: string;
+    selectionId: string; // One of templates
+  };
+  variables: { [key: string]: any };
 }
 
 enum ActionTypes {
-  UPDATE_FIELD,
+  UPDATE_SELECTED,
+  UPDATE_VARIABLE,
 }
 
 // TODO: Fetch new data
-function assetDesignerReducer(state: Selected, action) {
+function assetDesignerReducer(state: DesignerState, action) {
   const { field, value } = action;
 
   switch (action.type) {
-    case ActionTypes.UPDATE_FIELD:
+    case ActionTypes.UPDATE_SELECTED:
       updateQuery(field, value);
 
-      return { ...state, [field]: value };
+      return { ...state, selected: { ...state.selected, [field]: value } };
+    case ActionTypes.UPDATE_VARIABLE:
+      updateQuery(field, value);
+
+      return { ...state, variables: { ...state.variables, [field]: value } };
     default:
       throw new Error("No matching reducer found!");
   }
@@ -82,25 +90,31 @@ function updateQuery(field: string, value: string) {
 }
 
 interface AssetDesignerPageProps {
-  initialSelected: Selected;
+  initialState: DesignerState;
   themes: Theme[];
 }
 
 function AssetDesignerPage({
-  initialSelected,
+  initialState = {
+    selected: {
+      conferenceId: "",
+      conferenceSeriesId: "",
+      selectionId: "",
+    },
+    variables: {},
+  },
   themes,
 }: AssetDesignerPageProps) {
   const [state, dispatch] = React.useReducer(
     assetDesignerReducer,
-    initialSelected
+    initialState
   );
-  const theme = themes.find(({ id }) => state.conferenceSeriesId === id);
+  const { conferenceSeriesId, selectionId } = state.selected;
+  const theme = themes.find(({ id }) => conferenceSeriesId === id);
 
   // TODO: Type
   const selection =
-    templates[state.selectionId] ||
-    components[state.selectionId] ||
-    NoSelectionFound;
+    templates[selectionId] || components[selectionId] || NoSelectionFound;
   const variables = selection.variables
     ? selection.variables.map(variable => ({
         ...variable,
@@ -144,9 +158,9 @@ function AssetDesignerPage({
           <SidebarHeader>Themes</SidebarHeader>
           <ThemeSelector
             themes={themes}
-            selectedTheme={state.conferenceSeriesId}
+            selectedTheme={state.selected.conferenceSeriesId}
             onChange={(field, value) =>
-              dispatch({ type: ActionTypes.UPDATE_FIELD, field, value })
+              dispatch({ type: ActionTypes.UPDATE_SELECTED, field, value })
             }
           />
         </SidebarItem>
@@ -155,7 +169,7 @@ function AssetDesignerPage({
           <SidebarHeader>Templates</SidebarHeader>
           <ComponentSelector
             templates={Object.keys(templates)}
-            selectedTemplate={state.selectionId}
+            selectedTemplate={state.selected.selectionId}
           />
         </SidebarItem>
 
@@ -163,7 +177,7 @@ function AssetDesignerPage({
           <SidebarHeader>Components</SidebarHeader>
           <ComponentSelector
             templates={Object.keys(components)}
-            selectedTemplate={state.selectionId}
+            selectedTemplate={state.selected.selectionId}
           />
         </SidebarItem>
 
@@ -174,7 +188,7 @@ function AssetDesignerPage({
             {map(variables, variable => (
               <VariableContainer key={variable.id}>
                 <VariableSelector
-                  selected={state}
+                  selected={state.variables}
                   field={variable.id}
                   selectedVariable={variable.value}
                   query={variable.query}
@@ -183,7 +197,7 @@ function AssetDesignerPage({
                   validation={variable.validation}
                   onChange={(field, value) =>
                     dispatch({
-                      type: ActionTypes.UPDATE_FIELD,
+                      type: ActionTypes.UPDATE_VARIABLE,
                       field,
                       value,
                     })
@@ -196,7 +210,8 @@ function AssetDesignerPage({
       </Sidebar>
       <Main>
         {React.createElement(selection, {
-          selected: state,
+          ...state.variables,
+          selected: state.selected,
           theme,
           id: assetDesignTemplateId,
         })}
@@ -249,6 +264,8 @@ const ComponentSelectorOption = styled.a`
   display: block;
 `;
 
+// TODO: Likely this should run through local state like the
+// other bits
 function ComponentSelector({
   templates,
   selectedTemplate,
@@ -272,8 +289,10 @@ function ComponentSelector({
               // Retain only conferenceSeriesId + replace selectionId.
               // Otherwise selection might be invalid.
               location.search = queryString.stringify({
-                conferenceSeriesId: search.conferenceSeriesId,
-                selectionId: templateId,
+                selected: {
+                  conferenceSeriesId: search.conferenceSeriesId,
+                  selectionId: templateId,
+                },
               });
             }}
           >
@@ -286,7 +305,7 @@ function ComponentSelector({
 }
 
 interface VariableSelector {
-  selected: AssetDesignerPageProps["initialSelected"];
+  selected: AssetDesignerPageProps["initialState"]["variables"];
   field: string;
   options: string[];
   selectedVariable: string;
