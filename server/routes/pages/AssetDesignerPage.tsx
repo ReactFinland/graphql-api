@@ -45,12 +45,7 @@ const Main = styled.main`
 
 const ExportButton = styled.button``;
 
-const SelectorLabel = styled.label``;
-
-const VariableContainer = styled.div`
-  display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
-`;
+const VariableContainer = styled.div``;
 
 // TODO: Share the type from the backend
 interface Selected {
@@ -178,7 +173,6 @@ function AssetDesignerPage({
 
             {map(variables, variable => (
               <VariableContainer key={variable.id}>
-                <SelectorLabel>{variable.id}</SelectorLabel>
                 <VariableSelector
                   selected={state}
                   field={variable.id}
@@ -352,28 +346,45 @@ function VariableSelector({
   return <ConnectedSelect />;
 }
 
+const SelectorLabel = styled.label`
+  margin-right: 1em;
+`;
+const SelectorInput = styled.input`
+  width: 100%;
+`;
+const SelectorContainer = styled.div`
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+`;
+
 function VariableFields({ validation, selectedVariable, onChange, field }) {
   if (validation.type === String) {
     return (
-      <input
-        type="text"
-        value={selectedVariable}
-        placeholder={validation.default}
-        onChange={({ target: { value } }) => {
-          onChange(field, value);
-        }}
-      />
+      <SelectorContainer>
+        <SelectorLabel>{field}</SelectorLabel>
+        <SelectorInput
+          type="text"
+          value={selectedVariable}
+          placeholder={validation.default}
+          onChange={({ target: { value } }) => {
+            onChange(field, value);
+          }}
+        />
+      </SelectorContainer>
     );
   }
   if (validation.type === Boolean) {
     return (
-      <input
-        type="checkbox"
-        checked={selectedVariable}
-        onChange={({ target: { checked } }) => {
-          onChange(field, checked);
-        }}
-      />
+      <SelectorContainer>
+        <SelectorLabel>{field}</SelectorLabel>
+        <SelectorInput
+          type="checkbox"
+          checked={selectedVariable}
+          onChange={({ target: { checked } }) => {
+            onChange(field, checked);
+          }}
+        />
+      </SelectorContainer>
     );
   }
   if (validation.type === "enum") {
@@ -382,13 +393,14 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
     return null;
   }
 
+  const fields = validation.type._fields;
+
   // TODO: How to tackle SSR in this case? Shimming is problematic
   // as server won't inject _fields. Maybe reflection instead?
-  if (validation.type._fields) {
-    // TODO: Construct fields recursively now
+  if (fields) {
     return (
       <>
-        {map(validation.type._fields, ({ type, values }, id) => {
+        {map(fields, ({ type, values }, id) => {
           console.log(id, type, values);
 
           return (
@@ -397,7 +409,7 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
               validation={{ id, type, values }}
               selectedVariable={selectedVariable}
               onChange={onChange}
-              field={field}
+              field={`${field}.${id}`}
             />
           );
         })}
