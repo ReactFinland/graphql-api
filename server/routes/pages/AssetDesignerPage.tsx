@@ -388,9 +388,30 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
     );
   }
   if (validation.type === "enum") {
-    // enum case
-    console.log("no validation for enum yet", validation);
-    return null;
+    const values = validation.values;
+
+    return (
+      <SelectorContainer>
+        <SelectorLabel>{field}</SelectorLabel>
+        <Select
+          width="100%"
+          options={
+            values
+              ? [{ value: "", label: "" }].concat(
+                  map(values, (label, value) => ({
+                    value,
+                    label,
+                  }))
+                )
+              : []
+          }
+          selected={selectedVariable}
+          onChange={({ target: { value } }) => {
+            onChange(field, value);
+          }}
+        />
+      </SelectorContainer>
+    );
   }
 
   const fields = validation.type._fields;
