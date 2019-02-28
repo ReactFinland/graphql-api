@@ -124,6 +124,7 @@ interface BadgeProps {
   attendee: Attendee;
 }
 
+// TODO: Use Image type for logo, not url (string)
 function Badge({ logo, attendee }: BadgeProps) {
   if (!attendee) {
     return <>No attendee!</>;
@@ -144,6 +145,7 @@ function Badge({ logo, attendee }: BadgeProps) {
   );
 }
 
+// TODO: Generate Badge.propTypes based on this structure?
 Badge.variables = [
   {
     id: "logo",

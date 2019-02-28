@@ -304,6 +304,7 @@ interface VariableSelector {
   onChange: (field: string, value: string) => void;
 }
 
+// TODO: This should handle labels as well
 function VariableSelector({
   selected,
   field,
@@ -315,36 +316,7 @@ function VariableSelector({
   onChange,
 }) {
   if (!query) {
-    if (validation.type === String) {
-      return (
-        <input
-          type="text"
-          value={selectedVariable}
-          placeholder={validation.default}
-          onChange={({ target: { value } }) => {
-            onChange(field, value);
-          }}
-        />
-      );
-    }
-    if (validation.type === Boolean) {
-      return (
-        <input
-          type="checkbox"
-          checked={selectedVariable}
-          onChange={({ target: { checked } }) => {
-            onChange(field, checked);
-          }}
-        />
-      );
-    }
-    if (validation.type._fields) {
-      // TODO: Construct fields recursively now
-      console.log("validating object", validation.type._fields);
-    }
-
-    console.error(`Type ${validation.type} hasn't been implemented yet`);
-    return null;
+    return generateUI({ validation, selectedVariable, onChange, field });
   }
 
   const ConnectedSelect = connect(
@@ -371,6 +343,61 @@ function VariableSelector({
   });
 
   return <ConnectedSelect />;
+}
+
+function generateUI({ validation, selectedVariable, onChange, field }) {
+  if (validation.type === String) {
+    return (
+      <input
+        type="text"
+        value={selectedVariable}
+        placeholder={validation.default}
+        onChange={({ target: { value } }) => {
+          onChange(field, value);
+        }}
+      />
+    );
+  }
+  if (validation.type === Boolean) {
+    return (
+      <input
+        type="checkbox"
+        checked={selectedVariable}
+        onChange={({ target: { checked } }) => {
+          onChange(field, checked);
+        }}
+      />
+    );
+  }
+  if (validation.type === "enum") {
+    // enum case
+    console.log("no validation for enum yet", validation);
+    return null;
+  }
+
+  // TODO: How to tackle SSR in this case? Shimming is problematic
+  // as server won't inject _fields. Maybe reflection instead?
+  if (validation.type._fields) {
+    // TODO: Construct fields recursively now
+    return (
+      <>
+        {map(validation.type._fields, ({ type, values }, id) => {
+          console.log(id, type, values);
+
+          // TODO: Attach keys
+          return generateUI({
+            validation: { id, type, values },
+            selectedVariable,
+            onChange,
+            field,
+          });
+        })}
+      </>
+    );
+  }
+
+  console.error(`Type ${validation.type} hasn't been implemented yet`);
+  return null;
 }
 
 export default AssetDesignerPage;

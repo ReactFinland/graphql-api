@@ -15,9 +15,19 @@ TypeGraphQL = {
     });
 
     const fields = instance.__proto__._fields || {};
+    let type = typeFn();
+    let values;
+
+    // Enum
+    if (typeof type === "object") {
+      values = type;
+      type = "enum";
+    }
+
+    // TODO: Figure out how to detect enums (is object check + annotation?)
     instance.__proto__._fields = {
       ...fields,
-      [field]: typeFn(),
+      [field]: { type, default: "", values },
     };
   },
   FieldResolver: dummyDecorator,
