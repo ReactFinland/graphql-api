@@ -316,7 +316,14 @@ function VariableSelector({
   onChange,
 }) {
   if (!query) {
-    return generateUI({ validation, selectedVariable, onChange, field });
+    return (
+      <VariableFields
+        field={field}
+        validation={validation}
+        selectedVariable={selectedVariable}
+        onChange={onChange}
+      />
+    );
   }
 
   const ConnectedSelect = connect(
@@ -345,7 +352,7 @@ function VariableSelector({
   return <ConnectedSelect />;
 }
 
-function generateUI({ validation, selectedVariable, onChange, field }) {
+function VariableFields({ validation, selectedVariable, onChange, field }) {
   if (validation.type === String) {
     return (
       <input
@@ -384,13 +391,15 @@ function generateUI({ validation, selectedVariable, onChange, field }) {
         {map(validation.type._fields, ({ type, values }, id) => {
           console.log(id, type, values);
 
-          // TODO: Attach keys
-          return generateUI({
-            validation: { id, type, values },
-            selectedVariable,
-            onChange,
-            field,
-          });
+          return (
+            <VariableFields
+              key={id}
+              validation={{ id, type, values }}
+              selectedVariable={selectedVariable}
+              onChange={onChange}
+              field={field}
+            />
+          );
         })}
       </>
     );
