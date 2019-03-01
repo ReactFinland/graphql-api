@@ -54,16 +54,11 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
           selected: {
             type: Object,
             schema: {
-              conferenceSeriesId: String,
-              conferenceId: String,
-              selectionId: String,
+              conferenceSeriesId: { type: String, default: "react-finland" },
+              conferenceId: { type: String, default: "react-finland-2019" },
+              selectionId: { type: String, default: "ThemeTemplate" },
               contactName: String,
               day: String,
-            },
-            default: {
-              conferenceSeriesId: "react-finland",
-              conferenceId: "react-finland-2019",
-              selectionId: "ThemeTemplate",
             },
           },
           variables: {
@@ -74,17 +69,6 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
       })
         .then(query => {
           req.query = query;
-
-          // XXX: Solve by moving query to frontend
-          req.query = {
-            selected: {
-              ...req.query.selected,
-              // XXX
-              conferenceSeriesId: "react-finland",
-              conferenceId: "react-finland-2019",
-              // selectionId: "ThemeTemplate",
-            },
-          };
 
           next();
         })
