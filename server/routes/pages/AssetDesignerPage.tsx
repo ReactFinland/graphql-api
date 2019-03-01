@@ -134,11 +134,6 @@ function AssetDesignerPage({
   const sideBarWidth = "18em";
   const assetDesignTemplateId = "asset-design-template-id";
 
-  // TODO: Construct variables based on this metadata
-  // Likely this should be named as variables as well and use
-  // the same shape (no need to do a separate system)
-  // console.log("attendee", selection.props.attendee._fields);
-
   return (
     <AssetDesignerContainer width={sideBarWidth}>
       <Sidebar backgroundColor={theme ? theme.colors.background : ""}>
@@ -453,19 +448,15 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
   if (fields) {
     return (
       <>
-        {map(fields, ({ type, values }, id) => {
-          console.log(id, type, values);
-
-          return (
-            <VariableFields
-              key={id}
-              validation={{ id, type, values }}
-              selectedVariable={selectedVariable}
-              onChange={onChange}
-              field={`${field}.${id}`}
-            />
-          );
-        })}
+        {map(fields, ({ type, values }, id) => (
+          <VariableFields
+            key={id}
+            validation={{ id, type, values }}
+            selectedVariable={selectedVariable}
+            onChange={onChange}
+            field={`${field}.${id}`}
+          />
+        ))}
       </>
     );
   }
