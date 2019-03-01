@@ -106,24 +106,20 @@ interface HeaderTemplateProps {
   conference?: Conference;
   theme?: Theme;
   id: string;
-  selected: {
-    coupon?: string;
-    discountPercentage?: string;
-    useTwitterHeader: boolean;
-    showTwitterSafeArea: boolean;
-  };
+  coupon?: string;
+  discountPercentage?: string;
+  useTwitterHeader: boolean;
+  showTwitterSafeArea: boolean;
 }
 
 function HeaderTemplate({
   conference,
   theme,
   id,
-  selected: {
-    coupon,
-    discountPercentage,
-    useTwitterHeader,
-    showTwitterSafeArea,
-  },
+  coupon,
+  discountPercentage,
+  useTwitterHeader,
+  showTwitterSafeArea,
 }: HeaderTemplateProps) {
   const { locations, schedules, slogan } = conference || {
     locations: [],
