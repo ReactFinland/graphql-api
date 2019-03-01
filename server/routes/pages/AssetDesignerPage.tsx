@@ -51,16 +51,14 @@ const VariableContainer = styled.div``;
 
 // TODO: Share the type from the backend
 interface DesignerState {
-  selected: {
-    conferenceSeriesId: string;
-    conferenceId: string;
-    selectionId: string; // One of templates
-  };
+  themeId: Theme["id"];
+  selectionId: string; // One of templates
   variables: { [key: string]: any };
 }
 
 enum ActionTypes {
-  UPDATE_SELECTED,
+  UPDATE_SELECTION_ID,
+  UPDATE_THEME_ID,
   UPDATE_VARIABLE,
 }
 
@@ -69,12 +67,14 @@ function assetDesignerReducer(state: DesignerState, action) {
   const { field, value } = action;
 
   switch (action.type) {
-    case ActionTypes.UPDATE_SELECTED:
-      const newSelected = { ...state.selected, [field]: value };
+    case ActionTypes.UPDATE_SELECTION_ID:
+      updateQuery("selectionId", value);
 
-      updateQuery("selected", newSelected);
+      return { ...state, selectionId: value };
+    case ActionTypes.UPDATE_THEME_ID:
+      updateQuery("themeId", value);
 
-      return { ...state, selected: newSelected };
+      return { ...state, themeId: value };
     case ActionTypes.UPDATE_VARIABLE:
       const newVariables = { ...state.variables, [field]: value };
 
@@ -102,25 +102,22 @@ interface AssetDesignerPageProps {
 
 function AssetDesignerPage({
   initialState = {
-    selected: {
-      conferenceId: "",
-      conferenceSeriesId: "",
-      selectionId: "",
-    },
+    selectionId: "",
+    themeId: "",
     variables: {},
   },
-  themes = [],
+  themes,
 }: AssetDesignerPageProps) {
+  if (!themes) {
+    return null;
+  }
+
   const [state, dispatch] = React.useReducer(
     assetDesignerReducer,
     initialState
   );
-  const { conferenceSeriesId, selectionId } = state.selected;
-  const theme = themes.find(({ id }) => conferenceSeriesId === id);
-
-  if (!theme) {
-    return null;
-  }
+  const theme = themes.find(({ id }) => id === state.themeId) || themes[0];
+  const { selectionId } = state;
 
   // TODO: Type
   const selection =
@@ -163,9 +160,9 @@ function AssetDesignerPage({
           <SidebarHeader>Themes</SidebarHeader>
           <ThemeSelector
             themes={themes}
-            selectedTheme={state.selected.conferenceSeriesId}
+            selectedTheme={state.themeId}
             onChange={(field, value) =>
-              dispatch({ type: ActionTypes.UPDATE_SELECTED, field, value })
+              dispatch({ type: ActionTypes.UPDATE_THEME_ID, field, value })
             }
           />
         </SidebarItem>
@@ -174,7 +171,10 @@ function AssetDesignerPage({
           <SidebarHeader>Templates</SidebarHeader>
           <ComponentSelector
             templates={Object.keys(templates)}
-            selectedTemplate={state.selected.selectionId}
+            selectedTemplate={selectionId}
+            onChange={value =>
+              dispatch({ type: ActionTypes.UPDATE_SELECTION_ID, value })
+            }
           />
         </SidebarItem>
 
@@ -182,7 +182,10 @@ function AssetDesignerPage({
           <SidebarHeader>Components</SidebarHeader>
           <ComponentSelector
             templates={Object.keys(components)}
-            selectedTemplate={state.selected.selectionId}
+            selectedTemplate={selectionId}
+            onChange={value =>
+              dispatch({ type: ActionTypes.UPDATE_SELECTION_ID, value })
+            }
           />
         </SidebarItem>
 
@@ -216,7 +219,6 @@ function AssetDesignerPage({
       <Main>
         {React.createElement(selection, {
           ...state.variables,
-          selected: state.selected,
           theme,
           id: assetDesignTemplateId,
         })}
@@ -261,6 +263,7 @@ function ThemeSelector({
 interface ComponentSelectorProps {
   templates: string[];
   selectedTemplate: string;
+  onChange: (value: string) => void;
 }
 
 const ComponentSelectorContainer = styled.div``;
@@ -269,11 +272,10 @@ const ComponentSelectorOption = styled.a`
   display: block;
 `;
 
-// TODO: Likely this should run through local state like the
-// other bits
 function ComponentSelector({
   templates,
   selectedTemplate,
+  onChange,
 }: ComponentSelectorProps) {
   return (
     <ComponentSelectorContainer>
@@ -289,16 +291,7 @@ function ComponentSelector({
             onClick={e => {
               e.preventDefault();
 
-              const search = queryString.parse(location.search);
-
-              // Retain only conferenceSeriesId + replace selectionId.
-              // Otherwise selection might be invalid.
-              location.search = queryString.stringify({
-                selected: JSON.stringify({
-                  conferenceSeriesId: search.conferenceSeriesId,
-                  selectionId: templateId,
-                }),
-              });
+              onChange(templateId);
             }}
           >
             {templateId}
