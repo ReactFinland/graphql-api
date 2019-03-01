@@ -70,23 +70,27 @@ function assetDesignerReducer(state: DesignerState, action) {
 
   switch (action.type) {
     case ActionTypes.UPDATE_SELECTED:
-      updateQuery(field, value);
+      const newSelected = { ...state.selected, [field]: value };
 
-      return { ...state, selected: { ...state.selected, [field]: value } };
+      updateQuery("selected", newSelected);
+
+      return { ...state, selected: newSelected };
     case ActionTypes.UPDATE_VARIABLE:
-      updateQuery(field, value);
+      const newVariables = { ...state.variables, [field]: value };
 
-      return { ...state, variables: { ...state.variables, [field]: value } };
+      updateQuery("variables", newVariables);
+
+      return { ...state, variables: newVariables };
     default:
       throw new Error("No matching reducer found!");
   }
 }
 
-function updateQuery(field: string, value: string) {
+function updateQuery(field: string, value: any) {
   const history = createHistory();
   const query = queryString.stringify({
     ...queryString.parse(location.search),
-    [field]: value,
+    [field]: JSON.stringify(value),
   });
   history.push(`?${query}`);
 }
@@ -124,7 +128,7 @@ function AssetDesignerPage({
   const variables = selection.variables
     ? selection.variables.map(variable => ({
         ...variable,
-        value: state[variable.id],
+        value: state.variables[variable.id],
       }))
     : []; // TODO: Overlay to selection
   const sideBarWidth = "18em";
@@ -194,7 +198,7 @@ function AssetDesignerPage({
             {map(variables, variable => (
               <VariableContainer key={variable.id}>
                 <VariableSelector
-                  selected={state.variables}
+                  selected={variables}
                   field={variable.id}
                   selectedVariable={variable.value}
                   query={variable.query}
@@ -353,18 +357,21 @@ function VariableSelector({
     const collection = mapToCollection(result);
 
     return (
-      <Select
-        width="100%"
-        options={
-          collection
-            ? [{ value: "", label: "" }].concat(collection.map(mapToOption))
-            : []
-        }
-        selected={selectedVariable}
-        onChange={({ target: { value } }) => {
-          onChange(field, value);
-        }}
-      />
+      <SelectorContainer>
+        <SelectorLabel>{field}</SelectorLabel>
+        <Select
+          width="100%"
+          options={
+            collection
+              ? [{ value: "", label: "" }].concat(collection.map(mapToOption))
+              : []
+          }
+          selected={selectedVariable}
+          onChange={({ target: { value } }) => {
+            onChange(field, value);
+          }}
+        />
+      </SelectorContainer>
     );
   });
 
