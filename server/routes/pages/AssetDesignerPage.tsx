@@ -193,7 +193,7 @@ function AssetDesignerPage({
             {map(variables, variable => (
               <VariableContainer key={variable.id}>
                 <VariableSelector
-                  selected={variables}
+                  variables={state.variables}
                   field={variable.id}
                   selectedVariable={variable.value}
                   query={variable.query}
@@ -310,7 +310,7 @@ function ComponentSelector({
 }
 
 interface VariableSelector {
-  selected: AssetDesignerPageProps["initialState"]["variables"];
+  variables: AssetDesignerPageProps["initialState"]["variables"];
   field: string;
   options: string[];
   selectedVariable: string;
@@ -324,7 +324,6 @@ interface VariableSelector {
 
 // TODO: This should handle labels as well
 function VariableSelector({
-  selected,
   field,
   selectedVariable,
   query,
@@ -332,6 +331,7 @@ function VariableSelector({
   mapToOption,
   validation,
   onChange,
+  variables,
 }) {
   if (!query) {
     return (
@@ -347,7 +347,7 @@ function VariableSelector({
   const ConnectedSelect = connect(
     "/graphql",
     query,
-    selected
+    variables
   )(result => {
     const collection = mapToCollection(result);
 

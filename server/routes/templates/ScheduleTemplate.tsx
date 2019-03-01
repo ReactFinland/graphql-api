@@ -104,13 +104,13 @@ const ConnectedScheduleTemplate = connect(
   "/graphql",
   scheduleQuery,
   {},
-  ({ selected }) => ({ ...selected })
-)(({ schedule, theme, selected, id }) => (
+  ({ conferenceId, day }) => ({ conferenceId, day })
+)(({ schedule, theme, conferenceId, id }) => (
   <ScheduleTemplate
     id={id}
     theme={theme}
     day={schedule && dayToFinnishLocale(schedule.day)}
-    conferenceId={selected.conferenceId}
+    conferenceId={conferenceId}
     intervals={get(schedule, "intervals")}
   />
 ));
