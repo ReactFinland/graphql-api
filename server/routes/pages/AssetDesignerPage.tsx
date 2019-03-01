@@ -3,6 +3,7 @@ import { Color, WidthProperty } from "csstype";
 import domToImage from "dom-to-image";
 import { saveAs } from "file-saver";
 import createHistory from "history/createBrowserHistory";
+import get from "lodash/get";
 import map from "lodash/map";
 import queryString from "query-string";
 import * as React from "react";
@@ -10,6 +11,7 @@ import { Theme } from "../../schema/Theme";
 import * as components from "../components";
 import connect from "../components/connect";
 import Select from "../components/Select";
+import { themesQuery } from "../queries";
 import * as templates from "../templates";
 
 interface AssetDesignerContainerProps {
@@ -103,7 +105,7 @@ function AssetDesignerPage({
     },
     variables: {},
   },
-  themes,
+  themes = [],
 }: AssetDesignerPageProps) {
   const [state, dispatch] = React.useReducer(
     assetDesignerReducer,
@@ -111,6 +113,10 @@ function AssetDesignerPage({
   );
   const { conferenceSeriesId, selectionId } = state.selected;
   const theme = themes.find(({ id }) => conferenceSeriesId === id);
+
+  if (!theme) {
+    return null;
+  }
 
   // TODO: Type
   const selection =
@@ -461,4 +467,11 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
   return null;
 }
 
-export default AssetDesignerPage;
+const ConnectedAssetDesignerPage = connect(
+  "/graphql",
+  themesQuery,
+  {},
+  ({ initialState }) => ({ ...get(initialState, "selected", {}) })
+)(AssetDesignerPage);
+
+export default ConnectedAssetDesignerPage;

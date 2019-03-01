@@ -6,9 +6,7 @@ import fromPairs from "lodash/fromPairs";
 import * as React from "react";
 import "reflect-metadata"; // Needed for introspecting classes
 import createInteractive from "./components/Interactive";
-import createConnection from "./create-connection";
 import AssetDesignerPage from "./pages/AssetDesignerPage";
-import * as queries from "./queries";
 import renderPage from "./render-page";
 import * as templates from "./templates";
 
@@ -20,7 +18,6 @@ const cache = getExpeditiousCache({
 
 async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
   const Interactive = createInteractive(projectRoot, scriptRoot, __dirname);
-  const connection = createConnection(schema);
 
   interface AssetQuery {
     selected: {
@@ -81,17 +78,6 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
     async (req, res) => {
       const { selected, variables }: AssetQuery = req.query;
 
-      // TODO: Better push this query to the frontend altogether (avoids complexity here)
-      // TODO: Redirect with query visible instead of defaulting?
-      const [err, connect] = await connection([queries.themesQuery], selected);
-
-      if (err) {
-        return res.status(400).send();
-      }
-
-      // TODO: Drop theme from here and handle <GlobalStyles /> inside asset designer
-      const { themes } = connect(queries.themesQuery);
-
       // Given we use the same page for serving different bundles,
       // each needs a unique identifier based on the query (differing part)
       res.status(200).send(
@@ -100,7 +86,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
           req.url,
           <Interactive
             relativeComponentPath="./pages/AssetDesignerPage"
-            props={{ themes, initialState: { selected, variables } }}
+            props={{ initialState: { selected, variables } }}
             component={AssetDesignerPage}
             componentHash={crypto
               .createHash("md5")
