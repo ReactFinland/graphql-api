@@ -1,8 +1,7 @@
 import { css, Global } from "@emotion/core";
 import * as React from "react";
 
-// TODO: Load fonts from theme
-function GlobalStyles({ theme }) {
+function GlobalStyles() {
   return (
     <Global
       styles={css`
@@ -36,7 +35,7 @@ function GlobalStyles({ theme }) {
 
         body {
           font-family: "Finlandica", sans-serif;
-          background: ${theme.backgroundColor};
+          background: "white";
         }
 
         h1,

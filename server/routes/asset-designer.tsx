@@ -41,7 +41,13 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
       const selectedComponent = templates[query.selectionId];
       const variables = getAdditionalQueryParameters(selectedComponent);
 
-      isvalid(query, {
+      // TODO: Generalize
+      const parsedQuery = {
+        selected: req.query.selected ? JSON.parse(req.query.selected) : {},
+        variables: req.query.variables ? JSON.parse(req.query.variables) : {},
+      };
+
+      isvalid(parsedQuery, {
         type: Object,
         unknownKeys: "remove", // allow/deny/remove
         schema: {
@@ -69,6 +75,17 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
         .then(query => {
           req.query = query;
 
+          // XXX: Solve by moving query to frontend
+          req.query = {
+            selected: {
+              ...req.query.selected,
+              // XXX
+              conferenceSeriesId: "react-finland",
+              conferenceId: "react-finland-2019",
+              // selectionId: "ThemeTemplate",
+            },
+          };
+
           next();
         })
         .catch(err => {
@@ -80,18 +97,15 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
     async (req, res) => {
       const { selected, variables }: AssetQuery = req.query;
 
+      // TODO: Better push this query to the frontend altogether (avoids complexity here)
       // TODO: Redirect with query visible instead of defaulting?
-      const [err, connect] = await connection(
-        [queries.themeQuery, queries.themesQuery],
-        selected
-      );
+      const [err, connect] = await connection([queries.themesQuery], selected);
 
       if (err) {
         return res.status(400).send();
       }
 
       // TODO: Drop theme from here and handle <GlobalStyles /> inside asset designer
-      const { theme } = connect(queries.themeQuery);
       const { themes } = connect(queries.themesQuery);
 
       // Given we use the same page for serving different bundles,
@@ -100,7 +114,6 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
         renderPage(
           "Asset designer",
           req.url,
-          theme,
           <Interactive
             relativeComponentPath="./pages/AssetDesignerPage"
             props={{ themes, initialState: { selected, variables } }}

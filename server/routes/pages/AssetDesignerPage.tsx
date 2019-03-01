@@ -289,10 +289,10 @@ function ComponentSelector({
               // Retain only conferenceSeriesId + replace selectionId.
               // Otherwise selection might be invalid.
               location.search = queryString.stringify({
-                selected: {
+                selected: JSON.stringify({
                   conferenceSeriesId: search.conferenceSeriesId,
                   selectionId: templateId,
-                },
+                }),
               });
             }}
           >
