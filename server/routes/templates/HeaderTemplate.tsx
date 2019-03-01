@@ -179,7 +179,7 @@ const ConnectedHeaderTemplate = connect(
   "/graphql",
   conferenceDaysQuery,
   {},
-  ({ selected }) => ({ ...selected })
+  ({ conferenceId }) => ({ conferenceId })
 )(HeaderTemplate);
 
 ConnectedHeaderTemplate.filename = "header";
