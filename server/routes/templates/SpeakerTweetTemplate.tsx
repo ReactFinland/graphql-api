@@ -186,7 +186,7 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
 }
   `,
   {},
-  ({ selected }) => ({ ...selected })
+  ({ conferenceId, contactName }) => ({ conferenceId, contactName })
 )(SpeakerTweetTemplate);
 
 ConnectedSpeakerTweetTemplate.filename = "speaker-tweet";
