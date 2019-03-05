@@ -10,7 +10,8 @@ interface BusinessCardContainerProps {
 }
 
 const BusinessCardTemplateContainer = styled.section`
-  width: 220mm; /* margin * 4 + width * 2 */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 ` as React.FC<BusinessCardContainerProps>;
 
 interface BusinessCardProps {
@@ -21,8 +22,8 @@ interface BusinessCardProps {
 }
 
 const BusinessCard = styled.section`
-  display: inline-block;
-  margin: 15mm;
+  /* TODO: How to avoid breaking a page inside a card properly when printing? */
+  margin: 7.5mm 5mm 7.5mm 5mm;
   padding: 5mm;
   width: ${({ width }: BusinessCardProps) => width};
   height: ${({ height }: BusinessCardProps) => height};
