@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
-import range from "lodash/range";
 import Markdown from "markdown-to-jsx";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
@@ -9,10 +8,9 @@ interface BusinessCardContainerProps {
   id: string;
 }
 
-const BusinessCardTemplateContainer = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-` as React.FC<BusinessCardContainerProps>;
+const BusinessCardTemplateContainer = styled.section`` as React.FC<
+  BusinessCardContainerProps
+>;
 
 interface BusinessCardProps {
   backgroundColor: Color;
@@ -22,19 +20,39 @@ interface BusinessCardProps {
 }
 
 const BusinessCard = styled.section`
-  /* TODO: How to avoid breaking a page inside a card properly when printing? */
-  margin: 7.5mm 5mm 7.5mm 5mm;
+  position: absolute;
+
   padding: 5mm;
   width: ${({ width }: BusinessCardProps) => width};
   height: ${({ height }: BusinessCardProps) => height};
   background-color: ${({ backgroundColor }: BusinessCardProps) =>
     backgroundColor};
   color: ${({ textColor }: BusinessCardProps) => textColor};
+
+  /* Animation */
+  perspective: 100vw;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition-duration: 500ms;
 ` as React.FC<BusinessCardProps>;
+
+const BusinessCardFront = styled(BusinessCard)`
+  &:hover {
+    transform: rotateY(180deg);
+  }
+`;
+const BusinessCardBack = styled(BusinessCard)`
+  transform: rotateY(-180deg);
+
+  &:hover {
+    transform: rotateY(0deg);
+  }
+`;
 
 interface BusinessCardTemplateProps {
   theme: Theme;
   id: string;
+  showFront: boolean;
   width: string;
   height: string;
   amount: number;
@@ -44,26 +62,31 @@ interface BusinessCardTemplateProps {
 function BusinessCardTemplate({
   id,
   theme,
+  showFront,
   width,
   height,
-  amount,
-  information,
+  information = "",
 }: BusinessCardTemplateProps) {
-  console.log(information);
+  console.log(showFront);
 
   return (
     <BusinessCardTemplateContainer id={id}>
-      {range(amount).map(key => (
-        <BusinessCard
-          key={key}
-          backgroundColor={theme.colors.background}
-          textColor={theme.colors.text}
-          width={width}
-          height={height}
-        >
-          <Markdown>{information.replace(/\r?\n/g, "<br />")}</Markdown>
-        </BusinessCard>
-      ))}
+      <BusinessCardFront
+        backgroundColor={theme.colors.background}
+        textColor={theme.colors.text}
+        width={width}
+        height={height}
+      >
+        <Markdown>{information.replace(/\r?\n/g, "<br />")}</Markdown>
+      </BusinessCardFront>
+      <BusinessCardBack
+        backgroundColor={theme.colors.background}
+        textColor={theme.colors.text}
+        width={width}
+        height={height}
+      >
+        <Markdown>{information.replace(/\r?\n/g, "<br />")}</Markdown>
+      </BusinessCardBack>
     </BusinessCardTemplateContainer>
   );
 }
@@ -71,6 +94,10 @@ function BusinessCardTemplate({
 BusinessCardTemplate.filename = "business-card";
 
 BusinessCardTemplate.variables = [
+  {
+    id: "showFront",
+    validation: { type: Boolean, default: true },
+  },
   {
     id: "width",
     validation: { type: String, default: "85mm" },
@@ -91,10 +118,6 @@ BusinessCardTemplate.variables = [
 Woo Corp. - CO123456789
 demo@localhost`,
     },
-  },
-  {
-    id: "amount",
-    validation: { type: Number, default: 20 },
   },
 ];
 
