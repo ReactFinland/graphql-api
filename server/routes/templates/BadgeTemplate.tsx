@@ -10,10 +10,6 @@ import Badge from "../components/Badge";
 // import complement from "polished/lib/color/complement";
 // import invert from "polished/lib/color/invert";
 
-interface BadgeTemplateProps {
-  theme: Theme;
-}
-
 const BadgeTemplateContainer = styled.section``;
 
 interface BadgeTemplateProps {

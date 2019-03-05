@@ -28,13 +28,13 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
     "/asset-designer",
     cache.withTtl("1 hour"),
     async (req, res, next) => {
-      const query = req.query;
+      const query: AssetQuery = req.query;
       const selectedComponent =
         templates[query.selectionId] || components[query.selectionId];
       const variables = getAdditionalQueryParameters(selectedComponent);
 
       const parsedQuery = {
-        ...req.query,
+        selectionId: req.query.selectionId,
         variables: req.query.variables ? JSON.parse(req.query.variables) : {},
       };
 
@@ -93,7 +93,11 @@ function getAdditionalQueryParameters(template) {
 
   return fromPairs(
     template.variables
-      .map(({ id, validation }) => (id && validation ? [id, validation] : null))
+      .map(({ id, validation }) =>
+        id && validation
+          ? [id, { type: validation.type, default: validation.default }]
+          : null
+      )
       .filter(Boolean)
   );
 }

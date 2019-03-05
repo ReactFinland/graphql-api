@@ -31,6 +31,10 @@ function GlobalStyles() {
 
         * {
           box-sizing: border-box;
+
+          /* Force accurate printing in Chrome */
+          /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-print-color-adjust */
+          -webkit-print-color-adjust: exact;
         }
 
         body {

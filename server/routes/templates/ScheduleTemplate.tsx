@@ -13,6 +13,7 @@ import { dayToFinnishLocale } from "../date-utils";
 import scheduleQuery from "../queries/scheduleQuery";
 import sponsorQuery from "../queries/sponsorQuery";
 interface SchedulePageContainerProps {
+  id: string;
   primaryColor: Color;
   secondaryColor: Color;
 }
@@ -32,7 +33,7 @@ const ScheduleTemplateContainer = styled.div`
   width: 28.8cm;
   height: 20.4cm;
   overflow: hidden;
-`;
+` as React.FC<SchedulePageContainerProps>;
 
 const ScheduleTemplateLogo = styled.img`
   position: relative;

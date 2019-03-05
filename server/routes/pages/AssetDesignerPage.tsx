@@ -21,7 +21,6 @@ interface AssetDesignerContainerProps {
 const AssetDesignerContainer = styled.article`
   display: grid;
   grid-template-columns: ${({ width }) => width} 1fr;
-  align-items: center;
 ` as React.FC<AssetDesignerContainerProps>;
 
 interface SidebarProps {
@@ -34,6 +33,10 @@ const Sidebar = styled.aside`
   height: 100vh;
   position: sticky;
   background-color: ${({ backgroundColor }) => backgroundColor};
+
+  @media print {
+    display: none;
+  }
 ` as React.FC<SidebarProps>;
 const SidebarHeader = styled.h2``;
 const SidebarItem = styled.div`
@@ -43,6 +46,7 @@ const SidebarItem = styled.div`
 const Main = styled.main`
   overflow: auto;
   margin: auto;
+  align-self: center;
 `;
 
 const ExportButton = styled.button``;
@@ -372,6 +376,9 @@ const SelectorLabel = styled.label`
 const SelectorInput = styled.input`
   width: 100%;
 `;
+const SelectorTextArea = styled.textarea`
+  width: 100%;
+`;
 const SelectorContainer = styled.div`
   display: grid;
   grid-template-columns: 0.75fr 1.25fr;
@@ -379,13 +386,42 @@ const SelectorContainer = styled.div`
 
 function VariableFields({ validation, selectedVariable, onChange, field }) {
   if (validation.type === String) {
+    // TODO: Use an enum here instead
+    if (validation.modifier === "long") {
+      return (
+        <SelectorContainer>
+          <SelectorLabel>{field}</SelectorLabel>
+          <SelectorTextArea
+            defaultValue={selectedVariable || validation.default}
+            onChange={({ target: { value } }) => {
+              onChange(field, value);
+            }}
+            rows={8}
+          />
+        </SelectorContainer>
+      );
+    }
+
     return (
       <SelectorContainer>
         <SelectorLabel>{field}</SelectorLabel>
         <SelectorInput
           type="text"
-          value={selectedVariable}
-          placeholder={validation.default}
+          defaultValue={selectedVariable || validation.default}
+          onChange={({ target: { value } }) => {
+            onChange(field, value);
+          }}
+        />
+      </SelectorContainer>
+    );
+  }
+  if (validation.type === Number) {
+    return (
+      <SelectorContainer>
+        <SelectorLabel>{field}</SelectorLabel>
+        <SelectorInput
+          type="number"
+          defaultValue={selectedVariable || validation.default}
           onChange={({ target: { value } }) => {
             onChange(field, value);
           }}
