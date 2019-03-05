@@ -78,7 +78,7 @@ function assetDesignerReducer(state: DesignerState, action) {
     case ActionTypes.UPDATE_VARIABLE:
       const newVariables = { ...state.variables, [field]: value };
 
-      updateQuery("variables", newVariables);
+      updateQuery("variables", JSON.stringify(newVariables));
 
       return { ...state, variables: newVariables };
     default:
@@ -90,7 +90,7 @@ function updateQuery(field: string, value: any) {
   const history = createHistory();
   const query = queryString.stringify({
     ...queryString.parse(location.search),
-    [field]: JSON.stringify(value),
+    [field]: value,
   });
   history.push(`?${query}`);
 }
