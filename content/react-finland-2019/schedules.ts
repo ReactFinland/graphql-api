@@ -302,6 +302,16 @@ const presentationDay2: Schedule = {
         },
       ],
     },
+    {
+      begin: "18:00",
+      end: "23:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Afterparty",
+        },
+      ],
+    },
   ],
 };
 
