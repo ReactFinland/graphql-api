@@ -14,7 +14,6 @@ export { default as lucaMatteis } from "./luca-matteis";
 export { default as maaretPyhajarvi } from "./maaret-pyhajarvi";
 export { default as manuelMatuzovic } from "./manuel-matuzovic";
 export { default as michelWeststrate } from "./michel-weststrate";
-export { default as mikeBerman } from "./mike-berman";
 export { default as monicaLent } from "./monica-lent";
 export { default as nikGraf } from "./nik-graf";
 export { default as rickHanlon } from "./rick-hanlon";

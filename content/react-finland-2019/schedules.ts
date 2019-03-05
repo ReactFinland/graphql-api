@@ -290,7 +290,7 @@ const presentationDay2: Schedule = {
       begin: "16:30",
       end: "17:30",
       title: "Universal React",
-      sessions: [talks.tomasKonrady, talks.tejasKumar, talks.mikeBerman],
+      sessions: [talks.tomasKonrady, talks.tejasKumar],
     },
     {
       begin: "17:30",
