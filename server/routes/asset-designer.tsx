@@ -34,6 +34,7 @@ async function routeAssetDesigner(router, schema, projectRoot, scriptRoot) {
       const variables = getAdditionalQueryParameters(selectedComponent);
 
       const parsedQuery = {
+        ...req.query,
         variables: req.query.variables ? JSON.parse(req.query.variables) : {},
       };
 
