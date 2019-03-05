@@ -13,40 +13,50 @@ const BusinessCardTemplateContainer = styled.section`` as React.FC<
 >;
 
 interface BusinessCardProps {
-  backgroundColor: Color;
-  textColor: Color;
   width: string;
   height: string;
 }
 
 const BusinessCard = styled.section`
-  position: absolute;
-
-  padding: 5mm;
   width: ${({ width }: BusinessCardProps) => width};
   height: ${({ height }: BusinessCardProps) => height};
-  background-color: ${({ backgroundColor }: BusinessCardProps) =>
-    backgroundColor};
-  color: ${({ textColor }: BusinessCardProps) => textColor};
 
   /* Animation */
-  perspective: 100vw;
-  backface-visibility: hidden;
+  perspective: 100%;
   transform-style: preserve-3d;
   transition-duration: 500ms;
+
+  &:hover {
+    &:nth-of-type(1) {
+      transform: rotateY(180deg);
+    }
+
+    &:nth-of-type(2) {
+      transform: rotateY(0deg);
+    }
+  }
 ` as React.FC<BusinessCardProps>;
 
-const BusinessCardFront = styled(BusinessCard)`
-  &:hover {
-    transform: rotateY(180deg);
-  }
-`;
-const BusinessCardBack = styled(BusinessCard)`
-  transform: rotateY(-180deg);
+interface BusinessCardCommonProps {
+  backgroundColor: Color;
+  textColor: Color;
+}
 
-  &:hover {
-    transform: rotateY(0deg);
-  }
+const BusinessCardCommon = styled.div`
+  position: absolute;
+  padding: 5mm;
+
+  width: 100%;
+  height: 100%;
+  background-color: ${({ backgroundColor }: BusinessCardCommonProps) =>
+    backgroundColor};
+  color: ${({ textColor }: BusinessCardCommonProps) => textColor};
+  backface-visibility: hidden;
+` as React.FC<BusinessCardCommonProps>;
+
+const BusinessCardFront = styled(BusinessCardCommon)``;
+const BusinessCardBack = styled(BusinessCardCommon)`
+  transform: rotateY(-180deg);
 `;
 
 interface BusinessCardTemplateProps {
@@ -56,7 +66,8 @@ interface BusinessCardTemplateProps {
   width: string;
   height: string;
   amount: number;
-  information: string;
+  front: string;
+  back: string;
 }
 
 function BusinessCardTemplate({
@@ -65,28 +76,28 @@ function BusinessCardTemplate({
   showFront,
   width,
   height,
-  information = "",
+  front = "",
+  back = "",
 }: BusinessCardTemplateProps) {
-  console.log(showFront);
+  const frontText = front.replace(/\r?\n/g, "<br />");
+  const backText = back.replace(/\r?\n/g, "<br />");
 
   return (
     <BusinessCardTemplateContainer id={id}>
-      <BusinessCardFront
-        backgroundColor={theme.colors.background}
-        textColor={theme.colors.text}
-        width={width}
-        height={height}
-      >
-        <Markdown>{information.replace(/\r?\n/g, "<br />")}</Markdown>
-      </BusinessCardFront>
-      <BusinessCardBack
-        backgroundColor={theme.colors.background}
-        textColor={theme.colors.text}
-        width={width}
-        height={height}
-      >
-        <Markdown>{information.replace(/\r?\n/g, "<br />")}</Markdown>
-      </BusinessCardBack>
+      <BusinessCard width={width} height={height}>
+        <BusinessCardFront
+          backgroundColor={theme.colors.background}
+          textColor={theme.colors.text}
+        >
+          <Markdown>{showFront ? frontText : backText}</Markdown>
+        </BusinessCardFront>
+        <BusinessCardBack
+          backgroundColor={theme.colors.background}
+          textColor={theme.colors.text}
+        >
+          <Markdown>{showFront ? backText : frontText}</Markdown>
+        </BusinessCardBack>
+      </BusinessCard>
     </BusinessCardTemplateContainer>
   );
 }
@@ -107,7 +118,7 @@ BusinessCardTemplate.variables = [
     validation: { type: String, default: "55mm" },
   },
   {
-    id: "information",
+    id: "front",
     // TODO: Use proper TS enum for modifiers
     validation: {
       type: String,
@@ -117,6 +128,15 @@ BusinessCardTemplate.variables = [
 
 Woo Corp. - CO123456789
 demo@localhost`,
+    },
+  },
+  {
+    id: "back",
+    // TODO: Use proper TS enum for modifiers
+    validation: {
+      type: String,
+      modifier: "long",
+      default: `Martial Artist`,
     },
   },
 ];
