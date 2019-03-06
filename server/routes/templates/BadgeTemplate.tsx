@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import chunk from "lodash/chunk";
-// import flatten from "lodash/flatten";
+import flatten from "lodash/flatten";
 import map from "lodash/map";
 import * as React from "react";
 import { Attendee, AttendeeType } from "../../schema/Attendee";
@@ -126,16 +126,16 @@ const PageBadgeContainer = styled.div`
 `;
 
 function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
-  // const pairs = chunk(tickets, 2);
-  // const reverse = flatten(pairs.map(pair => [pair[1], pair[0]]));
+  const pairs = chunk(tickets, 2);
+  const reverse = flatten(pairs.map(pair => [pair[1], pair[0]]));
 
   // TODO: Implement separate layouts for front/back. Now we just
   // use the same.
   return (
     <>
       <PageSheet>
-        {tickets.map((attendee: Attendee, idx) => (
-          <PageBadgeContainer key={"front-" + idx}>
+        {tickets.map((attendee: Attendee, i) => (
+          <PageBadgeContainer key={`front-${i}`}>
             <Badge
               attendee={attendee}
               defaultColor={defaultColor}
@@ -145,11 +145,18 @@ function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
           </PageBadgeContainer>
         ))}
       </PageSheet>
-      {/*<PageSheet>
-        {reverse.map((attendee, idx) => (
-          <Badge attendee={attendee} defaultColor={defaultColor} logo={logo} key={"back-" + idx} />
+      <PageSheet>
+        {reverse.map((attendee, i) => (
+          <PageBadgeContainer key={`back-${i}`}>
+            <Badge
+              attendee={attendee}
+              defaultColor={defaultColor}
+              logo={logo}
+              texture={texture}
+            />
+          </PageBadgeContainer>
         ))}
-        </PageSheet>*/}
+      </PageSheet>
     </>
   );
 }
