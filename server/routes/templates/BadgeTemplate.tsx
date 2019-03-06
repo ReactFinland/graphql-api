@@ -59,7 +59,7 @@ function BadgeTemplate({
         defaultColor={theme.colors.primary}
         logo={theme.logos.white.withText.url}
         attendee={attendees[0]}
-        texture="/media/assets/wave.svg"
+        texture={theme.texture.url}
       />
     </BadgeTemplateContainer>
   );

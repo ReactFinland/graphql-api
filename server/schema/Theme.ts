@@ -44,6 +44,9 @@ export class Theme {
   @Field(_ => ID)
   public id!: string;
 
+  @Field(_ => Image)
+  public texture!: Image;
+
   @Field(_ => Colors)
   public colors!: Colors;
 
