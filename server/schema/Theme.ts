@@ -1,5 +1,4 @@
-import { Arg, Field, ID, ObjectType, Query, Resolver } from "type-graphql";
-import allSeries from "./conferenceSeries";
+import { Field, ID, ObjectType } from "type-graphql";
 import { Image } from "./Image";
 
 @ObjectType()
@@ -52,23 +51,4 @@ export class Theme {
 
   @Field(_ => Logos)
   public logos!: Logos;
-}
-
-@Resolver(_ => Theme)
-export class ThemeResolver {
-  @Query(_ => [Theme])
-  public themes() {
-    return Object.values(allSeries).map(({ theme }) => theme);
-  }
-
-  @Query(_ => Theme)
-  public theme(@Arg("conferenceId", _ => ID) conferenceId: string) {
-    const series = allSeries[conferenceId];
-
-    if (series) {
-      return series.theme;
-    }
-
-    throw new Error("Conference id did not match series");
-  }
 }

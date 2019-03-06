@@ -1,14 +1,10 @@
 import { Url } from "@okgrow/graphql-scalars";
 import { buildSchema, registerEnumType } from "type-graphql";
 import { AttendeeType } from "./Attendee";
-import { ConferenceResolver } from "./Conference";
-import { ContactResolver, ContactType } from "./Contact";
-import { IntervalResolver } from "./Interval";
+import { ContactType } from "./Contact";
+import * as resolvers from "./resolvers";
 import { UrlScalar } from "./scalars";
-import { ScheduleResolver } from "./Schedule";
-import { SeriesResolver } from "./Series";
-import { SessionResolver, SessionType } from "./Session";
-import { ThemeResolver } from "./Theme";
+import { SessionType } from "./Session";
 
 registerEnumType(AttendeeType, {
   name: "AttendeeType",
@@ -27,15 +23,7 @@ registerEnumType(SessionType, {
 
 export default async function generateSchema() {
   return await buildSchema({
-    resolvers: [
-      ConferenceResolver,
-      ContactResolver,
-      IntervalResolver,
-      ScheduleResolver,
-      SeriesResolver,
-      SessionResolver,
-      ThemeResolver,
-    ],
+    resolvers: Object.values(resolvers),
     scalarsMap: [{ type: Url, scalar: UrlScalar }],
     // TODO: Emitting the schema could be useful for query checks.
     // emitSchemaFile: true, // use path for a specific location

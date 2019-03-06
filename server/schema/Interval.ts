@@ -1,4 +1,4 @@
-import { Field, FieldResolver, ObjectType, Resolver, Root } from "type-graphql";
+import { Field, ObjectType } from "type-graphql";
 import { Session } from "./Session";
 
 @ObjectType()
@@ -14,15 +14,4 @@ export class Interval {
 
   @Field(_ => [Session])
   public sessions!: Session[];
-}
-
-@Resolver(_ => Interval)
-export class IntervalResolver {
-  @FieldResolver(_ => [Session])
-  public sessions(@Root() interval: Interval) {
-    return interval.sessions.map(session => ({
-      ...session,
-      interval,
-    }));
-  }
 }

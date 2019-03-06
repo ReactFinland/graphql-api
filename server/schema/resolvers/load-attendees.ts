@@ -6,8 +6,8 @@ import map from "lodash/map";
 import mapValues from "lodash/mapValues";
 import trimStart from "lodash/trimStart";
 import upperFirst from "lodash/upperFirst";
-import { Attendee, AttendeeType } from "./Attendee";
-import { Conference } from "./Conference";
+import { Attendee, AttendeeType } from "../Attendee";
+import { Conference } from "../Conference";
 
 function loadAttendees(conference: Conference, csvPath: string) {
   if (fs.statSync(csvPath)) {
