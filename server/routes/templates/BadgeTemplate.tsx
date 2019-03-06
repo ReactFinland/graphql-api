@@ -2,11 +2,13 @@ import styled from "@emotion/styled";
 import { Color } from "csstype";
 import chunk from "lodash/chunk";
 import flatten from "lodash/flatten";
+import get from "lodash/get";
 import map from "lodash/map";
 import * as React from "react";
 import { Attendee, AttendeeType } from "../../schema/Attendee";
 import { Theme } from "../../schema/Theme";
 import Badge from "../components/Badge";
+import connect from "../components/connect";
 
 const BadgeTemplateContainer = styled.section``;
 
@@ -91,9 +93,63 @@ function BadgeTemplate({
   );
 }
 
-BadgeTemplate.filename = "badge";
+const ConnectedBadgeTemplate = connect(
+  "/graphql",
+  `query AttendeeQuery($conferenceId: ID!) {
+  conference(id: $conferenceId) {
+    attendees {
+      name
+      company
+      type
+      twitter
+    }
+  }
+}`,
+  {},
+  ({ conferenceId }) => ({ conferenceId })
+)(
+  ({
+    conference,
+    id,
+    theme,
+    emptyAttendees,
+    emptyOrganizers,
+    emptySpeakers,
+    emptySponsors,
+  }) => (
+    <BadgeTemplate
+      attendees={get(conference, "attendees")}
+      id={id}
+      theme={theme}
+      emptyAttendees={emptyAttendees}
+      emptyOrganizers={emptyOrganizers}
+      emptySpeakers={emptySpeakers}
+      emptySponsors={emptySponsors}
+    />
+  )
+);
 
-BadgeTemplate.variables = [
+ConnectedBadgeTemplate.filename = "badge";
+
+ConnectedBadgeTemplate.variables = [
+  {
+    id: "conferenceId",
+    query: `query ConferenceIdQuery {  
+  allConferences {
+    id
+    name
+  }
+}`,
+    mapToCollection({ allConferences }) {
+      return allConferences;
+    },
+    mapToOption({ id, name }) {
+      return {
+        value: id,
+        label: name,
+      };
+    },
+  },
   // TODO
   /*{
     id: 'attendees',
@@ -240,4 +296,4 @@ function getEmptyData(type: AttendeeType): Attendee {
 
 // TODO: Connect to ticket API
 
-export default BadgeTemplate;
+export default ConnectedBadgeTemplate;
