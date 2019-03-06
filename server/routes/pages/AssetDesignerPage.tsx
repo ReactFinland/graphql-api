@@ -4,6 +4,7 @@ import domToImage from "dom-to-image";
 import { saveAs } from "file-saver";
 import createHistory from "history/createBrowserHistory";
 import fromPairs from "lodash/fromPairs";
+import get from "lodash/get";
 import map from "lodash/map";
 import set from "lodash/set";
 import queryString from "query-string";
@@ -12,6 +13,7 @@ import { Theme } from "../../schema/Theme";
 import * as components from "../components";
 import connect from "../components/connect";
 import Select from "../components/Select";
+import VariableSelector from "../components/VariableSelector";
 import { themesQuery } from "../queries";
 import * as templates from "../templates";
 
@@ -130,7 +132,7 @@ function AssetDesignerPage({
         themeId: "",
         variables: fromPairs(
           selection.variables.map(({ id, validation }) => {
-            return [id, validation.default];
+            return [id, get(validation, "default")];
           })
         ),
       };
@@ -217,7 +219,8 @@ function AssetDesignerPage({
                   variables={state.variables}
                   field={variable.id}
                   selectedVariable={
-                    variable.value || variable.validation.default
+                    get(variable, "value") ||
+                    get(variable, "validation.default")
                   }
                   query={variable.query}
                   mapToCollection={variable.mapToCollection}
@@ -324,198 +327,6 @@ function ComponentSelector({
       )}
     </ComponentSelectorContainer>
   );
-}
-
-interface VariableSelector {
-  variables: DesignerState["variables"];
-  field: string;
-  options: string[];
-  selectedVariable: string;
-  query: string;
-  // TODO: Use the same type as in connect
-  mapToCollection: (result: any) => any;
-  mapToOption: (result: any) => { value: any; label: any };
-  validation: { type: any; default: string };
-  onChange: (field: string, value: string) => void;
-}
-
-// TODO: This should handle labels as well
-function VariableSelector({
-  field,
-  selectedVariable,
-  query,
-  mapToCollection,
-  mapToOption,
-  validation,
-  onChange,
-  variables,
-}) {
-  if (!query) {
-    return (
-      <VariableFields
-        field={field}
-        validation={validation}
-        selectedVariable={selectedVariable}
-        onChange={onChange}
-      />
-    );
-  }
-
-  const ConnectedSelect = connect(
-    "/graphql",
-    query,
-    variables
-  )(result => {
-    const collection = mapToCollection(result);
-
-    return (
-      <SelectorContainer>
-        <SelectorLabel>{field}</SelectorLabel>
-        <Select
-          width="100%"
-          options={
-            collection
-              ? [{ value: "", label: "" }].concat(collection.map(mapToOption))
-              : []
-          }
-          selected={selectedVariable}
-          onChange={({ target: { value } }) => {
-            onChange(field, value);
-          }}
-        />
-      </SelectorContainer>
-    );
-  });
-
-  return <ConnectedSelect />;
-}
-
-const SelectorLabel = styled.label`
-  margin-right: 1em;
-`;
-const SelectorInput = styled.input`
-  width: 100%;
-`;
-const SelectorTextArea = styled.textarea`
-  width: 100%;
-`;
-const SelectorContainer = styled.div`
-  display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
-`;
-
-function VariableFields({ validation, selectedVariable, onChange, field }) {
-  if (validation.type === String) {
-    // TODO: Use an enum here instead
-    if (validation.modifier === "long") {
-      return (
-        <SelectorContainer>
-          <SelectorLabel>{field}</SelectorLabel>
-          <SelectorTextArea
-            defaultValue={selectedVariable}
-            onChange={({ target: { value } }) => {
-              onChange(field, value);
-            }}
-            rows={8}
-          />
-        </SelectorContainer>
-      );
-    }
-
-    return (
-      <SelectorContainer>
-        <SelectorLabel>{field}</SelectorLabel>
-        <SelectorInput
-          type="text"
-          defaultValue={selectedVariable}
-          onChange={({ target: { value } }) => {
-            onChange(field, value);
-          }}
-        />
-      </SelectorContainer>
-    );
-  }
-  if (validation.type === Number) {
-    return (
-      <SelectorContainer>
-        <SelectorLabel>{field}</SelectorLabel>
-        <SelectorInput
-          type="number"
-          defaultValue={selectedVariable}
-          onChange={({ target: { value } }) => {
-            onChange(field, value);
-          }}
-        />
-      </SelectorContainer>
-    );
-  }
-  if (validation.type === Boolean) {
-    return (
-      <SelectorContainer>
-        <SelectorLabel>{field}</SelectorLabel>
-        <SelectorInput
-          type="checkbox"
-          checked={selectedVariable}
-          onChange={({ target: { checked } }) => {
-            onChange(field, checked);
-          }}
-        />
-      </SelectorContainer>
-    );
-  }
-  if (validation.type === "enum") {
-    const values = validation.values;
-
-    return (
-      <SelectorContainer>
-        <SelectorLabel>{field}</SelectorLabel>
-        <Select
-          width="100%"
-          options={
-            values
-              ? [{ value: "", label: "" }].concat(
-                  map(values, (label, value) => ({
-                    value,
-                    label,
-                  }))
-                )
-              : []
-          }
-          selected={selectedVariable}
-          onChange={({ target: { value } }) => {
-            onChange(field, value);
-          }}
-        />
-      </SelectorContainer>
-    );
-  }
-
-  const fields = validation.type._fields;
-
-  if (fields) {
-    const validationDefaults = validation.default;
-
-    return (
-      <>
-        {map(fields, ({ type, values }, id) => (
-          <VariableFields
-            key={id}
-            validation={{
-              id,
-              type,
-              values,
-            }}
-            selectedVariable={validationDefaults[id] || selectedVariable}
-            onChange={onChange}
-            field={`${field}.${id}`}
-          />
-        ))}
-      </>
-    );
-  }
-
-  console.error(`Type ${validation.type} hasn't been implemented yet`);
-  return null;
 }
 
 const ConnectedAssetDesignerPage = connect(
