@@ -1,63 +1,16 @@
 import styled from "@emotion/styled";
-import { Color } from "csstype";
 import Markdown from "markdown-to-jsx";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
+import BusinessCard from "../components/BusinessCard";
 
-interface BusinessCardContainerProps {
+interface BusinessCardTemplateContainerProps {
   id: string;
 }
 
 const BusinessCardTemplateContainer = styled.section`` as React.FC<
-  BusinessCardContainerProps
+  BusinessCardTemplateContainerProps
 >;
-
-interface BusinessCardProps {
-  width: string;
-  height: string;
-}
-
-const BusinessCard = styled.section`
-  width: ${({ width }: BusinessCardProps) => width};
-  height: ${({ height }: BusinessCardProps) => height};
-
-  /* Animation */
-  perspective: 100%;
-  transform-style: preserve-3d;
-  transition-duration: 500ms;
-
-  &:hover {
-    &:nth-of-type(1) {
-      transform: rotateY(180deg);
-    }
-
-    &:nth-of-type(2) {
-      transform: rotateY(0deg);
-    }
-  }
-` as React.FC<BusinessCardProps>;
-
-interface BusinessCardCommonProps {
-  backgroundColor: Color;
-  textColor: Color;
-}
-
-const BusinessCardCommon = styled.div`
-  position: absolute;
-  padding: 5mm;
-
-  width: 100%;
-  height: 100%;
-  background-color: ${({ backgroundColor }: BusinessCardCommonProps) =>
-    backgroundColor};
-  color: ${({ textColor }: BusinessCardCommonProps) => textColor};
-  backface-visibility: hidden;
-` as React.FC<BusinessCardCommonProps>;
-
-const BusinessCardFront = styled(BusinessCardCommon)``;
-const BusinessCardBack = styled(BusinessCardCommon)`
-  transform: rotateY(-180deg);
-`;
 
 interface BusinessCardTemplateProps {
   theme: Theme;
@@ -84,20 +37,20 @@ function BusinessCardTemplate({
 
   return (
     <BusinessCardTemplateContainer id={id}>
-      <BusinessCard width={width} height={height}>
-        <BusinessCardFront
+      <BusinessCard.Container width={width} height={height}>
+        <BusinessCard.Front
           backgroundColor={theme.colors.background}
           textColor={theme.colors.text}
         >
           <Markdown>{showFront ? frontText : backText}</Markdown>
-        </BusinessCardFront>
-        <BusinessCardBack
+        </BusinessCard.Front>
+        <BusinessCard.Back
           backgroundColor={theme.colors.background}
           textColor={theme.colors.text}
         >
           <Markdown>{showFront ? backText : frontText}</Markdown>
-        </BusinessCardBack>
-      </BusinessCard>
+        </BusinessCard.Back>
+      </BusinessCard.Container>
     </BusinessCardTemplateContainer>
   );
 }
