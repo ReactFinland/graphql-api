@@ -131,7 +131,7 @@ function AssetDesignerPage({
         selectionId,
         themeId: "",
         variables: fromPairs(
-          selection.variables.map(({ id, validation }) => {
+          map(selection.variables, ({ id, validation }) => {
             return [id, get(validation, "default")];
           })
         ),
@@ -208,7 +208,7 @@ function AssetDesignerSidebar({
 }: AssetDesignerSidebarProps) {
   const selectionVariables = selection.variables;
   const variableOptions = selectionVariables
-    ? selectionVariables.map(variable => ({
+    ? map(selectionVariables, variable => ({
         ...variable,
         value: variables[variable.id],
       }))
@@ -304,7 +304,7 @@ function ThemeSelector({
     <Select
       options={
         themes
-          ? themes.map(theme => ({
+          ? map(themes, theme => ({
               value: theme.id,
               label: theme.id,
             }))
@@ -337,7 +337,7 @@ function ComponentSelector({
 }: ComponentSelectorProps) {
   return (
     <ComponentSelectorContainer>
-      {templates.map(templateId =>
+      {map(templates, templateId =>
         templateId === selectedTemplate ? (
           <ComponentSelectorSelectedOption key={templateId}>
             {templateId}
