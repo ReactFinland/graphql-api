@@ -88,7 +88,10 @@ BadgeTemplate.variables = [
       default: defaultAttendees
     }
   }*/
-  {
+  // TODO: Figure out how to model this case.
+  // Ideally this would be abstracted further so it's
+  // not worth solving yet.
+  /*{
     id: "emptyAmounts",
     validation: {
       type: Object,
@@ -99,7 +102,7 @@ BadgeTemplate.variables = [
         sponsors: 0,
       },
     },
-  },
+  },*/
 ];
 
 interface PageProps {
