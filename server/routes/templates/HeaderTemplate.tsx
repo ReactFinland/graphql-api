@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
-import get from "lodash/get";
 import map from "lodash/map";
 import * as React from "react";
 import { Conference } from "../../schema/Conference";
@@ -15,18 +14,19 @@ interface HeaderContainerProps {
   primaryColor: Color;
   secondaryColor: Color;
   useTwitterHeader: boolean;
+  texture: string;
 }
 
-// TODO: Move texture to the theme API
 const HeaderPageContainer = styled.div`
   background-image: ${({
     primaryColor,
     secondaryColor,
+    texture,
   }: HeaderContainerProps) => `linear-gradient(
       ${primaryColor},
       ${hexToRgba(secondaryColor, 0.79)}
     ),
-    url("/media/assets/wave.svg")`};
+    url("${texture}")`};
   background-size: cover;
   position: relative;
   width: ${({ useTwitterHeader }: HeaderContainerProps) =>
@@ -104,26 +104,22 @@ const HeaderCoupon = styled.h3`
 
 interface HeaderTemplateProps {
   conference?: Conference;
-  theme?: Theme;
+  theme: Theme;
   id: string;
-  selected: {
-    coupon?: string;
-    discountPercentage?: string;
-    useTwitterHeader: boolean;
-    showTwitterSafeArea: boolean;
-  };
+  coupon?: string;
+  discountPercentage?: string;
+  useTwitterHeader: boolean;
+  showTwitterSafeArea: boolean;
 }
 
 function HeaderTemplate({
   conference,
   theme,
   id,
-  selected: {
-    coupon,
-    discountPercentage,
-    useTwitterHeader,
-    showTwitterSafeArea,
-  },
+  coupon,
+  discountPercentage,
+  useTwitterHeader,
+  showTwitterSafeArea,
 }: HeaderTemplateProps) {
   const { locations, schedules, slogan } = conference || {
     locations: [],
@@ -144,14 +140,15 @@ function HeaderTemplate({
   return (
     <HeaderPageContainer
       id={id}
-      primaryColor={get(theme, "colors.primary")}
-      secondaryColor={get(theme, "colors.secondary")}
+      primaryColor={theme.colors.primary}
+      secondaryColor={theme.colors.secondary}
       useTwitterHeader={useTwitterHeader}
+      texture={theme.texture.url}
     >
       {showTwitterSafeArea && <TwitterOverlay />}
       <PrimaryRow useTwitterHeader={useTwitterHeader}>
         <HeaderLogo
-          src={get(theme, "logos.white.withText.url")}
+          src={theme.logos.white.withText.url}
           useTwitterHeader={useTwitterHeader}
         />
         <HeaderInfoContainer>
@@ -179,7 +176,7 @@ const ConnectedHeaderTemplate = connect(
   "/graphql",
   conferenceDaysQuery,
   {},
-  ({ selected }) => ({ ...selected })
+  ({ conferenceId }) => ({ conferenceId })
 )(HeaderTemplate);
 
 ConnectedHeaderTemplate.filename = "header";

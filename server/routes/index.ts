@@ -23,9 +23,9 @@ async function createRouter() {
   router.use(cors());
   router.use(redirectToHTTPS([/localhost:(\d{4})/]));
 
-  routeAssetDesigner(router, schema, projectRoot, scriptPath);
+  routeAssetDesigner(router, projectRoot, scriptPath);
   routeCalendar(router);
-  routeGraphQL(router, schema, mediaUrl);
+  routeGraphQL(router, schema, projectRoot, mediaUrl);
   routeMedia(router, mediaUrl, mediaPath);
   routePing(router);
   router.use("/scripts", express.static(scriptPath));

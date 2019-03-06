@@ -1,6 +1,9 @@
 import { Url } from "@okgrow/graphql-scalars";
+import kebabCase from "just-kebab-case";
+import * as path from "path";
 import {
   Arg,
+  Ctx,
   Field,
   FieldResolver,
   ID,
@@ -10,13 +13,17 @@ import {
   Root,
 } from "type-graphql";
 import conferences from "../conferences";
+import { Attendee } from "./Attendee";
 import series from "./conferenceSeries";
 import { Contact, getSessionSpeakers } from "./Contact";
+import { IContext } from "./Context";
+import loadAttendees from "./load-attendees";
 import { Location } from "./Location";
 import { UrlScalar } from "./scalars";
 import { Schedule } from "./Schedule";
 import { Series } from "./Series";
 import { Session } from "./Session";
+
 @ObjectType()
 export class Conference {
   @Field(_ => ID)
@@ -72,6 +79,9 @@ export class Conference {
 
   @Field(_ => [Session])
   public workshops!: Session[];
+
+  @Field(_ => [Attendee])
+  public attendees?: Attendee[];
 }
 
 @Resolver(_ => Conference)
@@ -104,6 +114,19 @@ export class ConferenceResolver {
   @FieldResolver(_ => [Contact])
   public speakers(@Root() conference: Conference) {
     return getSessionSpeakers(conference, conference.talks);
+  }
+
+  // TODO: Resolve against CSV based on a convention
+  @FieldResolver(_ => [Attendee])
+  public attendees(@Root() conference: Conference, @Ctx() ctx: IContext) {
+    return loadAttendees(
+      conference,
+      `${path.join(
+        ctx.projectRoot,
+        "attendees",
+        kebabCase(conference.name)
+      )}.csv`
+    );
   }
 }
 

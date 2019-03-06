@@ -13,26 +13,29 @@ import { dayToFinnishLocale } from "../date-utils";
 import scheduleQuery from "../queries/scheduleQuery";
 import sponsorQuery from "../queries/sponsorQuery";
 interface SchedulePageContainerProps {
+  id: string;
   primaryColor: Color;
   secondaryColor: Color;
+  texture: string;
 }
 
 const ScheduleTemplateContainer = styled.div`
   background-image: ${({
     primaryColor,
     secondaryColor,
+    texture,
   }: SchedulePageContainerProps) => `linear-gradient(
       ${primaryColor},
       ${desaturate(0.8, hexToRgba(secondaryColor, 0.79))}
     ),
-    url("/media/assets/wave.svg")`};
+    url("${texture}")`};
   background-size: cover;
   position: relative;
   padding: 0;
   width: 28.8cm;
   height: 20.4cm;
   overflow: hidden;
-`;
+` as React.FC<SchedulePageContainerProps>;
 
 const ScheduleTemplateLogo = styled.img`
   position: relative;
@@ -87,6 +90,7 @@ function ScheduleTemplate({
       id={id}
       primaryColor={theme.colors.primary}
       secondaryColor={theme.colors.secondary}
+      texture={theme.texture.url}
     >
       <ScheduleTemplateLogo src={theme.logos.white.withText.url} />
       <ScheduleTemplateHeader>
@@ -104,13 +108,13 @@ const ConnectedScheduleTemplate = connect(
   "/graphql",
   scheduleQuery,
   {},
-  ({ selected }) => ({ ...selected })
-)(({ schedule, theme, selected, id }) => (
+  ({ conferenceId, day }) => ({ conferenceId, day })
+)(({ schedule, theme, conferenceId, id }) => (
   <ScheduleTemplate
     id={id}
     theme={theme}
     day={schedule && dayToFinnishLocale(schedule.day)}
-    conferenceId={selected.conferenceId}
+    conferenceId={conferenceId}
     intervals={get(schedule, "intervals")}
   />
 ));

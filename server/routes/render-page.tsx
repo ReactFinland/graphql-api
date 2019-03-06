@@ -2,20 +2,14 @@ import trimEnd from "lodash/trimEnd";
 import process from "process";
 import * as React from "react";
 import { renderToString } from "react-dom/server";
-import { Theme } from "../schema/Theme";
 import GlobalStyles from "./components/GlobalStyles";
 
-function renderPage(
-  title: string,
-  baseUrl: string,
-  theme: Theme,
-  page: JSX.Element
-) {
+function renderPage(title: string, baseUrl: string, page: JSX.Element) {
   return renderMarkup(
     title,
     renderToString(
       <>
-        <GlobalStyles theme={theme} />
+        <GlobalStyles />
         {page}
       </>
     ),

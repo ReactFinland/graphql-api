@@ -16,17 +16,19 @@ const TweetTemplateContainer = styled.div``;
 interface TweetPageContainerProps {
   primaryColor: Color;
   secondaryColor: Color;
+  texture: string;
 }
 
 const TweetPageContainer = styled.div`
   background-image: ${({
     primaryColor,
     secondaryColor,
+    texture,
   }: TweetPageContainerProps) => `linear-gradient(
       ${primaryColor},
       ${hexToRgba(secondaryColor, 0.79)}
     ),
-    url("/media/assets/wave.svg")`};
+    url("${texture}")`};
   background-size: cover;
   position: relative;
   width: 880px;
@@ -129,6 +131,7 @@ function SpeakerTweetTemplate({
         id={id}
         primaryColor={theme.colors.primary}
         secondaryColor={theme.colors.secondary}
+        texture={theme.texture.url}
       >
         <TweetInfoContainer>
           <TweetRow>
@@ -186,7 +189,7 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
 }
   `,
   {},
-  ({ selected }) => ({ ...selected })
+  ({ conferenceId, contactName }) => ({ conferenceId, contactName })
 )(SpeakerTweetTemplate);
 
 ConnectedSpeakerTweetTemplate.filename = "speaker-tweet";

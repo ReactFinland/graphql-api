@@ -8,7 +8,6 @@ import {
   ID,
   ObjectType,
   Query,
-  registerEnumType,
   Resolver,
   Root,
 } from "type-graphql";
@@ -30,11 +29,6 @@ export enum ContactType {
   WORKSHOP_HOST,
   ORGANIZER,
 }
-
-registerEnumType(ContactType, {
-  name: "ContactType",
-  description: "Type of the contact",
-});
 
 @ObjectType()
 export class Contact {

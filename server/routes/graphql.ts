@@ -1,7 +1,7 @@
 import graphql from "express-graphql";
 import process from "process";
 
-function routeGraphQL(router, schema, mediaUrl) {
+function routeGraphQL(router, schema, projectRoot, mediaUrl) {
   router.all(
     "/graphql",
     (req, res, next) => {
@@ -20,6 +20,7 @@ function routeGraphQL(router, schema, mediaUrl) {
         context: {
           hostname,
           mediaUrl: `${hostname}${mediaUrl}`,
+          projectRoot,
         },
       };
     })

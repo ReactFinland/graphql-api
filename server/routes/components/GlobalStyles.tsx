@@ -1,8 +1,7 @@
 import { css, Global } from "@emotion/core";
 import * as React from "react";
 
-// TODO: Load fonts from theme
-function GlobalStyles({ theme }) {
+function GlobalStyles() {
   return (
     <Global
       styles={css`
@@ -32,11 +31,15 @@ function GlobalStyles({ theme }) {
 
         * {
           box-sizing: border-box;
+
+          /* Force accurate printing in Chrome */
+          /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-print-color-adjust */
+          -webkit-print-color-adjust: exact;
         }
 
         body {
           font-family: "Finlandica", sans-serif;
-          background: ${theme.backgroundColor};
+          background: "white";
         }
 
         h1,

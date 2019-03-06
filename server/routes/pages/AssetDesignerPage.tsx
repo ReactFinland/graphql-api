@@ -3,12 +3,18 @@ import { Color, WidthProperty } from "csstype";
 import domToImage from "dom-to-image";
 import { saveAs } from "file-saver";
 import createHistory from "history/createBrowserHistory";
+import fromPairs from "lodash/fromPairs";
+import get from "lodash/get";
 import map from "lodash/map";
+import set from "lodash/set";
 import queryString from "query-string";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
+import * as components from "../components";
 import connect from "../components/connect";
 import Select from "../components/Select";
+import VariableSelector from "../components/VariableSelector";
+import { themesQuery } from "../queries";
 import * as templates from "../templates";
 
 interface AssetDesignerContainerProps {
@@ -18,7 +24,11 @@ interface AssetDesignerContainerProps {
 const AssetDesignerContainer = styled.article`
   display: grid;
   grid-template-columns: ${({ width }) => width} 1fr;
-  align-items: center;
+
+  @media print {
+    display: auto;
+    grid-template-columns: auto;
+  }
 ` as React.FC<AssetDesignerContainerProps>;
 
 interface SidebarProps {
@@ -31,6 +41,10 @@ const Sidebar = styled.aside`
   height: 100vh;
   position: sticky;
   background-color: ${({ backgroundColor }) => backgroundColor};
+
+  @media print {
+    display: none;
+  }
 ` as React.FC<SidebarProps>;
 const SidebarHeader = styled.h2``;
 const SidebarItem = styled.div`
@@ -40,44 +54,53 @@ const SidebarItem = styled.div`
 const Main = styled.main`
   overflow: auto;
   margin: auto;
+  align-self: center;
 `;
 
 const ExportButton = styled.button``;
 
-const SelectorLabel = styled.label``;
-
-const VariableContainer = styled.div`
-  display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
-`;
+const VariableContainer = styled.div``;
 
 // TODO: Share the type from the backend
-
-interface Selected {
-  conferenceSeriesId: string;
-  conferenceId: string;
-  templateId: string; // One of templates
+interface DesignerState {
+  themeId: Theme["id"];
+  selectionId: string; // One of templates
+  variables: { [key: string]: any };
 }
 
 enum ActionTypes {
-  UPDATE_FIELD,
+  UPDATE_SELECTION_ID,
+  UPDATE_THEME_ID,
+  UPDATE_VARIABLE,
 }
 
-// TODO: Fetch new data
-function assetDesignerReducer(state: Selected, action) {
+function assetDesignerReducer(state: DesignerState, action) {
   const { field, value } = action;
 
   switch (action.type) {
-    case ActionTypes.UPDATE_FIELD:
-      updateQuery(field, value);
+    case ActionTypes.UPDATE_SELECTION_ID:
+      updateQuery("selectionId", value);
 
-      return { ...state, [field]: value };
+      return { ...state, selectionId: value };
+    case ActionTypes.UPDATE_THEME_ID:
+      updateQuery("themeId", value);
+
+      return { ...state, themeId: value };
+    case ActionTypes.UPDATE_VARIABLE:
+      const newVariables = { ...state.variables };
+
+      // Needed to support nested access (mutates!)
+      set(newVariables, field, value);
+
+      updateQuery("variables", JSON.stringify(newVariables));
+
+      return { ...state, variables: newVariables };
     default:
       throw new Error("No matching reducer found!");
   }
 }
 
-function updateQuery(field: string, value: string) {
+function updateQuery(field: string, value: any) {
   const history = createHistory();
   const query = queryString.stringify({
     ...queryString.parse(location.search),
@@ -87,106 +110,68 @@ function updateQuery(field: string, value: string) {
 }
 
 interface AssetDesignerPageProps {
-  initialSelected: Selected;
+  initialState: {
+    selectionId: DesignerState["selectionId"];
+  };
   themes: Theme[];
 }
 
 function AssetDesignerPage({
-  initialSelected,
+  initialState = {
+    selectionId: "",
+  },
   themes,
 }: AssetDesignerPageProps) {
+  if (!themes) {
+    return null;
+  }
+
   const [state, dispatch] = React.useReducer(
     assetDesignerReducer,
-    initialSelected
-  );
-  const theme = themes.find(({ id }) => state.conferenceSeriesId === id);
+    initialState,
+    ({ selectionId }) => {
+      const selection = getSelection(selectionId);
 
-  // TODO: Type
-  const template = templates[state.templateId] || <NoTemplateFound />;
-  const variables = template.variables
-    ? template.variables.map(variable => ({
-        ...variable,
-        value: state[variable.id],
-      }))
-    : []; // TODO: Overlay to selection
+      return {
+        selectionId,
+        themeId: "",
+        variables: fromPairs(
+          map(selection.variables, ({ id, validation }) => {
+            return [id, get(validation, "default")];
+          })
+        ),
+      };
+    }
+  );
+  const theme = themes.find(({ id }) => id === state.themeId) || themes[0];
+  const { selectionId } = state;
+
+  const selection = getSelection(selectionId) || NoSelectionFound;
   const sideBarWidth = "18em";
   const assetDesignTemplateId = "asset-design-template-id";
 
   return (
     <AssetDesignerContainer width={sideBarWidth}>
-      <Sidebar backgroundColor={theme ? theme.colors.background : ""}>
-        <SidebarHeader>Asset designer</SidebarHeader>
-
-        <SidebarItem>
-          <ExportButton
-            onClick={() => {
-              const domNode = document.getElementById(assetDesignTemplateId);
-
-              if (domNode) {
-                domToImage
-                  .toBlob(domNode)
-                  .then(blob => {
-                    // TODO: Improve this further (i.e. name of the speaker for tweets etc.)
-                    saveAs(blob, `${template.filename}.png`);
-                  })
-                  .catch(err => console.error(err));
-              }
-            }}
-          >
-            Export Image
-          </ExportButton>
-        </SidebarItem>
-
-        <SidebarItem>
-          <SidebarHeader>Themes</SidebarHeader>
-          <ThemeSelector
-            themes={themes}
-            selectedTheme={state.conferenceSeriesId}
-            onChange={(field, value) =>
-              dispatch({ type: ActionTypes.UPDATE_FIELD, field, value })
-            }
-          />
-        </SidebarItem>
-
-        <SidebarItem>
-          <SidebarHeader>Templates</SidebarHeader>
-          <TemplateSelector
-            templates={Object.keys(templates)}
-            selectedTemplate={state.templateId}
-          />
-        </SidebarItem>
-
-        {variables.length > 0 && (
-          <SidebarItem>
-            <SidebarHeader>Variables</SidebarHeader>
-
-            {map(variables, variable => (
-              <VariableContainer key={variable.id}>
-                <SelectorLabel>{variable.id}</SelectorLabel>
-                <VariableSelector
-                  selected={state}
-                  field={variable.id}
-                  selectedVariable={variable.value}
-                  query={variable.query}
-                  mapToCollection={variable.mapToCollection}
-                  mapToOption={variable.mapToOption}
-                  validation={variable.validation}
-                  onChange={(field, value) =>
-                    dispatch({
-                      type: ActionTypes.UPDATE_FIELD,
-                      field,
-                      value,
-                    })
-                  }
-                />
-              </VariableContainer>
-            ))}
-          </SidebarItem>
-        )}
-      </Sidebar>
+      <AssetDesignerSidebar
+        themes={themes}
+        theme={theme}
+        assetDesignTemplateId={assetDesignTemplateId}
+        selection={selection}
+        selectionId={selectionId}
+        variables={state.variables}
+        onUpdateTheme={(field, value) =>
+          dispatch({ type: ActionTypes.UPDATE_THEME_ID, field, value })
+        }
+        onUpdateSelection={value =>
+          dispatch({ type: ActionTypes.UPDATE_SELECTION_ID, value })
+        }
+        onUpdateVariable={(field, value) =>
+          dispatch({ type: ActionTypes.UPDATE_VARIABLE, field, value })
+        }
+      />
       <Main>
-        {React.createElement(template, {
-          selected: state,
+        {React.createElement(selection, {
+          ...state.variables,
           theme,
           id: assetDesignTemplateId,
         })}
@@ -195,8 +180,118 @@ function AssetDesignerPage({
   );
 }
 
-function NoTemplateFound() {
-  return <>No template found!</>;
+function getSelection(selectionId) {
+  return templates[selectionId] || components[selectionId];
+}
+
+function NoSelectionFound() {
+  return <>No selection found!</>;
+}
+
+interface AssetDesignerSidebarProps {
+  themes: Theme[];
+  theme: Theme;
+  assetDesignTemplateId: string;
+  selection: any; // TODO: React component with meta
+  selectionId: DesignerState["selectionId"];
+  variables: DesignerState["variables"];
+  onUpdateTheme: (field, value) => void;
+  onUpdateSelection: (value) => void;
+  onUpdateVariable: (field, value) => void;
+}
+
+function AssetDesignerSidebar({
+  themes,
+  theme,
+  assetDesignTemplateId,
+  selection,
+  selectionId,
+  variables,
+  onUpdateTheme,
+  onUpdateSelection,
+  onUpdateVariable,
+}: AssetDesignerSidebarProps) {
+  const selectionVariables = selection.variables;
+  const variableOptions = selectionVariables
+    ? map(selectionVariables, variable => ({
+        ...variable,
+        value: variables[variable.id],
+      }))
+    : []; // TODO: Overlay to selection
+
+  return (
+    <Sidebar backgroundColor={theme ? theme.colors.background : ""}>
+      <SidebarHeader>Asset designer</SidebarHeader>
+
+      <SidebarItem>
+        <ExportButton
+          onClick={() => {
+            const domNode = document.getElementById(assetDesignTemplateId);
+
+            if (domNode) {
+              domToImage
+                .toBlob(domNode)
+                .then(blob => {
+                  // TODO: Improve this further (i.e. name of the speaker for tweets etc.)
+                  saveAs(blob, `${selection.filename}.png`);
+                })
+                .catch(err => console.error(err));
+            }
+          }}
+        >
+          Export Image
+        </ExportButton>
+      </SidebarItem>
+
+      <SidebarItem>
+        <SidebarHeader>Themes</SidebarHeader>
+        <ThemeSelector
+          themes={themes}
+          selectedTheme={theme.id}
+          onChange={onUpdateTheme}
+        />
+      </SidebarItem>
+
+      <SidebarItem>
+        <SidebarHeader>Templates</SidebarHeader>
+        <ComponentSelector
+          templates={Object.keys(templates)}
+          selectedTemplate={selectionId}
+          onChange={onUpdateSelection}
+        />
+      </SidebarItem>
+
+      <SidebarItem>
+        <SidebarHeader>Components</SidebarHeader>
+        <ComponentSelector
+          templates={Object.keys(components)}
+          selectedTemplate={selectionId}
+          onChange={onUpdateSelection}
+        />
+      </SidebarItem>
+
+      {variableOptions.length > 0 && (
+        <SidebarItem>
+          <SidebarHeader>Variables</SidebarHeader>
+
+          {map(variableOptions, variable => (
+            <VariableContainer key={variable.id}>
+              <VariableSelector
+                variables={variables}
+                field={variable.id}
+                selectedVariable={get(variable, "value")}
+                query={variable.query}
+                mapToCollection={variable.mapToCollection}
+                mapToOption={variable.mapToOption}
+                validation={variable.validation}
+                onChange={onUpdateVariable}
+              />
+            </VariableContainer>
+          ))}
+        </SidebarItem>
+      )}
+    </Sidebar>
+  );
 }
 
 interface ThemeSelectorProps {
@@ -214,7 +309,7 @@ function ThemeSelector({
     <Select
       options={
         themes
-          ? themes.map(theme => ({
+          ? map(themes, theme => ({
               value: theme.id,
               label: theme.id,
             }))
@@ -228,129 +323,51 @@ function ThemeSelector({
   );
 }
 
-interface TemplateSelectorProps {
+interface ComponentSelectorProps {
   templates: string[];
   selectedTemplate: string;
+  onChange: (value: string) => void;
 }
 
-const TemplateSelectorContainer = styled.div``;
-const TemplateSelectorSelectedOption = styled.div``;
-const TemplateSelectorOption = styled.a`
+const ComponentSelectorContainer = styled.div``;
+const ComponentSelectorSelectedOption = styled.div``;
+const ComponentSelectorOption = styled.a`
   display: block;
 `;
 
-function TemplateSelector({
+function ComponentSelector({
   templates,
   selectedTemplate,
-}: TemplateSelectorProps) {
+  onChange,
+}: ComponentSelectorProps) {
   return (
-    <TemplateSelectorContainer>
-      {templates.map(templateId =>
+    <ComponentSelectorContainer>
+      {map(templates, templateId =>
         templateId === selectedTemplate ? (
-          <TemplateSelectorSelectedOption key={templateId}>
+          <ComponentSelectorSelectedOption key={templateId}>
             {templateId}
-          </TemplateSelectorSelectedOption>
+          </ComponentSelectorSelectedOption>
         ) : (
-          <TemplateSelectorOption
+          <ComponentSelectorOption
             key={templateId}
             href="#"
             onClick={e => {
               e.preventDefault();
 
-              const search = queryString.parse(location.search);
-
-              // Retain only conferenceSeriesId + replace templateId.
-              // Otherwise selection might be invalid.
-              location.search = queryString.stringify({
-                conferenceSeriesId: search.conferenceSeriesId,
-                templateId,
-              });
+              onChange(templateId);
             }}
           >
             {templateId}
-          </TemplateSelectorOption>
+          </ComponentSelectorOption>
         )
       )}
-    </TemplateSelectorContainer>
+    </ComponentSelectorContainer>
   );
 }
 
-interface VariableSelector {
-  selected: AssetDesignerPageProps["initialSelected"];
-  field: string;
-  options: string[];
-  selectedVariable: string;
-  query: string;
-  // TODO: Use the same type as in connect
-  mapToCollection: (result: any) => any;
-  mapToOption: (result: any) => { value: any; label: any };
-  validation: { type: any; default: string };
-  onChange: (field: string, value: string) => void;
-}
+const ConnectedAssetDesignerPage = connect(
+  "/graphql",
+  themesQuery
+)(AssetDesignerPage);
 
-function VariableSelector({
-  selected,
-  field,
-  selectedVariable,
-  query,
-  mapToCollection,
-  mapToOption,
-  validation,
-  onChange,
-}) {
-  if (!query) {
-    if (validation.type === String) {
-      return (
-        <input
-          type="text"
-          value={selectedVariable}
-          placeholder={validation.default}
-          onChange={({ target: { value } }) => {
-            onChange(field, value);
-          }}
-        />
-      );
-    }
-    if (validation.type === Boolean) {
-      return (
-        <input
-          type="checkbox"
-          checked={selectedVariable}
-          onChange={({ target: { checked } }) => {
-            onChange(field, checked);
-          }}
-        />
-      );
-    }
-
-    console.error(`Type ${validation.type} hasn't been implemented yet`);
-    return null;
-  }
-
-  const ConnectedSelect = connect(
-    "/graphql",
-    query,
-    selected
-  )(result => {
-    const collection = mapToCollection(result);
-
-    return (
-      <Select
-        width="100%"
-        options={
-          collection
-            ? [{ value: "", label: "" }].concat(collection.map(mapToOption))
-            : []
-        }
-        selected={selectedVariable}
-        onChange={({ target: { value } }) => {
-          onChange(field, value);
-        }}
-      />
-    );
-  });
-
-  return <ConnectedSelect />;
-}
-
-export default AssetDesignerPage;
+export default ConnectedAssetDesignerPage;
