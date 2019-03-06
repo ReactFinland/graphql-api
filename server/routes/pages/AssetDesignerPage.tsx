@@ -5,6 +5,7 @@ import { saveAs } from "file-saver";
 import createHistory from "history/createBrowserHistory";
 import fromPairs from "lodash/fromPairs";
 import map from "lodash/map";
+import set from "lodash/set";
 import queryString from "query-string";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
@@ -79,7 +80,10 @@ function assetDesignerReducer(state: DesignerState, action) {
 
       return { ...state, themeId: value };
     case ActionTypes.UPDATE_VARIABLE:
-      const newVariables = { ...state.variables, [field]: value };
+      const newVariables = { ...state.variables };
+
+      // Needed to support nested access (mutates!)
+      set(newVariables, field, value);
 
       updateQuery("variables", JSON.stringify(newVariables));
 
@@ -212,7 +216,9 @@ function AssetDesignerPage({
                 <VariableSelector
                   variables={state.variables}
                   field={variable.id}
-                  selectedVariable={variable.value}
+                  selectedVariable={
+                    variable.value || variable.validation.default
+                  }
                   query={variable.query}
                   mapToCollection={variable.mapToCollection}
                   mapToOption={variable.mapToOption}
@@ -406,7 +412,7 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
         <SelectorContainer>
           <SelectorLabel>{field}</SelectorLabel>
           <SelectorTextArea
-            defaultValue={selectedVariable || validation.default}
+            defaultValue={selectedVariable}
             onChange={({ target: { value } }) => {
               onChange(field, value);
             }}
@@ -421,7 +427,7 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
         <SelectorLabel>{field}</SelectorLabel>
         <SelectorInput
           type="text"
-          defaultValue={selectedVariable || validation.default}
+          defaultValue={selectedVariable}
           onChange={({ target: { value } }) => {
             onChange(field, value);
           }}
@@ -435,7 +441,7 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
         <SelectorLabel>{field}</SelectorLabel>
         <SelectorInput
           type="number"
-          defaultValue={selectedVariable || validation.default}
+          defaultValue={selectedVariable}
           onChange={({ target: { value } }) => {
             onChange(field, value);
           }}
@@ -475,7 +481,7 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
                 )
               : []
           }
-          selected={selectedVariable || validation.default}
+          selected={selectedVariable}
           onChange={({ target: { value } }) => {
             onChange(field, value);
           }}
@@ -498,9 +504,8 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
               id,
               type,
               values,
-              default: validationDefaults[id],
             }}
-            selectedVariable={selectedVariable}
+            selectedVariable={validationDefaults[id] || selectedVariable}
             onChange={onChange}
             field={`${field}.${id}`}
           />
