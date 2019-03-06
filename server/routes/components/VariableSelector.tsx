@@ -181,7 +181,7 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
               type,
               values,
             }}
-            selectedVariable={validationDefaults[id] || selectedVariable}
+            selectedVariable={validationDefaults[id] || selectedVariable[id]}
             onChange={onChange}
             field={`${field}.${id}`}
           />

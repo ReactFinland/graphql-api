@@ -274,9 +274,7 @@ function AssetDesignerSidebar({
               <VariableSelector
                 variables={variables}
                 field={variable.id}
-                selectedVariable={
-                  get(variable, "value") || get(variable, "validation.default")
-                }
+                selectedVariable={get(variable, "value")}
                 query={variable.query}
                 mapToCollection={variable.mapToCollection}
                 mapToOption={variable.mapToOption}

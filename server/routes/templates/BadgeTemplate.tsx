@@ -55,7 +55,12 @@ function BadgeTemplate({
 
   return (
     <BadgeTemplateContainer id={id}>
-      <Badge logo={theme.logos.white.withText.url} attendee={attendees[0]} />
+      <Badge
+        defaultColor={theme.colors.primary}
+        logo={theme.logos.white.withText.url}
+        attendee={attendees[0]}
+        texture="/media/assets/wave.svg"
+      />
     </BadgeTemplateContainer>
   );
 

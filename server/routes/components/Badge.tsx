@@ -1,14 +1,24 @@
 import styled from "@emotion/styled";
+import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import * as React from "react";
 import { Attendee, AttendeeType } from "../../schema/Attendee";
 import { Theme } from "../../schema/Theme";
 
+interface BadgeContainerProps {
+  defaultColor: Color;
+  type: AttendeeType;
+  texture: string;
+  opacity?: {
+    upper: number;
+    lower: number;
+  };
+}
+
 const BadgeContainer = styled.section`
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  background-image: linear-gradient(#67d67b, ${hexToRgba("#67d67b", 0.6)}),
-    url("/media/assets/wave.svg");
+  background-image: ${resolveBackground};
   background-size: cover;
   margin: auto;
   padding: 0;
@@ -28,59 +38,36 @@ const BadgeContainer = styled.section`
     content: "";
     z-index: 5;
   }
-`;
+` as React.FC<BadgeContainerProps>;
 
-// TODO: Customization per type
-/*
-.Attendee {
-  composes: badge;
-}
+function resolveBackground({
+  defaultColor = "#000",
+  type,
+  texture,
+  opacity = {
+    upper: 1.0,
+    lower: 0.6,
+  },
+}: BadgeContainerProps) {
+  const colors = {
+    [AttendeeType.ATTENDEE]: defaultColor,
+    [AttendeeType.ORGANIZER]: "#6d0b4d",
+    [AttendeeType.SPEAKER]: "#d01a1a",
+    [AttendeeType.SPONSOR]: "#67d67b",
+  };
+  const color = colors[type];
 
-.Volunteer,
-.Organizer {
-  composes: badge;
+  if (!color) {
+    console.log("Badge - Missing color");
 
-  &::before {
-    position: absolute;
-    left: -5%;
-    bottom: 3cm;
-    box-sizing: border-box;
-    width: 110%;
-    padding: 0.35cm 1.5cm;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.35em;
-    text-align: center;
-    color: transparentize($bgColor, 0.25);
-    background: $primaryColor;
-    content: "Volunteer";
-    z-index: 2;
-    transform: rotate(5deg);
+    return defaultColor;
   }
-}
 
-.Organizer {
-  &::before {
-    content: "Organizer";
-  }
+  return `linear-gradient(${hexToRgba(color, opacity.upper)}, ${hexToRgba(
+    color,
+    opacity.lower
+  )}), url("${texture}")`;
 }
-*/
-
-// TODO
-/*
-.sponsor {
-  background-image: linear-gradient(#67d67b, rgba(#67d67b, 0.6)),
-    url("/media/assets/wave.svg");
-}
-.speaker {
-  background-image: linear-gradient(#d01a1a, rgba(#d01a1a, 0.39)),
-    url("/media/assets/wave.svg");
-}
-.organizer {
-  background-image: linear-gradient(#6d0b4d, rgba(#6d0b4d, 0.65)),
-    url("/media/assets/wave.svg");
-}
-*/
 
 const BadgeContent = styled.div`
   margin-left: 0.2cm;
@@ -120,12 +107,14 @@ const BadgeType = styled.h3`
 `;
 
 interface BadgeProps {
+  defaultColor: Color;
   logo: Theme["logos"]["white"]["withText"]["url"];
   attendee: Attendee;
+  texture: string;
 }
 
 // TODO: Use Image type for logo, not url (string)
-function Badge({ logo, attendee }: BadgeProps) {
+function Badge({ defaultColor, logo, texture, attendee }: BadgeProps) {
   if (!attendee) {
     return <>No attendee!</>;
   }
@@ -133,7 +122,7 @@ function Badge({ logo, attendee }: BadgeProps) {
   const { type, name, twitter, company } = attendee;
 
   return (
-    <BadgeContainer>
+    <BadgeContainer defaultColor={defaultColor} texture={texture} type={type}>
       <BadgeLogo src={logo} />
       <BadgeContent>
         <BadgeName>{name}</BadgeName>
@@ -148,8 +137,15 @@ function Badge({ logo, attendee }: BadgeProps) {
 // TODO: Generate Badge.propTypes based on this structure?
 Badge.variables = [
   {
+    id: "defaultColor",
+    validation: { type: String, default: "#002fa9" },
+  },
+  {
     id: "logo",
-    validation: { type: String, default: "" },
+    validation: {
+      type: String,
+      default: "/media/react-finland/logo/v2/logo-white-with-text.svg",
+    },
   },
   {
     id: "attendee",
@@ -163,6 +159,10 @@ Badge.variables = [
         noPhotography: false,
       },
     },
+  },
+  {
+    id: "texture",
+    validation: { type: String, default: "/media/assets/wave.svg" },
   },
 ];
 
