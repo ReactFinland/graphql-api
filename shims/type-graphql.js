@@ -9,23 +9,26 @@ TypeGraphQL = {
   Ctx: dummyDecorator,
   registerEnumType: dummyFn,
   Field: typeFn => (instance, field) => {
-    Object.defineProperty(instance.__proto__, "_fields", {
+    const metaField = "_fields";
+    // It should be possible to write to the meta field but
+    // not to enumerate it since it should be hidden.
+    Object.defineProperty(instance.__proto__, metaField, {
       enumerable: false,
       writable: true,
     });
 
-    const fields = instance.__proto__._fields || {};
+    // Create the meta field if it doesn't exist yet.
+    const fields = instance.__proto__[metaField] || {};
     let type = typeFn();
     let values;
 
-    // Enum
+    // Handle enums.
     if (typeof type === "object") {
       values = type;
       type = "enum";
     }
 
-    // TODO: Figure out how to detect enums (is object check + annotation?)
-    instance.__proto__._fields = {
+    instance.__proto__[metaField] = {
       ...fields,
       [field]: { type, default: "", values },
     };
