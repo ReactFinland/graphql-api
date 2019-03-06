@@ -130,7 +130,7 @@ function AssetDesignerPage({
     assetDesignerReducer,
     initialState,
     ({ selectionId }) => {
-      const selection = getSelection(selectionId);
+      const selection = getSelection(selectionId) || {};
 
       return {
         selectionId,
