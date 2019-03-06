@@ -120,7 +120,7 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
           type="number"
           defaultValue={selectedVariable}
           onChange={({ target: { value } }) => {
-            onChange(field, value);
+            onChange(field, Number(value));
           }}
         />
       </SelectorContainer>
