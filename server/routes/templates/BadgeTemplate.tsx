@@ -1,14 +1,12 @@
 import styled from "@emotion/styled";
-// import chunk from "lodash/chunk";
+import { Color } from "csstype";
+import chunk from "lodash/chunk";
 // import flatten from "lodash/flatten";
-// import map from "lodash/map";
+import map from "lodash/map";
 import * as React from "react";
 import { Attendee, AttendeeType } from "../../schema/Attendee";
 import { Theme } from "../../schema/Theme";
 import Badge from "../components/Badge";
-// import { Color } from "csstype";
-// import complement from "polished/lib/color/complement";
-// import invert from "polished/lib/color/invert";
 
 const BadgeTemplateContainer = styled.section``;
 
@@ -16,44 +14,54 @@ interface BadgeTemplateProps {
   attendees: Attendee[];
   theme: Theme;
   id: string;
+  emptyAmounts: {
+    attendees: number;
+    organizers: number;
+    speakers: number;
+    sponsors: number;
+  };
 }
 
 const defaultAttendees: Attendee[] = [
   {
+    type: AttendeeType.ATTENDEE,
     name: "John Longsurname-Anotherlongone",
     twitter: "johndoe",
     company: "John Doe Enterprises",
-    type: AttendeeType.ATTENDEE,
   },
   {
+    type: AttendeeType.ORGANIZER,
     name: "Jane Doe",
     twitter: "johndoe",
     company: "John Doe Enterprises",
-    type: AttendeeType.ORGANIZER,
   },
   {
+    type: AttendeeType.SPEAKER,
     name: "John Doedoedoedoedoedoedoe",
     twitter: "johndoe",
     company: "John Doe Enterprises",
-    type: AttendeeType.SPEAKER,
   },
   {
+    type: AttendeeType.SPONSOR,
     name: "John-Jack-Jim-Joe-Joel-Jeff Doe",
     twitter: "johndoe",
     company: "John & Son Doe Enterprises & Co.",
-    type: AttendeeType.SPONSOR,
   },
 ];
 
-// const badgesPerPage = 4; // TODO: Expose as a variable
 function BadgeTemplate({
   id,
   theme,
   attendees = defaultAttendees,
+  emptyAmounts,
 }: BadgeTemplateProps) {
-  // const pages = chunk(getBadgeData(tickets, badgesPerPage), badgesPerPage);
+  const badgesPerPage = 4;
+  const pages = chunk(
+    getBadgeData(attendees, badgesPerPage, emptyAmounts),
+    badgesPerPage
+  );
 
-  return (
+  /*return (
     <BadgeTemplateContainer id={id}>
       <Badge
         defaultColor={theme.colors.primary}
@@ -62,24 +70,52 @@ function BadgeTemplate({
         texture={theme.texture.url}
       />
     </BadgeTemplateContainer>
-  );
+  );*/
 
-  /*
   return (
     <BadgeTemplateContainer id={id}>
       {map(pages, (tickets, i) => (
-        <Page key={i} logo={theme.logos.white.withText.url} tickets={tickets} />
+        <Page
+          key={i}
+          defaultColor={theme.colors.primary}
+          logo={theme.logos.white.withText.url}
+          texture={theme.texture.url}
+          tickets={tickets}
+        />
       ))}
     </BadgeTemplateContainer>
   );
-  */
 }
 
 BadgeTemplate.filename = "badge";
 
-/*
+BadgeTemplate.variables = [
+  // TODO
+  /*{
+    id: 'attendees',
+    validation: {
+      type: Array,
+      of: Attendee,
+      default: defaultAttendees
+    }
+  }*/
+  {
+    id: "emptyAmounts",
+    validation: {
+      type: Object,
+      default: {
+        attendees: 0,
+        organizers: 0,
+        sponsors: 0,
+      },
+    },
+  },
+];
+
 interface PageProps {
-  logo: Theme["logos"]["white"]["withText"]["url"];
+  defaultColor: Color;
+  logo: string;
+  texture: string;
   tickets: any[]; // TODO
 }
 
@@ -87,14 +123,12 @@ const PageSheet = styled.section`
   @media print {
     display: flex;
     flex-wrap: wrap;
-    -webkit-print-color-adjust: exact;
-    height: 11.5in !important; /* Adjust for Safari print mode
+    height: 11.5in !important; /* Adjust for Safari print mode */
     break-after: page;
   }
 `;
 
-
-function Page({ logo, tickets = [] }: PageProps) {
+function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
   // const pairs = chunk(tickets, 2);
   // const reverse = flatten(pairs.map(pair => [pair[1], pair[0]]));
 
@@ -103,30 +137,36 @@ function Page({ logo, tickets = [] }: PageProps) {
   return (
     <>
       <PageSheet>
-        {tickets.map((ticket, idx) => (
-          <Badge {...ticket} key={"front-" + idx} />
+        {tickets.map((attendee: Attendee, idx) => (
+          <Badge
+            attendee={attendee}
+            defaultColor={defaultColor}
+            logo={logo}
+            texture={texture}
+            key={"front-" + idx}
+          />
         ))}
       </PageSheet>
       {/*<PageSheet>
-        {reverse.map((ticket, idx) => (
-          <Badge {...ticket} key={"back-" + idx} />
+        {reverse.map((attendee, idx) => (
+          <Badge attendee={attendee} defaultColor={defaultColor} logo={logo} key={"back-" + idx} />
         ))}
-        </PageSheet>}
+        </PageSheet>*/}
     </>
   );
 }
-*/
 
-// TODO: Get amounts per type from variables
-/*
-function getBadgeData(tickets, badgesPerPage) {
-  const organizerAmount = 0;
-  const sponsorAmount = 0;
-  const attendeeAmount = 0;
+// TODO: Generalize categories
+function getBadgeData(
+  tickets,
+  badgesPerPage,
+  emptyAmounts = { organizers: 0, speakers: 0, sponsors: 0, attendees: 0 }
+) {
   const ret = tickets
-    .concat(Array(organizerAmount).fill(getEmptyData("organizer")))
-    .concat(Array(sponsorAmount).fill(getEmptyData("sponsor")))
-    .concat(Array(attendeeAmount).fill(getEmptyData("attendee")));
+    .concat(Array(emptyAmounts.organizers).fill(getEmptyData("organizer")))
+    .concat(Array(emptyAmounts.speakers).fill(getEmptyData("speaker")))
+    .concat(Array(emptyAmounts.sponsors).fill(getEmptyData("sponsor")))
+    .concat(Array(emptyAmounts.attendees).fill(getEmptyData("attendee")));
 
   // Ensure all pages are filled with badges
   return ret.concat(
@@ -134,16 +174,14 @@ function getBadgeData(tickets, badgesPerPage) {
   );
 }
 
-function getEmptyData(type) {
+function getEmptyData(type): Attendee {
   return {
-    firstName: null,
-    lastName: null,
-    company: null,
     type,
-    twitter: null,
+    name: "",
+    company: "",
+    twitter: "",
   };
 }
-*/
 
 // TODO: Connect to ticket API
 
