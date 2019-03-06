@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "ReactJs Day",
   about: "ReactJS Day is a one-day, single track conference in Verona",
   image: {
-    url: "sponsors/reactjsday.png",
+    url: "sponsors/reactjsday.svg",
   },
   social: {
     homepage: "http://reactjsday.it/",
