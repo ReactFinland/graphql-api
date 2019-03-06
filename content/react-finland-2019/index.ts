@@ -23,6 +23,7 @@ const partners = [
   allSponsors.reactalicante,
   allSponsors.reactdayberlin,
   allSponsors.reactnativeeu,
+  allSponsors.reactjsday,
   allSponsors.webexpo,
 ];
 const goldSponsors = [
