@@ -178,12 +178,18 @@ function AssetDesignerPage({
 
 function initializeVariables(selectionId) {
   const selection = getSelection(selectionId) || {};
+  // TODO: Figure out how to eliminate "as"
+  const queryVariables = JSON.parse(queryString.parse(location.search)
+    .variables as string);
 
-  return fromPairs(
-    map(selection.variables, ({ id, validation }) => {
-      return [id, get(validation, "default")];
-    })
-  );
+  return {
+    ...fromPairs(
+      map(selection.variables, ({ id, validation }) => {
+        return [id, get(validation, "default")];
+      })
+    ),
+    ...queryVariables,
+  };
 }
 
 function getSelection(selectionId) {

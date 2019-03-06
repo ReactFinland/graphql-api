@@ -15,26 +15,30 @@ const cache = getExpeditiousCache({
 async function routeAssetDesigner(router, projectRoot, scriptRoot) {
   const Interactive = createInteractive(projectRoot, scriptRoot, __dirname);
 
-  router.get("/asset-designer", cache.withTtl("1 hour"), async (req, res) => {
-    const selectionId = req.query.selectionId;
+  router.get(
+    "/asset-designer",
+    cache.withTtl("1 hour"),
+    async ({ url, query }, res) => {
+      const selectionId = query.selectionId;
 
-    // Given we use the same page for serving different bundles,
-    // each needs a unique identifier based on the query (differing part)
-    res
-      .status(200)
-      .send(
-        renderPage(
-          "Asset designer",
-          req.url,
-          <Interactive
-            relativeComponentPath="./pages/AssetDesignerPage"
-            component={AssetDesignerPage}
-            componentHash={selectionId}
-            props={{ initialState: { selectionId } }}
-          />
-        )
-      );
-  });
+      // Given we use the same page for serving different bundles,
+      // each needs a unique identifier based on the query (differing part)
+      res
+        .status(200)
+        .send(
+          renderPage(
+            "Asset designer",
+            url,
+            <Interactive
+              relativeComponentPath="./pages/AssetDesignerPage"
+              component={AssetDesignerPage}
+              componentHash={selectionId}
+              props={{ initialState: { selectionId } }}
+            />
+          )
+        );
+    }
+  );
 }
 
 export default routeAssetDesigner;
