@@ -178,9 +178,18 @@ function AssetDesignerPage({
 
 function initializeVariables(selectionId) {
   const selection = getSelection(selectionId) || {};
-  // TODO: Figure out how to eliminate "as"
-  const queryVariables = JSON.parse(queryString.parse(location.search)
-    .variables as string);
+  let queryVariables = {};
+
+  try {
+    // TODO: Figure out how to eliminate "as"
+    queryVariables = JSON.parse(get(
+      queryString.parse(location.search),
+      "variables",
+      "{}"
+    ) as string);
+  } catch (err) {
+    console.log(err);
+  }
 
   return {
     ...fromPairs(
