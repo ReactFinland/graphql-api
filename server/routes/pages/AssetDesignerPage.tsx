@@ -81,7 +81,11 @@ function assetDesignerReducer(state: DesignerState, action) {
     case ActionTypes.UPDATE_SELECTION_ID:
       updateQuery("selectionId", value);
 
-      return { ...state, selectionId: value };
+      return {
+        ...state,
+        selectionId: value,
+        variables: initializeVariables(value),
+      };
     case ActionTypes.UPDATE_THEME_ID:
       updateQuery("themeId", value);
 
@@ -129,19 +133,11 @@ function AssetDesignerPage({
   const [state, dispatch] = React.useReducer(
     assetDesignerReducer,
     initialState,
-    ({ selectionId }) => {
-      const selection = getSelection(selectionId) || {};
-
-      return {
-        selectionId,
-        themeId: "",
-        variables: fromPairs(
-          map(selection.variables, ({ id, validation }) => {
-            return [id, get(validation, "default")];
-          })
-        ),
-      };
-    }
+    ({ selectionId }) => ({
+      selectionId,
+      themeId: "",
+      variables: initializeVariables(selectionId),
+    })
   );
   const theme = themes.find(({ id }) => id === state.themeId) || themes[0];
   const { selectionId } = state;
@@ -177,6 +173,16 @@ function AssetDesignerPage({
         })}
       </Main>
     </AssetDesignerContainer>
+  );
+}
+
+function initializeVariables(selectionId) {
+  const selection = getSelection(selectionId) || {};
+
+  return fromPairs(
+    map(selection.variables, ({ id, validation }) => {
+      return [id, get(validation, "default")];
+    })
   );
 }
 
