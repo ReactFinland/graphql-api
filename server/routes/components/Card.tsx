@@ -8,13 +8,12 @@ interface CardContainerProps {
 }
 
 interface CardBaseProps {
-  backgroundColor: Color;
-  textColor: Color;
+  backgroundColor?: Color;
+  textColor?: Color;
 }
 
 const CardBase = styled.div`
   position: absolute;
-  padding: 5mm;
 
   width: 100%;
   height: 100%;
@@ -46,6 +45,10 @@ const Card = {
   Front: styled(CardBase)``,
   Back: styled(CardBase)`
     transform: rotateY(-180deg);
+
+    @media print {
+      display: none;
+    }
   `,
 };
 

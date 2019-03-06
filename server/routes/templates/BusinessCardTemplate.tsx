@@ -12,6 +12,14 @@ const BusinessCardTemplateContainer = styled.section`` as React.FC<
   BusinessCardTemplateContainerProps
 >;
 
+const BusinessCardContainer = styled(Card.Container)``;
+const BusinessCardFront = styled(Card.Front)`
+  padding: 5mm;
+`;
+const BusinessCardBack = styled(Card.Back)`
+  padding: 5mm;
+`;
+
 interface BusinessCardTemplateProps {
   theme: Theme;
   id: string;
@@ -37,20 +45,20 @@ function BusinessCardTemplate({
 
   return (
     <BusinessCardTemplateContainer id={id}>
-      <Card.Container width={width} height={height}>
-        <Card.Front
+      <BusinessCardContainer width={width} height={height}>
+        <BusinessCardFront
           backgroundColor={theme.colors.background}
           textColor={theme.colors.text}
         >
           <Markdown>{showFront ? frontText : backText}</Markdown>
-        </Card.Front>
-        <Card.Back
+        </BusinessCardFront>
+        <BusinessCardBack
           backgroundColor={theme.colors.background}
           textColor={theme.colors.text}
         >
           <Markdown>{showFront ? backText : frontText}</Markdown>
-        </Card.Back>
-      </Card.Container>
+        </BusinessCardBack>
+      </BusinessCardContainer>
     </BusinessCardTemplateContainer>
   );
 }

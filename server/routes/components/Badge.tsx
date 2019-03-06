@@ -4,28 +4,22 @@ import hexToRgba from "hex-to-rgba";
 import * as React from "react";
 import { Attendee, AttendeeType } from "../../schema/Attendee";
 import { Theme } from "../../schema/Theme";
+import Card from "../components/Card";
 
 interface BadgeContainerProps {
-  defaultColor: Color;
-  type: AttendeeType;
-  texture: string;
-  opacity?: {
-    upper: number;
-    lower: number;
-  };
+  width: string;
+  height: string;
 }
 
 // TODO: Expose dimensions?
-const BadgeContainer = styled.section`
+const BadgeContainer = styled(Card.Container)`
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  background-image: ${resolveBackground};
-  background-size: cover;
+
   margin: 0;
   padding: 0;
-  width: 10.49cm;
-  height: 14.4cm;
-  overflow: hidden;
+  width: ${({ width }: BadgeContainerProps) => width};
+  height: ${({ height }: BadgeContainerProps) => height};
 
   /* Hole for lanyard */
   &::after {
@@ -41,6 +35,25 @@ const BadgeContainer = styled.section`
   }
 ` as React.FC<BadgeContainerProps>;
 
+interface BadgeBaseProps {
+  defaultColor: Color;
+  type: AttendeeType;
+  texture: string;
+  opacity?: {
+    upper: number;
+    lower: number;
+  };
+}
+
+const BadgeFront = styled(Card.Front)`
+  background-image: ${resolveBackground};
+  background-size: cover;
+` as React.FC<BadgeBaseProps>;
+const BadgeBack = styled(Card.Back)`
+  background-image: ${resolveBackground};
+  background-size: cover;
+` as React.FC<BadgeBaseProps>;
+
 function resolveBackground({
   defaultColor = "#000",
   type,
@@ -49,7 +62,7 @@ function resolveBackground({
     upper: 1.0,
     lower: 0.6,
   },
-}: BadgeContainerProps) {
+}: BadgeBaseProps) {
   const colors = {
     [AttendeeType.ATTENDEE]: defaultColor,
     [AttendeeType.ORGANIZER]: "#6d0b4d",
@@ -102,6 +115,7 @@ const BadgeCompany = styled.p`
 
 const BadgeType = styled.h3`
   text-transform: capitalize;
+  text-align: initial;
   color: white;
   justify-self: start;
   padding-left: 1cm;
@@ -121,9 +135,8 @@ function Badge({ defaultColor, logo, texture, attendee }: BadgeProps) {
   }
 
   const { type, name, twitter, company } = attendee;
-
-  return (
-    <BadgeContainer defaultColor={defaultColor} texture={texture} type={type}>
+  const frontContent = (
+    <>
       <BadgeLogo src={logo} />
       <BadgeContent>
         <BadgeName>{name}</BadgeName>
@@ -131,6 +144,23 @@ function Badge({ defaultColor, logo, texture, attendee }: BadgeProps) {
         {company && <BadgeCompany>{company}</BadgeCompany>}
       </BadgeContent>
       {type && <BadgeType>{type}</BadgeType>}
+    </>
+  );
+  // TODO: Expose
+  const backContent = frontContent;
+  // TODO: Expose
+  const width = "10.49cm";
+  const height = "14.4cm";
+
+  // TODO: Eliminate BadgeContainer
+  return (
+    <BadgeContainer width={width} height={height}>
+      <BadgeFront defaultColor={defaultColor} texture={texture} type={type}>
+        {frontContent}
+      </BadgeFront>
+      <BadgeBack defaultColor={defaultColor} texture={texture} type={type}>
+        {backContent}
+      </BadgeBack>
     </BadgeContainer>
   );
 }
