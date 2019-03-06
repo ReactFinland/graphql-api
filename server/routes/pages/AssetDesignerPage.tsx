@@ -3,7 +3,7 @@ import { Color, WidthProperty } from "csstype";
 import domToImage from "dom-to-image";
 import { saveAs } from "file-saver";
 import createHistory from "history/createBrowserHistory";
-import get from "lodash/get";
+import fromPairs from "lodash/fromPairs";
 import map from "lodash/map";
 import queryString from "query-string";
 import * as React from "react";
@@ -66,7 +66,6 @@ enum ActionTypes {
   UPDATE_VARIABLE,
 }
 
-// TODO: Fetch new data
 function assetDesignerReducer(state: DesignerState, action) {
   const { field, value } = action;
 
@@ -100,15 +99,15 @@ function updateQuery(field: string, value: any) {
 }
 
 interface AssetDesignerPageProps {
-  initialState: DesignerState;
+  initialState: {
+    selectionId: DesignerState["selectionId"];
+  };
   themes: Theme[];
 }
 
 function AssetDesignerPage({
   initialState = {
     selectionId: "",
-    themeId: "",
-    variables: {},
   },
   themes,
 }: AssetDesignerPageProps) {
@@ -118,14 +117,25 @@ function AssetDesignerPage({
 
   const [state, dispatch] = React.useReducer(
     assetDesignerReducer,
-    initialState
+    initialState,
+    ({ selectionId }) => {
+      const selection = getSelection(selectionId);
+
+      return {
+        selectionId,
+        themeId: "",
+        variables: fromPairs(
+          selection.variables.map(({ id, validation }) => {
+            return [id, validation.default];
+          })
+        ),
+      };
+    }
   );
   const theme = themes.find(({ id }) => id === state.themeId) || themes[0];
   const { selectionId } = state;
 
-  // TODO: Type
-  const selection =
-    templates[selectionId] || components[selectionId] || NoSelectionFound;
+  const selection = getSelection(selectionId) || NoSelectionFound;
   const variables = selection.variables
     ? selection.variables.map(variable => ({
         ...variable,
@@ -231,6 +241,10 @@ function AssetDesignerPage({
   );
 }
 
+function getSelection(selectionId) {
+  return templates[selectionId] || components[selectionId];
+}
+
 function NoSelectionFound() {
   return <>No selection found!</>;
 }
@@ -307,7 +321,7 @@ function ComponentSelector({
 }
 
 interface VariableSelector {
-  variables: AssetDesignerPageProps["initialState"]["variables"];
+  variables: DesignerState["variables"];
   field: string;
   options: string[];
   selectedVariable: string;
@@ -472,8 +486,6 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
 
   const fields = validation.type._fields;
 
-  // TODO: How to tackle SSR in this case? Shimming is problematic
-  // as server won't inject _fields. Maybe reflection instead?
   if (fields) {
     const validationDefaults = validation.default;
 
@@ -503,9 +515,7 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
 
 const ConnectedAssetDesignerPage = connect(
   "/graphql",
-  themesQuery,
-  {},
-  ({ initialState }) => ({ ...get(initialState, "selected", {}) })
+  themesQuery
 )(AssetDesignerPage);
 
 export default ConnectedAssetDesignerPage;
