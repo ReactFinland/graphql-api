@@ -24,6 +24,11 @@ interface AssetDesignerContainerProps {
 const AssetDesignerContainer = styled.article`
   display: grid;
   grid-template-columns: ${({ width }) => width} 1fr;
+
+  @media print {
+    display: auto;
+    grid-template-columns: auto;
+  }
 ` as React.FC<AssetDesignerContainerProps>;
 
 interface SidebarProps {

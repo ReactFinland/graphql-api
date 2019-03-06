@@ -61,17 +61,6 @@ function BadgeTemplate({
     badgesPerPage
   );
 
-  /*return (
-    <BadgeTemplateContainer id={id}>
-      <Badge
-        defaultColor={theme.colors.primary}
-        logo={theme.logos.white.withText.url}
-        attendee={attendees[0]}
-        texture={theme.texture.url}
-      />
-    </BadgeTemplateContainer>
-  );*/
-
   return (
     <BadgeTemplateContainer id={id}>
       {map(pages, (tickets, i) => (
@@ -106,6 +95,7 @@ BadgeTemplate.variables = [
       default: {
         attendees: 0,
         organizers: 0,
+        speakers: 0,
         sponsors: 0,
       },
     },
@@ -119,13 +109,17 @@ interface PageProps {
   tickets: any[]; // TODO
 }
 
+// TODO: Is the Safari fix needed anymore?
 const PageSheet = styled.section`
+  text-align: center;
+
   @media print {
-    display: flex;
-    flex-wrap: wrap;
     height: 11.5in !important; /* Adjust for Safari print mode */
-    break-after: page;
   }
+`;
+
+const PageBadgeContainer = styled.div`
+  display: inline-block;
 `;
 
 function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
@@ -138,13 +132,14 @@ function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
     <>
       <PageSheet>
         {tickets.map((attendee: Attendee, idx) => (
-          <Badge
-            attendee={attendee}
-            defaultColor={defaultColor}
-            logo={logo}
-            texture={texture}
-            key={"front-" + idx}
-          />
+          <PageBadgeContainer key={"front-" + idx}>
+            <Badge
+              attendee={attendee}
+              defaultColor={defaultColor}
+              logo={logo}
+              texture={texture}
+            />
+          </PageBadgeContainer>
         ))}
       </PageSheet>
       {/*<PageSheet>

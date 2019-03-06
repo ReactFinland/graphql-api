@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import get from "lodash/get";
 import map from "lodash/map";
 import * as React from "react";
 import connect from "./connect";
@@ -181,7 +182,9 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
               type,
               values,
             }}
-            selectedVariable={validationDefaults[id] || selectedVariable[id]}
+            selectedVariable={
+              get(validationDefaults, id) || get(selectedVariable, id)
+            }
             onChange={onChange}
             field={`${field}.${id}`}
           />

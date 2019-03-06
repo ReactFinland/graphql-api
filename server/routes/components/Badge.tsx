@@ -15,14 +15,15 @@ interface BadgeContainerProps {
   };
 }
 
+// TODO: Expose dimensions?
 const BadgeContainer = styled.section`
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   background-image: ${resolveBackground};
   background-size: cover;
-  margin: auto;
+  margin: 0;
   padding: 0;
-  width: 10.2cm;
+  width: 10.49cm;
   height: 14.4cm;
   overflow: hidden;
 
