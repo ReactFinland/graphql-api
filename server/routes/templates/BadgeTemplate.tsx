@@ -15,10 +15,10 @@ interface BadgeTemplateProps {
   theme: Theme;
   id: string;
   emptyAmounts: {
-    attendees: number;
-    organizers: number;
-    speakers: number;
-    sponsors: number;
+    [AttendeeType.ATTENDEE]: number;
+    [AttendeeType.ORGANIZER]: number;
+    [AttendeeType.SPEAKER]: number;
+    [AttendeeType.SPONSOR]: number;
   };
 }
 
@@ -161,25 +161,32 @@ function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
   );
 }
 
-// TODO: Generalize categories
 function getBadgeData(
   tickets,
-  badgesPerPage,
-  emptyAmounts = { organizers: 0, speakers: 0, sponsors: 0, attendees: 0 }
+  badgesPerPage: number,
+  emptyAmounts: { [key in AttendeeType]: number } = {
+    [AttendeeType.ORGANIZER]: 0,
+    [AttendeeType.SPEAKER]: 0,
+    [AttendeeType.SPONSOR]: 0,
+    [AttendeeType.ATTENDEE]: 0,
+  }
 ) {
-  const ret = tickets
-    .concat(Array(emptyAmounts.organizers).fill(getEmptyData("organizer")))
-    .concat(Array(emptyAmounts.speakers).fill(getEmptyData("speaker")))
-    .concat(Array(emptyAmounts.sponsors).fill(getEmptyData("sponsor")))
-    .concat(Array(emptyAmounts.attendees).fill(getEmptyData("attendee")));
+  const ret = tickets.concat(
+    flatten(
+      map(emptyAmounts, (amount, type) =>
+        //  TODO: See if it's possible to eliminate "as" from here
+        Array(amount).fill(getEmptyData(type as AttendeeType))
+      )
+    )
+  );
 
   // Ensure all pages are filled with badges
   return ret.concat(
-    Array(ret.length % badgesPerPage).fill(getEmptyData("attendee"))
+    Array(ret.length % badgesPerPage).fill(getEmptyData(AttendeeType.ATTENDEE))
   );
 }
 
-function getEmptyData(type): Attendee {
+function getEmptyData(type: AttendeeType): Attendee {
   return {
     type,
     name: "",
