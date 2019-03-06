@@ -1,4 +1,4 @@
-import { Contact } from "../../server/schema/Contact";
+import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
   name: "React Native EU",
@@ -18,6 +18,7 @@ const sponsor: Contact = {
     },
     city: "Wrocław",
   },
+  type: [ContactType.SPONSOR],
 };
 
 export default sponsor;

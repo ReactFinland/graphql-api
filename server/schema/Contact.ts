@@ -9,13 +9,14 @@ import { Session } from "./Session";
 import { Social } from "./Social";
 
 export enum ContactType {
-  SPEAKER,
-  TALK,
-  LIGHTNING_TALK,
-  KEYNOTE,
-  WORKSHOP,
-  WORKSHOP_HOST,
-  ORGANIZER,
+  SPEAKER = "SPEAKER",
+  TALK = "TALK",
+  LIGHTNING_TALK = "LIGHTNING_TALK",
+  KEYNOTE = "KEYNOTE",
+  WORKSHOP = "WORKSHOP",
+  WORKSHOP_HOST = "WORKSHOP_HOST",
+  ORGANIZER = "ORGANIZER",
+  SPONSOR = "SPONSOR",
 }
 
 @ObjectType()
@@ -33,7 +34,7 @@ export class Contact {
   public image!: Image;
 
   @Field(_ => [ContactType])
-  public type?: ContactType[];
+  public type!: ContactType[];
 
   @Field(_ => Social)
   public social!: Social;
@@ -44,10 +45,10 @@ export class Contact {
   @Field(_ => Location)
   public location!: Location;
 
-  @Field(_ => [Session])
+  @Field(_ => [Session], { nullable: true })
   public talks?: Session[];
 
-  @Field(_ => [Session])
+  @Field(_ => [Session], { nullable: true })
   public workshops?: Session[];
 }
 

@@ -6,7 +6,7 @@ import map from "lodash/map";
 import * as React from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { Conference } from "../../schema/Conference";
-import { Contact } from "../../schema/Contact";
+import { Contact, ContactType } from "../../schema/Contact";
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
 import { dayToFinnishLocale } from "../date-utils";
@@ -77,18 +77,24 @@ const TweetImageContainer = styled.div`
   padding: 3em;
 `;
 
+interface TweetImageProps {
+  isCircle: boolean;
+  src: HTMLImageElement["src"];
+}
+
 const TweetImage = styled.img`
   width: 100%;
   box-sizing: border-box;
-  clip-path: circle(9em at center);
-`;
+  clip-path: ${({ isCircle }: TweetImageProps) =>
+    isCircle ? "circle(9em at center)" : ""};
+` as React.FC<TweetImageProps>;
 
 const TweetSpeakerName = styled.h1`
   padding-top: 1em;
   font-size: 300%;
 `;
 
-const TweetSpeakerTalk = styled.h2`
+const TweetSpeakerDescription = styled.h2`
   padding-top: 0.5em;
   font-size: 200%;
 `;
@@ -114,14 +120,19 @@ function SpeakerTweetTemplate({
   const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
   const firstDay = conferenceDays[0];
   const lastDay = conferenceDays[conferenceDays.length - 1];
-  const { name, image, talks } = contact || {
+  const { about, name, image, talks, type } = contact || {
+    about: "",
     name: "",
     image: { url: "" },
     talks: [],
+    type: null,
   };
-  const talkTitle = Array.isArray(talks) && talks.length > 0 && talks[0].title;
+  const isSponsor = type && type.includes(ContactType.SPONSOR);
+  const description = isSponsor
+    ? about
+    : Array.isArray(talks) && talks.length > 0 && talks[0].title;
   // TODO: Set up conference.hashtag (should not contain #)
-  const tweetTextToCopy = `Learn more about ${talkTitle} by ${name} at #${conference.name
+  const tweetTextToCopy = `Learn more about ${description} by ${name} at #${conference.name
     .split(" ")
     .join("")} (${firstDay}-${lastDay})`;
 
@@ -141,10 +152,10 @@ function SpeakerTweetTemplate({
             </TweetConferenceDays>
           </TweetRow>
           <TweetSpeakerName>{name}</TweetSpeakerName>
-          <TweetSpeakerTalk>{talkTitle}</TweetSpeakerTalk>
+          <TweetSpeakerDescription>{description}</TweetSpeakerDescription>
         </TweetInfoContainer>
         <TweetImageContainer>
-          <TweetImage src={image.url} />
+          <TweetImage isCircle={!isSponsor} src={image.url} />
         </TweetImageContainer>
       </TweetPageContainer>
       <TweetContainer>
@@ -166,12 +177,14 @@ const ConnectedSpeakerTweetTemplate = connect(
 query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
   contact(contactName: $contactName, conferenceId: $conferenceId) {
     name
+    about
     image {
       url
     }
     talks {
       title
     }
+    type
   }
   conference(id: $conferenceId) {
     name
@@ -221,10 +234,15 @@ ConnectedSpeakerTweetTemplate.variables = [
     speakers {
       name
     }
+    sponsors {
+      name
+    }
   }
 }`,
     mapToCollection({ conference, ...rest }) {
-      return get(conference, "speakers", []);
+      return []
+        .concat(get(conference, "speakers"), get(conference, "sponsors"))
+        .filter(Boolean);
     },
     mapToOption({ name }) {
       return {

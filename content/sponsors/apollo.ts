@@ -1,4 +1,4 @@
-import { Contact } from "../../server/schema/Contact";
+import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
   name: "Apollo",
@@ -19,6 +19,7 @@ const sponsor: Contact = {
     },
     city: "San Francisco",
   },
+  type: [ContactType.SPONSOR],
 };
 
 export default sponsor;
