@@ -142,103 +142,28 @@ function AssetDesignerPage({
   const { selectionId } = state;
 
   const selection = getSelection(selectionId) || NoSelectionFound;
-  const variables = selection.variables
-    ? selection.variables.map(variable => ({
-        ...variable,
-        value: state.variables[variable.id],
-      }))
-    : []; // TODO: Overlay to selection
   const sideBarWidth = "18em";
   const assetDesignTemplateId = "asset-design-template-id";
 
   return (
     <AssetDesignerContainer width={sideBarWidth}>
-      <Sidebar backgroundColor={theme ? theme.colors.background : ""}>
-        <SidebarHeader>Asset designer</SidebarHeader>
-
-        <SidebarItem>
-          <ExportButton
-            onClick={() => {
-              const domNode = document.getElementById(assetDesignTemplateId);
-
-              if (domNode) {
-                domToImage
-                  .toBlob(domNode)
-                  .then(blob => {
-                    // TODO: Improve this further (i.e. name of the speaker for tweets etc.)
-                    saveAs(blob, `${selection.filename}.png`);
-                  })
-                  .catch(err => console.error(err));
-              }
-            }}
-          >
-            Export Image
-          </ExportButton>
-        </SidebarItem>
-
-        <SidebarItem>
-          <SidebarHeader>Themes</SidebarHeader>
-          <ThemeSelector
-            themes={themes}
-            selectedTheme={state.themeId}
-            onChange={(field, value) =>
-              dispatch({ type: ActionTypes.UPDATE_THEME_ID, field, value })
-            }
-          />
-        </SidebarItem>
-
-        <SidebarItem>
-          <SidebarHeader>Templates</SidebarHeader>
-          <ComponentSelector
-            templates={Object.keys(templates)}
-            selectedTemplate={selectionId}
-            onChange={value =>
-              dispatch({ type: ActionTypes.UPDATE_SELECTION_ID, value })
-            }
-          />
-        </SidebarItem>
-
-        <SidebarItem>
-          <SidebarHeader>Components</SidebarHeader>
-          <ComponentSelector
-            templates={Object.keys(components)}
-            selectedTemplate={selectionId}
-            onChange={value =>
-              dispatch({ type: ActionTypes.UPDATE_SELECTION_ID, value })
-            }
-          />
-        </SidebarItem>
-
-        {variables.length > 0 && (
-          <SidebarItem>
-            <SidebarHeader>Variables</SidebarHeader>
-
-            {map(variables, variable => (
-              <VariableContainer key={variable.id}>
-                <VariableSelector
-                  variables={state.variables}
-                  field={variable.id}
-                  selectedVariable={
-                    get(variable, "value") ||
-                    get(variable, "validation.default")
-                  }
-                  query={variable.query}
-                  mapToCollection={variable.mapToCollection}
-                  mapToOption={variable.mapToOption}
-                  validation={variable.validation}
-                  onChange={(field, value) =>
-                    dispatch({
-                      type: ActionTypes.UPDATE_VARIABLE,
-                      field,
-                      value,
-                    })
-                  }
-                />
-              </VariableContainer>
-            ))}
-          </SidebarItem>
-        )}
-      </Sidebar>
+      <AssetDesignerSidebar
+        themes={themes}
+        theme={theme}
+        assetDesignTemplateId={assetDesignTemplateId}
+        selection={selection}
+        selectionId={selectionId}
+        variables={state.variables}
+        onUpdateTheme={(field, value) =>
+          dispatch({ type: ActionTypes.UPDATE_THEME_ID, field, value })
+        }
+        onUpdateSelection={value =>
+          dispatch({ type: ActionTypes.UPDATE_SELECTION_ID, value })
+        }
+        onUpdateVariable={(field, value) =>
+          dispatch({ type: ActionTypes.UPDATE_VARIABLE, field, value })
+        }
+      />
       <Main>
         {React.createElement(selection, {
           ...state.variables,
@@ -256,6 +181,114 @@ function getSelection(selectionId) {
 
 function NoSelectionFound() {
   return <>No selection found!</>;
+}
+
+interface AssetDesignerSidebarProps {
+  themes: Theme[];
+  theme: Theme;
+  assetDesignTemplateId: string;
+  selection: any; // TODO: React component with meta
+  selectionId: DesignerState["selectionId"];
+  variables: DesignerState["variables"];
+  onUpdateTheme: (field, value) => void;
+  onUpdateSelection: (value) => void;
+  onUpdateVariable: (field, value) => void;
+}
+
+function AssetDesignerSidebar({
+  themes,
+  theme,
+  assetDesignTemplateId,
+  selection,
+  selectionId,
+  variables,
+  onUpdateTheme,
+  onUpdateSelection,
+  onUpdateVariable,
+}: AssetDesignerSidebarProps) {
+  const selectionVariables = selection.variables;
+  const variableOptions = selectionVariables
+    ? selectionVariables.map(variable => ({
+        ...variable,
+        value: variables[variable.id],
+      }))
+    : []; // TODO: Overlay to selection
+
+  return (
+    <Sidebar backgroundColor={theme ? theme.colors.background : ""}>
+      <SidebarHeader>Asset designer</SidebarHeader>
+
+      <SidebarItem>
+        <ExportButton
+          onClick={() => {
+            const domNode = document.getElementById(assetDesignTemplateId);
+
+            if (domNode) {
+              domToImage
+                .toBlob(domNode)
+                .then(blob => {
+                  // TODO: Improve this further (i.e. name of the speaker for tweets etc.)
+                  saveAs(blob, `${selection.filename}.png`);
+                })
+                .catch(err => console.error(err));
+            }
+          }}
+        >
+          Export Image
+        </ExportButton>
+      </SidebarItem>
+
+      <SidebarItem>
+        <SidebarHeader>Themes</SidebarHeader>
+        <ThemeSelector
+          themes={themes}
+          selectedTheme={theme.id}
+          onChange={onUpdateTheme}
+        />
+      </SidebarItem>
+
+      <SidebarItem>
+        <SidebarHeader>Templates</SidebarHeader>
+        <ComponentSelector
+          templates={Object.keys(templates)}
+          selectedTemplate={selectionId}
+          onChange={onUpdateSelection}
+        />
+      </SidebarItem>
+
+      <SidebarItem>
+        <SidebarHeader>Components</SidebarHeader>
+        <ComponentSelector
+          templates={Object.keys(components)}
+          selectedTemplate={selectionId}
+          onChange={onUpdateSelection}
+        />
+      </SidebarItem>
+
+      {variableOptions.length > 0 && (
+        <SidebarItem>
+          <SidebarHeader>Variables</SidebarHeader>
+
+          {map(variableOptions, variable => (
+            <VariableContainer key={variable.id}>
+              <VariableSelector
+                variables={variables}
+                field={variable.id}
+                selectedVariable={
+                  get(variable, "value") || get(variable, "validation.default")
+                }
+                query={variable.query}
+                mapToCollection={variable.mapToCollection}
+                mapToOption={variable.mapToOption}
+                validation={variable.validation}
+                onChange={onUpdateVariable}
+              />
+            </VariableContainer>
+          ))}
+        </SidebarItem>
+      )}
+    </Sidebar>
+  );
 }
 
 interface ThemeSelectorProps {
