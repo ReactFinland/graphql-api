@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import hexToRgba from "hex-to-rgba";
 import * as React from "react";
-import { Attendee } from "../../schema/Attendee";
+import { Attendee, AttendeeType } from "../../schema/Attendee";
 import { Theme } from "../../schema/Theme";
 
 const BadgeContainer = styled.section`
@@ -153,7 +153,16 @@ Badge.variables = [
   },
   {
     id: "attendee",
-    validation: { type: Attendee, default: "" },
+    validation: {
+      type: Attendee,
+      default: {
+        type: AttendeeType.ATTENDEE,
+        name: "John Doe",
+        twitter: "johndoe",
+        company: "John Doe Co.",
+        noPhotography: false,
+      },
+    },
   },
 ];
 

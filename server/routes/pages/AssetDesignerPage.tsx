@@ -461,7 +461,7 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
                 )
               : []
           }
-          selected={selectedVariable}
+          selected={selectedVariable || validation.default}
           onChange={({ target: { value } }) => {
             onChange(field, value);
           }}
@@ -475,12 +475,19 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
   // TODO: How to tackle SSR in this case? Shimming is problematic
   // as server won't inject _fields. Maybe reflection instead?
   if (fields) {
+    const validationDefaults = validation.default;
+
     return (
       <>
         {map(fields, ({ type, values }, id) => (
           <VariableFields
             key={id}
-            validation={{ id, type, values }}
+            validation={{
+              id,
+              type,
+              values,
+              default: validationDefaults[id],
+            }}
             selectedVariable={selectedVariable}
             onChange={onChange}
             field={`${field}.${id}`}
