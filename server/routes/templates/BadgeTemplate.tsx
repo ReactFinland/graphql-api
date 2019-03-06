@@ -14,12 +14,19 @@ interface BadgeTemplateProps {
   attendees: Attendee[];
   theme: Theme;
   id: string;
+  emptyAttendees: number;
+  emptyOrganizers: number;
+  emptySpeakers: number;
+  emptySponsors: number;
+  // TODO: Likely a better structure
+  /*
   emptyAmounts: {
     [AttendeeType.ATTENDEE]: number;
     [AttendeeType.ORGANIZER]: number;
     [AttendeeType.SPEAKER]: number;
     [AttendeeType.SPONSOR]: number;
   };
+  */
 }
 
 const defaultAttendees: Attendee[] = [
@@ -53,11 +60,19 @@ function BadgeTemplate({
   id,
   theme,
   attendees = defaultAttendees,
-  emptyAmounts,
+  emptyAttendees = 0,
+  emptyOrganizers = 0,
+  emptySpeakers = 0,
+  emptySponsors = 0,
 }: BadgeTemplateProps) {
   const badgesPerPage = 4;
   const pages = chunk(
-    getBadgeData(attendees, badgesPerPage, emptyAmounts),
+    getBadgeData(attendees, badgesPerPage, {
+      [AttendeeType.ATTENDEE]: emptyAttendees,
+      [AttendeeType.ORGANIZER]: emptyOrganizers,
+      [AttendeeType.SPEAKER]: emptySpeakers,
+      [AttendeeType.SPONSOR]: emptySponsors,
+    }),
     badgesPerPage
   );
 
@@ -103,6 +118,34 @@ BadgeTemplate.variables = [
       },
     },
   },*/
+  {
+    id: "emptyAttendees",
+    validation: {
+      type: Number,
+      default: 0,
+    },
+  },
+  {
+    id: "emptyOrganizers",
+    validation: {
+      type: Number,
+      default: 0,
+    },
+  },
+  {
+    id: "emptySpeakers",
+    validation: {
+      type: Number,
+      default: 0,
+    },
+  },
+  {
+    id: "emptySponsors",
+    validation: {
+      type: Number,
+      default: 0,
+    },
+  },
 ];
 
 interface PageProps {
@@ -165,10 +208,10 @@ function getBadgeData(
   tickets,
   badgesPerPage: number,
   emptyAmounts: { [key in AttendeeType]: number } = {
+    [AttendeeType.ATTENDEE]: 0,
     [AttendeeType.ORGANIZER]: 0,
     [AttendeeType.SPEAKER]: 0,
     [AttendeeType.SPONSOR]: 0,
-    [AttendeeType.ATTENDEE]: 0,
   }
 ) {
   const ret = tickets.concat(
