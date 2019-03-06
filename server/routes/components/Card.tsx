@@ -2,32 +2,31 @@ import styled from "@emotion/styled";
 import { Color } from "csstype";
 import * as React from "react";
 
-interface BusinessCardContainerProps {
+interface CardContainerProps {
   width: string;
   height: string;
 }
 
-interface BusinessCardBaseProps {
+interface CardBaseProps {
   backgroundColor: Color;
   textColor: Color;
 }
 
-const BusinessCardBase = styled.div`
+const CardBase = styled.div`
   position: absolute;
   padding: 5mm;
 
   width: 100%;
   height: 100%;
-  background-color: ${({ backgroundColor }: BusinessCardBaseProps) =>
-    backgroundColor};
-  color: ${({ textColor }: BusinessCardBaseProps) => textColor};
+  background-color: ${({ backgroundColor }: CardBaseProps) => backgroundColor};
+  color: ${({ textColor }: CardBaseProps) => textColor};
   backface-visibility: hidden;
-` as React.FC<BusinessCardBaseProps>;
+` as React.FC<CardBaseProps>;
 
-const BusinessCard = {
+const Card = {
   Container: styled.section`
-    width: ${({ width }: BusinessCardContainerProps) => width};
-    height: ${({ height }: BusinessCardContainerProps) => height};
+    width: ${({ width }: CardContainerProps) => width};
+    height: ${({ height }: CardContainerProps) => height};
 
     /* Animation */
     perspective: 100%;
@@ -43,11 +42,11 @@ const BusinessCard = {
         transform: rotateY(0deg);
       }
     }
-  ` as React.FC<BusinessCardContainerProps>,
-  Front: styled(BusinessCardBase)``,
-  Back: styled(BusinessCardBase)`
+  ` as React.FC<CardContainerProps>,
+  Front: styled(CardBase)``,
+  Back: styled(CardBase)`
     transform: rotateY(-180deg);
   `,
 };
 
-export default BusinessCard;
+export default Card;

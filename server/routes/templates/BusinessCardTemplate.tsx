@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import Markdown from "markdown-to-jsx";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
-import BusinessCard from "../components/BusinessCard";
+import Card from "../components/Card";
 
 interface BusinessCardTemplateContainerProps {
   id: string;
@@ -37,20 +37,20 @@ function BusinessCardTemplate({
 
   return (
     <BusinessCardTemplateContainer id={id}>
-      <BusinessCard.Container width={width} height={height}>
-        <BusinessCard.Front
+      <Card.Container width={width} height={height}>
+        <Card.Front
           backgroundColor={theme.colors.background}
           textColor={theme.colors.text}
         >
           <Markdown>{showFront ? frontText : backText}</Markdown>
-        </BusinessCard.Front>
-        <BusinessCard.Back
+        </Card.Front>
+        <Card.Back
           backgroundColor={theme.colors.background}
           textColor={theme.colors.text}
         >
           <Markdown>{showFront ? backText : frontText}</Markdown>
-        </BusinessCard.Back>
-      </BusinessCard.Container>
+        </Card.Back>
+      </Card.Container>
     </BusinessCardTemplateContainer>
   );
 }
