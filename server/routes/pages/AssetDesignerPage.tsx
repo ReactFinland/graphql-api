@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { Color, WidthProperty } from "csstype";
-import domToImage from "dom-to-image";
 import { saveAs } from "file-saver";
 import createHistory from "history/createBrowserHistory";
 import fromPairs from "lodash/fromPairs";
@@ -9,6 +8,7 @@ import map from "lodash/map";
 import set from "lodash/set";
 import queryString from "query-string";
 import * as React from "react";
+import domToImage from "retina-dom-to-image";
 import { Theme } from "../../schema/Theme";
 import * as components from "../components";
 import connect from "../components/connect";
