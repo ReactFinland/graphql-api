@@ -132,7 +132,7 @@ function HeaderTemplate({
           city: locations[0].city,
           country: locations[0].country && locations[0].country.name,
         }
-      : {};
+      : null;
   const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
   const firstDay = conferenceDays[0];
   const lastDay = conferenceDays[conferenceDays.length - 1];
@@ -152,12 +152,16 @@ function HeaderTemplate({
           useTwitterHeader={useTwitterHeader}
         />
         <HeaderInfoContainer>
-          <HeaderConferenceDays>
-            {firstDay}-{lastDay}
-          </HeaderConferenceDays>
-          <HeaderLocation>
-            {location.city}, {location.country}
-          </HeaderLocation>
+          {firstDay && lastDay && (
+            <HeaderConferenceDays>
+              {firstDay}-{lastDay}
+            </HeaderConferenceDays>
+          )}
+          {location && (
+            <HeaderLocation>
+              {location.city}, {location.country}
+            </HeaderLocation>
+          )}
         </HeaderInfoContainer>
       </PrimaryRow>
       <SecondaryRow useTwitterHeader={useTwitterHeader}>
