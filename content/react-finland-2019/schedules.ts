@@ -170,7 +170,7 @@ const presentationDay1: Schedule = {
       begin: "16:30",
       end: "17:30",
       title: "Visual",
-      sessions: [talks.brunoLourenco, talks.teroParviainen],
+      sessions: [talks.brunoLourenco],
     },
     {
       begin: "17:30",
