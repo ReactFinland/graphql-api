@@ -4,7 +4,7 @@ import map from "lodash/map";
 import complement from "polished/lib/color/complement";
 import invert from "polished/lib/color/invert";
 import * as React from "react";
-import { Theme } from "../../schema/Theme";
+import { Font, Theme } from "../../schema/Theme";
 
 interface ThemeTemplateProps {
   theme: Theme;
@@ -12,6 +12,25 @@ interface ThemeTemplateProps {
 
 const ThemeTemplateContainer = styled.section``;
 const ThemeTemplateHeader = styled.h1``;
+
+const FontsContainer = styled.section`
+  margin-top: 1em;
+  margin-bottom: 1em;
+`;
+const FontsPrimaryHeader = styled.h2`
+  margin-bottom: 0.5em;
+`;
+const FontsSecondaryHeader = styled.h3`
+  margin-bottom: 0.5em;
+`;
+
+interface FontContainerProps {
+  fontFamily: Font["family"];
+}
+
+const FontContainer = styled.div`
+  font-family: "${({ fontFamily }: FontContainerProps) => fontFamily}";
+` as React.FC<FontContainerProps>;
 
 const TextureContainer = styled.section`
   margin-top: 1em;
@@ -94,6 +113,17 @@ function ThemeTemplate({ id, theme }: ThemeTemplateProps) {
   return (
     <ThemeTemplateContainer id={id}>
       <ThemeTemplateHeader>Theme</ThemeTemplateHeader>
+      <FontsContainer>
+        <FontsPrimaryHeader>Fonts</FontsPrimaryHeader>
+        <FontsSecondaryHeader>Primary</FontsSecondaryHeader>
+        <FontContainer fontFamily={theme.fonts.primary}>
+          The quick brown fox jumps over the lazy dog
+        </FontContainer>
+        <FontsSecondaryHeader>Secondary</FontsSecondaryHeader>
+        <FontContainer fontFamily={theme.fonts.secondary}>
+          The quick brown fox jumps over the lazy dog
+        </FontContainer>
+      </FontsContainer>
       <TextureContainer>
         <TextureHeader>Texture</TextureHeader>
         <Texture src={theme.texture.url} />
