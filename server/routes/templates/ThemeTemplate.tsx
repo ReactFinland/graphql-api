@@ -13,6 +13,22 @@ interface ThemeTemplateProps {
 const ThemeTemplateContainer = styled.section``;
 const ThemeTemplateHeader = styled.h1``;
 
+const TextureContainer = styled.section`
+  margin-top: 1em;
+  margin-bottom: 1em;
+`;
+const TextureHeader = styled.h2`
+  margin-bottom: 0.5em;
+`;
+
+interface TextureProps {
+  src: HTMLImageElement["src"];
+}
+const Texture = styled.img`
+  max-width: 8em;
+  max-height: 8em;
+` as React.FC<TextureProps>;
+
 const ColorsContainer = styled.section`
   margin-top: 1em;
   margin-bottom: 1em;
@@ -44,7 +60,8 @@ const LogoHeader = styled.h2`
 
 interface LogoProps {
   property: string;
-  src: string;
+  alt: HTMLImageElement["alt"];
+  src: HTMLImageElement["src"];
 }
 const LogoContainer = styled.section`
   margin-right: 1em;
@@ -57,7 +74,7 @@ const Logo = styled.img`
   max-height: 8em;
   background-color: ${({ property }: LogoProps) =>
     tryTo(() => invert(property), "")};
-`;
+` as React.FC<LogoProps>;
 const LogoLabel = styled.label``;
 
 function tryTo(fn, defaultValue) {
@@ -77,6 +94,10 @@ function ThemeTemplate({ id, theme }: ThemeTemplateProps) {
   return (
     <ThemeTemplateContainer id={id}>
       <ThemeTemplateHeader>Theme</ThemeTemplateHeader>
+      <TextureContainer>
+        <TextureHeader>Texture</TextureHeader>
+        <Texture src={theme.texture.url} />
+      </TextureContainer>
       <ColorsContainer>
         <ColorHeader>Colors</ColorHeader>
         {map(theme.colors, (color, colorProperty) => (
