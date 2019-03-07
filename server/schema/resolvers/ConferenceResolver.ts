@@ -50,7 +50,6 @@ class ConferenceResolver {
     return getSessionSpeakers(conference, conference.talks);
   }
 
-  // TODO: Resolve against CSV based on a convention
   @FieldResolver(_ => [Attendee])
   public attendees(@Root() conference: Conference, @Ctx() ctx: IContext) {
     return loadAttendees(
