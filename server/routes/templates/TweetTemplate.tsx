@@ -5,6 +5,7 @@ import get from "lodash/get";
 import map from "lodash/map";
 import * as React from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
+import titleCase from "to-title-case";
 import { Conference } from "../../schema/Conference";
 import { Contact, ContactType } from "../../schema/Contact";
 import { Theme } from "../../schema/Theme";
@@ -39,10 +40,6 @@ const TweetPageContainer = styled.div`
   color: white;
 `;
 
-const TweetInfoContainer = styled.div`
-  padding: 3em 0 3em 3em;
-`;
-
 const TweetContainer = styled.div`
   position: relative;
   margin-top: 2em;
@@ -50,7 +47,7 @@ const TweetContainer = styled.div`
   max-width: 880px;
   background-color: #fff6c8;
 `;
-const TweetText = styled.span`
+const TweetTextToCopy = styled.span`
   margin-right: 0.5em;
 `;
 const TweetCopyButton = styled.button`
@@ -73,23 +70,7 @@ const TweetLogo = styled.img`
 
 const TweetConferenceDays = styled.h3``;
 
-const TweetImageContainer = styled.div`
-  padding: 3em;
-`;
-
-interface TweetImageProps {
-  isCircle?: boolean;
-  src: HTMLImageElement["src"];
-}
-
-const TweetImage = styled.img`
-  width: 100%;
-  box-sizing: border-box;
-  clip-path: ${({ isCircle }: TweetImageProps) =>
-    isCircle ? "circle(9em at center)" : ""};
-` as React.FC<TweetImageProps>;
-
-const TweetName = styled.h1`
+const TweetText = styled.h2`
   padding-top: 1em;
   font-size: 300%;
 `;
@@ -142,7 +123,7 @@ function SpeakerTweetTemplate({
         )}
       </TweetPageContainer>
       <TweetContainer>
-        <TweetText>{tweetTextToCopy}</TweetText>
+        <TweetTextToCopy>{tweetTextToCopy}</TweetTextToCopy>
         <CopyToClipboard
           text={tweetTextToCopy}
           onCopy={() => alert("Copied to clipboard")}
@@ -169,6 +150,26 @@ interface TweetProps {
   contact: Contact;
 }
 
+const TweetInfoContainer = styled.div`
+  padding: 3em 0 3em 3em;
+`;
+
+const TweetImageContainer = styled.div`
+  padding: 3em;
+`;
+
+interface TweetImageProps {
+  isCircle?: boolean;
+  src: HTMLImageElement["src"];
+}
+
+const TweetImage = styled.img`
+  width: 100%;
+  box-sizing: border-box;
+  clip-path: ${({ isCircle }: TweetImageProps) =>
+    isCircle ? "circle(9em at center)" : ""};
+` as React.FC<TweetImageProps>;
+
 function SpeakerTweet({ logo, days, contact: { image, talks } }: TweetProps) {
   return (
     <>
@@ -177,7 +178,7 @@ function SpeakerTweet({ logo, days, contact: { image, talks } }: TweetProps) {
           <TweetLogo src={logo} />
           <TweetConferenceDays>{days}</TweetConferenceDays>
         </TweetRow>
-        <TweetName>{name}</TweetName>
+        <TweetText>{name}</TweetText>
         <TweetDescription>
           {Array.isArray(talks) && talks.length > 0 && talks[0].title}
         </TweetDescription>
@@ -189,7 +190,28 @@ function SpeakerTweet({ logo, days, contact: { image, talks } }: TweetProps) {
   );
 }
 
-function SponsorTweet({ logo, days, contact: { about, image } }: TweetProps) {
+const TweetSponsorContainer = styled.div`
+  padding: 3em;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+`;
+
+const TweetSponsorImage = styled(TweetImage)`
+  margin-top: 3em;
+  max-height: 6cm;
+`;
+
+const TweetSponsorText = styled(TweetText)`
+  padding-top: 0;
+  text-align: center;
+`;
+
+function SponsorTweet({
+  logo,
+  days,
+  contact: { about, image, type },
+}: TweetProps) {
   return (
     <>
       <TweetInfoContainer>
@@ -197,14 +219,19 @@ function SponsorTweet({ logo, days, contact: { about, image } }: TweetProps) {
           <TweetLogo src={logo} />
           <TweetConferenceDays>{days}</TweetConferenceDays>
         </TweetRow>
-        <TweetName>{name}</TweetName>
-        <TweetDescription>{about}</TweetDescription>
+        <TweetSponsorImage src={image.url} />
       </TweetInfoContainer>
-      <TweetImageContainer>
-        <TweetImage src={image.url} />
-      </TweetImageContainer>
+      <TweetSponsorContainer>
+        <TweetDescription>{about}</TweetDescription>
+
+        <TweetSponsorText>{getSponsorType(type)}</TweetSponsorText>
+      </TweetSponsorContainer>
     </>
   );
+}
+
+function getSponsorType(type: Contact["type"]) {
+  return titleCase(type.filter(t => t !== ContactType.SPONSOR)[0]);
 }
 
 const ConnectedSpeakerTweetTemplate = connect(
