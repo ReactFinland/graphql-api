@@ -1,12 +1,16 @@
 import { json, urlencoded } from "body-parser";
 import compression from "compression";
 import express from "express";
+import helmet from "helmet";
 import morgan from "morgan";
 import logger from "./logger";
 import createRouter from "./routes";
 
 async function createApp() {
   const app = express();
+
+  // Wear a helmet for extra security.
+  app.use(helmet());
 
   // Use compression (gzip) for responses.
   app.use(compression());
