@@ -8,19 +8,23 @@ TypeGraphQL = {
   Authorized: dummyDecorator,
   Ctx: dummyDecorator,
   registerEnumType: dummyFn,
-  Field: typeFn => (instance, field) => {
+  Field: typeFn => (fieldInstance, field) => {
     const metaField = "_fields";
     // It should be possible to write to the meta field but
     // not to enumerate it since it should be hidden.
-    Object.defineProperty(instance.__proto__, metaField, {
+    Object.defineProperty(fieldInstance.__proto__, metaField, {
       enumerable: false,
       writable: true,
     });
 
     // Create the meta field if it doesn't exist yet.
-    const fields = instance.__proto__[metaField] || {};
+    const fields = fieldInstance.__proto__[metaField] || {};
     let type = typeFn();
     let values;
+
+    if (!fieldInstance.__proto__[metaField]) {
+      fieldInstance.__proto__[metaField] = {};
+    }
 
     // Handle enums.
     if (typeof type === "object") {
@@ -28,9 +32,20 @@ TypeGraphQL = {
       type = "enum";
     }
 
-    instance.__proto__[metaField] = {
+    const existingFields =
+      fieldInstance.__proto__[metaField][fieldInstance.constructor.name] || {};
+
+    fieldInstance.__proto__[metaField] = {
       ...fields,
-      [field]: { type, default: "", values },
+      [fieldInstance.constructor.name]: {
+        ...existingFields,
+        [field]: {
+          type,
+          default: "",
+          values,
+          from: [fieldInstance.constructor.name],
+        },
+      },
     };
   },
   FieldResolver: dummyDecorator,

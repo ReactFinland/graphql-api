@@ -167,7 +167,7 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
     );
   }
 
-  const fields = validation.type._fields;
+  const fields = validation.type._fields[validation.type.name];
 
   if (fields) {
     const validationDefaults = validation.default;

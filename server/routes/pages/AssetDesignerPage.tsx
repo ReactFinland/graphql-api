@@ -178,15 +178,16 @@ function AssetDesignerPage({
 
 function initializeVariables(selectionId) {
   const selection = getSelection(selectionId) || {};
+  const queryParameters = get(
+    queryString.parse(location.search),
+    "variables",
+    "{}"
+  );
   let queryVariables = {};
 
   try {
     // TODO: Figure out how to eliminate "as"
-    queryVariables = JSON.parse(get(
-      queryString.parse(location.search),
-      "variables",
-      "{}"
-    ) as string);
+    queryVariables = JSON.parse(queryParameters as string);
   } catch (err) {
     console.log(err);
   }
