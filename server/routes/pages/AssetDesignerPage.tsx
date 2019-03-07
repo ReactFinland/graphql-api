@@ -12,6 +12,7 @@ import * as React from "react";
 import { Theme } from "../../schema/Theme";
 import * as components from "../components";
 import connect from "../components/connect";
+import GlobalStyles from "../components/GlobalStyles";
 import Select from "../components/Select";
 import VariableSelector from "../components/VariableSelector";
 import { themesQuery } from "../queries";
@@ -148,6 +149,7 @@ function AssetDesignerPage({
 
   return (
     <AssetDesignerContainer width={sideBarWidth}>
+      <GlobalStyles />
       <AssetDesignerSidebar
         themes={themes}
         theme={theme}
