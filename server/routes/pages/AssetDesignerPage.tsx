@@ -149,7 +149,7 @@ function AssetDesignerPage({
 
   return (
     <AssetDesignerContainer width={sideBarWidth}>
-      <GlobalStyles />
+      <GlobalStyles fonts={theme.fonts} />
       <AssetDesignerSidebar
         themes={themes}
         theme={theme}

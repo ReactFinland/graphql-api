@@ -10,6 +10,17 @@ fragment themeFragment on Theme {
     text
     background
   }
+  fonts {
+    primary
+    secondary
+    variants {
+      family
+      weight
+      style
+      fileName
+      formats
+    }
+  }
   logos {
     black {
       ...logoFragment

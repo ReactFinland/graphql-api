@@ -21,6 +21,26 @@ const conferenceSeries: {
         text: "#111",
         background: "#eee",
       },
+      fonts: {
+        primary: "Finlandica",
+        secondary: "Finlandica Bold",
+        variants: [
+          {
+            family: "Finlandica",
+            weight: "normal",
+            style: "normal",
+            fileName: "/media/fonts/finlandica-regular",
+            formats: ["woff2", "woff", "ttf"],
+          },
+          {
+            family: "Finlandica Bold",
+            weight: "bold",
+            style: "normal",
+            fileName: "/media/fonts/finlandica-bold",
+            formats: ["woff2", "woff", "ttf"],
+          },
+        ],
+      },
       logos: {
         black: {
           withText: {
@@ -61,6 +81,26 @@ const conferenceSeries: {
         secondary: "#ff1eb6",
         text: "#233239",
         background: "#eee",
+      },
+      fonts: {
+        primary: "Finlandica",
+        secondary: "Finlandica Bold",
+        variants: [
+          {
+            family: "Finlandica",
+            weight: "normal",
+            style: "normal",
+            fileName: "/media/fonts/finlandica-regular",
+            formats: ["woff2", "woff", "ttf"],
+          },
+          {
+            family: "Finlandica Bold",
+            weight: "bold",
+            style: "normal",
+            fileName: "/media/fonts/finlandica-bold",
+            formats: ["woff2", "woff", "ttf"],
+          },
+        ],
       },
       logos: {
         black: {
