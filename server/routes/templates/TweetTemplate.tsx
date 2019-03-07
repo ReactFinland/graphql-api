@@ -78,7 +78,7 @@ const TweetImageContainer = styled.div`
 `;
 
 interface TweetImageProps {
-  isCircle: boolean;
+  isCircle?: boolean;
   src: HTMLImageElement["src"];
 }
 
@@ -89,19 +89,19 @@ const TweetImage = styled.img`
     isCircle ? "circle(9em at center)" : ""};
 ` as React.FC<TweetImageProps>;
 
-const TweetSpeakerName = styled.h1`
+const TweetName = styled.h1`
   padding-top: 1em;
   font-size: 300%;
 `;
 
-const TweetSpeakerDescription = styled.h2`
+const TweetDescription = styled.h2`
   padding-top: 0.5em;
   font-size: 200%;
 `;
 
 interface SpeakerTweetTemplateProps {
   conference?: Conference;
-  contact?: Contact;
+  contact: Contact;
   theme: Theme;
   id: string;
 }
@@ -116,25 +116,11 @@ function SpeakerTweetTemplate({
     return null;
   }
 
-  const { schedules } = conference;
-  const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
-  const firstDay = conferenceDays[0];
-  const lastDay = conferenceDays[conferenceDays.length - 1];
-  const { about, name, image, talks, type } = contact || {
-    about: "",
-    name: "",
-    image: { url: "" },
-    talks: [],
-    type: null,
-  };
-  const isSponsor = type && type.includes(ContactType.SPONSOR);
-  const description = isSponsor
-    ? about
-    : Array.isArray(talks) && talks.length > 0 && talks[0].title;
+  const days = getConferenceDays(conference);
   // TODO: Set up conference.hashtag (should not contain #)
-  const tweetTextToCopy = `Learn more about ${description} by ${name} at #${conference.name
+  const tweetTextToCopy = `Learn more about the topic at #${conference.name
     .split(" ")
-    .join("")} (${firstDay}-${lastDay})`;
+    .join("")} (${days})`;
 
   return (
     <TweetTemplateContainer>
@@ -144,19 +130,16 @@ function SpeakerTweetTemplate({
         secondaryColor={theme.colors.secondary}
         texture={theme.texture.url}
       >
-        <TweetInfoContainer>
-          <TweetRow>
-            <TweetLogo src={theme.logos.white.withText.url} />
-            <TweetConferenceDays>
-              {firstDay}-{lastDay}
-            </TweetConferenceDays>
-          </TweetRow>
-          <TweetSpeakerName>{name}</TweetSpeakerName>
-          <TweetSpeakerDescription>{description}</TweetSpeakerDescription>
-        </TweetInfoContainer>
-        <TweetImageContainer>
-          <TweetImage isCircle={!isSponsor} src={image.url} />
-        </TweetImageContainer>
+        {React.createElement(
+          contact.type.includes(ContactType.SPONSOR)
+            ? SponsorTweet
+            : SpeakerTweet,
+          {
+            logo: theme.logos.white.withText.url,
+            days,
+            contact,
+          }
+        )}
       </TweetPageContainer>
       <TweetContainer>
         <TweetText>{tweetTextToCopy}</TweetText>
@@ -168,6 +151,59 @@ function SpeakerTweetTemplate({
         </CopyToClipboard>
       </TweetContainer>
     </TweetTemplateContainer>
+  );
+}
+
+function getConferenceDays(conference): string {
+  const { schedules } = conference;
+  const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
+  const firstDay = conferenceDays[0];
+  const lastDay = conferenceDays[conferenceDays.length - 1];
+
+  return `${firstDay}-${lastDay}`;
+}
+
+interface TweetProps {
+  logo: string;
+  days: string;
+  contact: Contact;
+}
+
+function SpeakerTweet({ logo, days, contact: { image, talks } }: TweetProps) {
+  return (
+    <>
+      <TweetInfoContainer>
+        <TweetRow>
+          <TweetLogo src={logo} />
+          <TweetConferenceDays>{days}</TweetConferenceDays>
+        </TweetRow>
+        <TweetName>{name}</TweetName>
+        <TweetDescription>
+          {Array.isArray(talks) && talks.length > 0 && talks[0].title}
+        </TweetDescription>
+      </TweetInfoContainer>
+      <TweetImageContainer>
+        <TweetImage isCircle src={image.url} />
+      </TweetImageContainer>
+    </>
+  );
+}
+
+function SponsorTweet({ logo, days, contact: { about, image } }: TweetProps) {
+  return (
+    <>
+      <TweetInfoContainer>
+        <TweetRow>
+          <TweetLogo src={logo} />
+          <TweetConferenceDays>{days}</TweetConferenceDays>
+        </TweetRow>
+        <TweetName>{name}</TweetName>
+        <TweetDescription>{about}</TweetDescription>
+      </TweetInfoContainer>
+      <TweetImageContainer>
+        <TweetImage src={image.url} />
+      </TweetImageContainer>
+    </>
   );
 }
 
