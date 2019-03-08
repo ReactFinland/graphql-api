@@ -4,7 +4,7 @@ import speaker from "../../people/ville-immonen";
 
 const talk: Session = {
   people: [speaker],
-  title: "Mysterious Expo talk",
+  title: "",
   description: ``,
   type: SessionType.TALK,
   keywords: [Keyword.REACT_NATIVE],

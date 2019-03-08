@@ -3,7 +3,7 @@ import speaker from "../../people/kadi-kraman";
 
 const talk: Session = {
   people: [speaker],
-  title: "Mysterious talk",
+  title: "",
   description: ``,
   type: SessionType.LIGHTNING_TALK,
   keywords: [],

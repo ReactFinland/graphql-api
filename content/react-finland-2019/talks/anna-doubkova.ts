@@ -3,7 +3,7 @@ import speaker from "../../people/anna-doubkova";
 
 const talk: Session = {
   people: [speaker],
-  title: "Mysterious case study",
+  title: "",
   description: ``,
   type: SessionType.TALK,
   keywords: [],

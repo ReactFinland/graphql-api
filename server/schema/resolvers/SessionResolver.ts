@@ -8,6 +8,11 @@ class SessionResolver {
   public speakers(@Root() session: Session) {
     return session.people || [];
   }
+
+  @FieldResolver(_ => String)
+  public title(@Root() session: Session) {
+    return session.title || "Mysterious talk";
+  }
 }
 
 export default SessionResolver;

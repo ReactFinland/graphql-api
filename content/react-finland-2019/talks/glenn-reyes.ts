@@ -3,7 +3,7 @@ import speaker from "../../people/glenn-reyes";
 
 const talk: Session = {
   people: [speaker],
-  title: "Mysterious talk",
+  title: "",
   description: ``,
   type: SessionType.LIGHTNING_TALK,
   keywords: [],

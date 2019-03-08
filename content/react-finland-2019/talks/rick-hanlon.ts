@@ -3,7 +3,7 @@ import speaker from "../../people/rick-hanlon";
 
 const talk: Session = {
   people: [speaker],
-  title: "Mysterious keynote",
+  title: "",
   description: ``,
   type: SessionType.KEYNOTE,
   keywords: [],
