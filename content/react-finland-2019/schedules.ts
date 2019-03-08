@@ -153,7 +153,7 @@ const presentationDay1: Schedule = {
       begin: "15:00",
       end: "16:00",
       title: "Case Studies",
-      sessions: [talks.nikGraf, talks.kadiKraman, talks.glennReyes],
+      sessions: [talks.kadiKraman, talks.glennReyes, talks.dustinSchau],
     },
     {
       begin: "16:00",
@@ -170,7 +170,7 @@ const presentationDay1: Schedule = {
       begin: "16:30",
       end: "17:30",
       title: "Visual",
-      sessions: [talks.brunoLourenco],
+      sessions: [talks.brunoLourenco, talks.nikGraf],
     },
     {
       begin: "17:30",

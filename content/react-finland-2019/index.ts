@@ -43,6 +43,7 @@ const bronzeSponsors = [
   allSponsors.columbiaroad,
   allSponsors.fb,
   allSponsors.formidable,
+  allSponsors.gatsby,
   allSponsors.ginetta,
   allSponsors.netum,
   allSponsors.meiko,

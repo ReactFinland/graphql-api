@@ -5,7 +5,7 @@ const talk: Session = {
   people: [speaker],
   title: "Mysterious talk",
   description: ``,
-  type: SessionType.TALK,
+  type: SessionType.LIGHTNING_TALK,
   keywords: [],
 };
 

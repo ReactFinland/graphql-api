@@ -14,6 +14,7 @@ export { default as christianAlfoni } from "./christian-alfoni";
 export { default as christofferNiska } from "./christoffer-niska";
 export { default as danSchafer } from "./dan-schafer";
 export { default as davidKhourshid } from "./david-khourshid";
+export { default as dustinSchau } from "./dustin-schau";
 export { default as eemeliAro } from "./eemeli-aro";
 export { default as ellieDay } from "./ellie-day";
 export { default as eloyDuran } from "./eloy-duran";
