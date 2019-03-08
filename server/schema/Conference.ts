@@ -59,11 +59,11 @@ export class Conference {
   @Field(_ => [Contact], { nullable: true })
   public speakers?: Contact[];
 
-  @Field(_ => [Session])
-  public talks!: Session[];
+  @Field(_ => [Session], { nullable: true })
+  public talks?: Session[];
 
-  @Field(_ => [Session])
-  public workshops!: Session[];
+  @Field(_ => [Session], { nullable: true })
+  public workshops?: Session[];
 
   @Field(_ => [Attendee])
   public attendees?: Attendee[];

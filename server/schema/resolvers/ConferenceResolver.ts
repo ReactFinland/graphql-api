@@ -1,4 +1,6 @@
 import kebabCase from "just-kebab-case";
+import flatMap from "lodash/flatMap";
+import uniq from "lodash/uniq";
 import * as path from "path";
 import {
   Arg,
@@ -14,7 +16,9 @@ import { Attendee } from "../Attendee";
 import { Conference, getConference } from "../Conference";
 import { Contact, getSessionSpeakers } from "../Contact";
 import { IContext } from "../Context";
+import { Schedule } from "../Schedule";
 import { Series } from "../Series";
+import { SessionType } from "../Session";
 import series from "./conferenceSeries";
 import loadAttendees from "./load-attendees";
 
@@ -61,6 +65,29 @@ class ConferenceResolver {
       )}.csv`
     );
   }
+
+  @FieldResolver(_ => [Attendee])
+  public talks(@Root() conference: Conference) {
+    return resolveSessions(conference.schedules, [
+      SessionType.LIGHTNING_TALK,
+      SessionType.TALK,
+    ]);
+  }
+
+  @FieldResolver(_ => [Attendee])
+  public workshops(@Root() conference: Conference) {
+    return resolveSessions(conference.schedules, [SessionType.WORKSHOP]);
+  }
+}
+
+function resolveSessions(schedules: Schedule[], sessionTypes: SessionType[]) {
+  return flatMap(schedules, ({ intervals }) =>
+    uniq(
+      flatMap(intervals, ({ sessions }) =>
+        sessions.filter(({ type }) => sessionTypes.includes(type))
+      )
+    )
+  );
 }
 
 export default ConferenceResolver;

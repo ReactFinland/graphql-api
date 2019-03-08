@@ -68,13 +68,17 @@ export function getSessionSpeakers(
 
   return speakers.map(speaker => ({
     ...speaker,
-    talks: conference.talks.filter(
-      ({ people }) =>
-        people && people.find(person => person.name === speaker.name)
-    ),
-    workshops: conference.workshops.filter(
-      ({ people }) =>
-        people && people.find(person => person.name === speaker.name)
-    ),
+    talks: conference.talks
+      ? conference.talks.filter(
+          ({ people }) =>
+            people && people.find(person => person.name === speaker.name)
+        )
+      : [],
+    workshops: conference.workshops
+      ? conference.workshops.filter(
+          ({ people }) =>
+            people && people.find(person => person.name === speaker.name)
+        )
+      : [],
   }));
 }
