@@ -152,6 +152,8 @@ interface TweetProps {
 
 const TweetInfoContainer = styled.div`
   padding: 3em 0 3em 3em;
+  display: grid;
+  justify-content: center;
 `;
 
 const TweetImageContainer = styled.div`
@@ -204,6 +206,8 @@ const TweetSponsorContainer = styled.div`
 const TweetSponsorImage = styled(TweetImage)`
   margin-top: 3em;
   max-height: 6cm;
+  max-width: 100%;
+  width: auto;
 `;
 
 const TweetSponsorText = styled(TweetText)`
