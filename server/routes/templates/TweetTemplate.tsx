@@ -170,7 +170,11 @@ const TweetImage = styled.img`
     isCircle ? "circle(9em at center)" : ""};
 ` as React.FC<TweetImageProps>;
 
-function SpeakerTweet({ logo, days, contact: { image, talks } }: TweetProps) {
+function SpeakerTweet({
+  logo,
+  days,
+  contact: { name, image, talks },
+}: TweetProps) {
   return (
     <>
       <TweetInfoContainer>
