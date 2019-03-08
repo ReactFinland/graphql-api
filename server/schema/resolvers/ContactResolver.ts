@@ -12,6 +12,8 @@ import { Contact, getSessionSpeakers } from "../Contact";
 import { IContext } from "../Context";
 import { Country } from "../Country";
 import { Image } from "../Image";
+import { resolveSessions } from "../Schedule";
+import SessionType from "../SessionType";
 import { Social } from "../Social";
 
 @Resolver(_ => Contact)
@@ -28,13 +30,19 @@ class ContactResolver {
     const organizer = Object.values(conference.organizers).find(
       ({ name }) => name === contactName
     );
-    const speaker = getSessionSpeakers(conference, conference.talks).find(
+    const talks = resolveSessions(conference.schedules, [
+      SessionType.LIGHTNING_TALK,
+      SessionType.TALK,
+    ]);
+    const speaker = getSessionSpeakers(conference, talks).find(
       ({ name }) => name === contactName
     );
-    const workshopInstructor = getSessionSpeakers(
-      conference,
-      conference.workshops
-    ).find(({ name }) => name === contactName);
+    const workshops = resolveSessions(conference.schedules, [
+      SessionType.WORKSHOP,
+    ]);
+    const workshopInstructor = getSessionSpeakers(conference, workshops).find(
+      ({ name }) => name === contactName
+    );
     const mc =
       conference.mcs && conference.mcs.find(({ name }) => name === contactName);
     const contact = sponsor || organizer || speaker || workshopInstructor || mc;
