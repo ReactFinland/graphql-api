@@ -95,7 +95,7 @@ function ScheduleTemplate({
       id={id}
       primaryColor={theme.colors.primary}
       secondaryColor={theme.colors.secondary}
-      texture={theme.texture.url}
+      texture={theme.textures[0].url}
     >
       <ScheduleTemplateLogo src={theme.logos.white.withText.url} />
       <ScheduleTemplateHeader>

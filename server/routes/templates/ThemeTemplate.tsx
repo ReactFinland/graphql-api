@@ -32,7 +32,7 @@ const FontContainer = styled.div`
   font-family: "${({ fontFamily }: FontContainerProps) => fontFamily}";
 ` as React.FC<FontContainerProps>;
 
-const TextureContainer = styled.section`
+const TexturesContainer = styled.section`
   margin-top: 1em;
   margin-bottom: 1em;
 `;
@@ -124,10 +124,12 @@ function ThemeTemplate({ id, theme }: ThemeTemplateProps) {
           The quick brown fox jumps over the lazy dog
         </FontContainer>
       </FontsContainer>
-      <TextureContainer>
-        <TextureHeader>Texture</TextureHeader>
-        <Texture src={theme.texture.url} />
-      </TextureContainer>
+      <TexturesContainer>
+        <TextureHeader>Textures</TextureHeader>
+        {map(theme.textures, (texture, index) => (
+          <Texture key={index} src={texture.url} />
+        ))}
+      </TexturesContainer>
       <ColorsContainer>
         <ColorHeader>Colors</ColorHeader>
         {map(theme.colors, (color, colorProperty) => (

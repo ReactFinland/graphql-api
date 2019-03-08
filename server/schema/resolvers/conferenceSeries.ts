@@ -14,7 +14,7 @@ const conferenceSeries: {
     conferences: ["react-finland-2018", "react-finland-2019"],
     theme: {
       id: "react-finland",
-      texture: { url: "/media/assets/wave.svg" },
+      textures: [{ url: "/media/assets/wave.svg" }],
       colors: {
         primary: "#002fa9",
         secondary: "#5297e9",
@@ -75,7 +75,7 @@ const conferenceSeries: {
     conferences: ["graphql-finland-2018"],
     theme: {
       id: "graphql-finland",
-      texture: { url: "/media/assets/wave.svg" },
+      textures: [{ url: "/media/assets/wave.svg" }],
       colors: {
         primary: "#e10098",
         secondary: "#ff1eb6",

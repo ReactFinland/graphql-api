@@ -85,7 +85,7 @@ function BadgeTemplate({
           key={i}
           defaultColor={theme.colors.primary}
           logo={theme.logos.white.withText.url}
-          texture={theme.texture.url}
+          texture={theme.textures[0].url}
           tickets={tickets}
         />
       ))}

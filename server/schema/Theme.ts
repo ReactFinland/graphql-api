@@ -73,11 +73,12 @@ export class Theme {
   @Field(_ => ID)
   public id!: string;
 
+  // TODO: Convert to an array (more flexible than primary/secondary)
   @Field(_ => Fonts)
   public fonts!: Fonts;
 
   @Field(_ => Image)
-  public texture!: Image;
+  public textures!: [Image];
 
   @Field(_ => Colors)
   public colors!: Colors;

@@ -143,7 +143,7 @@ function HeaderTemplate({
       primaryColor={theme.colors.primary}
       secondaryColor={theme.colors.secondary}
       useTwitterHeader={useTwitterHeader}
-      texture={theme.texture.url}
+      texture={theme.textures[0].url}
     >
       {showTwitterSafeArea && <TwitterOverlay />}
       <PrimaryRow useTwitterHeader={useTwitterHeader}>

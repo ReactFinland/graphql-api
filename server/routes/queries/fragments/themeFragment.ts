@@ -1,7 +1,7 @@
 const themeFragment = `
 fragment themeFragment on Theme {
   id
-  texture {
+  textures {
     url
   }
   colors {

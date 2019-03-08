@@ -109,7 +109,7 @@ function SpeakerTweetTemplate({
         id={id}
         primaryColor={theme.colors.primary}
         secondaryColor={theme.colors.secondary}
-        texture={theme.texture.url}
+        texture={theme.textures[0].url}
       >
         {React.createElement(
           contact.type.includes(ContactType.SPONSOR)
