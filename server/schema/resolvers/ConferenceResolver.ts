@@ -12,13 +12,12 @@ import {
   Root,
 } from "type-graphql";
 import conferences from "../../conferences";
-import { Attendee } from "../Attendee";
 import { Conference, getConference } from "../Conference";
 import { Contact, getSessionSpeakers } from "../Contact";
 import { IContext } from "../Context";
 import { Schedule } from "../Schedule";
 import { Series } from "../Series";
-import { SessionType } from "../Session";
+import { Session, SessionType } from "../Session";
 import series from "./conferenceSeries";
 import loadAttendees from "./load-attendees";
 
@@ -54,7 +53,7 @@ class ConferenceResolver {
     return getSessionSpeakers(conference, conference.talks);
   }
 
-  @FieldResolver(_ => [Attendee])
+  @FieldResolver(_ => [Contact])
   public attendees(@Root() conference: Conference, @Ctx() ctx: IContext) {
     return loadAttendees(
       conference,
@@ -66,7 +65,7 @@ class ConferenceResolver {
     );
   }
 
-  @FieldResolver(_ => [Attendee])
+  @FieldResolver(_ => [Session])
   public talks(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [
       SessionType.LIGHTNING_TALK,
@@ -74,7 +73,7 @@ class ConferenceResolver {
     ]);
   }
 
-  @FieldResolver(_ => [Attendee])
+  @FieldResolver(_ => [Session])
   public workshops(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [SessionType.WORKSHOP]);
   }

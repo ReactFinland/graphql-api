@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
+import trimStart from "lodash/trimStart";
 import * as React from "react";
-import { Attendee, AttendeeType } from "../../schema/Attendee";
+import { Contact, ContactType } from "../../schema/Contact";
 import { Theme } from "../../schema/Theme";
 import Card from "../components/Card";
 
@@ -37,7 +38,7 @@ const BadgeContainer = styled(Card.Container)`
 
 interface BadgeBaseProps {
   defaultColor: Color;
-  type: AttendeeType;
+  type: ContactType;
   texture: string;
   opacity?: {
     upper: number;
@@ -64,10 +65,10 @@ function resolveBackground({
   },
 }: BadgeBaseProps) {
   const colors = {
-    [AttendeeType.ATTENDEE]: defaultColor,
-    [AttendeeType.ORGANIZER]: "#6d0b4d",
-    [AttendeeType.SPEAKER]: "#d01a1a",
-    [AttendeeType.SPONSOR]: "#67d67b",
+    [ContactType.ATTENDEE]: defaultColor,
+    [ContactType.ORGANIZER]: "#6d0b4d",
+    [ContactType.SPEAKER]: "#d01a1a",
+    [ContactType.SPONSOR]: "#67d67b",
   };
   const color = colors[type];
 
@@ -124,7 +125,7 @@ const BadgeType = styled.h3`
 interface BadgeProps {
   defaultColor: Color;
   logo: Theme["logos"]["white"]["withText"]["url"];
-  attendee: Attendee;
+  attendee: Contact;
   texture: string;
 }
 
@@ -134,13 +135,24 @@ function Badge({ defaultColor, logo, texture, attendee }: BadgeProps) {
     return <>No attendee!</>;
   }
 
-  const { type, name, twitter, company } = attendee;
+  const {
+    type,
+    name,
+    social: { twitter },
+    company,
+  } = attendee;
+
+  // TODO: Drop the trimStart bit -> Needs a schema change
   const frontContent = (
     <>
       <BadgeLogo src={logo} />
       <BadgeContent>
         <BadgeName>{name}</BadgeName>
-        {twitter && <BadgeTwitter>@{twitter}</BadgeTwitter>}
+        {trimStart(twitter, "https://twitter.com/") && (
+          <BadgeTwitter>
+            @{trimStart(twitter, "https://twitter.com/")}
+          </BadgeTwitter>
+        )}
         {company && <BadgeCompany>{company}</BadgeCompany>}
       </BadgeContent>
       {type && <BadgeType>{type}</BadgeType>}
@@ -152,13 +164,14 @@ function Badge({ defaultColor, logo, texture, attendee }: BadgeProps) {
   const width = "10.49cm";
   const height = "14.4cm";
 
-  // TODO: Eliminate BadgeContainer
+  // TODO: Eliminate BadgeContainer?
+  // TODO: What if an attendee has multiple types at once?
   return (
     <BadgeContainer width={width} height={height}>
-      <BadgeFront defaultColor={defaultColor} texture={texture} type={type}>
+      <BadgeFront defaultColor={defaultColor} texture={texture} type={type[0]}>
         {frontContent}
       </BadgeFront>
-      <BadgeBack defaultColor={defaultColor} texture={texture} type={type}>
+      <BadgeBack defaultColor={defaultColor} texture={texture} type={type[0]}>
         {backContent}
       </BadgeBack>
     </BadgeContainer>
@@ -181,9 +194,9 @@ Badge.variables = [
   {
     id: "attendee",
     validation: {
-      type: Attendee,
+      type: Contact,
       default: {
-        type: AttendeeType.ATTENDEE,
+        type: ContactType.ATTENDEE,
         name: "John Doe",
         twitter: "johndoe",
         company: "John Doe Co.",

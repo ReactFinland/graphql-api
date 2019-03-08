@@ -6,8 +6,8 @@ import map from "lodash/map";
 import mapValues from "lodash/mapValues";
 import trimStart from "lodash/trimStart";
 import upperFirst from "lodash/upperFirst";
-import { Attendee, AttendeeType } from "../Attendee";
 import { Conference } from "../Conference";
+import { Contact, ContactType } from "../Contact";
 
 function loadAttendees(conference: Conference, csvPath: string) {
   if (fs.statSync(csvPath)) {
@@ -29,7 +29,7 @@ function getSponsorNames(conference: Conference): string[] {
   );
 }
 
-function convertData(sponsorNames, tickets): Attendee[] {
+function convertData(sponsorNames, tickets): Contact[] {
   return map(
     filter(
       map(tickets, row => mapValues(row, v => (v === "-" ? null : v))),
@@ -38,8 +38,15 @@ function convertData(sponsorNames, tickets): Attendee[] {
     row => ({
       name: getName(row),
       company: getCompany(row),
-      type: getType(sponsorNames, row.Ticket || row["Ticket Type"], row.Email),
-      twitter: getTwitter(row.Twitter || row["What's your Twitter handle?"]),
+      about: "", // TODO
+      image: { url: "" }, // TODO
+      location: {}, // TODO
+      type: [
+        getType(sponsorNames, row.Ticket || row["Ticket Type"], row.Email),
+      ],
+      social: {
+        twitter: getTwitter(row.Twitter || row["What's your Twitter handle?"]),
+      },
     })
   );
 }
@@ -65,24 +72,24 @@ function getCompany(row): string {
 
 function getType(sponsorNames, type: string, email: string) {
   if (isSponsor(sponsorNames, email)) {
-    return AttendeeType.SPONSOR;
+    return ContactType.SPONSOR;
   }
 
   switch (type) {
     case "Organizer": {
-      return AttendeeType.ORGANIZER;
+      return ContactType.ORGANIZER;
     }
     case "Volunteer": {
-      return AttendeeType.ORGANIZER;
+      return ContactType.ORGANIZER;
     }
     case "Sponsor": {
-      return AttendeeType.SPONSOR;
+      return ContactType.SPONSOR;
     }
     case "Speaker": {
-      return AttendeeType.SPEAKER;
+      return ContactType.SPEAKER;
     }
     default:
-      return AttendeeType.ATTENDEE;
+      return ContactType.ATTENDEE;
   }
 }
 function isSponsor(sponsorNames: string[], email: string) {

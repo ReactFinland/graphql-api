@@ -69,6 +69,9 @@ class ContactResolver {
       [key: string]: string | undefined;
     }
     const social = contact.social;
+
+    // TODO: These resolvers should fork so you get url + original value
+    // as that's needed sometimes
     const rules: IRules = {
       homepage: social.homepage,
       facebook: social.facebook && `https://facebook.com/${social.facebook}`,

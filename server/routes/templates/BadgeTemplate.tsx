@@ -5,7 +5,7 @@ import flatten from "lodash/flatten";
 import get from "lodash/get";
 import map from "lodash/map";
 import * as React from "react";
-import { Attendee, AttendeeType } from "../../schema/Attendee";
+import { Contact, ContactType } from "../../schema/Contact";
 import { Theme } from "../../schema/Theme";
 import Badge from "../components/Badge";
 import connect from "../components/connect";
@@ -13,7 +13,7 @@ import connect from "../components/connect";
 const BadgeTemplateContainer = styled.section``;
 
 interface BadgeTemplateProps {
-  attendees: Attendee[];
+  attendees: Contact[];
   theme: Theme;
   id: string;
   emptyAttendees: number;
@@ -31,30 +31,50 @@ interface BadgeTemplateProps {
   */
 }
 
-const defaultAttendees: Attendee[] = [
+const defaultAttendees: Contact[] = [
   {
-    type: AttendeeType.ATTENDEE,
+    type: [ContactType.ATTENDEE],
     name: "John Longsurname-Anotherlongone",
-    twitter: "johndoe",
+    social: {
+      twitter: "johndoe",
+    },
     company: "John Doe Enterprises",
+    about: "",
+    image: { url: "" },
+    location: {},
   },
   {
-    type: AttendeeType.ORGANIZER,
+    type: [ContactType.ORGANIZER],
     name: "Jane Doe",
-    twitter: "johndoe",
+    social: {
+      twitter: "johndoe",
+    },
     company: "John Doe Enterprises",
+    about: "",
+    image: { url: "" },
+    location: {},
   },
   {
-    type: AttendeeType.SPEAKER,
+    type: [ContactType.SPEAKER],
     name: "John Doedoedoedoedoedoedoe",
-    twitter: "johndoe",
+    social: {
+      twitter: "johndoe",
+    },
     company: "John Doe Enterprises",
+    about: "",
+    image: { url: "" },
+    location: {},
   },
   {
-    type: AttendeeType.SPONSOR,
+    type: [ContactType.SPONSOR],
     name: "John-Jack-Jim-Joe-Joel-Jeff Doe",
-    twitter: "johndoe",
+    social: {
+      twitter: "johndoe",
+    },
     company: "John & Son Doe Enterprises & Co.",
+    about: "",
+    image: { url: "" },
+    location: {},
   },
 ];
 
@@ -70,10 +90,10 @@ function BadgeTemplate({
   const badgesPerPage = 4;
   const pages = chunk(
     getBadgeData(attendees, badgesPerPage, {
-      [AttendeeType.ATTENDEE]: emptyAttendees,
-      [AttendeeType.ORGANIZER]: emptyOrganizers,
-      [AttendeeType.SPEAKER]: emptySpeakers,
-      [AttendeeType.SPONSOR]: emptySponsors,
+      [ContactType.ATTENDEE]: emptyAttendees,
+      [ContactType.ORGANIZER]: emptyOrganizers,
+      [ContactType.SPEAKER]: emptySpeakers,
+      [ContactType.SPONSOR]: emptySponsors,
     }),
     badgesPerPage
   );
@@ -101,7 +121,9 @@ const ConnectedBadgeTemplate = connect(
       name
       company
       type
-      twitter
+      social {
+        twitter
+      }
     }
   }
 }`,
@@ -233,7 +255,7 @@ function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
   return (
     <>
       <PageSheet>
-        {tickets.map((attendee: Attendee, i) => (
+        {tickets.map((attendee: Contact, i) => (
           <PageBadgeContainer key={`front-${i}`}>
             <Badge
               attendee={attendee}
@@ -260,37 +282,48 @@ function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
   );
 }
 
+type BadgeTypes =
+  | ContactType.ATTENDEE
+  | ContactType.ORGANIZER
+  | ContactType.SPEAKER
+  | ContactType.SPONSOR;
+
 function getBadgeData(
   tickets,
   badgesPerPage: number,
-  emptyAmounts: { [key in AttendeeType]: number } = {
-    [AttendeeType.ATTENDEE]: 0,
-    [AttendeeType.ORGANIZER]: 0,
-    [AttendeeType.SPEAKER]: 0,
-    [AttendeeType.SPONSOR]: 0,
+  emptyAmounts: { [key in BadgeTypes]: number } = {
+    [ContactType.ATTENDEE]: 0,
+    [ContactType.ORGANIZER]: 0,
+    [ContactType.SPEAKER]: 0,
+    [ContactType.SPONSOR]: 0,
   }
 ) {
   const ret = tickets.concat(
     flatten(
       map(emptyAmounts, (amount, type) =>
         //  TODO: See if it's possible to eliminate "as" from here
-        Array(amount).fill(getEmptyData(type as AttendeeType))
+        Array(amount).fill(getEmptyData(type as ContactType))
       )
     )
   );
 
   // Ensure all pages are filled with badges
   return ret.concat(
-    Array(ret.length % badgesPerPage).fill(getEmptyData(AttendeeType.ATTENDEE))
+    Array(ret.length % badgesPerPage).fill(getEmptyData(ContactType.ATTENDEE))
   );
 }
 
-function getEmptyData(type: AttendeeType): Attendee {
+function getEmptyData(type: ContactType): Contact {
   return {
-    type,
+    type: [type],
     name: "",
     company: "",
-    twitter: "",
+    about: "",
+    image: { url: "" },
+    social: {
+      twitter: "",
+    },
+    location: {},
   };
 }
 

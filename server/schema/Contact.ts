@@ -21,6 +21,7 @@ export enum ContactType {
   SILVER_SPONSOR = "SILVER_SPONSOR",
   BRONZE_SPONSOR = "BRONZE_SPONSOR",
   PARTNER = "PARTNER",
+  ATTENDEE = "ATTENDEE",
 }
 
 @ObjectType()
@@ -33,6 +34,10 @@ export class Contact {
 
   @Field(_ => String)
   public aboutShort?: string;
+
+  // TODO: This might become a Contact reference eventually
+  @Field(_ => String)
+  public company?: string;
 
   @Field(_ => Image)
   public image!: Image;
@@ -54,6 +59,9 @@ export class Contact {
 
   @Field(_ => [Session], { nullable: true })
   public workshops?: Session[];
+
+  @Field(_ => Boolean)
+  public noPhotography?: boolean;
 }
 
 // TODO: Maybe this should become a static method of Conference

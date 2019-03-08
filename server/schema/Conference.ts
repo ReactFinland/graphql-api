@@ -2,7 +2,6 @@ import { Url } from "@okgrow/graphql-scalars";
 import map from "lodash/map";
 import { Field, ID, ObjectType } from "type-graphql";
 import conferences from "../conferences";
-import { Attendee } from "./Attendee";
 import { Contact, ContactType } from "./Contact";
 import { Location } from "./Location";
 import { UrlScalar } from "./scalars";
@@ -68,8 +67,8 @@ export class Conference {
   @Field(_ => [Session], { nullable: true })
   public workshops?: Session[];
 
-  @Field(_ => [Attendee])
-  public attendees?: Attendee[];
+  @Field(_ => [Contact])
+  public attendees?: Contact[];
 }
 
 // TODO: Maybe this should become a static method of Conference
