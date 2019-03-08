@@ -7,12 +7,13 @@ import { Interval } from "../../schema/Interval";
 import SessionType from "../../schema/SessionType";
 import { Theme } from "../../schema/Theme";
 
+// TODO: Move control for margin/height to consumer
 const ScheduleContainer = styled.dl`
-  margin-top: 1cm;
+  margin-top: 0.7cm;
   width: 100%;
   display: flex;
   flex-flow: column wrap;
-  height: 9.75cm;
+  height: 11.7cm;
 `;
 
 const ScheduleContainerItem = styled.div`
@@ -23,7 +24,7 @@ const ScheduleContainerItem = styled.div`
   font-size: 83%;
 
   &:first-of-type {
-    margin-top: -1em;
+    margin-top: -0.6cm;
   }
 `;
 
@@ -90,11 +91,15 @@ function Schedule({ theme, intervals }: ScheduleProps) {
   );
 }
 
+const SessionTitleContainer = styled.h3`
+  margin-bottom: 0.15cm;
+`;
+
 function SessionTitle({ title, type, people }) {
   return (
-    <h3>
+    <SessionTitleContainer>
       {title} {people && `- ${people[0].name}`} <ScheduleIcon type={type} />
-    </h3>
+    </SessionTitleContainer>
   );
 }
 

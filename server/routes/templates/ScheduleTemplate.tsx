@@ -55,11 +55,12 @@ const ScheduleTemplateHeader = styled.h1`
 const ScheduleTemplateContent = styled.div`
   position: relative;
   margin: 0;
+  margin-top: -0.2cm;
   margin-left: 0.5cm;
   margin-right: 0.5cm;
   padding: 0.25cm;
   background-color: white;
-  height: 11.5cm;
+  height: 12.8cm;
   clip-path: polygon(0 0, 100% 1cm, 100% 100%, 0 calc(100% - 1cm));
   z-index: 1;
 `;
@@ -71,6 +72,10 @@ interface ScheduleTemplateProps {
   conferenceId: string;
   id: string;
 }
+
+const ScheduleContainer = styled.section`
+  margin-top: -0.5cm;
+`;
 
 const ConnectedSponsors = connect(
   "/graphql",
@@ -99,7 +104,9 @@ function ScheduleTemplate({
       <ScheduleTemplateContent>
         {intervals && <Schedule theme={theme} intervals={intervals} />}
       </ScheduleTemplateContent>
-      <ConnectedSponsors conferenceId={conferenceId} />
+      <ScheduleContainer>
+        <ConnectedSponsors conferenceId={conferenceId} />
+      </ScheduleContainer>
     </ScheduleTemplateContainer>
   );
 }
