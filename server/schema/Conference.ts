@@ -20,6 +20,9 @@ export class Conference {
   @Field(_ => String)
   public name!: string;
 
+  @Field(_ => Contact)
+  public organizer!: Contact;
+
   @Field(_ => String)
   public year!: string;
 

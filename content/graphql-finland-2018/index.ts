@@ -37,6 +37,7 @@ const conference: Conference = {
   id: "graphql-finland-2018",
   series: "GraphQL Finland",
   name: "GraphQL Finland 2018",
+  organizer: allSponsors.graphqlFinland,
   slogan: "Learn More about GraphQL, Explore Finland.",
   year: "2018",
   websiteUrl: "https://graphql-finland.fi/",
