@@ -10,7 +10,9 @@ import { Conference } from "../Conference";
 import { Contact, ContactType } from "../Contact";
 
 function loadAttendees(conference: Conference, csvPath: string) {
-  if (fs.statSync(csvPath)) {
+  console.log("load attendees", fs.existsSync(csvPath));
+
+  if (fs.existsSync(csvPath)) {
     return convertData(
       getSponsorNames(conference),
       parse(fs.readFileSync(csvPath, { encoding: "utf8" }), {

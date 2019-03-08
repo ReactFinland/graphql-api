@@ -55,13 +55,15 @@ class ConferenceResolver {
 
   @FieldResolver(_ => [Contact])
   public attendees(@Root() conference: Conference, @Ctx() ctx: IContext) {
-    return loadAttendees(
-      conference,
-      `${path.join(
-        ctx.projectRoot,
-        "attendees",
-        kebabCase(conference.name)
-      )}.csv`
+    return conference.organizers.concat(
+      loadAttendees(
+        conference,
+        `${path.join(
+          ctx.projectRoot,
+          "attendees",
+          kebabCase(conference.name)
+        )}.csv`
+      )
     );
   }
 

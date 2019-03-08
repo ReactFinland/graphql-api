@@ -32,11 +32,11 @@ export class Contact {
   @Field(_ => String)
   public about!: string;
 
-  @Field(_ => String)
+  @Field(_ => String, { nullable: true })
   public aboutShort?: string;
 
   // TODO: This might become a Contact reference eventually
-  @Field(_ => String)
+  @Field(_ => String, { nullable: true })
   public company?: string;
 
   @Field(_ => Image)
@@ -48,7 +48,7 @@ export class Contact {
   @Field(_ => Social)
   public social!: Social;
 
-  @Field(_ => [String])
+  @Field(_ => [String], { nullable: true })
   public keywords?: Keyword[];
 
   @Field(_ => Location)

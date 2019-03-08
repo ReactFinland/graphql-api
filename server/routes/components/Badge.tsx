@@ -68,12 +68,13 @@ function resolveBackground({
     [ContactType.ATTENDEE]: defaultColor,
     [ContactType.ORGANIZER]: "#6d0b4d",
     [ContactType.SPEAKER]: "#d01a1a",
+    [ContactType.WORKSHOP_HOST]: "#d01a1a",
     [ContactType.SPONSOR]: "#67d67b",
   };
   const color = colors[type];
 
   if (!color) {
-    console.log("Badge - Missing color");
+    console.log(`Badge - Missing color for ${type}`);
 
     return defaultColor;
   }
@@ -155,7 +156,7 @@ function Badge({ defaultColor, logo, texture, attendee }: BadgeProps) {
         )}
         {company && <BadgeCompany>{company}</BadgeCompany>}
       </BadgeContent>
-      {type && <BadgeType>{type}</BadgeType>}
+      {type && <BadgeType>{type[0]}</BadgeType>}
     </>
   );
   // TODO: Expose

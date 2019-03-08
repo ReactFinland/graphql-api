@@ -23,7 +23,7 @@ const person: Contact = {
     city: "Helsinki",
   },
   keywords: [Keyword.GRAPHQL, Keyword.CMS],
-  type: [ContactType.WORKSHOP_HOST, ContactType.ORGANIZER],
+  type: [ContactType.ORGANIZER],
 };
 
 export default person;
