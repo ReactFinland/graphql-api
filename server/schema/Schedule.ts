@@ -1,5 +1,8 @@
+import flatMap from "lodash/flatMap";
+import uniq from "lodash/uniq";
 import { Field, ObjectType } from "type-graphql";
 import { Interval } from "./Interval";
+import SessionType from "./SessionType";
 
 @ObjectType()
 export class Schedule {
@@ -11,4 +14,17 @@ export class Schedule {
 
   @Field(_ => [Interval])
   public intervals!: Interval[];
+}
+
+export function resolveSessions(
+  schedules: Schedule[],
+  sessionTypes: SessionType[]
+) {
+  return flatMap(schedules, ({ intervals }) =>
+    uniq(
+      flatMap(intervals, ({ sessions }) =>
+        sessions.filter(({ type }) => sessionTypes.includes(type))
+      )
+    )
+  );
 }

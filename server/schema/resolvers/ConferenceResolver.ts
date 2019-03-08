@@ -1,6 +1,5 @@
 import kebabCase from "just-kebab-case";
-import flatMap from "lodash/flatMap";
-import uniq from "lodash/uniq";
+
 import * as path from "path";
 import {
   Arg,
@@ -15,7 +14,7 @@ import conferences from "../../conferences";
 import { Conference, getConference } from "../Conference";
 import { Contact, getSessionSpeakers } from "../Contact";
 import { IContext } from "../Context";
-import { Schedule } from "../Schedule";
+import { resolveSessions } from "../Schedule";
 import { Series } from "../Series";
 import { Session, SessionType } from "../Session";
 import series from "./conferenceSeries";
@@ -94,16 +93,6 @@ class ConferenceResolver {
   public workshops(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [SessionType.WORKSHOP]);
   }
-}
-
-function resolveSessions(schedules: Schedule[], sessionTypes: SessionType[]) {
-  return flatMap(schedules, ({ intervals }) =>
-    uniq(
-      flatMap(intervals, ({ sessions }) =>
-        sessions.filter(({ type }) => sessionTypes.includes(type))
-      )
-    )
-  );
 }
 
 export default ConferenceResolver;

@@ -5,7 +5,8 @@ import { Conference } from "./Conference";
 import { Image } from "./Image";
 import Keyword from "./keywords";
 import { Location } from "./Location";
-import { Session } from "./Session";
+import { resolveSessions } from "./Schedule";
+import { Session, SessionType } from "./Session";
 import { Social } from "./Social";
 
 export enum ContactType {
@@ -69,6 +70,13 @@ export function getSessionSpeakers(
   conference: Conference,
   sessions?: Session[]
 ): Contact[] {
+  const talks = resolveSessions(conference.schedules, [
+    SessionType.LIGHTNING_TALK,
+    SessionType.TALK,
+  ]);
+  const workshops = resolveSessions(conference.schedules, [
+    SessionType.WORKSHOP,
+  ]);
   const speakers = uniqBy(
     flatMap(sessions, session => session.people || []),
     "name"
@@ -76,14 +84,14 @@ export function getSessionSpeakers(
 
   return speakers.map(speaker => ({
     ...speaker,
-    talks: conference.talks
-      ? conference.talks.filter(
+    talks: talks
+      ? talks.filter(
           ({ people }) =>
             people && people.find(person => person.name === speaker.name)
         )
       : [],
-    workshops: conference.workshops
-      ? conference.workshops.filter(
+    workshops: workshops
+      ? workshops.filter(
           ({ people }) =>
             people && people.find(person => person.name === speaker.name)
         )
