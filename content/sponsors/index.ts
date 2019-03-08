@@ -39,6 +39,7 @@ export { default as reactjsday } from "./reactjsday";
 export { default as reactnativeeu } from "./reactnativeeu";
 export { default as reactnewyork } from "./reactnewyork";
 export { default as reactnorway } from "./reactnorway";
+export { default as reactweek } from "./reactweek";
 export { default as reaktor } from "./reaktor";
 export { default as reasonconf } from "./reasonconf";
 export { default as rohea } from "./rohea";
