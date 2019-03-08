@@ -37,7 +37,7 @@ const HeaderPageContainer = styled.div`
   color: white;
 ` as React.FC<HeaderContainerProps>;
 
-const TwitterOverlay = styled.div`
+const TwitterSafeUser = styled.div`
   position: absolute;
   bottom: 0;
   background-color: #ff00008f;
@@ -45,6 +45,33 @@ const TwitterOverlay = styled.div`
   height: 200px;
   z-index: 1;
 `;
+const TwitterSafeTop = styled.div`
+  position: absolute;
+  top: 0;
+  background-color: #ff00008f;
+  width: 100%;
+  height: 40px;
+  z-index: 1;
+`;
+const TwitterSafeBottom = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 450px;
+  background-color: #ff00008f;
+  width: 100%;
+  height: 40px;
+  z-index: 1;
+`;
+
+function TwitterSafeOverlay() {
+  return (
+    <>
+      <TwitterSafeTop />
+      <TwitterSafeBottom />
+      <TwitterSafeUser />
+    </>
+  );
+}
 
 interface PrimaryRowProps {
   useTwitterHeader: boolean;
@@ -145,7 +172,7 @@ function HeaderTemplate({
       useTwitterHeader={useTwitterHeader}
       texture={theme.textures[0].url}
     >
-      {showTwitterSafeArea && <TwitterOverlay />}
+      {showTwitterSafeArea && <TwitterSafeOverlay />}
       <PrimaryRow useTwitterHeader={useTwitterHeader}>
         <HeaderLogo
           src={theme.logos.white.withText.url}
