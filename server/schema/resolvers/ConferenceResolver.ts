@@ -50,7 +50,12 @@ class ConferenceResolver {
 
   @FieldResolver(_ => [Contact])
   public speakers(@Root() conference: Conference) {
-    return getSessionSpeakers(conference, conference.talks);
+    const talks = resolveSessions(conference.schedules, [
+      SessionType.LIGHTNING_TALK,
+      SessionType.TALK,
+    ]);
+
+    return getSessionSpeakers(conference, talks);
   }
 
   @FieldResolver(_ => [Contact])
