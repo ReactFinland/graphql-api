@@ -26,6 +26,10 @@ export class Session {
   @Field(_ => String)
   public title!: string;
 
+  // TODO: Eliminate and push title customization to frontend?
+  @Field(_ => Boolean)
+  public hasTitle?: boolean;
+
   @Field(_ => String, { nullable: true })
   public description?: string;
 

@@ -13,6 +13,11 @@ class SessionResolver {
   public title(@Root() session: Session) {
     return session.title || "Mysterious talk";
   }
+
+  @FieldResolver(_ => String)
+  public hasTitle(@Root() session: Session) {
+    return !!session.title;
+  }
 }
 
 export default SessionResolver;
