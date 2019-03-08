@@ -55,7 +55,17 @@ class ConferenceResolver {
 
   @FieldResolver(_ => [Contact])
   public attendees(@Root() conference: Conference, @Ctx() ctx: IContext) {
+    const speakers = getSessionSpeakers(
+      conference,
+      resolveSessions(conference.schedules, [
+        SessionType.LIGHTNING_TALK,
+        SessionType.TALK,
+        SessionType.WORKSHOP,
+      ])
+    );
+
     return conference.organizers.concat(
+      speakers,
       loadAttendees(
         conference,
         `${path.join(
