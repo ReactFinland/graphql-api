@@ -52,6 +52,7 @@ class ConferenceResolver {
     const talks = resolveSessions(conference.schedules, [
       SessionType.LIGHTNING_TALK,
       SessionType.TALK,
+      SessionType.KEYNOTE,
     ]);
 
     return getSessionSpeakers(conference, talks);
@@ -62,6 +63,7 @@ class ConferenceResolver {
     const speakers = getSessionSpeakers(
       conference,
       resolveSessions(conference.schedules, [
+        SessionType.KEYNOTE,
         SessionType.LIGHTNING_TALK,
         SessionType.TALK,
         SessionType.WORKSHOP,
@@ -86,6 +88,7 @@ class ConferenceResolver {
     return resolveSessions(conference.schedules, [
       SessionType.LIGHTNING_TALK,
       SessionType.TALK,
+      SessionType.KEYNOTE,
     ]);
   }
 

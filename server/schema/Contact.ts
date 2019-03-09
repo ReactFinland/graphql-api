@@ -73,6 +73,7 @@ export function getSessionSpeakers(
   const talks = resolveSessions(conference.schedules, [
     SessionType.LIGHTNING_TALK,
     SessionType.TALK,
+    SessionType.KEYNOTE,
   ]);
   const workshops = resolveSessions(conference.schedules, [
     SessionType.WORKSHOP,
