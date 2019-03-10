@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("fs-extra");
 const path = require("path");
 const camelCase = require("camelcase");
 const flatmap = require("flatmap");
@@ -72,8 +72,8 @@ function generateIndex(basenames) {
 }
 
 function writeFiles(indexFiles, verbose) {
-  indexFiles.forEach(file => {
-    const oldContent = fs.readFileSync(file.name, { encoding: "utf8" });
+  indexFiles.forEach(async file => {
+    const oldContent = await fs.readFile(file.name, { encoding: "utf8" });
     const contentDiffers = file.content.trim() !== oldContent.trim();
 
     if (contentDiffers) {
