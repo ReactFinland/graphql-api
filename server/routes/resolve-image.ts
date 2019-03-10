@@ -1,6 +1,9 @@
 import cloudinary from "cloudinary";
+import * as fs from "fs-extra";
+import md5 from "md5";
 import * as path from "path";
 import { env } from "process";
+import request from "request-promise-native";
 
 if (env.CLOUDINARY_CLOUD_NAME) {
   cloudinary.config({
@@ -10,7 +13,7 @@ if (env.CLOUDINARY_CLOUD_NAME) {
   });
 }
 
-let resources: Array<{ id: string; url: string }> = [];
+let resources: Array<{ id: string; url: string; md5?: string }> = [];
 
 function initImageRegistry() {
   cloudinary.api.resources(
@@ -47,22 +50,42 @@ async function resolveImage(mediaPath: string, url: string) {
   );
 
   if (!matchedResource) {
-    try {
-      const uploadedAsset = await cloudinary.v2.uploader.upload(source, {
-        overwrite: true,
-        public_id: resourceId,
-      });
-      const imageUrl = uploadedAsset.secure_url;
-
-      resources.push({ id: resourceId, url: imageUrl });
-
-      return imageUrl;
-    } catch (err) {
-      throw new Error(err.message);
-    }
+    return await uploadToCloudinary(source, resourceId);
   }
 
-  return matchedResource.url;
+  let fileMd5 = matchedResource.md5;
+
+  if (!fileMd5) {
+    // Calculate and cache md5 to avoid some fs ops.
+    // TODO: It would be better to use something like Redis for this.
+    fileMd5 = md5(await fs.readFile(source));
+    matchedResource.md5 = fileMd5;
+  }
+
+  // Check etag as the file contents may have changed
+  const { etag } = await request.head(matchedResource.url);
+
+  if (etag === `W/"${fileMd5}"`) {
+    return matchedResource.url;
+  }
+
+  return await uploadToCloudinary(source, resourceId);
+}
+
+async function uploadToCloudinary(source: string, resourceId: string) {
+  try {
+    const uploadedAsset = await cloudinary.v2.uploader.upload(source, {
+      overwrite: true,
+      public_id: resourceId,
+    });
+    const imageUrl = uploadedAsset.secure_url;
+
+    resources.push({ id: resourceId, url: imageUrl });
+
+    return imageUrl;
+  } catch (err) {
+    throw new Error(err.message);
+  }
 }
 
 export { initImageRegistry, resolveImage };
