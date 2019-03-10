@@ -28,9 +28,11 @@ TypeGraphQL = {
 
     // Handle enums.
     if (typeof type === "object") {
-      values = type;
+      values = Object.keys(type); // TODO: Is this correct always?
       type = "enum";
     }
+
+    // TODO: How to deal with scalars? Example: Url. Maybe run serialize?
 
     const existingFields =
       fieldInstance.__proto__[metaField][fieldInstance.constructor.name] || {};

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
+import get from "lodash/get";
 import trimStart from "lodash/trimStart";
 import * as React from "react";
 import { Contact, ContactType } from "../../schema/Contact";
@@ -136,12 +137,8 @@ function Badge({ defaultColor, logo, texture, attendee }: BadgeProps) {
     return <>No attendee!</>;
   }
 
-  const {
-    type,
-    name,
-    social: { twitter },
-    company,
-  } = attendee;
+  const { type, name, social, company } = attendee;
+  const twitter = get(social, "twitter", "");
 
   // TODO: Drop the trimStart bit -> Needs a schema change
   const frontContent = (
@@ -197,7 +194,7 @@ Badge.variables = [
     validation: {
       type: Contact,
       default: {
-        type: ContactType.ATTENDEE,
+        type: [ContactType.ATTENDEE],
         name: "John Doe",
         twitter: "johndoe",
         company: "John Doe Co.",
