@@ -58,7 +58,7 @@ class ConferenceResolver {
   }
 
   @FieldResolver(_ => [Contact])
-  public attendees(@Root() conference: Conference, @Ctx() ctx: IContext) {
+  public async attendees(@Root() conference: Conference, @Ctx() ctx: IContext) {
     const speakers = getSessionSpeakers(
       conference,
       resolveSessions(conference.schedules, [
@@ -71,7 +71,7 @@ class ConferenceResolver {
 
     return conference.organizers.concat(
       speakers,
-      loadAttendees(
+      await loadAttendees(
         conference,
         `${path.join(
           ctx.projectRoot,

@@ -1,5 +1,5 @@
 import parse from "csv-parse/lib/sync"; // TODO: Use the async version instead?
-import * as fs from "fs";
+import * as fs from "fs-extra";
 import endsWith from "lodash/endsWith";
 import filter from "lodash/filter";
 import map from "lodash/map";
@@ -9,13 +9,13 @@ import upperFirst from "lodash/upperFirst";
 import { Conference } from "../Conference";
 import { Contact, ContactType } from "../Contact";
 
-function loadAttendees(conference: Conference, csvPath: string) {
+async function loadAttendees(conference: Conference, csvPath: string) {
   console.log("load attendees", fs.existsSync(csvPath));
 
   if (fs.existsSync(csvPath)) {
     return convertData(
       getSponsorNames(conference),
-      parse(fs.readFileSync(csvPath, { encoding: "utf8" }), {
+      parse(await fs.readFile(csvPath, { encoding: "utf8" }), {
         columns: true,
         skip_empty_lines: true,
       })
