@@ -217,13 +217,13 @@ ConnectedHeaderTemplate.variables = [
   {
     id: "conferenceId",
     query: `query ConferenceIdQuery {  
-  allConferences {
+  conferences {
     id
     name
   }
 }`,
-    mapToCollection({ allConferences }) {
-      return allConferences;
+    mapToCollection({ conferences }) {
+      return conferences;
     },
     mapToOption({ id, name }) {
       return {

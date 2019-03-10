@@ -26,8 +26,12 @@ class ConferenceResolver {
     return getConference(id);
   }
 
-  // TODO: Deprecate and rename as conferences()
   @Query(_ => [Conference])
+  public conferences() {
+    return Object.keys(conferences).map(id => conferences[id]);
+  }
+
+  @Query(_ => [Conference], { deprecationReason: "Use `conferences` instead" })
   public allConferences() {
     return Object.keys(conferences).map(id => conferences[id]);
   }
