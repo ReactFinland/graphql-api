@@ -1,5 +1,4 @@
 import kebabCase from "just-kebab-case";
-
 import * as path from "path";
 import {
   Arg,
