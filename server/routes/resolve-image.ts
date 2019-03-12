@@ -2,11 +2,13 @@ import cloudinary from "cloudinary";
 import * as path from "path";
 import { env } from "process";
 
-cloudinary.config({
-  cloud_name: env.CLOUDINARY_CLOUD_NAME,
-  api_key: env.CLOUDINARY_API_KEY,
-  api_secret: env.CLOUDINARY_API_SECRET,
-});
+if (!env.CLOUDINARY_CLOUD_NAME) {
+  cloudinary.config({
+    cloud_name: env.CLOUDINARY_CLOUD_NAME,
+    api_key: env.CLOUDINARY_API_KEY,
+    api_secret: env.CLOUDINARY_API_SECRET,
+  });
+}
 
 let resources: Array<{ id: string; url: string }> = [];
 
