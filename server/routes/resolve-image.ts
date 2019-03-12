@@ -2,7 +2,7 @@ import cloudinary from "cloudinary";
 import * as path from "path";
 import { env } from "process";
 
-if (!env.CLOUDINARY_CLOUD_NAME) {
+if (env.CLOUDINARY_CLOUD_NAME) {
   cloudinary.config({
     cloud_name: env.CLOUDINARY_CLOUD_NAME,
     api_key: env.CLOUDINARY_API_KEY,
