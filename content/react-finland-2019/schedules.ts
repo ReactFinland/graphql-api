@@ -184,7 +184,7 @@ const presentationDay1: Schedule = {
     },
     {
       begin: "18:00",
-      end: "22:00",
+      end: "20:00",
       sessions: [
         {
           people: [people.janiEvakallio],
