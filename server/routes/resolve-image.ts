@@ -36,6 +36,10 @@ initImageRegistry();
 async function resolveImage(mediaPath: string, url: string) {
   const source: string = path.join(mediaPath, url);
 
+  if (!env.CLOUDINARY_CLOUD_NAME) {
+    return source;
+  }
+
   // TODO: Figure out how to derive the same resource id as cloudinary does
   const resourceId: string = url.split("?")[0].replace(/\//g, "-");
   const matchedResource = resources.find(
