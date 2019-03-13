@@ -12,18 +12,18 @@ In this workshop we will build a production-ready React app with GraphQL backend
 ### Topics covered
 
 - Fundamentals & GraphQL core concepts
-- Setting up the GraphQL Server with [Graphpack](https://github.com/glennreyes/graphpack)
-- Exploring the GraphQL API using GraphQL Playground
-- Setting up the GraphQL Client with [Apollo](https://github.com/apollographql/apollo-client)
-- Querying and rendering data in your React app using [React Apollo](https://github.com/apollographql/react-apollo)
-- Creating, updating & deleting data using GraphQL Mutations with Apollo
-- Working with real-time data using GraphQL Subscriptions
+- Setting up the GraphQL Server
+- Exploring the GraphQL API
+- Setting up the GraphQL Client
+- Querying and rendering data in your React app
+- Creating, updating & deleting data using GraphQL Mutations
 - Access control patterns using Context
-- Deployment with [ZEIT Now](https://zeit.co/now)
+- Bonus: Working with real-time data using GraphQL Subscriptions
+- Bonus: Deployment setup
 
 ### Prerequisites
 
-Developers have basic knowledge about the core concepts of React. Bring your own laptop (I'm on Mac). Make sure, latest node and yarn or npm works on your machine.
+Developers have basic React knowledge. Bring your own laptop (I'm on Mac). Make sure, latest node and yarn or npm works on your machine.
 `,
   keywords: glennReyes.keywords,
   location: paasitorni,
