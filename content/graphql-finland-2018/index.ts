@@ -20,6 +20,7 @@ const partners = [
   allSponsors.webexpo,
   allSponsors.yglfkyiv,
   allSponsors.zapier,
+  allSponsors.techEvents,
 ];
 const goldSponsors = [allSponsors.digia, allSponsors.gofore];
 const silverSponsors = [allSponsors.alma];
