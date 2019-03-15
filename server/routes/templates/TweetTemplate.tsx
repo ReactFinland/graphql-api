@@ -13,19 +13,20 @@ import connect from "../components/connect";
 import { dayToFinnishLocale } from "../date-utils";
 
 const TweetTemplateContainer = styled.div``;
+const TweetPageContainer = styled.div``;
 
-interface TweetPageContainerProps {
+interface TweetContainerProps {
   primaryColor: Color;
   secondaryColor: Color;
   texture: string;
 }
 
-const TweetPageContainer = styled.div`
+const TweetContainer = styled.div`
   background-image: ${({
     primaryColor,
     secondaryColor,
     texture,
-  }: TweetPageContainerProps) => `linear-gradient(
+  }: TweetContainerProps) => `linear-gradient(
       ${primaryColor},
       ${hexToRgba(secondaryColor, 0.79)}
     ),
@@ -40,7 +41,7 @@ const TweetPageContainer = styled.div`
   color: white;
 `;
 
-const TweetContainer = styled.div`
+const TweetTextContainer = styled.div`
   position: relative;
   margin-top: 2em;
   padding: 0.25em;
@@ -111,12 +112,7 @@ function SpeakerTweetTemplate({
 
   return (
     <TweetTemplateContainer>
-      <TweetPageContainer
-        id={id}
-        primaryColor={theme.colors.primary}
-        secondaryColor={theme.colors.secondary}
-        texture={theme.textures[0].url}
-      >
+      <TweetPageContainer id={id}>
         {React.createElement(
           contact.type.includes(ContactType.SPONSOR)
             ? SponsorTweet
@@ -126,10 +122,11 @@ function SpeakerTweetTemplate({
             days,
             contact,
             theme,
+            conference,
           }
         )}
       </TweetPageContainer>
-      <TweetContainer>
+      <TweetTextContainer>
         <TweetTextToCopy>{tweetTextToCopy}</TweetTextToCopy>
         <CopyToClipboard
           text={tweetTextToCopy}
@@ -137,7 +134,7 @@ function SpeakerTweetTemplate({
         >
           <TweetCopyButton>&#x2398;</TweetCopyButton>
         </CopyToClipboard>
-      </TweetContainer>
+      </TweetTextContainer>
     </TweetTemplateContainer>
   );
 }
@@ -152,10 +149,10 @@ function getConferenceDays(conference): string {
 }
 
 interface TweetProps {
-  logo: string;
   days: string;
   contact: Contact;
   theme: Theme;
+  conference: Conference;
 }
 
 const TweetInfoContainer = styled.div`
@@ -169,6 +166,7 @@ const TweetImageContainer = styled.div`
 `;
 
 interface TweetImageProps {
+  color?: Color;
   isCircle?: boolean;
   src: HTMLImageElement["src"];
 }
@@ -180,14 +178,27 @@ const TweetImage = styled.img`
     isCircle ? "circle(9em at center)" : ""};
 ` as React.FC<TweetImageProps>;
 
-function SpeakerTweet({
-  logo,
-  days,
-  contact: { name, image, talks },
-  theme,
-}: TweetProps) {
+function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
+  if (conference.name === "ReasonConf 2019") {
+    return (
+      <ReasonSpeakerTweet
+        days={days}
+        contact={contact}
+        theme={theme}
+        conference={conference}
+      />
+    );
+  }
+
+  const logo = theme.logos.white.withText.url;
+  const { name, image, talks } = contact;
+
   return (
-    <>
+    <TweetContainer
+      primaryColor={theme.colors.primary}
+      secondaryColor={theme.colors.secondary}
+      texture={theme.textures[0].url}
+    >
       <TweetInfoContainer>
         <TweetRow>
           <TweetLogo src={logo} />
@@ -201,7 +212,77 @@ function SpeakerTweet({
       <TweetImageContainer>
         <TweetImage isCircle src={image.url} />
       </TweetImageContainer>
-    </>
+    </TweetContainer>
+  );
+}
+
+const Reason = {
+  TweetContainer: styled(TweetContainer)`
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+    height: 440px;
+  `,
+  TweetImageContainer: styled(TweetImageContainer)`
+    align-self: center;
+  `,
+  TweetInfoContainer: styled(TweetInfoContainer)`
+    padding: 2em;
+    display: grid;
+    justify-items: right;
+  `,
+  TweetImage: styled(TweetImage)`
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+
+    &::before {
+      content: " ";
+      clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+    }
+  ` as React.FC<TweetImageProps>,
+  TweetRow: styled(TweetRow)`
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: right;
+  `,
+};
+
+function ReasonSpeakerTweet({
+  days,
+  contact: { name, image, company },
+  theme,
+  conference,
+}: TweetProps) {
+  const logo = theme.logos.colored.withText.url;
+
+  return (
+    <Reason.TweetContainer
+      primaryColor={theme.colors.secondary}
+      secondaryColor={theme.colors.secondary}
+      texture={theme.textures[0].url}
+    >
+      <Reason.TweetImageContainer>
+        <Reason.TweetImage src={image.url} color={theme.colors.primary} />
+      </Reason.TweetImageContainer>
+      <Reason.TweetInfoContainer>
+        <Reason.TweetRow>
+          <TweetLogo src={logo} />
+        </Reason.TweetRow>
+        <Reason.TweetRow>
+          <TweetConferenceDays>{days}</TweetConferenceDays>
+          {conference.locations && (
+            <TweetConferenceDays>
+              {conference.locations[0].city}
+            </TweetConferenceDays>
+          )}
+        </Reason.TweetRow>
+        <TweetText>{name}</TweetText>
+        {company && (
+          <TweetDescription fontFamily={theme.fonts.secondary}>
+            {company}
+          </TweetDescription>
+        )}
+      </Reason.TweetInfoContainer>
+    </Reason.TweetContainer>
   );
 }
 
@@ -225,13 +306,18 @@ const TweetSponsorText = styled(TweetText)`
 `;
 
 function SponsorTweet({
-  logo,
   days,
   contact: { about, image, type },
   theme,
 }: TweetProps) {
+  const logo = theme.logos.white.withText.url;
+
   return (
-    <>
+    <TweetContainer
+      primaryColor={theme.colors.primary}
+      secondaryColor={theme.colors.secondary}
+      texture={theme.textures[0].url}
+    >
       <TweetInfoContainer>
         <TweetRow>
           <TweetLogo src={logo} />
@@ -246,7 +332,7 @@ function SponsorTweet({
 
         <TweetSponsorText>{getSponsorType(type)}</TweetSponsorText>
       </TweetSponsorContainer>
-    </>
+    </TweetContainer>
   );
 }
 
