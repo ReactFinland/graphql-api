@@ -98,7 +98,8 @@ const SessionTitleContainer = styled.h3`
 function SessionTitle({ title, type, people }) {
   return (
     <SessionTitleContainer>
-      {title} {people && `- ${people[0].name}`} <ScheduleIcon type={type} />
+      {title} {people && Array.isArray(people) && `- ${people[0].name}`}{" "}
+      <ScheduleIcon type={type} />
     </SessionTitleContainer>
   );
 }

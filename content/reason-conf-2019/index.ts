@@ -84,7 +84,7 @@ function resolveSessionType(type) {
 
 function resolveSessionPeople(people, sessionPeople) {
   if (!sessionPeople) {
-    return [];
+    return undefined;
   }
 
   return sessionPeople.map(name => {
