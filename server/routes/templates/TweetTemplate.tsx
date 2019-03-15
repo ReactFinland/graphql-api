@@ -81,6 +81,7 @@ interface TweetDescriptionProps {
 }
 
 const TweetDescription = styled.h2`
+  width: 120%;
   padding-top: 0.5em;
   font-size: 200%;
   font-weight: 200;
