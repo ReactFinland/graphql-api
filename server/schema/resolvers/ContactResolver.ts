@@ -8,7 +8,7 @@ import {
   Root,
 } from "type-graphql";
 import { getConference } from "../Conference";
-import { Contact, getSessionSpeakers } from "../Contact";
+import { Contact, ContactType, getSessionSpeakers } from "../Contact";
 import { IContext } from "../Context";
 import { Country } from "../Country";
 import { Image } from "../Image";
@@ -53,6 +53,11 @@ class ContactResolver {
     }
 
     return contact;
+  }
+
+  @FieldResolver(_ => [ContactType])
+  public type(@Root() contact: Contact) {
+    return contact.type || [];
   }
 
   @FieldResolver(_ => Image)
