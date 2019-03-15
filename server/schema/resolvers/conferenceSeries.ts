@@ -8,7 +8,68 @@ const conferenceSeries: {
     theme: Theme;
   };
 } = {
-  ["react-finland"]: {
+  "reason-conf": {
+    id: "reason-conf",
+    name: "ReasonConf",
+    conferences: [],
+    theme: {
+      id: "reason-conf",
+      textures: [{ url: "/media/reason-conf/texture.png" }],
+      colors: {
+        primary: "#dd4b39",
+        secondary: "#385571",
+        text: "#5e574d",
+        background: "#F6F4F1",
+      },
+      fonts: {
+        primary: "Montserrat",
+        secondary: "Work Sans",
+        variants: [
+          {
+            family: "Montserrat",
+            weight: "normal",
+            style: "normal",
+            fileName: "/media/fonts/montserrat-regular",
+            formats: ["woff2"],
+          },
+          {
+            family: "Work Sans",
+            weight: "normal",
+            style: "normal",
+            fileName: "/media/fonts/worksans-regular",
+            formats: ["woff2"],
+          },
+        ],
+      },
+      logos: {
+        black: {
+          withText: {
+            url: "/media/reason-conf/logo/logo-black-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/reason-conf/logo/logo-black.svg",
+          },
+        },
+        colored: {
+          withText: {
+            url: "/media/reason-conf/logo/logo-colored-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/reason-conf/logo/logo-colored.svg",
+          },
+        },
+        white: {
+          withText: {
+            url: "/media/reason-conf/logo/logo-white-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/reason-conf/logo/logo-white.svg",
+          },
+        },
+      },
+    },
+  },
+  "react-finland": {
     id: "react-finland",
     name: "React Finland",
     conferences: ["react-finland-2018", "react-finland-2019"],
@@ -23,7 +84,7 @@ const conferenceSeries: {
       },
       fonts: {
         primary: "Finlandica",
-        secondary: "Finlandica Bold",
+        secondary: "Work Sans",
         variants: [
           {
             family: "Finlandica",
@@ -33,11 +94,11 @@ const conferenceSeries: {
             formats: ["woff2", "woff", "ttf"],
           },
           {
-            family: "Finlandica Bold",
-            weight: "bold",
+            family: "Work Sans",
+            weight: "normal",
             style: "normal",
-            fileName: "/media/fonts/finlandica-bold",
-            formats: ["woff2", "woff", "ttf"],
+            fileName: "/media/fonts/worksans-regular",
+            formats: ["woff2"],
           },
         ],
       },
@@ -69,7 +130,7 @@ const conferenceSeries: {
       },
     },
   },
-  ["graphql-finland"]: {
+  "graphql-finland": {
     id: "graphql-finland",
     name: "GraphQL Finland",
     conferences: ["graphql-finland-2018"],
@@ -84,7 +145,7 @@ const conferenceSeries: {
       },
       fonts: {
         primary: "Finlandica",
-        secondary: "Finlandica Bold",
+        secondary: "Work Sans",
         variants: [
           {
             family: "Finlandica",
@@ -94,11 +155,11 @@ const conferenceSeries: {
             formats: ["woff2", "woff", "ttf"],
           },
           {
-            family: "Finlandica Bold",
-            weight: "bold",
+            family: "Work Sans",
+            weight: "normal",
             style: "normal",
-            fileName: "/media/fonts/finlandica-bold",
-            formats: ["woff2", "woff", "ttf"],
+            fileName: "/media/fonts/worksans-regular",
+            formats: ["woff2"],
           },
         ],
       },

@@ -50,10 +50,6 @@ function generateFontDeclaration(font: Font) {
   font-weight: ${font.weight};
   font-style: ${font.style};
   src: ${generateFontSrc(font.fileName, font.formats)}
-  src: format("embedded-opentype"),
-    url("/media/fonts/finlandica-regular.woff2") format("woff2"),
-    url("/media/fonts/finlandica-regular.woff") format("woff"),
-    url("/media/fonts/finlandica-regular.ttf") format("truetype");
 }`;
 }
 
@@ -74,6 +70,10 @@ function generateFontUrl(fileName: string) {
 function generateFormat(format: string): string {
   if (format === "ttf") {
     return "truetype";
+  }
+
+  if (format === "otf") {
+    return "opentype";
   }
 
   return format;

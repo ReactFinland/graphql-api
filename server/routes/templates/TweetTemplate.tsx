@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Color } from "csstype";
+import { Color, FontFamilyProperty } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import get from "lodash/get";
 import map from "lodash/map";
@@ -75,10 +75,16 @@ const TweetText = styled.h2`
   font-size: 300%;
 `;
 
+interface TweetDescriptionProps {
+  fontFamily: FontFamilyProperty;
+}
+
 const TweetDescription = styled.h2`
   padding-top: 0.5em;
   font-size: 200%;
-`;
+  font-weight: 200;
+  font-family: ${({ fontFamily }: TweetDescriptionProps) => fontFamily};
+` as React.FC<TweetDescriptionProps>;
 
 interface SpeakerTweetTemplateProps {
   conference?: Conference;
@@ -119,6 +125,7 @@ function SpeakerTweetTemplate({
             logo: theme.logos.white.withText.url,
             days,
             contact,
+            theme,
           }
         )}
       </TweetPageContainer>
@@ -148,6 +155,7 @@ interface TweetProps {
   logo: string;
   days: string;
   contact: Contact;
+  theme: Theme;
 }
 
 const TweetInfoContainer = styled.div`
@@ -176,6 +184,7 @@ function SpeakerTweet({
   logo,
   days,
   contact: { name, image, talks },
+  theme,
 }: TweetProps) {
   return (
     <>
@@ -185,7 +194,7 @@ function SpeakerTweet({
           <TweetConferenceDays>{days}</TweetConferenceDays>
         </TweetRow>
         <TweetText>{name}</TweetText>
-        <TweetDescription>
+        <TweetDescription fontFamily={theme.fonts.secondary}>
           {Array.isArray(talks) && talks.length > 0 && talks[0].title}
         </TweetDescription>
       </TweetInfoContainer>
@@ -219,6 +228,7 @@ function SponsorTweet({
   logo,
   days,
   contact: { about, image, type },
+  theme,
 }: TweetProps) {
   return (
     <>
@@ -230,7 +240,9 @@ function SponsorTweet({
         <TweetSponsorImage src={image.url} />
       </TweetInfoContainer>
       <TweetSponsorContainer>
-        <TweetDescription>{about}</TweetDescription>
+        <TweetDescription fontFamily={theme.fonts.secondary}>
+          {about}
+        </TweetDescription>
 
         <TweetSponsorText>{getSponsorType(type)}</TweetSponsorText>
       </TweetSponsorContainer>
