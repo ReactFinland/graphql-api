@@ -250,11 +250,18 @@ const Reason = {
     font-size: 150%;
     color: #97a5b1;
   `,
+  TweetTalkTitle: styled.h3`
+    margin-top: 2em;
+    color: #97a5b1;
+  `,
+  TweetName: styled(TweetText)`
+    padding-top: 0;
+  `,
 };
 
 function ReasonSpeakerTweet({
   days,
-  contact: { name, image, company },
+  contact: { name, image, company, talks },
   theme,
   conference,
 }: TweetProps) {
@@ -281,7 +288,14 @@ function ReasonSpeakerTweet({
             </TweetConferenceDays>
           )}
         </Reason.TweetRow>
-        <TweetText>{name}</TweetText>
+        {talks && (
+          <Reason.TweetRow>
+            <Reason.TweetTalkTitle>{talks[0].title}</Reason.TweetTalkTitle>
+          </Reason.TweetRow>
+        )}
+        <Reason.TweetRow>
+          <Reason.TweetName>{name}</Reason.TweetName>
+        </Reason.TweetRow>
         {company && (
           <Reason.TweetDescription fontFamily={theme.fonts.secondary}>
             {company}
