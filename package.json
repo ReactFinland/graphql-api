@@ -5,8 +5,10 @@
   "description": "React Finland GraphQL API",
   "main": "./build/server",
   "scripts": {
+    "generate:all": "npm run generate:indices && npm run generate:reason-conf",
     "generate:indices": "node utils/generate-indices.js content --verbose",
-    "build": "npm run generate:indices && rimraf build && tsc",
+    "generate:reason-conf": "node utils/generate-reason-conf.js",
+    "build": "npm run generate:all && rimraf build && tsc",
     "lint": "tslint --config tslint.json content/**/*.ts server/**/*.ts --fix",
     "start": "tsc-watch --onSuccess \"node ./build/server\" --onFailure \"echo Beep! Compilation Failed\"",
     "heroku:start": "node ./build/server",
