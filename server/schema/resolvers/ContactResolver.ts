@@ -62,6 +62,10 @@ class ContactResolver {
 
   @FieldResolver(_ => Image)
   public image(@Root() contact: Contact, @Ctx() ctx: IContext) {
+    if (contact.image.url.startsWith("http")) {
+      return contact.image;
+    }
+
     // FIXME: Figure out why ctx can be missing
     return {
       url: `${ctx ? ctx.mediaUrl : "/media"}/${contact.image.url}`,
