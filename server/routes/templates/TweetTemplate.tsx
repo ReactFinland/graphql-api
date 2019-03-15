@@ -244,6 +244,12 @@ const Reason = {
     align-items: center;
     justify-items: right;
   `,
+  TweetDescription: styled(TweetDescription)`
+    padding-top: 0;
+    justify-self: left;
+    font-size: 150%;
+    color: #97a5b1;
+  `,
 };
 
 function ReasonSpeakerTweet({
@@ -277,9 +283,9 @@ function ReasonSpeakerTweet({
         </Reason.TweetRow>
         <TweetText>{name}</TweetText>
         {company && (
-          <TweetDescription fontFamily={theme.fonts.secondary}>
+          <Reason.TweetDescription fontFamily={theme.fonts.secondary}>
             {company}
-          </TweetDescription>
+          </Reason.TweetDescription>
         )}
       </Reason.TweetInfoContainer>
     </Reason.TweetContainer>
@@ -346,6 +352,7 @@ const ConnectedSpeakerTweetTemplate = connect(
 query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
   contact(contactName: $contactName, conferenceId: $conferenceId) {
     name
+    company
     about
     image {
       url
