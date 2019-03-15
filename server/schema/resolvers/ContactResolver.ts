@@ -88,6 +88,10 @@ class ContactResolver {
     }
     const social = contact.social;
 
+    if (!social) {
+      return {};
+    }
+
     // TODO: These resolvers should fork so you get url + original value
     // as that's needed sometimes
     const rules: IRules = {
