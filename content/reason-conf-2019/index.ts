@@ -1,10 +1,9 @@
 import { Conference } from "../../server/schema/Conference";
+import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
 import data from "./data.json";
-
-console.log(data);
 
 const sponsors = [];
 const partners = [];
@@ -27,12 +26,70 @@ const conference: Conference = {
     people.nikGraf,
     people.patrickStapfer,
   ],
-  schedules: [],
+  schedules: resolveData(data),
   sponsors,
   partners,
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
 };
+
+function resolveData({ schedules, speakers }) {
+  return schedules.map(schedule => {
+    return {
+      ...schedule,
+      intervals: schedule.intervals.map(interval => {
+        return {
+          ...interval,
+          sessions: interval.sessions.map(session => {
+            return {
+              ...session,
+              type: resolveSessionType(session.type),
+              people: resolveSessionPeople(speakers, session.people),
+            };
+          }),
+        };
+      }),
+    };
+  });
+}
+
+// TODO: Likely there's a smarter way to do this mapping
+function resolveSessionType(type) {
+  switch (type) {
+    case SessionType.BREAKFAST:
+      return SessionType.BREAKFAST;
+    case SessionType.COFFEE_BREAK:
+      return SessionType.COFFEE_BREAK;
+    case SessionType.KEYNOTE:
+      return SessionType.KEYNOTE;
+    case SessionType.LIGHTNING_TALK:
+      return SessionType.LIGHTNING_TALK;
+    case SessionType.LUNCH:
+      return SessionType.LUNCH;
+    case SessionType.ORGANIZATIONAL:
+      return SessionType.ORGANIZATIONAL;
+    case SessionType.PANEL:
+      return SessionType.PANEL;
+    case SessionType.PARTY:
+      return SessionType.PARTY;
+    case SessionType.TALK:
+      return SessionType.TALK;
+    case SessionType.WORKSHOP:
+      return SessionType.WORKSHOP;
+    default:
+      return SessionType.ORGANIZATIONAL;
+  }
+}
+
+function resolveSessionPeople(people, sessionPeople) {
+  if (!sessionPeople) {
+    return [];
+  }
+
+  return sessionPeople.map(name => {
+    return people.find(person => person.name === name);
+  });
+}
 
 export default conference;

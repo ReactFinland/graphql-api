@@ -30,7 +30,7 @@ async function getData() {
     );
 
     return {
-      schedule: JSON.parse(files["schedule.json"].content),
+      schedules: JSON.parse(files["schedule.json"].content),
       speakers: JSON.parse(files["speakers.json"].content),
     };
   } catch (err) {
