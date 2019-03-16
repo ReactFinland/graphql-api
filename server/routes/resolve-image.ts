@@ -11,6 +11,9 @@ if (env.CLOUDINARY_CLOUD_NAME) {
     api_key: env.CLOUDINARY_API_KEY,
     api_secret: env.CLOUDINARY_API_SECRET,
   });
+
+  // FIXME: Likely this should be called somewhere else (app init)
+  initImageRegistry();
 }
 
 let resources: Array<{ id: string; url: string; md5?: string }> = [];
@@ -32,9 +35,6 @@ function initImageRegistry() {
     }
   );
 }
-
-// FIXME: Likely this should be called somewhere else (app init)
-initImageRegistry();
 
 async function resolveImage(mediaPath: string, url: string) {
   const source: string = path.join(mediaPath, url);
