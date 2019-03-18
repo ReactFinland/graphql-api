@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Color, WidthProperty } from "csstype";
 import { saveAs } from "file-saver";
-import createHistory from "history/createBrowserHistory";
+import { createBrowserHistory as createHistory } from "history";
 import fromPairs from "lodash/fromPairs";
 import get from "lodash/get";
 import map from "lodash/map";
