@@ -136,7 +136,7 @@ function AssetDesignerPage({
     initialState,
     ({ selectionId }) => ({
       selectionId,
-      themeId: "",
+      themeId: initializeThemeId(),
       variables: initializeVariables(selectionId),
     })
   );
@@ -176,6 +176,10 @@ function AssetDesignerPage({
       </Main>
     </AssetDesignerContainer>
   );
+}
+
+function initializeThemeId() {
+  return get(queryString.parse(location.search), "themeId", `""`);
 }
 
 function initializeVariables(selectionId) {
