@@ -25,7 +25,7 @@ async function loadAttendees(conference: Conference, csvPath: string) {
 
 function getSponsorNames(conference: Conference): string[] {
   return conference.sponsors.map(
-    sponsor => new URL(sponsor.social.homepage).hostname
+    sponsor => new URL(sponsor.social.homepage || "").hostname
   );
 }
 

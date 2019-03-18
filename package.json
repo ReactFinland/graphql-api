@@ -62,7 +62,6 @@
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@okgrow/graphql-scalars": "^0.4.3",
     "body-parser": "^1.18.3",
     "cloudinary": "^1.13.2",
     "compression": "^1.7.3",

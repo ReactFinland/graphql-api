@@ -1,10 +1,8 @@
-import { Url } from "@okgrow/graphql-scalars";
 import map from "lodash/map";
 import { Field, ID, ObjectType } from "type-graphql";
 import conferences from "../conferences";
 import { Contact, ContactType } from "./Contact";
 import { Location } from "./Location";
-import { UrlScalar } from "./scalars";
 import { Schedule } from "./Schedule";
 import { Session } from "./Session";
 
@@ -28,8 +26,8 @@ export class Conference {
   @Field(_ => String)
   public slogan!: string;
 
-  @Field(_ => UrlScalar)
-  public websiteUrl!: Url;
+  @Field(_ => String)
+  public websiteUrl!: string;
 
   @Field(_ => [Location], { nullable: true })
   public locations?: Location[];
