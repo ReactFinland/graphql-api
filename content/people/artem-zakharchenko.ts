@@ -16,10 +16,10 @@ const person: Contact = {
   },
   location: {
     country: {
-      name: "Czech Republic",
-      code: "CZ",
+      name: "Ukraine",
+      code: "UA",
     },
-    city: "Prague",
+    city: "",
   },
   keywords: [Keyword.REACT, Keyword.STYLING, Keyword.TOOLING],
   type: [ContactType.SPEAKER],
