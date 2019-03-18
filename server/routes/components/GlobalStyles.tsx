@@ -1,4 +1,5 @@
 import { css, Global } from "@emotion/core";
+import forEach from "lodash/forEach";
 import * as React from "react";
 import { Font, Fonts } from "../../schema/Theme";
 
@@ -7,6 +8,14 @@ interface GlobalStylesProps {
 }
 
 function GlobalStyles({ fonts }: GlobalStylesProps) {
+  React.useEffect(() => {
+    forEach(fonts.variants, variant => {
+      if (variant.href) {
+        generateFontReference(variant.href);
+      }
+    });
+  }, []);
+
   return (
     <Global
       styles={css`
@@ -39,11 +48,31 @@ function GlobalStyles({ fonts }: GlobalStylesProps) {
   );
 }
 
+function generateFontReference(href: Font["href"]) {
+  if (!href) {
+    return;
+  }
+
+  const fontLink = document.createElement("link");
+
+  fontLink.href = href;
+
+  fontLink.rel = "stylesheet";
+  fontLink.type = "text/css";
+  fontLink.crossOrigin = "anonymous";
+
+  document.body.appendChild(fontLink);
+}
+
 function generateFontDeclarations(fonts: Font[]) {
   return fonts.map(generateFontDeclaration).join("\n");
 }
 
 function generateFontDeclaration(font: Font) {
+  if (font.href) {
+    return "";
+  }
+
   return `
 @font-face {
   font-family: "${font.family}";
@@ -57,6 +86,10 @@ function generateFontSrc(
   fileName: Font["fileName"],
   formats: Font["formats"]
 ): string {
+  if (!fileName || !formats) {
+    return "";
+  }
+
   return `format("embedded-opentype),${formats
     .map(generateFontUrl(fileName))
     .join("\n")}`;

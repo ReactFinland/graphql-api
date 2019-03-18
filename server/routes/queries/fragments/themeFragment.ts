@@ -19,6 +19,7 @@ fragment themeFragment on Theme {
       style
       fileName
       formats
+      href
     }
   }
   logos {

@@ -16,22 +16,26 @@ export class Colors {
   public background!: string;
 }
 
+// TODO: Likely this should be modelled a a union
 @ObjectType()
 export class Font {
-  @Field(_ => String)
-  public family!: string;
+  @Field(_ => String, { nullable: true })
+  public family?: string;
 
-  @Field(_ => String)
-  public weight!: string;
+  @Field(_ => String, { nullable: true })
+  public weight?: string;
 
-  @Field(_ => String)
-  public style!: string;
+  @Field(_ => String, { nullable: true })
+  public style?: string;
 
-  @Field(_ => String)
-  public fileName!: string;
+  @Field(_ => String, { nullable: true })
+  public fileName?: string;
 
-  @Field(_ => [String])
-  public formats!: string[];
+  @Field(_ => [String], { nullable: true })
+  public formats?: string[];
+
+  @Field(_ => String, { nullable: true })
+  public href?: string;
 }
 
 @ObjectType()

@@ -26,18 +26,10 @@ const conferenceSeries: {
         secondary: "Work Sans",
         variants: [
           {
-            family: "Montserrat",
-            weight: "normal",
-            style: "normal",
-            fileName: "/media/fonts/montserrat-regular",
-            formats: ["woff2", "woff", "ttf", "otf"],
+            href: "https://fonts.googleapis.com/css?family=Montserrat",
           },
           {
-            family: "Work Sans",
-            weight: "normal",
-            style: "normal",
-            fileName: "/media/fonts/worksans-regular",
-            formats: ["woff2", "woff", "ttf", "otf"],
+            href: "https://fonts.googleapis.com/css?family=Work+Sans",
           },
         ],
       },
