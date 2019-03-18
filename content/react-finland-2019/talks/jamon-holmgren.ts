@@ -4,7 +4,7 @@ import speaker from "../../people/jamon-holmgren";
 
 const talk: Session = {
   people: [speaker],
-  title: "",
+  title: "Building a Community Around Ignite",
   description: ``,
   type: SessionType.TALK,
   keywords: [Keyword.REACT_NATIVE],
