@@ -8,7 +8,18 @@ import * as React from "react";
 function createInteractive(projectRoot, scriptRoot, componentRoot) {
   mkdirp.sync(scriptRoot);
 
-  return function Interactive({
+  interface IInteractiveContext {
+    registerBundler: () => void;
+    bundlingCompleted: (err) => void;
+  }
+
+  // TODO: Figure out how to handle this
+  const InteractiveContext = React.createContext<IInteractiveContext>({
+    registerBundler: () => {},
+    bundlingCompleted: () => {},
+  });
+
+  function InteractiveConsumer({
     component,
     relativeComponentPath,
     componentHash = "",
@@ -59,10 +70,16 @@ function createInteractive(projectRoot, scriptRoot, componentRoot) {
       .cache(false) // TODO: Enable cache again?
       .instructions(`> ${indexName}`);
 
-    // TODO: This can fail if code is incorrect -> catch failure and handle
-    // TODO: This is async -> Script path might not be ready on response
-    // due to a race condition -> Elevate to response through context?
-    fuse.run().then(() => console.log("bundling finished"));
+    const { registerBundler, bundlingCompleted } = React.useContext(
+      InteractiveContext
+    );
+
+    registerBundler();
+
+    fuse
+      .run()
+      .then(bundlingCompleted)
+      .catch(bundlingCompleted);
 
     // Since rendering is streaming, it's important the script gets executed
     // only after the div has been created! Otherwise hydration fails.
@@ -72,6 +89,11 @@ function createInteractive(projectRoot, scriptRoot, componentRoot) {
         <script src={scriptPath} />
       </>
     );
+  }
+
+  return {
+    Provider: InteractiveContext.Provider,
+    Consumer: InteractiveConsumer,
   };
 }
 
