@@ -1,12 +1,13 @@
+import Keyword from "../../../server/schema/keywords";
 import { Session, SessionType } from "../../../server/schema/Session";
 import speaker from "../../people/artem-zakharchenko";
 
 const talk: Session = {
   people: [speaker],
-  title: "",
-  description: ``,
+  title: "Creating layouts that last",
+  description: `What if we could wield layout composition as an actual React component? Spoiler: that would solve the #1 issue that prevents our layouts from being truly reusable.`,
   type: SessionType.TALK,
-  keywords: [],
+  keywords: [Keyword.CSS_GRID, Keyword.LAYOUT, Keyword.REACT],
 };
 
 export default talk;
