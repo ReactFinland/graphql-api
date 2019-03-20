@@ -17,6 +17,8 @@ const workshopDay: Schedule = {
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration",
+          description:
+            "Pro tip: You can register at any time during the conference",
         },
       ],
     },
@@ -77,6 +79,17 @@ const presentationDay1: Schedule = {
   day: "2019-04-25",
   description: "First conference day",
   intervals: [
+    {
+      begin: "08:00",
+      end: "09:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Registration",
+          description: "You can register later too",
+        },
+      ],
+    },
     {
       begin: "09:00",
       end: "09:15",
@@ -202,6 +215,17 @@ const presentationDay2: Schedule = {
   day: "2019-04-26",
   description: "Second conference day",
   intervals: [
+    {
+      begin: "08:00",
+      end: "09:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Registration",
+          description: "If you slept late, you can still register after this",
+        },
+      ],
+    },
     {
       begin: "09:00",
       end: "09:15",
