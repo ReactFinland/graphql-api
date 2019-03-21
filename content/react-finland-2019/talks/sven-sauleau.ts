@@ -13,6 +13,7 @@ Rust ecosystem offers many great tools to work with WebAssembly on the web. Thes
   type: SessionType.TALK,
   keywords: [
     Keyword.LIVE_CODING,
+    Keyword.REACT,
     Keyword.RUST,
     Keyword.SERVERLESS,
     Keyword.WEB_ASSEMBLY,
