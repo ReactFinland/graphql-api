@@ -20,6 +20,7 @@ const partners = [
   allSponsors.stickermule,
   allSponsors.reactalicante,
   allSponsors.reactdayberlin,
+  allSponsors.reactjsgirls,
   allSponsors.reactnativeeu,
   allSponsors.reactjsday,
   allSponsors.reactweek,
