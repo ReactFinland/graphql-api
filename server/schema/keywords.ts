@@ -20,6 +20,7 @@ enum Keyword {
   LAYOUT,
   LEGACY,
   LINTING,
+  LIVE_CODING,
   NEXT_JS,
   MOBX,
   MOBX_STATE_TREE,
@@ -30,9 +31,11 @@ enum Keyword {
   REACT_VR,
   REDUX,
   REASON,
+  RUST,
   SSR,
   SPEC,
   REINFORCEMENT_LEARNING,
+  SERVERLESS,
   STATE_MACHINES,
   STATE_MANAGEMENT,
   STATIC_SITE_GENERATATION,
@@ -44,6 +47,7 @@ enum Keyword {
   UNIVERSAL_REACT,
   USER_INTERFACE,
   WEBPACK,
+  WEB_ASSEMBLY,
 }
 
 export default Keyword;
