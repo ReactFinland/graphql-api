@@ -36,6 +36,7 @@ export { default as reactdayberlin } from "./reactdayberlin";
 export { default as reactfest } from "./reactfest";
 export { default as reactindia } from "./reactindia";
 export { default as reactjsday } from "./reactjsday";
+export { default as reactjsgirls } from "./reactjsgirls";
 export { default as reactnativeeu } from "./reactnativeeu";
 export { default as reactnewyork } from "./reactnewyork";
 export { default as reactnorway } from "./reactnorway";
