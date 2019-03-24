@@ -8,10 +8,60 @@ const conferenceSeries: {
     theme: Theme;
   };
 } = {
+  typeof: {
+    id: "typeof",
+    name: "typeof",
+    conferences: [], // TODO
+    theme: {
+      id: "typeof",
+      textures: [{ url: "/media/assets/typeof.png" }],
+      colors: {
+        primary: "#9013fe",
+        secondary: "#2d2a96",
+        text: "#09020f",
+        background: "white",
+      },
+      fonts: {
+        primary: "Nunito",
+        secondary: "Nunito",
+        variants: [
+          {
+            href: "https://fonts.googleapis.com/css?family=Nunito",
+          },
+        ],
+      },
+      logos: {
+        black: {
+          withText: {
+            url: "/media/typeof/logo/logo-black-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/typeof/logo/logo-black.svg",
+          },
+        },
+        colored: {
+          withText: {
+            url: "/media/typeof/logo/logo-colored-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/typeof/logo/logo-colored.svg",
+          },
+        },
+        white: {
+          withText: {
+            url: "/media/typeof/logo/logo-white-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/typeof/logo/logo-white.svg",
+          },
+        },
+      },
+    },
+  },
   "reason-conf": {
     id: "reason-conf",
     name: "ReasonConf",
-    conferences: [],
+    conferences: ["reason-conf-2019"],
     theme: {
       id: "reason-conf",
       textures: [{ url: "/media/reason-conf/texture.png" }],
