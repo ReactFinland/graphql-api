@@ -43,7 +43,7 @@ const conference: Conference = {
           sessions: [
             {
               people: [people.juhoVepsalainen],
-              title: "GraphQL Without GraphQL",
+              title: "GraphQL without GraphQL",
               description:
                 "GraphQL has changed the way we develop software. In this talk, I'll discuss my journey with the technology and show how to use GraphQL without GraphQL by abstracting schema and query generation.",
               type: SessionType.TALK,
