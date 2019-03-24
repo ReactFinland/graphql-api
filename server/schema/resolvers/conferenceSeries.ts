@@ -11,7 +11,7 @@ const conferenceSeries: {
   typeof: {
     id: "typeof",
     name: "typeof",
-    conferences: [], // TODO
+    conferences: ["typeof-2019"],
     theme: {
       id: "typeof",
       textures: [{ url: "/media/assets/typeof.png" }],
