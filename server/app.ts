@@ -10,7 +10,11 @@ async function createApp() {
   const app = express();
 
   // Wear a helmet for extra security.
-  app.use(helmet());
+  app.use(
+    helmet({
+      frameguard: false,
+    })
+  );
 
   // Use compression (gzip) for responses.
   app.use(compression());
