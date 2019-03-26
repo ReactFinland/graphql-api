@@ -18,6 +18,7 @@ export { default as dustinSchau } from "./dustin-schau";
 export { default as eemeliAro } from "./eemeli-aro";
 export { default as ellieDay } from "./ellie-day";
 export { default as eloyDuran } from "./eloy-duran";
+export { default as farzadYz } from "./farzad-yz";
 export { default as gantLaborde } from "./gant-laborde";
 export { default as glennReyes } from "./glenn-reyes";
 export { default as harriMaatta } from "./harri-maatta";
