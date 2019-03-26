@@ -61,7 +61,7 @@ export class Contact {
   @Field(_ => [Session], { nullable: true })
   public workshops?: Session[];
 
-  @Field(_ => Boolean)
+  @Field(_ => Boolean, { nullable: true })
   public noPhotography?: boolean;
 }
 

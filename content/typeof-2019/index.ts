@@ -1,4 +1,5 @@
 import { Conference } from "../../server/schema/Conference";
+import { ContactType } from "../../server/schema/Contact";
 import { SessionType } from "../../server/schema/Session";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
@@ -31,6 +32,7 @@ const conference: Conference = {
   bronzeSponsors,
 };
 
+// TODO: Attach images from the site (needs improved data fetcher)
 function resolveSchedules(schedules) {
   return schedules.map(schedule => {
     return {
@@ -53,6 +55,10 @@ function resolveSchedules(schedules) {
                   );
 
                   return {
+                    about: "",
+                    type: [ContactType.SPEAKER],
+                    social: {},
+                    location: {},
                     ...person,
                     ...existingPerson,
                   };
@@ -63,40 +69,6 @@ function resolveSchedules(schedules) {
       }),
     };
   });
-
-  /*return [
-    {
-      day: "2019-03-27",
-      description: "Workshop day",
-      intervals: [],
-    },
-    {
-      day: "2019-03-28",
-      description: "Presentation day",
-      intervals: [],
-    },
-    {
-      day: "2019-03-29",
-      description: "Presentation day",
-      intervals: [
-        {
-          begin: "13:15",
-          end: "13:45",
-          title: "GraphQL",
-          sessions: [
-            {
-              people: [people.juhoVepsalainen],
-              title: "GraphQL without GraphQL",
-              description:
-                "GraphQL has changed the way we develop software. In this talk, I'll discuss my journey with the technology and show how to use GraphQL without GraphQL by abstracting schema and query generation.",
-              type: SessionType.TALK,
-              keywords: [Keyword.GRAPHQL],
-            },
-          ],
-        },
-      ],
-    },
-  ];*/
 }
 
 export default conference;
