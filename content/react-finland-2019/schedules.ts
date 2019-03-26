@@ -146,6 +146,7 @@ const presentationDay1: Schedule = {
         talks.michelWeststrate,
         talks.lucaMatteis,
         talks.davidKhourshid,
+        talks.farzadYz,
       ],
     },
     {

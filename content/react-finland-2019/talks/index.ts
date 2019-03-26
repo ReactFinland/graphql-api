@@ -7,6 +7,7 @@ export { default as brunoLourenco } from "./bruno-lourenco";
 export { default as carolynStransky } from "./carolyn-stransky";
 export { default as davidKhourshid } from "./david-khourshid";
 export { default as dustinSchau } from "./dustin-schau";
+export { default as farzadYz } from "./farzad-yz";
 export { default as glennReyes } from "./glenn-reyes";
 export { default as jamonHolmgren } from "./jamon-holmgren";
 export { default as juhaLinnanen } from "./juha-linnanen";
