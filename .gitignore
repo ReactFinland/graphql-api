@@ -6,6 +6,7 @@ build/
 attendees/
 media/scripts/
 content/reason-conf-2019/data.json
+content/typeof-2019/data.json
 utils/google-*
 .env
 .fusebox

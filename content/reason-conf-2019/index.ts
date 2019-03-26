@@ -3,7 +3,7 @@ import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
-import data from "./data.json";
+import scheduleData from "./data.json";
 
 const sponsors = [];
 const partners = [];
@@ -28,7 +28,7 @@ const conference: Conference = {
     people.nikGraf,
     people.patrickStapfer,
   ],
-  schedules: resolveData(data),
+  schedules: resolveSchedules(scheduleData),
   sponsors,
   partners,
   goldSponsors,
@@ -36,7 +36,7 @@ const conference: Conference = {
   bronzeSponsors,
 };
 
-function resolveData({ schedules, speakers }) {
+function resolveSchedules({ schedules, speakers }) {
   return schedules.map(schedule => {
     return {
       ...schedule,

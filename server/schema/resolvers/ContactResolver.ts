@@ -62,6 +62,12 @@ class ContactResolver {
 
   @FieldResolver(_ => Image)
   public image(@Root() contact: Contact, @Ctx() ctx: IContext) {
+    if (!contact.image) {
+      return {
+        url: "",
+      };
+    }
+
     if (contact.image.url.startsWith("http")) {
       return contact.image;
     }

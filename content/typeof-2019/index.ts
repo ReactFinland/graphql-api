@@ -1,8 +1,8 @@
 import { Conference } from "../../server/schema/Conference";
-import Keyword from "../../server/schema/keywords";
 import { SessionType } from "../../server/schema/Session";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
+import scheduleData from "./data.json";
 
 const sponsors = [];
 const partners = [];
@@ -23,7 +23,48 @@ const conference: Conference = {
   locations: [],
   mcs: [],
   organizers: [],
-  schedules: [
+  schedules: resolveSchedules(scheduleData),
+  sponsors,
+  partners,
+  goldSponsors,
+  silverSponsors,
+  bronzeSponsors,
+};
+
+function resolveSchedules(schedules) {
+  return schedules.map(schedule => {
+    return {
+      ...schedule,
+      intervals: schedule.intervals.map(interval => {
+        return {
+          ...interval,
+          sessions: interval.sessions.map(session => {
+            return {
+              ...session,
+              // TODO: Not correct but good enough for a demo
+              type: SessionType.TALK,
+              people:
+                session.people &&
+                session.people.map(person => {
+                  const existingPerson = Object.values(people).find(
+                    ({ name }) => {
+                      return name === person.name;
+                    }
+                  );
+
+                  return {
+                    ...person,
+                    ...existingPerson,
+                  };
+                }),
+            };
+          }),
+        };
+      }),
+    };
+  });
+
+  /*return [
     {
       day: "2019-03-27",
       description: "Workshop day",
@@ -55,12 +96,7 @@ const conference: Conference = {
         },
       ],
     },
-  ],
-  sponsors,
-  partners,
-  goldSponsors,
-  silverSponsors,
-  bronzeSponsors,
-};
+  ];*/
+}
 
 export default conference;
