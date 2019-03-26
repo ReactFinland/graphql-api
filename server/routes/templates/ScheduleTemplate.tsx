@@ -19,7 +19,8 @@ interface SchedulePageContainerProps {
   texture: string;
 }
 
-const ScheduleTemplateContainer = styled.div`
+const ScheduleTemplateContainer = styled.article`
+  display: grid;
   background-image: ${({
     primaryColor,
     secondaryColor,
@@ -39,20 +40,22 @@ const ScheduleTemplateContainer = styled.div`
 
 const ScheduleTemplateLogo = styled.img`
   position: relative;
-  margin: 0.5cm 0.9cm 0cm;
+  margin: 0.25cm 0.9cm 0cm;
   width: 5cm;
 `;
 
-const ScheduleTemplateHeader = styled.h1`
+const ScheduleHeaderContainer = styled.section``;
+
+const ScheduleTemplateTitle = styled.h1`
   color: white;
   position: absolute;
   right: 1.2cm;
   top: 0cm;
   font-size: 420%;
-  margin-top: 0.75cm;
+  margin-top: 0.25cm;
 `;
 
-const ScheduleTemplateContent = styled.div`
+const ScheduleContentContainer = styled.div`
   position: relative;
   margin: 0;
   margin-top: -0.2cm;
@@ -73,7 +76,7 @@ interface ScheduleTemplateProps {
   id: string;
 }
 
-const ScheduleContainer = styled.section`
+const ScheduleFooterContainer = styled.section`
   margin-top: -0.5cm;
 `;
 
@@ -97,16 +100,18 @@ function ScheduleTemplate({
       secondaryColor={theme.colors.secondary}
       texture={theme.textures[0].url}
     >
-      <ScheduleTemplateLogo src={theme.logos.white.withText.url} />
-      <ScheduleTemplateHeader>
-        Schedule{day ? ` ― ${day}` : ""}
-      </ScheduleTemplateHeader>
-      <ScheduleTemplateContent>
+      <ScheduleHeaderContainer>
+        <ScheduleTemplateLogo src={theme.logos.white.withText.url} />
+        <ScheduleTemplateTitle>
+          Schedule{day ? ` ― ${day}` : ""}
+        </ScheduleTemplateTitle>
+      </ScheduleHeaderContainer>
+      <ScheduleContentContainer>
         {intervals && <Schedule theme={theme} intervals={intervals} />}
-      </ScheduleTemplateContent>
-      <ScheduleContainer>
+      </ScheduleContentContainer>
+      <ScheduleFooterContainer>
         <ConnectedSponsors conferenceId={conferenceId} />
-      </ScheduleContainer>
+      </ScheduleFooterContainer>
     </ScheduleTemplateContainer>
   );
 }
