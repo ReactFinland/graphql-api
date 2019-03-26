@@ -5,7 +5,7 @@
   "description": "React Finland GraphQL API",
   "main": "./build/server",
   "scripts": {
-    "generate:all": "npm run generate:indices && npm run generate:reason-conf && npm run generate:typeof",
+    "generate:all": "npm run generate:indices && npm run generate:reason-conf",
     "generate:indices": "node utils/generate-indices.js content --verbose",
     "generate:reason-conf": "node utils/generate-reason-conf.js",
     "generate:typeof": "node utils/generate-typeof.js",

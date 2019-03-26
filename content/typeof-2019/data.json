@@ -1,0 +1,404 @@
+[
+  {
+    "day": "2019-03-27",
+    "description": "Workshop day",
+    "intervals": [
+      {
+        "begin": "08:30",
+        "end": "09:00",
+        "sessions": [
+          {
+            "title": "Check-in 🎟",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "09:00",
+        "end": "10:30",
+        "sessions": [
+          {
+            "title": "Workshops",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "10:30",
+        "end": "11:00",
+        "sessions": [
+          {
+            "title": "Coffee Break ☕️",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "11:00",
+        "end": "12:30",
+        "sessions": [
+          {
+            "title": "Workshops",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "12:30",
+        "end": "13:15",
+        "sessions": [
+          {
+            "title": "Lunch 🍽",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "13:15",
+        "end": "15:30",
+        "sessions": [
+          {
+            "title": "Workshops",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "15:30",
+        "end": "16:00",
+        "sessions": [
+          {
+            "title": "Coffee Break ☕️",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "16:00",
+        "end": "17:30",
+        "sessions": [
+          {
+            "title": "Workshops",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "17:30",
+        "end": "17:30",
+        "sessions": [
+          {
+            "title": "Closing 👋",
+            "people": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": "2019-03-28",
+    "description": "Conference day 1",
+    "intervals": [
+      {
+        "begin": "09:00",
+        "end": "09:45",
+        "sessions": [
+          {
+            "title": "Check-in 🎟",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "09:45",
+        "end": "10:00",
+        "sessions": [
+          {
+            "title": "Opening ✨",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "10:00",
+        "end": "11:15",
+        "sessions": [
+          {
+            "title": "SVG Illustrations as Components",
+            "people": [
+              {
+                "name": "Elizabet Oliveira"
+              }
+            ]
+          },
+          {
+            "title": "Beyond Web Apps: React and WebAssembly to rewrite native apps",
+            "people": [
+              {
+                "name": "Florian Rival"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "begin": "11:15",
+        "end": "11:45",
+        "sessions": [
+          {
+            "title": "Coffee Break ☕️",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "11:45",
+        "end": "12:30",
+        "sessions": [
+          {
+            "title": "Lights, camera, render! Getting your feet wet with WebGL",
+            "people": [
+              {
+                "name": "António Capelo"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "begin": "12:30",
+        "end": "14:00",
+        "sessions": [
+          {
+            "title": "Lunch 🍽",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "14:00",
+        "end": "15:15",
+        "sessions": [
+          {
+            "title": "GraphQL without GraphQL",
+            "people": [
+              {
+                "name": "Juho Vepsäläinen"
+              }
+            ]
+          },
+          {
+            "title": "Doing the thing right, or doing the right thing?",
+            "people": [
+              {
+                "name": "José Fonseca"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "begin": "15:15",
+        "end": "16:00",
+        "sessions": [
+          {
+            "title": "Coffee Break ☕️",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "16:00",
+        "end": "17:15",
+        "sessions": [
+          {
+            "title": "Building the web in the web",
+            "people": [
+              {
+                "name": "Ives van Hoorne"
+              }
+            ]
+          },
+          {
+            "title": "Creative Momentum - How to tap into your creativity to solve problems faster",
+            "people": [
+              {
+                "name": "Joana Galvão"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "begin": "17:15",
+        "end": "21:00",
+        "sessions": [
+          {
+            "title": "Closing 👋",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "21:00",
+        "end": "21:00",
+        "sessions": [
+          {
+            "title": "typeof Party 🎉",
+            "people": [
+              {
+                "name": "Porto Downtown"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": "2019-03-29",
+    "description": "Conference day 2",
+    "intervals": [
+      {
+        "begin": "09:00",
+        "end": "09:45",
+        "sessions": [
+          {
+            "title": "Check-in 🎟",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "09:45",
+        "end": "10:00",
+        "sessions": [
+          {
+            "title": "Opening ✨",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "10:00",
+        "end": "11:15",
+        "sessions": [
+          {
+            "title": "useGraphQL()",
+            "people": [
+              {
+                "name": "Sara Vieira"
+              }
+            ]
+          },
+          {
+            "title": "A Modern Approach to Digital Product Design",
+            "people": [
+              {
+                "name": "Andrei Herasimchuk"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "begin": "11:15",
+        "end": "11:45",
+        "sessions": [
+          {
+            "title": "Coffee Break ☕️",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "11:45",
+        "end": "12:30",
+        "sessions": [
+          {
+            "title": "Vue.js and Design Systems",
+            "people": [
+              {
+                "name": "Ramon Victor"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "begin": "12:30",
+        "end": "14:00",
+        "sessions": [
+          {
+            "title": "Lunch 🍽",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "14:00",
+        "end": "15:15",
+        "sessions": [
+          {
+            "title": "Paint the Web - Drawing with CSS",
+            "people": [
+              {
+                "name": "Eva Lettner"
+              }
+            ]
+          },
+          {
+            "title": "Browsers - For better or worse",
+            "people": [
+              {
+                "name": "Renato Rodrigues"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "begin": "15:15",
+        "end": "16:00",
+        "sessions": [
+          {
+            "title": "Coffee Break ☕️",
+            "people": null
+          }
+        ]
+      },
+      {
+        "begin": "16:00",
+        "end": "17:15",
+        "sessions": [
+          {
+            "title": "Designing a Design Culture",
+            "people": [
+              {
+                "name": "Sónia Gomes"
+              }
+            ]
+          },
+          {
+            "title": "Navigating the Hype-Driven Frontend Development World Without Going Nuts",
+            "people": [
+              {
+                "name": "Kristijan Ristovski (Kitze)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "begin": "17:15",
+        "end": "17:15",
+        "sessions": [
+          {
+            "title": "Closing 👋",
+            "people": null
+          }
+        ]
+      }
+    ]
+  }
+]
