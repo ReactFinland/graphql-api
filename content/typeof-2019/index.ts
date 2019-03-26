@@ -33,7 +33,7 @@ const conference: Conference = {
 };
 
 // TODO: Attach images from the site (needs improved data fetcher)
-function resolveSchedules(schedules) {
+function resolveSchedules({ schedules, speakers }) {
   return schedules.map(schedule => {
     return {
       ...schedule,
@@ -48,11 +48,13 @@ function resolveSchedules(schedules) {
               people:
                 session.people &&
                 session.people.map(person => {
-                  const existingPerson = Object.values(people).find(
-                    ({ name }) => {
+                  const existingPerson =
+                    Object.values(people).find(({ name }) => {
                       return name === person.name;
-                    }
-                  );
+                    }) ||
+                    speakers.find(({ name }) => {
+                      return name === person.name;
+                    });
 
                   return {
                     about: "",

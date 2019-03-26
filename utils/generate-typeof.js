@@ -10,10 +10,12 @@ async function main() {
     process.cwd(),
     "content/typeof-2019/data.json"
   );
+  const schedules = await getSchedules("https://typeofconf.com/agenda/");
+  const speakers = await getSpeakers("https://typeofconf.com");
 
   fs.writeFile(
     outputPath,
-    JSON.stringify(await getData("https://typeofconf.com/agenda/"), null, 2),
+    JSON.stringify({ schedules, speakers }, null, 2),
     err => {
       if (err) {
         return console.error(err);
@@ -22,7 +24,7 @@ async function main() {
   );
 }
 
-async function getData(source) {
+async function getSchedules(source) {
   const html = await request.get(source);
 
   return [
@@ -42,6 +44,12 @@ async function getData(source) {
       intervals: scrapeIntervals(html, "#conf-day-2"),
     },
   ];
+}
+
+async function getSpeakers(source) {
+  const html = await request.get(source);
+
+  return scrapeSpeakers(html);
 }
 
 function scrapeIntervals(html, selector) {
@@ -95,4 +103,33 @@ function scrapeIntervals(html, selector) {
     .get();
 
   return schedules;
+}
+
+function scrapeSpeakers(html) {
+  const $ = cheerio.load(html);
+
+  return $("#speakers .speakerCard")
+    .map(function() {
+      return {
+        name: $(this)
+          .find(".name")
+          .text(),
+        about: $(this)
+          .find(".title")
+          .text(),
+        image: {
+          url: `https://typeofconf.com${$(this)
+            .find(".photo")
+            .attr("data-src")}`,
+        },
+        /* TODO
+        social: {
+          twitter: '',
+          linkedin: '',
+          github: ''
+        }
+        */
+      };
+    })
+    .get();
 }
