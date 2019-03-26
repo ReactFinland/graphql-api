@@ -1,3 +1,4 @@
+import Keyword from "../../../server/schema/keywords";
 import { Session, SessionType } from "../../../server/schema/Session";
 import speaker from "../../people/michel-weststrate";
 
@@ -23,7 +24,12 @@ Expect a highly personal talk about a successful open source project.
 Some first hand experiences from an author that still tries to figure out how much of all that is just dumb luck in the end :).
 `,
   type: SessionType.KEYNOTE,
-  keywords: [],
+  keywords: [
+    Keyword.MOBX,
+    Keyword.MOBX_STATE_TREE,
+    Keyword.OPEN_SOURCE,
+    Keyword.REACT,
+  ],
 };
 
 export default talk;
