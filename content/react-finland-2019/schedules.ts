@@ -144,8 +144,8 @@ const presentationDay1: Schedule = {
       title: "State management",
       sessions: [
         talks.michelWeststrate,
-        talks.davidKhourshid,
         talks.lucaMatteis,
+        talks.davidKhourshid,
       ],
     },
     {
