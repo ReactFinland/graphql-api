@@ -17,6 +17,8 @@ const conference: Conference = {
   organizer: allSponsors.typeof,
   slogan: "web craftsmanship conference",
   year: "2019",
+  startDate: "2019-04-27",
+  endDate: "2019-04-29",
   websiteUrl: "https://typeofconf.com/",
   locations: [],
   mcs: [],

@@ -15,6 +15,9 @@ export class Social {
   public facebook?: string;
 
   @Field(_ => String, { nullable: true })
+  public googleMaps?: string;
+
+  @Field(_ => String, { nullable: true })
   public medium?: string;
 
   @Field(_ => String, { nullable: true })

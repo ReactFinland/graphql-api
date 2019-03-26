@@ -24,6 +24,12 @@ export class Conference {
   public year!: string;
 
   @Field(_ => String)
+  public startDate!: string;
+
+  @Field(_ => String)
+  public endDate!: string;
+
+  @Field(_ => String)
   public slogan!: string;
 
   @Field(_ => String)

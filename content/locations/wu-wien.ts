@@ -8,6 +8,7 @@ const location: Location = {
   },
   social: {
     homepage: "https://www.wu.ac.at/",
+    googleMaps: "https://goo.gl/maps/d66BeLCyyCo",
   },
   country: {
     name: "Austria",

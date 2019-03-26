@@ -18,6 +18,8 @@ const conference: Conference = {
   organizer: allSponsors.reasonconf,
   slogan: "The ReasonML conference for web developers & OCaml enthusiasts",
   year: "2019",
+  startDate: "2019-04-11",
+  endDate: "2019-04-13",
   websiteUrl: "https://www.reason-conf.com/",
   locations: [locations.wuWien],
   mcs: [],

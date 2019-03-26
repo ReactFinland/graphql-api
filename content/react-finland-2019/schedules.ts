@@ -1,14 +1,36 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
+import * as locations from "../locations";
 import * as people from "../people";
 import * as talks from "./talks";
 import * as allWorkshops from "./workshops";
 
 const workshops = Object.values(allWorkshops);
 
+const preConferenceDay: Schedule = {
+  day: "2019-04-23",
+  description: "Pre-conference",
+  intervals: [
+    {
+      begin: "18:00",
+      end: "22:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "React Helsinki meetup",
+          description: `Meet local developers in React Helsinki meetup.
+
+More info to come.`,
+        },
+      ],
+    },
+  ],
+};
+
 const workshopDay: Schedule = {
   day: "2019-04-24",
   description: "Workshop day",
+  location: locations.paasitorni,
   intervals: [
     {
       begin: "08:00",
@@ -72,12 +94,26 @@ const workshopDay: Schedule = {
       end: "17:30",
       sessions: workshops,
     },
+    {
+      begin: "18:00",
+      end: "23:00",
+      sessions: [
+        {
+          title: "Sauna with Reaktor",
+          description: `One of our sponsors is organizing an unofficial event where you can go to sauna.
+
+More info to come.`,
+          type: SessionType.PARTY,
+        },
+      ],
+    },
   ],
 };
 
 const presentationDay1: Schedule = {
   day: "2019-04-25",
   description: "First conference day",
+  location: locations.paasitorni,
   intervals: [
     {
       begin: "08:00",
@@ -202,8 +238,9 @@ const presentationDay1: Schedule = {
         {
           people: [people.janiEvakallio],
           title: "#componentDidSmoosh",
-          description:
-            "React has a new lifecycle method, `componentDidSmoosh`. Learn all about it.",
+          description: `React has a new lifecycle method, \`componentDidSmoosh\`. Learn all about it.
+
+The event is held at the main venue!`,
           type: SessionType.PARTY,
         },
       ],
@@ -214,6 +251,7 @@ const presentationDay1: Schedule = {
 const presentationDay2: Schedule = {
   day: "2019-04-26",
   description: "Second conference day",
+  location: locations.paasitorni,
   intervals: [
     {
       begin: "08:00",
@@ -335,8 +373,14 @@ const presentationDay2: Schedule = {
           title: "Afterparty",
         },
       ],
+      location: locations.tiivistamo,
     },
   ],
 };
 
-export default [workshopDay, presentationDay1, presentationDay2];
+export default [
+  preConferenceDay,
+  workshopDay,
+  presentationDay1,
+  presentationDay2,
+];

@@ -41,6 +41,8 @@ const conference: Conference = {
   organizer: allSponsors.graphqlFinland,
   slogan: "Learn More about GraphQL, Explore Finland.",
   year: "2018",
+  startDate: "2018-10-18",
+  endDate: "2018-10-19",
   websiteUrl: "https://graphql-finland.fi/",
   locations: [locations.paasitorni],
   organizers: [

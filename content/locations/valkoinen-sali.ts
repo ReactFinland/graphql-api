@@ -5,6 +5,7 @@ const location: Location = {
   about: "Valkoinen Sali is the main venue of the event.",
   social: {
     homepage: "http://www.valkoinensali.com/",
+    googleMaps: "https://goo.gl/maps/jsqqUPKTsEH2",
   },
   country: {
     name: "Finland",

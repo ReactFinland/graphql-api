@@ -1,4 +1,5 @@
 import { Field, ObjectType } from "type-graphql";
+import { Location } from "./Location";
 import { Session } from "./Session";
 
 @ObjectType()
@@ -14,4 +15,7 @@ export class Interval {
 
   @Field(_ => [Session])
   public sessions!: Session[];
+
+  @Field(_ => Location, { nullable: true })
+  public location?: Location;
 }

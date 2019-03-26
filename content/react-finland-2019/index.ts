@@ -62,8 +62,11 @@ const conference: Conference = {
   organizer: allSponsors.reactFinland,
   slogan: "Learn More about React, Explore Finland.",
   year: "2019",
+  startDate: "2019-04-24",
+  endDate: "2019-04-26",
   websiteUrl: "https://react-finland.fi/",
-  locations: [locations.paasitorni],
+  // TODO: Resolve locations based on data
+  locations: [locations.paasitorni, locations.tiivistamo],
   mcs: [people.janiEvakallio, people.saraVieira],
   organizers: [
     people.aleksiPousar,

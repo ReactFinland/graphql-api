@@ -15,6 +15,7 @@ const sponsor: Contact = {
     instagram: "elisaoyj",
     twitter: "elisaoyj",
     pinterest: "elisaoyj",
+    googleMaps: "https://goo.gl/maps/BrqBxpNc4ZN2",
   },
   location: {
     country: {
