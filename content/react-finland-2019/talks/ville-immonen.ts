@@ -4,10 +4,10 @@ import speaker from "../../people/ville-immonen";
 
 const talk: Session = {
   people: [speaker],
-  title: "",
+  title: "Toolchain for building modular React Native plugins",
   description: ``,
   type: SessionType.TALK,
-  keywords: [Keyword.REACT_NATIVE],
+  keywords: [Keyword.REACT_NATIVE, Keyword.UNIVERSAL_REACT],
 };
 
 export default talk;
