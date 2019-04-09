@@ -76,6 +76,9 @@ function getType(sponsorNames, type: string, email: string) {
   }
 
   switch (type) {
+    case "Press": {
+      return ContactType.PRESS;
+    }
     case "Organizer": {
       return ContactType.ORGANIZER;
     }

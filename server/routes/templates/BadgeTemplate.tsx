@@ -18,6 +18,7 @@ interface BadgeTemplateProps {
   id: string;
   emptyAttendees: number;
   emptyOrganizers: number;
+  emptyPress: number;
   emptySpeakers: number;
   emptySponsors: number;
   // TODO: Likely a better structure
@@ -55,6 +56,17 @@ const defaultAttendees: Contact[] = [
     location: {},
   },
   {
+    type: [ContactType.PRESS],
+    name: "Janette Doe",
+    social: {
+      twitter: "janettedoe",
+    },
+    company: "News Corp",
+    about: "",
+    image: { url: "" },
+    location: {},
+  },
+  {
     type: [ContactType.SPEAKER],
     name: "John Doedoedoedoedoedoedoe",
     social: {
@@ -84,6 +96,7 @@ function BadgeTemplate({
   attendees = defaultAttendees,
   emptyAttendees = 0,
   emptyOrganizers = 0,
+  emptyPress = 0,
   emptySpeakers = 0,
   emptySponsors = 0,
 }: BadgeTemplateProps) {
@@ -92,6 +105,7 @@ function BadgeTemplate({
     getBadgeData(attendees, badgesPerPage, {
       [ContactType.ATTENDEE]: emptyAttendees,
       [ContactType.ORGANIZER]: emptyOrganizers,
+      [ContactType.PRESS]: emptyPress,
       [ContactType.SPEAKER]: emptySpeakers,
       [ContactType.SPONSOR]: emptySponsors,
     }),
@@ -136,6 +150,7 @@ const ConnectedBadgeTemplate = connect(
     theme,
     emptyAttendees,
     emptyOrganizers,
+    emptyPress,
     emptySpeakers,
     emptySponsors,
   }) => (
@@ -145,6 +160,7 @@ const ConnectedBadgeTemplate = connect(
       theme={theme}
       emptyAttendees={emptyAttendees}
       emptyOrganizers={emptyOrganizers}
+      emptyPress={emptyPress}
       emptySpeakers={emptySpeakers}
       emptySponsors={emptySponsors}
     />
@@ -205,6 +221,13 @@ ConnectedBadgeTemplate.variables = [
   },
   {
     id: "emptyOrganizers",
+    validation: {
+      type: Number,
+      default: 0,
+    },
+  },
+  {
+    id: "emptyPress",
     validation: {
       type: Number,
       default: 0,
@@ -285,6 +308,7 @@ function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
 type BadgeTypes =
   | ContactType.ATTENDEE
   | ContactType.ORGANIZER
+  | ContactType.PRESS
   | ContactType.SPEAKER
   | ContactType.SPONSOR;
 
@@ -294,6 +318,7 @@ function getBadgeData(
   emptyAmounts: { [key in BadgeTypes]: number } = {
     [ContactType.ATTENDEE]: 0,
     [ContactType.ORGANIZER]: 0,
+    [ContactType.PRESS]: 0,
     [ContactType.SPEAKER]: 0,
     [ContactType.SPONSOR]: 0,
   }

@@ -68,6 +68,7 @@ function resolveBackground({
   const colors = {
     [ContactType.ATTENDEE]: defaultColor,
     [ContactType.ORGANIZER]: "#6d0b4d",
+    [ContactType.PRESS]: "#e5ce3b",
     [ContactType.SPEAKER]: "#d01a1a",
     [ContactType.WORKSHOP_HOST]: "#d01a1a",
     [ContactType.SPONSOR]: "#67d67b",

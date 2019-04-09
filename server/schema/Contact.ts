@@ -10,6 +10,7 @@ import { Session, SessionType } from "./Session";
 import { Social } from "./Social";
 
 export enum ContactType {
+  PRESS = "PRESS",
   SPEAKER = "SPEAKER",
   TALK = "TALK",
   LIGHTNING_TALK = "LIGHTNING_TALK",
