@@ -64,11 +64,13 @@
   "dependencies": {
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
+    "bent": "^1.4.0",
     "body-parser": "^1.18.3",
     "cloudinary": "^1.13.2",
     "compression": "^1.7.3",
     "cors": "^2.8.5",
     "csv-parse": "^4.3.4",
+    "csv-stringify": "^5.3.0",
     "date-range-array": "^2.1.0",
     "dotenv": "^7.0.0",
     "expeditious-engine-memory": "^0.2.1",
