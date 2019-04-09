@@ -27,7 +27,7 @@ const ScheduleTemplateContainer = styled.article`
     texture,
   }: SchedulePageContainerProps) => `linear-gradient(
       ${primaryColor},
-      ${desaturate(0.8, hexToRgba(secondaryColor, 0.79))}
+      ${desaturate(0.2, hexToRgba(secondaryColor, 0.79))}
     ),
     url("${texture}")`};
   background-size: cover;
