@@ -4,4 +4,7 @@ import { Field, ObjectType } from "type-graphql";
 export class Image {
   @Field(_ => String)
   public url!: string;
+
+  @Field(_ => String, { nullable: true })
+  public title?: string;
 }
