@@ -18,6 +18,7 @@ We will read Markdown files, render components described in them, and expose liv
     Keyword.DESIGN_SYSTEMS,
     Keyword.LIVE_CODING,
     Keyword.MONACO_EDITOR,
+    Keyword.TYPESCRIPT,
     Keyword.VS_CODE,
   ],
 };

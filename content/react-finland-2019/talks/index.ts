@@ -5,6 +5,7 @@ export { default as artemZakharchenko } from "./artem-zakharchenko";
 export { default as bohdanLiashenko } from "./bohdan-liashenko";
 export { default as brunoLourenco } from "./bruno-lourenco";
 export { default as carolynStransky } from "./carolyn-stransky";
+export { default as christofferNiska } from "./christoffer-niska";
 export { default as davidKhourshid } from "./david-khourshid";
 export { default as dustinSchau } from "./dustin-schau";
 export { default as farzadYz } from "./farzad-yz";

@@ -313,17 +313,18 @@ const presentationDay2: Schedule = {
     },
     {
       begin: "13:15",
-      end: "14:30",
+      end: "14:45",
       title: "Tooling",
       sessions: [
         talks.carolynStransky,
-        talks.monicaLent,
         talks.bohdanLiashenko,
+        talks.monicaLent,
+        talks.christofferNiska,
       ],
     },
     {
-      begin: "14:30",
-      end: "15:00",
+      begin: "14:45",
+      end: "15:15",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -333,7 +334,7 @@ const presentationDay2: Schedule = {
       ],
     },
     {
-      begin: "15:00",
+      begin: "15:15",
       end: "16:00",
       title: "Performance",
       sessions: [talks.annaDoubkova, talks.svenSauleau],
