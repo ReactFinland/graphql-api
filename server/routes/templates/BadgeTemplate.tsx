@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Color } from "csstype";
+import { Color, WidthProperty } from "csstype";
 import chunk from "lodash/chunk";
 import flatten from "lodash/flatten";
 import get from "lodash/get";
@@ -256,14 +256,21 @@ interface PageProps {
   tickets: any[]; // TODO
 }
 
+interface PageSheetProps {
+  width: WidthProperty<string>;
+}
+
 // TODO: Is the Safari fix needed anymore?
 const PageSheet = styled.section`
   text-align: center;
+  width: ${({ width }) => width};
+  display: flex;
+  flex-wrap: wrap;
 
   @media print {
     height: 11.5in !important; /* Adjust for Safari print mode */
   }
-`;
+` as React.FC<PageSheetProps>;
 
 const PageBadgeContainer = styled.div`
   display: inline-block;
@@ -272,12 +279,15 @@ const PageBadgeContainer = styled.div`
 function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
   const pairs = chunk(tickets, 2);
   const reverse = flatten(pairs.map(pair => [pair[1], pair[0]]));
+  const width = "105mm"; // A6
+  const height = "148mm"; // A6
 
+  // TODO: Figure out how to deal withpage width properly
   // TODO: Implement separate layouts for front/back. Now we just
   // use the same.
   return (
     <>
-      <PageSheet>
+      <PageSheet width="210mm">
         {tickets.map((attendee: Contact, i) => (
           <PageBadgeContainer key={`front-${i}`}>
             <Badge
@@ -285,11 +295,13 @@ function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
               defaultColor={defaultColor}
               logo={logo}
               texture={texture}
+              width={width}
+              height={height}
             />
           </PageBadgeContainer>
         ))}
       </PageSheet>
-      <PageSheet>
+      <PageSheet width="210mm">
         {reverse.map((attendee, i) => (
           <PageBadgeContainer key={`back-${i}`}>
             <Badge
@@ -297,6 +309,8 @@ function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
               defaultColor={defaultColor}
               logo={logo}
               texture={texture}
+              width={width}
+              height={height}
             />
           </PageBadgeContainer>
         ))}

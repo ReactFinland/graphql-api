@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Color } from "csstype";
+import { Color, HeightProperty, WidthProperty } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import get from "lodash/get";
 import trimStart from "lodash/trimStart";
@@ -26,7 +26,7 @@ const BadgeContainer = styled(Card.Container)`
   /* Hole for lanyard */
   &::after {
     position: relative;
-    top: -13.7cm;
+    top: -14.2cm;
     left: 50%;
     width: 1mm;
     height: 1mm;
@@ -48,10 +48,12 @@ interface BadgeBaseProps {
 }
 
 const BadgeFront = styled(Card.Front)`
+  border-radius: 0.5cm;
   background-image: ${resolveBackground};
   background-size: cover;
 ` as React.FC<BadgeBaseProps>;
 const BadgeBack = styled(Card.Back)`
+  border-radius: 0.5cm;
   background-image: ${resolveBackground};
   background-size: cover;
 ` as React.FC<BadgeBaseProps>;
@@ -117,12 +119,15 @@ const BadgeCompany = styled.p`
   font-weight: bold;
 `;
 
+const BadgeFooter = styled.footer`
+  padding-left: 1cm;
+  justify-self: start;
+`;
+
 const BadgeType = styled.h3`
   text-transform: capitalize;
   text-align: initial;
   color: white;
-  justify-self: start;
-  padding-left: 1cm;
 `;
 
 interface BadgeProps {
@@ -130,10 +135,19 @@ interface BadgeProps {
   logo: Theme["logos"]["white"]["withText"]["url"];
   attendee: Contact;
   texture: string;
+  height: HeightProperty<string>;
+  width: WidthProperty<string>;
 }
 
 // TODO: Use Image type for logo, not url (string)
-function Badge({ defaultColor, logo, texture, attendee }: BadgeProps) {
+function Badge({
+  defaultColor,
+  logo,
+  texture,
+  attendee,
+  width,
+  height,
+}: BadgeProps) {
   if (!attendee) {
     return <>No attendee!</>;
   }
@@ -154,14 +168,15 @@ function Badge({ defaultColor, logo, texture, attendee }: BadgeProps) {
         )}
         {company && <BadgeCompany>{company}</BadgeCompany>}
       </BadgeContent>
-      {type && <BadgeType>{type[0]}</BadgeType>}
+      {type && (
+        <BadgeFooter>
+          <BadgeType>{type[0]}</BadgeType>
+        </BadgeFooter>
+      )}
     </>
   );
   // TODO: Expose
   const backContent = frontContent;
-  // TODO: Expose
-  const width = "10.49cm";
-  const height = "14.4cm";
 
   // TODO: Eliminate BadgeContainer?
   // TODO: What if an attendee has multiple types at once?

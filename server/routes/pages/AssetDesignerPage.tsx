@@ -267,7 +267,27 @@ function AssetDesignerSidebar({
             }
           }}
         >
-          Export Image
+          Export image as PNG
+        </ExportButton>
+      </SidebarItem>
+
+      <SidebarItem>
+        <ExportButton
+          onClick={() => {
+            const domNode = document.getElementById(assetDesignTemplateId);
+
+            if (domNode) {
+              domToImage
+                .toSvg(domNode)
+                .then(svg => {
+                  // TODO: Improve this further (i.e. name of the speaker for tweets etc.)
+                  saveAs(svg, `${selection.filename}.svg`);
+                })
+                .catch(err => console.error(err));
+            }
+          }}
+        >
+          Export image as SVG
         </ExportButton>
       </SidebarItem>
 
