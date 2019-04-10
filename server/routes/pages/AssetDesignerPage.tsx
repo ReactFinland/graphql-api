@@ -19,7 +19,7 @@ import { themesQuery } from "../queries";
 import * as templates from "../templates";
 
 interface AssetDesignerContainerProps {
-  width: WidthProperty<string>;
+  width: WidthProperty<number | string>;
 }
 
 const AssetDesignerContainer = styled.article`
@@ -66,6 +66,7 @@ const VariableContainer = styled.div``;
 interface DesignerState {
   themeId: Theme["id"];
   selectionId: string; // One of templates
+  showSidebar: boolean;
   variables: { [key: string]: any };
 }
 
@@ -73,6 +74,7 @@ enum ActionTypes {
   UPDATE_SELECTION_ID,
   UPDATE_THEME_ID,
   UPDATE_VARIABLE,
+  TOGGLE_SIDEBAR,
 }
 
 function assetDesignerReducer(state: DesignerState, action) {
@@ -100,6 +102,12 @@ function assetDesignerReducer(state: DesignerState, action) {
       updateQuery("variables", JSON.stringify(newVariables));
 
       return { ...state, variables: newVariables };
+    case ActionTypes.TOGGLE_SIDEBAR:
+      const showSidebar = !state.showSidebar;
+
+      updateQuery("showSidebar", showSidebar);
+
+      return { ...state, showSidebar };
     default:
       throw new Error("No matching reducer found!");
   }
@@ -117,6 +125,7 @@ function updateQuery(field: string, value: any) {
 interface AssetDesignerPageProps {
   initialState: {
     selectionId: DesignerState["selectionId"];
+    showSidebar: boolean;
   };
   themes: Theme[];
 }
@@ -124,6 +133,7 @@ interface AssetDesignerPageProps {
 function AssetDesignerPage({
   initialState = {
     selectionId: "",
+    showSidebar: true,
   },
   themes,
 }: AssetDesignerPageProps) {
@@ -131,42 +141,59 @@ function AssetDesignerPage({
     return null;
   }
 
+  React.useEffect(() => {
+    window.addEventListener("keydown", handleUserKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleUserKeyPress);
+    };
+  }, [handleUserKeyPress]);
+
+  function handleUserKeyPress({ key }) {
+    if (key === "s") {
+      dispatch({ type: ActionTypes.TOGGLE_SIDEBAR });
+    }
+  }
+
   const [state, dispatch] = React.useReducer(
     assetDesignerReducer,
     initialState,
-    ({ selectionId }) => ({
+    ({ selectionId, showSidebar }) => ({
       selectionId,
+      showSidebar,
       themeId: initializeThemeId(),
       variables: initializeVariables(selectionId),
     })
   );
   const theme = themes.find(({ id }) => id === state.themeId) || themes[0];
-  const { selectionId } = state;
+  const { selectionId, showSidebar } = state;
 
   const selection = getSelection(selectionId) || NoSelectionFound;
-  const sideBarWidth = "18em";
+  const sideBarWidth = showSidebar ? "18em" : 0;
   const assetDesignTemplateId = "asset-design-template-id";
 
   return (
     <AssetDesignerContainer width={sideBarWidth}>
       <GlobalStyles fonts={theme.fonts} />
-      <AssetDesignerSidebar
-        themes={themes}
-        theme={theme}
-        assetDesignTemplateId={assetDesignTemplateId}
-        selection={selection}
-        selectionId={selectionId}
-        variables={state.variables}
-        onUpdateTheme={(field, value) =>
-          dispatch({ type: ActionTypes.UPDATE_THEME_ID, field, value })
-        }
-        onUpdateSelection={value =>
-          dispatch({ type: ActionTypes.UPDATE_SELECTION_ID, value })
-        }
-        onUpdateVariable={(field, value) =>
-          dispatch({ type: ActionTypes.UPDATE_VARIABLE, field, value })
-        }
-      />
+      {showSidebar && (
+        <AssetDesignerSidebar
+          themes={themes}
+          theme={theme}
+          assetDesignTemplateId={assetDesignTemplateId}
+          selection={selection}
+          selectionId={selectionId}
+          variables={state.variables}
+          onUpdateTheme={(field, value) =>
+            dispatch({ type: ActionTypes.UPDATE_THEME_ID, field, value })
+          }
+          onUpdateSelection={value =>
+            dispatch({ type: ActionTypes.UPDATE_SELECTION_ID, value })
+          }
+          onUpdateVariable={(field, value) =>
+            dispatch({ type: ActionTypes.UPDATE_VARIABLE, field, value })
+          }
+        />
+      )}
       <Main>
         {React.createElement(selection, {
           ...state.variables,

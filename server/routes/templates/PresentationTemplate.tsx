@@ -31,7 +31,8 @@ const PresentationTemplateContainer = styled.article`
   background-size: cover;
   position: relative;
   padding: 0;
-  width: ${({ sideBarWidth }) => `calc(100vw - ${sideBarWidth})`};
+  width: ${({ sideBarWidth }) =>
+    sideBarWidth ? `calc(100vw - ${sideBarWidth})` : "100vw"};
   overflow: hidden;
 ` as React.FC<SchedulePageContainerProps>;
 
@@ -48,7 +49,6 @@ function PresentationTemplate({
   intervals,
   theme,
   day,
-  conferenceId,
   id,
   sideBarWidth,
 }: PresentationTemplateProps) {
@@ -94,7 +94,7 @@ const TitleContainer = styled.section`
 `;
 
 const TitleRow = styled.div`
-  margin-top: 1em;
+  margin-top: 0.5em;
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
