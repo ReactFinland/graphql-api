@@ -11,32 +11,34 @@ const TitlePageContainer = styled.div`
   align-items: center;
 `;
 
-const Presentation = styled.h1`
+const Title = styled.h1`
   font-size: ${modularScale(7)};
   margin-left: 10vw;
   color: ${props => props.color};
 `;
 
-const Author = styled.h2`
+const Subtitle = styled.h2`
   font-size: ${modularScale(4)};
   margin-right: 5vw;
   justify-self: end;
   color: ${props => props.color};
 `;
 
+export interface TitleContent {
+  title: JSX.Element;
+  subtitle: string;
+}
+
 interface TitleContentProps {
-  content: {
-    title: string;
-    author: string;
-  };
+  content: TitleContent;
   theme: Theme;
 }
 
 function TitleContent({ content, theme }: TitleContentProps) {
   return (
     <TitlePageContainer>
-      <Presentation color={theme.colors.primary}>{content.title}</Presentation>
-      <Author color={theme.colors.secondary}>{content.author}</Author>
+      <Title color={theme.colors.primary}>{content.title}</Title>
+      <Subtitle color={theme.colors.text}>{content.subtitle}</Subtitle>
     </TitlePageContainer>
   );
 }

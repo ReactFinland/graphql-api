@@ -42,12 +42,14 @@ const MarkdownContainer = styled.div`
   margin: 0.5em;
 `;
 
+export interface GridContent {
+  columns: [string, string]; // TODO: Generalize
+  title: string;
+}
+
 interface GridContentProps {
   background: Image;
-  content: {
-    columns: [string, string]; // TODO: Generalize
-    title: string;
-  };
+  content: GridContent;
   theme: Theme;
 }
 

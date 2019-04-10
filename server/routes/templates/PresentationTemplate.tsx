@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Color } from "csstype";
+import { Color, WidthProperty } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import get from "lodash/get";
 import desaturate from "polished/lib/color/desaturate";
@@ -15,10 +15,10 @@ interface SchedulePageContainerProps {
   primaryColor: Color;
   secondaryColor: Color;
   texture: string;
+  sideBarWidth: WidthProperty<string>;
 }
 
 const PresentationTemplateContainer = styled.article`
-  display: grid;
   background-image: ${({
     primaryColor,
     secondaryColor,
@@ -31,8 +31,7 @@ const PresentationTemplateContainer = styled.article`
   background-size: cover;
   position: relative;
   padding: 0;
-  width: 28.8cm;
-  height: 20.4cm;
+  width: ${({ sideBarWidth }) => `calc(100vw - ${sideBarWidth})`};
   overflow: hidden;
 ` as React.FC<SchedulePageContainerProps>;
 
@@ -42,6 +41,7 @@ interface PresentationTemplateProps {
   day: string;
   conferenceId: string;
   id: string;
+  sideBarWidth: WidthProperty<string>;
 }
 
 function PresentationTemplate({
@@ -50,8 +50,9 @@ function PresentationTemplate({
   day,
   conferenceId,
   id,
+  sideBarWidth,
 }: PresentationTemplateProps) {
-  console.log(conferenceId, day, intervals);
+  console.log(conferenceId, day, intervals, sideBarWidth);
 
   return (
     <PresentationTemplateContainer
@@ -59,10 +60,19 @@ function PresentationTemplate({
       primaryColor={theme.colors.primary}
       secondaryColor={theme.colors.secondary}
       texture={theme.textures[0].url}
+      sideBarWidth={sideBarWidth}
     >
       <Presentation
         presentationID="schedule-presentation"
-        slides={[]}
+        slides={[
+          {
+            layout: "TITLE",
+            content: {
+              title: <img src={theme.logos.white.withText.url} />,
+              subtitle: day,
+            },
+          },
+        ]}
         theme={theme}
       />
     </PresentationTemplateContainer>
@@ -74,12 +84,13 @@ const ConnectedScheduleTemplate = connect(
   scheduleQuery,
   {},
   ({ conferenceId, day }) => ({ conferenceId, day })
-)(({ schedule, theme, conferenceId, id }) => (
+)(({ schedule, theme, conferenceId, sideBarWidth, id }) => (
   <PresentationTemplate
     id={id}
     theme={theme}
     day={schedule && dayToFinnishLocale(schedule.day)}
     conferenceId={conferenceId}
+    sideBarWidth={sideBarWidth}
     intervals={get(schedule, "intervals")}
   />
 ));

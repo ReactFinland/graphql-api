@@ -22,11 +22,13 @@ const Embed = styled.iframe`
   justify-self: center;
 `;
 
+export interface EmbedContent {
+  title: string;
+  link: string;
+}
+
 interface EmbedContentProps {
-  content: {
-    title: string;
-    link: string;
-  };
+  content: EmbedContent;
   theme: Theme;
 }
 

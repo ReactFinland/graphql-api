@@ -37,12 +37,14 @@ const Markup = styled(excludeProps(["color", "title"], "div"))`
   opacity: 0.8;
 `;
 
+export interface MarkdownContent {
+  title: string;
+  markup: string;
+}
+
 interface MarkdownContentProps {
   background: Image;
-  content: {
-    title: string;
-    markup: string;
-  };
+  content: MarkdownContent;
   theme: Theme;
 }
 

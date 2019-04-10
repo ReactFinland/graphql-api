@@ -19,10 +19,12 @@ const Title = styled.h1`
   color: ${props => props.color};
 `;
 
+export interface SectionContent {
+  title: string;
+}
+
 interface SectionContentProps {
-  content: {
-    title: string;
-  };
+  content: SectionContent;
   theme: Theme;
 }
 

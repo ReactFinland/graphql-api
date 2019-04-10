@@ -171,6 +171,7 @@ function AssetDesignerPage({
         {React.createElement(selection, {
           ...state.variables,
           theme,
+          sideBarWidth,
           id: assetDesignTemplateId,
         })}
       </Main>
