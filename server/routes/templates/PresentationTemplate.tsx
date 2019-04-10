@@ -52,8 +52,6 @@ function PresentationTemplate({
   id,
   sideBarWidth,
 }: PresentationTemplateProps) {
-  console.log(conferenceId, day, intervals, sideBarWidth);
-
   return (
     <PresentationTemplateContainer
       id={id}
@@ -64,19 +62,48 @@ function PresentationTemplate({
     >
       <Presentation
         presentationID="schedule-presentation"
-        slides={[
-          {
-            layout: "TITLE",
-            content: {
-              title: <img src={theme.logos.white.withText.url} />,
-              subtitle: day,
-            },
-          },
-        ]}
+        slides={getSlides(theme, day, intervals)}
         theme={theme}
+        features={{
+          showSlideNumber: false,
+          showSlideProgress: false,
+        }}
       />
     </PresentationTemplateContainer>
   );
+}
+
+function getSlides(theme, day, intervals) {
+  const titleSlide = [
+    {
+      layout: "TITLE",
+      content: {
+        title: <img src={theme.logos.white.withText.url} />,
+        subtitle: day,
+      },
+    },
+  ];
+  const intervalSlides = intervalsToSlides(intervals);
+
+  return titleSlide.concat(intervalSlides);
+}
+
+function intervalsToSlides(intervals) {
+  if (!intervals) {
+    return [];
+  }
+
+  console.log(intervals);
+
+  return intervals.map(({ begin, end, sessions }) => {
+    return {
+      layout: "TITLE",
+      content: {
+        title: sessions[0].title, // TODO
+        subtitle: `${begin}-${end}`,
+      },
+    };
+  });
 }
 
 const ConnectedScheduleTemplate = connect(

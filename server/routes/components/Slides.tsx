@@ -40,11 +40,15 @@ export interface Slide {
     | SectionContent;
 }
 
-interface SlidesProps {
+export interface SlidesProps {
   selectedSlide: number;
   slides: Slide[];
   theme: Theme;
   presentationID: string;
+  features: {
+    showSlideNumber: boolean;
+    showSlideProgress: boolean;
+  };
 }
 
 function Slides({
@@ -52,6 +56,7 @@ function Slides({
   slides = [],
   theme,
   presentationID,
+  features,
 }: SlidesProps) {
   return (
     <SlideContainer>
@@ -66,7 +71,7 @@ function Slides({
               theme,
               presentationID,
             })}
-            {index ? (
+            {features.showSlideNumber && index ? (
               <SlideNumber index={index}>
                 {index}/{slides.length - 1}
               </SlideNumber>
@@ -74,7 +79,7 @@ function Slides({
           </Slide>
         );
       })}
-      {selectedSlide ? (
+      {features.showSlideProgress && selectedSlide ? (
         <SlideProgress
           color={theme.colors.secondary}
           ratio={selectedSlide / (slides.length - 1)}

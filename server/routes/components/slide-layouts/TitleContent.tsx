@@ -37,7 +37,7 @@ interface TitleContentProps {
 function TitleContent({ content, theme }: TitleContentProps) {
   return (
     <TitlePageContainer>
-      <Title color={theme.colors.primary}>{content.title}</Title>
+      <Title color={theme.colors.text}>{content.title}</Title>
       <Subtitle color={theme.colors.text}>{content.subtitle}</Subtitle>
     </TitlePageContainer>
   );

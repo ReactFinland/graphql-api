@@ -4,7 +4,7 @@ import React from "react";
 import scrollIntoView from "smooth-scroll-into-view-if-needed";
 import root from "window-or-global";
 import { Theme } from "../../schema/Theme";
-import Slides, { Slide } from "./Slides";
+import Slides, { Slide, SlidesProps } from "./Slides";
 
 const PresenterContainer = styled.div``;
 
@@ -12,6 +12,7 @@ interface PresentationProps {
   presentationID: string;
   slides: Slide[];
   theme: Theme;
+  features: SlidesProps["features"];
 }
 
 class Presentation extends React.Component<PresentationProps, {}> {
@@ -99,7 +100,7 @@ class Presentation extends React.Component<PresentationProps, {}> {
   }
 
   public render() {
-    const { presentationID, slides, theme } = this.props;
+    const { features, presentationID, slides, theme } = this.props;
 
     return (
       <PresenterContainer>
@@ -108,6 +109,7 @@ class Presentation extends React.Component<PresentationProps, {}> {
           slides={slides}
           theme={theme}
           presentationID={presentationID}
+          features={features}
         />
       </PresenterContainer>
     );
