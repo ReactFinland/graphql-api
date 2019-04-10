@@ -8,13 +8,13 @@ import Slides, { Slide } from "./Slides";
 
 const PresenterContainer = styled.div``;
 
-interface PresenterProps {
+interface PresentationProps {
   presentationID: string;
   slides: Slide[];
   theme: Theme;
 }
 
-class Presenter extends React.Component<PresenterProps, {}> {
+class Presentation extends React.Component<PresentationProps, {}> {
   public scrollTimeout = null;
   public slide = getSlide();
 
@@ -133,4 +133,4 @@ function getSlideHeight() {
   return 0;
 }
 
-export default Presenter;
+export default Presentation;
