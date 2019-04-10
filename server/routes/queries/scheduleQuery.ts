@@ -11,6 +11,9 @@ query ScheduleQuery($conferenceId: ID!, $day: String!) {
         title
         people {
           name
+          image {
+            url
+          }
         }
       }
     }

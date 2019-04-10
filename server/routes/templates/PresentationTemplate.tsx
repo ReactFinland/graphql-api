@@ -88,6 +88,34 @@ function getSlides(theme, day, intervals) {
   return titleSlide.concat(intervalSlides);
 }
 
+const TitleContainer = styled.section`
+  display: grid;
+  grid-template-rows: 0.5fr 1.5fr;
+`;
+
+const TitleRow = styled.div`
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+
+const SpeakerImage = styled.img`
+  width: 75%;
+  justify-self: right;
+  align-self: center;
+  clip-path: polygon(0 0, 100% 0.5cm, 100% 100%, 0 calc(100% - 0.5cm));
+`;
+
+const SpeakerTitle = styled.div`
+  margin-top: 0.5em;
+  font-size: 60%;
+`;
+
+const SpeakerName = styled.div`
+  font-size: 50%;
+  opacity: 0.6;
+`;
+
 function intervalsToSlides(intervals) {
   if (!intervals) {
     return [];
@@ -99,7 +127,19 @@ function intervalsToSlides(intervals) {
     return {
       layout: "TITLE",
       content: {
-        title: sessions[0].title, // TODO
+        title: (
+          <TitleContainer>
+            <SpeakerTitle>{sessions[0].title}</SpeakerTitle>
+            <TitleRow>
+              <SpeakerName>
+                {sessions[0].people && sessions[0].people[0].name}
+              </SpeakerName>
+              <SpeakerImage
+                src={sessions[0].people && sessions[0].people[0].image.url}
+              />
+            </TitleRow>
+          </TitleContainer>
+        ), // TODO
         subtitle: `${begin}-${end}`,
       },
     };
