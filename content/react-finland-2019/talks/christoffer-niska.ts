@@ -7,7 +7,7 @@ const talk: Session = {
   title: "Releasing a library written in TypeScript on NPM",
   description: `Most of us have used or at least heard about TypeScript, but how many have released a React library written in TypeScript on NPM?
 
-In this session we will take a quick look at the tooling required and some best practices for publishing a library written in TypeScript.`,
+  In this session we will take a look at the tooling required and some best practices for publishing a library using TypeScript and Rollup.`,
   type: SessionType.LIGHTNING_TALK,
   keywords: [Keyword.NPM, Keyword.TYPESCRIPT],
 };
