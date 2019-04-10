@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Color, WidthProperty } from "csstype";
 import hexToRgba from "hex-to-rgba";
+import flatMap from "lodash/flatMap";
 import get from "lodash/get";
 import desaturate from "polished/lib/color/desaturate";
 import * as React from "react";
@@ -121,28 +122,38 @@ function intervalsToSlides(intervals) {
     return [];
   }
 
-  console.log(intervals);
+  return flatMap(intervals, ({ title, begin, end, sessions }) => {
+    const titleSlide = title
+      ? {
+          layout: "TITLE",
+          content: {
+            title,
+          },
+        }
+      : null;
+    const sessionSlides = sessions.map(session => {
+      return {
+        layout: "TITLE",
+        content: {
+          title: (
+            <TitleContainer>
+              <SpeakerTitle>{session.title}</SpeakerTitle>
+              <TitleRow>
+                <SpeakerName>
+                  {session.people && session.people[0].name}
+                </SpeakerName>
+                <SpeakerImage
+                  src={session.people && session.people[0].image.url}
+                />
+              </TitleRow>
+            </TitleContainer>
+          ),
+          subtitle: `${begin}-${end}`,
+        },
+      };
+    });
 
-  return intervals.map(({ begin, end, sessions }) => {
-    return {
-      layout: "TITLE",
-      content: {
-        title: (
-          <TitleContainer>
-            <SpeakerTitle>{sessions[0].title}</SpeakerTitle>
-            <TitleRow>
-              <SpeakerName>
-                {sessions[0].people && sessions[0].people[0].name}
-              </SpeakerName>
-              <SpeakerImage
-                src={sessions[0].people && sessions[0].people[0].image.url}
-              />
-            </TitleRow>
-          </TitleContainer>
-        ), // TODO
-        subtitle: `${begin}-${end}`,
-      },
-    };
+    return titleSlide ? [titleSlide].concat(sessionSlides) : sessionSlides;
   });
 }
 

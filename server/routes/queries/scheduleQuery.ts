@@ -4,6 +4,7 @@ query ScheduleQuery($conferenceId: ID!, $day: String!) {
     day
     description
     intervals {
+      title
       begin
       end
       sessions {
