@@ -107,6 +107,8 @@ const SpeakerImage = styled.img`
   clip-path: polygon(0 0, 100% 0.5cm, 100% 100%, 0 calc(100% - 0.5cm));
 `;
 
+const SpeakerTextContainer = styled.div``;
+
 const SpeakerTitle = styled.div`
   margin-top: 0.5em;
   font-size: 60%;
@@ -115,6 +117,12 @@ const SpeakerTitle = styled.div`
 const SpeakerName = styled.div`
   font-size: 50%;
   opacity: 0.6;
+`;
+
+const SpeakerTime = styled.div`
+  margin-top: 1em;
+  font-size: 40%;
+  opacity: 0.8;
 `;
 
 function intervalsToSlides(intervals) {
@@ -139,11 +147,16 @@ function intervalsToSlides(intervals) {
             <TitleContainer>
               <SpeakerTitle>{session.title}</SpeakerTitle>
               <TitleRow>
-                <SpeakerName>
-                  {session.people &&
-                    session.people[0] &&
-                    session.people[0].name}
-                </SpeakerName>
+                <SpeakerTextContainer>
+                  <SpeakerName>
+                    {session.people &&
+                      session.people[0] &&
+                      session.people[0].name}
+                  </SpeakerName>
+                  <SpeakerTime>
+                    {begin}-{end}
+                  </SpeakerTime>
+                </SpeakerTextContainer>
                 <SpeakerImage
                   src={
                     session.people &&
@@ -154,7 +167,6 @@ function intervalsToSlides(intervals) {
               </TitleRow>
             </TitleContainer>
           ),
-          subtitle: `${begin}-${end}`,
         },
       };
     });
