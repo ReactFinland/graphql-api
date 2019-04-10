@@ -9,7 +9,10 @@ const person: Contact = {
     url: "people/crisu.jpg",
   },
   social: {
+    homepage: "https://about.me/crisu83",
     twitter: "Crisu83",
+    github: "crisu83",
+    linkedin: "crisu83",
   },
   location: {
     country: {
