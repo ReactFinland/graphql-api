@@ -158,9 +158,9 @@ function AssetDesignerPage({
   const [state, dispatch] = React.useReducer(
     assetDesignerReducer,
     initialState,
-    ({ selectionId, showSidebar }) => ({
+    ({ selectionId }) => ({
       selectionId,
-      showSidebar,
+      showSidebar: initializeShowSidebar(),
       themeId: initializeThemeId(),
       variables: initializeVariables(selectionId),
     })
@@ -204,6 +204,10 @@ function AssetDesignerPage({
       </Main>
     </AssetDesignerContainer>
   );
+}
+
+function initializeShowSidebar() {
+  return Boolean(get(queryString.parse(location.search), "showSidebar", true));
 }
 
 function initializeThemeId() {
