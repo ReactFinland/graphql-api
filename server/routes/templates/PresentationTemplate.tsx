@@ -140,10 +140,16 @@ function intervalsToSlides(intervals) {
               <SpeakerTitle>{session.title}</SpeakerTitle>
               <TitleRow>
                 <SpeakerName>
-                  {session.people && session.people[0].name}
+                  {session.people &&
+                    session.people[0] &&
+                    session.people[0].name}
                 </SpeakerName>
                 <SpeakerImage
-                  src={session.people && session.people[0].image.url}
+                  src={
+                    session.people &&
+                    session.people[0] &&
+                    session.people[0].image.url
+                  }
                 />
               </TitleRow>
             </TitleContainer>
