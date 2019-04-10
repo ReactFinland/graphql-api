@@ -89,9 +89,11 @@ function resolveSessionPeople(people, sessionPeople) {
     return undefined;
   }
 
-  return sessionPeople.map(name => {
-    return people.find(person => person.name === name);
-  });
+  return sessionPeople
+    .map(name => {
+      return people.find(person => person.name === name);
+    })
+    .filter(Boolean);
 }
 
 export default conference;
