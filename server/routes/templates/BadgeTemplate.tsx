@@ -16,6 +16,7 @@ interface BadgeTemplateProps {
   attendees: Contact[];
   theme: Theme;
   id: string;
+  showOnlyTemplates: boolean;
   emptyAttendees: number;
   emptyOrganizers: number;
   emptyPress: number;
@@ -94,6 +95,7 @@ function BadgeTemplate({
   id,
   theme,
   attendees = defaultAttendees,
+  showOnlyTemplates,
   emptyAttendees = 0,
   emptyOrganizers = 0,
   emptyPress = 0,
@@ -101,16 +103,43 @@ function BadgeTemplate({
   emptySponsors = 0,
 }: BadgeTemplateProps) {
   const badgesPerPage = 4;
-  const pages = chunk(
-    getBadgeData(attendees, badgesPerPage, {
-      [ContactType.ATTENDEE]: emptyAttendees,
-      [ContactType.ORGANIZER]: emptyOrganizers,
-      [ContactType.PRESS]: emptyPress,
-      [ContactType.SPEAKER]: emptySpeakers,
-      [ContactType.SPONSOR]: emptySponsors,
-    }),
-    badgesPerPage
-  );
+  let pages;
+
+  if (showOnlyTemplates) {
+    pages = chunk(
+      getBadgeData(
+        [
+          { type: [ContactType.ATTENDEE] },
+          { type: [ContactType.ORGANIZER] },
+          { type: [ContactType.PRESS] },
+          { type: [ContactType.SPEAKER] },
+          { type: [ContactType.SPONSOR] },
+        ],
+        {
+          [ContactType.ATTENDEE]: 0,
+          [ContactType.ORGANIZER]: 0,
+          [ContactType.PRESS]: 0,
+          [ContactType.SPEAKER]: 0,
+          [ContactType.SPONSOR]: 0,
+        }
+      ),
+      badgesPerPage
+    );
+  } else {
+    pages = chunk(
+      fillWithEmpties(
+        getBadgeData(attendees, {
+          [ContactType.ATTENDEE]: emptyAttendees,
+          [ContactType.ORGANIZER]: emptyOrganizers,
+          [ContactType.PRESS]: emptyPress,
+          [ContactType.SPEAKER]: emptySpeakers,
+          [ContactType.SPONSOR]: emptySponsors,
+        }),
+        badgesPerPage
+      ),
+      badgesPerPage
+    );
+  }
 
   return (
     <BadgeTemplateContainer id={id}>
@@ -121,6 +150,7 @@ function BadgeTemplate({
           logo={theme.logos.white.withText.url}
           texture={theme.textures[0].url}
           tickets={tickets}
+          showBackside={!showOnlyTemplates}
         />
       ))}
     </BadgeTemplateContainer>
@@ -148,6 +178,7 @@ const ConnectedBadgeTemplate = connect(
     conference,
     id,
     theme,
+    showOnlyTemplates,
     emptyAttendees,
     emptyOrganizers,
     emptyPress,
@@ -158,6 +189,7 @@ const ConnectedBadgeTemplate = connect(
       attendees={get(conference, "attendees")}
       id={id}
       theme={theme}
+      showOnlyTemplates={showOnlyTemplates}
       emptyAttendees={emptyAttendees}
       emptyOrganizers={emptyOrganizers}
       emptyPress={emptyPress}
@@ -170,6 +202,13 @@ const ConnectedBadgeTemplate = connect(
 ConnectedBadgeTemplate.filename = "badge";
 
 ConnectedBadgeTemplate.variables = [
+  {
+    id: "showOnlyTemplates",
+    validation: {
+      type: Boolean,
+      default: true,
+    },
+  },
   {
     id: "conferenceId",
     query: `query ConferenceIdQuery {  
@@ -254,6 +293,7 @@ interface PageProps {
   logo: string;
   texture: string;
   tickets: any[]; // TODO
+  showBackside: boolean;
 }
 
 interface PageSheetProps {
@@ -276,7 +316,13 @@ const PageBadgeContainer = styled.div`
   display: inline-block;
 `;
 
-function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
+function Page({
+  defaultColor,
+  logo,
+  texture,
+  tickets = [],
+  showBackside,
+}: PageProps) {
   const pairs = chunk(tickets, 2);
   const reverse = flatten(pairs.map(pair => [pair[1], pair[0]]));
   const width = "105mm"; // A6
@@ -301,20 +347,22 @@ function Page({ defaultColor, logo, texture, tickets = [] }: PageProps) {
           </PageBadgeContainer>
         ))}
       </PageSheet>
-      <PageSheet width="210mm">
-        {reverse.map((attendee, i) => (
-          <PageBadgeContainer key={`back-${i}`}>
-            <Badge
-              attendee={attendee}
-              defaultColor={defaultColor}
-              logo={logo}
-              texture={texture}
-              width={width}
-              height={height}
-            />
-          </PageBadgeContainer>
-        ))}
-      </PageSheet>
+      {showBackside && (
+        <PageSheet width="210mm">
+          {reverse.map((attendee, i) => (
+            <PageBadgeContainer key={`back-${i}`}>
+              <Badge
+                attendee={attendee}
+                defaultColor={defaultColor}
+                logo={logo}
+                texture={texture}
+                width={width}
+                height={height}
+              />
+            </PageBadgeContainer>
+          ))}
+        </PageSheet>
+      )}
     </>
   );
 }
@@ -328,7 +376,6 @@ type BadgeTypes =
 
 function getBadgeData(
   tickets,
-  badgesPerPage: number,
   emptyAmounts: { [key in BadgeTypes]: number } = {
     [ContactType.ATTENDEE]: 0,
     [ContactType.ORGANIZER]: 0,
@@ -346,9 +393,12 @@ function getBadgeData(
     )
   );
 
-  // Ensure all pages are filled with badges
-  return ret.concat(
-    Array(ret.length % badgesPerPage).fill(getEmptyData(ContactType.ATTENDEE))
+  return ret;
+}
+
+function fillWithEmpties(badges, badgesPerPage, type = ContactType.ATTENDEE) {
+  return badges.concat(
+    Array(badges.length % badgesPerPage).fill(getEmptyData(type))
   );
 }
 

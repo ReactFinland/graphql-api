@@ -14,9 +14,15 @@ interface BadgeContainerProps {
 }
 
 // TODO: Expose dimensions?
-const BadgeContainer = styled(Card.Container)`
+// TODO: Use Card.Container
+const BadgeContainer = styled.section`
   display: grid;
   grid-template-rows: repeat(3, 1fr);
+
+  /* Animation */
+  perspective: 100%;
+  transform-style: preserve-3d;
+  transition-duration: 500ms;
 
   margin: 0;
   padding: 0;
@@ -52,11 +58,11 @@ const BadgeFront = styled(Card.Front)`
   background-image: ${resolveBackground};
   background-size: cover;
 ` as React.FC<BadgeBaseProps>;
-const BadgeBack = styled(Card.Back)`
+/*const BadgeBack = styled(Card.Back)`
   border-radius: 0.5cm;
   background-image: ${resolveBackground};
   background-size: cover;
-` as React.FC<BadgeBaseProps>;
+` as React.FC<BadgeBaseProps>;*/
 
 function resolveBackground({
   defaultColor = "#000",
@@ -176,7 +182,7 @@ function Badge({
     </>
   );
   // TODO: Expose
-  const backContent = frontContent;
+  // const backContent = frontContent;
 
   // TODO: Eliminate BadgeContainer?
   // TODO: What if an attendee has multiple types at once?
@@ -185,9 +191,9 @@ function Badge({
       <BadgeFront defaultColor={defaultColor} texture={texture} type={type[0]}>
         {frontContent}
       </BadgeFront>
-      <BadgeBack defaultColor={defaultColor} texture={texture} type={type[0]}>
+      {/*<BadgeBack defaultColor={defaultColor} texture={texture} type={type[0]}>
         {backContent}
-      </BadgeBack>
+  </BadgeBack>*/}
     </BadgeContainer>
   );
 }
