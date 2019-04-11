@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Digia",
   about: "Smoother digital world",
   image: {
-    url: "sponsors/digia.png",
+    url: "sponsors/digia.svg",
   },
   social: {
     homepage: "https://digia.com/",
