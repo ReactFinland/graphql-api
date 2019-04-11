@@ -102,7 +102,7 @@ const workshopDay: Schedule = {
           title: "Sauna with Reaktor",
           description: `One of our sponsors is organizing an unofficial event where you can go to sauna and meet developers. The event also has food and drinks so you won't go hungry/thirsty and there will be transfer from the venue.
 
-          [Please register separately if you are coming](https://www.reaktor.com/react-finland-afterparty/).`,
+> [Please register separately if you are coming](https://www.reaktor.com/react-finland-afterparty/).`,
           type: SessionType.PARTY,
         },
       ],
