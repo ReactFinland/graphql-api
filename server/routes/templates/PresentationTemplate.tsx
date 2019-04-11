@@ -95,7 +95,6 @@ const TitleContainer = styled.section`
 `;
 
 const TitleRow = styled.div`
-  margin-top: 0.5em;
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
@@ -115,12 +114,13 @@ const SpeakerTitle = styled.div`
 `;
 
 const SpeakerName = styled.div`
+  margin-top: 0.5em;
   font-size: 50%;
   opacity: 0.6;
 `;
 
 const SpeakerTime = styled.div`
-  margin-top: 1em;
+  margin-top: 0.5em;
   font-size: 40%;
   opacity: 0.8;
 `;
@@ -135,7 +135,14 @@ function intervalsToSlides(intervals) {
       ? {
           layout: "TITLE",
           content: {
-            title,
+            title: (
+              <TitleContainer>
+                <SpeakerTitle>{title}</SpeakerTitle>
+                <SpeakerTime>
+                  {begin}-{end}
+                </SpeakerTime>
+              </TitleContainer>
+            ),
           },
         }
       : null;
@@ -153,9 +160,11 @@ function intervalsToSlides(intervals) {
                       session.people[0] &&
                       session.people[0].name}
                   </SpeakerName>
-                  <SpeakerTime>
-                    {begin}-{end}
-                  </SpeakerTime>
+                  {sessions.length === 1 && (
+                    <SpeakerTime>
+                      {begin}-{end}
+                    </SpeakerTime>
+                  )}
                 </SpeakerTextContainer>
                 <SpeakerImage
                   src={
