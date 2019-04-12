@@ -1,12 +1,13 @@
+import Keyword from "../../../server/schema/keywords";
 import { Session, SessionType } from "../../../server/schema/Session";
 import speaker from "../../people/maaret-pyhajarvi";
 
 const talk: Session = {
   people: [speaker],
-  title: "",
+  title: "Intersection of Automation and Exploratory Testing. React edition",
   description: ``,
   type: SessionType.TALK,
-  keywords: [],
+  keywords: [Keyword.REACT, Keyword.TESTING],
 };
 
 export default talk;
