@@ -38,9 +38,9 @@ const workshopDay: Schedule = {
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Registration",
+          title: "Registration and breakfast",
           description:
-            "Pro tip: You can register at any time during the conference",
+            "Pro tip: You can register at any time during the conference. There's light breakfast (pastry and coffee) available.",
         },
       ],
     },
@@ -121,8 +121,9 @@ const presentationDay1: Schedule = {
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Registration",
-          description: "You can register later too",
+          title: "Registration and breakfast",
+          description:
+            "You can register later too. There's light breakfast (pastry and coffee) available.",
         },
       ],
     },
@@ -260,8 +261,9 @@ const presentationDay2: Schedule = {
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Registration",
-          description: "If you slept late, you can still register after this",
+          title: "Registration and breakfast",
+          description:
+            "If you slept late, you can still register after this. There's light breakfast (pastry and coffee) available.",
         },
       ],
     },
