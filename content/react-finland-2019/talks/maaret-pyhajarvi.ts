@@ -4,7 +4,7 @@ import speaker from "../../people/maaret-pyhajarvi";
 
 const talk: Session = {
   people: [speaker],
-  title: "Intersection of Automation and Exploratory Testing. React edition",
+  title: "Intersection of Automation and Exploratory Testing",
   description: ``,
   type: SessionType.TALK,
   keywords: [Keyword.REACT, Keyword.TESTING],
