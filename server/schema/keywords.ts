@@ -19,6 +19,7 @@ enum Keyword {
   HEADLESS_COMPONENTS = "Headless components",
   IMMER = "Immer",
   LAYOUT = "Layout",
+  LIBRARIES = "Libraries",
   LEGACY = "Legacy",
   LINTING = "Linting",
   LIVE_CODING = "Live coding",
