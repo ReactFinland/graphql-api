@@ -10,7 +10,7 @@ const talk: Session = {
 WebAssembly is the right tool for the job! I want to demonstrate how you can write parts of your React application using Rust and related tools. To complete the demonstration, the code will be deployed on Cloudflare's serverless platform.
 
 Rust ecosystem offers many great tools to work with WebAssembly on the web. These include DOM manipulation, JavaScript bindings and so on, and you will learn more about them in the talk.`,
-  type: SessionType.TALK,
+  type: SessionType.LIGHTNING_TALK,
   keywords: [
     Keyword.LIVE_CODING,
     Keyword.REACT,
