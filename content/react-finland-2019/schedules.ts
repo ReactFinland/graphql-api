@@ -13,14 +13,14 @@ const preConferenceDay: Schedule = {
   intervals: [
     {
       begin: "18:00",
-      end: "22:00",
+      end: "21:00",
       sessions: [
         {
           type: SessionType.PARTY,
           title: "React Helsinki meetup",
           description: `Meet local developers in React Helsinki meetup.
 
-More info to come.`,
+> [Please register separately if you are coming](https://meetabit.com/events/react-helsinki-april-2019).`,
         },
       ],
     },
