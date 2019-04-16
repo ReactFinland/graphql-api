@@ -243,7 +243,7 @@ const presentationDay1: Schedule = {
         {
           people: [people.janiEvakallio],
           title: "#SMOOSH",
-          description: `After sold out shows in London and Berlin, we’re bringing the #SMOOSH comedy show to Helsinki!
+          description: `After sold out shows in London and Berlin, we’re bringing the [#SMOOSH comedy show](https://smoosh.fun) to Helsinki!
 
           Join us for an evening of standup, improv, and even a sing-a-long. This show will be unforgettable, no matter how much you try to forget it. 😉 
 
