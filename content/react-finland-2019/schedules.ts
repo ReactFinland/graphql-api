@@ -157,7 +157,8 @@ const presentationDay1: Schedule = {
         {
           type: SessionType.COFFEE_BREAK,
           title: "Break",
-          description: "Drink coffee, live long and prosper",
+          description:
+            "Drink coffee, live long and prosper. Play foosball at the sponsors' lounge.",
         },
       ],
     },
@@ -196,7 +197,8 @@ const presentationDay1: Schedule = {
         {
           type: SessionType.COFFEE_BREAK,
           title: "Break",
-          description: "Drink coffee. Again.",
+          description:
+            "Drink coffee. Again. Take a massage at the sponsors' lounge.",
         },
       ],
     },
@@ -213,7 +215,8 @@ const presentationDay1: Schedule = {
         {
           type: SessionType.COFFEE_BREAK,
           title: "Break",
-          description: "Drink coffee if you still can.",
+          description:
+            "Drink coffee if you still can. Enjoy the sofa at the sponsors' lounge.",
         },
       ],
     },
@@ -292,7 +295,8 @@ const presentationDay2: Schedule = {
         {
           type: SessionType.COFFEE_BREAK,
           title: "Break",
-          description: "Drink coffee. Finnish coffee is darker than you think.",
+          description:
+            "Drink coffee and play games at the sponsors' lounge. Finnish coffee is darker than you think.",
         },
       ],
     },
@@ -331,7 +335,8 @@ const presentationDay2: Schedule = {
         {
           type: SessionType.COFFEE_BREAK,
           title: "Break",
-          description: "Drink coffee. Again.",
+          description:
+            "Drink coffee. Again. Play more foosball at the sponsors' lounge.",
         },
       ],
     },
@@ -348,7 +353,8 @@ const presentationDay2: Schedule = {
         {
           type: SessionType.COFFEE_BREAK,
           title: "Break",
-          description: "Drink coffee if you still can.",
+          description:
+            "Drink coffee if you still can. Still time for a massage at the sponsors' lounge.",
         },
       ],
     },
