@@ -21,7 +21,7 @@ const person: Contact = {
     city: "Vienna",
   },
   keywords: [Keyword.GRAPHQL, Keyword.GRAPHQLJS],
-  type: [ContactType.SPEAKER, ContactType.TALK],
+  type: [ContactType.SPEAKER],
 };
 
 export default person;

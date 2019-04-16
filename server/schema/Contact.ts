@@ -28,6 +28,15 @@ export enum ContactType {
 
 @ObjectType()
 export class Contact {
+  // Needed for badges
+  @Field(_ => String)
+  public firstName?: string;
+
+  // Needed for badges
+  @Field(_ => String)
+  public lastName?: string;
+
+  // Combine with first/lastName somehow? Problematic for companies.
   @Field(_ => String)
   public name!: string;
 

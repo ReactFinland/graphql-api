@@ -22,7 +22,7 @@ const person: Contact = {
     city: "Helsinki",
   },
   keywords: [Keyword.GRAPHQL],
-  type: [ContactType.SPEAKER, ContactType.LIGHTNING_TALK],
+  type: [ContactType.SPEAKER],
 };
 
 export default person;

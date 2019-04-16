@@ -20,7 +20,7 @@ const person: Contact = {
     },
   },
   keywords: [],
-  type: [ContactType.ORGANIZER, ContactType.SPEAKER],
+  type: [ContactType.ORGANIZER],
 };
 
 export default person;

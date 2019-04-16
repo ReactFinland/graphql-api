@@ -24,7 +24,7 @@ const person: Contact = {
     city: "Vienna",
   },
   keywords: [Keyword.TOOLING, Keyword.WEBPACK],
-  type: [ContactType.ORGANIZER, ContactType.SPEAKER, ContactType.WORKSHOP_HOST],
+  type: [ContactType.ORGANIZER],
 };
 
 export default person;

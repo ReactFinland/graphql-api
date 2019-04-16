@@ -60,6 +60,19 @@ class ContactResolver {
     return contact.type || [];
   }
 
+  @FieldResolver(_ => String)
+  public firstName(@Root() contact: Contact) {
+    return contact.name.split(" ")[0];
+  }
+
+  @FieldResolver(_ => String)
+  public lastName(@Root() contact: Contact) {
+    return contact.name
+      .split(" ")
+      .slice(1)
+      .join(" ");
+  }
+
   @FieldResolver(_ => Image)
   public image(@Root() contact: Contact, @Ctx() ctx: IContext) {
     if (!contact.image) {

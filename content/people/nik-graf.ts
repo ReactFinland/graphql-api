@@ -24,7 +24,7 @@ const person: Contact = {
     city: "Vienna",
   },
   keywords: [Keyword.REASON, Keyword.GRAPHQL, Keyword.REACT, Keyword.REACT_VR],
-  type: [ContactType.SPEAKER, ContactType.TALK, ContactType.WORKSHOP],
+  type: [ContactType.SPEAKER],
 };
 
 export default person;

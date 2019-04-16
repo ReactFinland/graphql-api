@@ -33,10 +33,12 @@ function convertData(sponsorNames, tickets): Contact[] {
   return map(
     filter(
       map(tickets, row => mapValues(row, v => (v === "-" ? null : v))),
-      t => !t["Void Status"]
+      t => !t["Void Status"] && !t.Ticket.startsWith("Workshop only")
     ),
     row => ({
       name: getName(row),
+      firstName: getFirstName(row),
+      lastName: getLastName(row),
       company: getCompany(row),
       about: "", // TODO
       image: { url: "" }, // TODO
@@ -52,10 +54,15 @@ function convertData(sponsorNames, tickets): Contact[] {
 }
 
 function getName(row) {
-  const firstName = upperFirst(row["Ticket First Name"] || row["First Name"]);
-  const lastName = upperFirst(row["Ticket Last Name"] || row["Last Name"]);
+  return `${getFirstName(row)} ${getLastName(row)}`;
+}
 
-  return `${firstName} ${lastName}`;
+function getFirstName(row) {
+  return upperFirst(row["Ticket First Name"] || row["First Name"]);
+}
+
+function getLastName(row) {
+  return upperFirst(row["Ticket Last Name"] || row["Last Name"]);
 }
 
 function getCompany(row): string {
@@ -67,7 +74,10 @@ function getCompany(row): string {
     return "";
   }
 
-  return companyName.trim();
+  return companyName
+    .split(".")[0]
+    .replace(/[ ]+/g, " ")
+    .trim();
 }
 
 function getType(sponsorNames, type: string, email: string) {
@@ -100,6 +110,10 @@ function isSponsor(sponsorNames: string[], email: string) {
 }
 
 function getTwitter(twitter): string {
+  if (twitter && twitter.split(" ").length > 1) {
+    return "";
+  }
+
   return trimStart(twitter, "'@") || "";
 }
 
