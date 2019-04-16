@@ -242,8 +242,8 @@ const presentationDay1: Schedule = {
       sessions: [
         {
           people: [people.janiEvakallio],
-          title: "#componentDidSmoosh",
-          description: `React has a new lifecycle method, \`componentDidSmoosh\`. Learn all about it.
+          title: "#useSmoosh",
+          description: `React has a new hook, [useSmoosh](https://smoosh.fun). Learn all about it.
 
 The event is held at the main venue!`,
           type: SessionType.PARTY,
