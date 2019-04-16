@@ -49,7 +49,7 @@ async function createDiversityTicket(code) {
   // const releases = await titoApi.getReleases();
   const diversityReleaseId = "id0xabhbxjo"; // TODO: Better to search from the releases
 
-  const discountCode = await titoApi.createDiscountCode({
+  return await titoApi.createDiscountCode({
     code,
     type: "PercentOffDiscountCode",
     value: 100,

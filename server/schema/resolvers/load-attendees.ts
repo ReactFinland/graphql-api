@@ -6,6 +6,7 @@ import map from "lodash/map";
 import mapValues from "lodash/mapValues";
 import trimStart from "lodash/trimStart";
 import upperFirst from "lodash/upperFirst";
+import toTitleCase from "to-title-case";
 import { Conference } from "../Conference";
 import { Contact, ContactType } from "../Contact";
 
@@ -58,11 +59,11 @@ function getName(row) {
 }
 
 function getFirstName(row) {
-  return upperFirst(row["Ticket First Name"] || row["First Name"]);
+  return toTitleCase(upperFirst(row["Ticket First Name"] || row["First Name"]));
 }
 
 function getLastName(row) {
-  return upperFirst(row["Ticket Last Name"] || row["Last Name"]);
+  return toTitleCase(upperFirst(row["Ticket Last Name"] || row["Last Name"]));
 }
 
 function getCompany(row): string {
@@ -75,7 +76,7 @@ function getCompany(row): string {
   }
 
   return companyName
-    .split(".")[0]
+    .split(". z o.o.")[0]
     .replace(/[ ]+/g, " ")
     .trim();
 }
