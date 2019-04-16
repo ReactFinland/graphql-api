@@ -1,6 +1,5 @@
 import parse from "csv-parse/lib/sync"; // TODO: Use the async version instead?
 import * as fs from "fs-extra";
-import endsWith from "lodash/endsWith";
 import filter from "lodash/filter";
 import map from "lodash/map";
 import mapValues from "lodash/mapValues";
@@ -13,7 +12,7 @@ import { Contact, ContactType } from "../Contact";
 async function loadAttendees(conference: Conference, csvPath: string) {
   if (fs.existsSync(csvPath)) {
     return convertData(
-      getSponsorNames(conference),
+      getSponsors(conference),
       parse(await fs.readFile(csvPath, { encoding: "utf8" }), {
         columns: true,
         skip_empty_lines: true,
@@ -24,13 +23,13 @@ async function loadAttendees(conference: Conference, csvPath: string) {
   return [];
 }
 
-function getSponsorNames(conference: Conference): string[] {
-  return conference.sponsors.map(
-    sponsor => new URL(sponsor.social.homepage || "").hostname
+function getSponsors(conference: Conference): Contact[] {
+  return conference.sponsors.filter(
+    sponsor => !sponsor.type.includes(ContactType.PARTNER)
   );
 }
 
-function convertData(sponsorNames, tickets): Contact[] {
+function convertData(sponsors: Contact[], tickets): Contact[] {
   return map(
     filter(
       map(tickets, row => mapValues(row, v => (v === "-" ? null : v))),
@@ -45,7 +44,12 @@ function convertData(sponsorNames, tickets): Contact[] {
       image: { url: "" }, // TODO
       location: {}, // TODO
       type: [
-        getType(sponsorNames, row.Ticket || row["Ticket Type"], row.Email),
+        getType(
+          sponsors,
+          row.Ticket || row["Ticket Type"],
+          getCompany(row),
+          row.Email
+        ),
       ],
       social: {
         twitter: getTwitter(row.Twitter || row["What's your Twitter handle?"]),
@@ -81,8 +85,13 @@ function getCompany(row): string {
     .trim();
 }
 
-function getType(sponsorNames, type: string, email: string) {
-  if (isSponsor(sponsorNames, email)) {
+function getType(
+  sponsors: Contact[],
+  type: string,
+  company: string,
+  email: string
+) {
+  if (isSponsor(sponsors, type, company, email)) {
     return ContactType.SPONSOR;
   }
 
@@ -106,8 +115,27 @@ function getType(sponsorNames, type: string, email: string) {
       return ContactType.ATTENDEE;
   }
 }
-function isSponsor(sponsorNames: string[], email: string) {
-  return sponsorNames.some(pattern => endsWith(email, pattern));
+function isSponsor(
+  sponsors: Contact[],
+  type: string,
+  company: string,
+  email: string
+) {
+  return sponsors.some(({ name, social: { homepage } }) => {
+    if (name === company) {
+      return true;
+    }
+
+    if (email && homepage && homepage.includes(email.split("@")[1])) {
+      return true;
+    }
+
+    if (company && type.includes(company.split(" ")[0])) {
+      return true;
+    }
+
+    return type.includes(name);
+  });
 }
 
 function getTwitter(twitter): string {
