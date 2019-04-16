@@ -122,7 +122,7 @@ function isSponsor(
   email: string
 ) {
   return sponsors.some(({ name, social: { homepage } }) => {
-    if (name === company) {
+    if (name === company.split(" ")[0]) {
       return true;
     }
 
