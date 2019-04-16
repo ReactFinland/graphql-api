@@ -8,6 +8,7 @@ const person: Contact = {
   image: {
     url: "people/juho.jpg",
   },
+  company: "SurviveJS Oy",
   social: {
     homepage: "https://survivejs.com/",
     twitter: "bebraw",
