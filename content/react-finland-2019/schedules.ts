@@ -242,8 +242,10 @@ const presentationDay1: Schedule = {
       sessions: [
         {
           people: [people.janiEvakallio],
-          title: "#useSmoosh",
-          description: `React has a new hook, [useSmoosh](https://smoosh.fun). Learn all about it.
+          title: "#SMOOSH",
+          description: `After sold out shows in London and Berlin, we’re bringing the #SMOOSH comedy show to Helsinki!
+
+          Join us for an evening of standup, improv, and even a sing-a-long. This show will be unforgettable, no matter how much you try to forget it. 😉 
 
 The event is held at the main venue!`,
           type: SessionType.PARTY,
