@@ -89,11 +89,13 @@ function resolveSessionPeople(people, sessionPeople) {
     return undefined;
   }
 
-  return sessionPeople
+  const ret = sessionPeople
     .map(name => {
       return people.find(person => person.name === name);
     })
     .filter(Boolean);
+
+  return ret.length > 0 ? ret : undefined;
 }
 
 export default conference;
