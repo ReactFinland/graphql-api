@@ -7,10 +7,89 @@ import * as allWorkshops from "./workshops";
 
 const workshops = Object.values(allWorkshops);
 
+const linnanmaki = {
+  type: SessionType.PARTY,
+  title: "☀️ Visiting Linnanmäki Amusement Park",
+  description: `[Linnanmäki](https://www.linnanmaki.fi/en) is the amusement park of Helsinki. Expect to be amused on its opening weekend!
+  `,
+  location: {
+    city: "Helsinki",
+    country: {
+      code: "FI",
+      name: "Finland",
+    },
+    address: "Tivolikuja 1",
+  },
+};
+
+const suomenlinna = {
+  type: SessionType.PARTY,
+  title: "☀️ Visiting Suomenlinna Castle",
+  description: `[Suomenlinna](https://www.suomenlinna.fi/en/) is one of the most significant castles in Finland. The world heritage site has a lot to explore. You need to take a ferry to reach it.
+  `,
+  location: {
+    city: "Helsinki",
+    country: {
+      code: "FI",
+      name: "Finland",
+    },
+    address: "Suomenlinna",
+  },
+};
+
+const oodi = {
+  type: SessionType.PARTY,
+  title: "🌧 Visiting Oodi - The New Central Library",
+  description: `[Oodi](https://www.oodihelsinki.fi/en/) is the brand new central library of Helsinki. Although visiting a library might sound boring, the building is a little more than that.
+  `,
+  location: {
+    city: "Helsinki",
+    country: {
+      code: "FI",
+      name: "Finland",
+    },
+    address: "Töölönlahdenkatu 4",
+  },
+};
+
+const swimming = {
+  type: SessionType.PARTY,
+  title: "🌧 Swimming at Yrjönkatu swimming hall",
+  description: `Yrjönkatu swimming hall is Finland's first and oldest public swimming hall inaugurated in 1928. According to the BBC, it is one of the most beautiful swimming halls in the world.
+
+Swimming is limited to women/men only per day (women: Mon, Wed, Fri, Sun, men: Tue, Thu, Sat) as clothing is optional. You can also find multiple saunas. Depending on the services you want, expect to spend between 7 and 30 euros.
+
+The swimming hall is open daily (closed 22.04 due to Easter).
+  `,
+  location: {
+    city: "Helsinki",
+    country: {
+      code: "FI",
+      name: "Finland",
+    },
+    address: "Yrjönkatu 21 b",
+  },
+};
+
 const preConferenceDay: Schedule = {
   day: "2019-04-23",
   description: "Pre-conference",
   intervals: [
+    {
+      begin: "08:00",
+      end: "22:00",
+      sessions: [oodi],
+    },
+    {
+      begin: "10:00",
+      end: "16:00",
+      sessions: [suomenlinna],
+    },
+    {
+      begin: "14:00",
+      end: "20:00",
+      sessions: [swimming],
+    },
     {
       begin: "18:00",
       end: "21:00",
@@ -393,9 +472,50 @@ const presentationDay2: Schedule = {
   ],
 };
 
+const postConferenceDay: Schedule = {
+  day: "2019-04-27",
+  description: "Post-conference",
+  intervals: [
+    {
+      begin: "10:00",
+      end: "16:00",
+      sessions: [suomenlinna],
+    },
+    {
+      begin: "10:00",
+      end: "20:00",
+      sessions: [oodi],
+    },
+    {
+      begin: "13:00",
+      end: "21:00",
+      sessions: [linnanmaki],
+    },
+    {
+      begin: "14:00",
+      end: "20:00",
+      sessions: [swimming],
+    },
+    {
+      begin: "19:00",
+      end: "23:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "Unofficial bar meet",
+          description: `Meet local developers in a local bar.
+
+More info to come.`,
+        },
+      ],
+    },
+  ],
+};
+
 export default [
   preConferenceDay,
   workshopDay,
   presentationDay1,
   presentationDay2,
+  postConferenceDay,
 ];
