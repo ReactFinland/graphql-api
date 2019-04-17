@@ -5,7 +5,6 @@ logs/
 build/
 attendees/
 media/scripts/
-content/reason-conf-2019/data.json
 utils/google-*
 utils/diversity-*
 .env
