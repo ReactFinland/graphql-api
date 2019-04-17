@@ -39,7 +39,7 @@ const TweetContainer = styled.div`
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   color: white;
-`;
+` as React.FC<TweetContainerProps>;
 
 const TweetTextContainer = styled.div`
   position: relative;

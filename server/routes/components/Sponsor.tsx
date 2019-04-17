@@ -36,7 +36,7 @@ const SponsorContent = styled.img`
   max-width: ${({ type }: SponsorContentProps) =>
     sponsorRules[type]["max-width"]};
   margin: ${({ type }: SponsorContentProps) => sponsorRules[type].margin};
-`;
+` as React.FC<SponsorContentProps>;
 
 interface SponsorProps {
   name: string;

@@ -48,7 +48,7 @@ const ScheduleTitle = styled.dt`
     ].includes(type)
       ? color
       : "inherit"};
-`;
+` as React.FC<ScheduleTitleProps>;
 
 const ScheduleDefinition = styled.dd`
   display: inline;

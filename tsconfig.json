@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "incremental": true,
     "module": "commonjs",
     "jsx": "react",
     "lib": ["dom", "es2017", "esnext.asynciterable"],

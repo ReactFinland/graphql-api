@@ -67,7 +67,7 @@ const Color = styled.div`
   background-color: ${({ color }: ColorProps) => color};
   color: ${({ color }: ColorProps) =>
     tryTo(() => complement(invert(color)), "")};
-`;
+` as React.FC<ColorProps>;
 
 const LogosContainer = styled.section`
   margin-top: 1em;
