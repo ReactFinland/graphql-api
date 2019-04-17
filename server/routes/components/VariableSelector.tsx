@@ -151,8 +151,9 @@ function VariableFields({ validation, selectedVariable, onChange, field }) {
           options={
             values
               ? [{ value: "", label: "" }].concat(
-                  map(values, (label, value) => ({
-                    value,
+                  /* TODO: This assumes uniqueness */
+                  map(values, label => ({
+                    value: label,
                     label,
                   }))
                 )

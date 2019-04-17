@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Color } from "csstype";
+import { Color, HeightProperty, WidthProperty } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import map from "lodash/map";
 import * as React from "react";
@@ -13,11 +13,13 @@ interface HeaderContainerProps {
   id: string;
   primaryColor: Color;
   secondaryColor: Color;
-  useTwitterHeader: boolean;
+  width: WidthProperty<string>;
+  height: HeightProperty<string>;
   texture: string;
 }
 
 const HeaderPageContainer = styled.div`
+  display: grid;
   background-image: ${({
     primaryColor,
     secondaryColor,
@@ -29,10 +31,8 @@ const HeaderPageContainer = styled.div`
     url("${texture}")`};
   background-size: cover;
   position: relative;
-  width: ${({ useTwitterHeader }: HeaderContainerProps) =>
-    useTwitterHeader ? "1500px" : "1024px"};
-  height: ${({ useTwitterHeader }: HeaderContainerProps) =>
-    useTwitterHeader ? "500px" : "512px"};
+  width: ${({ width }: HeaderContainerProps) => width};
+  height: ${({ height }: HeaderContainerProps) => height};
   overflow: hidden;
   color: white;
 ` as React.FC<HeaderContainerProps>;
@@ -80,7 +80,7 @@ interface PrimaryRowProps {
 const PrimaryRow = styled.div`
   display: grid;
   grid-template-columns: ${({ useTwitterHeader }: PrimaryRowProps) =>
-    useTwitterHeader ? "1fr 0.2fr" : "1.4fr 0.6fr"};
+    useTwitterHeader ? "1fr 0.2fr" : "1fr 1fr"};
 ` as React.FC<PrimaryRowProps>;
 
 interface SecondaryRowProps {
@@ -129,13 +129,19 @@ const HeaderCoupon = styled.h3`
   font-family: "Courier New", Courier, monospace;
 `;
 
+enum HeaderType {
+  WEB = "web",
+  TWITTER = "twitter",
+  A4 = "a4",
+}
+
 interface HeaderTemplateProps {
   conference?: Conference;
   theme: Theme;
   id: string;
+  type: HeaderType;
   coupon?: string;
   discountPercentage?: string;
-  useTwitterHeader: boolean;
   showTwitterSafeArea: boolean;
 }
 
@@ -143,9 +149,9 @@ function HeaderTemplate({
   conference,
   theme,
   id,
+  type,
   coupon,
   discountPercentage,
-  useTwitterHeader,
   showTwitterSafeArea,
 }: HeaderTemplateProps) {
   const { locations, schedules, slogan } = conference || {
@@ -169,14 +175,15 @@ function HeaderTemplate({
       id={id}
       primaryColor={theme.colors.primary}
       secondaryColor={theme.colors.secondary}
-      useTwitterHeader={useTwitterHeader}
       texture={theme.textures[0].url}
+      width={resolveWidth(type)}
+      height={resolveHeight(type)}
     >
       {showTwitterSafeArea && <TwitterSafeOverlay />}
-      <PrimaryRow useTwitterHeader={useTwitterHeader}>
+      <PrimaryRow useTwitterHeader={type === HeaderType.TWITTER}>
         <HeaderLogo
           src={theme.logos.white.withText.url}
-          useTwitterHeader={useTwitterHeader}
+          useTwitterHeader={type === HeaderType.TWITTER}
         />
         <HeaderInfoContainer>
           {firstDay && lastDay && (
@@ -191,7 +198,7 @@ function HeaderTemplate({
           )}
         </HeaderInfoContainer>
       </PrimaryRow>
-      <SecondaryRow useTwitterHeader={useTwitterHeader}>
+      <SecondaryRow useTwitterHeader={type === HeaderType.TWITTER}>
         <HeaderSlogan>{slogan}</HeaderSlogan>
         {coupon && (
           <HeaderCoupon>
@@ -201,6 +208,30 @@ function HeaderTemplate({
       </SecondaryRow>
     </HeaderPageContainer>
   );
+}
+
+function resolveWidth(type) {
+  switch (type) {
+    case HeaderType.TWITTER:
+      return "1500px";
+    case HeaderType.A4:
+      return "297mm";
+    case HeaderType.WEB:
+    default:
+      return "1024px";
+  }
+}
+
+function resolveHeight(type) {
+  switch (type) {
+    case HeaderType.TWITTER:
+      return "500px";
+    case HeaderType.A4:
+      return "210mm";
+    case HeaderType.WEB:
+    default:
+      return "512px";
+  }
 }
 
 const ConnectedHeaderTemplate = connect(
@@ -214,6 +245,15 @@ ConnectedHeaderTemplate.filename = "header";
 
 // TODO: Better use enums here
 ConnectedHeaderTemplate.variables = [
+  {
+    id: "type",
+    /* TODO: Fix default value */
+    validation: {
+      type: "enum",
+      values: [HeaderType.WEB, HeaderType.TWITTER, HeaderType.A4],
+      default: HeaderType.WEB,
+    },
+  },
   {
     id: "conferenceId",
     query: `query ConferenceIdQuery {  
@@ -239,10 +279,6 @@ ConnectedHeaderTemplate.variables = [
   {
     id: "discountPercentage",
     validation: { type: String, default: "" },
-  },
-  {
-    id: "useTwitterHeader",
-    validation: { type: Boolean, default: false },
   },
   {
     id: "showTwitterSafeArea",

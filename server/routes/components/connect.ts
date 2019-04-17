@@ -19,7 +19,7 @@ function connect(apiUrl, query, variables = {}, propsToVars = props => props) {
         // TODO: Type better
         mapToCollection?: (result: any) => any;
         mapToOption?: (result: any) => { value: any; label: any };
-        validation?: { type: any; default: any };
+        validation?: { type: any; values?: any; default: any };
       }>;
       public state: ConnectState = {
         data: {},
