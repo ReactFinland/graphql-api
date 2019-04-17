@@ -62,12 +62,8 @@ const workshopDay: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      sessions: [
-        {
-          type: SessionType.WORKSHOP,
-          title: "Workshops continue",
-        },
-      ],
+      title: "Workshops continue",
+      sessions: [],
     },
     {
       begin: "14:00",
@@ -82,12 +78,8 @@ const workshopDay: Schedule = {
     {
       begin: "14:20",
       end: "15:40",
-      sessions: [
-        {
-          type: SessionType.WORKSHOP,
-          title: "Workshops continue",
-        },
-      ],
+      title: "Workshops continue",
+      sessions: [],
     },
     {
       begin: "15:40",
@@ -102,12 +94,8 @@ const workshopDay: Schedule = {
     {
       begin: "16:00",
       end: "17:30",
-      sessions: [
-        {
-          type: SessionType.WORKSHOP,
-          title: "Workshops continue",
-        },
-      ],
+      title: "Workshops continue",
+      sessions: [],
     },
     {
       begin: "18:00",
