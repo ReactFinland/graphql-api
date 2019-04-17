@@ -55,7 +55,7 @@ const oodi = {
 const swimming = {
   type: SessionType.PARTY,
   title: "Swimming at Yrjönkatu swimming hall 🌧",
-  description: `Yrjönkatu swimming hall is Finland's first and oldest public swimming hall inaugurated in 1928. According to the BBC, it is one of the most beautiful swimming halls in the world.
+  description: `[Yrjönkatu swimming hall](https://palvelukartta.hel.fi/unit/41102) is Finland's first and oldest public swimming hall inaugurated in 1928. According to the BBC, it is one of the most beautiful swimming halls in the world.
 
 Swimming is limited to women/men only per day (women: Mon, Wed, Fri, Sun, men: Tue, Thu, Sat) as clothing is optional. You can also find multiple saunas. Depending on the services you want, expect to spend between 7 and 30 euros.
 
