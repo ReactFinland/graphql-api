@@ -1,12 +1,13 @@
+import Keyword from "../../../server/schema/keywords";
 import { Session, SessionType } from "../../../server/schema/Session";
 import speaker from "../../people/nik-graf";
 
 const talk: Session = {
   people: [speaker],
-  title: "",
-  description: ``,
+  title: "Un(popular) Opinions",
+  description: `Unpopular opinions are mostly popular opinions people post on Twitter and share them as an unpopular opinion. Some unpopular opinions though are really unpopular for a good reason. Doesn’t make sense to you? Neither to me.`,
   type: SessionType.LIGHTNING_TALK,
-  keywords: [],
+  keywords: [Keyword.REACT],
 };
 
 export default talk;
