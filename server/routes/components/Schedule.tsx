@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import * as CSS from "csstype";
 import map from "lodash/map";
 import * as React from "react";
-import emoji from "react-easy-emoji";
+// import emoji from "react-easy-emoji";
 import { Interval } from "../../schema/Interval";
 import SessionType from "../../schema/SessionType";
 import { Theme } from "../../schema/Theme";
@@ -13,14 +13,14 @@ const ScheduleContainer = styled.dl`
   width: 100%;
   display: flex;
   flex-flow: column wrap;
-  height: 11.5cm;
+  height: 11.8cm;
 `;
 
 const ScheduleContainerItem = styled.div`
   width: 50%;
   margin-bottom: 0.25cm;
   display: grid;
-  grid-template-columns: 0.55fr 1.9fr;
+  grid-template-columns: 0.5fr 1.9fr;
   font-size: 83%;
 
   &:first-of-type {
@@ -118,11 +118,12 @@ function SessionTitle({ title, type, people = [] }: SessionTitleProps) {
         Array.isArray(people) &&
         people.length > 0 &&
         `- ${people[0].name}`}{" "}
-      {type && <ScheduleIcon type={type} />}
+      {/*type && <ScheduleIcon type={type} /> TODO: Make toggleable */}
     </SessionTitleContainer>
   );
 }
 
+/*
 function ScheduleIcon({ type }) {
   const scheduleTypes = {
     KEYNOTE: { icon: "🗝", title: "Keynote" },
@@ -143,5 +144,6 @@ function ScheduleIcon({ type }) {
     </span>
   );
 }
+*/
 
 export default Schedule;

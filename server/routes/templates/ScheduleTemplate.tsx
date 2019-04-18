@@ -59,9 +59,8 @@ const ScheduleContentContainer = styled.div`
   position: relative;
   margin: 0;
   margin-top: -0.2cm;
-  margin-left: 0.5cm;
-  margin-right: 0.5cm;
-  padding: 0.25cm;
+  padding: 0.25cm 0 0.25cm 0.25cm;
+  opacity: 0.9;
   background-color: white;
   height: 12.8cm;
   clip-path: polygon(0 0, 100% 1cm, 100% 100%, 0 calc(100% - 1cm));
