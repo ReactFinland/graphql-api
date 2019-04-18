@@ -71,19 +71,28 @@ function Schedule({ theme, intervals }: ScheduleProps) {
 
   return (
     <ScheduleContainer>
-      {map(intervals, ({ begin, end, sessions }, i) => (
+      {map(intervals, ({ begin, end, sessions, title }, i) => (
         <ScheduleContainerItem key={`schedule-container-${i}`}>
           <ScheduleTitle
             key={`dt-${i}`}
             color={theme.colors.secondary}
-            type={sessions[0].type}
+            type={sessions[0] && sessions[0].type}
           >
             {begin}-{end}
           </ScheduleTitle>
           <ScheduleDefinition key={`dd-${i}`}>
-            {sessions.map(({ title, type, people }, i) => (
-              <SessionTitle key={i} title={title} type={type} people={people} />
-            ))}
+            {sessions.length > 0 ? (
+              sessions.map(({ title, type, people }, i) => (
+                <SessionTitle
+                  key={i}
+                  title={title}
+                  type={type}
+                  people={people}
+                />
+              ))
+            ) : (
+              <SessionTitle title={title} />
+            )}
           </ScheduleDefinition>
         </ScheduleContainerItem>
       ))}
@@ -95,11 +104,21 @@ const SessionTitleContainer = styled.h3`
   margin-bottom: 0.15cm;
 `;
 
-function SessionTitle({ title, type, people }) {
+interface SessionTitleProps {
+  title?: string;
+  type?: SessionType;
+  people?: Array<{ name: string }>;
+}
+
+function SessionTitle({ title, type, people = [] }: SessionTitleProps) {
   return (
     <SessionTitleContainer>
-      {title} {people && Array.isArray(people) && `- ${people[0].name}`}{" "}
-      <ScheduleIcon type={type} />
+      {title}{" "}
+      {people &&
+        Array.isArray(people) &&
+        people.length > 0 &&
+        `- ${people[0].name}`}{" "}
+      {type && <ScheduleIcon type={type} />}
     </SessionTitleContainer>
   );
 }
