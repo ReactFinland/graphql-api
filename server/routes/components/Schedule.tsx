@@ -13,7 +13,7 @@ const ScheduleContainer = styled.dl`
   width: 100%;
   display: flex;
   flex-flow: column wrap;
-  height: 11.8cm;
+  height: 12.5cm;
 `;
 
 const ScheduleContainerItem = styled.div`

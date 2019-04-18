@@ -40,7 +40,7 @@ const ScheduleTemplateContainer = styled.article`
 
 const ScheduleTemplateLogo = styled.img`
   position: relative;
-  margin: 0.25cm 0.9cm 0cm;
+  margin: 0cm 0.9cm 0cm;
   width: 5cm;
 `;
 
@@ -62,7 +62,7 @@ const ScheduleContentContainer = styled.div`
   padding: 0.25cm 0 0.25cm 0.25cm;
   opacity: 0.9;
   background-color: white;
-  height: 12.8cm;
+  height: 13.4cm;
   clip-path: polygon(0 0, 100% 1cm, 100% 100%, 0 calc(100% - 1cm));
   z-index: 1;
 `;
