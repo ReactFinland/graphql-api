@@ -21,7 +21,12 @@ const person: Contact = {
     },
     city: "Helsinki",
   },
-  keywords: [Keyword.REACT, Keyword.TOOLING],
+  keywords: [
+    Keyword.REACT,
+    Keyword.STYLING,
+    Keyword.STYLE_GUIDES,
+    Keyword.TOOLING,
+  ],
   type: [ContactType.SPEAKER],
 };
 
