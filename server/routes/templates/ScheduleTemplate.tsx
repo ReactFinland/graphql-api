@@ -76,7 +76,7 @@ interface ScheduleTemplateProps {
 }
 
 const ScheduleFooterContainer = styled.section`
-  margin-top: -0.7cm;
+  margin-top: -0.3cm;
 `;
 
 const ConnectedSponsors = connect(

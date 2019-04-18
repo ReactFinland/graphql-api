@@ -11,18 +11,18 @@ interface SponsorContentProps {
 
 const sponsorRules = {
   gold: {
-    "max-height": "3cm",
+    "max-height": "2cm",
     "max-width": "3cm",
     margin: "0 0.5cm 0.5cm 0.5cm",
     display: "block",
   },
   silver: {
-    "max-height": "1.75cm",
+    "max-height": "1.25cm",
     "max-width": "1.75cm",
     margin: "0.5cm",
   },
   bronze: {
-    "max-height": "1.75cm",
+    "max-height": "1.25cm",
     "max-width": "1.75cm",
     margin: "0.25cm 0.5cm 0cm 0.5cm",
   },
@@ -30,6 +30,7 @@ const sponsorRules = {
 
 const SponsorContent = styled.img`
   vertical-align: middle;
+  justify-self: center;
   display: ${({ type }: SponsorContentProps) => sponsorRules[type].display};
   max-height: ${({ type }: SponsorContentProps) =>
     sponsorRules[type]["max-height"]};
