@@ -406,9 +406,9 @@ const presentationDay2: Schedule = {
       end: "14:45",
       title: "Tooling",
       sessions: [
-        talks.carolynStransky,
+        talks.tejasKumar,
         talks.bohdanLiashenko,
-        talks.monicaLent,
+        talks.tomasKonrady,
         talks.christofferNiska,
       ],
     },
@@ -445,8 +445,8 @@ const presentationDay2: Schedule = {
     {
       begin: "16:30",
       end: "17:30",
-      title: "Universal React",
-      sessions: [talks.tomasKonrady, talks.tejasKumar],
+      title: "Architecture",
+      sessions: [talks.monicaLent, talks.carolynStransky],
     },
     {
       begin: "17:30",
