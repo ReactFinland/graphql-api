@@ -22,10 +22,10 @@ interface SchedulePageContainerProps {
 const ScheduleTemplateContainer = styled.article`
   display: grid;
   background-image: ${({
-    primaryColor,
-    secondaryColor,
-    texture,
-  }: SchedulePageContainerProps) => `linear-gradient(
+  primaryColor,
+  secondaryColor,
+  texture,
+}: SchedulePageContainerProps) => `linear-gradient(
       ${primaryColor},
       ${desaturate(0.2, hexToRgba(secondaryColor, 0.79))}
     ),
@@ -76,7 +76,7 @@ interface ScheduleTemplateProps {
 }
 
 const ScheduleFooterContainer = styled.section`
-  margin-top: -0.5cm;
+  margin-top: -0.7cm;
 `;
 
 const ConnectedSponsors = connect(
@@ -101,9 +101,7 @@ function ScheduleTemplate({
     >
       <ScheduleHeaderContainer>
         <ScheduleTemplateLogo src={theme.logos.white.withText.url} />
-        <ScheduleTemplateTitle>
-          Schedule{day ? ` ― ${day}` : ""}
-        </ScheduleTemplateTitle>
+        <ScheduleTemplateTitle>{day ? day : ""}</ScheduleTemplateTitle>
       </ScheduleHeaderContainer>
       <ScheduleContentContainer>
         {intervals && <Schedule theme={theme} intervals={intervals} />}
