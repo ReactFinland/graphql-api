@@ -460,7 +460,7 @@ const presentationDay2: Schedule = {
     },
     {
       begin: "18:00",
-      end: "23:00",
+      end: "02:00",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -498,7 +498,7 @@ const postConferenceDay: Schedule = {
     },
     {
       begin: "19:00",
-      end: "02:00",
+      end: "23:00",
       sessions: [
         {
           type: SessionType.PARTY,
