@@ -8,7 +8,6 @@ import connect from "../components/connect";
 import Contacts from "../components/Contacts";
 import Presentation from "../components/Presentation";
 import Sponsor from "../components/Sponsor";
-import Sponsors from "../components/Sponsors";
 import sponsorQuery from "../queries/sponsorQuery";
 
 interface SchedulePageContainerProps {
@@ -67,23 +66,22 @@ function IntroTemplate({ theme, id, sideBarWidth }: IntroTemplateProps) {
 }
 
 const sponsorRules = {
-  gold: {
+  goldSponsors: {
     "max-height": "6cm",
     "max-width": "8cm",
-    margin: "0 0.5cm 0.5cm 0.5cm",
-    display: "block",
+    margin: "1cm",
   },
-  silver: {
+  silverSponsors: {
     "max-height": "3cm",
     "max-width": "5cm",
-    margin: "0.5cm",
+    margin: "1cm",
   },
-  bronze: {
+  bronzeSponsors: {
     "max-height": "1.5cm",
     "max-width": "3.5cm",
-    margin: "0.25cm 0.5cm 0cm 0.5cm",
+    margin: "1cm",
   },
-  partner: {
+  partners: {
     "max-height": "3cm",
     "max-width": "5cm",
     margin: "1cm",
@@ -94,34 +92,49 @@ const SponsorsContainer = styled.div`
   height: 100%;
   width: 100%;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: #ffffffba;
+  justify-items: center;
+  align-items: center;
 `;
 
-const ConnectedSponsors = connect(
-  "/graphql",
-  sponsorQuery,
-  ({ conferenceId }) => ({ conferenceId })
-)(({ conference }) => <Sponsors {...conference} rules={sponsorRules} />);
-
-const PartnersContainer = styled.div`
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+const SilverSponsorsContainer = styled.div`
   height: 100%;
   width: 100%;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background-color: #ffffffba;
+  justify-items: center;
+  align-items: center;
 `;
 
-const ConnectedPartners = connect(
-  "/graphql",
-  sponsorQuery,
-  ({ conferenceId }) => ({ conferenceId })
-)(({ conference }) => (
-  <Contacts
-    items={conference && conference.partners}
-    render={Sponsor}
-    renderProps={{ rules: sponsorRules, type: "partner" }}
-  />
-));
+const PartnersContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  background-color: #ffffffba;
+  justify-items: center;
+  align-items: center;
+`;
+
+const connectSponsors = type =>
+  connect(
+    "/graphql",
+    sponsorQuery,
+    ({ conferenceId }) => ({ conferenceId })
+  )(({ conference }) => (
+    <Contacts
+      items={conference && conference[type]}
+      render={Sponsor}
+      renderProps={{ rules: sponsorRules, type }}
+    />
+  ));
+
+const ConnectedGoldSponsors = connectSponsors("goldSponsors");
+const ConnectedSilverSponsors = connectSponsors("silverSponsors");
+const ConnectedBronzeSponsors = connectSponsors("bronzeSponsors");
+const ConnectedPartners = connectSponsors("partners");
 
 function getSlides(theme) {
   const titleSlide = [
@@ -195,7 +208,23 @@ function getSlides(theme) {
       layout: "REACT",
       content: (
         <SponsorsContainer>
-          <ConnectedSponsors conferenceId="react-finland-2019" />
+          <ConnectedGoldSponsors conferenceId="react-finland-2019" />
+        </SponsorsContainer>
+      ),
+    },
+    {
+      layout: "REACT",
+      content: (
+        <SilverSponsorsContainer>
+          <ConnectedSilverSponsors conferenceId="react-finland-2019" />
+        </SilverSponsorsContainer>
+      ),
+    },
+    {
+      layout: "REACT",
+      content: (
+        <SponsorsContainer>
+          <ConnectedBronzeSponsors conferenceId="react-finland-2019" />
         </SponsorsContainer>
       ),
     },
