@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { Image } from "../../schema/Image";
+// import { Image } from "../../schema/Image";
 import { Theme } from "../../schema/Theme";
 import excludeProps from "./exclude-props";
 import slideLayouts from "./slide-layouts";
-import { EmbedContent } from "./slide-layouts/EmbedContent";
+/*import { EmbedContent } from "./slide-layouts/EmbedContent";
 import { GridContent } from "./slide-layouts/GridContent";
 import { MarkdownContent } from "./slide-layouts/MarkdownContent";
 import { SectionContent } from "./slide-layouts/SectionContent";
-import { TitleContent } from "./slide-layouts/TitleContent";
+import { TitleContent } from "./slide-layouts/TitleContent";*/
 
 const SlideContainer = styled.div``;
 const Slide = styled.div``;
@@ -30,14 +30,14 @@ const SlideProgress = styled(excludeProps(["color", "ratio"], "div"))`
 `;
 
 export interface Slide {
-  layout: string;
-  content:
-    | EmbedContent
+  layout: string; // TODO: Better as enum
+  content: any;
+  /*| EmbedContent
     | GridContent
     | Image
     | MarkdownContent
     | TitleContent
-    | SectionContent;
+    | SectionContent;*/
 }
 
 export interface SlidesProps {

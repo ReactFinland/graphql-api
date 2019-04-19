@@ -21,10 +21,10 @@ interface SchedulePageContainerProps {
 
 const PresentationTemplateContainer = styled.article`
   background-image: ${({
-    primaryColor,
-    secondaryColor,
-    texture,
-  }: SchedulePageContainerProps) => `linear-gradient(
+  primaryColor,
+  secondaryColor,
+  texture,
+}: SchedulePageContainerProps) => `linear-gradient(
       ${primaryColor},
       ${desaturate(0.2, hexToRgba(secondaryColor, 0.79))}
     ),
@@ -133,18 +133,18 @@ function intervalsToSlides(intervals) {
   return flatMap(intervals, ({ title, begin, end, sessions }) => {
     const titleSlide = title
       ? {
-          layout: "TITLE",
-          content: {
-            title: (
-              <TitleContainer>
-                <SpeakerTitle>{title}</SpeakerTitle>
-                <SpeakerTime>
-                  {begin}-{end}
-                </SpeakerTime>
-              </TitleContainer>
-            ),
-          },
-        }
+        layout: "TITLE",
+        content: {
+          title: (
+            <TitleContainer>
+              <SpeakerTitle>{title}</SpeakerTitle>
+              <SpeakerTime>
+                {begin}-{end}
+              </SpeakerTime>
+            </TitleContainer>
+          ),
+        },
+      }
       : null;
     const sessionSlides = sessions.map(session => {
       return {
@@ -184,7 +184,7 @@ function intervalsToSlides(intervals) {
   });
 }
 
-const ConnectedScheduleTemplate = connect(
+const ConnectedPresentationTemplate = connect(
   "/graphql",
   scheduleQuery,
   {},
@@ -200,10 +200,10 @@ const ConnectedScheduleTemplate = connect(
   />
 ));
 
-ConnectedScheduleTemplate.filename = "schedule";
+ConnectedPresentationTemplate.filename = "presentation";
 
 // TODO: Better use enums here
-ConnectedScheduleTemplate.variables = [
+ConnectedPresentationTemplate.variables = [
   {
     id: "conferenceId",
     query: `query ConferenceIdQuery {  
@@ -243,4 +243,4 @@ ConnectedScheduleTemplate.variables = [
   },
 ];
 
-export default ConnectedScheduleTemplate;
+export default ConnectedPresentationTemplate;

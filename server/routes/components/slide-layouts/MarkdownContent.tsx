@@ -64,7 +64,7 @@ const MarkdownContent = ({
     )}
     <Markup
       className="markup"
-      color={theme.colors.secondary}
+      color={theme.colors.text}
       title={content.title}
     >
       <Markdown>{content.markup}</Markdown>
