@@ -199,12 +199,6 @@ function getSlides(theme) {
       },
     },
     {
-      layout: "IMAGE",
-      content: {
-        url: "/media/assets/disco.jpg",
-      },
-    },
-    {
       layout: "REACT",
       content: (
         <SponsorsContainer>
@@ -235,6 +229,12 @@ function getSlides(theme) {
           <ConnectedPartners conferenceId="react-finland-2019" />
         </PartnersContainer>
       ),
+    },
+    {
+      layout: "IMAGE",
+      content: {
+        url: "/media/assets/disco.jpg",
+      },
     },
   ];
 
