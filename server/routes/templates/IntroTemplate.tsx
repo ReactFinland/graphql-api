@@ -64,18 +64,37 @@ function IntroTemplate({ theme, id, sideBarWidth }: IntroTemplateProps) {
   );
 }
 
+const sponsorRules = {
+  gold: {
+    "max-height": "6cm",
+    "max-width": "8cm",
+    margin: "0 0.5cm 0.5cm 0.5cm",
+    display: "block",
+  },
+  silver: {
+    "max-height": "3cm",
+    "max-width": "5cm",
+    margin: "0.5cm",
+  },
+  bronze: {
+    "max-height": "1.5cm",
+    "max-width": "3.5cm",
+    margin: "0.25cm 0.5cm 0cm 0.5cm",
+  },
+};
+
 const ConnectedSponsors = connect(
   "/graphql",
   sponsorQuery,
   ({ conferenceId }) => ({ conferenceId })
-)(({ conference }) => <Sponsors {...conference} />);
+)(({ conference }) => <Sponsors {...conference} rules={sponsorRules} />);
 
 function getSlides(theme) {
   const titleSlide = [
     {
       layout: "IMAGE",
       content: {
-        url: theme.logos.white.withText.url
+        url: theme.logos.white.withText.url,
       },
     },
     {

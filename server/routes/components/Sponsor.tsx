@@ -6,37 +6,19 @@ interface SponsorContentProps {
   src: string;
   name: string;
   props: {};
+  rules: {};
   type: string; // TODO: Better use an enum here
 }
-
-const sponsorRules = {
-  gold: {
-    "max-height": "2cm",
-    "max-width": "3cm",
-    margin: "0 0.5cm 0.5cm 0.5cm",
-    display: "block",
-  },
-  silver: {
-    "max-height": "1.25cm",
-    "max-width": "1.75cm",
-    margin: "0.5cm",
-  },
-  bronze: {
-    "max-height": "1.25cm",
-    "max-width": "1.75cm",
-    margin: "0.25cm 0.5cm 0cm 0.5cm",
-  },
-};
 
 const SponsorContent = styled.img`
   vertical-align: middle;
   justify-self: center;
-  display: ${({ type }: SponsorContentProps) => sponsorRules[type].display};
-  max-height: ${({ type }: SponsorContentProps) =>
-    sponsorRules[type]["max-height"]};
-  max-width: ${({ type }: SponsorContentProps) =>
-    sponsorRules[type]["max-width"]};
-  margin: ${({ type }: SponsorContentProps) => sponsorRules[type].margin};
+  display: ${({ rules, type }: SponsorContentProps) => rules[type].display};
+  max-height: ${({ rules, type }: SponsorContentProps) =>
+    rules[type]["max-height"]};
+  max-width: ${({ rules, type }: SponsorContentProps) =>
+    rules[type]["max-width"]};
+  margin: ${({ rules, type }: SponsorContentProps) => rules[type].margin};
 ` as React.FC<SponsorContentProps>;
 
 interface SponsorProps {
@@ -45,11 +27,18 @@ interface SponsorProps {
   social: {};
   image: Image;
   logoProps: {};
+  rules: {};
   type: string; // TODO: Better use the same enum here
 }
 
-const Sponsor = ({ name, image, logoProps, type }: SponsorProps) => (
-  <SponsorContent src={image.url} name={name} props={logoProps} type={type} />
+const Sponsor = ({ name, image, logoProps, rules, type }: SponsorProps) => (
+  <SponsorContent
+    src={image.url}
+    name={name}
+    props={logoProps}
+    rules={rules}
+    type={type}
+  />
 );
 
 export default Sponsor;

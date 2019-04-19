@@ -22,10 +22,10 @@ interface SchedulePageContainerProps {
 const ScheduleTemplateContainer = styled.article`
   display: grid;
   background-image: ${({
-  primaryColor,
-  secondaryColor,
-  texture,
-}: SchedulePageContainerProps) => `linear-gradient(
+    primaryColor,
+    secondaryColor,
+    texture,
+  }: SchedulePageContainerProps) => `linear-gradient(
       ${primaryColor},
       ${desaturate(0.2, hexToRgba(secondaryColor, 0.79))}
     ),
@@ -79,11 +79,30 @@ const ScheduleFooterContainer = styled.section`
   margin-top: -0.3cm;
 `;
 
+const sponsorRules = {
+  gold: {
+    "max-height": "2cm",
+    "max-width": "3cm",
+    margin: "0 0.5cm 0.5cm 0.5cm",
+    display: "block",
+  },
+  silver: {
+    "max-height": "1.25cm",
+    "max-width": "1.75cm",
+    margin: "0.5cm",
+  },
+  bronze: {
+    "max-height": "1.25cm",
+    "max-width": "1.75cm",
+    margin: "0.25cm 0.5cm 0cm 0.5cm",
+  },
+};
+
 const ConnectedSponsors = connect(
   "/graphql",
   sponsorQuery,
   ({ conferenceId }) => ({ conferenceId })
-)(({ conference }) => <Sponsors {...conference} />);
+)(({ conference }) => <Sponsors {...conference} rules={sponsorRules} />);
 
 function ScheduleTemplate({
   intervals,

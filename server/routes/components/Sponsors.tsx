@@ -29,6 +29,7 @@ interface SponsorsProps {
   goldSponsors?: Contact[];
   silverSponsors?: Contact[];
   bronzeSponsors?: Contact[];
+  rules: {};
 }
 
 // TODO: Check if the structure can be simplified
@@ -36,27 +37,28 @@ const Sponsors = ({
   goldSponsors = [],
   silverSponsors = [],
   bronzeSponsors = [],
+  rules,
 }: SponsorsProps) => (
   <SponsorsContainer>
     <GoldSponsors>
       <Contacts
         items={goldSponsors}
         render={Sponsor}
-        renderProps={{ type: "gold" }}
+        renderProps={{ rules, type: "gold" }}
       />
     </GoldSponsors>
     <SilverSponsors>
       <Contacts
         items={silverSponsors}
         render={Sponsor}
-        renderProps={{ type: "silver" }}
+        renderProps={{ rules, type: "silver" }}
       />
     </SilverSponsors>
     <BronzeSponsors>
       <Contacts
         items={bronzeSponsors}
         render={Sponsor}
-        renderProps={{ type: "bronze" }}
+        renderProps={{ rules, type: "bronze" }}
       />
     </BronzeSponsors>
   </SponsorsContainer>
