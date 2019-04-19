@@ -5,7 +5,9 @@ import desaturate from "polished/lib/color/desaturate";
 import * as React from "react";
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
+import Contacts from "../components/Contacts";
 import Presentation from "../components/Presentation";
+import Sponsor from "../components/Sponsor";
 import Sponsors from "../components/Sponsors";
 import sponsorQuery from "../queries/sponsorQuery";
 
@@ -81,13 +83,45 @@ const sponsorRules = {
     "max-width": "3.5cm",
     margin: "0.25cm 0.5cm 0cm 0.5cm",
   },
+  partner: {
+    "max-height": "3cm",
+    "max-width": "5cm",
+    margin: "1cm",
+  },
 };
+
+const SponsorsContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background-color: #ffffffba;
+`;
 
 const ConnectedSponsors = connect(
   "/graphql",
   sponsorQuery,
   ({ conferenceId }) => ({ conferenceId })
 )(({ conference }) => <Sponsors {...conference} rules={sponsorRules} />);
+
+const PartnersContainer = styled.div`
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background-color: #ffffffba;
+`;
+
+const ConnectedPartners = connect(
+  "/graphql",
+  sponsorQuery,
+  ({ conferenceId }) => ({ conferenceId })
+)(({ conference }) => (
+  <Contacts
+    items={conference && conference.partners}
+    render={Sponsor}
+    renderProps={{ rules: sponsorRules, type: "partner" }}
+  />
+));
 
 function getSlides(theme) {
   const titleSlide = [
@@ -159,8 +193,19 @@ function getSlides(theme) {
     },
     {
       layout: "REACT",
-      // TODO: Make sponsor images bigger
-      content: <ConnectedSponsors conferenceId="react-finland-2019" />,
+      content: (
+        <SponsorsContainer>
+          <ConnectedSponsors conferenceId="react-finland-2019" />
+        </SponsorsContainer>
+      ),
+    },
+    {
+      layout: "REACT",
+      content: (
+        <PartnersContainer>
+          <ConnectedPartners conferenceId="react-finland-2019" />
+        </PartnersContainer>
+      ),
     },
   ];
 
