@@ -147,15 +147,19 @@ function getSlides(theme) {
     {
       layout: "TITLE",
       content: {
-        title: `"Professional" MCs - @jevakallio and @NikkitaFTW`,
+        title: (
+          <>
+            "Professional" MCs - <b>@jevakallio</b> and <b>@NikkitaFTW</b>
+          </>
+        ),
       },
     },
-    {
+    /*{
       layout: "IMAGE",
       content: {
         url: "/media/assets/pineapple.jpg",
       },
-    },
+    },*/
     {
       layout: "IMAGE",
       content: {
