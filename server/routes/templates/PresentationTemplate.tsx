@@ -21,10 +21,10 @@ interface SchedulePageContainerProps {
 
 const PresentationTemplateContainer = styled.article`
   background-image: ${({
-  primaryColor,
-  secondaryColor,
-  texture,
-}: SchedulePageContainerProps) => `linear-gradient(
+    primaryColor,
+    secondaryColor,
+    texture,
+  }: SchedulePageContainerProps) => `linear-gradient(
       ${primaryColor},
       ${desaturate(0.2, hexToRgba(secondaryColor, 0.79))}
     ),
@@ -74,14 +74,32 @@ function PresentationTemplate({
   );
 }
 
+const MainTitleContainer = styled.div`
+  width: 100%;
+  display: grid;
+`;
+
+interface MainTitleDayProps {
+  color: Color;
+}
+
+const MainTitleDay = styled.h1`
+  color: ${({ color }: MainTitleDayProps) => color};
+  justify-self: right;
+  margin-right: 2cm;
+  font-size: 400%;
+` as React.FC<MainTitleDayProps>;
+
 function getSlides(theme, day, intervals) {
   const titleSlide = [
     {
-      layout: "TITLE",
-      content: {
-        title: <img src={theme.logos.white.withText.url} />,
-        subtitle: day,
-      },
+      layout: "REACT",
+      content: (
+        <MainTitleContainer>
+          <img src={theme.logos.white.withText.url} />
+          <MainTitleDay color={theme.colors.text}>{day}</MainTitleDay>
+        </MainTitleContainer>
+      ),
     },
   ];
   const intervalSlides = intervalsToSlides(intervals);
@@ -101,6 +119,7 @@ const TitleRow = styled.div`
 
 const SpeakerImage = styled.img`
   width: 75%;
+  max-width: 8cm;
   justify-self: right;
   align-self: center;
   clip-path: polygon(0 0, 100% 0.5cm, 100% 100%, 0 calc(100% - 0.5cm));
@@ -110,6 +129,7 @@ const SpeakerTextContainer = styled.div``;
 
 const SpeakerTitle = styled.div`
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-size: 60%;
 `;
 
@@ -133,18 +153,18 @@ function intervalsToSlides(intervals) {
   return flatMap(intervals, ({ title, begin, end, sessions }) => {
     const titleSlide = title
       ? {
-        layout: "TITLE",
-        content: {
-          title: (
-            <TitleContainer>
-              <SpeakerTitle>{title}</SpeakerTitle>
-              <SpeakerTime>
-                {begin}-{end}
-              </SpeakerTime>
-            </TitleContainer>
-          ),
-        },
-      }
+          layout: "TITLE",
+          content: {
+            title: (
+              <TitleContainer>
+                <SpeakerTitle>{title}</SpeakerTitle>
+                <SpeakerTime>
+                  {begin}-{end}
+                </SpeakerTime>
+              </TitleContainer>
+            ),
+          },
+        }
       : null;
     const sessionSlides = sessions.map(session => {
       return {

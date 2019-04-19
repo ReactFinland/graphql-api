@@ -145,6 +145,12 @@ function getSlides(theme) {
       },
     },
     {
+      layout: "TITLE",
+      content: {
+        title: `"Professional" MCs - @jevakallio and @NikkitaFTW`,
+      },
+    },
+    {
       layout: "IMAGE",
       content: {
         url: "/media/assets/pineapple.jpg",
@@ -193,12 +199,6 @@ function getSlides(theme) {
       },
     },
     {
-      layout: "TITLE",
-      content: {
-        title: "Professional MCs",
-      },
-    },
-    {
       layout: "REACT",
       content: (
         <SponsorsContainer>
@@ -229,6 +229,18 @@ function getSlides(theme) {
           <ConnectedPartners conferenceId="react-finland-2019" />
         </PartnersContainer>
       ),
+    },
+    {
+      layout: "TITLE",
+      content: {
+        title: "Remember to join the conference Slack",
+      },
+    },
+    {
+      layout: "TITLE",
+      content: {
+        title: "#ReactFinland",
+      },
     },
     {
       layout: "IMAGE",
