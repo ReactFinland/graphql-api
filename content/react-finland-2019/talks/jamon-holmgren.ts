@@ -5,7 +5,7 @@ import speaker from "../../people/jamon-holmgren";
 const talk: Session = {
   people: [speaker],
   title: "Building a Community Around Ignite",
-  description: ``,
+  description: `In this talk, Jamon will go into what it took to build a thriving developer community around the popular React Native CLI and boilerplate, Ignite.`,
   type: SessionType.TALK,
   keywords: [Keyword.REACT_NATIVE],
 };
