@@ -7,7 +7,7 @@ const workshop: Session = {
   people: [glennReyes],
   title: "React and GraphQL – From zero to production",
   description: `
-In this workshop we will build a production-ready React app with GraphQL backend from the ground up. This workshop is targeted to engineers who want to learn to build a complete and full stack React app with GraphQL.
+In this workshop we will build a Twitter Lite React app with a GraphQL backend. This workshop is targeted to engineers who want to learn to build a complete and full stack React app with GraphQL.
 
 ### Topics covered
 
