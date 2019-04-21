@@ -143,6 +143,13 @@ function getSlides(theme) {
       content: {
         url: theme.logos.white.withText.url,
       },
+      css: {
+        backgroundImage: `linear-gradient(${theme.colors.primary}, ${desaturate(
+          0.2,
+          hexToRgba(theme.colors.secondary, 0.79)
+        )}), url("${theme.textures[0].url}")`,
+        backgroundSize: "cover",
+      },
     },
     {
       layout: "TITLE",

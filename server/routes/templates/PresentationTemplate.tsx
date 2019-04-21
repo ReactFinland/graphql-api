@@ -90,7 +90,7 @@ const MainTitleDay = styled.h1`
   font-size: 400%;
 ` as React.FC<MainTitleDayProps>;
 
-function getSlides(theme, day, intervals) {
+function getSlides(theme: Theme, day, intervals) {
   const titleSlide = [
     {
       layout: "REACT",
@@ -100,6 +100,13 @@ function getSlides(theme, day, intervals) {
           <MainTitleDay color={theme.colors.text}>{day}</MainTitleDay>
         </MainTitleContainer>
       ),
+      css: {
+        backgroundImage: `linear-gradient(${theme.colors.primary}, ${desaturate(
+          0.2,
+          hexToRgba(theme.colors.secondary, 0.79)
+        )}), url("${theme.textures[0].url}")`,
+        backgroundSize: "cover",
+      },
     },
   ];
   const intervalSlides = intervalsToSlides(intervals);

@@ -1,5 +1,6 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
 import styled from "@emotion/styled";
-import React from "react";
 import { Image } from "../../../schema/Image";
 
 const ImageContainer = styled.div`
@@ -21,10 +22,11 @@ const ImageElement = styled.img`
 
 interface ImageContentProps {
   content: Image;
+  css: {};
 }
 
-const ImageContent = ({ content }: ImageContentProps) => (
-  <ImageContainer>
+const ImageContent = ({ content, css }: ImageContentProps) => (
+  <ImageContainer css={css}>
     <ImageElement src={content.url} title={content.title || ""} height="100%" />
   </ImageContainer>
 );

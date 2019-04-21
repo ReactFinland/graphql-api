@@ -1,5 +1,6 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
 import styled from "@emotion/styled";
-import React from "react";
 import { Theme } from "../../../schema/Theme";
 
 const ReactPageContainer = styled.div`
@@ -10,13 +11,14 @@ const ReactPageContainer = styled.div`
   justify-items: center;
 `;
 
-interface TitleContentProps {
+interface ReactContentProps {
   content: JSX.Element;
   theme: Theme;
+  css: {};
 }
 
-function TitleContent({ content, theme }: TitleContentProps) {
-  return <ReactPageContainer>{content}</ReactPageContainer>;
+function ReactContent({ content, css }: ReactContentProps) {
+  return <ReactPageContainer css={css}>{content}</ReactPageContainer>;
 }
 
-export default TitleContent;
+export default ReactContent;
