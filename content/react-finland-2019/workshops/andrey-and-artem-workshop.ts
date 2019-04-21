@@ -25,7 +25,7 @@ This workshop will show you how to:
   - Structure your application around components
   - Write maintainable styles for your components based on the design system
  
-> Before coming to the workshop, make sure you set up [component-driven-development repository](https://github.com/component-driven/component-driven-development.git) and follow the instructions. Doing this will save time and help you get started faster.`,
+> Before coming to the workshop, make sure you set up [component-driven-development repository](https://github.com/component-driven/component-driven-development) and follow the instructions. Doing this will save time and help you get started faster.`,
   keywords: [
     Keyword.REACT,
     Keyword.STYLING,

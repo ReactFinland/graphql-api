@@ -30,6 +30,8 @@ By the end of the workshop, you’ll be able to diagnose performance problems an
 **Preparation**: Please come with a laptop ready for development. You must have Chrome, the [React DevTools extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en), and Node (v 8+) installed.
 
 This workshop was prepared in partnership with Eli Fitch and Jason Lengstorf.
+
+> Before coming to the workshop, make sure you set up [advanced-react-perf repository](https://github.com/jlengstorf/advanced-react-perf) and follow the instructions. Doing this will save time and help you get started faster. You could also [check out the workshop slides beforehand](https://siakaramalegos.github.io/react-perf-workshop/).
 `,
   keywords: saraVieira.keywords,
   location: paasitorni,
