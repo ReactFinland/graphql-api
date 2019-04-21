@@ -193,13 +193,17 @@ function intervalsToSlides(intervals) {
                     </SpeakerTime>
                   )}
                 </SpeakerTextContainer>
-                <SpeakerImage
-                  src={
-                    session.people &&
-                    session.people[0] &&
-                    session.people[0].image.url
-                  }
-                />
+                {session.people &&
+                  session.people[0] &&
+                  session.people[0].image.url && (
+                    <SpeakerImage
+                      src={
+                        session.people &&
+                        session.people[0] &&
+                        session.people[0].image.url
+                      }
+                    />
+                  )}
               </TitleRow>
             </TitleContainer>
           ),
