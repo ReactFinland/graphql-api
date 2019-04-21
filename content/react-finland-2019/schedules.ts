@@ -74,7 +74,7 @@ The swimming hall is open daily (closed 22.04 due to Easter).
 const iceCreamCarnival = {
   type: SessionType.PARTY,
   title: "The Carnival of Ice Cream and Chocolate 🌧",
-  description: `Finland's first [carnival of ice cream and chocolate](https://www.jaatelojasuklaakarnevaali.fi/en/home/) takes place between 26th and 28th of April. If you like either or both, it's a great chance to pick up some local flavor (licorice ice cream anyone?).`,
+  description: `Finland's first [carnival of ice cream and chocolate](https://www.jaatelojasuklaakarnevaali.fi/en/home/) takes place between 26th and 28th of April. If you like either or both, it's a great chance to pick up some local flavour (liquorice ice cream anyone?).`,
   location: {
     city: "Helsinki",
     country: {
