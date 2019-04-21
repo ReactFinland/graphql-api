@@ -65,6 +65,7 @@ function IntroTemplate({ theme, id, sideBarWidth }: IntroTemplateProps) {
   );
 }
 
+// TODO: Refactor so that `Sponsor` accepts a css parameter
 const sponsorRules = {
   goldSponsors: {
     "max-height": "6cm",
