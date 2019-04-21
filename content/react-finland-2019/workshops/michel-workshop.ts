@@ -14,6 +14,8 @@ const workshop: Session = {
   About the author: Michel has been working with TypeScript full-time for the last 3 years. He authored several open source libraries (such as MobX and MobX-state-tree) that are written in TypeScript and leverage some of it's finest features.
   
   Pre-requisites: Familiarity with JavaScript, React and modern syntax features (ES2015).
+
+  > To learn more about TypeScript, [read Michel's interview](https://medium.com/react-finland/interview-typescript-with-michel-weststrate-8afd7fd24b32).
 `,
   keywords: michelWeststrate.keywords,
   location: paasitorni,
