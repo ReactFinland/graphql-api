@@ -537,7 +537,7 @@ More info to come.`,
 };
 
 const postConferenceDay2: Schedule = {
-  day: "2019-04-27",
+  day: "2019-04-28",
   description: "Post-conference",
   intervals: [
     {
