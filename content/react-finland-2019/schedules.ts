@@ -71,6 +71,20 @@ The swimming hall is open daily (closed 22.04 due to Easter).
   },
 };
 
+const iceCreamCarnival = {
+  type: SessionType.PARTY,
+  title: "The Carnival of Ice Cream and Chocolate 🌧",
+  description: `Finland's first [carnival of ice cream and chocolate](https://www.jaatelojasuklaakarnevaali.fi/en/home/) takes place between 26th and 28th of April. If you like either or both, it's a great chance to pick up some local flavor (licorice ice cream anyone?).`,
+  location: {
+    city: "Helsinki",
+    country: {
+      code: "FI",
+      name: "Finland",
+    },
+    address: "Tallberginkatu 1 C 176 (3rd floor)",
+  },
+};
+
 const preConferenceDay: Schedule = {
   day: "2019-04-23",
   description: "Pre-conference",
@@ -472,7 +486,7 @@ const presentationDay2: Schedule = {
   ],
 };
 
-const postConferenceDay: Schedule = {
+const postConferenceDay1: Schedule = {
   day: "2019-04-27",
   description: "Post-conference",
   intervals: [
@@ -480,6 +494,11 @@ const postConferenceDay: Schedule = {
       begin: "10:00",
       end: "16:00",
       sessions: [suomenlinna],
+    },
+    {
+      begin: "10:00",
+      end: "14:00",
+      sessions: [iceCreamCarnival],
     },
     {
       begin: "10:00",
@@ -497,6 +516,11 @@ const postConferenceDay: Schedule = {
       sessions: [swimming],
     },
     {
+      begin: "14:30",
+      end: "18:30",
+      sessions: [iceCreamCarnival],
+    },
+    {
       begin: "19:00",
       end: "23:00",
       sessions: [
@@ -512,10 +536,48 @@ More info to come.`,
   ],
 };
 
+const postConferenceDay2: Schedule = {
+  day: "2019-04-27",
+  description: "Post-conference",
+  intervals: [
+    {
+      begin: "10:00",
+      end: "16:00",
+      sessions: [suomenlinna],
+    },
+    {
+      begin: "10:00",
+      end: "14:00",
+      sessions: [iceCreamCarnival],
+    },
+    {
+      begin: "10:00",
+      end: "20:00",
+      sessions: [oodi],
+    },
+    {
+      begin: "13:00",
+      end: "21:00",
+      sessions: [linnanmaki],
+    },
+    {
+      begin: "14:00",
+      end: "20:00",
+      sessions: [swimming],
+    },
+    {
+      begin: "14:30",
+      end: "18:30",
+      sessions: [iceCreamCarnival],
+    },
+  ],
+};
+
 export default [
   preConferenceDay,
   workshopDay,
   presentationDay1,
   presentationDay2,
-  postConferenceDay,
+  postConferenceDay1,
+  postConferenceDay2,
 ];
