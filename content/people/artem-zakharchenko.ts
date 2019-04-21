@@ -4,12 +4,12 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Artem Zakharchenko",
   about:
-    "Full-stack JavaScript engineer, doctor, musician, designer. Walking the marvelous road of learning.",
+    "Full-stack JavaScript engineer at Oracle, medical doctor, musician, designer. A huge endorser of functional programming and clean project architecture.",
   image: {
     url: "people/artem-z.jpg",
   },
   social: {
-    homepage: "",
+    homepage: "https://redd.one",
     twitter: "kettanaito",
     github: "kettanaito",
     linkedin: "artem-zakharchenko",
