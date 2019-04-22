@@ -4,7 +4,7 @@ import speaker from "../../people/glenn-reyes";
 
 const talk: Session = {
   people: [speaker],
-  title: "Drawing a line between 3rd party and handcrafted components",
+  title: "Drawing the line between 3rd party and handcrafted components",
   description: `Often when we write new components, we might be like: Come on, there must be a library out there! And most times there was already someone who faced the same problem... only that it's not quite the same. Should I use the 3rd party lib? Or go with my own? Let's find out the differences and trade-offs in this session.`,
   type: SessionType.LIGHTNING_TALK,
   keywords: [Keyword.REACT, Keyword.LIBRARIES],
