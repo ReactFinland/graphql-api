@@ -141,6 +141,7 @@ function AssetDesignerPage({
     return null;
   }
 
+  // TODO: How to make sure these won't capture from inputs?
   React.useEffect(() => {
     window.addEventListener("keydown", handleUserKeyPress);
 

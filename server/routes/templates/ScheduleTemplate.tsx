@@ -42,7 +42,7 @@ const ScheduleTemplateLogo = styled.img`
   position: relative;
   margin: 0cm 0.9cm 0cm;
   width: 5cm;
-`;
+` as React.FC<{ src: string }>;
 
 const ScheduleHeaderContainer = styled.section``;
 
@@ -53,9 +53,12 @@ const ScheduleTemplateTitle = styled.h1`
   top: 0cm;
   font-size: 420%;
   margin-top: 0.25cm;
-`;
+` as React.FC<{}>;
 
 const ScheduleContentContainer = styled.div`
+  display: grid;
+  align-items: center;
+  justify-items: center;
   position: relative;
   margin: 0;
   margin-top: -0.2cm;
@@ -65,7 +68,11 @@ const ScheduleContentContainer = styled.div`
   height: 13.4cm;
   clip-path: polygon(0 0, 100% 1cm, 100% 100%, 0 calc(100% - 1cm));
   z-index: 1;
-`;
+` as React.FC<{}>;
+
+const PlaceholderContainer = styled.h1`
+  font-size: 1000%;
+` as React.FC<{}>;
 
 interface ScheduleTemplateProps {
   intervals?: Interval[];
@@ -73,6 +80,7 @@ interface ScheduleTemplateProps {
   day: string;
   conferenceId: string;
   id: string;
+  placeholder: string;
 }
 
 const ScheduleFooterContainer = styled.section`
@@ -110,6 +118,7 @@ function ScheduleTemplate({
   day,
   conferenceId,
   id,
+  placeholder,
 }: ScheduleTemplateProps) {
   return (
     <ScheduleTemplateContainer
@@ -123,7 +132,11 @@ function ScheduleTemplate({
         <ScheduleTemplateTitle>{day ? day : ""}</ScheduleTemplateTitle>
       </ScheduleHeaderContainer>
       <ScheduleContentContainer>
-        {intervals && <Schedule theme={theme} intervals={intervals} />}
+        {placeholder ? (
+          <PlaceholderContainer>{placeholder}</PlaceholderContainer>
+        ) : (
+          intervals && <Schedule theme={theme} intervals={intervals} />
+        )}
       </ScheduleContentContainer>
       <ScheduleFooterContainer>
         <ConnectedSponsors conferenceId={conferenceId} />
@@ -137,9 +150,10 @@ const ConnectedScheduleTemplate = connect(
   scheduleQuery,
   {},
   ({ conferenceId, day }) => ({ conferenceId, day })
-)(({ schedule, theme, conferenceId, id }) => (
+)(({ schedule, theme, conferenceId, id, placeholder }) => (
   <ScheduleTemplate
     id={id}
+    placeholder={placeholder}
     theme={theme}
     day={schedule && dayToFinnishLocale(schedule.day)}
     conferenceId={conferenceId}
@@ -151,6 +165,10 @@ ConnectedScheduleTemplate.filename = "schedule";
 
 // TODO: Better use enums here
 ConnectedScheduleTemplate.variables = [
+  {
+    id: "placeholder",
+    validation: { type: String, default: "" },
+  },
   {
     id: "conferenceId",
     query: `query ConferenceIdQuery {  
