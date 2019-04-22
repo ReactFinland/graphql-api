@@ -16,6 +16,8 @@ const workshop: Session = {
   Pre-requisites: Familiarity with JavaScript, React and modern syntax features (ES2015).
 
   > To learn more about TypeScript, [read Michel's interview](https://medium.com/react-finland/interview-typescript-with-michel-weststrate-8afd7fd24b32).
+
+  > It will help if you have [Yarn](https://yarnpkg.com/en/) installed before the workshop. [React to TS conversion example](https://github.com/mweststrate/react-ts-conversion-exercise) requires it as a dependency.
 `,
   keywords: michelWeststrate.keywords,
   location: paasitorni,
