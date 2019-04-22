@@ -33,8 +33,8 @@ const ScheduleTemplateContainer = styled.article`
   background-size: cover;
   position: relative;
   padding: 0;
-  width: 28.8cm;
-  height: 20.4cm;
+  width: 29.7cm;
+  height: 21cm;
   overflow: hidden;
 ` as React.FC<SchedulePageContainerProps>;
 
