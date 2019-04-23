@@ -13,25 +13,25 @@ import { Social } from "./Social";
 
 @ObjectType()
 export class Location {
-  @Field(_ => String)
+  @Field(_ => String, { nullable: true })
   public name?: string;
 
-  @Field(_ => String)
+  @Field(_ => String, { nullable: true })
   public about?: string;
 
-  @Field(_ => Image)
+  @Field(_ => Image, { nullable: true })
   public image?: Image;
 
-  @Field(_ => Social)
+  @Field(_ => Social, { nullable: true })
   public social?: Social;
 
-  @Field(_ => Country)
+  @Field(_ => Country, { nullable: true })
   public country?: Country;
 
-  @Field(_ => String)
+  @Field(_ => String, { nullable: true })
   public city?: string;
 
-  @Field(_ => String)
+  @Field(_ => String, { nullable: true })
   public address?: string;
 }
 
