@@ -15,7 +15,10 @@ const workshop: Session = {
 - Identify all possible edge cases
 - Apply late-breaking changes and requirements methodically
 - Auto-generate designs of all possible component states with Storybook
-- Use advanced features of XState`,
+- Use advanced features of XState
+
+> You could clone the [workshop repository](https://github.com/davidkpiano/xstate-react-workshop) before the workshop to speed up the setup.
+`,
   keywords: davidKhourshid.keywords,
   location: paasitorni,
 };
