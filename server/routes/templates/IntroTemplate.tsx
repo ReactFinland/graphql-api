@@ -68,8 +68,8 @@ function IntroTemplate({ theme, id, sideBarWidth }: IntroTemplateProps) {
 // TODO: Refactor so that `Sponsor` accepts a css parameter
 const sponsorRules = {
   goldSponsors: {
-    "max-height": "6cm",
-    "max-width": "8cm",
+    "max-height": "8cm",
+    "max-width": "14cm",
     margin: "1cm",
   },
   silverSponsors: {
@@ -99,6 +99,16 @@ const SponsorsContainer = styled.div`
   align-items: center;
 `;
 
+const SponsorContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #ffffffba;
+  justify-items: center;
+  align-items: center;
+`;
+
 const SilverSponsorsContainer = styled.div`
   height: 100%;
   width: 100%;
@@ -119,7 +129,20 @@ const PartnersContainer = styled.div`
   align-items: center;
 `;
 
-const connectSponsors = type =>
+const connectSponsor = (type: string) =>
+  connect(
+    "/graphql",
+    sponsorQuery,
+    ({ conferenceId }) => ({ conferenceId })
+  )(({ conference, index }) => (
+    <Contacts
+      items={conference && conference[type] && [conference[type][index]]}
+      render={Sponsor}
+      renderProps={{ rules: sponsorRules, type }}
+    />
+  ));
+
+const connectSponsors = (type: string) =>
   connect(
     "/graphql",
     sponsorQuery,
@@ -132,7 +155,8 @@ const connectSponsors = type =>
     />
   ));
 
-const ConnectedGoldSponsors = connectSponsors("goldSponsors");
+// const ConnectedGoldSponsors = connectSponsors("goldSponsors");
+const ConnectedGoldSponsor = connectSponsor("goldSponsors");
 const ConnectedSilverSponsors = connectSponsors("silverSponsors");
 const ConnectedBronzeSponsors = connectSponsors("bronzeSponsors");
 const ConnectedPartners = connectSponsors("partners");
@@ -213,9 +237,25 @@ function getSlides(theme) {
     {
       layout: "REACT",
       content: (
-        <SponsorsContainer>
-          <ConnectedGoldSponsors conferenceId="react-finland-2019" />
-        </SponsorsContainer>
+        <SponsorContainer>
+          <ConnectedGoldSponsor conferenceId="react-finland-2019" index={0} />
+        </SponsorContainer>
+      ),
+    },
+    {
+      layout: "REACT",
+      content: (
+        <SponsorContainer>
+          <ConnectedGoldSponsor conferenceId="react-finland-2019" index={1} />
+        </SponsorContainer>
+      ),
+    },
+    {
+      layout: "REACT",
+      content: (
+        <SponsorContainer>
+          <ConnectedGoldSponsor conferenceId="react-finland-2019" index={2} />
+        </SponsorContainer>
       ),
     },
     {
