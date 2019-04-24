@@ -318,17 +318,27 @@ const presentationDay1: Schedule = {
     },
     {
       begin: "16:30",
-      end: "17:30",
+      end: "17:15",
       title: "Visual",
       sessions: [talks.brunoLourenco, talks.nikGraf],
+    },
+    {
+      begin: "17:15",
+      end: "17:30",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Closing ceremonies",
+        },
+      ],
     },
     {
       begin: "17:30",
       end: "18:00",
       sessions: [
         {
-          type: SessionType.ORGANIZATIONAL,
-          title: "Closing ceremonies",
+          type: SessionType.COFFEE_BREAK,
+          title: "Break before smoosh",
         },
       ],
     },
