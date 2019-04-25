@@ -4,8 +4,8 @@ import speaker from "../../people/ville-immonen";
 
 const talk: Session = {
   people: [speaker],
-  title: "Toolchain for building modular React Native plugins",
-  description: ``,
+  title: "React Standard Library",
+  description: `React Native is the tool for building cross platform React apps. To build native-like experiences, we need good APIs providing the native capabilities of each platform in a unified way. Is the answer a standard library for React apps?`,
   type: SessionType.TALK,
   keywords: [Keyword.REACT_NATIVE, Keyword.UNIVERSAL_REACT],
 };
