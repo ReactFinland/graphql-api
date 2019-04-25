@@ -69,6 +69,7 @@ const conference: Conference = {
   mcs: [people.janiEvakallio, people.saraVieira],
   organizers: [
     people.aleksiPousar,
+    people.eemeliAro,
     people.harriMaatta,
     people.juhoVepsalainen,
     people.mikhailNovikov,
