@@ -58,15 +58,11 @@ const MarkdownContent = ({
     title={content.title}
   >
     {content.title && (
-      <Title color={theme.colors.primary}>
+      <Title color={theme.colors.text}>
         <Markdown>{content.title}</Markdown>
       </Title>
     )}
-    <Markup
-      className="markup"
-      color={theme.colors.text}
-      title={content.title}
-    >
+    <Markup className="markup" color={theme.colors.text} title={content.title}>
       <Markdown>{content.markup}</Markdown>
     </Markup>
   </MarkdownContainer>

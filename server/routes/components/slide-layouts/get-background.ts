@@ -6,7 +6,7 @@ function getBackground(background: Image) {
 
 // TODO: Make this more flexible
 function linearGradient() {
-  return `linear-gradient(rgba(0, 0, 0, 0.9), rgba(65, 35, 0, 0.85))`;
+  return `linear-gradient(rgba(0, 0, 0, 0.5), rgba(65, 35, 0, 0.05))`;
 }
 
 export default getBackground;

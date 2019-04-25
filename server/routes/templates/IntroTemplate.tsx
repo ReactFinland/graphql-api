@@ -186,12 +186,6 @@ function getSlides(theme) {
         ),
       },
     },
-    /*{
-      layout: "IMAGE",
-      content: {
-        url: "/media/assets/pineapple.jpg",
-      },
-    },*/
     {
       layout: "IMAGE",
       content: {
@@ -201,13 +195,13 @@ function getSlides(theme) {
     {
       layout: "TITLE",
       content: {
-        title: "6 workshops",
+        title: "~400 people",
       },
     },
     {
       layout: "TITLE",
       content: {
-        title: "~400 people",
+        title: "Six workshops",
       },
     },
     {
@@ -232,6 +226,19 @@ function getSlides(theme) {
       layout: "TITLE",
       content: {
         title: "Themed sessions",
+      },
+    },
+    {
+      layout: "MARKDOWN",
+      background: {
+        url: "/media/assets/disco.jpg",
+      },
+      content: {
+        title: "Two parties",
+        markup: `
+* #SMOOSH
+* Afterparty
+        `,
       },
     },
     {
@@ -289,15 +296,25 @@ function getSlides(theme) {
       },
     },
     {
-      layout: "TITLE",
+      layout: "MARKDOWN",
       content: {
-        title: "#ReactFinland",
+        title: "Code of Conduct",
+        markup: `
+* Berlin Code of Conduct
+* Report to info@react-finland.fi
+* Or to any org with RF logo shirt`,
       },
     },
     {
       layout: "IMAGE",
       content: {
-        url: "/media/assets/disco.jpg",
+        url: "/media/assets/red-strings.jpg",
+      },
+    },
+    {
+      layout: "TITLE",
+      content: {
+        title: "#ReactFinland",
       },
     },
   ];
