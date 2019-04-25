@@ -13,8 +13,8 @@ const TitlePageContainer = styled.div`
 
 const Title = styled.h1`
   font-size: ${modularScale(7)};
-  margin-left: 10vw;
   color: ${props => props.color};
+  padding: 2vw;
 `;
 
 /*const Subtitle = styled.h2`

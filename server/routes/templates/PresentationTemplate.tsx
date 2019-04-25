@@ -117,12 +117,17 @@ function getSlides(theme: Theme, day, intervals) {
 const TitleContainer = styled.section`
   display: grid;
   grid-template-rows: 0.5fr 1.5fr;
-`;
+` as React.FC<{}>;
+
+const TitleRowSingle = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+` as React.FC<{}>;
 
 const TitleRow = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-`;
+` as React.FC<{}>;
 
 const SpeakerImage = styled.img`
   width: 75%;
@@ -130,7 +135,7 @@ const SpeakerImage = styled.img`
   justify-self: right;
   align-self: center;
   clip-path: polygon(0 0, 100% 0.5cm, 100% 100%, 0 calc(100% - 0.5cm));
-`;
+` as React.FC<{ src: string }>;
 
 const SpeakerTextContainer = styled.div``;
 
@@ -174,18 +179,19 @@ function intervalsToSlides(intervals) {
         }
       : null;
     const sessionSlides = sessions.map(session => {
+      const hasPerson = session.people && session.people[0];
+      const RowContainer = hasPerson ? TitleRow : TitleRowSingle;
+
       return {
         layout: "TITLE",
         content: {
           title: (
             <TitleContainer>
               <SpeakerTitle>{session.title}</SpeakerTitle>
-              <TitleRow>
+              <RowContainer>
                 <SpeakerTextContainer>
                   <SpeakerName>
-                    {session.people &&
-                      session.people[0] &&
-                      session.people[0].name}
+                    {hasPerson && session.people[0].name}
                   </SpeakerName>
                   {sessions.length === 1 && (
                     <SpeakerTime>
@@ -193,18 +199,12 @@ function intervalsToSlides(intervals) {
                     </SpeakerTime>
                   )}
                 </SpeakerTextContainer>
-                {session.people &&
-                  session.people[0] &&
-                  session.people[0].image.url && (
-                    <SpeakerImage
-                      src={
-                        session.people &&
-                        session.people[0] &&
-                        session.people[0].image.url
-                      }
-                    />
-                  )}
-              </TitleRow>
+                {hasPerson && session.people[0].image.url && (
+                  <SpeakerImage
+                    src={hasPerson && session.people[0].image.url}
+                  />
+                )}
+              </RowContainer>
             </TitleContainer>
           ),
         },
