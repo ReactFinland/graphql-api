@@ -394,7 +394,7 @@ const presentationDay2: Schedule = {
       begin: "09:15",
       end: "10:45",
       title: "React Native",
-      sessions: [talks.rickHanlon, talks.jamonHolmgren, talks.villeImmonen],
+      sessions: [talks.jamonHolmgren, talks.rickHanlon, talks.villeImmonen],
     },
     {
       begin: "10:45",
