@@ -4,10 +4,10 @@ import speaker from "../../people/rick-hanlon";
 
 const talk: Session = {
   people: [speaker],
-  title: "React Everywhere",
-  description: `From web, to iOS, Android, and VR: React is everywhere. In this talk, Rick Hanlon from the React Native Core team reviews all of the platforms using React to build apps with React Native, and previews the latest platform to join the React Native family: Web.`,
+  title: "The Untouchable Web",
+  description: ``,
   type: SessionType.KEYNOTE,
-  keywords: [Keyword.REACT_NATIVE, Keyword.REACT, Keyword.REACT_VR],
+  keywords: [Keyword.REACT_NATIVE, Keyword.REACT],
 };
 
 export default talk;
