@@ -9,7 +9,7 @@ const talk: Session = {
   type: SessionType.LIGHTNING_TALK,
   keywords: [Keyword.GATSBY, Keyword.STATIC_SITE_GENERATION],
   urls: {
-    web: "https://trusting-euclid-602f4e.netlify.com/react-finland",
+    web: "https://dschau.dev/gatsbythemes",
   },
 };
 
