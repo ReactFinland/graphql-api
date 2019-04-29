@@ -26,6 +26,8 @@ In this workshop we will build a Twitter Lite React app with a GraphQL backend. 
 Developers have basic React knowledge. Bring your own laptop (I'm on Mac). Make sure, latest node and yarn or npm works on your machine.
 
 > [Set up the workshop repository](https://github.com/glennreyes/react-graphql-workshop) to save some time and the preview the content.
+
+> You can [find the workshop slides online](https://speakerdeck.com/glennreyes/react-finland-react-and-graphql-from-zero-to-production).
 `,
   keywords: glennReyes.keywords,
   location: paasitorni,
