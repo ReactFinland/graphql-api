@@ -44,7 +44,7 @@ enum Keyword {
   STATECHARTS = "Statecharts",
   STATE_MACHINES = "State machines",
   STATE_MANAGEMENT = "State management",
-  STATIC_SITE_GENERATATION = "Static site generation",
+  STATIC_SITE_GENERATION = "Static site generation",
   STYLING = "Styling",
   STYLEGUIDIST = "Styleguidist",
   STYLE_GUIDES = "Style guides",
