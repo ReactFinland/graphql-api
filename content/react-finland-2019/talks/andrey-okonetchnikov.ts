@@ -17,6 +17,9 @@ In order to answer those questions designers and developers have to speak the sa
 UI components and pattern libraries can provide this intermediate abstraction and be a common language for both designers and developers.`,
   type: SessionType.TALK,
   keywords: [Keyword.DESIGN_SYSTEMS],
+  urls: {
+    web: "https://speakerdeck.com/okonet/a-common-design-language",
+  },
 };
 
 export default talk;
