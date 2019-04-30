@@ -1,5 +1,5 @@
-import { Session, SessionType } from "../../../server/schema/Session";
 import Keyword from "../../../server/schema/keywords";
+import { Session, SessionType } from "../../../server/schema/Session";
 import speaker from "../../people/tomas-konrady";
 
 const talk: Session = {
@@ -18,6 +18,9 @@ Then we take a look at state management challenges in this kind of setup and how
     Keyword.STATE_MANAGEMENT,
     Keyword.LIVE_CODING,
   ],
+  urls: {
+    web: "https://finland-2019.firebaseapp.com/",
+  },
 };
 
 export default talk;
