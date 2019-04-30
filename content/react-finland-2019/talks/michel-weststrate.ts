@@ -30,6 +30,10 @@ Some first hand experiences from an author that still tries to figure out how mu
     Keyword.OPEN_SOURCE,
     Keyword.REACT,
   ],
+  urls: {
+    web:
+      "https://docs.google.com/presentation/d/12Dd8iYxcA8Wl2yaOE_FNb-MaB7cktUE82JFXVlrO-6U/edit#slide=id.p",
+  },
 };
 
 export default talk;

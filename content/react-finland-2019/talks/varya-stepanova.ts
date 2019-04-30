@@ -12,6 +12,9 @@ This practical guide shows how to apply existing development tools to your syste
 `,
   type: SessionType.TALK,
   keywords: [],
+  urls: {
+    web: "https://varya.me/react-finland-2019/",
+  },
 };
 
 export default talk;
