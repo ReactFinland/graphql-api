@@ -14,6 +14,9 @@ In this talk, I'll be showing a set of techniques to model a semi complicated Re
     Keyword.STATECHARTS,
     Keyword.HEADLESS_COMPONENTS,
   ],
+  urls: {
+    web: "https://abstract-component-modeling.netlify.com",
+  },
 };
 
 export default talk;
