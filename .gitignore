@@ -5,6 +5,7 @@ logs/
 build/
 attendees/
 media/scripts/
+utils/*.csv
 utils/google-*
 utils/diversity-*
 .env
