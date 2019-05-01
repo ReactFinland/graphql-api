@@ -13,6 +13,10 @@ const talk: Session = {
     Keyword.GENERATORS,
     Keyword.EVENTS,
   ],
+  urls: {
+    web:
+      "https://lmatteis.github.io/finland-talk/assets/player/KeynoteDHTMLPlayer.html",
+  },
 };
 
 export default talk;
