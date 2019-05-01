@@ -9,6 +9,7 @@ const talk: Session = {
   type: SessionType.LIGHTNING_TALK,
   keywords: [Keyword.TOOLING],
   urls: {
+    slides: "https://slides.react-finland.fi/2019/bohdan-liashenko.pdf",
     web:
       "https://docs.google.com/presentation/d/1Uj_5wyafZnp-BaSHzEne02gSxKJgmmjQK9M6mG1fi3k/edit#slide=id.p",
   },

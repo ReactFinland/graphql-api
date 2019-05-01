@@ -9,6 +9,7 @@ const talk: Session = {
   type: SessionType.LIGHTNING_TALK,
   keywords: [Keyword.GATSBY, Keyword.STATIC_SITE_GENERATION],
   urls: {
+    slides: "https://slides.react-finland.fi/2019/dustin-schau.pdf",
     web: "https://dschau.dev/gatsbythemes",
   },
 };

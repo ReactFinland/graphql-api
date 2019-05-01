@@ -14,6 +14,7 @@ const talk: Session = {
     Keyword.EVENTS,
   ],
   urls: {
+    slides: "https://slides.react-finland.fi/2019/luca-matteis.pdf",
     web:
       "https://lmatteis.github.io/finland-talk/assets/player/KeynoteDHTMLPlayer.html",
   },

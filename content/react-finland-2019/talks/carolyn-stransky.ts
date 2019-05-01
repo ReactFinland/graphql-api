@@ -11,6 +11,9 @@ const talk: Session = {
   `,
   type: SessionType.TALK,
   keywords: [],
+  urls: {
+    slides: "https://slides.react-finland.fi/2019/carolyn-stransky.pdf",
+  },
 };
 
 export default talk;

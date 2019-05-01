@@ -15,6 +15,7 @@ In this talk, I'll be showing a set of techniques to model a semi complicated Re
     Keyword.HEADLESS_COMPONENTS,
   ],
   urls: {
+    slides: "https://slides.react-finland.fi/2019/farzad-yz.pdf",
     web: "https://abstract-component-modeling.netlify.com",
   },
 };

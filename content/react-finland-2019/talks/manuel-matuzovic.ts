@@ -8,6 +8,7 @@ const talk: Session = {
   type: SessionType.TALK,
   keywords: [],
   urls: {
+    slides: "https://slides.react-finland.fi/2019/manuel-matuzovic.pdf",
     web:
       "https://www.matuzo.at/blog/12-tips-for-more-accessible-react-apps-slides-react-finland-2019/",
   },

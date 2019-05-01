@@ -18,6 +18,9 @@ Rust ecosystem offers many great tools to work with WebAssembly on the web. Thes
     Keyword.SERVERLESS,
     Keyword.WEB_ASSEMBLY,
   ],
+  urls: {
+    slides: "https://slides.react-finland.fi/2019/sven-sauleau.pdf",
+  },
 };
 
 export default talk;

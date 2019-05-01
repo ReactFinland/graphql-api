@@ -21,6 +21,9 @@ We will read Markdown files, render components described in them, and expose liv
     Keyword.TYPESCRIPT,
     Keyword.VS_CODE,
   ],
+  urls: {
+    slides: "https://slides.react-finland.fi/2019/tejas-kumar.pdf",
+  },
 };
 
 export default talk;

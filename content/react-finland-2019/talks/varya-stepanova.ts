@@ -13,6 +13,7 @@ This practical guide shows how to apply existing development tools to your syste
   type: SessionType.TALK,
   keywords: [],
   urls: {
+    slides: "https://slides.react-finland.fi/2019/varya-stepanova.pdf",
     web: "https://varya.me/react-finland-2019/",
   },
 };
