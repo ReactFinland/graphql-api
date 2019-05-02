@@ -13,6 +13,9 @@ const talk: Session = {
     Keyword.ARTIFICIAL_INTELLIGENCE,
     Keyword.USER_INTERFACE,
   ],
+  urls: {
+    web: "https://slides.com/davidkhourshid/mind-reading-react-finland#/",
+  },
 };
 
 export default talk;

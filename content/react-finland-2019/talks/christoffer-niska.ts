@@ -10,6 +10,9 @@ const talk: Session = {
   In this session we will take a look at the tooling required and some best practices for publishing a library using TypeScript and Rollup.`,
   type: SessionType.LIGHTNING_TALK,
   keywords: [Keyword.NPM, Keyword.TYPESCRIPT],
+  urls: {
+    slides: "https://slides.react-finland.fi/2019/christoffer-niska.pdf",
+  },
 };
 
 export default talk;
