@@ -9,6 +9,7 @@ const talk: Session = {
   type: SessionType.TALK,
   keywords: [Keyword.REACT_NATIVE],
   urls: {
+    slides: "https://slides.react-finland.fi/2019/jamon-holmgren.pdf",
     web:
       "https://infinite-red.slides.com/infinitered/react-finland-2019?token=m2ZLCaid",
   },
