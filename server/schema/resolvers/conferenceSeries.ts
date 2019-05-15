@@ -21,6 +21,7 @@ const conferenceSeries: {
         text: "#000000",
         background: "#ffffff",
       },
+      // TODO: Figure out which font to use
       fonts: {
         primary: "Nunito",
         secondary: "Nunito",
@@ -31,7 +32,7 @@ const conferenceSeries: {
         ],
       },
       logos: {
-        // TODO
+        // TODO: A black version of the logo
         black: {
           withText: {
             url: "/media/sponsors/halfstack.svg",
@@ -44,12 +45,12 @@ const conferenceSeries: {
           withText: {
             url: "/media/sponsors/halfstack.svg",
           },
-          // TODO
+          // TODO: A compact version without text
           withoutText: {
             url: "/media/sponsors/halfstack.svg",
           },
         },
-        // TODO
+        // TODO: A white version of the logo
         white: {
           withText: {
             url: "/media/sponsors/halfstack.svg",
