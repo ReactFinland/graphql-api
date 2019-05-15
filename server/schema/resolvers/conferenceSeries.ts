@@ -17,9 +17,9 @@ const conferenceSeries: {
       textures: [{ url: "/media/halfstack/texture.svg" }],
       colors: {
         primary: "#D62329",
-        secondary: "white",
-        text: "black",
-        background: "white",
+        secondary: "#ffffff",
+        text: "#000000",
+        background: "#ffffff",
       },
       fonts: {
         primary: "Nunito",
@@ -72,7 +72,7 @@ const conferenceSeries: {
         primary: "#9013fe",
         secondary: "#2d2a96",
         text: "#09020f",
-        background: "white",
+        background: "#ffffff",
       },
       fonts: {
         primary: "Nunito",
