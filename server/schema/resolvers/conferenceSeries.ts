@@ -8,6 +8,59 @@ const conferenceSeries: {
     theme: Theme;
   };
 } = {
+  halfstack: {
+    id: "halfstack",
+    name: "HalfStack",
+    conferences: ["halfstack-vienna-2019"],
+    theme: {
+      id: "halfstack",
+      textures: [{ url: "/media/halfstack/texture.svg" }],
+      colors: {
+        primary: "#D62329",
+        secondary: "white",
+        text: "black",
+        background: "white",
+      },
+      fonts: {
+        primary: "Nunito",
+        secondary: "Nunito",
+        variants: [
+          {
+            href: "https://fonts.googleapis.com/css?family=Nunito",
+          },
+        ],
+      },
+      logos: {
+        // TODO
+        black: {
+          withText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+          withoutText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+        },
+        colored: {
+          withText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+          // TODO
+          withoutText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+        },
+        // TODO
+        white: {
+          withText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+          withoutText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+        },
+      },
+    },
+  },
   typeof: {
     id: "typeof",
     name: "typeof",

@@ -2,8 +2,7 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
   name: "HalfStack",
-  about:
-    "HalfStack is a one-day, single track, fun JS conf in a Shoreditch pub",
+  about: "HalfStack is a one-day, single track, fun JS conf",
   image: {
     url: "sponsors/halfstack.svg",
   },

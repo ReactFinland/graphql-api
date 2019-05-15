@@ -1,3 +1,4 @@
+export { default as ankerSaal } from "./ankersaal";
 export { default as elisaAppelsiini } from "./elisa-appelsiini";
 export { default as paasitorni } from "./paasitorni";
 export { default as tiivistamo } from "./tiivistamo";
