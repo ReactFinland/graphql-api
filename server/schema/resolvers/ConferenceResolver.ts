@@ -28,12 +28,12 @@ class ConferenceResolver {
 
   @Query(_ => [Conference])
   public conferences() {
-    return Object.keys(conferences).map(id => conferences[id]);
+    return Object.values(conferences);
   }
 
   @Query(_ => [Conference], { deprecationReason: "Use `conferences` instead" })
   public allConferences() {
-    return Object.keys(conferences).map(id => conferences[id]);
+    return Object.values(conferences);
   }
 
   @FieldResolver(_ => Series)
