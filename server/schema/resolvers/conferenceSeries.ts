@@ -8,6 +8,61 @@ const conferenceSeries: {
     theme: Theme;
   };
 } = {
+  techmovienight: {
+    id: "techmovienight",
+    name: "Tech Movie Night",
+    conferences: ["techmovienight"],
+    theme: {
+      id: "techmovienight",
+      textures: [{ url: "/media/halfstack/texture.svg" }],
+      colors: {
+        primary: "#272846",
+        secondary: "#ffffff",
+        text: "#000000",
+        background: "#ffffff",
+      },
+      // TODO: Figure out which font to use
+      fonts: {
+        primary: "Nunito",
+        secondary: "Nunito",
+        variants: [
+          {
+            href: "https://fonts.googleapis.com/css?family=Nunito",
+          },
+        ],
+      },
+      // TODO: Set up a proper logo
+      logos: {
+        // TODO: A black version of the logo
+        black: {
+          withText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+          withoutText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+        },
+        colored: {
+          withText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+          // TODO: A compact version without text
+          withoutText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+        },
+        // TODO: A white version of the logo
+        white: {
+          withText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+          withoutText: {
+            url: "/media/sponsors/halfstack.svg",
+          },
+        },
+      },
+    },
+  },
   halfstack: {
     id: "halfstack",
     name: "HalfStack",

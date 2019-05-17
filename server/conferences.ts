@@ -3,10 +3,12 @@ import halfstackVienna2019 from "../content/halfstack-vienna-2019";
 import reactFinland2018 from "../content/react-finland-2018";
 import reactFinland2019 from "../content/react-finland-2019";
 import reasonConf2019 from "../content/reason-conf-2019";
+import techMovieNight from "../content/techmovienight";
 import typeof2019 from "../content/typeof-2019";
 import { Conference } from "./schema/Conference";
 
 const conferences: { [id: string]: Conference } = {
+  ["techmovienight"]: techMovieNight,
   ["halfstack-vienna-2019"]: halfstackVienna2019,
   ["reason-conf-2019"]: reasonConf2019,
   ["react-finland-2018"]: reactFinland2018,
