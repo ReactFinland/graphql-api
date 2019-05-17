@@ -7,6 +7,9 @@ import {
   Resolver,
   Root,
 } from "type-graphql";
+import * as locations from "../../../content/locations";
+import * as people from "../../../content/people";
+import * as sponsors from "../../../content/sponsors";
 import { getConference } from "../Conference";
 import { Contact, ContactType, getSessionSpeakers } from "../Contact";
 import { IContext } from "../Context";
@@ -53,6 +56,21 @@ class ContactResolver {
     }
 
     return contact;
+  }
+
+  @Query(_ => [Contact])
+  public locations() {
+    return Object.values(locations);
+  }
+
+  @Query(_ => [Contact])
+  public people() {
+    return Object.values(people);
+  }
+
+  @Query(_ => [Contact])
+  public sponsors() {
+    return Object.values(sponsors);
   }
 
   @FieldResolver(_ => [ContactType])
