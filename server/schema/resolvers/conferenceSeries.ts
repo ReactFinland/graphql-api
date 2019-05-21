@@ -14,20 +14,30 @@ const conferenceSeries: {
     conferences: ["techmovienight"],
     theme: {
       id: "techmovienight",
-      textures: [{ url: "/media/halfstack/texture.svg" }],
+      textures: [{ url: "/media/assets/wave.svg" }],
       colors: {
         primary: "#272846",
         secondary: "#ffffff",
         text: "#000000",
         background: "#ffffff",
       },
-      // TODO: Figure out which font to use
       fonts: {
-        primary: "Nunito",
-        secondary: "Nunito",
+        primary: "Finlandica",
+        secondary: "Work Sans",
         variants: [
           {
-            href: "https://fonts.googleapis.com/css?family=Nunito",
+            family: "Finlandica",
+            weight: "normal",
+            style: "normal",
+            fileName: "/media/fonts/finlandica-regular",
+            formats: ["woff2", "woff", "ttf"],
+          },
+          {
+            family: "Work Sans",
+            weight: "normal",
+            style: "normal",
+            fileName: "/media/fonts/worksans-regular",
+            formats: ["woff2"],
           },
         ],
       },
@@ -36,28 +46,28 @@ const conferenceSeries: {
         // TODO: A black version of the logo
         black: {
           withText: {
-            url: "/media/sponsors/halfstack.svg",
+            url: "/media/techmovienight/logo.svg",
           },
           withoutText: {
-            url: "/media/sponsors/halfstack.svg",
+            url: "/media/techmovienight/logo.svg",
           },
         },
         colored: {
           withText: {
-            url: "/media/sponsors/halfstack.svg",
+            url: "/media/techmovienight/logo.svg",
           },
           // TODO: A compact version without text
           withoutText: {
-            url: "/media/sponsors/halfstack.svg",
+            url: "/media/techmovienight/logo.svg",
           },
         },
         // TODO: A white version of the logo
         white: {
           withText: {
-            url: "/media/sponsors/halfstack.svg",
+            url: "/media/techmovienight/logo.svg",
           },
           withoutText: {
-            url: "/media/sponsors/halfstack.svg",
+            url: "/media/techmovienight/logo.svg",
           },
         },
       },
