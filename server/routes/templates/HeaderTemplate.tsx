@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
 import styled from "@emotion/styled";
 import { Color, HeightProperty, WidthProperty } from "csstype";
 import hexToRgba from "hex-to-rgba";
@@ -65,11 +67,11 @@ const TwitterSafeBottom = styled.div`
 
 function TwitterSafeOverlay() {
   return (
-    <>
+    <React.Fragment>
       <TwitterSafeTop />
       <TwitterSafeBottom />
       <TwitterSafeUser />
-    </>
+    </React.Fragment>
   );
 }
 
@@ -178,6 +180,7 @@ function HeaderTemplate({
       texture={theme.textures[0].url}
       width={resolveWidth(type)}
       height={resolveHeight(type)}
+      css={theme.textures[0].style ? theme.textures[0].style : {}}
     >
       {showTwitterSafeArea && <TwitterSafeOverlay />}
       <PrimaryRow useTwitterHeader={type === HeaderType.TWITTER}>

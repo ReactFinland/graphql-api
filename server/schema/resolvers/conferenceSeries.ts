@@ -14,10 +14,17 @@ const conferenceSeries: {
     conferences: ["techmovienight"],
     theme: {
       id: "techmovienight",
-      textures: [{ url: "/media/assets/wave.svg" }],
+      textures: [
+        {
+          url: "/media/assets/wave.svg",
+          style: {
+            backgroundSize: "100% 100%, 150rem 150rem",
+          },
+        },
+      ],
       colors: {
-        primary: "#272846",
-        secondary: "#ffffff",
+        primary: "#141464",
+        secondary: "#272846",
         text: "#000000",
         background: "#ffffff",
       },

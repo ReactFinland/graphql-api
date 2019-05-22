@@ -3,6 +3,9 @@ fragment themeFragment on Theme {
   id
   textures {
     url
+    style {
+      backgroundSize
+    }
   }
   colors {
     primary

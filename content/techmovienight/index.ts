@@ -14,8 +14,8 @@ const schedule: Schedule = {
 };
 
 const conference: Conference = {
-  id: "halfstack-vienna-2019",
-  series: "halfstack",
+  id: "techmovienight",
+  series: "techmovienight",
   name: "Tech Movie Night",
   organizer: allSponsors.survivejs,
   slogan: "Tech movies together",
