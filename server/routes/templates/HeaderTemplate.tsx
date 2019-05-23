@@ -145,6 +145,8 @@ interface HeaderTemplateProps {
   coupon?: string;
   discountPercentage?: string;
   showTwitterSafeArea: boolean;
+  showDates: boolean;
+  showLocation: boolean;
 }
 
 function HeaderTemplate({
@@ -155,6 +157,8 @@ function HeaderTemplate({
   coupon,
   discountPercentage,
   showTwitterSafeArea,
+  showDates,
+  showLocation,
 }: HeaderTemplateProps) {
   const { locations, schedules, slogan } = conference || {
     locations: [],
@@ -189,12 +193,12 @@ function HeaderTemplate({
           useTwitterHeader={type === HeaderType.TWITTER}
         />
         <HeaderInfoContainer>
-          {firstDay && lastDay && (
+          {showDates && firstDay && lastDay && (
             <HeaderConferenceDays>
               {firstDay}-{lastDay}
             </HeaderConferenceDays>
           )}
-          {location && (
+          {showLocation && location && (
             <HeaderLocation>
               {location.city}, {location.country}
             </HeaderLocation>
@@ -286,6 +290,14 @@ ConnectedHeaderTemplate.variables = [
   {
     id: "showTwitterSafeArea",
     validation: { type: Boolean, default: false },
+  },
+  {
+    id: "showDates",
+    validation: { type: Boolean, default: true },
+  },
+  {
+    id: "showLocation",
+    validation: { type: Boolean, default: true },
   },
 ];
 
