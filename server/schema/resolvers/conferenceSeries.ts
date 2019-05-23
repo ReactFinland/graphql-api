@@ -48,33 +48,29 @@ const conferenceSeries: {
           },
         ],
       },
-      // TODO: Set up a proper logo
       logos: {
-        // TODO: A black version of the logo
         black: {
           withText: {
-            url: "/media/techmovienight/logo.svg",
+            url: "/media/techmovienight/black-logo-with-text.svg",
           },
           withoutText: {
-            url: "/media/techmovienight/logo.svg",
+            url: "/media/techmovienight/black-logo.svg",
           },
         },
         colored: {
           withText: {
-            url: "/media/techmovienight/logo.svg",
+            url: "/media/techmovienight/black-logo-with-text.svg",
           },
-          // TODO: A compact version without text
           withoutText: {
-            url: "/media/techmovienight/logo.svg",
+            url: "/media/techmovienight/black-logo.svg",
           },
         },
-        // TODO: A white version of the logo
         white: {
           withText: {
-            url: "/media/techmovienight/logo.svg",
+            url: "/media/techmovienight/white-logo-with-text.svg",
           },
           withoutText: {
-            url: "/media/techmovienight/logo.svg",
+            url: "/media/techmovienight/white-logo.svg",
           },
         },
       },
