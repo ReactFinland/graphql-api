@@ -26,6 +26,7 @@ export { default as helenZhukova } from "./helen-zhukova";
 export { default as ivanGoncharov } from "./ivan-goncharov";
 export { default as jamonHolmgren } from "./jamon-holmgren";
 export { default as janiEvakallio } from "./jani-evakallio";
+export { default as jaredPalmer } from "./jared-palmer";
 export { default as jimmyJia } from "./jimmy-jia";
 export { default as johannesSchickling } from "./johannes-schickling";
 export { default as joniNevalainen } from "./joni-nevalainen";
