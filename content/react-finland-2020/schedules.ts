@@ -2,7 +2,7 @@ import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 // import * as people from "../people";
-// import * as talks from "./talks";
+import * as talks from "./talks";
 // import * as allWorkshops from "./workshops";
 
 const workshops = []; // Object.values(allWorkshops);
@@ -240,7 +240,7 @@ const workshopDay2: Schedule = {
 };
 
 const presentationDay1: Schedule = {
-  day: "2019-04-25",
+  day: "2019-05-14",
   description: "First conference day",
   location: locations.paasitorni,
   intervals: [
@@ -272,7 +272,7 @@ const presentationDay1: Schedule = {
       begin: "09:15",
       end: "10:45",
       title: "Secret",
-      sessions: [],
+      sessions: [talks.rachelNabors],
     },
     {
       begin: "10:45",
@@ -360,7 +360,7 @@ const presentationDay1: Schedule = {
 };
 
 const presentationDay2: Schedule = {
-  day: "2019-04-26",
+  day: "2019-05-15",
   description: "Second conference day",
   location: locations.paasitorni,
   intervals: [
@@ -489,7 +489,7 @@ const presentationDay2: Schedule = {
 };
 
 const postConferenceDay1: Schedule = {
-  day: "2019-04-27",
+  day: "2019-05-16",
   description: "Post-conference",
   intervals: [
     {
@@ -516,7 +516,7 @@ const postConferenceDay1: Schedule = {
 };
 
 const postConferenceDay2: Schedule = {
-  day: "2019-04-28",
+  day: "2019-05-17",
   description: "Post-conference",
   intervals: [
     {
