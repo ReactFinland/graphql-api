@@ -236,7 +236,11 @@ const conferenceSeries: {
   "react-finland": {
     id: "react-finland",
     name: "React Finland",
-    conferences: ["react-finland-2018", "react-finland-2019"],
+    conferences: [
+      "react-finland-2018",
+      "react-finland-2019",
+      "react-finland-2020",
+    ],
     theme: {
       id: "react-finland",
       textures: [{ url: "/media/assets/wave.svg" }],
