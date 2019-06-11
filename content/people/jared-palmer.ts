@@ -14,7 +14,7 @@ const person: Contact = {
     github: "jaredpalmer",
     facebook: "",
     medium: "",
-    instagram: "",
+    instagram: "jaredpalmer",
     linkedin: "",
     youtube: "",
   },
