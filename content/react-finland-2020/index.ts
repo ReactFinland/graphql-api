@@ -5,28 +5,26 @@ import * as allSponsors from "../sponsors";
 import schedules from "./schedules";
 
 const partners = [
-  /*
   allSponsors.agentconf,
-  allSponsors.halfstack,
-  allSponsors.jscamp,
+  // allSponsors.halfstack,
+  // allSponsors.jscamp,
   allSponsors.jskongress,
-  allSponsors.koodiasuomesta,
-  allSponsors.reasonconf,
+  // allSponsors.koodiasuomesta,
+  // allSponsors.reasonconf,
   allSponsors.reactindia,
   allSponsors.reactnewyork,
-  allSponsors.reactnorway,*/
+  allSponsors.reactnorway,
   allSponsors.survivejs,
-  // allSponsors.typeof,
+  allSponsors.typeof,
   allSponsors.zapier,
-  /*allSponsors.stickermule,
-  allSponsors.reactalicante,
-  allSponsors.reactdayberlin,
+  // allSponsors.stickermule,
+  // allSponsors.reactalicante,
+  // allSponsors.reactdayberlin,
   allSponsors.reactjsgirls,
   allSponsors.reactnativeeu,
   allSponsors.reactjsday,
-  allSponsors.webexpo,
-  allSponsors.techEvents,
-  */
+  // allSponsors.webexpo,
+  // allSponsors.techEvents,
 ];
 const goldSponsors = [];
 const silverSponsors = [];
