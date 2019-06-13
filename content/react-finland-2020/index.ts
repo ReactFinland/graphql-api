@@ -26,7 +26,7 @@ const partners = [
   // allSponsors.webexpo,
   // allSponsors.techEvents,
 ];
-const goldSponsors = [];
+const goldSponsors = [allSponsors.gofore];
 const silverSponsors = [];
 const bronzeSponsors = [];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
