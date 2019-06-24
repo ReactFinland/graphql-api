@@ -19,7 +19,7 @@ const partners = [
   allSponsors.zapier,
   // allSponsors.stickermule,
   // allSponsors.reactalicante,
-  // allSponsors.reactdayberlin,
+  allSponsors.reactdayberlin,
   allSponsors.reactjsgirls,
   allSponsors.reactnativeeu,
   allSponsors.reactjsday,
