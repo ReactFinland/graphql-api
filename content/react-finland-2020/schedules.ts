@@ -326,7 +326,7 @@ const presentationDay1: Schedule = {
       begin: "15:00",
       end: "16:00",
       title: "Secret",
-      sessions: [],
+      sessions: [talks.tejasKumar],
     },
     {
       begin: "16:00",
