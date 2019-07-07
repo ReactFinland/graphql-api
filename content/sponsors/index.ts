@@ -51,6 +51,7 @@ export { default as stickermule } from "./stickermule";
 export { default as survivejs } from "./survivejs";
 export { default as techEvents } from "./tech-events";
 export { default as typeof } from "./typeof";
+export { default as valamis } from "./valamis";
 export { default as verkkokauppa } from "./verkkokauppa";
 export { default as vincit } from "./vincit";
 export { default as webexpo } from "./webexpo";
