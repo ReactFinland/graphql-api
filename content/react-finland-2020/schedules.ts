@@ -72,7 +72,7 @@ The swimming hall is open daily (closed 22.04 due to Easter).
 };
 
 const preConferenceDay: Schedule = {
-  day: "2019-05-11",
+  day: "2020-05-25",
   description: "Pre-conference",
   intervals: [
     {
@@ -94,7 +94,7 @@ const preConferenceDay: Schedule = {
 };
 
 const workshopDay1: Schedule = {
-  day: "2019-05-12",
+  day: "2020-05-26",
   description: "First workshop day",
   location: locations.paasitorni,
   intervals: [
@@ -167,7 +167,7 @@ const workshopDay1: Schedule = {
 };
 
 const workshopDay2: Schedule = {
-  day: "2019-05-13",
+  day: "2020-05-27",
   description: "Second workshop day",
   location: locations.paasitorni,
   intervals: [
@@ -240,7 +240,7 @@ const workshopDay2: Schedule = {
 };
 
 const presentationDay1: Schedule = {
-  day: "2019-05-14",
+  day: "2020-05-28",
   description: "First conference day",
   location: locations.paasitorni,
   intervals: [
@@ -360,7 +360,7 @@ const presentationDay1: Schedule = {
 };
 
 const presentationDay2: Schedule = {
-  day: "2019-05-15",
+  day: "2020-05-29",
   description: "Second conference day",
   location: locations.paasitorni,
   intervals: [
@@ -489,7 +489,7 @@ const presentationDay2: Schedule = {
 };
 
 const postConferenceDay1: Schedule = {
-  day: "2019-05-16",
+  day: "2020-05-30",
   description: "Post-conference",
   intervals: [
     {
@@ -516,7 +516,7 @@ const postConferenceDay1: Schedule = {
 };
 
 const postConferenceDay2: Schedule = {
-  day: "2019-05-17",
+  day: "2020-05-31",
   description: "Post-conference",
   intervals: [
     {
