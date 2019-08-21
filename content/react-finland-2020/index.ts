@@ -38,8 +38,8 @@ const conference: Conference = {
   organizer: allSponsors.reactFinland,
   slogan: "Learn More about React, Explore Finland",
   year: "2020",
-  startDate: "2020-05-12",
-  endDate: "2020-05-15",
+  startDate: "2020-05-26",
+  endDate: "2020-05-29",
   websiteUrl: "https://react-finland.fi/",
   // TODO: Resolve locations based on data
   locations: [locations.paasitorni],
