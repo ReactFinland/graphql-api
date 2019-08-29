@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Tae'lur Alexis",
   about:
-    "Software Engineer. #A11Y. Nomadic Soul. Late-Night Indie Scholar. Open Software Enthusiast. Decentralize the Web.",
+    "Tae'lur Alexis is a Software Engineer with a love for building accessible UI and Founder of @CodeEverydayio. She is passionate about sharing her love for learning and helping people get into tech.",
   image: {
     url: "people/taelur.jpg",
   },
