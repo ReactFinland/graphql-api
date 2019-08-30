@@ -4,14 +4,16 @@ import * as React from "react";
 
 // TODO: Extract apiUrl to context?
 function connect(apiUrl, query, variables = {}, propsToVars = props => props) {
-  return component => {
+  return function getConnect(
+    component
+  ): React.ComponentClass<any> & { filename: string, variables: {} } {
     let queryCache = {};
 
     interface ConnectState {
       data: {};
     }
 
-    class Connect<P = {}> extends React.Component<P, ConnectState> {
+    class Connect<P = any> extends React.Component<P, ConnectState | void> {
       public static filename: string;
       public static variables: Array<{
         id: string;

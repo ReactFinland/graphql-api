@@ -74,9 +74,7 @@ function resolveLocation(location) {
     "Helsinki Congress Paasitorni, Paasivuorenkatu 5 A, 00530 Helsinki, Finland";
 
   return location
-    ? `${location.name}, ${location.address}, ${location.city}, ${
-        location.country.name
-      }`
+    ? `${location.name}, ${location.address}, ${location.city}, ${location.country.name}`
     : defaultLocation;
 }
 
