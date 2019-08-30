@@ -45,6 +45,7 @@ export { default as michelWeststrate } from "./michel-weststrate";
 export { default as mikeBerman } from "./mike-berman";
 export { default as mikhailNovikov } from "./mikhail-novikov";
 export { default as monicaLent } from "./monica-lent";
+export { default as naderDabit } from "./nader-dabit";
 export { default as nikGraf } from "./nik-graf";
 export { default as patrickHund } from "./patrick-hund";
 export { default as patrickStapfer } from "./patrick-stapfer";
