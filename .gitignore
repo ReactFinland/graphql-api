@@ -4,6 +4,7 @@ node_modules/
 logs/
 build/
 attendees/
+server/types/
 media/scripts/
 utils/*.csv
 utils/google-*
