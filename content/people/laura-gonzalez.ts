@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Laura González",
-  about: "",
+  about:
+    "Laura González is a designer slash developer that has done hijinks at places such as The Guardian and The Next Web. She loves all things JavaScript and CSS and in her free time she can be seen doing pointless npm modules or feeding squirrels at the park.",
   image: {
     url: "people/laura.jpg",
   },
