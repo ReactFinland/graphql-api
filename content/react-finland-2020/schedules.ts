@@ -427,7 +427,7 @@ const presentationDay2: Schedule = {
       begin: "13:15",
       end: "14:45",
       title: "Secret",
-      sessions: [],
+      sessions: [talks.kenigboloMeyaStephen],
     },
     {
       begin: "14:45",

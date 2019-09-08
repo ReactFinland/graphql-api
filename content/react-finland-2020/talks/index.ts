@@ -1,6 +1,7 @@
 export { default as davidKhourshid } from "./david-khourshid";
 export { default as ivanOrlov } from "./ivan-orlov";
 export { default as jaredPalmer } from "./jared-palmer";
+export { default as kenigboloMeyaStephen } from "./kenigbolo-meya-stephen";
 export { default as lauraGonzalez } from "./laura-gonzalez";
 export { default as naderDabit } from "./nader-dabit";
 export { default as nikGraf } from "./nik-graf";
