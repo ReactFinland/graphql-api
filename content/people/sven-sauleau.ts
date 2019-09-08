@@ -15,8 +15,8 @@ const person: Contact = {
   },
   location: {
     country: {
-      name: "United Kingdom",
-      code: "UK",
+      name: "Great Britain",
+      code: "GB",
     },
     city: "London",
   },
