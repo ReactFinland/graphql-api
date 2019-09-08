@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Kenigbolo Meya Stephen",
-  about: "Senior Software Engineer & FE Engineering Lead",
+  about:
+    "Full Stack Software Engineer with a passion for clean code. Working languages are Ruby, JavaScript, Python. Frontend Engineering Team Lead at BCaster",
   image: {
     url: "people/kenigbolo.jpg",
   },
