@@ -10,7 +10,7 @@ const workshops = []; // Object.values(allWorkshops);
 const workshopDay: Schedule = {
   day: "2019-11-12",
   description: "Workshop day",
-  location: locations.paasitorni, // TODO
+  location: locations.amanda,
   intervals: [
     {
       begin: "08:00",
@@ -83,7 +83,7 @@ const workshopDay: Schedule = {
 const presentationDay: Schedule = {
   day: "2019-11-13",
   description: "Conference day",
-  location: locations.paasitorni, // TODO
+  location: locations.amanda,
   intervals: [
     {
       begin: "08:00",

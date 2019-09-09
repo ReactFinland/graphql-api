@@ -1,5 +1,5 @@
 import { Conference } from "../../server/schema/Conference";
-// import * as locations from "../locations";
+import * as locations from "../locations";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
 import schedules from "./schedules";
@@ -20,7 +20,7 @@ const conference: Conference = {
   startDate: "2020-11-12",
   endDate: "2020-11-13",
   websiteUrl: "https://freezing-edge.fi/",
-  locations: [], // TODO
+  locations: [locations.amanda],
   mcs: [], // TODO
   organizers: [
     people.aleksiPousar,
