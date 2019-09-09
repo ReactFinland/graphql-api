@@ -8,6 +8,67 @@ const conferenceSeries: {
     theme: Theme;
   };
 } = {
+  "freezing-edge": {
+    id: "freezing-edge",
+    name: "Freezing Edge",
+    conferences: ["freezing-edge-2019"],
+    theme: {
+      id: "freezing-edge",
+      textures: [{ url: "/media/assets/wave.svg" }],
+      colors: {
+        primary: "#6efbfd",
+        secondary: "#3b99f7",
+        text: "#000000",
+        background: "#ffffff",
+      },
+      fonts: {
+        primary: "Finlandica",
+        secondary: "Work Sans",
+        variants: [
+          {
+            family: "Finlandica",
+            weight: "normal",
+            style: "normal",
+            fileName: "/media/fonts/finlandica-regular",
+            formats: ["woff2", "woff", "ttf"],
+          },
+          {
+            family: "Work Sans",
+            weight: "normal",
+            style: "normal",
+            fileName: "/media/fonts/worksans-regular",
+            formats: ["woff2"],
+          },
+        ],
+      },
+      logos: {
+        black: {
+          withText: {
+            url: "/media/freezing-edge/black-logo-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/freezing-edge/black-logo-with-text.svg", // TODO
+          },
+        },
+        colored: {
+          withText: {
+            url: "/media/freezing-edge/color-logo-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/freezing-edge/color-logo-with-text.svg", // TODO
+          },
+        },
+        white: {
+          withText: {
+            url: "/media/freezing-edge/white-logo-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/freezing-edge/white-logo-with-text.svg", // TODO
+          },
+        },
+      },
+    },
+  },
   techmovienight: {
     id: "techmovienight",
     name: "Tech Movie Night",
