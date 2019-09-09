@@ -2,7 +2,7 @@ import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 // import * as people from "../people";
-// import * as talks from "./talks";
+import * as talks from "./talks";
 // import * as allWorkshops from "./workshops";
 
 const workshops = []; // Object.values(allWorkshops);
@@ -113,7 +113,7 @@ const presentationDay: Schedule = {
       begin: "09:15",
       end: "10:45",
       title: "Secret",
-      sessions: [],
+      sessions: [talks.kenWheeler],
     },
     {
       begin: "10:45",
@@ -149,7 +149,7 @@ const presentationDay: Schedule = {
       begin: "13:15",
       end: "14:30",
       title: "Secret",
-      sessions: [],
+      sessions: [talks.patrickStapfer],
     },
     {
       begin: "14:30",
@@ -167,7 +167,7 @@ const presentationDay: Schedule = {
       begin: "15:00",
       end: "16:00",
       title: "Secret",
-      sessions: [],
+      sessions: [talks.teroParviainen],
     },
     {
       begin: "16:00",
