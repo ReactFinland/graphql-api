@@ -47,7 +47,7 @@ const conferenceSeries: {
             url: "/media/freezing-edge/black-logo-with-text.svg",
           },
           withoutText: {
-            url: "/media/freezing-edge/black-logo-with-text.svg", // TODO
+            url: "/media/freezing-edge/black-logo.svg",
           },
         },
         colored: {
@@ -55,7 +55,7 @@ const conferenceSeries: {
             url: "/media/freezing-edge/color-logo-with-text.svg",
           },
           withoutText: {
-            url: "/media/freezing-edge/color-logo-with-text.svg", // TODO
+            url: "/media/freezing-edge/color-logo.svg",
           },
         },
         white: {
@@ -63,7 +63,7 @@ const conferenceSeries: {
             url: "/media/freezing-edge/white-logo-with-text.svg",
           },
           withoutText: {
-            url: "/media/freezing-edge/white-logo-with-text.svg", // TODO
+            url: "/media/freezing-edge/white-logo.svg",
           },
         },
       },
