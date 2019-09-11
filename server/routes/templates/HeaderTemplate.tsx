@@ -20,6 +20,7 @@ interface HeaderContainerProps {
   texture: string;
 }
 
+// TODO: Allow alpha to be defined for both
 const HeaderPageContainer = styled.div`
   display: grid;
   background-image: ${({
@@ -28,7 +29,7 @@ const HeaderPageContainer = styled.div`
     texture,
   }: HeaderContainerProps) => `linear-gradient(
       ${primaryColor},
-      ${hexToRgba(secondaryColor, 0.79)}
+      ${hexToRgba(secondaryColor, 0.39)}
     ),
     url("${texture}")`};
   background-size: cover;

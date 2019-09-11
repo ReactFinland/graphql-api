@@ -14,7 +14,7 @@ const conferenceSeries: {
     conferences: ["freezing-edge-2019"],
     theme: {
       id: "freezing-edge",
-      textures: [{ url: "/media/assets/wave.svg" }],
+      textures: [{ url: "/media/assets/freezing-edge-bg.jpg" }],
       colors: {
         primary: "#6efbfd",
         secondary: "#3b99f7",
