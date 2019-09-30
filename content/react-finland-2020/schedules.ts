@@ -344,7 +344,7 @@ const presentationDay1: Schedule = {
       begin: "16:30",
       end: "17:15",
       title: "Secret",
-      sessions: [talks.taelurAlexis],
+      sessions: [talks.taelurAlexis, talks.jeremyWagner],
     },
     {
       begin: "17:15",
@@ -463,7 +463,7 @@ const presentationDay2: Schedule = {
       begin: "16:30",
       end: "17:30",
       title: "Secret",
-      sessions: [],
+      sessions: [talks.isaSilveira],
     },
     {
       begin: "17:30",
