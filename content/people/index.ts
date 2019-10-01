@@ -40,6 +40,7 @@ export { default as kadiKraman } from "./kadi-kraman";
 export { default as kasiaJastrzebska } from "./kasia-jastrzebska";
 export { default as kenWheeler } from "./ken-wheeler";
 export { default as kenigboloMeyaStephen } from "./kenigbolo-meya-stephen";
+export { default as kentCDodds } from "./kent-c-dodds";
 export { default as lauraGonzalez } from "./laura-gonzalez";
 export { default as lucaMatteis } from "./luca-matteis";
 export { default as maaretPyhajarvi } from "./maaret-pyhajarvi";
