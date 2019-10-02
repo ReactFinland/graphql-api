@@ -272,11 +272,12 @@ const presentationDay1: Schedule = {
       begin: "09:15",
       end: "10:45",
       title: "Secret",
-      sessions: [talks.rachelNabors, talks.kentCDodds],
+      // 3x 30 mins
+      sessions: [talks.kentCDodds, talks.naderDabit],
     },
     {
       begin: "10:45",
-      end: "11:15",
+      end: "11:30",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -287,14 +288,15 @@ const presentationDay1: Schedule = {
       ],
     },
     {
-      begin: "11:15",
-      end: "12:15",
+      begin: "11:30",
+      end: "12:30",
       title: "Secret",
+      // 2 x 30 mins
       sessions: [talks.davidKhourshid],
     },
     {
-      begin: "12:15",
-      end: "13:15",
+      begin: "12:30",
+      end: "13:30",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -305,14 +307,15 @@ const presentationDay1: Schedule = {
       ],
     },
     {
-      begin: "13:15",
-      end: "14:30",
+      begin: "13:30",
+      end: "15:00",
       title: "Secret",
-      sessions: [talks.jaredPalmer, talks.nikGraf],
+      // 3 x 30 mins
+      sessions: [talks.jaredPalmer, talks.nikGraf, talks.tejasKumar],
     },
     {
-      begin: "14:30",
-      end: "15:00",
+      begin: "15:00",
+      end: "15:45",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -323,32 +326,15 @@ const presentationDay1: Schedule = {
       ],
     },
     {
-      begin: "15:00",
-      end: "16:00",
+      begin: "15:45",
+      end: "16:45",
       title: "Secret",
-      sessions: [talks.tejasKumar, talks.naderDabit],
-    },
-    {
-      begin: "16:00",
-      end: "16:30",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description:
-            "Drink coffee if you still can. Enjoy the sofa at the sponsors' lounge.",
-        },
-      ],
-    },
-    {
-      begin: "16:30",
-      end: "17:15",
-      title: "Secret",
+      // 2 x 30 mins
       sessions: [talks.taelurAlexis, talks.jeremyWagner],
     },
     {
-      begin: "17:15",
-      end: "17:30",
+      begin: "16:45",
+      end: "17:00",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -392,11 +378,12 @@ const presentationDay2: Schedule = {
       begin: "09:15",
       end: "10:45",
       title: "Secret",
-      sessions: [talks.ivanOrlov],
+      // 3 x 30 mins
+      sessions: [talks.rachelNabors, talks.ivanOrlov],
     },
     {
       begin: "10:45",
-      end: "11:15",
+      end: "11:30",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -407,14 +394,15 @@ const presentationDay2: Schedule = {
       ],
     },
     {
-      begin: "11:15",
-      end: "12:15",
+      begin: "11:30",
+      end: "12:30",
       title: "Secret",
+      // 2 x 30 mins
       sessions: [talks.lauraGonzalez],
     },
     {
-      begin: "12:15",
-      end: "13:15",
+      begin: "12:30",
+      end: "13:30",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -424,14 +412,15 @@ const presentationDay2: Schedule = {
       ],
     },
     {
-      begin: "13:15",
-      end: "14:45",
+      begin: "13:30",
+      end: "15:00",
       title: "Secret",
-      sessions: [talks.kenigboloMeyaStephen],
+      // 3 x 30 mins
+      sessions: [talks.kenigboloMeyaStephen, talks.monicaLent],
     },
     {
-      begin: "14:45",
-      end: "15:15",
+      begin: "15:00",
+      end: "15:45",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -442,32 +431,15 @@ const presentationDay2: Schedule = {
       ],
     },
     {
-      begin: "15:15",
-      end: "16:00",
+      begin: "15:45",
+      end: "16:45",
       title: "Secret",
-      sessions: [talks.emmaWedekind, talks.monicaLent],
+      // 2 x 30 mins
+      sessions: [talks.emmaWedekind, talks.isaSilveira],
     },
     {
-      begin: "16:00",
-      end: "16:30",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description:
-            "Drink coffee if you still can. Still time for a massage at the sponsors' lounge.",
-        },
-      ],
-    },
-    {
-      begin: "16:30",
-      end: "17:30",
-      title: "Secret",
-      sessions: [talks.isaSilveira],
-    },
-    {
-      begin: "17:30",
-      end: "18:00",
+      begin: "16:45",
+      end: "17:00",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
