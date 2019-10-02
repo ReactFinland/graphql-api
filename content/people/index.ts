@@ -56,6 +56,7 @@ export { default as nikGraf } from "./nik-graf";
 export { default as patrickHund } from "./patrick-hund";
 export { default as patrickStapfer } from "./patrick-stapfer";
 export { default as rachelNabors } from "./rachel-nabors";
+export { default as rebeccaHill } from "./rebecca-hill";
 export { default as rickHanlon } from "./rick-hanlon";
 export { default as rotemMizrachiMeidan } from "./rotem-mizrachi-meidan";
 export { default as samuliHakoniemi } from "./samuli-hakoniemi";

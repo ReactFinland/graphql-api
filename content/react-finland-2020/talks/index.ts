@@ -11,5 +11,6 @@ export { default as monicaLent } from "./monica-lent";
 export { default as naderDabit } from "./nader-dabit";
 export { default as nikGraf } from "./nik-graf";
 export { default as rachelNabors } from "./rachel-nabors";
+export { default as rebeccaHill } from "./rebecca-hill";
 export { default as taelurAlexis } from "./taelur-alexis";
 export { default as tejasKumar } from "./tejas-kumar";
