@@ -3,85 +3,9 @@ import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 // import * as people from "../people";
 import * as talks from "./talks";
-// import * as allWorkshops from "./workshops";
-
-const workshops = []; // Object.values(allWorkshops);
-
-const workshopDay: Schedule = {
-  day: "2019-11-12",
-  description: "Workshop day",
-  location: locations.amanda,
-  intervals: [
-    {
-      begin: "08:00",
-      end: "09:00",
-      sessions: [
-        {
-          type: SessionType.ORGANIZATIONAL,
-          title: "Registration and breakfast",
-          description:
-            "Pro tip: You can register at any time during the conference. There's light breakfast (pastry and coffee) available.",
-        },
-      ],
-    },
-    {
-      begin: "09:00",
-      end: "11:30",
-      sessions: workshops,
-    },
-    {
-      begin: "11:30",
-      end: "12:30",
-      sessions: [
-        {
-          type: SessionType.LUNCH,
-          title: "Lunch",
-        },
-      ],
-    },
-    {
-      begin: "12:30",
-      end: "14:00",
-      title: "Workshops continue",
-      sessions: [],
-    },
-    {
-      begin: "14:00",
-      end: "14:20",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-        },
-      ],
-    },
-    {
-      begin: "14:20",
-      end: "15:40",
-      title: "Workshops continue",
-      sessions: [],
-    },
-    {
-      begin: "15:40",
-      end: "16:00",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-        },
-      ],
-    },
-    {
-      begin: "16:00",
-      end: "17:30",
-      title: "Workshops continue",
-      sessions: [],
-    },
-  ],
-};
 
 const presentationDay: Schedule = {
-  day: "2019-11-13",
+  day: "2020-06-01",
   description: "Conference day",
   location: locations.amanda,
   intervals: [
@@ -200,4 +124,4 @@ const presentationDay: Schedule = {
   ],
 };
 
-export default [workshopDay, presentationDay];
+export default [presentationDay];

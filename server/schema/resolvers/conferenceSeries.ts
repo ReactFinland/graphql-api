@@ -11,7 +11,7 @@ const conferenceSeries: {
   "freezing-edge": {
     id: "freezing-edge",
     name: "Freezing Edge",
-    conferences: ["freezing-edge-2019"],
+    conferences: ["freezing-edge-2020"],
     theme: {
       id: "freezing-edge",
       textures: [{ url: "/media/assets/freezing-edge-bg.jpg" }],
