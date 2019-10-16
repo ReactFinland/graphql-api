@@ -26,7 +26,7 @@ const partners = [
   // allSponsors.webexpo,
   // allSponsors.techEvents,
 ];
-const goldSponsors = [allSponsors.gofore];
+const goldSponsors = [allSponsors.gofore, allSponsors.futurice];
 const silverSponsors = [
   allSponsors.valamis,
   allSponsors.elisa,
