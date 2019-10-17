@@ -31,6 +31,7 @@ export { default as nitor } from "./nitor";
 export { default as osaango } from "./osaango";
 export { default as postgraphile } from "./postgraphile";
 export { default as prisma } from "./prisma";
+export { default as quentic } from "./quentic";
 export { default as reactFinland } from "./react-finland";
 export { default as reactalicante } from "./reactalicante";
 export { default as reactdayberlin } from "./reactdayberlin";
