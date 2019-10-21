@@ -21,6 +21,7 @@ export { default as eloyDuran } from "./eloy-duran";
 export { default as emmaWedekind } from "./emma-wedekind";
 export { default as farzadYz } from "./farzad-yz";
 export { default as gantLaborde } from "./gant-laborde";
+export { default as georgeMandis } from "./george-mandis";
 export { default as glennReyes } from "./glenn-reyes";
 export { default as harriMaatta } from "./harri-maatta";
 export { default as helenZhukova } from "./helen-zhukova";

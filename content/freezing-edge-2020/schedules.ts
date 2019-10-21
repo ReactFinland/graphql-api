@@ -55,7 +55,7 @@ const presentationDay: Schedule = {
       begin: "11:15",
       end: "12:15",
       title: "Secret",
-      sessions: [],
+      sessions: [talks.georgeMandis],
     },
     {
       begin: "12:15",
