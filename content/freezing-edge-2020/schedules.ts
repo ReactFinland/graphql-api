@@ -37,7 +37,7 @@ const presentationDay: Schedule = {
       begin: "09:15",
       end: "10:45",
       title: "Secret",
-      sessions: [talks.kenWheeler],
+      sessions: [talks.kenWheeler, talks.teroParviainen],
     },
     {
       begin: "10:45",
@@ -91,7 +91,7 @@ const presentationDay: Schedule = {
       begin: "15:00",
       end: "16:00",
       title: "Secret",
-      sessions: [talks.teroParviainen],
+      sessions: [talks.nataliaTepluhina],
     },
     {
       begin: "16:00",
