@@ -1,5 +1,6 @@
 export { default as davidKhourshid } from "./david-khourshid";
 export { default as emmaWedekind } from "./emma-wedekind";
+export { default as farzadYz } from "./farzad-yz";
 export { default as isaSilveira } from "./isa-silveira";
 export { default as ivanOrlov } from "./ivan-orlov";
 export { default as jaredPalmer } from "./jared-palmer";
