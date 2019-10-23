@@ -292,6 +292,7 @@ const presentationDay1: Schedule = {
         },
         // TODO: Figure out how to structure lightning talks better
         talks.villePelkonen,
+        talks.tobiasTimm,
       ],
     },
     {

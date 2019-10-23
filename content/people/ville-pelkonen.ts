@@ -25,7 +25,7 @@ const person: Contact = {
     },
     city: "Helsinki",
   },
-  keywords: [Keyword.REACT], // TODO: check keywords for more
+  keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };
 

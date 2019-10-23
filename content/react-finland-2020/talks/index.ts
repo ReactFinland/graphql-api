@@ -15,5 +15,6 @@ export { default as rachelNabors } from "./rachel-nabors";
 export { default as rebeccaHill } from "./rebecca-hill";
 export { default as taelurAlexis } from "./taelur-alexis";
 export { default as tejasKumar } from "./tejas-kumar";
+export { default as tobiasTimm } from "./tobias-timm";
 export { default as villePelkonen } from "./ville-pelkonen";
 export { default as vivekNayyar } from "./vivek-nayyar";
