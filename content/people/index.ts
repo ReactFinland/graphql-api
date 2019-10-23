@@ -76,4 +76,5 @@ export { default as toniRistola } from "./toni-ristola";
 export { default as tuuliTiilikainen } from "./tuuli-tiilikainen";
 export { default as varyaStepanova } from "./varya-stepanova";
 export { default as villeImmonen } from "./ville-immonen";
+export { default as villePelkonen } from "./ville-pelkonen";
 export { default as vivekNayyar } from "./vivek-nayyar";

@@ -285,6 +285,13 @@ const presentationDay1: Schedule = {
           description:
             "Drink coffee, live long and prosper. Play foosball at the sponsors' lounge.",
         },
+        {
+          type: SessionType.PANEL,
+          title: "Panel",
+          description: "",
+        },
+        // TODO: Figure out how to structure lightning talks better
+        talks.villePelkonen,
       ],
     },
     {
@@ -322,6 +329,11 @@ const presentationDay1: Schedule = {
           title: "Break",
           description:
             "Drink coffee. Again. Take a massage at the sponsors' lounge.",
+        },
+        {
+          type: SessionType.PANEL,
+          title: "Panel",
+          description: "",
         },
       ],
     },
@@ -391,6 +403,11 @@ const presentationDay2: Schedule = {
           description:
             "Drink coffee and play games at the sponsors' lounge. Finnish coffee is darker than you think.",
         },
+        {
+          type: SessionType.PANEL,
+          title: "Panel",
+          description: "",
+        },
       ],
     },
     {
@@ -431,6 +448,11 @@ const presentationDay2: Schedule = {
           title: "Break",
           description:
             "Drink coffee. Again. Play more foosball at the sponsors' lounge.",
+        },
+        {
+          type: SessionType.PANEL,
+          title: "Panel",
+          description: "",
         },
       ],
     },
