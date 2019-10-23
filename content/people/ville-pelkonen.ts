@@ -20,10 +20,10 @@ const person: Contact = {
   },
   location: {
     country: {
-      name: "", // TODO: Country name
-      code: "", // TODO: Two-letter country code
+      name: "Finland",
+      code: "FI",
     },
-    city: "", // TODO: City name
+    city: "Helsinki",
   },
   keywords: [Keyword.REACT], // TODO: check keywords for more
   type: [ContactType.SPEAKER],
