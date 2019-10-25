@@ -42,6 +42,9 @@ export class Session {
 
   @Field(_ => SessionUrls, { nullable: true })
   public urls?: SessionUrls;
+
+  @Field(_ => [Session], { nullable: true })
+  public sessions?: Session[];
 }
 
 @Resolver(_ => Session)

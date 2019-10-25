@@ -290,9 +290,11 @@ const presentationDay1: Schedule = {
           title: "Panel",
           description: "",
         },
-        // TODO: Figure out how to structure lightning talks better
-        talks.villePelkonen,
-        talks.tobiasTimm,
+        {
+          type: SessionType.LIGHTNING_TALK,
+          title: "Lightning talk session",
+          sessions: [talks.villePelkonen, talks.tobiasTimm],
+        },
       ],
     },
     {

@@ -27,7 +27,9 @@ export function resolveSessions(
   return flatMap(schedules, ({ intervals }) =>
     uniq(
       flatMap(intervals, ({ sessions }) =>
-        sessions.filter(({ type }) => sessionTypes.includes(type))
+        flatMap(sessions, session =>
+          [session].concat(session.sessions || [])
+        ).filter(({ type }) => sessionTypes.includes(type))
       )
     )
   );

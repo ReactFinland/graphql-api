@@ -89,7 +89,13 @@ export function getSessionSpeakers(
     SessionType.WORKSHOP,
   ]);
   const speakers = uniqBy(
-    flatMap(sessions, session => session.people || []),
+    flatMap(sessions, session =>
+      (session.people || []).concat(
+        session.sessions
+          ? flatMap(session.sessions, session => session.people || [])
+          : []
+      )
+    ),
     "name"
   );
 
