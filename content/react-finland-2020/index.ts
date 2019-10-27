@@ -33,7 +33,11 @@ const silverSponsors = [
   allSponsors.alma,
   allSponsors.columbiaroad,
 ];
-const bronzeSponsors = [allSponsors.quentic, allSponsors.vincit];
+const bronzeSponsors = [
+  allSponsors.quentic,
+  allSponsors.vincit,
+  allSponsors.netum,
+];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
 const conference: Conference = {
