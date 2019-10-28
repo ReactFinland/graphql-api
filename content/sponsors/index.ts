@@ -47,6 +47,7 @@ export { default as reaktor } from "./reaktor";
 export { default as reasonconf } from "./reasonconf";
 export { default as rohea } from "./rohea";
 export { default as sae } from "./sae";
+export { default as smartly } from "./smartly";
 export { default as solita } from "./solita";
 export { default as stickermule } from "./stickermule";
 export { default as survivejs } from "./survivejs";
