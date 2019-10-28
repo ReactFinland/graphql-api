@@ -8,6 +8,7 @@ export { default as jeremyWagner } from "./jeremy-wagner";
 export { default as kenigboloMeyaStephen } from "./kenigbolo-meya-stephen";
 export { default as kentCDodds } from "./kent-c-dodds";
 export { default as lauraGonzalez } from "./laura-gonzalez";
+export { default as madalyn } from "./madalyn";
 export { default as monicaLent } from "./monica-lent";
 export { default as naderDabit } from "./nader-dabit";
 export { default as nikGraf } from "./nik-graf";

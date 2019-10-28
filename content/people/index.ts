@@ -47,6 +47,7 @@ export { default as kristaJantti } from "./krista-jantti";
 export { default as lauraGonzalez } from "./laura-gonzalez";
 export { default as lucaMatteis } from "./luca-matteis";
 export { default as maaretPyhajarvi } from "./maaret-pyhajarvi";
+export { default as madalyn } from "./madalyn";
 export { default as manuelMatuzovic } from "./manuel-matuzovic";
 export { default as marcAndreGiroux } from "./marc-andre-giroux";
 export { default as michalChudziak } from "./michal-chudziak";
