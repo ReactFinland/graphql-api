@@ -19,6 +19,7 @@ export { default as eemeliAro } from "./eemeli-aro";
 export { default as ellieDay } from "./ellie-day";
 export { default as eloyDuran } from "./eloy-duran";
 export { default as emmaWedekind } from "./emma-wedekind";
+export { default as erikRasmussen } from "./erik-rasmussen";
 export { default as farzadYz } from "./farzad-yz";
 export { default as gantLaborde } from "./gant-laborde";
 export { default as georgeMandis } from "./george-mandis";

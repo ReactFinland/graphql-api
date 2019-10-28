@@ -3,9 +3,7 @@ import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 // import * as people from "../people";
 import * as talks from "./talks";
-// import * as allWorkshops from "./workshops";
-
-const workshops = []; // Object.values(allWorkshops);
+import * as allWorkshops from "./workshops";
 
 const linnanmaki = {
   type: SessionType.PARTY,
@@ -113,7 +111,15 @@ const workshopDay1: Schedule = {
     {
       begin: "09:00",
       end: "11:30",
-      sessions: workshops,
+      sessions: [
+        allWorkshops.statecharts,
+        allWorkshops.advancedReact,
+        allWorkshops.fromLegacyToReact,
+        allWorkshops.fullStack,
+        allWorkshops.testingReact,
+        allWorkshops.modernForms,
+        allWorkshops.designSystems,
+      ],
     },
     {
       begin: "11:30",
@@ -186,7 +192,15 @@ const workshopDay2: Schedule = {
     {
       begin: "09:00",
       end: "11:30",
-      sessions: workshops,
+      sessions: [
+        allWorkshops.statecharts,
+        allWorkshops.advancedReact,
+        allWorkshops.fromLegacyToReact,
+        allWorkshops.reactNative,
+        allWorkshops.reactPerformance,
+        allWorkshops.modernForms,
+        allWorkshops.designSystems,
+      ],
     },
     {
       begin: "11:30",
