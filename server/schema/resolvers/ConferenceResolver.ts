@@ -53,7 +53,6 @@ class ConferenceResolver {
   @FieldResolver(_ => [Contact])
   public speakers(@Root() conference: Conference) {
     const talks = resolveSessions(conference.schedules, [
-      SessionType.LIGHTNING_TALK,
       SessionType.TALK,
       SessionType.KEYNOTE,
     ]);
@@ -86,13 +85,31 @@ class ConferenceResolver {
     );
   }
 
-  @FieldResolver(_ => [Session])
+  @FieldResolver(_ => [Session], {
+    deprecationReason:
+      "Use `keynotes`,s `fullTalks` and `lightningTalks` instead",
+  })
   public talks(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [
       SessionType.LIGHTNING_TALK,
       SessionType.TALK,
       SessionType.KEYNOTE,
     ]);
+  }
+
+  @FieldResolver(_ => [Session])
+  public keynotes(@Root() conference: Conference) {
+    return resolveSessions(conference.schedules, [SessionType.KEYNOTE]);
+  }
+
+  @FieldResolver(_ => [Session])
+  public fullTalks(@Root() conference: Conference) {
+    return resolveSessions(conference.schedules, [SessionType.TALK]);
+  }
+
+  @FieldResolver(_ => [Session])
+  public lightningTalks(@Root() conference: Conference) {
+    return resolveSessions(conference.schedules, [SessionType.LIGHTNING_TALK]);
   }
 
   @FieldResolver(_ => [Session])
