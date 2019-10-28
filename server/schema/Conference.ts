@@ -63,6 +63,9 @@ export class Conference {
   public schedules!: Schedule[];
 
   @Field(_ => [Contact], { nullable: true })
+  public allSpeakers?: Contact[];
+
+  @Field(_ => [Contact], { nullable: true })
   public speakers?: Contact[];
 
   @Field(_ => [Contact], { nullable: true })
