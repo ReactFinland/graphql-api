@@ -103,8 +103,22 @@ class ConferenceResolver {
   }
 
   @FieldResolver(_ => [Session])
+  public keynoteSpeakers(@Root() conference: Conference) {
+    const talks = resolveSessions(conference.schedules, [SessionType.KEYNOTE]);
+
+    return getSessionSpeakers(conference, talks);
+  }
+
+  @FieldResolver(_ => [Session])
   public fullTalks(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [SessionType.TALK]);
+  }
+
+  @FieldResolver(_ => [Session])
+  public fullTalkSpeakers(@Root() conference: Conference) {
+    const talks = resolveSessions(conference.schedules, [SessionType.TALK]);
+
+    return getSessionSpeakers(conference, talks);
   }
 
   @FieldResolver(_ => [Session])
@@ -113,8 +127,24 @@ class ConferenceResolver {
   }
 
   @FieldResolver(_ => [Session])
+  public lightningTalkSpeakers(@Root() conference: Conference) {
+    const talks = resolveSessions(conference.schedules, [
+      SessionType.LIGHTNING_TALK,
+    ]);
+
+    return getSessionSpeakers(conference, talks);
+  }
+
+  @FieldResolver(_ => [Session])
   public workshops(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [SessionType.WORKSHOP]);
+  }
+
+  @FieldResolver(_ => [Session])
+  public workshopInstructors(@Root() conference: Conference) {
+    const talks = resolveSessions(conference.schedules, [SessionType.WORKSHOP]);
+
+    return getSessionSpeakers(conference, talks);
   }
 }
 
