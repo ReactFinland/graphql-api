@@ -6,11 +6,13 @@ const workshop: Session = {
   type: SessionType.WORKSHOP,
   people: [kenigboloMeyaStephen],
   title: "From Legacy to React",
-  description: `Changing applications from one technology to another can turn out to be rather very challenging depending on the type of tech stack. If you’ve ever migrated a large project then you can only imagine how daunting it could be, most especially moving from DOM manipulation stack to a Virtual DOM stack.
+  description: `Changing applications from one technology to another can turn out to be quite challenging depending on the type of tech stack. If you have read about migrating large projects then you probably know how daunting it could get, especially moving from a direct DOM manipulation pattern to a Virtual DOM pattern.
 
-Recently after becoming Front End Engineering Team lead at BCaster I introduced an incremental migration shift from JQuery to VueJs and React. It sure did seem to be straightforward at first especially with proper test coverage, however 20% -25% into this migration we encountered a certain issues which meant re-evaluation of several architectural decisions that had been made in this regard.
+After becoming Front End Engineering lead at BCaster I became responsible for handling the migration of a couple of JQuery legacy codebases into React. At first sight, it sure did seem to be straightforward, especially with proper test coverage, however about 20% into this migration we encountered certain issues which meant a total re-evaluation of several architectural decisions that had been made in regards to this migration.
 
-The goal of this workshop is to give a hands on step by step guide and approach for incrementally migrating legacy JS or JQuery application into a React or Vue JS app without needing to use the CLI initially. The workshop requires participants to know basic javascript and DOM manipulation. It is suitable for both beginners and intermediates alike.`,
+Migrating a couple thousand lines of JQuery code required an incremental approach which ensured that a stable version of the codebase was always avaialble in production despite having significant changes to it. This meant that certain steps needed to be introduced in order to save us from the ordeal of a total rewrite (in some cases rewritting "might" a valid option).
+
+The goal of this workshop is to give you a practical hands on step by step guide on how to approach incrementally migrating legacy JavaScript or JQuery application into a React app without needing to use the CLI initially and eventually moving the new codebase into a CLI project structure. The workshop requires participants to know basic javascript and DOM manipulation. It is suitable for both beginners and intermediates alike, however, the contents are primarily beginner focused.`,
   keywords: [],
   location: paasitorni,
 };
