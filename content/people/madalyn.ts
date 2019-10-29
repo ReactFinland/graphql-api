@@ -3,16 +3,16 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Madalyn Rose Parker",
-  about: "",
+  about: "Working to make the web a better place. Mental health advocate, passionate about a11y, requires strong coffee.",
   image: {
     url: "people/madalyn.jpg",
   },
   social: {
-    homepage: "https://madalynparker.com",
+    homepage: "",
     twitter: "madalynrose",
     github: "madalynrose",
     facebook: "",
-    medium: "",
+    medium: "madalynrose",
     instagram: "madalynrose09",
     linkedin: "madalynparker",
     youtube: "",
@@ -22,7 +22,7 @@ const person: Contact = {
       name: "United States",
       code: "US",
     },
-    city: "Ann Arbor",
+    city: "Ann Arbor, Michigan",
   },
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
