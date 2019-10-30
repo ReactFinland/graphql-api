@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Madalyn Rose Parker",
-  about: "Working to make the web a better place. Mental health advocate, passionate about a11y, requires strong coffee.",
+  about:
+    "Working to make the web a better place. Mental health advocate, passionate about a11y, requires strong coffee.",
   image: {
     url: "people/madalyn.jpg",
   },
