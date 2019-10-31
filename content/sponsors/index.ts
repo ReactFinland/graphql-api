@@ -6,6 +6,7 @@ export { default as apollo } from "./apollo";
 export { default as cai } from "./cai";
 export { default as codento } from "./codento";
 export { default as columbiaroad } from "./columbiaroad";
+export { default as cybercom } from "./cybercom";
 export { default as designsystemslondon } from "./designsystemslondon";
 export { default as digia } from "./digia";
 export { default as elisa } from "./elisa";
