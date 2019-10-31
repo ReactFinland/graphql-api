@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Cybercom",
   about: `Cybercom is an IT consulting company enabling companies and organisations to benefit from the opportunities of the connected world and to enhance their competitiveness. Combining technical edge and strong business insight we provide innovative and sustainable solutions.`,
   image: {
-    url: "sponsors/cybercom.svg",
+    url: "sponsors/cybercom.png",
   },
   social: {
     homepage: "https://www.cybercom.com",
