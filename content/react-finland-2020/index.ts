@@ -42,6 +42,7 @@ const bronzeSponsors = [
   allSponsors.vincit,
   allSponsors.netum,
   allSponsors.digia,
+  allSponsors.wunder,
 ];
 const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
 
