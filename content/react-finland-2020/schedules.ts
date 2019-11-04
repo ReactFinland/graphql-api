@@ -74,6 +74,11 @@ const preConferenceDay: Schedule = {
   description: "Pre-conference",
   intervals: [
     {
+      begin: "09:00",
+      end: "17:30",
+      sessions: [allWorkshops.designSystems101],
+    },
+    {
       begin: "08:00",
       end: "22:00",
       sessions: [oodi],
@@ -557,6 +562,24 @@ const postConferenceDay2: Schedule = {
   ],
 };
 
+const postConferenceDay3: Schedule = {
+  day: "2020-06-01",
+  description: "Freezing Edge 2020",
+  intervals: [
+    {
+      begin: "09:00",
+      end: "16:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Freezing Edge 2020 Conference",
+          description: "[Learn more](https://freezing-edge.fi)",
+        },
+      ],
+    },
+  ],
+};
+
 export default [
   preConferenceDay,
   workshopDay1,
@@ -565,4 +588,5 @@ export default [
   presentationDay2,
   postConferenceDay1,
   postConferenceDay2,
+  postConferenceDay3,
 ];
