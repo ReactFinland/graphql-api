@@ -204,7 +204,7 @@ const workshopDay2: Schedule = {
         allWorkshops.reactNative,
         allWorkshops.reactPerformance,
         allWorkshops.modernForms,
-        allWorkshops.designSystems,
+        allWorkshops.resilientLibs,
       ],
     },
     {
