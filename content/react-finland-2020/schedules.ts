@@ -115,7 +115,7 @@ const workshopDay1: Schedule = {
     },
     {
       begin: "09:00",
-      end: "11:30",
+      end: "12:00",
       sessions: [
         allWorkshops.statecharts,
         allWorkshops.advancedReact,
@@ -127,8 +127,8 @@ const workshopDay1: Schedule = {
       ],
     },
     {
-      begin: "11:30",
-      end: "12:30",
+      begin: "12:00",
+      end: "13:00",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -137,14 +137,14 @@ const workshopDay1: Schedule = {
       ],
     },
     {
-      begin: "12:30",
-      end: "14:00",
+      begin: "13:00",
+      end: "15:00",
       title: "Workshops continue",
       sessions: [],
     },
     {
-      begin: "14:00",
-      end: "14:20",
+      begin: "15:00",
+      end: "15:30",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -153,23 +153,7 @@ const workshopDay1: Schedule = {
       ],
     },
     {
-      begin: "14:20",
-      end: "15:40",
-      title: "Workshops continue",
-      sessions: [],
-    },
-    {
-      begin: "15:40",
-      end: "16:00",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-        },
-      ],
-    },
-    {
-      begin: "16:00",
+      begin: "15:30",
       end: "17:30",
       title: "Workshops continue",
       sessions: [],
@@ -196,7 +180,7 @@ const workshopDay2: Schedule = {
     },
     {
       begin: "09:00",
-      end: "11:30",
+      end: "12:00",
       sessions: [
         allWorkshops.statecharts,
         allWorkshops.advancedReact,
@@ -208,8 +192,8 @@ const workshopDay2: Schedule = {
       ],
     },
     {
-      begin: "11:30",
-      end: "12:30",
+      begin: "12:00",
+      end: "13:00",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -218,14 +202,14 @@ const workshopDay2: Schedule = {
       ],
     },
     {
-      begin: "12:30",
-      end: "14:00",
+      begin: "13:00",
+      end: "15:00",
       title: "Workshops continue",
       sessions: [],
     },
     {
-      begin: "14:00",
-      end: "14:20",
+      begin: "15:00",
+      end: "15:30",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -234,23 +218,7 @@ const workshopDay2: Schedule = {
       ],
     },
     {
-      begin: "14:20",
-      end: "15:40",
-      title: "Workshops continue",
-      sessions: [],
-    },
-    {
-      begin: "15:40",
-      end: "16:00",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-        },
-      ],
-    },
-    {
-      begin: "16:00",
+      begin: "15:30",
       end: "17:30",
       title: "Workshops continue",
       sessions: [],
@@ -318,14 +286,14 @@ const presentationDay1: Schedule = {
     },
     {
       begin: "11:30",
-      end: "12:30",
+      end: "13:00",
       title: "Secret",
-      // 2 x 30 mins
-      sessions: [talks.davidKhourshid, talks.farzadYz],
+      // 3 x 30 mins
+      sessions: [talks.davidKhourshid, talks.farzadYz, talks.jaredPalmer],
     },
     {
-      begin: "12:30",
-      end: "13:30",
+      begin: "13:00",
+      end: "14:00",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -336,11 +304,11 @@ const presentationDay1: Schedule = {
       ],
     },
     {
-      begin: "13:30",
+      begin: "14:00",
       end: "15:00",
       title: "Secret",
-      // 3 x 30 mins
-      sessions: [talks.jaredPalmer, talks.nikGraf, talks.tejasKumar],
+      // 2 x 30 mins
+      sessions: [talks.nikGraf, talks.tejasKumar],
     },
     {
       begin: "15:00",
@@ -413,7 +381,7 @@ const presentationDay2: Schedule = {
       end: "10:45",
       title: "Secret",
       // 3 x 30 mins
-      sessions: [talks.kentCDodds, talks.ivanOrlov, talks.rebeccaHill],
+      sessions: [talks.kentCDodds, talks.rebeccaHill, talks.monicaLent],
     },
     {
       begin: "10:45",
@@ -434,14 +402,18 @@ const presentationDay2: Schedule = {
     },
     {
       begin: "11:30",
-      end: "12:30",
+      end: "13:00",
       title: "Secret",
-      // 2 x 30 mins
-      sessions: [talks.lauraGonzalez, talks.madalyn],
+      // 3 x 30 mins
+      sessions: [
+        talks.lauraGonzalez,
+        talks.madalyn,
+        talks.kenigboloMeyaStephen,
+      ],
     },
     {
-      begin: "12:30",
-      end: "13:30",
+      begin: "13:00",
+      end: "14:00",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -451,15 +423,11 @@ const presentationDay2: Schedule = {
       ],
     },
     {
-      begin: "13:30",
+      begin: "14:00",
       end: "15:00",
-      title: "Secret",
-      // 3 x 30 mins
-      sessions: [
-        talks.kenigboloMeyaStephen,
-        talks.monicaLent,
-        talks.vivekNayyar,
-      ],
+      title: "Tooling",
+      // 2 x 30 mins
+      sessions: [talks.ivanOrlov, talks.vivekNayyar],
     },
     {
       begin: "15:00",
