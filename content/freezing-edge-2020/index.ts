@@ -4,7 +4,7 @@ import * as people from "../people";
 import * as allSponsors from "../sponsors";
 import schedules from "./schedules";
 
-const partners = [];
+const partners = [allSponsors.reactFinland, allSponsors.survivejs];
 const goldSponsors = [];
 const silverSponsors = [];
 const bronzeSponsors = [];

@@ -16,7 +16,7 @@ const partners = [
   allSponsors.reactnorway,
   allSponsors.survivejs,
   // allSponsors.typeof,
-  allSponsors.zapier,
+  // allSponsors.zapier,
   // allSponsors.stickermule,
   // allSponsors.reactalicante,
   allSponsors.reactdayberlin,
