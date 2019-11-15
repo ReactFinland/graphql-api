@@ -72,8 +72,8 @@ const presentationDay: Schedule = {
     {
       begin: "13:15",
       end: "14:30",
-      title: "Secret",
-      sessions: [talks.patrickStapfer],
+      title: "Programming languages of tomorrow",
+      sessions: [talks.patrickStapfer, talks.bodil],
     },
     {
       begin: "14:30",

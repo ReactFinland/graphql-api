@@ -1,3 +1,4 @@
+export { default as bodil } from "./bodil";
 export { default as georgeMandis } from "./george-mandis";
 export { default as kenWheeler } from "./ken-wheeler";
 export { default as kristaJantti } from "./krista-jantti";
