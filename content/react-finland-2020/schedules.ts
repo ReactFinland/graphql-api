@@ -325,6 +325,11 @@ const presentationDay1: Schedule = {
           title: "Panel",
           description: "",
         },
+        {
+          type: SessionType.LIGHTNING_TALK,
+          title: "Lightning talk session",
+          sessions: [talks.esaMatti],
+        },
       ],
     },
     {
@@ -398,6 +403,11 @@ const presentationDay2: Schedule = {
           title: "Panel",
           description: "",
         },
+        {
+          type: SessionType.LIGHTNING_TALK,
+          title: "Lightning talk session",
+          sessions: [],
+        },
       ],
     },
     {
@@ -443,6 +453,11 @@ const presentationDay2: Schedule = {
           type: SessionType.PANEL,
           title: "Panel",
           description: "",
+        },
+        {
+          type: SessionType.LIGHTNING_TALK,
+          title: "Lightning talk session",
+          sessions: [],
         },
       ],
     },
