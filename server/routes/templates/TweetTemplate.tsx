@@ -422,7 +422,7 @@ ConnectedSpeakerTweetTemplate.variables = [
     id: "contactName",
     query: `query SpeakerQuery($conferenceId: ID!) {
   conference(id: $conferenceId) {
-    speakers {
+    allSpeakers {
       name
     }
     sponsors {
@@ -432,7 +432,7 @@ ConnectedSpeakerTweetTemplate.variables = [
 }`,
     mapToCollection({ conference, ...rest }) {
       return []
-        .concat(get(conference, "speakers"), get(conference, "sponsors"))
+        .concat(get(conference, "allSpeakers"), get(conference, "sponsors"))
         .filter(Boolean);
     },
     mapToOption({ name }) {
