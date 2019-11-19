@@ -60,6 +60,7 @@ export { default as monicaLent } from "./monica-lent";
 export { default as naderDabit } from "./nader-dabit";
 export { default as nataliaTepluhina } from "./natalia-tepluhina";
 export { default as nikGraf } from "./nik-graf";
+export { default as olavi } from "./olavi";
 export { default as patrickHund } from "./patrick-hund";
 export { default as patrickStapfer } from "./patrick-stapfer";
 export { default as rachelNabors } from "./rachel-nabors";
