@@ -20,7 +20,7 @@ In this workshop we go through several concepts usually don't need every day. Th
 The workshop is targeting intermediate and experienced React developers, that are looking to not only learn the mentioned topics from a theoretical standpoint, but also try them out in practice.
 
 The workshop is split into several modules. Each of them starts with a 20 min presentation, 30-50 min coding session and is followed by a 10 min retrospective.`,
-  keywords: nikGraf.keywords,
+  keywords: [],
   location: paasitorni,
 };
 
