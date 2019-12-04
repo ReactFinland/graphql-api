@@ -37,7 +37,7 @@ const presentationDay: Schedule = {
       begin: "09:15",
       end: "10:45",
       title: "Secret",
-      sessions: [talks.kenWheeler, talks.teroParviainen],
+      sessions: [talks.teroParviainen, talks.georgeMandis],
     },
     {
       begin: "10:45",
@@ -55,7 +55,7 @@ const presentationDay: Schedule = {
       begin: "11:15",
       end: "12:15",
       title: "Secret",
-      sessions: [talks.georgeMandis],
+      sessions: [talks.kristaJantti],
     },
     {
       begin: "12:15",
@@ -72,8 +72,12 @@ const presentationDay: Schedule = {
     {
       begin: "13:15",
       end: "14:30",
-      title: "Programming languages of tomorrow",
-      sessions: [talks.patrickStapfer, talks.bodil],
+      title: "Let's code an app!",
+      sessions: [
+        talks.nataliaTepluhina,
+        talks.patrickStapfer,
+        talks.kenWheeler,
+      ],
     },
     {
       begin: "14:30",
@@ -91,7 +95,7 @@ const presentationDay: Schedule = {
       begin: "15:00",
       end: "16:00",
       title: "Secret",
-      sessions: [talks.nataliaTepluhina],
+      sessions: [talks.bodil],
     },
     {
       begin: "16:00",
@@ -109,7 +113,7 @@ const presentationDay: Schedule = {
       begin: "16:30",
       end: "17:15",
       title: "Secret",
-      sessions: [talks.kristaJantti],
+      sessions: [],
     },
     {
       begin: "17:15",
