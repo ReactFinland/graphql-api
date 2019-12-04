@@ -1,7 +1,6 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
-// import * as people from "../people";
 import * as talks from "./talks";
 import * as allWorkshops from "./workshops";
 
@@ -406,7 +405,7 @@ const presentationDay2: Schedule = {
         {
           type: SessionType.LIGHTNING_TALK,
           title: "Lightning talk session",
-          sessions: [],
+          sessions: [talks.yan],
         },
       ],
     },

@@ -21,3 +21,4 @@ export { default as tejasKumar } from "./tejas-kumar";
 export { default as tobiasTimm } from "./tobias-timm";
 export { default as villePelkonen } from "./ville-pelkonen";
 export { default as vivekNayyar } from "./vivek-nayyar";
+export { default as yan } from "./yan";
