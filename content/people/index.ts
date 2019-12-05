@@ -84,4 +84,5 @@ export { default as varyaStepanova } from "./varya-stepanova";
 export { default as villeImmonen } from "./ville-immonen";
 export { default as villePelkonen } from "./ville-pelkonen";
 export { default as vivekNayyar } from "./vivek-nayyar";
+export { default as xiaoru } from "./xiaoru";
 export { default as yan } from "./yan";

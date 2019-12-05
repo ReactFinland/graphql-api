@@ -40,4 +40,7 @@ export class Social {
 
   @Field(_ => String, { nullable: true })
   public dribble?: string;
+
+  @Field(_ => String, { nullable: true })
+  public devto?: string;
 }

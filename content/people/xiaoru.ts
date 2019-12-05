@@ -2,28 +2,29 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
-  name: "",
-  about: "",
+  name: "Xiaoru Li",
+  about:
+    "Xiaoru is a computer science student at Karlsruhe Institute of Technology, Germany. He loves to teach himself cool stuff like machine learning and web technologies and write about them.",
   image: {
-    url: "people/TODO.jpg", // TODO: Place image at root images/ and update name
+    url: "people/xiaoru.jpg",
   },
   social: {
-    homepage: "",
-    twitter: "",
-    github: "",
+    homepage: "https://www.xiaoru.li",
+    twitter: "hexrcs",
+    github: "hexrcs",
     facebook: "",
     medium: "",
     instagram: "",
     linkedin: "",
     youtube: "",
-    devto: "",
+    devto: "hexrcs",
   },
   location: {
     country: {
-      name: "", // TODO: Country name
-      code: "", // TODO: Two-letter country code
+      name: "China",
+      code: "CN",
     },
-    city: "", // TODO: City name
+    city: "",
   },
   keywords: [Keyword.REACT], // TODO: check keywords for more
   type: [ContactType.SPEAKER],

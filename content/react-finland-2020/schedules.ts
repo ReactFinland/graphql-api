@@ -405,7 +405,7 @@ const presentationDay2: Schedule = {
         {
           type: SessionType.LIGHTNING_TALK,
           title: "Lightning talk session",
-          sessions: [talks.yan],
+          sessions: [talks.yan, talks.xiaoru],
         },
       ],
     },
