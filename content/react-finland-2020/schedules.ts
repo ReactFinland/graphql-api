@@ -348,6 +348,17 @@ const presentationDay1: Schedule = {
         },
       ],
     },
+    {
+      begin: "18:00",
+      end: "19:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "Secret show at the venue",
+          description: "More information to come",
+        },
+      ],
+    },
   ],
 };
 
