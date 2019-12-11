@@ -259,7 +259,11 @@ const presentationDay1: Schedule = {
       end: "10:45",
       title: "Secret",
       // 3x 30 mins
-      sessions: [talks.rachelNabors, talks.naderDabit],
+      sessions: [
+        talks.rachelNabors,
+        talks.naderDabit,
+        talks.kenigboloMeyaStephen,
+      ],
     },
     {
       begin: "10:45",
@@ -336,7 +340,7 @@ const presentationDay1: Schedule = {
       end: "16:45",
       title: "Secret",
       // 2 x 30 mins
-      sessions: [talks.taelurAlexis, talks.jeremyWagner],
+      sessions: [talks.jeremyWagner],
     },
     {
       begin: "16:45",
@@ -396,7 +400,7 @@ const presentationDay2: Schedule = {
       end: "10:45",
       title: "Secret",
       // 3 x 30 mins
-      sessions: [talks.kentCDodds, talks.rebeccaHill],
+      sessions: [talks.kentCDodds, talks.rebeccaHill, talks.lauraGonzalez],
     },
     {
       begin: "10:45",
@@ -423,13 +427,9 @@ const presentationDay2: Schedule = {
     {
       begin: "11:30",
       end: "13:00",
-      title: "Secret",
+      title: "a11y and i18n",
       // 3 x 30 mins
-      sessions: [
-        talks.lauraGonzalez,
-        talks.madalyn,
-        talks.kenigboloMeyaStephen,
-      ],
+      sessions: [talks.eli, talks.madalyn, talks.taelurAlexis],
     },
     {
       begin: "13:00",
