@@ -37,7 +37,7 @@ const presentationDay: Schedule = {
       begin: "09:15",
       end: "10:45",
       title: "Secret",
-      sessions: [talks.teroParviainen, talks.georgeMandis],
+      sessions: [talks.georgeMandis, talks.kristaJantti],
     },
     {
       begin: "10:45",
@@ -55,7 +55,7 @@ const presentationDay: Schedule = {
       begin: "11:15",
       end: "12:15",
       title: "Secret",
-      sessions: [talks.kristaJantti],
+      sessions: [],
     },
     {
       begin: "12:15",
@@ -71,7 +71,7 @@ const presentationDay: Schedule = {
     },
     {
       begin: "13:15",
-      end: "14:30",
+      end: "15:00",
       title: "Let's code an app!",
       sessions: [
         talks.nataliaTepluhina,
@@ -80,8 +80,8 @@ const presentationDay: Schedule = {
       ],
     },
     {
-      begin: "14:30",
-      end: "15:00",
+      begin: "15:00",
+      end: "15:30",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -92,36 +92,28 @@ const presentationDay: Schedule = {
       ],
     },
     {
-      begin: "15:00",
-      end: "16:00",
-      title: "Secret",
-      sessions: [talks.bodil],
-    },
-    {
-      begin: "16:00",
+      begin: "15:30",
       end: "16:30",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description:
-            "Drink coffee if you still can. Enjoy the sofa at the sponsors' lounge.",
-        },
-      ],
+      title: "Secret",
+      sessions: [talks.teroParviainen, talks.bodil],
     },
     {
       begin: "16:30",
-      end: "17:15",
-      title: "Secret",
-      sessions: [],
-    },
-    {
-      begin: "17:15",
-      end: "17:30",
+      end: "17:00",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Closing ceremonies",
+        },
+      ],
+    },
+    {
+      begin: "18:00",
+      end: "22:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "Afterparty",
         },
       ],
     },
