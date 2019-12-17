@@ -1,3 +1,4 @@
+export { default as brent } from "./brent";
 export { default as davidKhourshid } from "./david-khourshid";
 export { default as eli } from "./eli";
 export { default as emmaWedekind } from "./emma-wedekind";

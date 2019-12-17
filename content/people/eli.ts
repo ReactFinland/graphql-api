@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Eli Schutze Ramirez",
-  about: "Originally from Nicaragua, Eli is a London-based web engineer, speaker and community organiser. She is currently helping make money work for everyone at Monzo bank. When she's not working you can probably find her at meetups, conferences or on Twitter.",
+  about:
+    "Originally from Nicaragua, Eli is a London-based web engineer, speaker and community organiser. She is currently helping make money work for everyone at Monzo bank. When she's not working you can probably find her at meetups, conferences or on Twitter.",
   image: {
     url: "people/eli.jpg",
   },

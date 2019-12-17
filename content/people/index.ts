@@ -9,6 +9,7 @@ export { default as artemZakharchenko } from "./artem-zakharchenko";
 export { default as benjieGillam } from "./benjie-gillam";
 export { default as bodil } from "./bodil";
 export { default as bohdanLiashenko } from "./bohdan-liashenko";
+export { default as brent } from "./brent";
 export { default as brunoLourenco } from "./bruno-lourenco";
 export { default as carolynStransky } from "./carolyn-stransky";
 export { default as christianAlfoni } from "./christian-alfoni";

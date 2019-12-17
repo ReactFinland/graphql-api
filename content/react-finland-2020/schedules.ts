@@ -249,7 +249,7 @@ const presentationDay1: Schedule = {
         {
           people: [],
           title: "Opening",
-          description: "Opening the day with Sec Ret, our MC of the day",
+          description: "Opening the day with Jani Eväkallio, our MC of the day",
           type: SessionType.ORGANIZATIONAL,
         },
       ],
@@ -309,9 +309,9 @@ const presentationDay1: Schedule = {
     {
       begin: "14:00",
       end: "15:00",
-      title: "Secret",
+      title: "Design Systems",
       // 2 x 30 mins
-      sessions: [talks.nikGraf, talks.tejasKumar],
+      sessions: [talks.emmaWedekind, talks.brent],
     },
     {
       begin: "15:00",
@@ -340,7 +340,7 @@ const presentationDay1: Schedule = {
       end: "16:45",
       title: "Secret",
       // 2 x 30 mins
-      sessions: [talks.jeremyWagner],
+      sessions: [talks.nikGraf, talks.jeremyWagner],
     },
     {
       begin: "16:45",
@@ -349,6 +349,27 @@ const presentationDay1: Schedule = {
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Closing ceremonies",
+        },
+      ],
+    },
+    {
+      begin: "17:00",
+      end: "18:00",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee before the show if you still can.",
+        },
+        {
+          type: SessionType.PANEL,
+          title: "Panel",
+          description: "",
+        },
+        {
+          type: SessionType.LIGHTNING_TALK,
+          title: "Lightning talk session",
+          sessions: [],
         },
       ],
     },
@@ -390,7 +411,7 @@ const presentationDay2: Schedule = {
         {
           people: [],
           title: "Opening",
-          description: "Opening the day with Sec Ret, our MC of the day",
+          description: "Opening the day with Sara Vieira, our MC of the day",
           type: SessionType.ORGANIZATIONAL,
         },
       ],
@@ -476,7 +497,7 @@ const presentationDay2: Schedule = {
       end: "16:45",
       title: "Secret",
       // 2 x 30 mins
-      sessions: [talks.emmaWedekind, talks.isaSilveira],
+      sessions: [talks.tejasKumar, talks.isaSilveira],
     },
     {
       begin: "16:45",
