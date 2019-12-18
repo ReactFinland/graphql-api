@@ -357,7 +357,7 @@ const presentationDay1: Schedule = {
     {
       begin: "15:45",
       end: "16:45",
-      title: "Secret",
+      title: "Lessons learned",
       // 2 x 30 mins
       sessions: [talks.nikGraf, talks.jeremyWagner],
     },
