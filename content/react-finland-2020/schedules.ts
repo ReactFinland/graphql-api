@@ -71,9 +71,11 @@ The swimming hall is open daily (closed 22.04 due to Easter).
 const tallinn = {
   type: SessionType.PARTY,
   title: "Visiting in Tallinn",
-  description: `Did you know that you can see from Helsinki to capital of Estonia, [Tallinn](https://en.wikipedia.org/wiki/Tallinn)? Well, in case that you are in some high tower. And weather is clear. And you are looking to right direction. 
-  That is why we can recommend a boat trip for you! A trip from Helsinki to Tallinn takes approximately 2.5 hours to one direction. And you don't (/shouldn't) need a passport for this trip! 
-  Specially Old Town of Tallinn is strongly recommend place for visiting. You can check more details from [Visit Estonia](https://www.visitestonia.com/en/where-to-go/tallinn) and boat schedules from [TallinkSilja web page](https://www.tallinksilja.com/book-a-cruise)
+  description: `Did you know that you can see from Helsinki to capital of Estonia, [Tallinn](https://en.wikipedia.org/wiki/Tallinn)? If the weather is clear and you are in the right location (i.e. a high tower), it's definitely possible.
+
+  For this reason we recommend a boat trip for you! A trip from Helsinki to Tallinn takes approximately 2.5 hours to one direction. And you don't (/shouldn't) need a passport for this trip! Especially the old town of Tallinn is strongly recommend place for visiting.
+
+  You can check more details from [Visit Estonia](https://www.visitestonia.com/en/where-to-go/tallinn) and boat schedules from [TallinkSilja web page](https://www.tallinksilja.com/book-a-cruise).
   `,
   location: {
     city: "Tallinn",
