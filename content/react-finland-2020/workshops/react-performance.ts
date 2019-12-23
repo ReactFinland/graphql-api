@@ -16,7 +16,7 @@ Oh, and don't forget that you should profile your app in production mode to make
 
 Hi, I'm Kent C. Dodds and in my latest workshop I'll teach you the ins and outs of optimizing React applications. I will take you on a deep dive browser profiling tools, and show you what you need to know to start using them to make your applications fast right away.
 
-**When you are done you will:''
+**When you are done you will:**
 
 * Profile React components with the React DevTools profiler
 * Profile JavaScript with the Chrome DevTools profiler
