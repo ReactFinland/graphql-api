@@ -330,7 +330,7 @@ const presentationDay1: Schedule = {
       end: "15:00",
       title: "Design Systems",
       // 2 x 30 mins
-      sessions: [talks.emmaWedekind, talks.brent],
+      sessions: [talks.lauraGonzalez, talks.brent],
     },
     {
       begin: "15:00",
@@ -440,7 +440,7 @@ const presentationDay2: Schedule = {
       end: "10:45",
       title: "Secret",
       // 3 x 30 mins
-      sessions: [talks.kentCDodds, talks.rebeccaHill, talks.lauraGonzalez],
+      sessions: [talks.kentCDodds, talks.rebeccaHill, talks.emma],
     },
     {
       begin: "10:45",

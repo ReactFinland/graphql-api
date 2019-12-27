@@ -1,7 +1,7 @@
 export { default as brent } from "./brent";
 export { default as davidKhourshid } from "./david-khourshid";
 export { default as eli } from "./eli";
-export { default as emmaWedekind } from "./emma-wedekind";
+export { default as emma } from "./emma";
 export { default as esaMatti } from "./esa-matti";
 export { default as farzadYz } from "./farzad-yz";
 export { default as isaSilveira } from "./isa-silveira";

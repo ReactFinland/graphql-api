@@ -1,12 +1,12 @@
 import { Session, SessionType } from "../../../server/schema/Session";
 
-import speaker from "../../people/emma-wedekind";
+import speaker from "../../people/emma";
 
 const talk: Session = {
   people: [speaker],
-  title: "", // The title of the session goes here
+  title: " Micro Interactions With React Spring",
   description: "", // Session description goes here. ES6 template and markdown work
-  type: SessionType.TALK, // SessionType.LIGHTNING_TALK, SessionType.KEYNOTE, SessionType.WORKSHOP are possible too
+  type: SessionType.TALK,
   keywords: [],
 };
 
