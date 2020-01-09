@@ -6,17 +6,16 @@ import schedules from "./schedules";
 
 const partners = [
   allSponsors.agentconf,
+  allSponsors.bangalore,
   // allSponsors.halfstack,
   // allSponsors.jscamp,
   allSponsors.jskongress,
   // allSponsors.koodiasuomesta,
-  // allSponsors.reasonconf,
   // allSponsors.reactindia,
   allSponsors.reactnewyork,
   allSponsors.reactnorway,
   allSponsors.survivejs,
   // allSponsors.typeof,
-  // allSponsors.zapier,
   // allSponsors.stickermule,
   // allSponsors.reactalicante,
   allSponsors.reactdayberlin,
