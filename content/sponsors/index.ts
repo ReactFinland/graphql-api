@@ -48,6 +48,7 @@ export { default as reactsummit } from "./reactsummit";
 export { default as reactweek } from "./reactweek";
 export { default as reaktor } from "./reaktor";
 export { default as reasonconf } from "./reasonconf";
+export { default as rlc } from "./rlc";
 export { default as rohea } from "./rohea";
 export { default as sae } from "./sae";
 export { default as smartly } from "./smartly";
