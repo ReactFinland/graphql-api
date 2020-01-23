@@ -246,7 +246,7 @@ const workshopDay2: Schedule = {
 
 const presentationDay1: Schedule = {
   day: "2020-05-28",
-  description: "First conference day",
+  description: "First conference day - Legacy",
   location: locations.paasitorni,
   intervals: [
     {
@@ -408,7 +408,7 @@ const presentationDay1: Schedule = {
 
 const presentationDay2: Schedule = {
   day: "2020-05-29",
-  description: "Second conference day",
+  description: "Second conference day - Future",
   location: locations.paasitorni,
   intervals: [
     {
