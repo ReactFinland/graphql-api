@@ -24,7 +24,7 @@ const partners = [
   // allSponsors.reactjsday,
   allSponsors.reactsummit,
   allSponsors.rlc,
-  // allSponsors.webexpo,
+  allSponsors.webexpo,
   // allSponsors.techEvents,
 ];
 const goldSponsors = [
