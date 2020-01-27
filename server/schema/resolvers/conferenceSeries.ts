@@ -362,7 +362,7 @@ const conferenceSeries: {
   "graphql-finland": {
     id: "graphql-finland",
     name: "GraphQL Finland",
-    conferences: ["graphql-finland-2018"],
+    conferences: ["graphql-finland-2018", "graphql-finland-2020"],
     theme: {
       id: "graphql-finland",
       textures: [{ url: "/media/assets/wave.svg" }],

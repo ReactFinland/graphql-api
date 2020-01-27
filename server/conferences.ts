@@ -1,5 +1,6 @@
 import freezingEdge2020 from "../content/freezing-edge-2020";
 import graphQLFinland2018 from "../content/graphql-finland-2018";
+import graphQLFinland2020 from "../content/graphql-finland-2020";
 import halfstackVienna2019 from "../content/halfstack-vienna-2019";
 import reactFinland2018 from "../content/react-finland-2018";
 import reactFinland2019 from "../content/react-finland-2019";
@@ -19,6 +20,7 @@ const conferences: { [id: string]: Conference } = {
   ["react-finland-2020"]: reactFinland2020,
   ["typeof-2019"]: typeof2019,
   ["graphql-finland-2018"]: graphQLFinland2018,
+  ["graphql-finland-2020"]: graphQLFinland2020,
 };
 
 export default conferences;
