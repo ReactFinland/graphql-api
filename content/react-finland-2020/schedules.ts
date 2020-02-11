@@ -363,17 +363,7 @@ const presentationDay1: Schedule = {
     },
     {
       begin: "16:45",
-      end: "17:00",
-      sessions: [
-        {
-          type: SessionType.ORGANIZATIONAL,
-          title: "Closing ceremonies",
-        },
-      ],
-    },
-    {
-      begin: "17:00",
-      end: "18:00",
+      end: "17:30",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -393,8 +383,8 @@ const presentationDay1: Schedule = {
       ],
     },
     {
-      begin: "18:00",
-      end: "19:00",
+      begin: "17:30",
+      end: "18:30",
       sessions: [
         {
           type: SessionType.PARTY,
