@@ -301,15 +301,15 @@ const presentationDay1: Schedule = {
         },
         {
           type: SessionType.LIGHTNING_TALK,
-          title: "Lightning talk session",
-          sessions: [talks.villePelkonen, talks.tobiasTimm],
+          title: "Lightning talk session about state management",
+          sessions: [talks.margarita, talks.yan],
         },
       ],
     },
     {
       begin: "11:30",
       end: "13:00",
-      title: "Secret",
+      title: "State management",
       // 3 x 30 mins
       sessions: [talks.davidKhourshid, talks.farzadYz, talks.jaredPalmer],
     },
@@ -450,7 +450,7 @@ const presentationDay2: Schedule = {
         {
           type: SessionType.LIGHTNING_TALK,
           title: "Lightning talk session",
-          sessions: [talks.yan, talks.xiaoru],
+          sessions: [talks.villePelkonen, talks.tobiasTimm],
         },
       ],
     },
@@ -497,7 +497,7 @@ const presentationDay2: Schedule = {
         {
           type: SessionType.LIGHTNING_TALK,
           title: "Lightning talk session",
-          sessions: [],
+          sessions: [talks.xiaoru],
         },
       ],
     },
