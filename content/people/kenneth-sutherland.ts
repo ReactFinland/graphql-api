@@ -20,8 +20,8 @@ const person: Contact = {
   },
   location: {
     country: {
-      name: "Great Britain",
-      code: "GB",
+      name: "Scotland",
+      code: "GB-SCT",
     },
     city: "Edinburgh",
   },
