@@ -12,6 +12,7 @@ export { default as kenigboloMeyaStephen } from "./kenigbolo-meya-stephen";
 export { default as kennethSutherland } from "./kenneth-sutherland";
 export { default as kentCDodds } from "./kent-c-dodds";
 export { default as lauraGonzalez } from "./laura-gonzalez";
+export { default as lauri } from "./lauri";
 export { default as madalyn } from "./madalyn";
 export { default as margarita } from "./margarita";
 export { default as naderDabit } from "./nader-dabit";

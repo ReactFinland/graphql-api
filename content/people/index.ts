@@ -50,6 +50,7 @@ export { default as kennethSutherland } from "./kenneth-sutherland";
 export { default as kentCDodds } from "./kent-c-dodds";
 export { default as kristaJantti } from "./krista-jantti";
 export { default as lauraGonzalez } from "./laura-gonzalez";
+export { default as lauri } from "./lauri";
 export { default as lucaMatteis } from "./luca-matteis";
 export { default as maaretPyhajarvi } from "./maaret-pyhajarvi";
 export { default as madalyn } from "./madalyn";
