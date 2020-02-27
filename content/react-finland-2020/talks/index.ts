@@ -9,6 +9,7 @@ export { default as ivanOrlov } from "./ivan-orlov";
 export { default as jaredPalmer } from "./jared-palmer";
 export { default as jeremyWagner } from "./jeremy-wagner";
 export { default as kenigboloMeyaStephen } from "./kenigbolo-meya-stephen";
+export { default as kennethSutherland } from "./kenneth-sutherland";
 export { default as kentCDodds } from "./kent-c-dodds";
 export { default as lauraGonzalez } from "./laura-gonzalez";
 export { default as madalyn } from "./madalyn";
