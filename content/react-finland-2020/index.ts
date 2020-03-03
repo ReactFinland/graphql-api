@@ -20,7 +20,7 @@ const partners = [
   // allSponsors.reactalicante,
   allSponsors.reactdayberlin,
   allSponsors.reactjsgirls,
-  // allSponsors.reactnativeeu,
+  allSponsors.reactnativeeu,
   // allSponsors.reactjsday,
   allSponsors.reactsummit,
   allSponsors.rlc,
