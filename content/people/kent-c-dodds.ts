@@ -5,7 +5,7 @@ const person: Contact = {
   name: "Kent C. Dodds",
   about: "Making people's lives better with software.",
   image: {
-    url: "people/kent.png",
+    url: "people/kent.jpg",
   },
   social: {
     homepage: "https://kentcdodds.com",
