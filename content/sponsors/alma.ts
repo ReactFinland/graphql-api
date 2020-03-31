@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Alma Media",
   about: "Courage to grow",
   image: {
-    url: "sponsors/alma.png",
+    url: "sponsors/alma.svg",
   },
   social: {
     homepage: "https://www.almamedia.fi/",
