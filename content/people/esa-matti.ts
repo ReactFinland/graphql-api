@@ -5,7 +5,7 @@ const person: Contact = {
   name: "Esa-Matti Suuronen",
   about: "",
   image: {
-    url: "people/esa-matti.png",
+    url: "people/esa-matti.jpg",
   },
   social: {
     homepage: "",

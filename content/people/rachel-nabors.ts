@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "React Core. Interactive storyteller. Infinite learner. Lightning before the thunder. Author of [Animation at Work](http://bkaprt.com/aaw), Google Dev Expert—Formerly W3C, MSFT. INFJ singleton",
   image: {
-    url: "people/rachel.png",
+    url: "people/rachel.jpg",
   },
   social: {
     homepage: "http://rachelnabors.com",

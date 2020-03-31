@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "Eloy works at Artsy, where they’ve been using GraphQL in novel ways since its inception. Being big on ‘OSS by default’, for instance creating CocoaPods, he came to the JavaScript ecosystem from a native background via React Native and chose Relay as the place where in the React/GraphQL community he can best contribute.",
   image: {
-    url: "people/eloy.png",
+    url: "people/eloy.jpg",
   },
   social: {
     twitter: "alloy",

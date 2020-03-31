@@ -8,7 +8,7 @@ const person: Contact = {
   aboutShort:
     "Andrew is very involved in the NodeJS OSS community, contributing to multiple Visionmedia projects such as debug and node-progress as well as the Apollostack ecosystem.  He is also the creator of multiple popular GraphQL server-side libraries, including apollo-errors and apollo-resolvers.",
   image: {
-    url: "people/andrew.png",
+    url: "people/andrew.jpg",
   },
   social: {
     twitter: "thebigredgeek",

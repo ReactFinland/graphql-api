@@ -5,7 +5,7 @@ const person: Contact = {
   about:
     "Toni Ristola is a Software Architect at Robu Oy and an organizer for the React Finland conference and contributor for the React Finland App.",
   image: {
-    url: "people/toni.png",
+    url: "people/toni.jpg",
   },
   social: {
     homepage: "",
