@@ -1,6 +1,6 @@
 import Keyword from "../../../server/schema/keywords";
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
+import { internet } from "../../locations";
 import andrey from "../../people/andrey-okonetchnikov";
 import artem from "../../people/artem-sapegin";
 
@@ -32,7 +32,7 @@ This workshop will show you how to:
     Keyword.STYLE_GUIDES,
     Keyword.TOOLING,
   ],
-  location: paasitorni,
+  location: internet,
 };
 
 export default workshop;

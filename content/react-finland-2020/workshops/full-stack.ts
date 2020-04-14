@@ -1,5 +1,5 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
+import { internet } from "../../locations";
 import { naderDabit } from "../../people";
 
 const workshop: Session = {
@@ -12,7 +12,7 @@ We’ll learn about how to set up react navigation with protected routes based o
 
 We’ll start by creating a blank React app and begin adding features using AWS and the AWS Amplify CLI. By the end of the course, you’ll have be ready to start building full stack applications that scale.`,
   keywords: [],
-  location: paasitorni,
+  location: internet,
 };
 
 export default workshop;

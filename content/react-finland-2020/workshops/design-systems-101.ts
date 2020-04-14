@@ -1,6 +1,6 @@
 import Keyword from "../../../server/schema/keywords";
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
+import { internet } from "../../locations";
 import andrey from "../../people/andrey-okonetchnikov";
 import varya from "../../people/varya-stepanova";
 
@@ -14,7 +14,7 @@ During this workshop participants will get a hands-on experience with basic desi
   
 With the knowledge of communicational practises and modern design and developer's tools you too should be able to introduce a design system in your company and star working smarter, not harder.`,
   keywords: [Keyword.STYLE_GUIDES],
-  location: paasitorni,
+  location: internet,
 };
 
 export default workshop;

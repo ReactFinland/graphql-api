@@ -1,5 +1,5 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
+import { internet } from "../../locations";
 import { kenigboloMeyaStephen } from "../../people";
 
 const workshop: Session = {
@@ -14,7 +14,7 @@ Migrating a couple thousand lines of JQuery code required an incremental approac
 
 The goal of this workshop is to give you a practical hands on step by step guide on how to approach incrementally migrating legacy JavaScript or JQuery application into a React app without needing to use the CLI initially and eventually moving the new codebase into a CLI project structure. The workshop requires participants to know basic javascript and DOM manipulation. It is suitable for both beginners and intermediates alike, however, the contents are primarily beginner focused.`,
   keywords: [],
-  location: paasitorni,
+  location: internet,
 };
 
 export default workshop;
