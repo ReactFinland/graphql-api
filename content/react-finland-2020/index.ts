@@ -1,5 +1,5 @@
 import { Conference } from "../../server/schema/Conference";
-import * as locations from "../locations";
+// import * as locations from "../locations";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
 import schedules from "./schedules";
@@ -56,11 +56,11 @@ const conference: Conference = {
   slogan: "Learn More about React, Explore Finland",
   year: "2020",
   startDate: "2020-05-25",
-  endDate: "2020-05-29",
+  endDate: "2020-05-28",
   websiteUrl: "https://react-finland.fi/",
   // TODO: Resolve locations based on data
-  locations: [locations.paasitorni],
-  mcs: [people.janiEvakallio, people.saraVieira],
+  locations: [],
+  // mcs: [people.janiEvakallio, people.saraVieira],
   organizers: [
     people.aleksiPousar,
     people.eemeliAro,
