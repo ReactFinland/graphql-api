@@ -17,6 +17,11 @@ const workshop: Session = {
 - Auto-generate designs of all possible component states with Storybook
 - Use advanced features of XState
 
+The workshop is divided into two sessions and will take place online (Finnish time):
+
+* 26.05 - 15:00-19:00
+* 27.05 - 15:00-19:00
+
 > You could clone the [workshop repository](https://github.com/davidkpiano/xstate-react-workshop) before the workshop to speed up the setup.
 `,
   keywords: davidKhourshid.keywords,

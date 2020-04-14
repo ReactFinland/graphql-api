@@ -12,7 +12,12 @@ After becoming Front End Engineering lead at BCaster I became responsible for ha
 
 Migrating a couple thousand lines of JQuery code required an incremental approach which ensured that a stable version of the codebase was always avaialble in production despite having significant changes to it. This meant that certain steps needed to be introduced in order to save us from the ordeal of a total rewrite (in some cases rewritting "might" a valid option).
 
-The goal of this workshop is to give you a practical hands on step by step guide on how to approach incrementally migrating legacy JavaScript or JQuery application into a React app without needing to use the CLI initially and eventually moving the new codebase into a CLI project structure. The workshop requires participants to know basic javascript and DOM manipulation. It is suitable for both beginners and intermediates alike, however, the contents are primarily beginner focused.`,
+The goal of this workshop is to give you a practical hands on step by step guide on how to approach incrementally migrating legacy JavaScript or JQuery application into a React app without needing to use the CLI initially and eventually moving the new codebase into a CLI project structure. The workshop requires participants to know basic javascript and DOM manipulation. It is suitable for both beginners and intermediates alike, however, the contents are primarily beginner focused.
+
+The workshop is divided into two sessions and will take place online (Finnish time):
+
+* 25.05 - 10:00-14:00
+* 26.05 - 10:00-14:00`,
   keywords: [],
   location: internet,
 };

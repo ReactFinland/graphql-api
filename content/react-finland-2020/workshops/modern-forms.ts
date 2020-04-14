@@ -12,7 +12,12 @@ const workshop: Session = {
   
   Students will walk away confident in their knowledge of how to build forms of any complexity with great UX.
   
-  The workshop requires an intermediary level in React.js (>= 3month experience). More details coming soon. Ticket includes breakfast and lunch. It does not include the conference ticket.`,
+  The workshop requires an intermediary level in React.js (>= 3month experience).
+  
+  The workshop is divided into two sessions and will take place online (Finnish time):
+
+* 25.05 - 15:00-19:00
+* 26.05 - 15:00-19:00`,
   keywords: [],
   location: internet,
 };

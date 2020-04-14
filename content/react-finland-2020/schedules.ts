@@ -6,6 +6,7 @@ import * as allWorkshops from "./workshops";
 const workshopDay1: Schedule = {
   day: "2020-05-25",
   description: "First conference day",
+  location: locations.internet,
   intervals: [
     {
       begin: "10:00",
@@ -28,7 +29,7 @@ const workshopDay1: Schedule = {
 const workshopDay2: Schedule = {
   day: "2020-05-26",
   description: "Second workshop day",
-  location: locations.paasitorni,
+  location: locations.internet,
   intervals: [
     {
       begin: "09:00",
@@ -56,7 +57,7 @@ const workshopDay2: Schedule = {
 const workshopDay3: Schedule = {
   day: "2020-05-27",
   description: "Third workshop day",
-  location: locations.paasitorni,
+  location: locations.internet,
   intervals: [
     {
       begin: "10:00",
