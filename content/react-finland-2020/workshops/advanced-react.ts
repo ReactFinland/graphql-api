@@ -1,5 +1,5 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
+import { internet } from "../../locations";
 import { nikGraf } from "../../people";
 
 const workshop: Session = {
@@ -21,7 +21,7 @@ The workshop is targeting intermediate and experienced React developers, that ar
 
 The workshop is split into several modules. Each of them starts with a 20 min presentation, 30-50 min coding session and is followed by a 10 min retrospective.`,
   keywords: [],
-  location: paasitorni,
+  location: internet,
 };
 
 export default workshop;

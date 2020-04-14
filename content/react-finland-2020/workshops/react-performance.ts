@@ -1,5 +1,5 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
+import { internet } from "../../locations";
 import { kentCDodds } from "../../people";
 
 const workshop: Session = {
@@ -25,7 +25,7 @@ Hi, I'm Kent C. Dodds and in my latest workshop I'll teach you the ins and outs 
 
 > Note that in order to participate the workshop and get most out of it, you should be already familiar with React hooks.`,
   keywords: [],
-  location: paasitorni,
+  location: internet,
 };
 
 export default workshop;

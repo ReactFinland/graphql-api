@@ -1,5 +1,5 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
+import { internet } from "../../locations";
 import { davidKhourshid } from "../../people";
 
 const workshop: Session = {
@@ -20,7 +20,7 @@ const workshop: Session = {
 > You could clone the [workshop repository](https://github.com/davidkpiano/xstate-react-workshop) before the workshop to speed up the setup.
 `,
   keywords: davidKhourshid.keywords,
-  location: paasitorni,
+  location: internet,
 };
 
 export default workshop;

@@ -1,5 +1,5 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
+import { internet } from "../../locations";
 import { erikRasmussen } from "../../people";
 
 const workshop: Session = {
@@ -14,7 +14,7 @@ const workshop: Session = {
   
   The workshop requires an intermediary level in React.js (>= 3month experience). More details coming soon. Ticket includes breakfast and lunch. It does not include the conference ticket.`,
   keywords: [],
-  location: paasitorni,
+  location: internet,
 };
 
 export default workshop;

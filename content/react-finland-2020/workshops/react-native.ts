@@ -1,5 +1,5 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
+import { internet } from "../../locations";
 import { juhaLinnanen, naderDabit } from "../../people";
 
 const workshop: Session = {
@@ -10,7 +10,7 @@ const workshop: Session = {
  
 Pre-requisites: Basic Javascript (ES6) / React knowledge, macOS preferred (ability to build for iOS), tools installed`,
   keywords: [],
-  location: paasitorni,
+  location: internet,
 };
 
 export default workshop;

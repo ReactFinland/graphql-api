@@ -1,5 +1,5 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
+import { internet } from "../../locations";
 import { kentCDodds } from "../../people";
 
 const workshop: Session = {
@@ -24,7 +24,7 @@ In this hands-on workshop we’ll work on adding tests to existing components as
 
 > Note that in order to participate the workshop and get most out of it, you should already have basic concepts of React and testing in mind.`,
   keywords: [],
-  location: paasitorni,
+  location: internet,
 };
 
 export default workshop;
