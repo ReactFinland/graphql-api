@@ -12,10 +12,10 @@ const location: Location = {
     googleMaps: "",
   },
   country: {
-    name: "Finland",
+    name: "",
     code: "FI",
   },
-  city: "Helsinki",
+  city: "",
   address: "",
 };
 
