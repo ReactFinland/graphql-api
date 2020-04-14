@@ -1,6 +1,7 @@
 export { default as amanda } from "./amanda";
 export { default as ankerSaal } from "./ankersaal";
 export { default as elisaAppelsiini } from "./elisa-appelsiini";
+export { default as internet } from "./internet";
 export { default as paasitorni } from "./paasitorni";
 export { default as tiivistamo } from "./tiivistamo";
 export { default as valkoinenSali } from "./valkoinen-sali";
