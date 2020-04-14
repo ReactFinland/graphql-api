@@ -21,7 +21,7 @@ The workshop is targeting intermediate and experienced React developers, that ar
 
 The workshop is split into several modules. Each of them starts with a 20 min presentation, 30-50 min coding session and is followed by a 10 min retrospective.
 
-The workshop takes place online 26.06 09:00-16:00 (Finnish time).`,
+The workshop takes place online 26.05 09:00-16:00 (Finnish time).`,
   keywords: [],
   location: internet,
 };

@@ -27,7 +27,7 @@ This workshop will show you how to:
  
 > Before coming to the workshop, make sure you set up [component-driven-development repository](https://github.com/component-driven/component-driven-development) and follow the instructions. Doing this will save time and help you get started faster.
 
-The workshop takes place online 26.06 11:00-18:00 (Finnish time).`,
+The workshop takes place online 26.05 11:00-18:00 (Finnish time).`,
   keywords: [
     Keyword.REACT,
     Keyword.STYLING,

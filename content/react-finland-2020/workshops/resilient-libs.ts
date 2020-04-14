@@ -14,7 +14,7 @@ const workshop: Session = {
     
   This workshop covers general architecture principles and React-specific techniques that lead to better components architecture and API design and are going to make teams be more productive and products be more consistent.
   
-  The workshop takes place online 27.06 11:00-18:00 (Finnish time).`,
+  The workshop takes place online 27.05 11:00-18:00 (Finnish time).`,
   keywords: [
     Keyword.REACT,
     Keyword.STYLING,

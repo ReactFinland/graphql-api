@@ -14,7 +14,7 @@ During this workshop participants will get a hands-on experience with basic desi
   
 With the knowledge of communicational practises and modern design and developer's tools you too should be able to introduce a design system in your company and star working smarter, not harder.
 
-The workshop takes place online 25.06 11:00-18:00 (Finnish time).`,
+The workshop takes place online 25.05 11:00-18:00 (Finnish time).`,
   keywords: [Keyword.STYLE_GUIDES],
   location: internet,
 };
