@@ -301,6 +301,7 @@ const conferenceSeries: {
       "react-finland-2018",
       "react-finland-2019",
       "react-finland-2020",
+      "rf-2020-01",
     ],
     theme: {
       id: "react-finland",
