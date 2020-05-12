@@ -2,11 +2,10 @@ import Keyword from "../../../server/schema/keywords";
 import { Session, SessionType } from "../../../server/schema/Session";
 import { internet } from "../../locations";
 import andrey from "../../people/andrey-okonetchnikov";
-import artem from "../../people/artem-sapegin";
 
 const workshop: Session = {
   type: SessionType.WORKSHOP,
-  people: [andrey, artem],
+  people: [andrey],
   title: "Design Systems for React Developers",
   description: `Development of digital products is a complex process that involves multiple stakeholders and roles: managers, designers, engineers, QA, and customers. This increases the communication overhead, slows down the process, and oftentimes results and less than ideal user experience.
 
