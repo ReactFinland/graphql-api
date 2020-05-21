@@ -33,7 +33,7 @@ const goldSponsors = [
   allSponsors.smartly,
 ];
 const silverSponsors = [
-  allSponsors.valamis,
+  allSponsors.digia,
   allSponsors.elisa,
   allSponsors.alma,
   allSponsors.columbiaroad,
@@ -41,7 +41,6 @@ const silverSponsors = [
 const bronzeSponsors = [
   allSponsors.quentic,
   allSponsors.vincit,
-  allSponsors.digia,
   allSponsors.wunder,
   allSponsors.cybercom,
   allSponsors.netum,
