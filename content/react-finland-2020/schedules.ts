@@ -51,6 +51,11 @@ const workshopDay2: Schedule = {
       end: "19:00",
       sessions: [allWorkshops.statecharts],
     },
+    {
+      begin: "15:00",
+      end: "19:00",
+      sessions: [allWorkshops.modernForms],
+    },
   ],
 };
 
@@ -59,11 +64,6 @@ const workshopDay3: Schedule = {
   description: "Third workshop day",
   location: locations.internet,
   intervals: [
-    {
-      begin: "10:00",
-      end: "14:00",
-      sessions: [allWorkshops.modernForms],
-    },
     {
       begin: "11:00",
       end: "18:00",
