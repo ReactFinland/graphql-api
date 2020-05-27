@@ -1,6 +1,7 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
+import * as people from "../people";
 import * as allWorkshops from "./workshops";
 
 const workshopDay1: Schedule = {
@@ -88,8 +89,14 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "First mini-conference",
-          description: "More information to come",
+          title: "First mini-conference about documentation",
+          description:
+            "In the first mini-conference, we'll cover documentation from different angles",
+          people: [
+            people.carolynStransky,
+            people.kenigboloMeyaStephen,
+            people.margarita,
+          ],
         },
       ],
     },
