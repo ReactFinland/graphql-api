@@ -2,8 +2,9 @@ import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 import * as people from "../people";
-import * as allWorkshops from "./workshops";
+// import * as allWorkshops from "./workshops";
 
+/*
 const workshopDay1: Schedule = {
   day: "2020-05-25",
   description: "First conference day",
@@ -78,9 +79,9 @@ const workshopDay3: Schedule = {
   ],
 };
 
-const miniConferenceDay: Schedule = {
+const miniConferenceDay1: Schedule = {
   day: "2020-05-28",
-  description: "Mini-conference",
+  description: "Mini-conference #1 - Documentation",
   location: locations.internet,
   intervals: [
     {
@@ -221,5 +222,147 @@ const miniConferenceDay: Schedule = {
     },
   ],
 };
+*/
 
-export default [workshopDay1, workshopDay2, workshopDay3, miniConferenceDay];
+// TODO: Once schedule is clear, update this
+const miniConferenceDay2: Schedule = {
+  day: "2020-06-24",
+  description: "Mini-conference #2 - State management",
+  location: locations.internet,
+  intervals: [
+    {
+      begin: "17:00",
+      end: "17:15",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Preparation",
+          description: "",
+          people: [],
+        },
+      ],
+    },
+    {
+      begin: "17:15",
+      end: "17:40",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Fireside chat",
+          description: "",
+          people: [],
+        },
+      ],
+    },
+    {
+      begin: "17:40",
+      end: "17:45",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Introduction",
+          description: "",
+          people: [],
+        },
+      ],
+    },
+    {
+      begin: "17:45",
+      end: "18:15",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          title: "",
+          description: "",
+          people: [people.davidKhourshid],
+        },
+      ],
+    },
+    {
+      begin: "18:15",
+      end: "18:30",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "QA",
+          description: "",
+          people: [],
+        },
+      ],
+    },
+    {
+      begin: "18:30",
+      end: "19:00",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          title: "",
+          description: "",
+          people: [people.christianAlfoni],
+        },
+      ],
+    },
+    {
+      begin: "19:00",
+      end: "19:15",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "QA",
+          description: "",
+          people: [],
+        },
+      ],
+    },
+    {
+      begin: "19:15",
+      end: "19:45",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          title: "",
+          description: "",
+          people: [people.yan],
+        },
+      ],
+    },
+    {
+      begin: "19:45",
+      end: "20:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "QA",
+          description: "",
+          people: [],
+        },
+      ],
+    },
+    {
+      begin: "20:00",
+      end: "20:30",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Panel",
+          description: "",
+          people: [people.davidKhourshid, people.christianAlfoni, people.yan],
+        },
+      ],
+    },
+    {
+      begin: "20:30",
+      end: "21:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Wrap up",
+          description: "",
+          people: [],
+        },
+      ],
+    },
+  ],
+};
+
+export default [miniConferenceDay2];
