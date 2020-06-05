@@ -272,7 +272,7 @@ const miniConferenceDay2: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "",
+          title: "Everything is an Actor",
           description: "",
           people: [people.davidKhourshid],
         },
