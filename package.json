@@ -89,7 +89,7 @@
     "history": "^4.9.0",
     "ical-generator": "^1.7.2",
     "just-kebab-case": "^1.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "markdown-to-jsx": "^6.10.3",
     "md5": "^2.2.1",
     "mkdirp": "^0.5.1",
