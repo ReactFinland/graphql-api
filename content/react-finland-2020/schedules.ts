@@ -224,33 +224,39 @@ const miniConferenceDay1: Schedule = {
 };
 */
 
+const mc = people.saraVieira;
+const firstSpeaker = people.davidKhourshid;
+const secondSpeaker = people.yan;
+const thirdSpeaker = people.christianAlfoni;
+const allSpeakers = [firstSpeaker, secondSpeaker, thirdSpeaker];
+
 // TODO: Once schedule is clear, update this
 const miniConferenceDay2: Schedule = {
-  day: "2020-06-24",
+  day: "2020-08-24",
   description: "Mini-conference #2 - State management",
   location: locations.internet,
   intervals: [
     {
-      begin: "17:00",
-      end: "17:15",
+      begin: "16:45",
+      end: "17:30",
       sessions: [
         {
-          type: SessionType.ORGANIZATIONAL,
-          title: "Preparation",
-          description: "",
-          people: [],
+          type: SessionType.TALK,
+          title: "Introduction to statecharts",
+          description: "Premium only",
+          people: [firstSpeaker],
         },
       ],
     },
     {
-      begin: "17:15",
+      begin: "17:30",
       end: "17:40",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Fireside chat",
           description: "",
-          people: [],
+          people: [mc].concat(allSpeakers),
         },
       ],
     },
@@ -262,7 +268,7 @@ const miniConferenceDay2: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Introduction",
           description: "",
-          people: [],
+          people: [mc],
         },
       ],
     },
@@ -273,90 +279,103 @@ const miniConferenceDay2: Schedule = {
         {
           type: SessionType.TALK,
           title: "Everything is an Actor",
-          description: "",
-          people: [people.davidKhourshid],
+          description: `If the word "async" scares you, you're not alone. Time is the one variable that introduces the most complexity in software. Thankfully, the Actor Model can hold the key to simplifying the reactive apps we work on. Learn how this nearly 50-year-old event-driven model can improve the way we architect complex apps.`,
+          people: [firstSpeaker],
         },
       ],
     },
     {
       begin: "18:15",
-      end: "18:30",
+      end: "18:25",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
           title: "QA",
-          description: "",
-          people: [],
+          description: "Premium only",
+          people: [mc, firstSpeaker],
         },
       ],
     },
     {
-      begin: "18:30",
-      end: "19:00",
+      begin: "18:25",
+      end: "18:55",
       sessions: [
         {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [people.christianAlfoni],
+          title: "Dive in Effector",
+          description:
+            "What is Effector and why you might want to use it in your project?",
+          people: [secondSpeaker],
         },
       ],
     },
     {
-      begin: "19:00",
-      end: "19:15",
+      begin: "18:55",
+      end: "19:05",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
           title: "QA",
-          description: "",
-          people: [],
+          description: "Premium only",
+          people: [mc, secondSpeaker],
         },
       ],
     },
     {
-      begin: "19:15",
+      begin: "19:05",
+      end: "19:35",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          title: "Stitches",
+          description: "Learn what the new css-in-js solution is about",
+          people: [thirdSpeaker],
+        },
+      ],
+    },
+    {
+      begin: "19:35",
       end: "19:45",
       sessions: [
         {
-          type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [people.yan],
+          type: SessionType.ORGANIZATIONAL,
+          title: "QA",
+          description: "Premium only",
+          people: [mc, thirdSpeaker],
         },
       ],
     },
     {
       begin: "19:45",
-      end: "20:00",
-      sessions: [
-        {
-          type: SessionType.ORGANIZATIONAL,
-          title: "QA",
-          description: "",
-          people: [],
-        },
-      ],
-    },
-    {
-      begin: "20:00",
-      end: "20:30",
+      end: "20:05",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Panel",
-          description: "",
-          people: [people.davidKhourshid, people.christianAlfoni, people.yan],
+          description: "Premium only",
+          people: [mc].concat(allSpeakers),
         },
       ],
     },
     {
-      begin: "20:30",
-      end: "21:00",
+      begin: "20:05",
+      end: "20:10",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Wrap up",
+          title: "Outro",
+          description: "",
+          people: [mc].concat(allSpeakers),
+        },
+      ],
+    },
+    {
+      begin: "20:10",
+      end: "20:40",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Zoom with attendees",
           description: "",
           people: [],
         },
