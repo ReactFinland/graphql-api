@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Geekle",
   about: "The international event for coding inspiration",
   image: {
-    url: "sponsors/geekle.png",
+    url: "sponsors/geekle.svg",
   },
   social: {
     homepage: "https://react.geekle.us/",
