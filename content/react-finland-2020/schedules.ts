@@ -232,7 +232,7 @@ const allSpeakers = [firstSpeaker, secondSpeaker, thirdSpeaker];
 
 // TODO: Once schedule is clear, update this
 const miniConferenceDay2: Schedule = {
-  day: "2020-08-24",
+  day: "2020-08-27",
   description: "Mini-conference #2 - State management",
   location: locations.internet,
   intervals: [
