@@ -274,7 +274,7 @@ const miniConferenceDay2: Schedule = {
     },
     {
       begin: "17:45",
-      end: "18:15",
+      end: "18:20",
       sessions: [
         {
           type: SessionType.TALK,
@@ -285,8 +285,8 @@ const miniConferenceDay2: Schedule = {
       ],
     },
     {
-      begin: "18:15",
-      end: "18:25",
+      begin: "18:20",
+      end: "18:30",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -297,8 +297,8 @@ const miniConferenceDay2: Schedule = {
       ],
     },
     {
-      begin: "18:25",
-      end: "18:55",
+      begin: "18:30",
+      end: "19:00",
       sessions: [
         {
           type: SessionType.TALK,
@@ -310,8 +310,8 @@ const miniConferenceDay2: Schedule = {
       ],
     },
     {
-      begin: "18:55",
-      end: "19:05",
+      begin: "19:00",
+      end: "19:10",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -322,8 +322,8 @@ const miniConferenceDay2: Schedule = {
       ],
     },
     {
-      begin: "19:05",
-      end: "19:35",
+      begin: "19:10",
+      end: "19:40",
       sessions: [
         {
           type: SessionType.TALK,
@@ -334,8 +334,8 @@ const miniConferenceDay2: Schedule = {
       ],
     },
     {
-      begin: "19:35",
-      end: "19:45",
+      begin: "19:40",
+      end: "19:50",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -346,8 +346,8 @@ const miniConferenceDay2: Schedule = {
       ],
     },
     {
-      begin: "19:45",
-      end: "20:05",
+      begin: "19:50",
+      end: "20:10",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -358,8 +358,8 @@ const miniConferenceDay2: Schedule = {
       ],
     },
     {
-      begin: "20:05",
-      end: "20:10",
+      begin: "20:10",
+      end: "20:15",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -370,8 +370,8 @@ const miniConferenceDay2: Schedule = {
       ],
     },
     {
-      begin: "20:10",
-      end: "20:40",
+      begin: "20:15",
+      end: "20:45",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
