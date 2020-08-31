@@ -224,27 +224,28 @@ const miniConferenceDay1: Schedule = {
 };
 */
 
-const mc = people.saraVieira;
-const firstSpeaker = people.davidKhourshid;
-const secondSpeaker = people.yan;
-const thirdSpeaker = people.christianAlfoni;
+const mc = people.janiEvakallio;
+const jv = people.juhoVepsalainen;
+const firstSpeaker = people.shodipo;
+const secondSpeaker = people.yang;
+const thirdSpeaker = people.lauraGonzalez;
 const allSpeakers = [firstSpeaker, secondSpeaker, thirdSpeaker];
 
 // TODO: Once schedule is clear, update this
 const miniConferenceDay2: Schedule = {
-  day: "2020-08-27",
-  description: "Mini-conference #2 - State management",
+  day: "2020-09-22",
+  description: "Mini-conference #3 - Design systems",
   location: locations.internet,
   intervals: [
     {
-      begin: "16:45",
+      begin: "17:00",
       end: "17:30",
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Introduction to statecharts",
+          title: "Introduction to design systems",
           description: "Premium only",
-          people: [firstSpeaker],
+          people: [mc, jv],
         },
       ],
     },
@@ -278,8 +279,18 @@ const miniConferenceDay2: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Everything is an Actor",
-          description: `If the word "async" scares you, you're not alone. Time is the one variable that introduces the most complexity in software. Thankfully, the Actor Model can hold the key to simplifying the reactive apps we work on. Learn how this nearly 50-year-old event-driven model can improve the way we architect complex apps.`,
+          title: "Design from the dimension of open-source",
+          description: `"Getting into an open-source can be quite intimidating as a designer. It’s not something that you can just wake up in the morning and start doing if you’ve never been a designer before. From a high level, let’s “design” our first open-source project, complete with quick methodologies, tips, tricks, and some extra bits.
+          This talk was crafted with the aim of lowering some of the barriers for designers to contribute to open-source, How designers can actually contribute to open-source “live-designing” and providing some direction and resources to help people get started with contributing to design from a realm of open-source.
+
+          Key Take-Aways:
+
+          - How not to be intimidated as a designer in open-source.
+          - Tools to enable designers to contribute to OSS.
+          - How to inspect design.
+          - Designing and implementing a feature to production as a designer on an enterprise product.
+          - Getting started with designing for designers.
+          - Building/joining a Designers Community as a Designer contributing to open-source."`,
           people: [firstSpeaker],
         },
       ],
@@ -302,9 +313,11 @@ const miniConferenceDay2: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Dive in Effector",
-          description:
-            "What is Effector and why you might want to use it in your project?",
+          title: "Building React UIs visually",
+          description: `"
+          Design tools are fast and amazing tools for thought, but for a host of reasons are limited to creating drawings rather than production assets. Engineers must instead re-create surfaces from scratch, by hand, using code. This inevitably leads to discrepancies and back-and-forth with the design team, and ultimately two sources of truth that are never truly in sync.
+          
+          Plasmic is a tool to build UIs visually, currently in heavy development. It loosely resembles a design tool and aims to give the same sense of speedy iteration, but is for building maintainable, production-ready presentational components. The idea is to give developers a better and faster development experience, eliminate an entire class of visual bugs/QA/tooling, and ultimately maintain a single source of truth with design. This talk will also cover some of the challenges with building such a tool (which itself is a React application)."`,
           people: [secondSpeaker],
         },
       ],
@@ -327,8 +340,8 @@ const miniConferenceDay2: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Stitches",
-          description: "Learn what the new css-in-js solution is about",
+          title: "Guerrilla Design Systems",
+          description: "",
           people: [thirdSpeaker],
         },
       ],
@@ -375,7 +388,7 @@ const miniConferenceDay2: Schedule = {
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Zoom with attendees",
+          title: "Zoom with attendees. Join through Slack!",
           description: "",
           people: [],
         },
