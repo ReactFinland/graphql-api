@@ -23,7 +23,7 @@ const miniConferenceDay2: Schedule = {
           type: SessionType.TALK,
           title: "Introduction to design systems",
           description: "Premium only",
-          people: [mc, jv],
+          people: [mc, jv, firstSpeaker],
         },
       ],
     },
