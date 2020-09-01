@@ -275,7 +275,7 @@ const miniConferenceDay2: Schedule = {
     },
     {
       begin: "17:45",
-      end: "18:20",
+      end: "18:15",
       sessions: [
         {
           type: SessionType.TALK,
@@ -297,8 +297,8 @@ This talk was crafted with the aim of lowering some of the barriers for designer
       ],
     },
     {
-      begin: "18:20",
-      end: "18:30",
+      begin: "18:15",
+      end: "18:25",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -309,8 +309,8 @@ This talk was crafted with the aim of lowering some of the barriers for designer
       ],
     },
     {
-      begin: "18:30",
-      end: "19:00",
+      begin: "18:25",
+      end: "18:55",
       sessions: [
         {
           type: SessionType.TALK,
@@ -323,8 +323,8 @@ Plasmic is a tool to build UIs visually, currently in heavy development. It loos
       ],
     },
     {
-      begin: "19:00",
-      end: "19:10",
+      begin: "18:55",
+      end: "19:05",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -335,8 +335,8 @@ Plasmic is a tool to build UIs visually, currently in heavy development. It loos
       ],
     },
     {
-      begin: "19:10",
-      end: "19:40",
+      begin: "19:05",
+      end: "19:35",
       sessions: [
         {
           type: SessionType.TALK,
@@ -347,8 +347,8 @@ Plasmic is a tool to build UIs visually, currently in heavy development. It loos
       ],
     },
     {
-      begin: "19:40",
-      end: "19:50",
+      begin: "19:35",
+      end: "19:45",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -359,7 +359,7 @@ Plasmic is a tool to build UIs visually, currently in heavy development. It loos
       ],
     },
     {
-      begin: "19:50",
+      begin: "19:45",
       end: "20:10",
       sessions: [
         {
