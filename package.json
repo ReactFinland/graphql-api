@@ -107,7 +107,7 @@
     "rimraf": "^3.0.0",
     "smooth-scroll-into-view-if-needed": "^1.1.23",
     "to-title-case": "^1.0.0",
-    "type-graphql": "^0.17.5",
+    "type-graphql": "^0.17.6",
     "typescript": "^3.6.3",
     "uglify-es": "^3.3.9",
     "window-or-global": "^1.0.1",
