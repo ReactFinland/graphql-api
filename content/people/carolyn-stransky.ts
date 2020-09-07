@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Carolyn Stransky",
   about:
-    "Carolyn Stransky is a frontend developer and former technical writer based in Berlin. She currently works at Blacklane and teaches at ReDI School of Digital Integration. You’ll usually find her looking at memes or taking selfies in the nearest restroom.",
+    "Carolyn Stransky (she/her) is a software developer and journalist based in Berlin, Germany. Her work focuses on creating acccessible, user-centric interfaces. Out of the office, she tries to convince everyone that documentation is cool while also maintaining an admittedly ridiculous skincare routine. You can find her most places on the Internet @carolstran.",
   image: {
     url: "people/carolyn.jpg",
   },
