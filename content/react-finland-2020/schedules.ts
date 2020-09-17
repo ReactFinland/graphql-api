@@ -7,7 +7,7 @@ const mc = people.janiEvakallio;
 const jv = people.juhoVepsalainen;
 const firstSpeaker = people.shodipo;
 const secondSpeaker = people.yang;
-const thirdSpeaker = people.lauraGonzalez;
+const thirdSpeaker = people.juhoVepsalainen;
 const allSpeakers = [firstSpeaker, secondSpeaker, thirdSpeaker];
 
 const miniConferenceDay2: Schedule = {
@@ -23,7 +23,7 @@ const miniConferenceDay2: Schedule = {
           type: SessionType.TALK,
           title: "Introduction to design systems",
           description: "Premium only",
-          people: [mc, jv, firstSpeaker],
+          people: [jv, firstSpeaker],
         },
       ],
     },
@@ -118,9 +118,22 @@ Plasmic is a tool to build UIs visually, currently in heavy development. It loos
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Guerrilla Design Systems",
-          description: "",
-          people: [thirdSpeaker],
+          title: "Design Systems with Deno and Oceanwind",
+          description: `The target of my current work is to replace an aging stack and to let me generate sites with thousands or more pages fast. A big part of the effort has had to do with exploring the current technology landscape and figuring out good ways to do this. During my work, I've tried to keep the good parts of React in mind although the stack doesn't contain React directly, only key ideas from it.
+
+As a result, I've ended up with the following stack:
+
+* [typed-html](https://www.npmjs.com/package/typed-html) for component model
+* [oceanwind](https://www.npmjs.com/package/oceanwind) for styling
+* [sidewind](https://www.npmjs.com/package/sidewind) for state
+* [deno](https://deno.land/) for building it
+
+For the design system work, I've taken heavy inspiration from [theme-ui](https://theme-ui.com/) and I've modeled a part of its semantics to the system. Most important parts have been typed well although there are ways to escape out of the default constraints so it's still pragmatic.
+
+One of the interesting aspects of the **bundlerless** approach is that instead of relying on a tool like webpack to generate the site, we rely on deno underneath for the heavy lifting. There are surprising benefits as it appears it makes parts of the system such as the development server simple and easy to understand and modify based on need.
+
+Instead of a traditional presentation, the open-ended session is going to be a technology preview where I'll explain how things go together and why. I hope it will inspire you to explore alternative stacks and lead to new development in the space.`,
+          people: [mc, thirdSpeaker],
         },
       ],
     },
