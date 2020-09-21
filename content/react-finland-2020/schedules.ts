@@ -35,7 +35,7 @@ const miniConferenceDay2: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Fireside chat",
           description: "",
-          people: [mc].concat(allSpeakers),
+          people: [mc, firstSpeaker, thirdSpeaker],
         },
       ],
     },
@@ -58,7 +58,8 @@ const miniConferenceDay2: Schedule = {
         {
           type: SessionType.TALK,
           title: "Design from the dimension of open-source",
-          description: `Getting into an open-source can be quite intimidating as a designer. It’s not something that you can just wake up in the morning and start doing if you’ve never been a designer before. From a high level, let’s “design” our first open-source project, complete with quick methodologies, tips, tricks, and some extra bits.
+          description:
+            `Getting into an open-source can be quite intimidating as a designer. It’s not something that you can just wake up in the morning and start doing if you’ve never been a designer before. From a high level, let’s “design” our first open-source project, complete with quick methodologies, tips, tricks, and some extra bits.
 
 This talk was crafted with the aim of lowering some of the barriers for designers to contribute to open-source, How designers can actually contribute to open-source “live-designing” and providing some direction and resources to help people get started with contributing to design from a realm of open-source.
 
@@ -93,7 +94,8 @@ This talk was crafted with the aim of lowering some of the barriers for designer
         {
           type: SessionType.TALK,
           title: "Building React UIs visually",
-          description: `Design tools are fast and amazing tools for thought, but for a host of reasons are limited to creating drawings rather than production assets. Engineers must instead re-create surfaces from scratch, by hand, using code. This inevitably leads to discrepancies and back-and-forth with the design team, and ultimately two sources of truth that are never truly in sync.
+          description:
+            `Design tools are fast and amazing tools for thought, but for a host of reasons are limited to creating drawings rather than production assets. Engineers must instead re-create surfaces from scratch, by hand, using code. This inevitably leads to discrepancies and back-and-forth with the design team, and ultimately two sources of truth that are never truly in sync.
 
 Plasmic is a tool to build UIs visually, currently in heavy development. It loosely resembles a design tool and aims to give the same sense of speedy iteration, but is for building maintainable, production-ready presentational components. The idea is to give developers a better and faster development experience, eliminate an entire class of visual bugs/QA/tooling, and ultimately maintain a single source of truth with design. This talk will also cover some of the challenges with building such a tool (which itself is a React application).`,
           people: [secondSpeaker],
@@ -119,7 +121,8 @@ Plasmic is a tool to build UIs visually, currently in heavy development. It loos
         {
           type: SessionType.TALK,
           title: "Design Systems with Deno and Oceanwind",
-          description: `The target of my current work is to replace an aging stack and to let me generate sites with thousands or more pages fast. A big part of the effort has had to do with exploring the current technology landscape and figuring out good ways to do this. During my work, I've tried to keep the good parts of React in mind although the stack doesn't contain React directly, only key ideas from it.
+          description:
+            `The target of my current work is to replace an aging stack and to let me generate sites with thousands or more pages fast. A big part of the effort has had to do with exploring the current technology landscape and figuring out good ways to do this. During my work, I've tried to keep the good parts of React in mind although the stack doesn't contain React directly, only key ideas from it.
 
 As a result, I've ended up with the following stack:
 
