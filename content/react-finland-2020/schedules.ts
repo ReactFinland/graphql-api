@@ -1,14 +1,16 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
-import * as people from "../people";
+// import * as people from "../people";
 
 // TODO: Update
+/*
 const mc = people.janiEvakallio;
 const firstSpeaker = people.shodipo;
 const secondSpeaker = people.yang;
 const thirdSpeaker = people.juhoVepsalainen;
-const allSpeakers = [firstSpeaker, secondSpeaker, thirdSpeaker];
+const allSpeakers = []; // firstSpeaker, secondSpeaker, thirdSpeaker];
+*/
 
 const miniConferenceDay: Schedule = {
   day: "2020-10-28",
@@ -23,7 +25,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Fireside chat",
           description: "",
-          people: [mc, firstSpeaker, thirdSpeaker],
+          people: [],
         },
       ],
     },
@@ -35,7 +37,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Introduction",
           description: "",
-          people: [mc],
+          people: [],
         },
       ],
     },
@@ -119,7 +121,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Panel",
           description: "Premium only",
-          people: [mc].concat(allSpeakers),
+          people: [], // [mc].concat(allSpeakers),
         },
       ],
     },
@@ -131,7 +133,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Outro",
           description: "",
-          people: [mc].concat(allSpeakers),
+          people: [], // [mc].concat(allSpeakers),
         },
       ],
     },
