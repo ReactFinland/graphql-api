@@ -1,16 +1,13 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
-// import * as people from "../people";
+import * as people from "../people";
 
-// TODO: Update
-/*
-const mc = people.janiEvakallio;
-const firstSpeaker = people.shodipo;
-const secondSpeaker = people.yang;
-const thirdSpeaker = people.juhoVepsalainen;
-const allSpeakers = []; // firstSpeaker, secondSpeaker, thirdSpeaker];
-*/
+const mc = people.juhoVepsalainen;
+const firstSpeaker = people.lukeJackson;
+const secondSpeaker = people.diegoHaz;
+const thirdSpeaker = people.kasiaJastrzebska;
+const allSpeakers = [firstSpeaker, secondSpeaker, thirdSpeaker];
 
 const miniConferenceDay: Schedule = {
   day: "2020-10-28",
@@ -25,7 +22,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Fireside chat",
           description: "",
-          people: [],
+          people: [mc].concat(allSpeakers),
         },
       ],
     },
@@ -37,7 +34,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Introduction",
           description: "",
-          people: [],
+          people: [mc],
         },
       ],
     },
@@ -47,9 +44,9 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "TODO",
-          description: `TODO`,
-          people: [],
+          title: "Oceanwind",
+          description: ``,
+          people: [mc, firstSpeaker],
         },
       ],
     },
@@ -71,9 +68,9 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "TODO",
-          description: `TODO`,
-          people: [],
+          title: "Reakit – Toolkit for building accessible UIs",
+          description: ``,
+          people: [secondSpeaker],
         },
       ],
     },
@@ -85,7 +82,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "QA",
           description: "Premium only",
-          people: [],
+          people: [mc, secondSpeaker],
         },
       ],
     },
@@ -95,9 +92,9 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "TODO",
-          description: `TODO`,
-          people: [],
+          title: "Lessons learned",
+          description: ``,
+          people: [mc, thirdSpeaker],
         },
       ],
     },
@@ -109,7 +106,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "QA",
           description: "Premium only",
-          people: [],
+          people: [mc, thirdSpeaker],
         },
       ],
     },
@@ -121,7 +118,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Panel",
           description: "Premium only",
-          people: [], // [mc].concat(allSpeakers),
+          people: [mc].concat(allSpeakers),
         },
       ],
     },
@@ -133,7 +130,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Outro",
           description: "",
-          people: [], // [mc].concat(allSpeakers),
+          people: [mc],
         },
       ],
     },
