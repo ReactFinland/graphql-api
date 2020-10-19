@@ -44,9 +44,9 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Oceanwind",
+          title: "Reakit – Toolkit for building accessible UIs",
           description: ``,
-          people: [mc, firstSpeaker],
+          people: [secondSpeaker],
         },
       ],
     },
@@ -68,9 +68,9 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Reakit – Toolkit for building accessible UIs",
+          title: "Oceanwind",
           description: ``,
-          people: [secondSpeaker],
+          people: [mc, firstSpeaker],
         },
       ],
     },
