@@ -92,7 +92,7 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Stories from five years of GraphQL",
+          title: "Lessons learned from burnout",
           description: ``,
           people: [mc, thirdSpeaker],
         },
