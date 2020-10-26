@@ -6,7 +6,7 @@ import * as people from "../people";
 const mc = people.juhoVepsalainen;
 const firstSpeaker = people.lukeJackson;
 const secondSpeaker = people.diegoHaz;
-const thirdSpeaker = people.kasiaJastrzebska;
+const thirdSpeaker = people.mikhailNovikov;
 const allSpeakers = [firstSpeaker, secondSpeaker, thirdSpeaker];
 
 const miniConferenceDay: Schedule = {
@@ -58,7 +58,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "QA",
           description: "Premium only",
-          people: [],
+          people: [mc, secondSpeaker],
         },
       ],
     },
@@ -82,7 +82,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "QA",
           description: "Premium only",
-          people: [mc, secondSpeaker],
+          people: [mc, firstSpeaker],
         },
       ],
     },
@@ -92,7 +92,7 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Lessons learned",
+          title: "Stories from five years of GraphQL",
           description: ``,
           people: [mc, thirdSpeaker],
         },
