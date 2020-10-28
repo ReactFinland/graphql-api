@@ -56,6 +56,7 @@ class ConferenceResolver {
       SessionType.TALK,
       SessionType.KEYNOTE,
       SessionType.LIGHTNING_TALK,
+      SessionType.PANEL,
     ]);
 
     return getSessionSpeakers(conference, talks);
