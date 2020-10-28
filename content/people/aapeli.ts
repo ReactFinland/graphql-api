@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Aapeli Haanpuu",
-  about: "Aapeli is a frontend/full-stack developer with a long experience using React, Redux and other web technologies.",
+  about:
+    "Aapeli is a frontend/full-stack developer with a long experience using React, Redux and other web technologies.",
   image: {
     url: "people/aapeli.jpg",
   },
