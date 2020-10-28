@@ -3,18 +3,18 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Aapeli Haanpuu",
-  about: "",
+  about: "Aapeli is a frontend/full-stack developer with a long experience using React, Redux and other web technologies.",
   image: {
     url: "people/aapeli.jpg",
   },
   social: {
-    homepage: "",
+    homepage: "https://haanpuu.fi",
     twitter: "",
-    github: "",
+    github: "https://github.com/aapzu/",
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/aapeli-haanpuu/",
     youtube: "",
     devto: "",
   },
@@ -25,7 +25,7 @@ const person: Contact = {
     },
     city: "Helsinki",
   },
-  keywords: [Keyword.REACT],
+  keywords: [Keyword.REACT, Keyword.REDUX, Keyword.TYPESCRIPT],
   type: [ContactType.SPEAKER],
 };
 
