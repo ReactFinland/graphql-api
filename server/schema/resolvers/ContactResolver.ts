@@ -37,6 +37,7 @@ class ContactResolver {
       SessionType.LIGHTNING_TALK,
       SessionType.TALK,
       SessionType.KEYNOTE,
+      SessionType.PANEL,
     ]);
     const speaker = getSessionSpeakers(conference, talks).find(
       ({ name }) => name === contactName
