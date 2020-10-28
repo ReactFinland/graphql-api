@@ -118,7 +118,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Panel",
           description: "Premium only",
-          people: [mc].concat(allSpeakers),
+          people: [mc, people.aapeli].concat(allSpeakers),
         },
       ],
     },
