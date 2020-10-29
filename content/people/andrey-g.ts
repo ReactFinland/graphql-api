@@ -3,20 +3,20 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Andrey Goncharov",
-  about: "",
+  about: "Andrey is a full-stack TypeScript and JavaScript developer. He came from working in two software consultancies on a variety of projects: from small startups to well-established enterprises. Now he is happy to be a part of a family at Hazelcast. Big lover of open-source. Author of a small technical blog. Runs BeerJS Voronezh.",
   image: {
     url: "people/andrey-g.jpg",
   },
   social: {
-    homepage: "",
+    homepage: "https://goncharov.page",
     twitter: "ai_goncharov",
     github: "aigoncharov",
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "aigoncharov",
     youtube: "",
-    devto: "",
+    devto: "aigoncharov",
   },
   location: {
     country: {
