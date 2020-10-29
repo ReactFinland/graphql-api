@@ -10,7 +10,7 @@ const person: Contact = {
   social: {
     homepage: "",
     twitter: "FlippedCoding",
-    github: "",
+    github: "flippedcoder",
     facebook: "",
     medium: "",
     instagram: "",

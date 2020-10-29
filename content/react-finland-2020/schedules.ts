@@ -4,14 +4,14 @@ import * as locations from "../locations";
 import * as people from "../people";
 
 const mc = people.juhoVepsalainen;
-const firstSpeaker = people.lukeJackson;
-const secondSpeaker = people.diegoHaz;
-const thirdSpeaker = people.mikhailNovikov;
+const firstSpeaker = people.milecia;
+const secondSpeaker = people.andreyG;
+const thirdSpeaker = people.nikGraf;
 const allSpeakers = [firstSpeaker, secondSpeaker, thirdSpeaker];
 
 const miniConferenceDay: Schedule = {
-  day: "2020-10-28",
-  description: "Mini-conference #4 - Lessons learned",
+  day: "2020-12-02",
+  description: "Mini-conference #5 - Performance",
   location: locations.internet,
   intervals: [
     {
@@ -44,9 +44,9 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Reakit – Toolkit for building accessible UIs",
-          description: ``,
-          people: [secondSpeaker],
+          title: "Making Your React Apps Perform At Scale",
+          description: `As you add more components to your React application, you'll start to notice performance issues. Maybe data isn't loading as fast or you notice that things are happening out of order. There are tools and techniques you can use to handle these kind of issue at a large scale. In this talk, attendees will learn how to analyze their React apps for solvable issues and learn some state management and async handling techniques.`,
+          people: [firstSpeaker],
         },
       ],
     },
@@ -58,7 +58,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "QA",
           description: "Premium only",
-          people: [mc, secondSpeaker],
+          people: [mc, firstSpeaker],
         },
       ],
     },
@@ -68,9 +68,9 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Oceanwind",
-          description: ``,
-          people: [mc, firstSpeaker],
+          title: "Optimizing a React application",
+          description: `In this live session, we'll take an existing React application and then apply various techniques to improve its performance.`,
+          people: [mc, secondSpeaker],
         },
       ],
     },
@@ -82,7 +82,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "QA",
           description: "Premium only",
-          people: [mc, firstSpeaker],
+          people: [mc, secondSpeaker],
         },
       ],
     },
@@ -92,8 +92,8 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Lessons learned from burnout",
-          description: ``,
+          title: "Tips and tricks for optimizing your React application",
+          description: `In this discussion, we'll go through various ideas on how to make your application perform better.`,
           people: [mc, thirdSpeaker],
         },
       ],
@@ -118,7 +118,7 @@ const miniConferenceDay: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Panel",
           description: "Premium only",
-          people: [mc, people.aapeli].concat(allSpeakers),
+          people: [mc].concat(allSpeakers),
         },
       ],
     },
