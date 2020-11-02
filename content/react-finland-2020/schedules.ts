@@ -5,8 +5,8 @@ import * as people from "../people";
 
 const mc = people.juhoVepsalainen;
 const firstSpeaker = people.milecia;
-const secondSpeaker = people.andreyG;
-const thirdSpeaker = people.nikGraf;
+const secondSpeaker = people.nikGraf;
+const thirdSpeaker = people.andreyG;
 const allSpeakers = [firstSpeaker, secondSpeaker, thirdSpeaker];
 
 const miniConferenceDay: Schedule = {
@@ -68,8 +68,9 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Optimizing a React application",
-          description: `In this live session, we'll take an existing React application and then apply various techniques to improve its performance.`,
+          title: "Tips and tricks for optimizing your React application",
+          description: `In this discussion, we'll go through various ideas on how to make your application perform better.`,
+
           people: [mc, secondSpeaker],
         },
       ],
@@ -92,8 +93,8 @@ const miniConferenceDay: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Tips and tricks for optimizing your React application",
-          description: `In this discussion, we'll go through various ideas on how to make your application perform better.`,
+          title: "Optimizing a React application",
+          description: `In this live session, we'll take an existing React application and then apply various techniques to improve its performance.`,
           people: [mc, thirdSpeaker],
         },
       ],
