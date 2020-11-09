@@ -69,7 +69,7 @@ const miniConferenceDay: Schedule = {
         {
           type: SessionType.TALK,
           title: "Tips and tricks for optimizing your React application",
-          description: `In this discussion, we'll go through various ideas on how to make your application perform better.`,
+          description: `In this presentation, we'll go through various ideas on how to make your application perform better.`,
 
           people: [secondSpeaker],
         },
