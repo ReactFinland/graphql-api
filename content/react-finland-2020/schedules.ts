@@ -64,7 +64,7 @@ const miniConferenceDay: Schedule = {
     },
     {
       begin: "18:25",
-      end: "18:55",
+      end: "19:05",
       sessions: [
         {
           type: SessionType.TALK,
@@ -76,8 +76,8 @@ const miniConferenceDay: Schedule = {
       ],
     },
     {
-      begin: "18:55",
-      end: "19:05",
+      begin: "19:05",
+      end: "19:15",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -88,8 +88,8 @@ const miniConferenceDay: Schedule = {
       ],
     },
     {
-      begin: "19:05",
-      end: "19:35",
+      begin: "19:15",
+      end: "19:45",
       sessions: [
         {
           type: SessionType.TALK,
@@ -100,8 +100,8 @@ const miniConferenceDay: Schedule = {
       ],
     },
     {
-      begin: "19:35",
-      end: "19:45",
+      begin: "19:45",
+      end: "19:55",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -112,8 +112,8 @@ const miniConferenceDay: Schedule = {
       ],
     },
     {
-      begin: "19:45",
-      end: "20:10",
+      begin: "19:55",
+      end: "20:20",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -124,8 +124,8 @@ const miniConferenceDay: Schedule = {
       ],
     },
     {
-      begin: "20:10",
-      end: "20:15",
+      begin: "20:20",
+      end: "20:25",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -136,7 +136,7 @@ const miniConferenceDay: Schedule = {
       ],
     },
     {
-      begin: "20:15",
+      begin: "20:25",
       end: "20:45",
       sessions: [
         {
