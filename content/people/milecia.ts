@@ -8,7 +8,7 @@ const person: Contact = {
     url: "people/milecia.jpg",
   },
   social: {
-    homepage: "",
+    homepage: "https://www.flippedcoding.com/",
     twitter: "FlippedCoding",
     github: "flippedcoder",
     facebook: "",
