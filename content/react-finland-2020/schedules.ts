@@ -1,19 +1,21 @@
 import { Schedule } from "../../server/schema/Schedule";
-import { SessionType } from "../../server/schema/Session";
+// import { SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
-import * as people from "../people";
+// import * as people from "../people";
 
+/*
 const mc = people.juhoVepsalainen;
 const firstSpeaker = people.milecia;
 const secondSpeaker = people.nikGraf;
 const thirdSpeaker = people.andreyG;
 const allSpeakers = [firstSpeaker, secondSpeaker, thirdSpeaker];
+*/
 
 const miniConferenceDay: Schedule = {
-  day: "2020-12-02",
-  description: "Mini-conference #5 - Performance",
+  day: "2021-01-27",
+  description: "Mini-conference #6 - ???",
   location: locations.internet,
-  intervals: [
+  intervals: [] /*[
     {
       begin: "17:30",
       end: "17:40",
@@ -147,7 +149,7 @@ const miniConferenceDay: Schedule = {
         },
       ],
     },
-  ],
+  ],*/,
 };
 
 export default [miniConferenceDay];
