@@ -34,6 +34,7 @@ const conference: Conference = {
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
+  platformSponsors: [],
 };
 
 function resolveSchedules({ schedules, speakers }) {

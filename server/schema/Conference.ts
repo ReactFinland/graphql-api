@@ -59,6 +59,9 @@ export class Conference {
   @Field(_ => [Contact], { nullable: true })
   public bronzeSponsors!: Contact[];
 
+  @Field(_ => [Contact], { nullable: true })
+  public platformSponsors!: Contact[];
+
   @Field(_ => [Schedule])
   public schedules!: Schedule[];
 
@@ -109,7 +112,13 @@ function attachSponsorTypes(
   conference: Conference,
   sponsors: Conference["sponsors"]
 ) {
-  const { goldSponsors, silverSponsors, bronzeSponsors, partners } = conference;
+  const {
+    goldSponsors,
+    silverSponsors,
+    bronzeSponsors,
+    platformSponsors,
+    partners,
+  } = conference;
 
   return map(sponsors, ({ name, type, ...rest }) => ({
     ...rest,
@@ -119,6 +128,7 @@ function attachSponsorTypes(
         isSponsor(goldSponsors, name, ContactType.GOLD_SPONSOR),
         isSponsor(silverSponsors, name, ContactType.SILVER_SPONSOR),
         isSponsor(bronzeSponsors, name, ContactType.BRONZE_SPONSOR),
+        isSponsor(platformSponsors, name, ContactType.PLATFORM_SPONSOR),
         isSponsor(partners, name, ContactType.PARTNER)
       )
       .filter(Boolean),

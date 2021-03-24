@@ -30,6 +30,7 @@ const conference: Conference = {
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
+  platformSponsors: [],
 };
 
 // TODO: Attach images from the site (needs improved data fetcher)

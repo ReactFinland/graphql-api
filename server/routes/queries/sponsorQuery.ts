@@ -10,6 +10,9 @@ query PageQuery($conferenceId: ID!) {
     bronzeSponsors {
       ...SponsorFragment
     }
+    platformSponsors {
+      ...SponsorFragment
+    }
     partners {
       ...SponsorFragment
     }

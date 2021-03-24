@@ -53,6 +53,7 @@ const conference: Conference = {
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
+  platformSponsors: [],
 };
 
 export default conference;

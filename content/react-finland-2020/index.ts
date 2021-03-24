@@ -46,7 +46,13 @@ const bronzeSponsors = [
   allSponsors.cybercom,
   allSponsors.netum,
 ];
-const sponsors = partners.concat(goldSponsors, silverSponsors, bronzeSponsors);
+const platformSponsors = [allSponsors.brella];
+const sponsors = partners.concat(
+  goldSponsors,
+  silverSponsors,
+  bronzeSponsors,
+  platformSponsors
+);
 
 const conference: Conference = {
   id: "react-finland-2020",
@@ -77,6 +83,7 @@ const conference: Conference = {
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
+  platformSponsors,
 };
 
 export default conference;
