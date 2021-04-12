@@ -9,7 +9,7 @@ const person: Contact = {
   },
   social: {
     homepage: "",
-    twitter: "pillar15",
+    twitter: "plrdev",
     github: "eduplus",
     linkedin: "juha-linnanen",
   },
