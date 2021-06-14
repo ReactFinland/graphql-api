@@ -7,7 +7,7 @@ Simple GraphQL API for our conferences:
 To see the query API:
 
 1.  `NODE_ENV="development" npm start`
-2.  `http://localhost:3000/graphql-2018` or `http://localhost:3000/calendar-2018.ics` (calendar)
+2.  `http://localhost:3000/graphql` or `http://localhost:3000/calendar-2021.ics` (calendar)
 
 ## Image Processing
 
@@ -23,7 +23,7 @@ CLOUDINARY_API_SECRET=<get from Cloudinary account>
 
 Also remember to set the same on the host of the API.
 
-> You can access images through `http://localhost:3000/graphql-2018/images`. Example: `http://localhost:3000/graphql-2018/images/ken.jpg`.
+> You can access images through `http://localhost:3000/graphql/images`. Example: `http://localhost:3000/graphql/images/ken.jpg`.
 
 ## Webhooks
 
