@@ -38,7 +38,7 @@ function calendar({
   title: string;
   schedules: Schedule[];
 }) {
-  const timezone = "+03:00"; // EEST
+  const timezone = "+00:00"; // GMT+0
   const domain = "https://react-finland.fi";
   const cal = ical({ domain, name: title });
 
