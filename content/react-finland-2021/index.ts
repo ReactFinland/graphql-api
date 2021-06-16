@@ -7,7 +7,7 @@ import schedules from "./schedules";
 const partners = [
   allSponsors.agentconf,
   allSponsors.bangalore,
-  allSponsors.geekle,
+  // allSponsors.geekle,
   allSponsors.halfstack,
   allSponsors.jscamp,
   allSponsors.jskongress,
@@ -24,7 +24,7 @@ const partners = [
   allSponsors.reactnativeeu,
   allSponsors.reactjsday,
   allSponsors.reactsummit,
-  allSponsors.rlc,
+  // allSponsors.rlc,
   allSponsors.webexpo,
   // allSponsors.techEvents,
 ];
