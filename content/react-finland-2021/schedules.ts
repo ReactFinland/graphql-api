@@ -36,12 +36,20 @@ const tuesday: Schedule = {
       title: "Architecture",
       mc: people.saraVieira,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          title: "Hooks are a great abstraction model",
+          description: `The discussion explores the separation of concerns between logic (Model) and UI (View) and how React hooks are a great abstraction model that help achieve that.
+
+          We'll start with designing a component's API (in a top down approach), then dive deeper to explore how to implement this API, while maintaining a good separation of concerns. 
+          
+          We'll create custom React hooks to implement the Model and React components for the UI. Both expose self-documenting APIs and are completely decoupled from each other.
+          
+          To demo this approach, we'll create a simple Toggler component (a UI component that allows going back and forth in an array of values).
+          
+          Towards the end, we'll explore the benefits, focusing on testing these decoupled units in isolation.`,
+          people: [people.calin],
+        },
       ],
     },
   ],
