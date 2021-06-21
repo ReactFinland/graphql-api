@@ -86,14 +86,17 @@ const wednesday: Schedule = {
       ],
     },
     {
-      begin: "15:00",
-      end: "16:30",
+      begin: "16:00",
+      end: "17:30",
+      title: "GraphQL",
       sessions: [
         {
           type: SessionType.TALK,
-          title: "State management",
-          description: "",
-          people: [],
+          level: Level.INTERMEDIATE,
+          title: "How to cache GraphQL queries at the edge",
+          description:
+            "A demo and deep dive into GraphCDN, the edge caching GraphQL CDN.",
+          people: [people.max],
         },
       ],
     },
