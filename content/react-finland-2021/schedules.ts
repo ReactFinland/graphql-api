@@ -11,7 +11,7 @@ const monday: Schedule = {
   intervals: [
     {
       begin: "15:00",
-      end: "17:30",
+      end: "16:30",
       sessions: [
         {
           type: SessionType.TALK,
@@ -31,7 +31,7 @@ const tuesday: Schedule = {
   intervals: [
     {
       begin: "15:00",
-      end: "17:30",
+      end: "16:30",
       sessions: [
         {
           type: SessionType.TALK,
@@ -87,7 +87,7 @@ const wednesday: Schedule = {
     },
     {
       begin: "15:00",
-      end: "17:30",
+      end: "16:30",
       sessions: [
         {
           type: SessionType.TALK,
@@ -143,7 +143,7 @@ const thursday: Schedule = {
     },
     {
       begin: "15:00",
-      end: "17:30",
+      end: "16:30",
       title: "ReScript",
       sessions: [
         {
@@ -203,7 +203,7 @@ const friday: Schedule = {
     },
     {
       begin: "15:00",
-      end: "17:30",
+      end: "16:30",
       sessions: [
         {
           type: SessionType.TALK,
