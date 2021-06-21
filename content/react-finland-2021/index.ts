@@ -36,7 +36,7 @@ const goldSponsors = [
 ];
 const silverSponsors = [
   allSponsors.digia,
-  // allSponsors.elisa,
+  allSponsors.elisa,
   allSponsors.alma,
   allSponsors.columbiaroad,
 ];
