@@ -3,6 +3,7 @@ import { Contact } from "./Contact";
 import Keyword from "./keywords";
 import { Location } from "./Location";
 import SessionType from "./SessionType";
+import Level from "./Level";
 
 @ObjectType()
 export class SessionUrls {
@@ -20,6 +21,9 @@ export class SessionUrls {
 export class Session {
   @Field(_ => SessionType)
   public type!: SessionType;
+
+  @Field(_ => Level)
+  public level?: Level;
 
   @Field(_ => String)
   public title!: string;
@@ -56,4 +60,4 @@ export class SessionResolver {
 }
 
 // Backwards-compatibility with content. TODO: refactor out
-export { SessionType };
+export { SessionType, Level };

@@ -1,7 +1,7 @@
 import { buildSchema, registerEnumType } from "type-graphql";
 import { ContactType } from "./Contact";
 import * as resolvers from "./resolvers";
-import { SessionType } from "./Session";
+import { SessionType, Level } from "./Session";
 
 registerEnumType(ContactType, {
   name: "ContactType",
@@ -11,6 +11,11 @@ registerEnumType(ContactType, {
 registerEnumType(SessionType, {
   name: "SessionType",
   description: "Type of the session",
+});
+
+registerEnumType(Level, {
+  name: "Level",
+  description: "Level of the session",
 });
 
 export default async function generateSchema() {

@@ -1,7 +1,7 @@
 import { Schedule } from "../../server/schema/Schedule";
-import { SessionType } from "../../server/schema/Session";
+import { SessionType, Level } from "../../server/schema/Session";
 import * as locations from "../locations";
-// import * as people from "../people";
+import * as people from "../people";
 
 // All times are given in GMT+0
 const monday: Schedule = {
@@ -17,7 +17,7 @@ const monday: Schedule = {
           type: SessionType.TALK,
           title: "Opening",
           description: "",
-          people: [],
+          people: [people.juhoVepsalainen],
         },
       ],
     },
@@ -144,12 +144,16 @@ const thursday: Schedule = {
     {
       begin: "15:00",
       end: "17:30",
+      title: "ReScript",
       sessions: [
         {
           type: SessionType.TALK,
-          title: "Future",
-          description: "",
-          people: [],
+          level: Level.INTERMEDIATE,
+          title: "A glimpse of ReScript",
+          description: `ReScript is a fully typed, almost zero-config language for React development with one of the fastest JS compiler and build system you can find today. Even though it's a different (JS like) language, it integrates seamlessly in existing JS / React codebases and allows easy gradual adoption that doesn't come with \`any\` types.
+
+In this talk, Patrick will show-case ReScript's coolest features in a live-coding demonstration. You will learn how ReScript / React looks like, how it integrates with JS codebases / libraries, and how it differentiates to gradual type systems such as TypeScript or Flow.`,
+          people: [people.patrickStapfer],
         },
       ],
     },
@@ -205,7 +209,7 @@ const friday: Schedule = {
           type: SessionType.TALK,
           title: "Closing",
           description: "",
-          people: [],
+          people: [people.juhoVepsalainen],
         },
       ],
     },
