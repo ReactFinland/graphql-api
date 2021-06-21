@@ -12,14 +12,15 @@ const monday: Schedule = {
     {
       begin: "15:00",
       end: "16:30",
+      title: "Opening",
       mc: people.juhoVepsalainen,
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "Opening",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
   ],
