@@ -33,13 +33,14 @@ const tuesday: Schedule = {
     {
       begin: "15:00",
       end: "16:30",
+      title: "Architecture",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "Architecture",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
   ],
@@ -53,37 +54,40 @@ const wednesday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
+      title: "Styling",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "Styling",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
     {
       begin: "10:00",
       end: "11:30",
+      title: "Design tools",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "Design tools",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
     {
       begin: "12:00",
       end: "13:30",
+      title: "Design systems",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "Design systems",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
     {
@@ -112,37 +116,40 @@ const thursday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
+      title: "Legacy",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "Legacy",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
     {
       begin: "10:00",
       end: "11:30",
+      title: "Debugging",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "Debugging",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
     {
       begin: "12:00",
       end: "13:30",
+      title: "Performance",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "Performance",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
     {
@@ -172,50 +179,54 @@ const friday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
+      title: "Jobs",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "Jobs",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
     {
       begin: "10:00",
       end: "11:30",
+      title: "CMSs",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "CMSs",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
     {
       begin: "12:00",
       end: "13:30",
+      title: "React Native",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "React Native",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
     {
       begin: "15:00",
       end: "16:30",
+      title: "Closing",
       mc: people.juhoVepsalainen,
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "Closing",
+          title: "",
           description: "",
           people: [],
-        },
+        },*/
       ],
     },
   ],

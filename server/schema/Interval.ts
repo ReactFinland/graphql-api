@@ -1,7 +1,7 @@
 import { Field, ObjectType } from "type-graphql";
+import { Contact } from "./Contact";
 import { Location } from "./Location";
 import { Session } from "./Session";
-import { Contact } from "./Contact";
 
 @ObjectType()
 export class Interval {
