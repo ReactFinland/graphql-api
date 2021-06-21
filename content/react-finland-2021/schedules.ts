@@ -12,12 +12,13 @@ const monday: Schedule = {
     {
       begin: "15:00",
       end: "16:30",
+      mc: people.juhoVepsalainen,
       sessions: [
         {
           type: SessionType.TALK,
           title: "Opening",
           description: "",
-          people: [people.juhoVepsalainen],
+          people: [],
         },
       ],
     },
@@ -207,12 +208,13 @@ const friday: Schedule = {
     {
       begin: "15:00",
       end: "16:30",
+      mc: people.juhoVepsalainen,
       sessions: [
         {
           type: SessionType.TALK,
           title: "Closing",
           description: "",
-          people: [people.juhoVepsalainen],
+          people: [],
         },
       ],
     },
