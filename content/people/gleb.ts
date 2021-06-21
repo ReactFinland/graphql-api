@@ -9,14 +9,14 @@ const person: Contact = {
     url: "people/gleb.jpg",
   },
   social: {
-    homepage: "",
+    homepage: "https://glebbahmutov.com/",
     twitter: "bahmutov",
     github: "bahmutov",
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
-    youtube: "",
+    linkedin: "https://www.linkedin.com/in/bahmutov/",
+    youtube: "https://youtube.com/glebbahmutov",
     devto: "",
   },
   location: {
