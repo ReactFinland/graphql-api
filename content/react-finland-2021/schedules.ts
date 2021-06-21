@@ -1,5 +1,5 @@
 import { Schedule } from "../../server/schema/Schedule";
-import { SessionType, Level } from "../../server/schema/Session";
+import { Level, SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 import * as people from "../people";
 

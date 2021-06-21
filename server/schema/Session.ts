@@ -1,9 +1,9 @@
 import { Field, FieldResolver, ObjectType, Resolver, Root } from "type-graphql";
 import { Contact } from "./Contact";
 import Keyword from "./keywords";
+import Level from "./Level";
 import { Location } from "./Location";
 import SessionType from "./SessionType";
-import Level from "./Level";
 
 @ObjectType()
 export class SessionUrls {
