@@ -34,6 +34,7 @@ const tuesday: Schedule = {
       begin: "15:00",
       end: "16:30",
       title: "Architecture",
+      mc: people.saraVieira,
       sessions: [
         /*{
           type: SessionType.TALK,
@@ -81,6 +82,7 @@ const wednesday: Schedule = {
       begin: "12:00",
       end: "13:30",
       title: "Design systems",
+      mc: people.saraVieira,
       sessions: [
         /*{
           type: SessionType.TALK,
@@ -94,6 +96,7 @@ const wednesday: Schedule = {
       begin: "16:00",
       end: "17:30",
       title: "GraphQL",
+      mc: people.saraVieira,
       sessions: [
         {
           type: SessionType.TALK,
@@ -143,6 +146,7 @@ const thursday: Schedule = {
       begin: "12:00",
       end: "13:30",
       title: "Performance",
+      mc: people.saraVieira,
       sessions: [
         /*{
           type: SessionType.TALK,
@@ -156,6 +160,7 @@ const thursday: Schedule = {
       begin: "15:00",
       end: "16:30",
       title: "ReScript",
+      mc: people.saraVieira,
       sessions: [
         {
           type: SessionType.TALK,
@@ -206,6 +211,7 @@ const friday: Schedule = {
       begin: "12:00",
       end: "13:30",
       title: "React Native",
+      mc: people.saraVieira,
       sessions: [
         /*{
           type: SessionType.TALK,
