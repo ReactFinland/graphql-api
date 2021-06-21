@@ -1,5 +1,5 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import speaker from "../../people/patrick-stapfer";
+import speaker from "../../people/patrick-ecker";
 
 const talk: Session = {
   people: [speaker],

@@ -23,11 +23,7 @@ const conference: Conference = {
   websiteUrl: "https://www.reason-conf.com/",
   locations: [locations.wuWien],
   mcs: [],
-  organizers: [
-    people.andreyOkonetchnikov,
-    people.nikGraf,
-    people.patrickStapfer,
-  ],
+  organizers: [people.andreyOkonetchnikov, people.nikGraf, people.patrickEcker],
   schedules: resolveSchedules(scheduleData),
   sponsors,
   partners,

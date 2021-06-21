@@ -1,7 +1,7 @@
 import { Session, SessionType } from "../../../server/schema/Session";
 import { elisaAppelsiini } from "../../locations";
 import nik from "../../people/nik-graf";
-import patrick from "../../people/patrick-stapfer";
+import patrick from "../../people/patrick-ecker";
 
 const workshop: Session = {
   type: SessionType.WORKSHOP,
