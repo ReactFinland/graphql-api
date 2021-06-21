@@ -64,7 +64,7 @@ const wednesday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
-      title: "Styling",
+      title: "React Native",
       sessions: [
         {
           type: SessionType.TALK,
@@ -221,7 +221,7 @@ const friday: Schedule = {
     {
       begin: "12:00",
       end: "13:30",
-      title: "React Native",
+      title: "Styling",
       mc: people.saraVieira,
       sessions: [
         /*{
