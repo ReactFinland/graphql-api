@@ -41,6 +41,7 @@ const bronzeSponsors = [
   allSponsors.wunder,
   allSponsors.cybercom,
   allSponsors.netum,
+  allSponsors.nitor,
 ];
 const platformSponsors = [allSponsors.brella];
 const sponsors = partners.concat(
