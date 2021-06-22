@@ -67,7 +67,7 @@ const conference: Conference = {
   websiteUrl: "https://react-finland.fi/",
   // TODO: Resolve locations based on data
   locations: [],
-  mcs: [people.juhoVepsalainen, people.saraVieira],
+  mcs: [people.juhoVepsalainen, people.saraVieira, people.manjula],
   organizers: [
     people.aleksiPousar,
     people.eemeliAro,

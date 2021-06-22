@@ -60,6 +60,7 @@ export { default as lucaMatteis } from "./luca-matteis";
 export { default as lukeJackson } from "./luke-jackson";
 export { default as maaretPyhajarvi } from "./maaret-pyhajarvi";
 export { default as madalyn } from "./madalyn";
+export { default as manjula } from "./manjula";
 export { default as manuelMatuzovic } from "./manuel-matuzovic";
 export { default as marcAndreGiroux } from "./marc-andre-giroux";
 export { default as margarita } from "./margarita";

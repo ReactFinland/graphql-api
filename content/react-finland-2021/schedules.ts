@@ -74,6 +74,7 @@ const wednesday: Schedule = {
       begin: "07:00",
       end: "08:30",
       title: "React Native",
+      mc: people.manjula,
       sessions: [
         {
           type: SessionType.TALK,
@@ -89,6 +90,7 @@ const wednesday: Schedule = {
       begin: "10:00",
       end: "11:30",
       title: "Design tools",
+      mc: people.manjula,
       sessions: [
         /*{
           type: SessionType.TALK,
@@ -140,6 +142,7 @@ const thursday: Schedule = {
       begin: "07:00",
       end: "08:30",
       title: "Legacy",
+      mc: people.manjula,
       sessions: [
         /*{
           type: SessionType.TALK,
@@ -153,6 +156,7 @@ const thursday: Schedule = {
       begin: "10:00",
       end: "11:30",
       title: "Debugging",
+      mc: people.manjula,
       sessions: [
         /*{
           type: SessionType.TALK,
@@ -205,6 +209,7 @@ const friday: Schedule = {
       begin: "07:00",
       end: "08:30",
       title: "Jobs",
+      mc: people.juhoVepsalainen,
       sessions: [
         /*{
           type: SessionType.TALK,
@@ -218,6 +223,7 @@ const friday: Schedule = {
       begin: "10:00",
       end: "11:30",
       title: "CMSs",
+      mc: people.saraVieira,
       sessions: [
         /*{
           type: SessionType.TALK,
