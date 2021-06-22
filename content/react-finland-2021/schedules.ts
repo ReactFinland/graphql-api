@@ -52,6 +52,14 @@ To demo this approach, we'll create a simple Toggler component (a UI component t
 Towards the end, we'll explore the benefits, focusing on testing these decoupled units in isolation.`,
           people: [people.calin],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Web Components in React",
+          description:
+            "Likely you've heard of Web Components but do you know how to use them with React? If not, then this is the demonstration for you!",
+          people: [people.matias],
+        },
       ],
     },
   ],

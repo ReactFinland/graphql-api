@@ -63,6 +63,7 @@ export { default as madalyn } from "./madalyn";
 export { default as manuelMatuzovic } from "./manuel-matuzovic";
 export { default as marcAndreGiroux } from "./marc-andre-giroux";
 export { default as margarita } from "./margarita";
+export { default as matias } from "./matias";
 export { default as max } from "./max";
 export { default as michalChudziak } from "./michal-chudziak";
 export { default as michelWeststrate } from "./michel-weststrate";
