@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Nitor",
   about: "Digital engineering",
   image: {
-    url: "sponsors/nitor.png",
+    url: "sponsors/nitor.svg",
   },
   social: {
     homepage: "https://www.nitor.com/en",
