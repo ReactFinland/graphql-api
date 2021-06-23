@@ -10,8 +10,22 @@ const monday: Schedule = {
   location: locations.internet,
   intervals: [
     {
-      begin: "15:00",
-      end: "16:30",
+      begin: "12:00",
+      end: "15:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          title: "Video on the web",
+          description: `Video is one of the fastest growing mediums on the web and in mobile applications. Video files have been shown to increase engagement, and can be a great way to deliver your message quickly. (And who doesn’t love animated GIFs?)
+
+However, video that takes a long time to start up leads to frustration and abandonment. The same goes for video that stalls during playback. In this workshop, you’ll learn best practices to optimize the delivery of your video to you customers, ensuring fast delivery and minimizing stalls for a great customer experience.`,
+          people: [people.doug],
+        },
+      ],
+    },
+    {
+      begin: "16:00",
+      end: "17:30",
       title: "Opening",
       mc: people.juhoVepsalainen,
       sessions: [
