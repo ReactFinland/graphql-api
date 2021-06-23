@@ -208,15 +208,16 @@ const friday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
-      title: "Jobs",
+      title: "The future of work",
       mc: people.juhoVepsalainen,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          title: "The future of software development in Finland",
+          description:
+            "Finland's the happy nation and in need of very many newcomers to the country especially in the tech field. What's realistic to expect in the future Finnish job market as a developer? Where do we expect the developer jobs to progress in the future?",
+          people: [people.saku],
+        },
       ],
     },
     {

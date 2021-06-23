@@ -82,6 +82,7 @@ export { default as rachelNabors } from "./rachel-nabors";
 export { default as rebeccaHill } from "./rebecca-hill";
 export { default as rickHanlon } from "./rick-hanlon";
 export { default as rotemMizrachiMeidan } from "./rotem-mizrachi-meidan";
+export { default as saku } from "./saku";
 export { default as samuliHakoniemi } from "./samuli-hakoniemi";
 export { default as saraVieira } from "./sara-vieira";
 export { default as shayKeinan } from "./shay-keinan";
