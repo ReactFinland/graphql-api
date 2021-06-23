@@ -244,8 +244,7 @@ const friday: Schedule = {
           level: Level.BEGINNER,
           title:
             "Video streaming on the web: Live and recorded video streaming",
-          description: `
-          In this presentation, we'll present how video streaming works.  We'll look at the anatomy of video streaming, and how video streaming is beneficial for delivering your content over just adding mp4 files.
+          description: `In this presentation, we'll present how video streaming works.  We'll look at the anatomy of video streaming, and how video streaming is beneficial for delivering your content over just adding mp4 files.
 
 We'll demonstrate live streaming **from** the browser, and then how to integrate that live stream into your webpage.`,
           people: [people.doug],
