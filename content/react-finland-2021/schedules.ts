@@ -15,6 +15,7 @@ const monday: Schedule = {
       sessions: [
         {
           type: SessionType.WORKSHOP,
+          level: Level.BEGINNER,
           title: "Video on the web",
           description: `Video is one of the fastest growing mediums on the web and in mobile applications. Video files have been shown to increase engagement, and can be a great way to deliver your message quickly. (And who doesn’t love animated GIFs?)
 
