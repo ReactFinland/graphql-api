@@ -255,7 +255,7 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
     {
       begin: "15:00",
       end: "16:30",
-      title: "Closing",
+      title: "The future of work",
       mc: people.juhoVepsalainen,
       sessions: [
         {
