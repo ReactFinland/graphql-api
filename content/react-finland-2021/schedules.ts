@@ -236,15 +236,20 @@ const friday: Schedule = {
     {
       begin: "12:00",
       end: "13:30",
-      title: "To be announced",
+      title: "Techniques",
       mc: people.saraVieira,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          level: Level.BEGINNER,
+          title:
+            "Video streaming on the web: Live and recorded video streaming",
+          description: `
+          In this presentation, we'll present how video streaming works.  We'll look at the anatomy of video streaming, and how video streaming is beneficial for delivering your content over just adding mp4 files.
+
+We'll demonstrate live streaming **from** the browser, and then how to integrate that live stream into your webpage.`,
+          people: [people.doug],
+        },
       ],
     },
     {
@@ -255,6 +260,7 @@ const friday: Schedule = {
       sessions: [
         {
           type: SessionType.TALK,
+          level: Level.BEGINNER,
           title: "The future of software development in Finland",
           description:
             "Finland's the happy nation and in need of very many newcomers to the country especially in the tech field. What's realistic to expect in the future Finnish job market as a developer? Where do we expect the developer jobs to progress in the future?",

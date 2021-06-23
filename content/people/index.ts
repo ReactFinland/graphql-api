@@ -20,6 +20,7 @@ export { default as christofferNiska } from "./christoffer-niska";
 export { default as danSchafer } from "./dan-schafer";
 export { default as davidKhourshid } from "./david-khourshid";
 export { default as diegoHaz } from "./diego-haz";
+export { default as doug } from "./doug";
 export { default as dustinSchau } from "./dustin-schau";
 export { default as eemeliAro } from "./eemeli-aro";
 export { default as eli } from "./eli";
