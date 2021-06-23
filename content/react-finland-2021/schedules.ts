@@ -89,7 +89,7 @@ const wednesday: Schedule = {
     {
       begin: "10:00",
       end: "11:30",
-      title: "Design tools",
+      title: "To be announced",
       mc: people.manjula,
       sessions: [
         /*{
@@ -103,7 +103,7 @@ const wednesday: Schedule = {
     {
       begin: "12:00",
       end: "13:30",
-      title: "Design systems",
+      title: "To be announced",
       mc: people.saraVieira,
       sessions: [
         /*{
@@ -141,7 +141,7 @@ const thursday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
-      title: "Legacy",
+      title: "To be announced",
       mc: people.manjula,
       sessions: [
         /*{
@@ -155,7 +155,7 @@ const thursday: Schedule = {
     {
       begin: "10:00",
       end: "11:30",
-      title: "Debugging",
+      title: "To be announced",
       mc: people.manjula,
       sessions: [
         /*{
@@ -169,7 +169,7 @@ const thursday: Schedule = {
     {
       begin: "12:00",
       end: "13:30",
-      title: "Performance",
+      title: "To be announced",
       mc: people.saraVieira,
       sessions: [
         /*{
@@ -208,22 +208,21 @@ const friday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
-      title: "The future of work",
+      title: "To be announced",
       mc: people.juhoVepsalainen,
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          title: "The future of software development in Finland",
-          description:
-            "Finland's the happy nation and in need of very many newcomers to the country especially in the tech field. What's realistic to expect in the future Finnish job market as a developer? Where do we expect the developer jobs to progress in the future?",
-          people: [people.saku],
-        },
+          title: "",
+          description: "",
+          people: [],
+        },*/
       ],
     },
     {
       begin: "10:00",
       end: "11:30",
-      title: "CMSs",
+      title: "To be announced",
       mc: people.saraVieira,
       sessions: [
         /*{
@@ -237,7 +236,7 @@ const friday: Schedule = {
     {
       begin: "12:00",
       end: "13:30",
-      title: "Styling",
+      title: "To be announced",
       mc: people.saraVieira,
       sessions: [
         /*{
@@ -254,12 +253,13 @@ const friday: Schedule = {
       title: "Closing",
       mc: people.juhoVepsalainen,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          title: "The future of software development in Finland",
+          description:
+            "Finland's the happy nation and in need of very many newcomers to the country especially in the tech field. What's realistic to expect in the future Finnish job market as a developer? Where do we expect the developer jobs to progress in the future?",
+          people: [people.saku],
+        },
       ],
     },
   ],
