@@ -30,12 +30,14 @@ However, video that takes a long time to start up leads to frustration and aband
       title: "Opening",
       mc: people.juhoVepsalainen,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          level: Level.BEGINNER,
+          title: "Breaking out of the confines: making games in React",
+          description:
+            "To show how we can make rich, interactive experiences, for instance games, with React semantics and shareable components, and what that means for traditional constructs, like the render-loop.",
+          people: [people.paul],
+        },
       ],
     },
   ],
