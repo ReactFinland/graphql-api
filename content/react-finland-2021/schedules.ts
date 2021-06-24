@@ -280,6 +280,14 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
             "Finland's the happy nation and in need of very many newcomers to the country especially in the tech field. What's realistic to expect in the future Finnish job market as a developer? Where do we expect the developer jobs to progress in the future?",
           people: [people.saku],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "Becoming a React developer - A hiring manager’s perspective",
+          description:
+            "The landscape of popular JS frameworks and libraries has become increasingly polarised. With React standing out an increasing number of companies are struggling to find skilled developers. People experienced in React are in a great position. Nevertheless, what if my CV lacks the right keyword? What if my Angular experience looks more like a burden? Can I apply for a front-end developer position in a React project?",
+          people: [people.mika],
+        },
       ],
     },
   ],

@@ -69,6 +69,7 @@ export { default as matias } from "./matias";
 export { default as max } from "./max";
 export { default as michalChudziak } from "./michal-chudziak";
 export { default as michelWeststrate } from "./michel-weststrate";
+export { default as mika } from "./mika";
 export { default as mikeBerman } from "./mike-berman";
 export { default as mikhailNovikov } from "./mikhail-novikov";
 export { default as milecia } from "./milecia";
