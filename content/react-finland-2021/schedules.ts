@@ -25,6 +25,20 @@ However, video that takes a long time to start up leads to frustration and aband
       ],
     },
     {
+      begin: "14:00",
+      end: "17:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          level: Level.INTERMEDIATE,
+          title: "Testing React Native Apps Using Cypress",
+          description:
+            "How to run React Native apps in the browser using react-native-web and Expo, then how to run end-to-end tests with Cypress. We can add code coverage reporting and executing tests on CI, giving us high confidence in our application's code. Finally, we will learn how to mock the native components during tests.",
+          people: [people.gleb],
+        },
+      ],
+    },
+    {
       begin: "16:00",
       end: "17:30",
       title: "Opening",
