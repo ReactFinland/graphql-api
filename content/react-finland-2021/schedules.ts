@@ -63,6 +63,23 @@ const tuesday: Schedule = {
   location: locations.internet,
   intervals: [
     {
+      begin: "10:00",
+      end: "14:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          level: Level.BEGINNER,
+          title: "MicroFrontends in React",
+          description: `Our first MicroFrontend project started almost to the day exactly five years ago and since then we have accompanied countless projects following this architectural style. Ever since, the technical possibilities with which MicroFrontends can be implemented have changed significantly and the options have increased considerably.
+
+On the client-side we came from dilettante approaches based on iFrames and settled up with more elaborated strategies like Webpack Module-Federation or EcmaScript Import-Maps. We moved from pure Edge-Side-Includes to full fletched frameworks that allow us to compose MicroFrontends more comfortably and sustainably on the server-side. And even during the implementation, we achieved entirely new possibilities by more mature ways to manage MonoRepos and distributed or incremental builds. By showing real-world examples, we will go into detail about the evolution of these different approaches.
+          
+Upon a closer look at the challenges that still remain, it will become clear that none of these new concepts and tools come for free but with a fair amount of newly introduced complexity. Ultimately, this workshop will explain the different possibilities to implement MicroFrontends in the past, the present, and the future. More importantly, it will leave you to know which of the available approaches is best suited for your specific task at hand.`,
+          people: [people.david],
+        },
+      ],
+    },
+    {
       begin: "15:00",
       end: "16:30",
       title: "Architecture",
@@ -90,6 +107,14 @@ Towards the end, we'll explore the benefits, focusing on testing these decoupled
           description:
             "Likely you've heard of Web Components but do you know how to use them with React? If not, then this is the demonstration for you!",
           people: [people.matias],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Micro Frontends in React — a State of the Art Approach",
+          description:
+            "David will explain the different possibilities to implement MicroFrontends in the past, the present, and the future. More importantly, he will leave you to know which of the available approaches is best suited for your specific task at hand.",
+          people: [people.david],
         },
       ],
     },
