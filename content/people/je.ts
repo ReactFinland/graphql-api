@@ -8,7 +8,7 @@ const person: Contact = {
     url: "people/je.jpg",
   },
   social: {
-    homepage: "",
+    homepage: "http://jex.me/",
     twitter: "jexia_",
     github: "ije",
     facebook: "",
