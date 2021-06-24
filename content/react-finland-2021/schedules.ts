@@ -213,15 +213,17 @@ const thursday: Schedule = {
     {
       begin: "10:00",
       end: "11:30",
-      title: "To be announced",
+      title: "Tooling",
       mc: people.manjula,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          level: Level.INTERMEDIATE,
+          title: "Aleph.js - Build your react app in Deno",
+          description:
+            "A demo on Aleph.js about good dev experience and deno runtime.",
+          people: [people.je],
+        },
       ],
     },
     {
