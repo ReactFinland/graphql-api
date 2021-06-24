@@ -14,6 +14,7 @@ export { default as bohdanLiashenko } from "./bohdan-liashenko";
 export { default as brent } from "./brent";
 export { default as brunoLourenco } from "./bruno-lourenco";
 export { default as calin } from "./calin";
+export { default as calinb } from "./calinb";
 export { default as carolynStransky } from "./carolyn-stransky";
 export { default as christianAlfoni } from "./christian-alfoni";
 export { default as christofferNiska } from "./christoffer-niska";

@@ -197,15 +197,17 @@ const thursday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
-      title: "To be announced",
+      title: "Techniques",
       mc: people.manjula,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          level: Level.INTERMEDIATE,
+          title: "How to Delegate your React Dialogs",
+          description:
+            "How to properly hide modals / dialogs / drawers functionalities behind buttons that spawn them without cluttering container components.",
+          people: [people.calinb],
+        },
       ],
     },
     {
