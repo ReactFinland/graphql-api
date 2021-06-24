@@ -3,7 +3,7 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Je Xia",
-  about: "Web developer and graphic designer.",
+  about: "Web developer and graphic designer. Creator of Aleph.js and esm.sh.",
   image: {
     url: "people/je.jpg",
   },
@@ -23,7 +23,7 @@ const person: Contact = {
       name: "China",
       code: "CN",
     },
-    city: "",
+    city: "Beijing",
   },
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],

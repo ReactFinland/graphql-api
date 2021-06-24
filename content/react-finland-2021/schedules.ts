@@ -219,9 +219,9 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Aleph.js - Build your react app in Deno",
+          title: "Aleph.js - Build your React app in Deno",
           description:
-            "A demo on Aleph.js about good dev experience and deno runtime.",
+            "A demo on Aleph.js about good development experience and deno runtime.",
           people: [people.je],
         },
       ],
