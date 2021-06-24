@@ -20,10 +20,10 @@ const person: Contact = {
   },
   location: {
     country: {
-      name: "", // TODO: Country name
-      code: "", // TODO: Two-letter country code
+      name: "Romania",
+      code: "RO",
     },
-    city: "", // TODO: City name
+    city: "",
   },
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
