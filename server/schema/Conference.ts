@@ -8,88 +8,88 @@ import { Session } from "./Session";
 
 @ObjectType()
 export class Conference {
-  @Field(_ => ID)
+  @Field((_) => ID)
   public id!: string;
 
-  @Field(_ => String)
+  @Field((_) => String)
   public series!: string;
 
-  @Field(_ => String)
+  @Field((_) => String)
   public name!: string;
 
-  @Field(_ => Contact)
+  @Field((_) => Contact)
   public organizer!: Contact;
 
-  @Field(_ => String)
+  @Field((_) => String)
   public year!: string;
 
-  @Field(_ => String)
+  @Field((_) => String)
   public startDate!: string;
 
-  @Field(_ => String)
+  @Field((_) => String)
   public endDate!: string;
 
-  @Field(_ => String)
+  @Field((_) => String)
   public slogan!: string;
 
-  @Field(_ => String)
+  @Field((_) => String)
   public websiteUrl!: string;
 
-  @Field(_ => [Location], { nullable: true })
+  @Field((_) => [Location], { nullable: true })
   public locations?: Location[];
 
-  @Field(_ => [Contact])
+  @Field((_) => [Contact])
   public organizers!: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public mcs?: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public partners?: Contact[];
 
-  @Field(_ => [Contact])
+  @Field((_) => [Contact])
   public sponsors!: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public goldSponsors!: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public silverSponsors!: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public bronzeSponsors!: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public platformSponsors!: Contact[];
 
-  @Field(_ => [Schedule])
+  @Field((_) => [Schedule])
   public schedules!: Schedule[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public allSpeakers?: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public speakers?: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public keynoteSpeakers?: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public fullTalkSpeakers?: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public lightningTalkSpeakers?: Contact[];
 
-  @Field(_ => [Contact], { nullable: true })
+  @Field((_) => [Contact], { nullable: true })
   public workshopInstructors?: Contact[];
 
-  @Field(_ => [Session], { nullable: true })
+  @Field((_) => [Session], { nullable: true })
   public talks?: Session[];
 
-  @Field(_ => [Session], { nullable: true })
+  @Field((_) => [Session], { nullable: true })
   public workshops?: Session[];
 
-  @Field(_ => [Contact])
+  @Field((_) => [Contact])
   public attendees?: Contact[];
 }
 

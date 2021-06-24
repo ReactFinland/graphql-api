@@ -7,16 +7,16 @@ import SessionType from "./SessionType";
 
 @ObjectType()
 export class Schedule {
-  @Field(_ => String)
+  @Field((_) => String)
   public day!: string;
 
-  @Field(_ => Location, { nullable: true })
+  @Field((_) => Location, { nullable: true })
   public location?: Location;
 
-  @Field(_ => String, { nullable: true })
+  @Field((_) => String, { nullable: true })
   public description?: string;
 
-  @Field(_ => [Interval])
+  @Field((_) => [Interval])
   public intervals!: Interval[];
 }
 
@@ -27,7 +27,7 @@ export function resolveSessions(
   return uniq(
     flatMap(schedules, ({ intervals }) =>
       flatMap(intervals, ({ sessions }) =>
-        flatMap(sessions, session =>
+        flatMap(sessions, (session) =>
           [session].concat(session.sessions || [])
         ).filter(({ type }) => sessionTypes.includes(type))
       )

@@ -27,7 +27,7 @@ function routeMedia(router, mediaUrl, mediaPath) {
         next();
       }
     } else {
-      res.sendFile(asset, { root: mediaPath }, err => {
+      res.sendFile(asset, { root: mediaPath }, (err) => {
         res.end();
 
         if (err) {

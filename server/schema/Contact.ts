@@ -30,49 +30,49 @@ export enum ContactType {
 @ObjectType()
 export class Contact {
   // Needed for badges
-  @Field(_ => String)
+  @Field((_) => String)
   public firstName?: string;
 
   // Needed for badges
-  @Field(_ => String)
+  @Field((_) => String)
   public lastName?: string;
 
   // Combine with first/lastName somehow? Problematic for companies.
-  @Field(_ => String)
+  @Field((_) => String)
   public name!: string;
 
-  @Field(_ => String)
+  @Field((_) => String)
   public about!: string;
 
-  @Field(_ => String, { nullable: true })
+  @Field((_) => String, { nullable: true })
   public aboutShort?: string;
 
   // TODO: This might become a Contact reference eventually
-  @Field(_ => String, { nullable: true })
+  @Field((_) => String, { nullable: true })
   public company?: string;
 
-  @Field(_ => Image)
+  @Field((_) => Image)
   public image!: Image;
 
-  @Field(_ => [ContactType])
+  @Field((_) => [ContactType])
   public type!: ContactType[];
 
-  @Field(_ => Social)
+  @Field((_) => Social)
   public social!: Social;
 
-  @Field(_ => [String], { nullable: true })
+  @Field((_) => [String], { nullable: true })
   public keywords?: Keyword[];
 
-  @Field(_ => Location)
+  @Field((_) => Location)
   public location!: Location;
 
-  @Field(_ => [Session], { nullable: true })
+  @Field((_) => [Session], { nullable: true })
   public talks?: Session[];
 
-  @Field(_ => [Session], { nullable: true })
+  @Field((_) => [Session], { nullable: true })
   public workshops?: Session[];
 
-  @Field(_ => Boolean, { nullable: true })
+  @Field((_) => Boolean, { nullable: true })
   public noPhotography?: boolean;
 }
 
@@ -90,28 +90,28 @@ export function getSessionSpeakers(
     SessionType.WORKSHOP,
   ]);
   const speakers = uniqBy(
-    flatMap(sessions, session =>
+    flatMap(sessions, (session) =>
       (session.people || []).concat(
         session.sessions
-          ? flatMap(session.sessions, session => session.people || [])
+          ? flatMap(session.sessions, (session) => session.people || [])
           : []
       )
     ),
     "name"
   );
 
-  return speakers.map(speaker => ({
+  return speakers.map((speaker) => ({
     ...speaker,
     talks: talks
       ? talks.filter(
           ({ people }) =>
-            people && people.find(person => person.name === speaker.name)
+            people && people.find((person) => person.name === speaker.name)
         )
       : [],
     workshops: workshops
       ? workshops.filter(
           ({ people }) =>
-            people && people.find(person => person.name === speaker.name)
+            people && people.find((person) => person.name === speaker.name)
         )
       : [],
   }));

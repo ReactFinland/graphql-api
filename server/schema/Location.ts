@@ -13,31 +13,31 @@ import { Social } from "./Social";
 
 @ObjectType()
 export class Location {
-  @Field(_ => String, { nullable: true })
+  @Field((_) => String, { nullable: true })
   public name?: string;
 
-  @Field(_ => String, { nullable: true })
+  @Field((_) => String, { nullable: true })
   public about?: string;
 
-  @Field(_ => Image, { nullable: true })
+  @Field((_) => Image, { nullable: true })
   public image?: Image;
 
-  @Field(_ => Social, { nullable: true })
+  @Field((_) => Social, { nullable: true })
   public social?: Social;
 
-  @Field(_ => Country, { nullable: true })
+  @Field((_) => Country, { nullable: true })
   public country?: Country;
 
-  @Field(_ => String, { nullable: true })
+  @Field((_) => String, { nullable: true })
   public city?: string;
 
-  @Field(_ => String, { nullable: true })
+  @Field((_) => String, { nullable: true })
   public address?: string;
 }
 
-@Resolver(_ => Location)
+@Resolver((_) => Location)
 export class LocationResolver {
-  @FieldResolver(_ => Image)
+  @FieldResolver((_) => Image)
   public image(@Root() location: Location, @Ctx() ctx: IContext) {
     return {
       url: location.image ? `${ctx.mediaUrl}/${location.image.url}` : "",

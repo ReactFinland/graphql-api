@@ -16,16 +16,16 @@ if (env.CLOUDINARY_CLOUD_NAME) {
   initImageRegistry();
 }
 
-let resources: Array<{ id: string; url: string; md5?: string }> = [];
+let resources: { id: string; url: string; md5?: string }[] = [];
 
 function initImageRegistry() {
   cloudinary.api.resources(
-    result => {
+    (result) => {
       if (!result.resources) {
         throw new Error("No image resources!");
       }
 
-      resources = result.resources.map(resource => ({
+      resources = result.resources.map((resource) => ({
         id: resource.public_id,
         url: resource.secure_url,
       }));
@@ -46,7 +46,7 @@ async function resolveImage(mediaPath: string, url: string) {
   // TODO: Figure out how to derive the same resource id as cloudinary does
   const resourceId: string = url.split("?")[0].replace(/\//g, "-");
   const matchedResource = resources.find(
-    resource => resource.id === resourceId
+    (resource) => resource.id === resourceId
   );
 
   if (!matchedResource) {

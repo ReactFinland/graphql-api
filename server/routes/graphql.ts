@@ -4,7 +4,7 @@ import process from "process";
 function routeGraphQL(router, schema, projectRoot, mediaUrl) {
   router.all(
     "/graphql",
-    graphql(request => {
+    graphql((request) => {
       const hostname = getHostname(request);
 
       return {

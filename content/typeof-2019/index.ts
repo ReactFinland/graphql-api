@@ -35,20 +35,20 @@ const conference: Conference = {
 
 // TODO: Attach images from the site (needs improved data fetcher)
 function resolveSchedules({ schedules, speakers }) {
-  return schedules.map(schedule => {
+  return schedules.map((schedule) => {
     return {
       ...schedule,
-      intervals: schedule.intervals.map(interval => {
+      intervals: schedule.intervals.map((interval) => {
         return {
           ...interval,
-          sessions: interval.sessions.map(session => {
+          sessions: interval.sessions.map((session) => {
             return {
               ...session,
               // TODO: Not correct but good enough for a demo
               type: SessionType.TALK,
               people:
                 session.people &&
-                session.people.map(person => {
+                session.people.map((person) => {
                   const existingPerson =
                     Object.values(people).find(({ name }) => {
                       return name === person.name;

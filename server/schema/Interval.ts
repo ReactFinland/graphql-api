@@ -5,21 +5,21 @@ import { Session } from "./Session";
 
 @ObjectType()
 export class Interval {
-  @Field(_ => String)
+  @Field((_) => String)
   public begin!: string;
 
-  @Field(_ => String)
+  @Field((_) => String)
   public end!: string;
 
-  @Field(_ => String, { nullable: true })
+  @Field((_) => String, { nullable: true })
   public title?: string;
 
-  @Field(_ => [Session])
+  @Field((_) => [Session])
   public sessions!: Session[];
 
-  @Field(_ => Location, { nullable: true })
+  @Field((_) => Location, { nullable: true })
   public location?: Location;
 
-  @Field(_ => Contact, { nullable: true })
+  @Field((_) => Contact, { nullable: true })
   public mc?: Contact;
 }

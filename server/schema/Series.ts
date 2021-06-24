@@ -3,12 +3,12 @@ import { Conference } from "./Conference";
 
 @ObjectType()
 export class Series {
-  @Field(_ => ID)
+  @Field((_) => ID)
   public id!: string;
 
-  @Field(_ => String)
+  @Field((_) => String)
   public name!: string;
 
-  @Field(_ => [Conference])
+  @Field((_) => [Conference])
   public conferences!: [Conference];
 }

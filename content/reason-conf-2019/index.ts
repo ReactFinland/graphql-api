@@ -34,13 +34,13 @@ const conference: Conference = {
 };
 
 function resolveSchedules({ schedules, speakers }) {
-  return schedules.map(schedule => {
+  return schedules.map((schedule) => {
     return {
       ...schedule,
-      intervals: schedule.intervals.map(interval => {
+      intervals: schedule.intervals.map((interval) => {
         return {
           ...interval,
-          sessions: interval.sessions.map(session => {
+          sessions: interval.sessions.map((session) => {
             return {
               ...session,
               type: resolveSessionType(session.type),
@@ -87,8 +87,8 @@ function resolveSessionPeople(people, sessionPeople) {
   }
 
   const ret = sessionPeople
-    .map(name => {
-      return people.find(person => person.name === name);
+    .map((name) => {
+      return people.find((person) => person.name === name);
     })
     .filter(Boolean);
 
