@@ -10,6 +10,20 @@ const monday: Schedule = {
   location: locations.internet,
   intervals: [
     {
+      begin: "11:00",
+      end: "15:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          level: Level.INTERMEDIATE,
+          title: "Modeling React Apps with XState",
+          description:
+            "In this workshop, you will become familiar with XState and learn to apply it in your daily work. If you have ever wanted to pick up state machines and statecharts, this is a good chance to do it.",
+          people: [people.davidKhourshid],
+        },
+      ],
+    },
+    {
       begin: "12:00",
       end: "15:00",
       sessions: [
@@ -51,6 +65,14 @@ However, video that takes a long time to start up leads to frustration and aband
           description:
             "To show how we can make rich, interactive experiences, for instance games, with React semantics and shareable components, and what that means for traditional constructs, like the render-loop.",
           people: [people.paul],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "The State of XState",
+          description:
+            "Over the past few years, state machines, statecharts, and the actor model have proven to be viable concepts for building complex application logic in a clear, visual way with XState. In this talk, we'll take a peek into the future of XState, including new features in the next version, and new tools and services that will make it even easier to create and collaborate on state machines.",
+          people: [people.davidKhourshid],
         },
       ],
     },
