@@ -1,7 +1,5 @@
 import * as path from "path";
-import { env } from "process";
 import logger from "../logger";
-import { resolveImage } from "./resolve-image";
 
 function routeMedia(router, mediaUrl, mediaPath) {
   router.all(`${mediaUrl}/*`, async (req, res, next) => {
@@ -9,18 +7,7 @@ function routeMedia(router, mediaUrl, mediaPath) {
 
     if ([".jpg", ".png", ".svg"].includes(path.extname(asset))) {
       try {
-        const url = await resolveImage(mediaPath, asset);
-
-        if (!env.CLOUDINARY_CLOUD_NAME) {
-          return res.sendFile(url);
-        }
-
-        // TODO: This is where it would be possible to intercept and cache
-        // so we don't hit Cloudinary CDN.
-        // Likely we want something like images.react-finland.fi and then use
-        // that as a bucket for some CDN (Cloudflare?) to decouple images from
-        // the API.
-        res.redirect(url);
+        return res.sendFile(path.join(mediaPath, asset));
       } catch (err) {
         logger.error(err);
 

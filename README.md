@@ -11,21 +11,13 @@ To see the query API:
 
 ## Image Processing
 
-The images are pushed to [Cloudinary](https://cloudinary.com/) and it's used as our image CDN. Remember to set `.env` for local development if you want to use images:
+There's no special image processing in place at the moment.
 
-**.env**
-
-```
-CLOUDINARY_CLOUD_NAME=react-finland
-CLOUDINARY_API_KEY=<get from Cloudinary account>
-CLOUDINARY_API_SECRET=<get from Cloudinary account>
-```
-
-Also remember to set the same on the host of the API.
-
-> You can access images through `http://localhost:3000/graphql/images`. Example: `http://localhost:3000/graphql/images/ken.jpg`.
+> You can access images through `http://localhost:3000/media`. Example: `http://localhost:3000/media/people/ken.jpg`.
 
 ## Webhooks
+
+See the webhooks below.
 
 ### Heroku to Netlify
 
