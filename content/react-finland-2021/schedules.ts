@@ -251,15 +251,19 @@ const thursday: Schedule = {
     {
       begin: "12:00",
       end: "13:30",
-      title: "To be announced",
+      title: "a11y",
       mc: people.saraVieira,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          level: Level.BEGINNER,
+          title:
+            "How to Catch Low Hanging Accessibility Fruits while Developing",
+          description: `We, as developers, tend to develop sites for users like ourselves, which usually causes accessibility problems. As we are often sighted, can use a mouse, and have good fine motor skills, we might (unconsciously) forget those users who aren't like us. 
+
+In this demo, I will show some techniques every developer should know and use when developing their sites or apps. These simple checks don't ensure 100% accessibility but help catch the most obvious flaws in your site.`,
+          people: [people.eevis],
+        },
       ],
     },
     {
