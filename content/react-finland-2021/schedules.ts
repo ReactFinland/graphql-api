@@ -251,7 +251,7 @@ const thursday: Schedule = {
     {
       begin: "12:00",
       end: "13:30",
-      title: "a11y",
+      title: "Accessibility",
       mc: people.saraVieira,
       sessions: [
         {
