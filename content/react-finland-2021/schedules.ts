@@ -230,6 +230,15 @@ const thursday: Schedule = {
             "How to properly hide modals / dialogs / drawers functionalities behind buttons that spawn them without cluttering container components.",
           people: [people.calinb],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title:
+            "Testing the integrity of your React components by publishing in a private registry",
+          description:
+            "The final stage of a react component is when it is being published and distributed. How can I ensure my packages won’t crash in production? This talk will help you to test your React components by publishing them to a private registry and running End-to-End tests against them.",
+          people: [people.juan],
+        },
       ],
     },
     {
