@@ -239,12 +239,25 @@ const thursday: Schedule = {
             "The final stage of a react component is when it is being published and distributed. How can I ensure my packages won’t crash in production? This talk will help you to test your React components by publishing them to a private registry and running End-to-End tests against them.",
           people: [people.juan],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "The Eternal Sunshine of the Zero Build Pipeline",
+          description: `For many years, we have migrated all our devtools to Node.js for the sake of simplicity: a common language (JS/TS), a large ecosystem (NPM), and a powerful engine. In the meantime, we moved a lot of computation tasks to the client-side thanks to PWA and JavaScript Hegemony.
+
+So we made Webapps for years, developing with awesome reactive frameworks and bundling a lot of dependencies. We progressively moved from our simplicity to complex apps toolchains. We've become the new Java-like ecosystem. It sucks.
+          
+It's 2021, we've got a lot of new technologies to sustain our Users eXperience. It's time to have a break and rethink our tools rather than going faster and faster in the same direction. It's time to redesign the Developer eXperience. It's time for a bundle-free dev environment. It's time to embrace a new frontend building philosophy, still with our lovely JavaScript
+          
+Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
+          people: [people.m4Dz],
+        },
       ],
     },
     {
       begin: "10:00",
       end: "11:30",
-      title: "Tooling",
+      title: "Frameworks",
       mc: people.manjula,
       sessions: [
         {
@@ -317,15 +330,20 @@ const friday: Schedule = {
     {
       begin: "10:00",
       end: "11:30",
-      title: "To be announced",
+      title: "Design systems",
       mc: people.saraVieira,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          level: Level.INTERMEDIATE,
+          title: "KISS Your UI",
+          description: `Design Systems for your components framework
+
+Atomic Design was Imagined by Brad Frost 10 years ago, and has pushed the creation of interfaces to the Design Systems era. Yet, it’s still very adapted to the components frameworks pattern. No matter you’re committed to React, Vue.js, Svelte, or whatever other modern front-end framework.
+          
+Let’s discover how a KISS (Keep It Simple System) methodology like the Design Systems applied to our modern interfaces suits very well to our front-end tooling. This talk will introduce you to the Wonderland of reusable interfaces. Easy to build, easy to maintain, easy to deploy, and easy to document! From templates to style guides, come to find how to improve your daily-basis workflow!`,
+          people: [people.m4Dz],
+        },
       ],
     },
     {
