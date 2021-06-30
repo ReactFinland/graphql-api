@@ -1,5 +1,6 @@
-import { Field, FieldResolver, ObjectType, Resolver, Root } from "type-graphql";
+import { Field, ObjectType } from "type-graphql";
 import { Contact } from "./Contact";
+import { Interval } from "./Interval";
 import Keyword from "./keywords";
 import Level from "./Level";
 import { Location } from "./Location";
@@ -49,16 +50,22 @@ export class Session {
 
   @Field((_) => [Session], { nullable: true })
   public sessions?: Session[];
-}
 
-@Resolver((_) => Session)
-export class SessionResolver {
-  @FieldResolver((_) => [Contact], {
-    deprecationReason: "Use `people` instead",
-  })
-  public speakers(@Root() session: Session) {
-    return session.people || [];
-  }
+  // This refers to the closest interval. Note the recursion above.
+  @Field((_) => Interval)
+  public parent?: Interval;
+
+  // Derived from a parent Schedule if it exists
+  @Field((_) => String, { nullable: true })
+  public day?: string;
+
+  // Derived from a parent Interval if it exists
+  @Field((_) => String, { nullable: true })
+  public begin?: string;
+
+  // Derived from a parent Interval if it exists
+  @Field((_) => String, { nullable: true })
+  public end?: string;
 }
 
 // Backwards-compatibility with content. TODO: refactor out

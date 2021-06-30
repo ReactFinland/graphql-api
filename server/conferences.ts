@@ -12,17 +12,35 @@ import typeof2019 from "../content/typeof-2019";
 import { Conference } from "./schema/Conference";
 
 const conferences: { [id: string]: Conference } = {
-  ["freezing-edge-2020"]: freezingEdge2020,
-  ["techmovienight"]: techMovieNight,
-  ["halfstack-vienna-2019"]: halfstackVienna2019,
-  ["reason-conf-2019"]: reasonConf2019,
-  ["react-finland-2018"]: reactFinland2018,
-  ["react-finland-2019"]: reactFinland2019,
-  ["react-finland-2020"]: reactFinland2020,
-  ["react-finland-2021"]: reactFinland2021,
-  ["typeof-2019"]: typeof2019,
-  ["graphql-finland-2018"]: graphQLFinland2018,
-  ["graphql-finland-2020"]: graphQLFinland2020,
+  ["freezing-edge-2020"]: attachParents(freezingEdge2020),
+  ["techmovienight"]: attachParents(techMovieNight),
+  ["halfstack-vienna-2019"]: attachParents(halfstackVienna2019),
+  ["reason-conf-2019"]: attachParents(reasonConf2019),
+  ["react-finland-2018"]: attachParents(reactFinland2018),
+  ["react-finland-2019"]: attachParents(reactFinland2019),
+  ["react-finland-2020"]: attachParents(reactFinland2020),
+  ["react-finland-2021"]: attachParents(reactFinland2021),
+  ["typeof-2019"]: attachParents(typeof2019),
+  ["graphql-finland-2018"]: attachParents(graphQLFinland2018),
+  ["graphql-finland-2020"]: attachParents(graphQLFinland2020),
 };
+
+function attachParents(conference: Conference): Conference {
+  return {
+    ...conference,
+    schedules: conference.schedules.map((schedule) => ({
+      ...schedule,
+      intervals: schedule.intervals.map((interval) => ({
+        ...interval,
+        sessions: interval.sessions.map((session) => ({
+          ...session,
+          day: schedule.day,
+          begin: interval.begin,
+          end: interval.end,
+        })),
+      })),
+    })),
+  };
+}
 
 export default conferences;
