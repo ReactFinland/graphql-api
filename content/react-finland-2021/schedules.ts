@@ -94,6 +94,21 @@ const tuesday: Schedule = {
   intervals: [
     {
       begin: "10:00",
+      end: "13:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          level: Level.INTERMEDIATE,
+          title: "Powering Next.js with Drupal",
+          description: `This session will cover why and how to fully decouple Drupal with Next.JS, an open source modern frontend framework that will empower frontend developers to build incredibly fast and interactive websites using React without losing key benefits that Drupal provides like content modeling and administration UI.
+          
+Join us if you want to discover the ins and outs of how Drupal and Gatsby ecosystem complement each other.`,
+          people: [people.davidC, people.mario],
+        },
+      ],
+    },
+    {
+      begin: "10:00",
       end: "14:00",
       sessions: [
         {
