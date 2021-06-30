@@ -74,6 +74,14 @@ However, video that takes a long time to start up leads to frustration and aband
             "Over the past few years, state machines, statecharts, and the actor model have proven to be viable concepts for building complex application logic in a clear, visual way with XState. In this talk, we'll take a peek into the future of XState, including new features in the next version, and new tools and services that will make it even easier to create and collaborate on state machines.",
           people: [people.davidKhourshid],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "SolidJS - Reactive JSX",
+          description:
+            "An introduction to SolidJS UI Library. Explore an example to show the similarity and differences between Hook + Virtual DOM versus Reactivity + DOM.",
+          people: [people.ryan],
+        },
       ],
     },
   ],
