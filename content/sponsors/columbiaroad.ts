@@ -2,7 +2,7 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
   name: "Columbia Road",
-  about: "A Digital Growth Consultancy by Futurice",
+  about: "A Nordic Digital Sales Consultancy",
   image: {
     url: "sponsors/columbiaroad.svg",
   },
@@ -16,6 +16,7 @@ const sponsor: Contact = {
     twitter: "ColumbiaRoadCom",
     pinterest: "",
   },
+  // Also Stockholm, Sweden -> TODO: Make the field an array
   location: {
     country: {
       name: "Finland",
