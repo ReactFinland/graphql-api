@@ -23,7 +23,7 @@ const person: Contact = {
       name: "Romania",
       code: "RO",
     },
-    city: "",
+    city: "Cluj-Napoca",
   },
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
