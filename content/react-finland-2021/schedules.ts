@@ -389,7 +389,7 @@ Let’s discover how a KISS (Keep It Simple System) methodology like the Design 
           title:
             "How to structure, style and document your components for maximum effectiveness",
           description: `I'll present a practical approach to styling react components, a folder structure and documentation structure that's very easy to follow (for onboarding members) + other insights I got while using this approach.`,
-          people: [people.jan],
+          people: [people.dragos],
         },
       ],
     },
