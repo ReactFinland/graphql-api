@@ -383,6 +383,14 @@ Atomic Design was Imagined by Brad Frost 10 years ago, and has pushed the creati
 Let’s discover how a KISS (Keep It Simple System) methodology like the Design Systems applied to our modern interfaces suits very well to our front-end tooling. This talk will introduce you to the Wonderland of reusable interfaces. Easy to build, easy to maintain, easy to deploy, and easy to document! From templates to style guides, come to find how to improve your daily-basis workflow!`,
           people: [people.m4Dz],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title:
+            "How to structure, style and document your components for maximum effectiveness",
+          description: `I'll present a practical approach to styling react components, a folder structure and documentation structure that's very easy to follow (for onboarding members) + other insights I got while using this approach.`,
+          people: [people.jan],
+        },
       ],
     },
     {
