@@ -93,6 +93,22 @@ const tuesday: Schedule = {
   location: locations.internet,
   intervals: [
     {
+      begin: "09:00",
+      end: "12:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          level: Level.ADVANCED,
+          title:
+            "Current state of SSR in React, its limitations and its future",
+          description: `Server Side Rendering (SSR) can be achieved in many ways. renderToString and renderToNodeStream are the basic functionality exported by React. But how can they be integrated into the current app and where are limitations of renderToNodeStream. We will learn how code splitting in SSR with lazy works and how the experimental Suspense in React 18 would change existing 3rd-party-libraries. When there is time we dive into Next.js and Gatsby, its differences and how to achieve a simple website with one of these libraries. When there is even more time (might not be the case) we will talk about React’s server components which are yet in research.
+
+The goal of this workshop is to understand how SSR works in React and how to improve it.`,
+          people: [people.jan],
+        },
+      ],
+    },
+    {
       begin: "10:00",
       end: "13:00",
       sessions: [

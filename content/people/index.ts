@@ -44,6 +44,7 @@ export { default as isaSilveira } from "./isa-silveira";
 export { default as ivanGoncharov } from "./ivan-goncharov";
 export { default as ivanOrlov } from "./ivan-orlov";
 export { default as jamonHolmgren } from "./jamon-holmgren";
+export { default as jan } from "./jan";
 export { default as janiEvakallio } from "./jani-evakallio";
 export { default as jaredPalmer } from "./jared-palmer";
 export { default as je } from "./je";
