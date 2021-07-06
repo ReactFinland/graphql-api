@@ -24,6 +24,7 @@ export { default as davidKhourshid } from "./david-khourshid";
 export { default as david } from "./david";
 export { default as diegoHaz } from "./diego-haz";
 export { default as doug } from "./doug";
+export { default as dragos } from "./dragos";
 export { default as dustinSchau } from "./dustin-schau";
 export { default as eemeliAro } from "./eemeli-aro";
 export { default as eevis } from "./eevis";
