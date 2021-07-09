@@ -220,15 +220,18 @@ const wednesday: Schedule = {
     {
       begin: "12:00",
       end: "13:30",
-      title: "To be announced",
+      title: "Content management",
       mc: people.saraVieira,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          level: Level.INTERMEDIATE,
+          title: "How to View and React without a Head",
+          description: `You might have heard about Headless CMS. This new type of content platform gives us some benefits compared to a Monolithic CMS.
+          
+We will talk about the key features of any Headless CMS and how we can integrate a headless platform into our React applications. We will focus on Storyblok, a headless CMS that offers a real-time Visual Editor, a great feature for developers and content creators.`,
+          people: [people.facundo],
+        },
       ],
     },
     {
