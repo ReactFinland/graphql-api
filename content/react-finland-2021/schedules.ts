@@ -421,6 +421,14 @@ In this short talk I'm going to demo Nx and what it can do for you to help you m
 We'll demonstrate live streaming **from** the browser, and then how to integrate that live stream into your webpage.`,
           people: [people.doug],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "On The Road To The World's Best Branding",
+          description:
+            "In this talk we'll take a closer how we do event branding and theming at Brella, and how we want to progress it in the future. Topics such as generating accessible colors will be discussed.",
+          people: [people.niklas],
+        },
       ],
     },
     {

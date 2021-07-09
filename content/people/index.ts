@@ -89,6 +89,7 @@ export { default as monicaLent } from "./monica-lent";
 export { default as naderDabit } from "./nader-dabit";
 export { default as nataliaTepluhina } from "./natalia-tepluhina";
 export { default as nikGraf } from "./nik-graf";
+export { default as niklas } from "./niklas";
 export { default as olavi } from "./olavi";
 export { default as patrickEcker } from "./patrick-ecker";
 export { default as patrickHund } from "./patrick-hund";
