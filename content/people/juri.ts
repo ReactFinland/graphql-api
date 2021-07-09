@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Juri Strumpflohner",
   about:
-    "I've been working as a software developer and architect for 10+ years, with technologies like Java, .Net, Node.js on the desktop, mobile as well as web. Lately I'm mostly focusing on frontend web development with JavaScript, on writing technical articles, teaching and consulting.",
+    "Juri Strumpflohner lives in the very northern part of Italy and is currently working as a JavaScript Architect and Engineering Manager at Nrwl, where he consults for some of the world's biggest companies around the globe. Juri is very involved in the community. He's a Google Developer Expert in Web Technologies & Angular, speaks at international conferences, teaches on Egghead.io, or writes articles on https://juri.dev. He's also a core member of Nx.",
   image: {
     url: "people/juri.jpg",
   },
@@ -15,16 +15,16 @@ const person: Contact = {
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
-    youtube: "",
-    devto: "",
+    linkedin: "juristr",
+    youtube: "JuriStrumpflohner",
+    devto: "juristr",
   },
   location: {
     country: {
       name: "Italy",
       code: "IT",
     },
-    city: "",
+    city: "Bolzano",
   },
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
