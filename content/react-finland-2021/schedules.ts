@@ -394,6 +394,15 @@ Let’s discover how a KISS (Keep It Simple System) methodology like the Design 
           description: `I'll present a practical approach to styling react components, a folder structure and documentation structure that's very easy to follow (for onboarding members) + other insights I got while using this approach.`,
           people: [people.dragos],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "React on Steroids with Nx!",
+          description: `We often talk and hear about scaling in production, but we rarely talk about scaling development. Aspects like structuring and organizing your codebase, code sharing across teams, speeding up build and test runs can play a huge role in terms of productivity for a developer team. That impacts small teams but gets even more evident as your team grows and especially for large enterprises.
+
+In this short talk I'm going to demo Nx and what it can do for you to help you modularize your React code, generate code for you, help you build faster and much more. Tune in to learn about the build framework you've been missing in your tool belt!`,
+          people: [people.juri],
+        },
       ],
     },
     {

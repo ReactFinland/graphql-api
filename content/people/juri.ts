@@ -5,12 +5,12 @@ const person: Contact = {
   name: "",
   about: "",
   image: {
-    url: "people/TODO.jpg",
+    url: "people/juri.jpg",
   },
   social: {
-    homepage: "",
-    twitter: "",
-    github: "",
+    homepage: "https://juristr.com/",
+    twitter: "juristr",
+    github: "juristr",
     facebook: "",
     medium: "",
     instagram: "",
@@ -20,8 +20,8 @@ const person: Contact = {
   },
   location: {
     country: {
-      name: "",
-      code: "",
+      name: "Italy",
+      code: "IT",
     },
     city: "",
   },
