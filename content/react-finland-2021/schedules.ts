@@ -190,17 +190,15 @@ const wednesday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
-      title: "React Native",
+      title: "To be announced",
       mc: people.manjula,
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "Integration Testing for React Native Apps",
-          description:
-            "My unpopular opinion is that testing is ... important. How do you test your React Native apps? In this presentation I will show how to run full integrations tests using Cypress while the RN app is running in the browser. This method can cover most of the application's code and be effective at finding logical errors and mistakes when calling the server APIs.",
-          people: [people.gleb],
-        },
+          title: "",
+          description: "",
+          people: [],
+        },*/
       ],
     },
     {
@@ -368,15 +366,25 @@ const friday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
-      title: "To be announced",
+      title: "React Native",
       mc: people.juhoVepsalainen,
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
+          level: Level.INTERMEDIATE,
+          title: "Integration Testing for React Native Apps",
+          description:
+            "My unpopular opinion is that testing is ... important. How do you test your React Native apps? In this presentation I will show how to run full integrations tests using Cypress while the RN app is running in the browser. This method can cover most of the application's code and be effective at finding logical errors and mistakes when calling the server APIs.",
+          people: [people.gleb],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Haptics, Sounds and Micro Animations",
+          description:
+            "Quick tips on how to utilise the native mobile platform to help provide your users an upgraded experience with sounds, vibrations and animations. Small changes can have a huge difference UX-wise.",
+          people: [people.kadiKraman],
+        },
       ],
     },
     {
