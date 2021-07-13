@@ -246,6 +246,13 @@ React Bricks is the first CMS that is super-great for Developers (it's just Reac
       ],
     },
     {
+      begin: "13:45",
+      end: "15:30",
+      title: "To be announced",
+      mc: people.juhoVepsalainen,
+      sessions: [],
+    },
+    {
       begin: "16:00",
       end: "17:30",
       title: "GraphQL",
