@@ -457,6 +457,14 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
             "In this talk we'll take a closer how we do event branding and theming at Brella, and how we want to progress it in the future. Topics such as generating accessible colors will be discussed.",
           people: [people.niklas],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "You thought your React application is secure? Think again",
+          description:
+            "Modern frontend frameworks like React are well thought-of in their application security design and that’s great. However, there is still plenty of room for developers to make mistakes and use insecure APIs, vulnerable components, or generally do the wrong thing that turns user input into a Cross-site Scripting vulnerability (XSS). Let me show you how React applications get hacked in the real-world.",
+          people: [people.liran],
+        },
       ],
     },
     {

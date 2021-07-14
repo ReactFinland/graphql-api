@@ -68,6 +68,7 @@ export { default as kentCDodds } from "./kent-c-dodds";
 export { default as kristaJantti } from "./krista-jantti";
 export { default as lauraGonzalez } from "./laura-gonzalez";
 export { default as lauri } from "./lauri";
+export { default as liran } from "./liran";
 export { default as lucaMatteis } from "./luca-matteis";
 export { default as lukeJackson } from "./luke-jackson";
 export { default as m4Dz } from "./m4dz";
