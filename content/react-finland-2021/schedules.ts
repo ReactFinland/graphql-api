@@ -333,6 +333,23 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
     {
       begin: "12:00",
       end: "13:30",
+      title: "ReScript",
+      mc: people.saraVieira,
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "A glimpse of ReScript",
+          description: `ReScript is a fully typed, almost zero-config language for React development with one of the fastest JS compiler and build system you can find today. Even though it's a different (JS like) language, it integrates seamlessly in existing JS / React codebases and allows easy gradual adoption that doesn't come with \`any\` types.
+
+In this talk, Patrick will show-case ReScript's coolest features in a live-coding demonstration. You will learn how ReScript / React looks like, how it integrates with JS codebases / libraries, and how it differentiates to gradual type systems such as TypeScript or Flow.`,
+          people: [people.patrickEcker],
+        },
+      ],
+    },
+    {
+      begin: "15:00",
+      end: "16:30",
       title: "Accessibility",
       mc: people.saraVieira,
       sessions: [
@@ -345,23 +362,6 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
 
 In this demo, I will show some techniques every developer should know and use when developing their sites or apps. These simple checks don't ensure 100% accessibility but help catch the most obvious flaws in your site.`,
           people: [people.eevis],
-        },
-      ],
-    },
-    {
-      begin: "15:00",
-      end: "16:30",
-      title: "ReScript",
-      mc: people.saraVieira,
-      sessions: [
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "A glimpse of ReScript",
-          description: `ReScript is a fully typed, almost zero-config language for React development with one of the fastest JS compiler and build system you can find today. Even though it's a different (JS like) language, it integrates seamlessly in existing JS / React codebases and allows easy gradual adoption that doesn't come with \`any\` types.
-
-In this talk, Patrick will show-case ReScript's coolest features in a live-coding demonstration. You will learn how ReScript / React looks like, how it integrates with JS codebases / libraries, and how it differentiates to gradual type systems such as TypeScript or Flow.`,
-          people: [people.patrickEcker],
         },
       ],
     },
