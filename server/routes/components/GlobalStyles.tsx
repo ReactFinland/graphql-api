@@ -95,7 +95,7 @@ function generateFontSrc(
 
 function generateFontUrl(fileName: string) {
   return (format: string): string =>
-    `url("${fileName}.${format}") format(${generateFormat(format)})`;
+    `url("${fileName}.${format}") format("${generateFormat(format)}")`;
 }
 
 function generateFormat(format: string): string {
