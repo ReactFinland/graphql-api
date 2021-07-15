@@ -329,7 +329,7 @@ const conferenceSeries: {
             weight: "normal",
             style: "normal",
             fileName: "/media/fonts/worksans-regular",
-            formats: ["woff2"],
+            formats: ["ttf"],
           },
         ],
       },
