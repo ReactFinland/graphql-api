@@ -90,9 +90,7 @@ function generateFontSrc(
     return "";
   }
 
-  return `format("embedded-opentype"),${formats
-    .map(generateFontUrl(fileName))
-    .join(",\n")}`;
+  return formats.map(generateFontUrl(fileName)).join(",\n");
 }
 
 function generateFontUrl(fileName: string) {
