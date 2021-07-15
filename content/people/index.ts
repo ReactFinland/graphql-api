@@ -37,6 +37,7 @@ export { default as erikRasmussen } from "./erik-rasmussen";
 export { default as esaMatti } from "./esa-matti";
 export { default as facundo } from "./facundo";
 export { default as farzadYz } from "./farzad-yz";
+export { default as francois } from "./francois";
 export { default as gantLaborde } from "./gant-laborde";
 export { default as georgeMandis } from "./george-mandis";
 export { default as gleb } from "./gleb";

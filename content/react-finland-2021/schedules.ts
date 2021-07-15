@@ -376,9 +376,17 @@ const friday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
-      title: "React Native",
+      title: "React Native and Testing",
       mc: people.juhoVepsalainen,
       sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "Screenshot testing with Viteshot",
+          description:
+            "François will introduce Viteshot, a new library that makes screenshot testing fast and simple, so you can be confident that your components look exactly the way they're supposed to.",
+          people: [people.francois],
+        },
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
