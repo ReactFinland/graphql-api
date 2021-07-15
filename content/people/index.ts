@@ -7,6 +7,7 @@ export { default as andrewRhyne } from "./andrew-rhyne";
 export { default as andreyG } from "./andrey-g";
 export { default as andreyOkonetchnikov } from "./andrey-okonetchnikov";
 export { default as annaDoubkova } from "./anna-doubkova";
+export { default as ante } from "./ante";
 export { default as artemSapegin } from "./artem-sapegin";
 export { default as artemZakharchenko } from "./artem-zakharchenko";
 export { default as benjieGillam } from "./benjie-gillam";
