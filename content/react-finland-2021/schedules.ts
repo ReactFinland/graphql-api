@@ -328,6 +328,14 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
             "A demo on Aleph.js about good development experience and deno runtime.",
           people: [people.je],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "SSR & SSG in NextJS",
+          description:
+            "In this talk we are going to have a look on how to use Server-Side-Rendering and Static-Site-Generation in NextJS to serve pages.",
+          people: [people.nur],
+        },
       ],
     },
     {
