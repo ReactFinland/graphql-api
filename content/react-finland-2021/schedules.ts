@@ -248,9 +248,21 @@ React Bricks is the first CMS that is super-great for Developers (it's just Reac
     {
       begin: "13:45",
       end: "15:30",
-      title: "To be announced",
+      title: "State machines",
       mc: people.juhoVepsalainen,
-      sessions: [],
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "Introducing state machines and statecharts",
+          description: `State machines and statecharts can seem intimidating. Especially if you (like me!) didn’t study computer science, aren’t big into maths, or just haven’t come across state machines and statecharts before.
+
+In this session, you’ll get a whirlwind introduction to state machines and statecharts, no prior knowledge and no coding experience required. Are you already familiar with state machines and statecharts but want to get a better understanding of the benefits and how to convince your team to get onboard? That’ll be covered too.
+          
+You could be a developer, designer, project manager, multi-disciplinarian or fancy specialist, I believe everyone can get something out of this talk, so join me!`,
+          people: [people.laurak],
+        },
+      ],
     },
     {
       begin: "16:00",
