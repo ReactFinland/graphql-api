@@ -21,10 +21,10 @@ const person: Contact = {
   },
   location: {
     country: {
-      name: "",
-      code: "",
+      name: "United States",
+      code: "US",
     },
-    city: "",
+    city: "San Francisco",
   },
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
