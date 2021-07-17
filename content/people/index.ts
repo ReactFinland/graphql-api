@@ -68,6 +68,7 @@ export { default as kenigboloMeyaStephen } from "./kenigbolo-meya-stephen";
 export { default as kennethSutherland } from "./kenneth-sutherland";
 export { default as kentCDodds } from "./kent-c-dodds";
 export { default as kristaJantti } from "./krista-jantti";
+export { default as lainey } from "./lainey";
 export { default as lauraGonzalez } from "./laura-gonzalez";
 export { default as laurak } from "./laurak";
 export { default as lauri } from "./lauri";

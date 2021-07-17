@@ -390,6 +390,15 @@ In this demo, I will show some techniques every developer should know and use wh
           description: `Did you know that 50% of users will NOT use the English version of your application, if it supports multiple languages? For ambitious high-growth businesses, going global is not "if" but "when" so it's important to recognize the importance of localization, especially in large multi-team projects. This discussion will explore the depths of localization in Agile companies and what can be achieved with a Continuous Localization system. I'll share some common issues we faced with multi-language products and how localization automation helped us to scale the process across many product teams within the company.`,
           people: [people.ante],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title:
+            "The Digital Accessibility Legal Landscape – why it matters for developers ",
+          description:
+            "Digital accessibility is a human right of people with disabilities around the globe.  That means developers have an important role to play in advancing human rights!  Join U.S. disability rights lawyer Lainey Feingold for a practical interactive discussion about laws and policies around the globe that impact digital accessibility. Come learn best practices for digital accessibility and how we all can “put the law in our pocket” to help make the digital world inclusive for everyone.",
+          people: [people.lainey],
+        },
       ],
     },
   ],
