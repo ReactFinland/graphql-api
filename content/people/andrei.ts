@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Andrei Pfeiffer",
-  about: "Eclectic Code Designer. UI Developer for web & mobile. Organizer of revo.js conference.",
+  about:
+    "Eclectic Code Designer. UI Developer for web & mobile. Organizer of revo.js conference.",
   image: {
     url: "people/andrei.jpg",
   },
