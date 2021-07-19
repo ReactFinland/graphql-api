@@ -83,6 +83,7 @@ export { default as manuelMatuzovic } from "./manuel-matuzovic";
 export { default as marcAndreGiroux } from "./marc-andre-giroux";
 export { default as margarita } from "./margarita";
 export { default as mario } from "./mario";
+export { default as mark } from "./mark";
 export { default as matias } from "./matias";
 export { default as matteo } from "./matteo";
 export { default as max } from "./max";
