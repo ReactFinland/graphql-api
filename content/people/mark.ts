@@ -2,15 +2,16 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
-  name: "",
-  about: "",
+  name: "Mark Dalgleish",
+  about:
+    "CSS Modules co-creator, Playroom, Braid, MelbJS. OSS / UI / design / tooling at @seek-oss",
   image: {
-    url: "people/TODO.jpg",
+    url: "people/mark.jpg",
   },
   social: {
     homepage: "",
-    twitter: "",
-    github: "",
+    twitter: "markdalgleish",
+    github: "markdalgleish",
     facebook: "",
     medium: "",
     instagram: "",
@@ -20,10 +21,10 @@ const person: Contact = {
   },
   location: {
     country: {
-      name: "",
-      code: "",
+      name: "Australia",
+      code: "AU",
     },
-    city: "",
+    city: "Melbourne",
   },
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],

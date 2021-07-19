@@ -216,6 +216,14 @@ const wednesday: Schedule = {
 Instead of reviewing each individual library, we’ll analyse the various features that these libraries have to offer, to better understand what approach better suits a specific use-case.`,
           people: [people.andrei],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Zero-runtime CSS-in-TypeScript with vanilla-extract",
+          description:
+            "Can we have themeable CSS-in-TypeScript without the runtime cost? In this talk we'll have a quick look at how this can be achieved with vanilla-extract.",
+          people: [people.mark],
+        },
       ],
     },
     {
