@@ -19,24 +19,26 @@ import { Session, SessionType } from "../Session";
 import series from "./conferenceSeries";
 import loadAttendees from "./load-attendees";
 
-@Resolver(_ => Conference)
+@Resolver((_) => Conference)
 class ConferenceResolver {
-  @Query(_ => Conference)
-  public conference(@Arg("id", _ => ID) id: string) {
+  @Query((_) => Conference)
+  public conference(@Arg("id", (_) => ID) id: string) {
     return getConference(id);
   }
 
-  @Query(_ => [Conference])
+  @Query((_) => [Conference])
   public conferences() {
     return Object.values(conferences);
   }
 
-  @Query(_ => [Conference], { deprecationReason: "Use `conferences` instead" })
+  @Query((_) => [Conference], {
+    deprecationReason: "Use `conferences` instead",
+  })
   public allConferences() {
     return Object.values(conferences);
   }
 
-  @FieldResolver(_ => Series)
+  @FieldResolver((_) => Series)
   public series(@Root() conference: Conference) {
     const id = conference.id;
 
@@ -50,26 +52,27 @@ class ConferenceResolver {
     return;
   }
 
-  @FieldResolver(_ => [Contact])
+  @FieldResolver((_) => [Contact])
   public allSpeakers(@Root() conference: Conference) {
     const talks = resolveSessions(conference.schedules, [
       SessionType.TALK,
       SessionType.KEYNOTE,
       SessionType.LIGHTNING_TALK,
       SessionType.PANEL,
+      SessionType.WORKSHOP,
     ]);
 
     return getSessionSpeakers(conference, talks);
   }
 
-  @FieldResolver(_ => [Contact])
+  @FieldResolver((_) => [Contact])
   public speakers(@Root() conference: Conference) {
     const talks = resolveSessions(conference.schedules, [SessionType.TALK]);
 
     return getSessionSpeakers(conference, talks);
   }
 
-  @FieldResolver(_ => [Contact])
+  @FieldResolver((_) => [Contact])
   public async attendees(@Root() conference: Conference, @Ctx() ctx: IContext) {
     const speakers = getSessionSpeakers(
       conference,
@@ -94,7 +97,7 @@ class ConferenceResolver {
     );
   }
 
-  @FieldResolver(_ => [Session], {
+  @FieldResolver((_) => [Session], {
     deprecationReason:
       "Use `keynotes`,s `fullTalks` and `lightningTalks` instead",
   })
@@ -106,36 +109,36 @@ class ConferenceResolver {
     ]);
   }
 
-  @FieldResolver(_ => [Session])
+  @FieldResolver((_) => [Session])
   public keynotes(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [SessionType.KEYNOTE]);
   }
 
-  @FieldResolver(_ => [Session])
+  @FieldResolver((_) => [Session])
   public keynoteSpeakers(@Root() conference: Conference) {
     const talks = resolveSessions(conference.schedules, [SessionType.KEYNOTE]);
 
     return getSessionSpeakers(conference, talks);
   }
 
-  @FieldResolver(_ => [Session])
+  @FieldResolver((_) => [Session])
   public fullTalks(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [SessionType.TALK]);
   }
 
-  @FieldResolver(_ => [Session])
+  @FieldResolver((_) => [Session])
   public fullTalkSpeakers(@Root() conference: Conference) {
     const talks = resolveSessions(conference.schedules, [SessionType.TALK]);
 
     return getSessionSpeakers(conference, talks);
   }
 
-  @FieldResolver(_ => [Session])
+  @FieldResolver((_) => [Session])
   public lightningTalks(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [SessionType.LIGHTNING_TALK]);
   }
 
-  @FieldResolver(_ => [Session])
+  @FieldResolver((_) => [Session])
   public lightningTalkSpeakers(@Root() conference: Conference) {
     const talks = resolveSessions(conference.schedules, [
       SessionType.LIGHTNING_TALK,
@@ -144,12 +147,12 @@ class ConferenceResolver {
     return getSessionSpeakers(conference, talks);
   }
 
-  @FieldResolver(_ => [Session])
+  @FieldResolver((_) => [Session])
   public workshops(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [SessionType.WORKSHOP]);
   }
 
-  @FieldResolver(_ => [Session])
+  @FieldResolver((_) => [Session])
   public workshopInstructors(@Root() conference: Conference) {
     const talks = resolveSessions(conference.schedules, [SessionType.WORKSHOP]);
 
