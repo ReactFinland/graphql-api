@@ -72,7 +72,7 @@ const TweetLogo = styled.img`
 const TweetConferenceDays = styled.h3``;
 
 const TweetText = styled.h2`
-  padding-top: 1em;
+  padding-top: 0.5em;
   font-size: 300%;
 `;
 
@@ -82,7 +82,6 @@ interface TweetDescriptionProps {
 
 const TweetDescription = styled.h2`
   width: 120%;
-  padding-top: 0.5em;
   font-size: 200%;
   font-weight: 200;
   font-family: ${({ fontFamily }: TweetDescriptionProps) => fontFamily};
@@ -192,7 +191,7 @@ function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
   }
 
   const logo = theme.logos.white.withText.url;
-  const { name, image, talks } = contact;
+  const { name, image, talks, workshops } = contact;
 
   return (
     <TweetContainer
@@ -206,9 +205,22 @@ function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
           <TweetConferenceDays>{days}</TweetConferenceDays>
         </TweetRow>
         <TweetText>{name}</TweetText>
-        <TweetDescription fontFamily={theme.fonts.secondary}>
-          {Array.isArray(talks) && talks.length > 0 && talks[0].title}
-        </TweetDescription>
+        {Array.isArray(talks) && talks.length > 0 && (
+          <TweetDescription fontFamily={theme.fonts.secondary}>
+            {talks[0].title}
+          </TweetDescription>
+        )}
+        {Array.isArray(talks) &&
+          talks.length === 0 &&
+          Array.isArray(workshops) &&
+          workshops.length > 0 && (
+            <>
+              <TweetText>Workshop</TweetText>
+              <TweetDescription fontFamily={theme.fonts.secondary}>
+                {workshops[0].title}
+              </TweetDescription>
+            </>
+          )}
       </TweetInfoContainer>
       <TweetImageContainer>
         <TweetImage isCircle src={image.url} />
@@ -358,7 +370,7 @@ function SponsorTweet({
 }
 
 function getSponsorType(type: Contact["type"]) {
-  return titleCase(type.filter(t => t !== ContactType.SPONSOR)[0]);
+  return titleCase(type.filter((t) => t !== ContactType.SPONSOR)[0]);
 }
 
 const ConnectedSpeakerTweetTemplate = connect(
@@ -373,6 +385,9 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
       url
     }
     talks {
+      title
+    }
+    workshops {
       title
     }
     type
