@@ -280,6 +280,18 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
       sessions: [
         {
           type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "Automate your stack with GraphQL",
+          description: `Lukas will demonstrate how you can have your backend GraphQL in sync with your frontend code on a framework agnostic way.
+
+- Having the advantage of autocompletion while writing the GraphQL queries by IDE support
+- Built in type safety through static schemas
+- Automatic generated frontend code for your framework of choice (React, Vue.js, Angular)
+- Having everything rebuild through a built in watch mode`,
+          people: [people.lukas],
+        },
+        {
+          type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "How to cache GraphQL queries at the edge",
           description:
