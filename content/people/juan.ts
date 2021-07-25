@@ -3,20 +3,20 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Juan Picado",
-  about: "Lead maintainer @verdaccio and Node.js learner",
+  about: "Lead maintainer for 📦🔒 [Verdaccio](https://verdaccio.org) • 👨🏽‍💻 React and Node.js developer • Open Source believer",
   image: {
     url: "people/juan.jpg",
   },
   social: {
-    homepage: "",
+    homepage: "https://github.com/juanpicado",
     twitter: "jotadeveloper",
     github: "juanpicado",
     facebook: "",
-    medium: "",
+    medium: "jotadeveloper",
     instagram: "",
     linkedin: "jotadeveloper",
     youtube: "",
-    devto: "",
+    devto: "jotadeveloper",
   },
   location: {
     country: {
