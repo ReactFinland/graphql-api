@@ -298,6 +298,15 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
             "A demo and deep dive into GraphCDN, the edge caching GraphQL CDN.",
           people: [people.max],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title:
+            "Using Apollo Federation in a microservice architecture in Kubernetes",
+          description:
+            "Being flexible with Apollo Federation and autoscaling with Kubernetes opens many opportunities to scale your app. Jan will show how these two services work hand in hand and why autoscaling matters.",
+          people: [people.jan],
+        },
       ],
     },
   ],
