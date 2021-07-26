@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Juan Picado",
-  about: "Lead maintainer for 📦🔒 [Verdaccio](https://verdaccio.org) • 👨🏽‍💻 React and Node.js developer • Open Source believer",
+  about:
+    "Lead maintainer for 📦🔒 [Verdaccio](https://verdaccio.org) • 👨🏽‍💻 React and Node.js developer • Open Source believer",
   image: {
     url: "people/juan.jpg",
   },
