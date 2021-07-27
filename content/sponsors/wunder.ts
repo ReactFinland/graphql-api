@@ -2,7 +2,7 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
   name: "Wunder",
-  about: "Your partner in digital change",
+  about: "Shaping the Digital Experience",
   image: {
     url: "sponsors/wunder.svg",
   },
@@ -12,7 +12,7 @@ const sponsor: Contact = {
     twitter: "Wunder_io",
     linkedin: "company/wunder.io",
     youtube: "UCsBoaJt5sX12IFBu1giXZJg",
-    instagram: "wunder_fi",
+    instagram: "wunder.io",
   },
   location: {
     country: {
