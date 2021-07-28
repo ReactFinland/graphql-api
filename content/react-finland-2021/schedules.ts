@@ -270,6 +270,13 @@ In this session, you’ll get a whirlwind introduction to state machines and sta
 You could be a developer, designer, project manager, multi-disciplinarian or fancy specialist, I believe everyone can get something out of this talk, so join me!`,
           people: [people.laurak],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.farzadYz],
+        },
       ],
     },
     {
