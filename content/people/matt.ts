@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Matt Pocock",
-  about: "",
+  about:
+    "Lead Developer at Stately. Trying to bring on the visual coding revolution.",
   image: {
     url: "people/matt.jpg",
   },
