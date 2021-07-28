@@ -277,6 +277,13 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
           description: "",
           people: [people.farzadYz],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.matt],
+        },
       ],
     },
     {

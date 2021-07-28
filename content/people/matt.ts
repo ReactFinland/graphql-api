@@ -1,0 +1,33 @@
+import { Contact, ContactType } from "../../server/schema/Contact";
+import Keyword from "../../server/schema/keywords";
+
+const person: Contact = {
+  name: "Matt Pocock",
+  about: "",
+  image: {
+    url: "people/matt.jpg",
+  },
+  social: {
+    homepage: "",
+    twitter: "mpocock1",
+    github: "mattpocock",
+    facebook: "",
+    medium: "",
+    instagram: "",
+    linkedin: "",
+    youtube: "",
+    devto: "",
+    twitch: "mpocock1",
+  },
+  location: {
+    country: {
+      name: "United Kingdom",
+      code: "UK",
+    },
+    city: "Oxfordshire",
+  },
+  keywords: [Keyword.REACT],
+  type: [ContactType.SPEAKER],
+};
+
+export default person;

@@ -86,6 +86,7 @@ export { default as margarita } from "./margarita";
 export { default as mario } from "./mario";
 export { default as mark } from "./mark";
 export { default as matias } from "./matias";
+export { default as matt } from "./matt";
 export { default as matteo } from "./matteo";
 export { default as max } from "./max";
 export { default as michalChudziak } from "./michal-chudziak";

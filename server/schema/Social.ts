@@ -43,4 +43,7 @@ export class Social {
 
   @Field((_) => String, { nullable: true })
   public devto?: string;
+
+  @Field((_) => String, { nullable: true })
+  public twitch?: string;
 }
