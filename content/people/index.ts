@@ -99,6 +99,7 @@ export { default as milecia } from "./milecia";
 export { default as monicaLent } from "./monica-lent";
 export { default as naderDabit } from "./nader-dabit";
 export { default as nataliaTepluhina } from "./natalia-tepluhina";
+export { default as nidhi } from "./nidhi";
 export { default as nikGraf } from "./nik-graf";
 export { default as niklas } from "./niklas";
 export { default as nur } from "./nur";
