@@ -391,6 +391,13 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
             "In this talk we are going to have a look on how to use Server-Side-Rendering and Static-Site-Generation in NextJS to serve pages.",
           people: [people.nur],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "Brief introduction to Nuxt",
+          description: `In this brief introduction of Nuxt, we will learn Nuxt basics and how to build Git-files based content management system using Nuxt.js and its module system.`,
+          people: [people.krutie],
+        },
       ],
     },
     {
