@@ -595,6 +595,13 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
             "The landscape of popular JS frameworks and libraries has become increasingly polarised. With React standing out an increasing number of companies are struggling to find skilled developers. People experienced in React are in a great position. Nevertheless, what if my CV lacks the right keyword? What if my Angular experience looks more like a burden? Can I apply for a front-end developer position in a React project?",
           people: [people.mika],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "",
+          description: "",
+          people: [people.elisa],
+        },
       ],
     },
   ],

@@ -31,6 +31,7 @@ export { default as dustinSchau } from "./dustin-schau";
 export { default as eemeliAro } from "./eemeli-aro";
 export { default as eevis } from "./eevis";
 export { default as eli } from "./eli";
+export { default as elisa } from "./elisa";
 export { default as ellieDay } from "./ellie-day";
 export { default as eloyDuran } from "./eloy-duran";
 export { default as emma } from "./emma";
