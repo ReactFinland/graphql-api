@@ -224,6 +224,13 @@ Instead of reviewing each individual library, we’ll analyse the various featur
             "Can we have themeable CSS-in-TypeScript without the runtime cost? In this talk we'll have a quick look at how this can be achieved with vanilla-extract.",
           people: [people.mark],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "stylex",
+          description: "",
+          people: [people.naman],
+        },
       ],
     },
     {
