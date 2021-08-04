@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Elisa Heikura",
-  about: "",
+  about:
+    "Elisa is the Developer of People which is a fancy way of saying that she’s into soft skills such as communication, teamwork and self-awareness. For the past three years she has spent her days teaching and facilitating teams full of technical experts. Which, for her, is truly enjoyable work.",
   image: {
     url: "people/elisa.jpg",
   },

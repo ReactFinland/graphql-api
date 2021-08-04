@@ -605,8 +605,10 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
         {
           type: SessionType.TALK,
           level: Level.BEGINNER,
-          title: "",
-          description: "",
+          title: "The future of work is enjoyable",
+          description: `We’re generally afraid of the future. Not only is it unknown, but there’s quite a lot of reasons to believe we’re practically doomed. And it doesn’t help that we’re negatively wired by nature, programmed to look out for risks more than search for rewards. Developers especially so.
+
+So with this speech, I want to paint another picture for you. I genuinely believe, the future of work is enjoyable and definitely worth pursuing. And you can have that. Right after this speech.`,
           people: [people.elisa],
         },
       ],
