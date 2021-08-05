@@ -187,20 +187,13 @@ const wednesday: Schedule = {
   description: "Wednesday",
   location: locations.internet,
   intervals: [
-    {
+    /*{
       begin: "07:00",
       end: "08:30",
       title: "To be announced",
       mc: people.manjula,
-      sessions: [
-        /*{
-          type: SessionType.TALK,
-          title: "",
-          description: "",
-          people: [],
-        },*/
-      ],
-    },
+      sessions: [],
+    },*/
     {
       begin: "10:00",
       end: "11:30",
