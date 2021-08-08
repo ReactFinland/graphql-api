@@ -6,7 +6,7 @@ import map from "lodash/map";
 import * as React from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { Conference } from "../../schema/Conference";
-import { Contact } from "../../schema/Contact";
+import { Interval } from "../../schema/Interval";
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
 import { dayToFinnishLocale } from "../date-utils";
@@ -88,14 +88,14 @@ const TweetDescription = styled.h2`
 
 interface SpeakerTweetTemplateProps {
   conference?: Conference;
-  contact: Contact;
+  interval: Interval;
   theme: Theme;
   id: string;
 }
 
 function SpeakerTweetTemplate({
   conference,
-  contact,
+  interval,
   theme,
   id,
 }: SpeakerTweetTemplateProps) {
@@ -115,7 +115,7 @@ function SpeakerTweetTemplate({
         {React.createElement(SpeakerTweet, {
           logo: theme.logos.white.withText.url,
           days,
-          contact,
+          interval,
           theme,
           conference,
         })}
@@ -144,7 +144,7 @@ function getConferenceDays(conference): string {
 
 interface TweetProps {
   days: string;
-  contact: Contact;
+  interval: Interval;
   theme: Theme;
   conference: Conference;
 }
@@ -172,13 +172,16 @@ const TweetImage = styled.img`
     isCircle ? "circle(9em at center)" : ""};
 ` as React.FC<TweetImageProps>;
 
-function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
-  if (!contact) {
+function SpeakerTweet({ days, interval, theme }: TweetProps) {
+  if (!interval) {
     return null;
   }
 
   const logo = theme.logos.white.withText.url;
-  const { name, image, talks, workshops } = contact;
+  // TODO: Render interval
+  const name = "";
+  const image = { url: "" };
+  const talks = [{ title: "" }];
 
   return (
     <TweetContainer
@@ -192,22 +195,9 @@ function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
           <TweetConferenceDays>{days}</TweetConferenceDays>
         </TweetRow>
         <TweetText>{name}</TweetText>
-        {Array.isArray(talks) && talks.length > 0 && (
-          <TweetDescription fontFamily={theme.fonts.secondary}>
-            {talks[0].title}
-          </TweetDescription>
-        )}
-        {Array.isArray(talks) &&
-          talks.length === 0 &&
-          Array.isArray(workshops) &&
-          workshops.length > 0 && (
-            <>
-              <TweetText>Workshop</TweetText>
-              <TweetDescription fontFamily={theme.fonts.secondary}>
-                {workshops[0].title}
-              </TweetDescription>
-            </>
-          )}
+        <TweetDescription fontFamily={theme.fonts.secondary}>
+          {talks[0].title}
+        </TweetDescription>
       </TweetInfoContainer>
       <TweetImageContainer>
         <TweetImage isCircle src={image.url} />
@@ -219,7 +209,22 @@ function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
 const ConnectedSpeakerTweetTemplate = connect(
   "/graphql",
   `
-query SpeakerTweetTemplateQuery($conferenceId: ID!) {
+query SpeakerTweetTemplateQuery($conferenceId: ID!, $intervalTitle: String!) {
+  interval(conferenceId: $conferenceId, intervalTitle: $intervalTitle) {
+    begin
+    end
+    title
+    sessions {
+      title
+      description
+      speakers {
+        name
+        image {
+          url
+        }
+      }
+    }
+  }
   conference(id: $conferenceId) {
     name
     slogan
@@ -236,7 +241,7 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!) {
 }
   `,
   {},
-  ({ conferenceId }) => ({ conferenceId })
+  ({ conferenceId, intervalTitle }) => ({ conferenceId, intervalTitle })
 )(SpeakerTweetTemplate);
 
 ConnectedSpeakerTweetTemplate.filename = "speaker-tweet";
