@@ -3,8 +3,10 @@ import { Color, FontFamilyProperty } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import get from "lodash/get";
 import map from "lodash/map";
+import flatten from "lodash/flatten";
 import * as React from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
+import { Contact } from "../../schema/Contact";
 import { Conference } from "../../schema/Conference";
 import { Interval } from "../../schema/Interval";
 import { Theme } from "../../schema/Theme";
@@ -178,10 +180,10 @@ function SpeakerTweet({ days, interval, theme }: TweetProps) {
   }
 
   const logo = theme.logos.white.withText.url;
-  // TODO: Render interval
-  const name = "";
-  const image = { url: "" };
-  const talks = [{ title: "" }];
+  const { title } = interval;
+  const speakers: Contact[] = flatten(
+    (interval.sessions || []).map(({ people }) => people || [])
+  );
 
   return (
     <TweetContainer
@@ -194,13 +196,17 @@ function SpeakerTweet({ days, interval, theme }: TweetProps) {
           <TweetLogo src={logo} />
           <TweetConferenceDays>{days}</TweetConferenceDays>
         </TweetRow>
-        <TweetText>{name}</TweetText>
+        <TweetText>{title}</TweetText>
         <TweetDescription fontFamily={theme.fonts.secondary}>
-          {talks[0].title}
+          {speakers.map(({ name }) => (
+            <span key={name}>{name}</span>
+          ))}
         </TweetDescription>
       </TweetInfoContainer>
       <TweetImageContainer>
-        <TweetImage isCircle src={image.url} />
+        {speakers.map(({ name, image }) => (
+          <TweetImage key={name} isCircle src={image.url} />
+        ))}
       </TweetImageContainer>
     </TweetContainer>
   );
@@ -217,7 +223,7 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!, $intervalTitle: String!) {
     sessions {
       title
       description
-      speakers {
+      people {
         name
         image {
           url
