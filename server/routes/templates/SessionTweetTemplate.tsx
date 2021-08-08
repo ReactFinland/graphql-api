@@ -5,9 +5,8 @@ import get from "lodash/get";
 import map from "lodash/map";
 import * as React from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
-import titleCase from "to-title-case";
 import { Conference } from "../../schema/Conference";
-import { Contact, ContactType } from "../../schema/Contact";
+import { Contact } from "../../schema/Contact";
 import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
 import { dayToFinnishLocale } from "../date-utils";
@@ -113,18 +112,13 @@ function SpeakerTweetTemplate({
   return (
     <TweetTemplateContainer>
       <TweetPageContainer id={id}>
-        {React.createElement(
-          contact.type.includes(ContactType.SPONSOR)
-            ? SponsorTweet
-            : SpeakerTweet,
-          {
-            logo: theme.logos.white.withText.url,
-            days,
-            contact,
-            theme,
-            conference,
-          }
-        )}
+        {React.createElement(SpeakerTweet, {
+          logo: theme.logos.white.withText.url,
+          days,
+          contact,
+          theme,
+          conference,
+        })}
       </TweetPageContainer>
       <TweetTextContainer>
         <TweetTextToCopy>{tweetTextToCopy}</TweetTextToCopy>
@@ -179,15 +173,8 @@ const TweetImage = styled.img`
 ` as React.FC<TweetImageProps>;
 
 function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
-  if (conference.name === "ReasonConf 2019") {
-    return (
-      <ReasonSpeakerTweet
-        days={days}
-        contact={contact}
-        theme={theme}
-        conference={conference}
-      />
-    );
+  if (!contact) {
+    return null;
   }
 
   const logo = theme.logos.white.withText.url;
@@ -229,169 +216,10 @@ function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
   );
 }
 
-const Reason = {
-  TweetContainer: styled(TweetContainer)`
-    grid-template-columns: 1fr 1fr;
-    width: 600px;
-    height: 440px;
-  `,
-  TweetImageContainer: styled(TweetImageContainer)`
-    align-self: center;
-  `,
-  TweetInfoContainer: styled(TweetInfoContainer)`
-    padding: 2em;
-    display: grid;
-    justify-items: right;
-  `,
-  TweetImage: styled(TweetImage)`
-    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-
-    &::before {
-      content: " ";
-      clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-    }
-  ` as React.FC<TweetImageProps>,
-  TweetRow: styled(TweetRow)`
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: right;
-  `,
-  TweetDescription: styled(TweetDescription)`
-    padding-top: 0;
-    justify-self: left;
-    font-size: 150%;
-    color: #97a5b1;
-  `,
-  TweetTalkTitle: styled.h3`
-    margin-top: 2em;
-    color: #97a5b1;
-  `,
-  TweetName: styled(TweetText)`
-    padding-top: 0;
-  `,
-};
-
-function ReasonSpeakerTweet({
-  days,
-  contact: { name, image, company, talks },
-  theme,
-  conference,
-}: TweetProps) {
-  const logo = theme.logos.colored.withText.url;
-
-  return (
-    <Reason.TweetContainer
-      primaryColor={theme.colors.secondary}
-      secondaryColor={theme.colors.secondary}
-      texture={theme.textures[0].url}
-    >
-      <Reason.TweetImageContainer>
-        <Reason.TweetImage src={image.url} color={theme.colors.primary} />
-      </Reason.TweetImageContainer>
-      <Reason.TweetInfoContainer>
-        <Reason.TweetRow>
-          <TweetLogo src={logo} />
-        </Reason.TweetRow>
-        <Reason.TweetRow>
-          <TweetConferenceDays>{days}</TweetConferenceDays>
-          {conference.locations && (
-            <TweetConferenceDays>
-              {conference.locations[0].city}
-            </TweetConferenceDays>
-          )}
-        </Reason.TweetRow>
-        {talks && (
-          <Reason.TweetRow>
-            <Reason.TweetTalkTitle>{talks[0].title}</Reason.TweetTalkTitle>
-          </Reason.TweetRow>
-        )}
-        <Reason.TweetRow>
-          <Reason.TweetName>{name}</Reason.TweetName>
-        </Reason.TweetRow>
-        {company && (
-          <Reason.TweetDescription fontFamily={theme.fonts.secondary}>
-            {company}
-          </Reason.TweetDescription>
-        )}
-      </Reason.TweetInfoContainer>
-    </Reason.TweetContainer>
-  );
-}
-
-const TweetSponsorContainer = styled.div`
-  padding: 3em;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-`;
-
-const TweetSponsorImage = styled(TweetImage)`
-  margin-top: 3em;
-  max-height: 6cm;
-  max-width: 100%;
-  width: auto;
-`;
-
-const TweetSponsorText = styled(TweetText)`
-  padding-top: 0;
-  text-align: center;
-`;
-
-function SponsorTweet({
-  days,
-  contact: { about, image, type },
-  theme,
-}: TweetProps) {
-  const logo = theme.logos.white.withText.url;
-
-  return (
-    <TweetContainer
-      primaryColor={theme.colors.primary}
-      secondaryColor={theme.colors.secondary}
-      texture={theme.textures[0].url}
-    >
-      <TweetInfoContainer>
-        <TweetRow>
-          <TweetLogo src={logo} />
-          <TweetConferenceDays>{days}</TweetConferenceDays>
-        </TweetRow>
-        <TweetSponsorImage src={image.url} />
-      </TweetInfoContainer>
-      <TweetSponsorContainer>
-        <TweetDescription fontFamily={theme.fonts.secondary}>
-          {about}
-        </TweetDescription>
-
-        <TweetSponsorText>{getSponsorType(type)}</TweetSponsorText>
-      </TweetSponsorContainer>
-    </TweetContainer>
-  );
-}
-
-function getSponsorType(type: Contact["type"]) {
-  return titleCase(type.filter((t) => t !== ContactType.SPONSOR)[0]);
-}
-
 const ConnectedSpeakerTweetTemplate = connect(
   "/graphql",
   `
-query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
-  contact(contactName: $contactName, conferenceId: $conferenceId) {
-    name
-    company
-    about
-    image {
-      url
-    }
-    talks {
-      title
-    }
-    workshops {
-      title
-    }
-    type
-  }
+query SpeakerTweetTemplateQuery($conferenceId: ID!) {
   conference(id: $conferenceId) {
     name
     slogan
@@ -408,7 +236,7 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
 }
   `,
   {},
-  ({ conferenceId, contactName }) => ({ conferenceId, contactName })
+  ({ conferenceId }) => ({ conferenceId })
 )(SpeakerTweetTemplate);
 
 ConnectedSpeakerTweetTemplate.filename = "speaker-tweet";
@@ -434,27 +262,25 @@ ConnectedSpeakerTweetTemplate.variables = [
     },
   },
   {
-    id: "contactName",
-    query: `query SpeakerQuery($conferenceId: ID!) {
+    id: "intervalTitle",
+    query: `query SessionQuery($conferenceId: ID!) {
   conference(id: $conferenceId) {
-    allSpeakers {
-      name
-    }
-    sponsors {
-      name
+    schedules {
+      intervals {
+        title
+      }
     }
   }
 }`,
     mapToCollection({ conference }) {
       return []
-        .concat(get(conference, "allSpeakers"), get(conference, "sponsors"))
-        .filter(Boolean);
+        .concat(
+          ...get(conference, "schedules", []).map(({ intervals }) => intervals)
+        )
+        .filter(({ title }) => title);
     },
-    mapToOption({ name }) {
-      return {
-        value: name,
-        label: name,
-      };
+    mapToOption({ title }) {
+      return { value: title, label: title };
     },
   },
 ];

@@ -341,7 +341,7 @@ const thursday: Schedule = {
     {
       begin: "07:00",
       end: "08:30",
-      title: "Techniques",
+      title: "Techniques I",
       mc: people.manjula,
       sessions: [
         {
@@ -542,7 +542,7 @@ In this short talk I'm going to demo Nx and what it can do for you to help you m
     {
       begin: "12:00",
       end: "13:30",
-      title: "Techniques",
+      title: "Techniques II",
       mc: people.saraVieira,
       sessions: [
         {
