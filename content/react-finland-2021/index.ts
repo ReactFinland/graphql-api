@@ -5,8 +5,9 @@ import * as allSponsors from "../sponsors";
 import schedules from "./schedules";
 
 const partners = [
-  allSponsors.agentconf,
-  allSponsors.bangalore,
+  allSponsors.a11Yclub,
+  // allSponsors.agentconf,
+  // allSponsors.bangalore,
   allSponsors.dna325,
   allSponsors.halfstack,
   allSponsors.jscamp,

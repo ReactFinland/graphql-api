@@ -1,3 +1,4 @@
+export { default as a11Yclub } from "./a11yclub";
 export { default as agentconf } from "./agentconf";
 export { default as alma } from "./alma";
 export { default as amazon } from "./amazon";
