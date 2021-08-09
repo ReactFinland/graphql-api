@@ -184,6 +184,9 @@ function SpeakerTweet({ days, interval, theme }: TweetProps) {
   const speakers: Contact[] = flatten(
     (interval.sessions || []).map(({ people }) => people || [])
   );
+  const people: Contact[] = interval.mc
+    ? [interval.mc].concat(speakers)
+    : speakers;
 
   return (
     <TweetContainer
@@ -198,13 +201,13 @@ function SpeakerTweet({ days, interval, theme }: TweetProps) {
         </TweetRow>
         <TweetText>{title}</TweetText>
         <TweetDescription fontFamily={theme.fonts.secondary}>
-          {speakers.map(({ name }) => (
+          {people.map(({ name }) => (
             <span key={name}>{name}</span>
           ))}
         </TweetDescription>
       </TweetInfoContainer>
       <TweetImageContainer>
-        {speakers.map(({ name, image }) => (
+        {people.map(({ name, image }) => (
           <TweetImage key={name} isCircle src={image.url} />
         ))}
       </TweetImageContainer>
@@ -220,6 +223,12 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!, $intervalTitle: String!) {
     begin
     end
     title
+    mc {
+      name
+      image {
+        url
+      }
+    }
     sessions {
       title
       description
