@@ -23,6 +23,7 @@ interface AssetDesignerContainerProps {
 }
 
 const AssetDesignerContainer = styled.article`
+  background: #ddd;
   display: grid;
   grid-template-columns: ${({ width }) => width} 1fr;
 
@@ -187,7 +188,7 @@ function AssetDesignerPage({
           onUpdateTheme={(field, value) =>
             dispatch({ type: ActionTypes.UPDATE_THEME_ID, field, value })
           }
-          onUpdateSelection={value =>
+          onUpdateSelection={(value) =>
             dispatch({ type: ActionTypes.UPDATE_SELECTION_ID, value })
           }
           onUpdateVariable={(field, value) =>
@@ -274,7 +275,7 @@ function AssetDesignerSidebar({
 }: AssetDesignerSidebarProps) {
   const selectionVariables = selection.variables;
   const variableOptions = selectionVariables
-    ? map(selectionVariables, variable => ({
+    ? map(selectionVariables, (variable) => ({
         ...variable,
         value: variables[variable.id],
       }))
@@ -292,11 +293,11 @@ function AssetDesignerSidebar({
             if (domNode) {
               domToImage
                 .toBlob(domNode)
-                .then(blob => {
+                .then((blob) => {
                   // TODO: Improve this further (i.e. name of the speaker for tweets etc.)
                   saveAs(blob, `${selection.filename}.png`);
                 })
-                .catch(err => console.error(err));
+                .catch((err) => console.error(err));
             }
           }}
         >
@@ -312,11 +313,11 @@ function AssetDesignerSidebar({
             if (domNode) {
               domToImage
                 .toSvg(domNode)
-                .then(svg => {
+                .then((svg) => {
                   // TODO: Improve this further (i.e. name of the speaker for tweets etc.)
                   saveAs(svg, `${selection.filename}.svg`);
                 })
-                .catch(err => console.error(err));
+                .catch((err) => console.error(err));
             }
           }}
         >
@@ -355,7 +356,7 @@ function AssetDesignerSidebar({
         <SidebarItem>
           <SidebarHeader>Variables</SidebarHeader>
 
-          {map(variableOptions, variable => (
+          {map(variableOptions, (variable) => (
             <VariableContainer key={variable.id}>
               <VariableSelector
                 variables={variables}
@@ -390,7 +391,7 @@ function ThemeSelector({
     <Select
       options={
         themes
-          ? map(themes, theme => ({
+          ? map(themes, (theme) => ({
               value: theme.id,
               label: theme.id,
             }))
@@ -423,7 +424,7 @@ function ComponentSelector({
 }: ComponentSelectorProps) {
   return (
     <ComponentSelectorContainer>
-      {map(templates, templateId =>
+      {map(templates, (templateId) =>
         templateId === selectedTemplate ? (
           <ComponentSelectorSelectedOption key={templateId}>
             {templateId}
@@ -432,7 +433,7 @@ function ComponentSelector({
           <ComponentSelectorOption
             key={templateId}
             href="#"
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault();
 
               onChange(templateId);
