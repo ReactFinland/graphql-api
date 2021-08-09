@@ -38,7 +38,7 @@ const TweetContainer = styled.div`
   height: 440px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr 1fr;
   color: white;
 ` as React.FC<TweetContainerProps>;
 
@@ -73,6 +73,7 @@ const TweetLogo = styled.img`
 const TweetConferenceDays = styled.h3``;
 
 const TweetText = styled.h2`
+  text-align: center;
   padding-top: 0.5em;
   font-size: 300%;
 `;
@@ -82,8 +83,10 @@ interface TweetDescriptionProps {
 }
 
 const TweetDescription = styled.h2`
-  width: 120%;
-  font-size: 200%;
+  text-align: center;
+  line-height: 1.5;
+  width: 100%;
+  font-size: 150%;
   font-weight: 200;
   font-family: ${({ fontFamily }: TweetDescriptionProps) => fontFamily};
 ` as React.FC<TweetDescriptionProps>;
@@ -152,26 +155,30 @@ interface TweetProps {
 }
 
 const TweetInfoContainer = styled.div`
-  padding: 3em 0 3em 3em;
+  padding: 3em;
   display: grid;
   justify-content: center;
 `;
 
 const TweetImageContainer = styled.div`
+  background: white;
   padding: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
 interface TweetImageProps {
   color?: Color;
   isCircle?: boolean;
   src: HTMLImageElement["src"];
+  borderColor?: string;
 }
 
 const TweetImage = styled.img`
   width: 100%;
   box-sizing: border-box;
-  clip-path: ${({ isCircle }: TweetImageProps) =>
-    isCircle ? "circle(9em at center)" : ""};
+  border: 0.25em solid ${({ borderColor }: TweetImageProps) => borderColor};
+  border-radius: 50%;
 ` as React.FC<TweetImageProps>;
 
 function SpeakerTweet({ days, interval, theme }: TweetProps) {
@@ -194,23 +201,30 @@ function SpeakerTweet({ days, interval, theme }: TweetProps) {
       secondaryColor={theme.colors.secondary}
       texture={theme.textures[0].url}
     >
+      <TweetImageContainer>
+        {people.map(({ name, image }) => (
+          <TweetImage
+            key={name}
+            src={image.url}
+            borderColor={theme.colors.background}
+          />
+        ))}
+      </TweetImageContainer>
       <TweetInfoContainer>
         <TweetRow>
           <TweetLogo src={logo} />
           <TweetConferenceDays>{days}</TweetConferenceDays>
         </TweetRow>
         <TweetText>{title}</TweetText>
-        <TweetDescription fontFamily={theme.fonts.secondary}>
-          {people.map(({ name }) => (
-            <span key={name}>{name}</span>
+        <TweetDescription fontFamily={theme.fonts.primary}>
+          {people.map(({ name }, i) => (
+            <span key={name}>
+              <span style={{ whiteSpace: "nowrap" }}>{name}</span>
+              {i < people.length - 1 && <span>, </span>}
+            </span>
           ))}
         </TweetDescription>
       </TweetInfoContainer>
-      <TweetImageContainer>
-        {people.map(({ name, image }) => (
-          <TweetImage key={name} isCircle src={image.url} />
-        ))}
-      </TweetImageContainer>
     </TweetContainer>
   );
 }
