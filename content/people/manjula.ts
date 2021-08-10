@@ -10,7 +10,7 @@ const person: Contact = {
   social: {
     homepage: "https://www.manjuladube.dev/",
     twitter: "manjula_dube",
-    github: "manjula91",
+    github: "manjula-dube",
     facebook: "",
     medium: "",
     instagram: "",
