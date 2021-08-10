@@ -12,7 +12,7 @@ const sponsor: Contact = {
   },
   location: {
     country: {
-      name: "United Kingdom",
+      name: "Great Britain",
       code: "GB",
     },
     city: "London",
