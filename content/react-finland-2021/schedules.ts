@@ -512,12 +512,12 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "KISS Your UI",
-          description: `Design Systems for your components framework
+          title: "Design Systems of a Down: Steal this Guide!",
+          description: `Remember Atomic Design? It's been a while since we started talking about Design Systems. They're supposed to solve our interfaces inconsistencies issues, as a single source of truth. But do you know well how to build and use them, from a developer perspective?
 
-Atomic Design was Imagined by Brad Frost 10 years ago, and has pushed the creation of interfaces to the Design Systems era. Yet, it’s still very adapted to the components frameworks pattern. No matter you’re committed to React, Vue.js, Svelte, or whatever other modern front-end framework.
-          
-Let’s discover how a KISS (Keep It Simple System) methodology like the Design Systems applied to our modern interfaces suits very well to our front-end tooling. This talk will introduce you to the Wonderland of reusable interfaces. Easy to build, easy to maintain, easy to deploy, and easy to document! From templates to style guides, come to find how to improve your daily-basis workflow!`,
+Here's your ultimate guide to Design Systems, for Devs! From the fundamentals of Design Tokens definition, to how to build advanced versatile layouts. You'll learn all best practices, tips & tricks, components splicing strategies, from this comprehensive step-by-step handbook talk.
+
+Never be lost again in front of a creating Design System from scratch!`,
           people: [people.m4Dz],
         },
         {
