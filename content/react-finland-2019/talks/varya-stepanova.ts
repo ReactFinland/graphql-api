@@ -15,6 +15,7 @@ This practical guide shows how to apply existing development tools to your syste
   urls: {
     slides: "https://slides.react-finland.fi/2019/varya-stepanova.pdf",
     web: "https://varya.me/react-finland-2019/",
+    video: "https://www.youtube.com/watch?v=5_lYTicLUbk",
   },
 };
 

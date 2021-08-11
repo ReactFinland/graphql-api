@@ -12,6 +12,9 @@ const talk: Session = {
   Animations with code seem hard, but they shouldn’t be. In this talk, I will give some tips and explore some tools to simplify creating animations in React.`,
   type: SessionType.TALK,
   keywords: [Keyword.ANIMATION, Keyword.REACT],
+  urls: {
+    video: "https://www.youtube.com/watch?v=TszRBCc6DQ4",
+  },
 };
 
 export default talk;

@@ -12,6 +12,7 @@ const talk: Session = {
   keywords: [Keyword.NPM, Keyword.TYPESCRIPT],
   urls: {
     slides: "https://slides.react-finland.fi/2019/christoffer-niska.pdf",
+    video: "https://www.youtube.com/watch?v=T_4CCdkN468",
   },
 };
 

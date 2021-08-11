@@ -11,6 +11,7 @@ const talk: Session = {
   urls: {
     slides: "https://slides.react-finland.fi/2019/artem-sapegin.pdf",
     web: "https://stopwritingcss.netlify.com",
+    video: "https://www.youtube.com/watch?v=_CsBRkRTzIA",
   },
 };
 

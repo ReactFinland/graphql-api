@@ -10,6 +10,7 @@ const talk: Session = {
   keywords: [Keyword.TYPESCRIPT],
   urls: {
     slides: "https://slides.react-finland.fi/2019/kadi-kraman.pdf",
+    video: "https://www.youtube.com/watch?v=PkdESWmNZ9o",
   },
 };
 

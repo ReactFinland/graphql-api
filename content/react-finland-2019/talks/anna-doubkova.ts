@@ -10,6 +10,7 @@ const talk: Session = {
   keywords: [Keyword.REACT, Keyword.REACT_NATIVE],
   urls: {
     slides: "https://slides.react-finland.fi/2019/anna-doubkova.pdf",
+    video: "https://www.youtube.com/watch?v=W2a5_Qn2jVI",
   },
 };
 

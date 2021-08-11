@@ -11,6 +11,7 @@ const talk: Session = {
   urls: {
     slides: "https://slides.react-finland.fi/2019/dustin-schau.pdf",
     web: "https://dschau.dev/gatsbythemes",
+    video: "https://www.youtube.com/watch?v=SV2zu9FvUTw",
   },
 };
 

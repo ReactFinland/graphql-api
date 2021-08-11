@@ -10,8 +10,8 @@ const talk: Session = {
   keywords: [Keyword.TOOLING],
   urls: {
     slides: "https://slides.react-finland.fi/2019/bohdan-liashenko.pdf",
-    web:
-      "https://docs.google.com/presentation/d/1Uj_5wyafZnp-BaSHzEne02gSxKJgmmjQK9M6mG1fi3k/edit#slide=id.p",
+    web: "https://docs.google.com/presentation/d/1Uj_5wyafZnp-BaSHzEne02gSxKJgmmjQK9M6mG1fi3k/edit#slide=id.p",
+    video: "https://www.youtube.com/watch?v=S_1-1jzLxm4",
   },
 };
 

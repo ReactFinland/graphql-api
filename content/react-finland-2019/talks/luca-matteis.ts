@@ -15,8 +15,8 @@ const talk: Session = {
   ],
   urls: {
     slides: "https://slides.react-finland.fi/2019/luca-matteis.pdf",
-    web:
-      "https://lmatteis.github.io/finland-talk/assets/player/KeynoteDHTMLPlayer.html",
+    web: "https://lmatteis.github.io/finland-talk/assets/player/KeynoteDHTMLPlayer.html",
+    video: "https://www.youtube.com/watch?v=cXuvCMG21Ss",
   },
 };
 

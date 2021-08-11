@@ -32,8 +32,8 @@ Some first hand experiences from an author that still tries to figure out how mu
   ],
   urls: {
     slides: "https://slides.react-finland.fi/2019/michel-weststrate.pdf",
-    web:
-      "https://docs.google.com/presentation/d/12Dd8iYxcA8Wl2yaOE_FNb-MaB7cktUE82JFXVlrO-6U/edit#slide=id.p",
+    web: "https://docs.google.com/presentation/d/12Dd8iYxcA8Wl2yaOE_FNb-MaB7cktUE82JFXVlrO-6U/edit#slide=id.p",
+    video: "https://www.youtube.com/watch?v=MIh1qSHi_Fc",
   },
 };
 

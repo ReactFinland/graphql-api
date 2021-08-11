@@ -10,6 +10,7 @@ const talk: Session = {
   keywords: [Keyword.REACT_NATIVE, Keyword.UNIVERSAL_REACT],
   urls: {
     slides: "https://slides.react-finland.fi/2019/ville-immonen.pdf",
+    video: "https://www.youtube.com/watch?v=6A9GeBXhPWY",
   },
 };
 

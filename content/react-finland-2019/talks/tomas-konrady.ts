@@ -21,6 +21,7 @@ Then we take a look at state management challenges in this kind of setup and how
   urls: {
     slides: "https://slides.react-finland.fi/2019/tomas-konrady.pdf",
     web: "https://finland-2019.firebaseapp.com/",
+    video: "https://www.youtube.com/watch?v=gGzGzpaNlx4",
   },
 };
 

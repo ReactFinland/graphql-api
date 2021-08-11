@@ -10,6 +10,7 @@ const talk: Session = {
   keywords: [Keyword.REACT_NATIVE],
   urls: {
     slides: "https://slides.react-finland.fi/2019/juha-linnanen.pdf",
+    video: "https://www.youtube.com/watch?v=Lid-2xFU4vg",
   },
 };
 

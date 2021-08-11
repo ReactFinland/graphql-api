@@ -9,8 +9,8 @@ const talk: Session = {
   keywords: [],
   urls: {
     slides: "https://slides.react-finland.fi/2019/manuel-matuzovic.pdf",
-    web:
-      "https://www.matuzo.at/blog/12-tips-for-more-accessible-react-apps-slides-react-finland-2019/",
+    web: "https://www.matuzo.at/blog/12-tips-for-more-accessible-react-apps-slides-react-finland-2019/",
+    video: "https://www.youtube.com/watch?v=NL6XKcX4sxc",
   },
 };
 

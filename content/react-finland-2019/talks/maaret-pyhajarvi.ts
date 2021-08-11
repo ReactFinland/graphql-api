@@ -20,8 +20,8 @@ Takeaways:
   keywords: [Keyword.REACT, Keyword.TESTING],
   urls: {
     slides: "https://slides.react-finland.fi/2019/maaret-pyhajarvi.pdf",
-    web:
-      "https://www.slideshare.net/maaretp/react-finland-intersection-of-automation-and-exploratory-testing",
+    web: "https://www.slideshare.net/maaretp/react-finland-intersection-of-automation-and-exploratory-testing",
+    video: "https://www.youtube.com/watch?v=Dg4JawCeNhs",
   },
 };
 

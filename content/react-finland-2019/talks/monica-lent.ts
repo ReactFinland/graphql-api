@@ -10,6 +10,7 @@ const talk: Session = {
   keywords: [Keyword.CODE_QUALITY, Keyword.TOOLING, Keyword.ARCHITECTURE],
   urls: {
     slides: "https://slides.react-finland.fi/2019/monica-lent.pdf",
+    video: "https://www.youtube.com/watch?v=brMZLmZ1HR0",
   },
 };
 

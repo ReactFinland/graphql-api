@@ -13,6 +13,7 @@ const talk: Session = {
   keywords: [],
   urls: {
     slides: "https://slides.react-finland.fi/2019/carolyn-stransky.pdf",
+    video: "https://www.youtube.com/watch?v=nBy8y39Pvp4",
   },
 };
 

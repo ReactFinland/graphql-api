@@ -15,6 +15,7 @@ const talk: Session = {
   ],
   urls: {
     web: "https://slides.com/davidkhourshid/mind-reading-react-finland#/",
+    video: "https://www.youtube.com/watch?v=ppvi09LIUnU",
   },
 };
 

@@ -23,6 +23,7 @@ We will read Markdown files, render components described in them, and expose liv
   ],
   urls: {
     slides: "https://slides.react-finland.fi/2019/tejas-kumar.pdf",
+    video: "https://www.youtube.com/watch?v=ZsBW4S8hYMU",
   },
 };
 

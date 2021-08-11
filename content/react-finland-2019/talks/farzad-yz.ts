@@ -17,6 +17,7 @@ In this talk, I'll be showing a set of techniques to model a semi complicated Re
   urls: {
     slides: "https://slides.react-finland.fi/2019/farzad-yz.pdf",
     web: "https://abstract-component-modeling.netlify.com",
+    video: "https://www.youtube.com/watch?v=AVb5dURO6q0",
   },
 };
 

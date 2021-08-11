@@ -20,6 +20,7 @@ UI components and pattern libraries can provide this intermediate abstraction an
   urls: {
     slides: "https://slides.react-finland.fi/2019/andrey-okonetchnikov.pdf",
     web: "https://speakerdeck.com/okonet/a-common-design-language",
+    video: "https://www.youtube.com/watch?v=a6DtiGhKMdk",
   },
 };
 

@@ -10,8 +10,8 @@ const talk: Session = {
   keywords: [Keyword.REACT_NATIVE],
   urls: {
     slides: "https://slides.react-finland.fi/2019/jamon-holmgren.pdf",
-    web:
-      "https://infinite-red.slides.com/infinitered/react-finland-2019?token=m2ZLCaid",
+    web: "https://infinite-red.slides.com/infinitered/react-finland-2019?token=m2ZLCaid",
+    video: "https://www.youtube.com/watch?v=gTG8_9Zv0YI",
   },
 };
 

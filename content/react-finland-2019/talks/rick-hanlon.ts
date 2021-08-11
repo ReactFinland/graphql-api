@@ -10,6 +10,7 @@ const talk: Session = {
   keywords: [Keyword.REACT_NATIVE, Keyword.REACT],
   urls: {
     slides: "https://slides.react-finland.fi/2019/rick-hanlon.pdf",
+    video: "https://www.youtube.com/watch?v=LhKglxQT4sU",
   },
 };
 

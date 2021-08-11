@@ -10,6 +10,7 @@ const talk: Session = {
   keywords: [Keyword.REACT],
   urls: {
     slides: "https://slides.react-finland.fi/2019/nik-graf.pdf",
+    video: "https://www.youtube.com/watch?v=c9YtmMi-5rM",
   },
 };
 
