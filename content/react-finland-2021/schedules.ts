@@ -294,8 +294,9 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Make legacy code delightful with statecharts",
+          description:
+            "If you must have legacy code, you want it written in statecharts. We'll break down the mental models required for understanding unfamiliar UI code, and compare the maintenance costs with and without statecharts.",
           people: [people.matt],
         },
       ],
