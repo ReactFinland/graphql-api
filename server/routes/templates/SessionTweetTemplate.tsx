@@ -181,6 +181,15 @@ const TweetImage = styled.img`
   border-radius: 50%;
 ` as React.FC<TweetImageProps>;
 
+const Centered = styled.div`
+  position: absolute;
+  margin: auto;
+  width: 150px;
+  left: 16%;
+  top: 50%;
+  margin-top: -75px;
+` as React.FC;
+
 function SpeakerTweet({ days, interval, theme }: TweetProps) {
   if (!interval) {
     return null;
@@ -202,13 +211,21 @@ function SpeakerTweet({ days, interval, theme }: TweetProps) {
       texture={theme.textures[0].url}
     >
       <TweetImageContainer>
-        {people.map(({ name, image }) => (
+        {people.slice(1, 5).map(({ name, image }) => (
           <TweetImage
             key={name}
             src={image.url}
             borderColor={theme.colors.background}
           />
         ))}
+        {people.length > 4 && (
+          <Centered>
+            <TweetImage
+              src={people[0].image.url}
+              borderColor={theme.colors.background}
+            />
+          </Centered>
+        )}
       </TweetImageContainer>
       <TweetInfoContainer>
         <TweetRow>
