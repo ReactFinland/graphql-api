@@ -128,6 +128,7 @@ export { default as teroParviainen } from "./tero-parviainen";
 export { default as tobiasTimm } from "./tobias-timm";
 export { default as tomasKonrady } from "./tomas-konrady";
 export { default as toniRistola } from "./toni-ristola";
+export { default as travis } from "./travis";
 export { default as tuuliTiilikainen } from "./tuuli-tiilikainen";
 export { default as varyaStepanova } from "./varya-stepanova";
 export { default as villeImmonen } from "./ville-immonen";

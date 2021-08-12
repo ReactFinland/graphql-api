@@ -54,7 +54,7 @@ However, video that takes a long time to start up leads to frustration and aband
     },
     {
       begin: "16:00",
-      end: "17:30",
+      end: "18:00",
       title: "Opening",
       mc: people.juhoVepsalainen,
       sessions: [
@@ -81,6 +81,13 @@ However, video that takes a long time to start up leads to frustration and aband
           description:
             "An introduction to SolidJS UI Library. Explore an example to show the similarity and differences between Hook + Virtual DOM versus Reactivity + DOM.",
           people: [people.ryan],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.travis],
         },
       ],
     },
