@@ -211,13 +211,15 @@ function SpeakerTweet({ days, interval, theme }: TweetProps) {
       texture={theme.textures[0].url}
     >
       <TweetImageContainer>
-        {people.slice(1, 5).map(({ name, image }) => (
-          <TweetImage
-            key={name}
-            src={image.url}
-            borderColor={theme.colors.background}
-          />
-        ))}
+        {(people.length > 4 ? people.slice(1, 5) : people).map(
+          ({ name, image }) => (
+            <TweetImage
+              key={name}
+              src={image.url}
+              borderColor={theme.colors.background}
+            />
+          )
+        )}
         {people.length > 4 && (
           <Centered>
             <TweetImage
