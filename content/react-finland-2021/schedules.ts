@@ -85,8 +85,9 @@ However, video that takes a long time to start up leads to frustration and aband
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "JSX as the shared source of truth",
+          description:
+            "Even today, with advanced tooling and frameworks, the gap between design and development still exists. This talk will examine how we can eliminate handoff between design and development teams by using JSX as a shared source of truth across any platform.",
           people: [people.travis],
         },
       ],
