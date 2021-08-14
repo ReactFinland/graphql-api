@@ -41,6 +41,7 @@ export { default as prisma } from "./prisma";
 export { default as quentic } from "./quentic";
 export { default as reactFinland } from "./react-finland";
 export { default as reactalicante } from "./reactalicante";
+export { default as reactbrussels } from "./reactbrussels";
 export { default as reactdayberlin } from "./reactdayberlin";
 export { default as reactfest } from "./reactfest";
 export { default as reactindia } from "./reactindia";
