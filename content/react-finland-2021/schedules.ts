@@ -584,7 +584,7 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
     },
     {
       begin: "15:00",
-      end: "16:30",
+      end: "17:00",
       title: "The future of work",
       mc: people.juhoVepsalainen,
       sessions: [
@@ -612,6 +612,14 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
 
 So with this speech, I want to paint another picture for you. I genuinely believe, the future of work is enjoyable and definitely worth pursuing. And you can have that. Right after this speech.`,
           people: [people.elisa],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "Closing",
+          description:
+            "The conference has reached its end. What did we learn and where do we go from here (2022)?",
+          people: [people.juhoVepsalainen],
         },
       ],
     },
