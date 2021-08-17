@@ -229,7 +229,8 @@ Instead of reviewing each individual library, we’ll analyse the various featur
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Rethinking CSS - Introducing Stylex",
-          description: "CSS + superpowers - bloat. How Stylex creates a zero-cost abstraction that gives CSS superpowers.",
+          description:
+            "CSS + superpowers - bloat. How Stylex creates a zero-cost abstraction that gives CSS superpowers.",
           people: [people.naman],
         },
       ],
@@ -269,7 +270,7 @@ React Bricks is the first CMS that is super-great for Developers (it's just Reac
       ],
     },
     {
-      begin: "13:45",
+      begin: "14:00",
       end: "15:30",
       title: "State machines",
       mc: people.juhoVepsalainen,
