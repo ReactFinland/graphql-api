@@ -8,8 +8,8 @@ const sponsor: Contact = {
   },
   social: {
     homepage: "https://reactsummit.com",
-    facebook: "reactdayberlin",
-    twitter: "reactdayberlin",
+    facebook: "",
+    twitter: "",
     youtube: "ReactConferences",
   },
   location: {
