@@ -228,8 +228,8 @@ Instead of reviewing each individual library, we’ll analyse the various featur
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "stylex",
-          description: "",
+          title: "Rethinking CSS - Introducing Stylex",
+          description: "CSS + superpowers - bloat. How Stylex creates a zero-cost abstraction that gives CSS superpowers.",
           people: [people.naman],
         },
       ],
