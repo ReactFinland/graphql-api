@@ -9,7 +9,7 @@ const monday: Schedule = {
   description: "Monday",
   location: locations.internet,
   intervals: [
-    {
+    /*{
       begin: "11:00",
       end: "15:00",
       sessions: [
@@ -22,7 +22,7 @@ const monday: Schedule = {
           people: [people.davidKhourshid],
         },
       ],
-    },
+    },*/
     {
       begin: "12:00",
       end: "15:00",
