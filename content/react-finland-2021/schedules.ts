@@ -22,7 +22,7 @@ const monday: Schedule = {
           people: [people.davidKhourshid],
         },
       ],
-    },*/
+    },
     {
       begin: "12:00",
       end: "15:00",
@@ -51,7 +51,7 @@ However, video that takes a long time to start up leads to frustration and aband
           people: [people.gleb],
         },
       ],
-    },
+    },*/
     {
       begin: "16:00",
       end: "18:00",
