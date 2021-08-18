@@ -189,6 +189,9 @@ Towards the end, we'll explore the benefits, focusing on testing these decoupled
           people: [people.david],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=8ZEsdcnHofo",
+      },
     },
   ],
 };
@@ -237,6 +240,9 @@ Instead of reviewing each individual library, we’ll analyse the various featur
           people: [people.naman],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=wIjlBRW4Ty8",
+      },
     },
     {
       begin: "12:00",
@@ -271,6 +277,9 @@ React Bricks is the first CMS that is super-great for Developers (it's just Reac
           people: [people.nidhi],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=myzAXCye-Qo",
+      },
     },
     {
       begin: "14:00",
@@ -305,6 +314,9 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
           people: [people.matt],
         },
       ],
+      urls: {
+        video: "",
+      },
     },
     {
       begin: "16:00",
@@ -342,6 +354,9 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
           people: [people.jan],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=bph1c8qNY0g",
+      },
     },
   ],
 };
@@ -388,6 +403,9 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           people: [people.m4Dz],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=5olfi5wbgF4",
+      },
     },
     {
       begin: "10:00",
@@ -419,6 +437,9 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           people: [people.krutie],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=0bU-Y5ailzY",
+      },
     },
     {
       begin: "12:00",
@@ -441,6 +462,9 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           people: [people.patrickEcker],
         },
       ],
+      urls: {
+        video: "",
+      },
     },
     {
       begin: "15:00",
@@ -475,6 +499,9 @@ In this demo, I will show some techniques every developer should know and use wh
           people: [people.lainey],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=FjERb0PFkJc",
+      },
     },
   ],
 };
@@ -515,6 +542,9 @@ const friday: Schedule = {
           people: [people.kadiKraman],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=Qf3g2kkTgrk",
+      },
     },
     {
       begin: "10:00",
@@ -551,6 +581,9 @@ In this short talk I'm going to demo Nx and what it can do for you to help you m
           people: [people.juri],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=cSfpwlQthH4",
+      },
     },
     {
       begin: "12:00",
@@ -585,6 +618,9 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
           people: [people.liran],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=QFZacufAgK0",
+      },
     },
     {
       begin: "15:00",
@@ -626,6 +662,9 @@ So with this speech, I want to paint another picture for you. I genuinely believ
           people: [people.juhoVepsalainen],
         },
       ],
+      urls: {
+        video: "https://www.youtube.com/watch?v=untSAGaDREg",
+      },
     },
   ],
 };
