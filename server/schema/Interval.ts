@@ -1,7 +1,7 @@
 import { Field, ObjectType } from "type-graphql";
 import { Contact } from "./Contact";
 import { Location } from "./Location";
-import { Session } from "./Session";
+import { Session, SessionUrls } from "./Session";
 
 @ObjectType()
 export class Interval {
@@ -22,4 +22,7 @@ export class Interval {
 
   @Field((_) => Contact, { nullable: true })
   public mc?: Contact;
+
+  @Field((_) => SessionUrls, { nullable: true })
+  public urls?: SessionUrls;
 }
