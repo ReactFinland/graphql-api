@@ -301,7 +301,7 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "The Actor Model: a new mental model for React",
           description: "",
           people: [people.farzadYz],
         },
