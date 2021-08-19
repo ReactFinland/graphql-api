@@ -129,7 +129,9 @@ The goal of this workshop is to understand how SSR works in React and how to imp
           title: "Powering Next.js with Drupal",
           description: `This session will cover why and how to fully decouple Drupal with Next.JS, an open source modern frontend framework that will empower frontend developers to build incredibly fast and interactive websites using React without losing key benefits that Drupal provides like content modeling and administration UI.
           
-Join us if you want to discover the ins and outs of how Drupal and Gatsby ecosystem complement each other.`,
+Join us if you want to discover the ins and outs of how Drupal and Gatsby ecosystem complement each other.
+
+**Sold out!**`,
           people: [people.davidC, people.mario],
         },
       ],
@@ -304,7 +306,8 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "The Actor Model: a new mental model for React",
-          description: "System-level state management in modern React applications is challenging. Usually, as the applications grow, the complexity of interaction between different parts of the application compounds. The more you need those isolated parts to talk, the higher the level of complexity. Usually, the common pitfalls of these communications are underestimated especially with the recent trend of State management that tends to keep the application state outside of React and distributed. In this talk, We'll see how the Actor Model architecture can come to the rescue and what makes it stand out compared to the other approaches.",
+          description:
+            "System-level state management in modern React applications is challenging. Usually, as the applications grow, the complexity of interaction between different parts of the application compounds. The more you need those isolated parts to talk, the higher the level of complexity. Usually, the common pitfalls of these communications are underestimated especially with the recent trend of State management that tends to keep the application state outside of React and distributed. In this talk, We'll see how the Actor Model architecture can come to the rescue and what makes it stand out compared to the other approaches.",
           people: [people.farzadYz],
         },
         {
