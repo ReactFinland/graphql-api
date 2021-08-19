@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Farzad Yz",
   about:
-    "Farzad is a Software developer focused on JavaScript and friends. He is usually fascinated by Tooling, Architecture, Automation and Software Patterns.",
+    "Lead engineer @epicgames. Into State machines and Statecharts. Coach @mentorcruise",
   image: {
     url: "people/farzad.jpg",
   },
@@ -13,9 +13,9 @@ const person: Contact = {
     twitter: "farzad_yz",
     github: "farskid",
     facebook: "",
-    medium: "",
+    medium: "farzad_yz",
     instagram: "",
-    linkedin: "",
+    linkedin: "farzad_yz",
     youtube: "",
   },
   location: {
@@ -29,6 +29,7 @@ const person: Contact = {
     Keyword.STATE_MANAGEMENT,
     Keyword.STATECHARTS,
     Keyword.HEADLESS_COMPONENTS,
+    Keyword.ACTOR_MODEL,
   ],
   type: [ContactType.SPEAKER],
 };
