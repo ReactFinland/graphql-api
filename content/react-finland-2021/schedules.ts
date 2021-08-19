@@ -134,6 +134,7 @@ Join us if you want to discover the ins and outs of how Drupal and Gatsby ecosys
         },
       ],
     },
+    /*
     {
       begin: "10:00",
       end: "14:00",
@@ -151,6 +152,7 @@ Upon a closer look at the challenges that still remain, it will become clear tha
         },
       ],
     },
+    */
     {
       begin: "15:00",
       end: "16:30",
