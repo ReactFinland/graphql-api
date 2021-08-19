@@ -56,6 +56,7 @@ enum Keyword {
   VS_CODE = "VS Code",
   WEBPACK = "Webpack",
   WEB_ASSEMBLY = "Web Assembly",
+  ACTOR_MODEL = "Actor Model",
 }
 
 export default Keyword;
