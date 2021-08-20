@@ -207,7 +207,7 @@ const wednesday: Schedule = {
   intervals: [
     {
       begin: "07:00",
-      end: "08:30",
+      end: "09:00",
       title: "Inclusivity",
       mc: people.juhoVepsalainen,
       sessions: [
@@ -231,6 +231,14 @@ const wednesday: Schedule = {
           title: "Structural Racism",
           description: `How our narrow understanding of racism (visible and interpersonal level) still stands in the way of racial equity and inclusion (in tech, too) and how racial bias can be seen in tech, products etc.`,
           people: [people.jasmin],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "How to avoid bias or exclusion when recruiting",
+          description:
+            "I focus on why inclusion is important in hiring and what are the inclusive hiring practices for any organization that could be taken into use. Inclusive hiring and evaluation process are the great window of opportunity that can truly support inclusion with practical actions. I offer practical tips and a way to implement small changes while working the way towards more inclusive hiring culture and strategy.",
+          people: [people.emmi],
         },
       ],
       urls: {
