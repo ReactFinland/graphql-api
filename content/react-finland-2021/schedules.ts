@@ -205,13 +205,38 @@ const wednesday: Schedule = {
   description: "Wednesday",
   location: locations.internet,
   intervals: [
-    /*{
+    {
       begin: "07:00",
       end: "08:30",
-      title: "To be announced",
-      mc: people.manjula,
-      sessions: [],
-    },*/
+      title: "Inclusivity",
+      mc: people.juhoVepsalainen,
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.BEGINNER,
+          title: "Reasons why we need inclusion",
+          description: ``,
+          people: [people.nasim],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Understanding Unconscious bias",
+          description: ``,
+          people: [people.kristopher],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Structural Racism",
+          description: `How our narrow understanding of racism (visible and interpersonal level) still stands in the way of racial equity and inclusion (in tech, too) and how racial bias can be seen in tech, products etc.`,
+          people: [people.jasmin],
+        },
+      ],
+      urls: {
+        video: "", // TODO
+      },
+    },
     {
       begin: "10:00",
       end: "11:30",
