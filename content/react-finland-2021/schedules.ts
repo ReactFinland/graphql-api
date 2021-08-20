@@ -221,7 +221,7 @@ const wednesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Understanding Unconscious bias",
+          title: "Understanding unconscious bias",
           description: ``,
           people: [people.kristopher],
         },
