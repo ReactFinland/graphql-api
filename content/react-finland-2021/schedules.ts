@@ -209,7 +209,7 @@ const wednesday: Schedule = {
       begin: "07:00",
       end: "09:00",
       title: "Inclusivity",
-      mc: people.juhoVepsalainen,
+      mc: people.manjula,
       sessions: [
         {
           type: SessionType.TALK,
