@@ -159,7 +159,7 @@ Upon a closer look at the challenges that still remain, it will become clear tha
       begin: "15:00",
       end: "16:30",
       title: "Architecture",
-      mc: people.saraVieira,
+      mc: people.juhoVepsalainen,
       sessions: [
         {
           type: SessionType.TALK,
@@ -252,7 +252,7 @@ Instead of reviewing each individual library, we’ll analyse the various featur
       begin: "12:00",
       end: "13:30",
       title: "Content management",
-      mc: people.saraVieira,
+      mc: people.juhoVepsalainen,
       sessions: [
         {
           type: SessionType.TALK,
@@ -327,7 +327,7 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
       begin: "16:00",
       end: "17:30",
       title: "GraphQL",
-      mc: people.saraVieira,
+      mc: people.juhoVepsalainen,
       sessions: [
         {
           type: SessionType.TALK,
@@ -520,7 +520,7 @@ const friday: Schedule = {
       begin: "07:00",
       end: "08:30",
       title: "React Native and Testing",
-      mc: people.juhoVepsalainen,
+      mc: people.saraVieira,
       sessions: [
         {
           type: SessionType.TALK,
