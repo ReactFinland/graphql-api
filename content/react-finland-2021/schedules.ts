@@ -255,9 +255,7 @@ const wednesday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "A thorough analysis of CSS-in-JS",
-          description: `There are more than 50 different CSS-in-JS libraries out there and each of them provides a unique set of features.
-
-Instead of reviewing each individual library, we’ll analyse the various features that these libraries have to offer, to better understand what approach better suits a specific use-case.`,
+          description: `There are two mutually exclusive methods that CSS-in-JS libraries use to generate and ship styles to the browser. Both methods have benefits and downsides, so let’s analyze them in detail from the loading performance perspective.`,
           people: [people.andrei],
         },
         {
