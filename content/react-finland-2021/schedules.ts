@@ -242,7 +242,7 @@ const wednesday: Schedule = {
         },
       ],
       urls: {
-        video: "", // TODO
+        video: "https://www.youtube.com/watch?v=4CAMFBkpOjE",
       },
     },
     {
@@ -514,7 +514,7 @@ Finally, I will present the current status and outline a roadmap of improvements
         },
       ],
       urls: {
-        video: "",
+        video: "https://www.youtube.com/watch?v=m_ZE-q7z82Y",
       },
     },
     {
