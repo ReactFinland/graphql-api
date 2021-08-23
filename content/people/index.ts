@@ -94,6 +94,7 @@ export { default as matias } from "./matias";
 export { default as matt } from "./matt";
 export { default as matteo } from "./matteo";
 export { default as max } from "./max";
+export { default as michael } from "./michael";
 export { default as michalChudziak } from "./michal-chudziak";
 export { default as michelWeststrate } from "./michel-weststrate";
 export { default as mika } from "./mika";
