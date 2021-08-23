@@ -488,8 +488,9 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Opensource Documentation—Tales from React and React Native",
+          description:
+            "Documentation is often your community's first point of contact with your project and their daily companion at work. So why is documentation the last thing that gets done, and how can we do it better? This talk shares how important documentation is for React and React Native and how you can invest in or contribute to making your favourite project's docs to build a thriving community",
           people: [people.rachelNabors],
         },
         {
