@@ -493,8 +493,16 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Documenting components with stories",
+          description: `Most documentation systems focus on text content of one form or another: WYSIWYG editors, markdown, code comments, and so forth. Storybook, the industry-standard component workshop, takes a very different approach, focusing instead on component examples, or **stories**.
+
+In this demo, I will introduce an open format called Component Story Format (CSF).
+          
+I will show how CSF can be used used to create interactive docs in Storybook, including auto-generated DocsPage and freeform MDX documentation. Storybook Docs is a convenient way to build a living production design system.
+          
+I will then show how CSF stories can be used create novel forms of documentation, such as multiplayer collaborative docs, interactive design prototypes, and even behavioral documentation via tests.
+          
+Finally, I will present the current status and outline a roadmap of improvements that are on their way in the coming months.`,
           people: [people.michael],
         },
         {
