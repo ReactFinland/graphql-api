@@ -576,7 +576,7 @@ const friday: Schedule = {
           level: Level.BEGINNER,
           title: "Screenshot testing with Viteshot",
           description:
-            "François will introduce Viteshot, a new library that makes screenshot testing fast and simple, so you can be confident that your components look exactly the way they're supposed to.",
+            "François will introduce Viteshot, a new library that makes screenshot testing fast and simple for web applications, so you can be confident that your components look exactly the way they're supposed to.",
           people: [people.francois],
         },
         {
