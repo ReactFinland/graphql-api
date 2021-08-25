@@ -10,7 +10,7 @@ const sponsor: Contact = {
     homepage: "https://www.smartly.io",
     facebook: "",
     instagram: "",
-    twitter: "",
+    twitter: "smartlyio",
   },
   location: {
     country: {
