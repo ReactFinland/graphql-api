@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Patrick Ecker",
   about:
-    "Patrick is a JavaScript Software Engineer and freelancer, mostly known for his contributions to the Flow type checker ecosystem and his recent work at Runtastic, where he spent most of his time working on the Mobile News Feed feature (built in React Native). Most of his Open Source time is dedicated to the ReasonML and OCaml platform to build robust, type-safe JS applications.",
+    "Patrick is a frontend engineer at Rohea Oy, building the next big sales enablement platform built on Flow, ReScript, React and PHP. He is also core team member of the ReScript programming language, working on the language's tooling infrastructure and documentation website.",
   image: {
     url: "people/patrick.jpg",
   },
@@ -21,7 +21,7 @@ const person: Contact = {
     },
     city: "Vienna",
   },
-  keywords: [Keyword.REACT, Keyword.REASON],
+  keywords: [Keyword.REACT, Keyword.RESCRIPT],
   type: [ContactType.SPEAKER],
 };
 
