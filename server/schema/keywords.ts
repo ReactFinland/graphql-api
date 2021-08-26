@@ -36,6 +36,7 @@ enum Keyword {
   REACT_VR = "React VR",
   REDUX = "Redux",
   REASON = "Reason",
+  RESCRIPT= "ReScript",
   RUST = "Rust",
   SSR = "SSR",
   SPEC = "Spec",
