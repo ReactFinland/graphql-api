@@ -14,7 +14,7 @@ const person: Contact = {
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/fwouts/",
     youtube: "",
     devto: "",
   },
