@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "David Corbacho Roman",
-  about: "Señor Developer.",
+  about:
+    "Señor Developer at Wunder. Originally from Spain, I've been living in Finland for more than 10 years, focusing my career on web development and JavaScript",
   image: {
     url: "people/david-c.jpg",
   },
@@ -14,7 +15,7 @@ const person: Contact = {
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "corbacho",
     youtube: "",
     devto: "",
   },
@@ -23,10 +24,9 @@ const person: Contact = {
       name: "Finland",
       code: "FI",
     },
-    city: "Helsinki",
+    city: "Nummela",
   },
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };
-
 export default person;

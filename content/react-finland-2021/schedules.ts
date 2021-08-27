@@ -131,7 +131,7 @@ The goal of this workshop is to understand how SSR works in React and how to imp
           title: "Powering Next.js with Drupal",
           description: `This session will cover why and how to fully decouple Drupal with Next.JS, an open source modern frontend framework that will empower frontend developers to build incredibly fast and interactive websites using React without losing key benefits that Drupal provides like content modeling and administration UI.
           
-Join us if you want to discover the ins and outs of how Drupal and Gatsby ecosystem complement each other.
+Join us if you want to discover the ins and outs of how Drupal and Next.js ecosystem complement each other.
 
 **Sold out!**`,
           people: [people.davidC, people.mario],
