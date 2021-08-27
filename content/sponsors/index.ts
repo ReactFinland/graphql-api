@@ -13,6 +13,7 @@ export { default as cybercom } from "./cybercom";
 export { default as designsystemslondon } from "./designsystemslondon";
 export { default as digia } from "./digia";
 export { default as dna325 } from "./dna325";
+export { default as dynatrace } from "./dynatrace";
 export { default as elisa } from "./elisa";
 export { default as fb } from "./fb";
 export { default as formidable } from "./formidable";
