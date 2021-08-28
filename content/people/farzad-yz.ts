@@ -2,7 +2,7 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
-  name: "Farzad Yz",
+  name: "Farzad YousefZadeh",
   about:
     "Lead engineer @epicgames. Into State machines and Statecharts. Coach @mentorcruise",
   image: {
