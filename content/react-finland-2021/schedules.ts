@@ -338,18 +338,18 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "The Actor Model: a new mental model for React",
-          description:
-            "System-level state management in modern React applications is challenging. Usually, as the applications grow, the complexity of interaction between different parts of the application compounds. The more you need those isolated parts to talk, the higher the level of complexity. Usually, the common pitfalls of these communications are underestimated especially with the recent trend of State management that tends to keep the application state outside of React and distributed. In this talk, We'll see how the Actor Model architecture can come to the rescue and what makes it stand out compared to the other approaches.",
-          people: [people.farzadYz],
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
           title: "Make legacy code delightful with statecharts",
           description:
             "If you must have legacy code, you want it written in statecharts. We'll break down the mental models required for understanding unfamiliar UI code, and compare the maintenance costs with and without statecharts.",
           people: [people.matt],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "The Actor Model: a new mental model for React",
+          description:
+            "System-level state management in modern React applications is challenging. Usually, as the applications grow, the complexity of interaction between different parts of the application compounds. The more you need those isolated parts to talk, the higher the level of complexity. Usually, the common pitfalls of these communications are underestimated especially with the recent trend of State management that tends to keep the application state outside of React and distributed. In this talk, We'll see how the Actor Model architecture can come to the rescue and what makes it stand out compared to the other approaches.",
+          people: [people.farzadYz],
         },
       ],
       urls: {
