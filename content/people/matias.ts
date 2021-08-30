@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Matias Huhta",
-  about: "",
+  about:
+    "Matias is a passionate Web Components advocate. He's a active member of Web Component communities and a active open source contributor.",
   image: {
     url: "people/matias.jpeg",
   },
@@ -14,7 +15,7 @@ const person: Contact = {
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "matias-huhta-b0b159106",
     youtube: "",
     devto: "",
   },
@@ -23,9 +24,9 @@ const person: Contact = {
       name: "Finland",
       code: "FI",
     },
-    city: "Helsinki",
+    city: "Turku",
   },
-  keywords: [Keyword.REACT],
+  keywords: [Keyword.REACT, Keyword.TOOLING],
   type: [ContactType.SPEAKER],
 };
 
