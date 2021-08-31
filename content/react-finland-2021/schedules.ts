@@ -249,6 +249,10 @@ const wednesday: Schedule = {
           title: "Structural Racism",
           description: `How our narrow understanding of racism (visible and interpersonal level) still stands in the way of racial equity and inclusion (in tech, too) and how racial bias can be seen in tech, products etc.`,
           people: [people.jasmin],
+          urls: {
+            slides:
+              "https://drive.google.com/file/d/1qH2RQo_DIy-1bre1BSJ5wl_E3o4MLiqV/view?usp=sharing",
+          },
         },
         {
           type: SessionType.TALK,
