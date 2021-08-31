@@ -233,7 +233,7 @@ const wednesday: Schedule = {
           people: [people.nasim],
           urls: {
             slides:
-              "https://docs.google.com/presentation/d/13DsJF96Pm4rWK_1JQhRvJo8iHpR6Z6pQ1JSAOEoHlbg/edit?usp=sharing",
+              "https://drive.google.com/file/d/1dv0ZOFDTitrUHJfJAgKs6YiO4M8Fxwcs/view?usp=sharing",
           },
         },
         /*{
