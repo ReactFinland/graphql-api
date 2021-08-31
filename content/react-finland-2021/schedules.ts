@@ -88,6 +88,8 @@ However, video that takes a long time to start up leads to frustration and aband
             "An introduction to SolidJS UI Library. Explore an example to show the similarity and differences between Hook + Virtual DOM versus Reactivity + DOM.",
           people: [people.ryan],
           urls: {
+            slides:
+              "https://docs.google.com/presentation/d/1dPJfjkuzNikQ9taj-aF0XwtV2EhcdcEh7tk0y6SYXMY/edit?usp=sharing",
             video: "https://www.youtube.com/watch?v=2iK9zzhSKo4",
           },
         },
@@ -99,6 +101,7 @@ However, video that takes a long time to start up leads to frustration and aband
             "Even today, with advanced tooling and frameworks, the gap between design and development still exists. This talk will examine how we can eliminate handoff between design and development teams by using JSX as a shared source of truth across any platform.",
           people: [people.travis],
           urls: {
+            slides: "https://jsxui.com/presentation",
             video: "https://www.youtube.com/watch?v=RGQR79PbTFU",
           },
         },
