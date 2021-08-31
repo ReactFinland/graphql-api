@@ -221,7 +221,7 @@ const wednesday: Schedule = {
   intervals: [
     {
       begin: "07:00",
-      end: "09:00",
+      end: "08:30",
       title: "Inclusivity",
       mc: people.manjula,
       sessions: [
@@ -232,13 +232,13 @@ const wednesday: Schedule = {
           description: ``,
           people: [people.nasim],
         },
-        {
+        /*{
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Understanding unconscious bias",
           description: ``,
           people: [people.kristopher],
-        },
+        },*/
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
