@@ -65,6 +65,9 @@ However, video that takes a long time to start up leads to frustration and aband
           description:
             "To show how we can make rich, interactive experiences, for instance games, with React semantics and shareable components, and what that means for traditional constructs, like the render-loop.",
           people: [people.paul],
+          urls: {
+            video: "https://www.youtube.com/watch?v=CLTZrFmri2E",
+          },
         },
         {
           type: SessionType.TALK,
@@ -73,6 +76,9 @@ However, video that takes a long time to start up leads to frustration and aband
           description:
             "Over the past few years, state machines, statecharts, and the actor model have proven to be viable concepts for building complex application logic in a clear, visual way with XState. In this talk, we'll take a peek into the future of XState, including new features in the next version, and new tools and services that will make it even easier to create and collaborate on state machines.",
           people: [people.davidKhourshid],
+          urls: {
+            video: "https://www.youtube.com/watch?v=Q05jcu9N98g",
+          },
         },
         {
           type: SessionType.TALK,
@@ -81,6 +87,9 @@ However, video that takes a long time to start up leads to frustration and aband
           description:
             "An introduction to SolidJS UI Library. Explore an example to show the similarity and differences between Hook + Virtual DOM versus Reactivity + DOM.",
           people: [people.ryan],
+          urls: {
+            video: "https://www.youtube.com/watch?v=2iK9zzhSKo4",
+          },
         },
         {
           type: SessionType.TALK,
@@ -89,6 +98,9 @@ However, video that takes a long time to start up leads to frustration and aband
           description:
             "Even today, with advanced tooling and frameworks, the gap between design and development still exists. This talk will examine how we can eliminate handoff between design and development teams by using JSX as a shared source of truth across any platform.",
           people: [people.travis],
+          urls: {
+            video: "https://www.youtube.com/watch?v=RGQR79PbTFU",
+          },
         },
       ],
       urls: {
