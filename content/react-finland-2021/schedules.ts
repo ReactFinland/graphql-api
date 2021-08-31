@@ -231,6 +231,10 @@ const wednesday: Schedule = {
           title: "Reasons why we need inclusion",
           description: ``,
           people: [people.nasim],
+          urls: {
+            slides:
+              "https://docs.google.com/presentation/d/13DsJF96Pm4rWK_1JQhRvJo8iHpR6Z6pQ1JSAOEoHlbg/edit?usp=sharing",
+          },
         },
         /*{
           type: SessionType.TALK,
