@@ -77,7 +77,7 @@ However, video that takes a long time to start up leads to frustration and aband
             "Over the past few years, state machines, statecharts, and the actor model have proven to be viable concepts for building complex application logic in a clear, visual way with XState. In this talk, we'll take a peek into the future of XState, including new features in the next version, and new tools and services that will make it even easier to create and collaborate on state machines.",
           people: [people.davidKhourshid],
           urls: {
-            slides: "https://slides.com/davidkhourshid/state-of-xstate",
+            web: "https://slides.com/davidkhourshid/state-of-xstate",
             video: "https://www.youtube.com/watch?v=Q05jcu9N98g",
           },
         },
@@ -89,8 +89,7 @@ However, video that takes a long time to start up leads to frustration and aband
             "An introduction to SolidJS UI Library. Explore an example to show the similarity and differences between Hook + Virtual DOM versus Reactivity + DOM.",
           people: [people.ryan],
           urls: {
-            slides:
-              "https://docs.google.com/presentation/d/1dPJfjkuzNikQ9taj-aF0XwtV2EhcdcEh7tk0y6SYXMY/edit?usp=sharing",
+            web: "https://docs.google.com/presentation/d/1dPJfjkuzNikQ9taj-aF0XwtV2EhcdcEh7tk0y6SYXMY/edit?usp=sharing",
             video: "https://www.youtube.com/watch?v=2iK9zzhSKo4",
           },
         },
@@ -102,7 +101,7 @@ However, video that takes a long time to start up leads to frustration and aband
             "Even today, with advanced tooling and frameworks, the gap between design and development still exists. This talk will examine how we can eliminate handoff between design and development teams by using JSX as a shared source of truth across any platform.",
           people: [people.travis],
           urls: {
-            slides: "https://jsxui.com/presentation",
+            web: "https://jsxui.com/presentation",
             video: "https://www.youtube.com/watch?v=RGQR79PbTFU",
           },
         },
