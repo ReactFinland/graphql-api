@@ -288,13 +288,6 @@ const wednesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "A thorough analysis of CSS-in-JS",
-          description: `There are two mutually exclusive methods that CSS-in-JS libraries use to generate and ship styles to the browser. Both methods have benefits and downsides, so let’s analyze them in detail from the loading performance perspective.`,
-          people: [people.andrei],
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
           title: "Zero-runtime CSS-in-TypeScript with vanilla-extract",
           description:
             "Can we have themeable CSS-in-TypeScript without the runtime cost? In this talk we'll have a quick look at how this can be achieved with vanilla-extract.",
@@ -307,6 +300,13 @@ const wednesday: Schedule = {
           description:
             "CSS + superpowers - bloat. How Stylex creates a zero-cost abstraction that gives CSS superpowers.",
           people: [people.naman],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "A thorough analysis of CSS-in-JS",
+          description: `There are two mutually exclusive methods that CSS-in-JS libraries use to generate and ship styles to the browser. Both methods have benefits and downsides, so let’s analyze them in detail from the loading performance perspective.`,
+          people: [people.andrei],
         },
       ],
       urls: {
