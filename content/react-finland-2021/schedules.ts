@@ -193,6 +193,9 @@ To demo this approach, we'll create a simple Toggler component (a UI component t
           
 Towards the end, we'll explore the benefits, focusing on testing these decoupled units in isolation.`,
           people: [people.calin],
+          urls: {
+            video: "https://www.youtube.com/watch?v=G_-KaHOeuu4",
+          },
         },
         {
           type: SessionType.TALK,
@@ -201,6 +204,9 @@ Towards the end, we'll explore the benefits, focusing on testing these decoupled
           description:
             "Likely you've heard of Web Components but do you know how to use them with React? If not, then this is the demonstration for you!",
           people: [people.matias],
+          urls: {
+            video: "https://www.youtube.com/watch?v=fgtS_nfMOtw",
+          },
         },
         {
           type: SessionType.TALK,
@@ -209,6 +215,9 @@ Towards the end, we'll explore the benefits, focusing on testing these decoupled
           description:
             "David will explain the different possibilities to implement MicroFrontends in the past, the present, and the future. More importantly, he will leave you to know which of the available approaches is best suited for your specific task at hand.",
           people: [people.david],
+          urls: {
+            video: "",
+          },
         },
       ],
       urls: {
