@@ -690,9 +690,9 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
         {
           type: SessionType.TALK,
           level: Level.BEGINNER,
-          title: "On The Road To The World's Best Branding",
+          title: "On the Road to the World's Best Branding",
           description:
-            "In this talk we'll take a closer how we do event branding and theming at Brella, and how we want to progress it in the future. Topics such as generating accessible colors will be discussed.",
+            "Branding. What's it all about? Is it good, or is it wack? Come found out as we take a closer how we do event branding and theming at Brella. We'll go through branding and color palette generation in general, look at the implementation in our end, and see what the future holds.",
           people: [people.niklas],
         },
         {
