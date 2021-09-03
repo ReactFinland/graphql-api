@@ -18,10 +18,10 @@ const person: Contact = {
   },
   location: {
     country: {
-      name: "Austria",
-      code: "AT",
+      name: "Finland",
+      code: "FI",
     },
-    city: "Vienna",
+    city: "Rautalampi",
   },
   keywords: [Keyword.TOOLING, Keyword.WEBPACK],
   type: [ContactType.ORGANIZER],
