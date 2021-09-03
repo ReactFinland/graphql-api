@@ -194,6 +194,7 @@ Towards the end, we'll explore the benefits, focusing on testing these decoupled
           people: [people.calin],
           urls: {
             video: "https://www.youtube.com/watch?v=G_-KaHOeuu4",
+            demo: "https://github.com/calinbogdan/delegate-your-react-dialogs",
           },
         },
         {
@@ -471,6 +472,9 @@ const thursday: Schedule = {
           description:
             "The final stage of a react component is when it is being published and distributed. How can I ensure my packages won’t crash in production? This talk will help you to test your React components by publishing them to a private registry and running End-to-End tests against them.",
           people: [people.juan],
+          urls: {
+            demo: "https://github.com/juanpicado/verdaccio-end-to-end-tests",
+          },
         },
         {
           type: SessionType.TALK,
