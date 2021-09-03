@@ -273,6 +273,10 @@ const wednesday: Schedule = {
           description:
             "I focus on why inclusion is important in hiring and what are the inclusive hiring practices for any organization that could be taken into use. Inclusive hiring and evaluation process are the great window of opportunity that can truly support inclusion with practical actions. I offer practical tips and a way to implement small changes while working the way towards more inclusive hiring culture and strategy.",
           people: [people.emmi],
+          urls: {
+            slides:
+              "https://drive.google.com/file/d/1ck8RYwhNMpvqg2zYdITUl4Gbn-yR_219/view?usp=sharing",
+          },
         },
       ],
       urls: {
@@ -374,6 +378,9 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
           description:
             "If you must have legacy code, you want it written in statecharts. We'll break down the mental models required for understanding unfamiliar UI code, and compare the maintenance costs with and without statecharts.",
           people: [people.matt],
+          urls: {
+            web: "https://slides.com/mattpocock/make-legacy-code-delightful-with-statecharts",
+          },
         },
         {
           type: SessionType.TALK,
@@ -382,6 +389,9 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
           description:
             "System-level state management in modern React applications is challenging. Usually, as the applications grow, the complexity of interaction between different parts of the application compounds. The more you need those isolated parts to talk, the higher the level of complexity. Usually, the common pitfalls of these communications are underestimated especially with the recent trend of State management that tends to keep the application state outside of React and distributed. In this talk, We'll see how the Actor Model architecture can come to the rescue and what makes it stand out compared to the other approaches.",
           people: [people.farzadYz],
+          urls: {
+            web: "https://slides.com/farzadyz/actor-model-rf2021",
+          },
         },
       ],
       urls: {
