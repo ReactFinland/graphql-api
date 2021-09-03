@@ -246,6 +246,7 @@ const wednesday: Schedule = {
           urls: {
             slides:
               "https://drive.google.com/file/d/1dv0ZOFDTitrUHJfJAgKs6YiO4M8Fxwcs/view?usp=sharing",
+            video: "https://www.youtube.com/watch?v=j91tmdeObDU",
           },
         },
         /*{
@@ -264,6 +265,7 @@ const wednesday: Schedule = {
           urls: {
             slides:
               "https://drive.google.com/file/d/1qH2RQo_DIy-1bre1BSJ5wl_E3o4MLiqV/view?usp=sharing",
+            video: "https://www.youtube.com/watch?v=6jLVAX6UZhs",
           },
         },
         {
@@ -276,6 +278,7 @@ const wednesday: Schedule = {
           urls: {
             slides:
               "https://drive.google.com/file/d/1ck8RYwhNMpvqg2zYdITUl4Gbn-yR_219/view?usp=sharing",
+            video: "https://www.youtube.com/watch?v=JdXzotdglao",
           },
         },
       ],
