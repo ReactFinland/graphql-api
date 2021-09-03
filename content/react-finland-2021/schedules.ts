@@ -643,6 +643,9 @@ const friday: Schedule = {
           description:
             "Quick tips on how to utilise the native mobile platform to help provide your users an upgraded experience with sounds, vibrations and animations. Small changes can have a huge difference UX-wise.",
           people: [people.kadiKraman],
+          urls: {
+            demo: "https://snack.expo.dev/@kadikraman/haptics-and-micro-animations",
+          },
         },
       ],
       urls: {
