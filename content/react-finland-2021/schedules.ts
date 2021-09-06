@@ -300,6 +300,9 @@ const wednesday: Schedule = {
           description:
             "Can we have themeable CSS-in-TypeScript without the runtime cost? In this talk we'll have a quick look at how this can be achieved with vanilla-extract.",
           people: [people.mark],
+          urls: {
+            video: "https://www.youtube.com/watch?v=23VqED_kO2Q",
+          },
         },
         {
           type: SessionType.TALK,
