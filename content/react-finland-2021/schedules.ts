@@ -474,6 +474,8 @@ const thursday: Schedule = {
           people: [people.juan],
           urls: {
             demo: "https://github.com/juanpicado/verdaccio-end-to-end-tests",
+            slides:
+              "https://docs.google.com/presentation/d/1a2xkqj1KlUayR1Bva1bVYvavwOPVuLplxFtup9MI_U4/edit?usp=sharing",
           },
         },
         {
@@ -635,6 +637,9 @@ const friday: Schedule = {
           description:
             "My unpopular opinion is that testing is ... important. How do you test your React Native apps? In this presentation I will show how to run full integrations tests using Cypress while the RN app is running in the browser. This method can cover most of the application's code and be effective at finding logical errors and mistakes when calling the server APIs.",
           people: [people.gleb],
+          urls: {
+            slides: "https://slides.com/bahmutov/testing-react-native",
+          },
         },
         {
           type: SessionType.TALK,
