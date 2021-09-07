@@ -552,7 +552,7 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
             "A demo on Aleph.js about good development experience and deno runtime.",
           people: [people.je],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=OY7Cp79x38o",
           },
         },
         {
@@ -563,7 +563,7 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
             "In this talk we are going to have a look on how to use Server-Side-Rendering and Static-Site-Generation in NextJS to serve pages.",
           people: [people.nur],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=UKiyA_GENns",
           },
         },
         {
@@ -573,7 +573,7 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           description: `In this brief introduction of Nuxt, we will learn Nuxt basics and how to build Git-files based content management system using Nuxt.js and its module system.`,
           people: [people.krutie],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=HrbyeVps-NA",
           },
         },
       ],
@@ -592,10 +592,10 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           level: Level.INTERMEDIATE,
           title: "Opensource Documentation—Tales from React and React Native",
           description:
-            "Documentation is often your community's first point of contact with your project and their daily companion at work. So why is documentation the last thing that gets done, and how can we do it better? This talk shares how important documentation is for React and React Native and how you can invest in or contribute to making your favourite project's docs to build a thriving community",
+            "Documentation is often your community's first point of contact with your project and their daily companion at work. So why is documentation the last thing that gets done, and how can we do it better? This talk shares how important documentation is for React and React Native and how you can invest in or contribute to making your favourite project's docs to build a thriving community.",
           people: [people.rachelNabors],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=SgM2lEjCyAY",
           },
         },
         {
@@ -613,7 +613,7 @@ I will then show how CSF stories can be used create novel forms of documentation
 Finally, I will present the current status and outline a roadmap of improvements that are on their way in the coming months.`,
           people: [people.michael],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=CddIHkbSTm8",
           },
         },
         {
@@ -624,7 +624,7 @@ Finally, I will present the current status and outline a roadmap of improvements
             "In this talk, Patrick goes through the effort that went into ReScript's documentation platform.",
           people: [people.patrickEcker],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=NtlxHUqY0h0",
           },
         },
       ],
@@ -648,7 +648,7 @@ Finally, I will present the current status and outline a roadmap of improvements
 In this demo, I will show some techniques every developer should know and use when developing their sites or apps. These simple checks don't ensure 100% accessibility but help catch the most obvious flaws in your site.`,
           people: [people.eevis],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=CVjbrvsaJDw",
           },
         },
         {
