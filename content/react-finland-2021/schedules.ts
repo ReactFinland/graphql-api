@@ -619,12 +619,12 @@ Finally, I will present the current status and outline a roadmap of improvements
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "The Story of ReScript's Documentation Platform",
+          title: "The Story of ReScript's Documentation Platform",
+          description:
+            "In this talk, Patrick goes through the effort that went into ReScript's documentation platform.",
           people: [people.patrickEcker],
           urls: {
-            video:
-              "In this talk, Patrick goes through the effort that went into ReScript's documentation platform.",
+            video: "",
           },
         },
       ],
