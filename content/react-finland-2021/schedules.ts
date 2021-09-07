@@ -311,6 +311,9 @@ const wednesday: Schedule = {
           description:
             "CSS + superpowers - bloat. How Stylex creates a zero-cost abstraction that gives CSS superpowers.",
           people: [people.naman],
+          urls: {
+            video: "https://www.youtube.com/watch?v=ur-sGzUWId4",
+          },
         },
         {
           type: SessionType.TALK,
@@ -318,6 +321,9 @@ const wednesday: Schedule = {
           title: "A thorough analysis of CSS-in-JS",
           description: `There are two mutually exclusive methods that CSS-in-JS libraries use to generate and ship styles to the browser. Both methods have benefits and downsides, so let’s analyze them in detail from the loading performance perspective.`,
           people: [people.andrei],
+          urls: {
+            video: "https://www.youtube.com/watch?v=Nku71cWwZts",
+          },
         },
       ],
       urls: {
@@ -338,6 +344,9 @@ const wednesday: Schedule = {
           
 We will talk about the key features of any Headless CMS and how we can integrate a headless platform into our React applications. We will focus on Storyblok, a headless CMS that offers a real-time Visual Editor, a great feature for developers and content creators.`,
           people: [people.facundo],
+          urls: {
+            video: "https://www.youtube.com/watch?v=GRz0ibU2PIk",
+          },
         },
         {
           type: SessionType.TALK,
@@ -348,13 +357,19 @@ We will talk about the key features of any Headless CMS and how we can integrate
 
 React Bricks is the first CMS that is super-great for Developers (it's just React, backed by solid APIs), for Content Creators (it keeps the visual editing experience of no-code tools like Wix) and for Designers (you can express your exact design system and be sure nobody will break it). I'll show you how it works!`,
           people: [people.matteo],
+          urls: {
+            video: "https://www.youtube.com/watch?v=lzR5Wndfy4s",
+          },
         },
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Contentful and headless",
-          description: `How contentful helps you to manage all the data in a headless e-commerce website.`,
+          description: `How Contentful helps you to manage all the data in a headless e-commerce website.`,
           people: [people.nidhi],
+          urls: {
+            video: "https://www.youtube.com/watch?v=WbQsJa7-MdA",
+          },
         },
       ],
       urls: {
@@ -377,6 +392,9 @@ In this session, you’ll get a whirlwind introduction to state machines and sta
           
 You could be a developer, designer, project manager, multi-disciplinarian or fancy specialist, I believe everyone can get something out of this talk, so join me!`,
           people: [people.laurak],
+          urls: {
+            video: "https://www.youtube.com/watch?v=Y_lOg-rsqBM",
+          },
         },
         {
           type: SessionType.TALK,
@@ -386,6 +404,7 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
             "If you must have legacy code, you want it written in statecharts. We'll break down the mental models required for understanding unfamiliar UI code, and compare the maintenance costs with and without statecharts.",
           people: [people.matt],
           urls: {
+            video: "https://www.youtube.com/watch?v=zll9uDQOOq0",
             web: "https://slides.com/mattpocock/make-legacy-code-delightful-with-statecharts",
           },
         },
@@ -393,10 +412,14 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "The Actor Model: a new mental model for React",
-          description:
-            "System-level state management in modern React applications is challenging. Usually, as the applications grow, the complexity of interaction between different parts of the application compounds. The more you need those isolated parts to talk, the higher the level of complexity. Usually, the common pitfalls of these communications are underestimated especially with the recent trend of State management that tends to keep the application state outside of React and distributed. In this talk, We'll see how the Actor Model architecture can come to the rescue and what makes it stand out compared to the other approaches.",
+          description: `System-level state management in modern React applications is challenging. Usually, as the applications grow, the complexity of interaction between different parts of the application compounds.
+
+The more you need those isolated parts to talk, the higher the level of complexity. Usually, the common pitfalls of these communications are underestimated especially with the recent trend of State management that tends to keep the application state outside of React and distributed.
+
+In this talk, We'll see how the Actor Model architecture can come to the rescue and what makes it stand out compared to the other approaches.`,
           people: [people.farzadYz],
           urls: {
+            video: "https://www.youtube.com/watch?v=9k1ZHHJWt7k",
             web: "https://slides.com/farzadyz/actor-model-rf2021",
           },
         },
@@ -422,6 +445,9 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
 - Automatic generated frontend code for your framework of choice (React, Vue.js, Angular)
 - Having everything rebuild through a built in watch mode`,
           people: [people.lukas],
+          urls: {
+            video: "https://www.youtube.com/watch?v=Rt2IcqpdbzE",
+          },
         },
         {
           type: SessionType.TALK,
@@ -430,6 +456,9 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
           description:
             "A demo and deep dive into GraphCDN, the edge caching GraphQL CDN.",
           people: [people.max],
+          urls: {
+            video: "https://www.youtube.com/watch?v=EjrJtp4JaGQ",
+          },
         },
         {
           type: SessionType.TALK,
@@ -439,6 +468,9 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
           description:
             "Being flexible with Apollo Federation and autoscaling with Kubernetes opens many opportunities to scale your app. Jan will show how these two services work hand in hand and why autoscaling matters.",
           people: [people.jan],
+          urls: {
+            video: "https://www.youtube.com/watch?v=jTRFpjKKxmA",
+          },
         },
       ],
       urls: {
@@ -466,6 +498,9 @@ const thursday: Schedule = {
           description:
             "How to properly hide modals / dialogs / drawers functionalities behind buttons that spawn them without cluttering container components.",
           people: [people.calinb],
+          urls: {
+            video: "https://www.youtube.com/watch?v=SIVKJrPHV-Y",
+          },
         },
         {
           type: SessionType.TALK,
@@ -473,9 +508,10 @@ const thursday: Schedule = {
           title:
             "Testing the integrity of your React components by publishing in a private registry",
           description:
-            "The final stage of a react component is when it is being published and distributed. How can I ensure my packages won’t crash in production? This talk will help you to test your React components by publishing them to a private registry and running End-to-End tests against them.",
+            "The final stage of a React component is when it is being published and distributed. How can I ensure my packages won’t crash in production? This talk will help you to test your React components by publishing them to a private registry and running End-to-End tests against them.",
           people: [people.juan],
           urls: {
+            video: "https://www.youtube.com/watch?v=bRKZbrlQqLY",
             demo: "https://github.com/juanpicado/verdaccio-end-to-end-tests",
             slides:
               "https://docs.google.com/presentation/d/1a2xkqj1KlUayR1Bva1bVYvavwOPVuLplxFtup9MI_U4/edit?usp=sharing",
@@ -493,6 +529,9 @@ It's 2021, we've got a lot of new technologies to sustain our Users eXperience. 
           
 Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           people: [people.m4Dz],
+          urls: {
+            video: "https://www.youtube.com/watch?v=oUV2kZedlLU",
+          },
         },
       ],
       urls: {
@@ -512,6 +551,9 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           description:
             "A demo on Aleph.js about good development experience and deno runtime.",
           people: [people.je],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -520,6 +562,9 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           description:
             "In this talk we are going to have a look on how to use Server-Side-Rendering and Static-Site-Generation in NextJS to serve pages.",
           people: [people.nur],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -527,6 +572,9 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           title: "Brief introduction to Nuxt",
           description: `In this brief introduction of Nuxt, we will learn Nuxt basics and how to build Git-files based content management system using Nuxt.js and its module system.`,
           people: [people.krutie],
+          urls: {
+            video: "",
+          },
         },
       ],
       urls: {
@@ -546,6 +594,9 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           description:
             "Documentation is often your community's first point of contact with your project and their daily companion at work. So why is documentation the last thing that gets done, and how can we do it better? This talk shares how important documentation is for React and React Native and how you can invest in or contribute to making your favourite project's docs to build a thriving community",
           people: [people.rachelNabors],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -561,6 +612,9 @@ I will then show how CSF stories can be used create novel forms of documentation
           
 Finally, I will present the current status and outline a roadmap of improvements that are on their way in the coming months.`,
           people: [people.michael],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -568,6 +622,9 @@ Finally, I will present the current status and outline a roadmap of improvements
           title: "",
           description: "",
           people: [people.patrickEcker],
+          urls: {
+            video: "",
+          },
         },
       ],
       urls: {
@@ -589,6 +646,9 @@ Finally, I will present the current status and outline a roadmap of improvements
 
 In this demo, I will show some techniques every developer should know and use when developing their sites or apps. These simple checks don't ensure 100% accessibility but help catch the most obvious flaws in your site.`,
           people: [people.eevis],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -596,6 +656,9 @@ In this demo, I will show some techniques every developer should know and use wh
           title: "Continuous Localization in Enterprise Web Projects",
           description: `Did you know that 50% of users will NOT use the English version of your application, if it supports multiple languages? For ambitious high-growth businesses, going global is not "if" but "when" so it's important to recognize the importance of localization, especially in large multi-team projects. This discussion will explore the depths of localization in Agile companies and what can be achieved with a Continuous Localization system. I'll share some common issues we faced with multi-language products and how localization automation helped us to scale the process across many product teams within the company.`,
           people: [people.ante],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -605,6 +668,9 @@ In this demo, I will show some techniques every developer should know and use wh
           description:
             "Digital accessibility is a human right of people with disabilities around the globe.  That means developers have an important role to play in advancing human rights!  Join U.S. disability rights lawyer Lainey Feingold for a practical interactive discussion about laws and policies around the globe that impact digital accessibility. Come learn best practices for digital accessibility and how we all can “put the law in our pocket” to help make the digital world inclusive for everyone.",
           people: [people.lainey],
+          urls: {
+            video: "",
+          },
         },
       ],
       urls: {
@@ -632,6 +698,9 @@ const friday: Schedule = {
           description:
             "François will introduce ViteShot, a new open-source tool that can generate screenshots of HTML/CSS components within seconds, so you can be confident that your UI looks exactly the way it's supposed to.",
           people: [people.francois],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -642,6 +711,7 @@ const friday: Schedule = {
           people: [people.gleb],
           urls: {
             slides: "https://slides.com/bahmutov/testing-react-native",
+            video: "",
           },
         },
         {
@@ -653,6 +723,7 @@ const friday: Schedule = {
           people: [people.kadiKraman],
           urls: {
             demo: "https://snack.expo.dev/@kadikraman/haptics-and-micro-animations",
+            video: "",
           },
         },
       ],
@@ -676,6 +747,9 @@ Here's your ultimate guide to Design Systems, for Devs! From the fundamentals of
 
 Never be lost again in front of a creating Design System from scratch!`,
           people: [people.m4Dz],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -684,6 +758,9 @@ Never be lost again in front of a creating Design System from scratch!`,
             "How to structure, style and document your components for maximum effectiveness",
           description: `I'll present a practical approach to styling react components, a folder structure and documentation structure that's very easy to follow (for onboarding members) + other insights I got while using this approach.`,
           people: [people.dragos],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -693,6 +770,9 @@ Never be lost again in front of a creating Design System from scratch!`,
 
 In this short talk I'm going to demo Nx and what it can do for you to help you modularize your React code, generate code for you, help you build faster and much more. Tune in to learn about the build framework you've been missing in your tool belt!`,
           people: [people.juri],
+          urls: {
+            video: "",
+          },
         },
       ],
       urls: {
@@ -714,6 +794,9 @@ In this short talk I'm going to demo Nx and what it can do for you to help you m
 
 We'll demonstrate live streaming **from** the browser, and then how to integrate that live stream into your webpage.`,
           people: [people.doug],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -722,6 +805,9 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
           description:
             "Branding. What's it all about? Is it good, or is it wack? Come found out as we take a closer how we do event branding and theming at Brella. We'll go through branding and color palette generation in general, look at the implementation in our end, and see what the future holds.",
           people: [people.niklas],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -730,6 +816,9 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
           description:
             "Modern frontend frameworks like React are well thought-of in their application security design and that’s great. However, there is still plenty of room for developers to make mistakes and use insecure APIs, vulnerable components, or generally do the wrong thing that turns user input into a Cross-site Scripting vulnerability (XSS). Let me show you how React applications get hacked in the real-world.",
           people: [people.liran],
+          urls: {
+            video: "",
+          },
         },
       ],
       urls: {
@@ -749,6 +838,9 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
           description:
             "Finland's the happy nation and in need of very many newcomers to the country especially in the tech field. What's realistic to expect in the future Finnish job market as a developer? Where do we expect the developer jobs to progress in the future?",
           people: [people.saku],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -757,6 +849,9 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
           description:
             "The landscape of popular JS frameworks and libraries has become increasingly polarised. With React standing out an increasing number of companies are struggling to find skilled developers. People experienced in React are in a great position. Nevertheless, what if my CV lacks the right keyword? What if my Angular experience looks more like a burden? Can I apply for a front-end developer position in a React project?",
           people: [people.mika],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
@@ -766,6 +861,9 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
 
 So with this speech, I want to paint another picture for you. I genuinely believe, the future of work is enjoyable and definitely worth pursuing. And you can have that. Right after this speech.`,
           people: [people.elisa],
+          urls: {
+            video: "",
+          },
         },
         {
           type: SessionType.TALK,
