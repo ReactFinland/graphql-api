@@ -556,6 +556,7 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           people: [people.je],
           urls: {
             video: "https://www.youtube.com/watch?v=OY7Cp79x38o",
+            web: "https://www.figma.com/file/C3y0F2Yu5HXxbs74uhd7n1/9-2?node-id=0%3A1",
           },
         },
         {
