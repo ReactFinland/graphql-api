@@ -627,6 +627,8 @@ Finally, I will present the current status and outline a roadmap of improvements
             "In this talk, Patrick goes through the effort that went into ReScript's documentation platform.",
           people: [people.patrickEcker],
           urls: {
+            slides:
+              "https://drive.google.com/file/d/1Nc9m2BpEvzcgUBhDFn48e5xGMQN8iGmm/view?usp=sharing",
             video: "https://www.youtube.com/watch?v=NtlxHUqY0h0",
           },
         },
