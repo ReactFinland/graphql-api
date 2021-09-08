@@ -821,7 +821,7 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
             "Modern frontend frameworks like React are well thought-of in their application security design and that’s great. However, there is still plenty of room for developers to make mistakes and use insecure APIs, vulnerable components, or generally do the wrong thing that turns user input into a Cross-site Scripting vulnerability (XSS). Let me show you how React applications get hacked in the real-world.",
           people: [people.liran],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=9YC0tFBxKsA",
           },
         },
       ],
@@ -843,7 +843,7 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
             "Finland's the happy nation and in need of very many newcomers to the country especially in the tech field. What's realistic to expect in the future Finnish job market as a developer? Where do we expect the developer jobs to progress in the future?",
           people: [people.saku],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=mj8maOaf8AY",
           },
         },
         {
@@ -854,7 +854,7 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
             "The landscape of popular JS frameworks and libraries has become increasingly polarised. With React standing out an increasing number of companies are struggling to find skilled developers. People experienced in React are in a great position. Nevertheless, what if my CV lacks the right keyword? What if my Angular experience looks more like a burden? Can I apply for a front-end developer position in a React project?",
           people: [people.mika],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=QB4r9qFsUlo",
           },
         },
         {
@@ -866,7 +866,7 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
 So with this speech, I want to paint another picture for you. I genuinely believe, the future of work is enjoyable and definitely worth pursuing. And you can have that. Right after this speech.`,
           people: [people.elisa],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=75orGgAl-F4",
           },
         },
         {
