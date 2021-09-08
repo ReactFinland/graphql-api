@@ -194,7 +194,7 @@ Towards the end, we'll explore the benefits, focusing on testing these decoupled
           people: [people.calin],
           urls: {
             video: "https://www.youtube.com/watch?v=G_-KaHOeuu4",
-            demo: "https://github.com/calinbogdan/delegate-your-react-dialogs",
+            demo: "https://github.com/calintamas/talks/tree/main/2021-react-finland/react-native-toggler"
           },
         },
         {
@@ -500,6 +500,7 @@ const thursday: Schedule = {
           people: [people.calinb],
           urls: {
             video: "https://www.youtube.com/watch?v=SIVKJrPHV-Y",
+            demo: "https://github.com/calinbogdan/delegate-your-react-dialogs",
           },
         },
         {
