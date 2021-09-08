@@ -396,6 +396,7 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
           people: [people.laurak],
           urls: {
             video: "https://www.youtube.com/watch?v=Y_lOg-rsqBM",
+            web: "https://noti.st/laurakalbag/PPsNij/introducting-state-machines-and-statecharts",
           },
         },
         {
