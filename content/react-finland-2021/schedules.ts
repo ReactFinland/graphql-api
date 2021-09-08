@@ -360,6 +360,8 @@ We will talk about the key features of any Headless CMS and how we can integrate
 React Bricks is the first CMS that is super-great for Developers (it's just React, backed by solid APIs), for Content Creators (it keeps the visual editing experience of no-code tools like Wix) and for Designers (you can express your exact design system and be sure nobody will break it). I'll show you how it works!`,
           people: [people.matteo],
           urls: {
+            slides:
+              "https://drive.google.com/file/d/1FTcj5EEzIggnlPKHFXhcZ2jOBp3EmYEX/view?usp=sharing",
             video: "https://www.youtube.com/watch?v=lzR5Wndfy4s",
           },
         },
