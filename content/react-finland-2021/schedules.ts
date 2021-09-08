@@ -216,7 +216,7 @@ Towards the end, we'll explore the benefits, focusing on testing these decoupled
             "David will explain the different possibilities to implement MicroFrontends in the past, the present, and the future. More importantly, he will leave you to know which of the available approaches is best suited for your specific task at hand.",
           people: [people.david],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=WkHJqJ-IyK8",
           },
         },
       ],
@@ -661,7 +661,7 @@ In this demo, I will show some techniques every developer should know and use wh
           description: `Did you know that 50% of users will NOT use the English version of your application, if it supports multiple languages? For ambitious high-growth businesses, going global is not "if" but "when" so it's important to recognize the importance of localization, especially in large multi-team projects. This discussion will explore the depths of localization in Agile companies and what can be achieved with a Continuous Localization system. I'll share some common issues we faced with multi-language products and how localization automation helped us to scale the process across many product teams within the company.`,
           people: [people.ante],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=joQUzBzLEJg",
           },
         },
         {
@@ -673,7 +673,7 @@ In this demo, I will show some techniques every developer should know and use wh
             "Digital accessibility is a human right of people with disabilities around the globe.  That means developers have an important role to play in advancing human rights!  Join U.S. disability rights lawyer Lainey Feingold for a practical interactive discussion about laws and policies around the globe that impact digital accessibility. Come learn best practices for digital accessibility and how we all can “put the law in our pocket” to help make the digital world inclusive for everyone.",
           people: [people.lainey],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=3by87QbBc0c",
           },
         },
       ],
@@ -703,7 +703,7 @@ const friday: Schedule = {
             "François will introduce ViteShot, a new open-source tool that can generate screenshots of HTML/CSS components within seconds, so you can be confident that your UI looks exactly the way it's supposed to.",
           people: [people.francois],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=Ag5NBguCucc",
           },
         },
         {
@@ -715,7 +715,7 @@ const friday: Schedule = {
           people: [people.gleb],
           urls: {
             slides: "https://slides.com/bahmutov/testing-react-native",
-            video: "",
+            video: "https://www.youtube.com/watch?v=PIxaFbMBez0",
           },
         },
         {
@@ -727,7 +727,7 @@ const friday: Schedule = {
           people: [people.kadiKraman],
           urls: {
             demo: "https://snack.expo.dev/@kadikraman/haptics-and-micro-animations",
-            video: "",
+            video: "https://www.youtube.com/watch?v=FLhvw0ntzBM",
           },
         },
       ],
@@ -752,7 +752,7 @@ Here's your ultimate guide to Design Systems, for Devs! From the fundamentals of
 Never be lost again in front of a creating Design System from scratch!`,
           people: [people.m4Dz],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=YRZN5a2py00",
           },
         },
         {
@@ -763,7 +763,7 @@ Never be lost again in front of a creating Design System from scratch!`,
           description: `I'll present a practical approach to styling react components, a folder structure and documentation structure that's very easy to follow (for onboarding members) + other insights I got while using this approach.`,
           people: [people.dragos],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=3ZBl49_ZM0s",
           },
         },
         {
@@ -775,7 +775,7 @@ Never be lost again in front of a creating Design System from scratch!`,
 In this short talk I'm going to demo Nx and what it can do for you to help you modularize your React code, generate code for you, help you build faster and much more. Tune in to learn about the build framework you've been missing in your tool belt!`,
           people: [people.juri],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=IyzsQwAN51Y",
           },
         },
       ],
@@ -799,7 +799,7 @@ In this short talk I'm going to demo Nx and what it can do for you to help you m
 We'll demonstrate live streaming **from** the browser, and then how to integrate that live stream into your webpage.`,
           people: [people.doug],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=plf1aocFmZU",
           },
         },
         {
@@ -810,7 +810,7 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
             "Branding. What's it all about? Is it good, or is it wack? Come found out as we take a closer how we do event branding and theming at Brella. We'll go through branding and color palette generation in general, look at the implementation in our end, and see what the future holds.",
           people: [people.niklas],
           urls: {
-            video: "",
+            video: "https://www.youtube.com/watch?v=iFbDeUYyA_I",
           },
         },
         {
