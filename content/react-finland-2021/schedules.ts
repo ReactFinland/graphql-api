@@ -194,7 +194,7 @@ Towards the end, we'll explore the benefits, focusing on testing these decoupled
           people: [people.calin],
           urls: {
             video: "https://www.youtube.com/watch?v=G_-KaHOeuu4",
-            demo: "https://github.com/calintamas/talks/tree/main/2021-react-finland/react-native-toggler"
+            demo: "https://github.com/calintamas/talks/tree/main/2021-react-finland/react-native-toggler",
           },
         },
         {
@@ -323,6 +323,8 @@ const wednesday: Schedule = {
           people: [people.andrei],
           urls: {
             video: "https://www.youtube.com/watch?v=Nku71cWwZts",
+            slides:
+              "https://drive.google.com/file/d/1cPHBjEB04rO5Bz0t654gcxT3DLwzDXW1/view?usp=sharing",
           },
         },
       ],
