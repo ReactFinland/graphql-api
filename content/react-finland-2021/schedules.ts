@@ -449,6 +449,8 @@ In this talk, We'll see how the Actor Model architecture can come to the rescue 
           people: [people.lukas],
           urls: {
             video: "https://www.youtube.com/watch?v=Rt2IcqpdbzE",
+            slides:
+              "https://drive.google.com/file/d/1zypcpu803ZEyvqIimvL2sJk2gOY4BpbZ/view?usp=sharing",
           },
         },
         {
