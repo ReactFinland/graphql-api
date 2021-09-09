@@ -715,6 +715,7 @@ const friday: Schedule = {
           people: [people.francois],
           urls: {
             video: "https://www.youtube.com/watch?v=Ag5NBguCucc",
+            web: "https://www.canva.com/design/DAEovvDFRYo/RVl-IcjckNu8uM0z2VuWgA/watch",
           },
         },
         {
