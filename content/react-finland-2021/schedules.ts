@@ -788,6 +788,7 @@ In this short talk I'm going to demo Nx and what it can do for you to help you m
           people: [people.juri],
           urls: {
             video: "https://www.youtube.com/watch?v=IyzsQwAN51Y",
+            web: "https://docs.google.com/presentation/d/1FBOhMSUJ1fBQcgAlr8L7NsYbni35PxZ0xBm0NEJcv8Y/edit?usp=sharing",
           },
         },
       ],
