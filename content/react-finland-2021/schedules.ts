@@ -813,6 +813,7 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
           people: [people.doug],
           urls: {
             video: "https://www.youtube.com/watch?v=plf1aocFmZU",
+            web: "https://docs.google.com/presentation/d/1DnaY-h81C-nhFqrzQQg9YXaoQUMnLk_c7L8kpBiq1Wk/edit?usp=sharing",
           },
         },
         {
