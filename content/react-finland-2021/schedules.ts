@@ -313,6 +313,8 @@ const wednesday: Schedule = {
           people: [people.naman],
           urls: {
             video: "https://www.youtube.com/watch?v=ur-sGzUWId4",
+            slides:
+              "https://drive.google.com/file/d/1jfbB2e-aZjCHqdYOZR9xC2p48YFLULgN/view?usp=sharing",
           },
         },
         {
@@ -451,6 +453,7 @@ In this talk, We'll see how the Actor Model architecture can come to the rescue 
 - Having everything rebuild through a built in watch mode`,
           people: [people.lukas],
           urls: {
+            demo: "https://github.com/lukasholzer/react-finland-2021",
             video: "https://www.youtube.com/watch?v=Rt2IcqpdbzE",
             slides:
               "https://drive.google.com/file/d/1zypcpu803ZEyvqIimvL2sJk2gOY4BpbZ/view?usp=sharing",
@@ -521,8 +524,7 @@ const thursday: Schedule = {
           urls: {
             video: "https://www.youtube.com/watch?v=bRKZbrlQqLY",
             demo: "https://github.com/juanpicado/verdaccio-end-to-end-tests",
-            slides:
-              "https://docs.google.com/presentation/d/1a2xkqj1KlUayR1Bva1bVYvavwOPVuLplxFtup9MI_U4/edit?usp=sharing",
+            web: "https://docs.google.com/presentation/d/1a2xkqj1KlUayR1Bva1bVYvavwOPVuLplxFtup9MI_U4/edit?usp=sharing",
           },
         },
         {
@@ -682,6 +684,7 @@ In this demo, I will show some techniques every developer should know and use wh
           people: [people.lainey],
           urls: {
             video: "https://www.youtube.com/watch?v=3by87QbBc0c",
+            web: "https://drive.google.com/file/d/1ZaUahv0squI9nfrXKTGHFKJHZ_siXGT0/view?usp=sharing",
           },
         },
       ],
