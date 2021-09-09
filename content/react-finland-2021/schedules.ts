@@ -350,6 +350,7 @@ We will talk about the key features of any Headless CMS and how we can integrate
           people: [people.facundo],
           urls: {
             video: "https://www.youtube.com/watch?v=GRz0ibU2PIk",
+            web: "https://slides.com/storyblok/react-without-head-finland",
           },
         },
         {
