@@ -480,6 +480,7 @@ In this talk, We'll see how the Actor Model architecture can come to the rescue 
             "Being flexible with Apollo Federation and autoscaling with Kubernetes opens many opportunities to scale your app. Jan will show how these two services work hand in hand and why autoscaling matters.",
           people: [people.jan],
           urls: {
+            demo: "https://github.com/JPeer264/react-finland-2021",
             video: "https://www.youtube.com/watch?v=jTRFpjKKxmA",
           },
         },
@@ -837,6 +838,8 @@ We'll demonstrate live streaming **from** the browser, and then how to integrate
             "Modern frontend frameworks like React are well thought-of in their application security design and that’s great. However, there is still plenty of room for developers to make mistakes and use insecure APIs, vulnerable components, or generally do the wrong thing that turns user input into a Cross-site Scripting vulnerability (XSS). Let me show you how React applications get hacked in the real-world.",
           people: [people.liran],
           urls: {
+            slides:
+              "https://drive.google.com/file/d/18xgG8wEA7vTGgVzWUkXXHNpbeLVtQo5v/view?usp=sharing",
             video: "https://www.youtube.com/watch?v=9YC0tFBxKsA",
           },
         },
