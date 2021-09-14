@@ -375,6 +375,7 @@ React Bricks is the first CMS that is super-great for Developers (it's just Reac
           description: `How Contentful helps you to manage all the data in a headless e-commerce website.`,
           people: [people.nidhi],
           urls: {
+            slides: "https://drive.google.com/file/d/1vQd2j8FNPJe9CbznA96Z9_WgTOKM5mlx/view?usp=sharing",
             video: "https://www.youtube.com/watch?v=WbQsJa7-MdA",
           },
         },
