@@ -375,7 +375,8 @@ React Bricks is the first CMS that is super-great for Developers (it's just Reac
           description: `How Contentful helps you to manage all the data in a headless e-commerce website.`,
           people: [people.nidhi],
           urls: {
-            slides: "https://drive.google.com/file/d/1vQd2j8FNPJe9CbznA96Z9_WgTOKM5mlx/view?usp=sharing",
+            slides:
+              "https://drive.google.com/file/d/1vQd2j8FNPJe9CbznA96Z9_WgTOKM5mlx/view?usp=sharing",
             video: "https://www.youtube.com/watch?v=WbQsJa7-MdA",
           },
         },
@@ -674,6 +675,8 @@ In this demo, I will show some techniques every developer should know and use wh
           description: `Did you know that 50% of users will NOT use the English version of your application, if it supports multiple languages? For ambitious high-growth businesses, going global is not "if" but "when" so it's important to recognize the importance of localization, especially in large multi-team projects. This discussion will explore the depths of localization in Agile companies and what can be achieved with a Continuous Localization system. I'll share some common issues we faced with multi-language products and how localization automation helped us to scale the process across many product teams within the company.`,
           people: [people.ante],
           urls: {
+            slides:
+              "https://drive.google.com/file/d/11X8iSIliBbcT31WSsBg1ciEwWC2rMQeo/view?usp=sharing",
             video: "https://www.youtube.com/watch?v=joQUzBzLEJg",
           },
         },
