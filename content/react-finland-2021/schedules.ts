@@ -426,7 +426,7 @@ You could be a developer, designer, project manager, multi-disciplinarian or fan
 
 The more you need those isolated parts to talk, the higher the level of complexity. Usually, the common pitfalls of these communications are underestimated especially with the recent trend of State management that tends to keep the application state outside of React and distributed.
 
-In this talk, We'll see how the Actor Model architecture can come to the rescue and what makes it stand out compared to the other approaches.`,
+In this talk, we'll see how the Actor Model architecture can come to the rescue and what makes it stand out compared to the other approaches.`,
           people: [people.farzadYz],
           urls: {
             video: "https://www.youtube.com/watch?v=9k1ZHHJWt7k",
