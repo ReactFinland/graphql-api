@@ -145,7 +145,7 @@ The goal of this workshop is to understand how SSR works in React and how to imp
           level: Level.INTERMEDIATE,
           title: "Powering Next.js with Drupal",
           description: `This session will cover why and how to fully decouple Drupal with Next.JS, an open source modern frontend framework that will empower frontend developers to build incredibly fast and interactive websites using React without losing key benefits that Drupal provides like content modeling and administration UI.
-          
+
 Join us if you want to discover the ins and outs of how Drupal and Next.js ecosystem complement each other.
 
 **Sold out!**`,
@@ -165,7 +165,7 @@ Join us if you want to discover the ins and outs of how Drupal and Next.js ecosy
           description: `Our first MicroFrontend project started almost to the day exactly five years ago and since then we have accompanied countless projects following this architectural style. Ever since, the technical possibilities with which MicroFrontends can be implemented have changed significantly and the options have increased considerably.
 
 On the client-side we came from dilettante approaches based on iFrames and settled up with more elaborated strategies like Webpack Module-Federation or EcmaScript Import-Maps. We moved from pure Edge-Side-Includes to full fletched frameworks that allow us to compose MicroFrontends more comfortably and sustainably on the server-side. And even during the implementation, we achieved entirely new possibilities by more mature ways to manage MonoRepos and distributed or incremental builds. By showing real-world examples, we will go into detail about the evolution of these different approaches.
-          
+
 Upon a closer look at the challenges that still remain, it will become clear that none of these new concepts and tools come for free but with a fair amount of newly introduced complexity. Ultimately, this workshop will explain the different possibilities to implement MicroFrontends in the past, the present, and the future. More importantly, it will leave you to know which of the available approaches is best suited for your specific task at hand.`,
           people: [people.david],
         },
@@ -184,12 +184,12 @@ Upon a closer look at the challenges that still remain, it will become clear tha
           title: "Hooks are a great abstraction model",
           description: `The discussion explores the separation of concerns between logic (Model) and UI (View) and how React hooks are a great abstraction model that help achieve that.
 
-We'll start with designing a component's API (in a top down approach), then dive deeper to explore how to implement this API, while maintaining a good separation of concerns. 
-          
+We'll start with designing a component's API (in a top down approach), then dive deeper to explore how to implement this API, while maintaining a good separation of concerns.
+
 We'll create custom React hooks to implement the Model and React components for the UI. Both expose self-documenting APIs and are completely decoupled from each other.
-          
+
 To demo this approach, we'll create a simple Toggler component (a UI component that allows going back and forth in an array of values).
-          
+
 Towards the end, we'll explore the benefits, focusing on testing these decoupled units in isolation.`,
           people: [people.calin],
           urls: {
@@ -263,11 +263,11 @@ const wednesday: Schedule = {
           title: "Structural Racism",
           description: `How our narrow understanding of racism (visible and interpersonal level) still stands in the way of racial equity and inclusion (in tech, too) and how racial bias can be seen in tech, products etc.`,
           people: [people.jasmin],
-          urls: {
+          /*urls: {
             slides:
               "https://drive.google.com/file/d/1qH2RQo_DIy-1bre1BSJ5wl_E3o4MLiqV/view?usp=sharing",
             video: "https://www.youtube.com/watch?v=6jLVAX6UZhs",
-          },
+          },*/
         },
         {
           type: SessionType.TALK,
@@ -345,7 +345,7 @@ const wednesday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "How to View and React without a Head",
           description: `You might have heard about Headless CMS. This new type of content platform gives us some benefits compared to a Monolithic CMS.
-          
+
 We will talk about the key features of any Headless CMS and how we can integrate a headless platform into our React applications. We will focus on Storyblok, a headless CMS that offers a real-time Visual Editor, a great feature for developers and content creators.`,
           people: [people.facundo],
           urls: {
@@ -398,7 +398,7 @@ React Bricks is the first CMS that is super-great for Developers (it's just Reac
           description: `State machines and statecharts can seem intimidating. Especially if you (like me!) didn’t study computer science, aren’t big into maths, or just haven’t come across state machines and statecharts before.
 
 In this session, you’ll get a whirlwind introduction to state machines and statecharts, no prior knowledge and no coding experience required. Are you already familiar with state machines and statecharts but want to get a better understanding of the benefits and how to convince your team to get onboard? That’ll be covered too.
-          
+
 You could be a developer, designer, project manager, multi-disciplinarian or fancy specialist, I believe everyone can get something out of this talk, so join me!`,
           people: [people.laurak],
           urls: {
@@ -538,9 +538,9 @@ const thursday: Schedule = {
           description: `For many years, we have migrated all our devtools to Node.js for the sake of simplicity: a common language (JS/TS), a large ecosystem (NPM), and a powerful engine. In the meantime, we moved a lot of computation tasks to the client-side thanks to PWA and JavaScript Hegemony.
 
 So we made Webapps for years, developing with awesome reactive frameworks and bundling a lot of dependencies. We progressively moved from our simplicity to complex apps toolchains. We've become the new Java-like ecosystem. It sucks.
-          
+
 It's 2021, we've got a lot of new technologies to sustain our Users eXperience. It's time to have a break and rethink our tools rather than going faster and faster in the same direction. It's time to redesign the Developer eXperience. It's time for a bundle-free dev environment. It's time to embrace a new frontend building philosophy, still with our lovely JavaScript.
-          
+
 Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           people: [people.m4Dz],
           urls: {
@@ -620,11 +620,11 @@ Introducing Snowpack, Vite, Astro, and other Bare Modules tools concepts!`,
           description: `Most documentation systems focus on text content of one form or another: WYSIWYG editors, markdown, code comments, and so forth. Storybook, the industry-standard component workshop, takes a very different approach, focusing instead on component examples, or **stories**.
 
 In this demo, I will introduce an open format called Component Story Format (CSF).
-          
+
 I will show how CSF can be used used to create interactive docs in Storybook, including auto-generated DocsPage and freeform MDX documentation. Storybook Docs is a convenient way to build a living production design system.
-          
+
 I will then show how CSF stories can be used create novel forms of documentation, such as multiplayer collaborative docs, interactive design prototypes, and even behavioral documentation via tests.
-          
+
 Finally, I will present the current status and outline a roadmap of improvements that are on their way in the coming months.`,
           people: [people.michael],
           urls: {
@@ -660,7 +660,7 @@ Finally, I will present the current status and outline a roadmap of improvements
           level: Level.BEGINNER,
           title:
             "How to Catch Low-Hanging Accessibility Fruits while Developing",
-          description: `We, as developers, tend to develop sites for users like ourselves, which usually causes accessibility problems. As we are often sighted, can use a mouse, and have good fine motor skills, we might (unconsciously) forget those users who aren't like us. 
+          description: `We, as developers, tend to develop sites for users like ourselves, which usually causes accessibility problems. As we are often sighted, can use a mouse, and have good fine motor skills, we might (unconsciously) forget those users who aren't like us.
 
 In this demo, I will show some techniques every developer should know and use when developing their sites or apps. These simple checks don't ensure 100% accessibility but help catch the most obvious flaws in your site.`,
           people: [people.eevis],
