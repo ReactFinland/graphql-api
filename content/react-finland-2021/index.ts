@@ -42,7 +42,7 @@ const bronzeSponsors = [
   allSponsors.relex,
   allSponsors.vincit,
   allSponsors.wunder,
-  allSponsors.cybercom,
+  allSponsors.knowit,
   allSponsors.netum,
   allSponsors.nitor,
 ];

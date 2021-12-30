@@ -43,7 +43,7 @@ const bronzeSponsors = [
   allSponsors.quentic,
   allSponsors.vincit,
   allSponsors.wunder,
-  allSponsors.cybercom,
+  allSponsors.knowit,
   allSponsors.netum,
 ];
 const platformSponsors = [allSponsors.brella];
