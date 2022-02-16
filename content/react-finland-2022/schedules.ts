@@ -10,8 +10,8 @@ const monday: Schedule = {
   location: locations.paasitorni,
   intervals: [
     {
-      begin: "08:00",
-      end: "09:00",
+      begin: "06:00",
+      end: "07:00",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -29,8 +29,8 @@ const tuesday: Schedule = {
   location: locations.paasitorni,
   intervals: [
     {
-      begin: "08:00",
-      end: "09:00",
+      begin: "06:00",
+      end: "07:00",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -48,8 +48,8 @@ const wednesday: Schedule = {
   location: locations.paasitorni,
   intervals: [
     {
-      begin: "08:00",
-      end: "09:00",
+      begin: "07:00",
+      end: "07:00",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -67,8 +67,8 @@ const thursday: Schedule = {
   location: locations.paasitorni,
   intervals: [
     {
-      begin: "08:00",
-      end: "09:00",
+      begin: "06:00",
+      end: "07:00",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -78,14 +78,14 @@ const thursday: Schedule = {
       ],
     },
     {
-      begin: "09:00",
-      end: "10:45",
+      begin: "07:00",
+      end: "08:45",
       title: "Opening",
       sessions: [],
     },
     {
-      begin: "10:45",
-      end: "11:00",
+      begin: "08:45",
+      end: "09:00",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -96,8 +96,8 @@ const thursday: Schedule = {
       ],
     },
     {
-      begin: "11:00",
-      end: "12:45",
+      begin: "09:00",
+      end: "10:45",
       title: "Next.js",
       sessions: [
         {
@@ -113,8 +113,8 @@ const thursday: Schedule = {
       ],
     },
     {
-      begin: "12:45",
-      end: "14:00",
+      begin: "10:45",
+      end: "12:00",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -125,14 +125,14 @@ const thursday: Schedule = {
       ],
     },
     {
-      begin: "14:00",
-      end: "15:30",
+      begin: "12:00",
+      end: "13:30",
       title: "Statecharts",
       sessions: [],
     },
     {
-      begin: "15:30",
-      end: "16:00",
+      begin: "13:30",
+      end: "14:00",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -143,8 +143,8 @@ const thursday: Schedule = {
       ],
     },
     {
-      begin: "16:00",
-      end: "17:30",
+      begin: "14:00",
+      end: "15:30",
       title: "Techniques",
       sessions: [
         {
@@ -168,8 +168,8 @@ const friday: Schedule = {
   location: locations.paasitorni,
   intervals: [
     {
-      begin: "08:00",
-      end: "09:00",
+      begin: "06:00",
+      end: "07:00",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -179,8 +179,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "09:00",
-      end: "10:45",
+      begin: "07:00",
+      end: "08:45",
       title: "Recruiting",
       sessions: [
         {
@@ -196,8 +196,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "10:45",
-      end: "11:00",
+      begin: "08:45",
+      end: "09:00",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -208,8 +208,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "11:00",
-      end: "12:45",
+      begin: "09:00",
+      end: "10:45",
       title: "Web components",
       sessions: [
         {
@@ -235,8 +235,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "12:45",
-      end: "14:00",
+      begin: "10:45",
+      end: "12:00",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -247,8 +247,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "14:00",
-      end: "15:30",
+      begin: "12:00",
+      end: "13:30",
       title: "Design systems",
       sessions: [
         {
@@ -264,8 +264,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "15:30",
-      end: "16:00",
+      begin: "13:30",
+      end: "14:00",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -276,8 +276,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "16:00",
-      end: "17:30",
+      begin: "14:00",
+      end: "15:30",
       title: "Accessibility",
       sessions: [
         {
