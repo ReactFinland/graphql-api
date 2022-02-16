@@ -6,6 +6,7 @@ import reactFinland2018 from "../content/react-finland-2018";
 import reactFinland2019 from "../content/react-finland-2019";
 import reactFinland2020 from "../content/react-finland-2020";
 import reactFinland2021 from "../content/react-finland-2021";
+import reactFinland2022 from "../content/react-finland-2022";
 import reasonConf2019 from "../content/reason-conf-2019";
 import techMovieNight from "../content/techmovienight";
 import typeof2019 from "../content/typeof-2019";
@@ -20,6 +21,7 @@ const conferences: { [id: string]: Conference } = {
   ["react-finland-2019"]: attachParents(reactFinland2019),
   ["react-finland-2020"]: attachParents(reactFinland2020),
   ["react-finland-2021"]: attachParents(reactFinland2021),
+  ["react-finland-2022"]: attachParents(reactFinland2022),
   ["typeof-2019"]: attachParents(typeof2019),
   ["graphql-finland-2018"]: attachParents(graphQLFinland2018),
   ["graphql-finland-2020"]: attachParents(graphQLFinland2020),
