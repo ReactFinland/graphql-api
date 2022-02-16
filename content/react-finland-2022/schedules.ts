@@ -6,7 +6,7 @@ import * as people from "../people";
 // All times are given in GMT+0
 const monday: Schedule = {
   day: "2022-09-12",
-  description: "Monday workshops",
+  description: "Monday – workshops",
   location: locations.paasitorni,
   intervals: [
     {
@@ -25,7 +25,7 @@ const monday: Schedule = {
 
 const tuesday: Schedule = {
   day: "2022-09-13",
-  description: "Tuesday workshops",
+  description: "Tuesday – workshops",
   location: locations.paasitorni,
   intervals: [
     {
@@ -44,7 +44,7 @@ const tuesday: Schedule = {
 
 const wednesday: Schedule = {
   day: "2022-09-14",
-  description: "Wednesday workshops",
+  description: "Wednesday – workshops",
   location: locations.paasitorni,
   intervals: [
     {
@@ -63,7 +63,7 @@ const wednesday: Schedule = {
 
 const thursday: Schedule = {
   day: "2022-09-15",
-  description: "Thursday conference",
+  description: "Thursday – conference",
   location: locations.paasitorni,
   intervals: [
     {
@@ -164,7 +164,7 @@ const thursday: Schedule = {
 
 const friday: Schedule = {
   day: "2022-09-16",
-  description: "Friday conference",
+  description: "Friday – conference",
   location: locations.paasitorni,
   intervals: [
     {
