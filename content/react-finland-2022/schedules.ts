@@ -285,7 +285,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [people.eevis],
+          people: [people.eevis, people.marianna],
           urls: {
             video: "",
           },
