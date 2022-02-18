@@ -1,14 +1,15 @@
 import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
-  name: "React Brussels",
-  about: "React at the heart of Europe",
+  name: "BeJS",
+  about: "The JavaScript conference in Brussels",
   image: {
     url: "sponsors/bejs.svg",
   },
   social: {
-    homepage: "https://www.react.brussels/",
-    twitter: "BrusselsReact",
+    homepage:
+      "https://www.bejs.io/conf?utm_source=Partners&utm_campaign=LaunchCampaign&utm_medium=reactfinland",
+    twitter: "BeJS_",
   },
   location: {
     country: {
