@@ -285,7 +285,17 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [people.eevis, people.marianna],
+          people: [people.eevis],
+          urls: {
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.marianna],
           urls: {
             video: "",
           },
