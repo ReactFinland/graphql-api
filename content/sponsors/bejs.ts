@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "React Brussels",
   about: "React at the heart of Europe",
   image: {
-    url: "sponsors/bejs.jpg",
+    url: "sponsors/bejs.svg",
   },
   social: {
     homepage: "https://www.react.brussels/",
