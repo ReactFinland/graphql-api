@@ -110,6 +110,7 @@ export { default as nataliaTepluhina } from "./natalia-tepluhina";
 export { default as nidhi } from "./nidhi";
 export { default as nikGraf } from "./nik-graf";
 export { default as niklas } from "./niklas";
+export { default as norbert } from "./norbert";
 export { default as nur } from "./nur";
 export { default as olavi } from "./olavi";
 export { default as patrickEcker } from "./patrick-ecker";
