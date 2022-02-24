@@ -181,7 +181,7 @@ const friday: Schedule = {
     {
       begin: "07:00",
       end: "08:45",
-      title: "Recruiting",
+      title: "Working in Finland",
       sessions: [
         {
           type: SessionType.TALK,
@@ -308,6 +308,16 @@ const friday: Schedule = {
           title: "",
           description: "",
           people: [people.marianna],
+          urls: {
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.roosa],
           urls: {
             video: "",
           },

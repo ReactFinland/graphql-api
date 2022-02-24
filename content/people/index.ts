@@ -119,6 +119,7 @@ export { default as paul } from "./paul";
 export { default as rachelNabors } from "./rachel-nabors";
 export { default as rebeccaHill } from "./rebecca-hill";
 export { default as rickHanlon } from "./rick-hanlon";
+export { default as roosa } from "./roosa";
 export { default as rotemMizrachiMeidan } from "./rotem-mizrachi-meidan";
 export { default as ryan } from "./ryan";
 export { default as saku } from "./saku";
