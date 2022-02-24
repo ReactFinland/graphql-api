@@ -48,7 +48,7 @@ const wednesday: Schedule = {
   location: locations.paasitorni,
   intervals: [
     {
-      begin: "07:00",
+      begin: "06:00",
       end: "07:00",
       sessions: [
         {
