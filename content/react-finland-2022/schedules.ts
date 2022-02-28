@@ -98,7 +98,9 @@ const thursday: Schedule = {
     {
       begin: "09:00",
       end: "10:45",
-      title: "Next.js",
+      title: "Mob programming",
+      description:
+        "In this session we'll mob program a web application together",
       sessions: [
         {
           type: SessionType.TALK,
