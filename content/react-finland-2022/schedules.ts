@@ -99,14 +99,13 @@ const thursday: Schedule = {
       begin: "09:00",
       end: "10:45",
       title: "Mob programming",
-      description:
-        "In this session we'll mob program a web application together",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "",
-          description: "",
+          description:
+            "In this session we'll mob program a web application together",
           people: [people.davidC],
           urls: {
             video: "",
