@@ -294,6 +294,16 @@ const friday: Schedule = {
             video: "",
           },
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Breaking changes in Design system",
+          description: "",
+          people: [people.rami],
+          urls: {
+            video: "",
+          },
+        },
       ],
     },
     {
