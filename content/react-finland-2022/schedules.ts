@@ -91,7 +91,15 @@ const tuesday: Schedule = {
     {
       begin: "06:00",
       end: "09:00",
-      sessions: [],
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          people: [],
+          title: "",
+          description: ``,
+          keywords: [],
+        },
+      ],
     },
     {
       begin: "09:00",
@@ -149,7 +157,15 @@ const wednesday: Schedule = {
     {
       begin: "06:00",
       end: "09:00",
-      sessions: [],
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          people: [],
+          title: "",
+          description: ``,
+          keywords: [],
+        },
+      ],
     },
     {
       begin: "09:00",
