@@ -22,7 +22,7 @@ const monday: Schedule = {
     },
     {
       begin: "06:00",
-      end: "09:00",
+      end: "13:30",
       sessions: [
         {
           type: SessionType.WORKSHOP,
