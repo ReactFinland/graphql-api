@@ -253,6 +253,16 @@ const friday: Schedule = {
             video: "",
           },
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.thomas],
+          urls: {
+            video: "",
+          },
+        },
       ],
     },
     {
