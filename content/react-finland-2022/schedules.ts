@@ -20,6 +20,43 @@ const monday: Schedule = {
         },
       ],
     },
+    {
+      begin: "07:00",
+      end: "10:00",
+      sessions: [],
+    },
+    {
+      begin: "10:00",
+      end: "11:00",
+      sessions: [
+        {
+          type: SessionType.LUNCH,
+          title: "Lunch",
+          description: "We have Finnish food in store for you.",
+        },
+      ],
+    },
+    {
+      begin: "11:00",
+      end: "12:30",
+      sessions: [],
+    },
+    {
+      begin: "12:30",
+      end: "13:00",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee, tea, or water.",
+        },
+      ],
+    },
+    {
+      begin: "13:00",
+      end: "14:30",
+      sessions: [],
+    },
   ],
 };
 
@@ -39,6 +76,43 @@ const tuesday: Schedule = {
         },
       ],
     },
+    {
+      begin: "07:00",
+      end: "10:00",
+      sessions: [],
+    },
+    {
+      begin: "10:00",
+      end: "11:00",
+      sessions: [
+        {
+          type: SessionType.LUNCH,
+          title: "Lunch",
+          description: "We have Finnish food in store for you.",
+        },
+      ],
+    },
+    {
+      begin: "11:00",
+      end: "12:30",
+      sessions: [],
+    },
+    {
+      begin: "12:30",
+      end: "13:00",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee, tea, or water.",
+        },
+      ],
+    },
+    {
+      begin: "13:00",
+      end: "14:30",
+      sessions: [],
+    },
   ],
 };
 
@@ -57,6 +131,43 @@ const wednesday: Schedule = {
           description: "You can register later too.",
         },
       ],
+    },
+    {
+      begin: "07:00",
+      end: "10:00",
+      sessions: [],
+    },
+    {
+      begin: "10:00",
+      end: "11:00",
+      sessions: [
+        {
+          type: SessionType.LUNCH,
+          title: "Lunch",
+          description: "We have Finnish food in store for you.",
+        },
+      ],
+    },
+    {
+      begin: "11:00",
+      end: "12:30",
+      sessions: [],
+    },
+    {
+      begin: "12:30",
+      end: "13:00",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee, tea, or water.",
+        },
+      ],
+    },
+    {
+      begin: "13:00",
+      end: "14:30",
+      sessions: [],
     },
   ],
 };
