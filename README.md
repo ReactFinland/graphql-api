@@ -7,7 +7,7 @@ Simple GraphQL API for our conferences:
 To see the query API:
 
 1.  `NODE_ENV="development" npm start`
-2.  `http://localhost:3000/graphql` or `http://localhost:3000/calendar-2021.ics` (calendar)
+2.  `http://localhost:3000/graphql` or `http://localhost:3000/calendar-2022.ics` (calendar)
 
 ## Image Processing
 
