@@ -160,9 +160,20 @@ const wednesday: Schedule = {
       sessions: [
         {
           type: SessionType.WORKSHOP,
-          people: [],
-          title: "",
-          description: ``,
+          people: [people.eevis],
+          title: "Accessibility Testing for Developers",
+          description: `You don’t want to exclude any users. I know it. But sometimes, it can happen that your user interface doesn’t work for users who don’t use a mouse for navigating. Or for those who can’t see the interface or can see it only after zooming in. Or those who are trying to use your app or site in direct sunlight. We don’t always even know how to test for these scenarios, especially if we are sighted mouse users with good color sight.
+
+In this workshop, we will look into some tools and techniques which help with that. In the workshop, you will learn:
+
+* A set of tools and techniques that can help you to test for accessibility
+* Problems to look for when developing
+
+Bring your own project to test to get the most out of the workshop. I will prepare an example project, but you will learn more if you can apply your learnings to a project you’re working with - be it a personal or work project.
+
+**Prerequisites:** When attending the workshop, you should have a basic understanding of React development.
+
+**Preparation:** Have the project (your own or cloned workshop example) up and running on your computer. I will add a link to the workshop project later.`,
           keywords: [],
         },
       ],
