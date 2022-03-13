@@ -161,7 +161,7 @@ const wednesday: Schedule = {
         {
           type: SessionType.WORKSHOP,
           people: [people.eevis],
-          title: "Accessibility Testing for Developers",
+          title: "Accessibility testing for developers",
           description: `You don’t want to exclude any users. I know it. But sometimes, it can happen that your user interface doesn’t work for users who don’t use a mouse for navigating. Or for those who can’t see the interface or can see it only after zooming in. Or those who are trying to use your app or site in direct sunlight. We don’t always even know how to test for these scenarios, especially if we are sighted mouse users with good color sight.
 
 In this workshop, we will look into some tools and techniques which help with that. In the workshop, you will learn:
