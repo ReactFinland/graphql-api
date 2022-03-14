@@ -193,26 +193,18 @@ Bring your own project to test to get the most out of the workshop. I will prepa
     },
     {
       begin: "10:00",
-      end: "11:30",
-      title: "Workshops continue",
-      sessions: [],
-    },
-    {
-      begin: "11:30",
-      end: "12:00",
+      end: "13:30",
       sessions: [
         {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description: "Drink coffee, tea, or water.",
+          type: SessionType.WORKSHOP,
+          people: [people.matias],
+          title: "Web Components - Write once, run anywhere",
+          description: `In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
+
+**Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similiar library.`,
+          keywords: [],
         },
       ],
-    },
-    {
-      begin: "12:00",
-      end: "13:30",
-      title: "Workshops continue",
-      sessions: [],
     },
   ],
 };
