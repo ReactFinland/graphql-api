@@ -17,7 +17,7 @@ const partners = [
   allSponsors.reactjsday,
   allSponsors.webexpo,
 ];
-const goldSponsors: Contact[] = [];
+const goldSponsors = [allSponsors.relex];
 const silverSponsors: Contact[] = [];
 const bronzeSponsors = [allSponsors.moonhighway];
 const platformSponsors: Contact[] = [];
