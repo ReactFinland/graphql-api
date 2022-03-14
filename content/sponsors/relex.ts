@@ -7,7 +7,7 @@ const sponsor: Contact = {
     url: "sponsors/relex.svg",
   },
   social: {
-    homepage: "https://www.relexsolutions.com/",
+    homepage: "https://www.relexsolutions.com/careers/",
     facebook: "RELEXSolutions",
     twitter: "RelexSolutions",
     linkedin: "relexsolutions",
