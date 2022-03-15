@@ -229,7 +229,28 @@ const thursday: Schedule = {
       begin: "06:00",
       end: "07:45",
       title: "Opening",
-      sessions: [],
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.jen],
+          urls: {
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.nicola],
+          urls: {
+            video: "",
+          },
+        },
+      ],
     },
     {
       begin: "07:45",
