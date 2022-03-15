@@ -10,9 +10,9 @@ const person: Contact = {
     url: "people/jen.jpg",
   },
   social: {
-    homepage: "",
+    homepage: "https://jenluker.com",
     twitter: "knitcodemonkey",
-    github: "",
+    github: "knitcodemonkey",
     facebook: "",
     medium: "",
     instagram: "",
