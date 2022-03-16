@@ -18,7 +18,7 @@ const partners = [
   allSponsors.webexpo,
 ];
 const goldSponsors = [allSponsors.relex];
-const silverSponsors = [allSponsors.elisa];
+const silverSponsors = [allSponsors.elisa, allSponsors.nitor];
 const bronzeSponsors = [allSponsors.moonhighway];
 const platformSponsors: Contact[] = [];
 const sponsors = partners.concat(
