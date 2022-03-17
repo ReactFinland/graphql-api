@@ -267,15 +267,34 @@ const thursday: Schedule = {
     {
       begin: "08:00",
       end: "09:45",
-      title: "Mob programming",
+      title: "Techniques",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
+          title: "Zorm - Type-safe <form> for React using Zod",
+          description: "",
+          people: [people.esaMatti],
+          urls: {
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
           title: "",
-          description:
-            "In this session we'll mob program a web application together",
-          people: [people.davidC],
+          description: "",
+          people: [people.kadiKraman],
+          urls: {
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.nikGraf],
           urls: {
             video: "",
           },
@@ -315,34 +334,14 @@ const thursday: Schedule = {
     {
       begin: "13:00",
       end: "14:30",
-      title: "Techniques",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Zorm - Type-safe <form> for React using Zod",
-          description: "",
-          people: [people.esaMatti],
-          urls: {
-            video: "",
-          },
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.kadiKraman],
-          urls: {
-            video: "",
-          },
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.nikGraf],
+          title: "Mob programming",
+          description:
+            "In this session we'll mob program a web application together",
+          people: [people.davidC],
           urls: {
             video: "",
           },
