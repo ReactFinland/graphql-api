@@ -339,9 +339,10 @@ const thursday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Mob programming",
-          description:
-            "In this session we'll mob program a web application together",
-          people: [people.davidC, people.laurao],
+          description: `In this session we'll mob program a web application together.
+
+Note that it's likely that Woody will join us remote due to travel restrictions so we'll do a mixed session.`,
+          people: [people.davidC, people.laurao, people.woody],
           urls: {
             video: "",
           },
