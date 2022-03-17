@@ -78,6 +78,7 @@ export { default as krutie } from "./krutie";
 export { default as lainey } from "./lainey";
 export { default as lauraGonzalez } from "./laura-gonzalez";
 export { default as laurak } from "./laurak";
+export { default as laurao } from "./laurao";
 export { default as lauri } from "./lauri";
 export { default as liran } from "./liran";
 export { default as lucaMatteis } from "./luca-matteis";

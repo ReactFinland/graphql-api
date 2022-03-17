@@ -341,7 +341,7 @@ const thursday: Schedule = {
           title: "Mob programming",
           description:
             "In this session we'll mob program a web application together",
-          people: [people.davidC],
+          people: [people.davidC, people.laurao],
           urls: {
             video: "",
           },
