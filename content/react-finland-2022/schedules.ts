@@ -96,9 +96,9 @@ const tuesday: Schedule = {
       sessions: [
         {
           type: SessionType.WORKSHOP,
-          people: [],
-          title: "",
-          description: ``,
+          people: [people.m4Dz, people.varyaStepanova],
+          title: "Design system ROI (return of investment)",
+          description: `In this advanced session, we discuss how to improve ROI of your design system implementations. Bring your own projecsts/topics.`,
           keywords: [],
         },
       ],
@@ -116,26 +116,18 @@ const tuesday: Schedule = {
     },
     {
       begin: "10:00",
-      end: "11:30",
+      end: "14:00",
       title: "Workshops continue",
-      sessions: [],
-    },
-    {
-      begin: "11:30",
-      end: "12:00",
       sessions: [
         {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description: "Drink coffee, tea, or water.",
+          type: SessionType.WORKSHOP,
+          people: [people.m4Dz, people.varyaStepanova],
+          title:
+            "Design systems governance models and transitions between them",
+          description: `In this advanced session, you'll learn how to govern your design system work, what are the options, and how to move from one model to another. Bring your own problem(s)!`,
+          keywords: [],
         },
       ],
-    },
-    {
-      begin: "12:00",
-      end: "13:30",
-      title: "Workshops continue",
-      sessions: [],
     },
   ],
 };
@@ -178,6 +170,13 @@ Bring your own project to test to get the most out of the workshop. I will prepa
 **Preparation:** Have the project (your own or cloned workshop example) up and running on your computer. I will add a link to the workshop project later.`,
           keywords: [],
         },
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.m4Dz, people.varyaStepanova],
+          title: "Visual regression tests for design systems",
+          description: `In this advanced technical session, we discuss how to benefit from visual regression testing in design systems. Bring your own problems/projects!`,
+          keywords: [],
+        },
       ],
     },
     {
@@ -193,7 +192,7 @@ Bring your own project to test to get the most out of the workshop. I will prepa
     },
     {
       begin: "10:00",
-      end: "13:30",
+      end: "14:00",
       sessions: [
         {
           type: SessionType.WORKSHOP,
@@ -202,6 +201,13 @@ Bring your own project to test to get the most out of the workshop. I will prepa
           description: `In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
 
 **Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similiar library.`,
+          keywords: [],
+        },
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.m4Dz, people.varyaStepanova],
+          title: "Design system documentation",
+          description: `In this advanced technical session, we discuss how design systems can be used for documentation and what tools to use for the purpose. Bring your own problems/projects!`,
           keywords: [],
         },
       ],
