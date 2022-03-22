@@ -19,7 +19,7 @@ const partners = [
 ];
 const goldSponsors = [allSponsors.relex];
 const silverSponsors = [allSponsors.elisa, allSponsors.nitor];
-const bronzeSponsors = [allSponsors.moonhighway];
+const bronzeSponsors = [allSponsors.moonhighway, allSponsors.solita];
 const platformSponsors: Contact[] = [];
 const sponsors = partners.concat(
   goldSponsors,
