@@ -342,7 +342,7 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "Notes to my younger self",
           description: "",
-          people: [people.kennethsutherland],
+          people: [people.kennethSutherland],
           urls: {
             video: "",
           },
