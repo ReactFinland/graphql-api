@@ -337,6 +337,16 @@ const thursday: Schedule = {
             video: "",
           },
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Notes to my younger self",
+          description: "",
+          people: [people.kennethsutherland],
+          urls: {
+            video: "",
+          },
+        },
       ],
     },
     {
