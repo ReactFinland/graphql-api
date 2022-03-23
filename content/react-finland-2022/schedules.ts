@@ -96,9 +96,35 @@ const tuesday: Schedule = {
       sessions: [
         {
           type: SessionType.WORKSHOP,
+          people: [people.nikGraf],
+          title: "Advanced React",
+          description: `React 18 was a long-awaited release. New APIs were introduced and certain behavior changed. Some of these changes have quite an impact on your daily development, while others rarely affect you. Nevertheless, only by knowing your tools can you best decide when to use which of them.
+
+In order to get a deep understanding of these new APIs and behavior changes we will explore the following topics:
+
+- introduction to <Suspense> and <SuspenseList>
+- new concurrent rendering APIs: startTransition, useDeferredValue
+- new Hooks: useId, useSyncExternalStore, useInsertionEffect
+- strict effects in the new Strict Mode
+- automatic batching and flushSync
+- sneak peek into what's coming after React 18
+
+The workshop is split into several modules. Each of them starts with a 20 min presentation, 30-50 min coding session and is followed by a 10 min retrospective. The final topic about what's coming after React 18 is only covered as a presentation.
+
+By the end of the workshop you will be able to leverage the new features of React 18 and be able to use them in production ready applications.
+
+**Prerequisites:** This workshop is targeted for intermediate and experienced React developers. You should be comfortable using Hooks (incl. useEffect, useRef) and basic understanding of [Concurrent Mode](https://reactjs.org/docs/concurrent-mode-intro.html) is recommended but not required.
+
+**Preparation:** Please have Node 16+ and Yarn installed on your machine.
+
+**Length:** Full day.`,
+          keywords: [],
+        },
+        {
+          type: SessionType.WORKSHOP,
           people: [people.m4Dz, people.varyaStepanova],
           title: "Design system ROI (return of investment)",
-          description: `In this advanced session, we discuss how to improve ROI of your design system implementations. Bring your own projecsts/topics.`,
+          description: `In this advanced half-day session, we discuss how to improve ROI of your design system implementations. Bring your own projecsts/topics.`,
           keywords: [],
         },
       ],
@@ -117,14 +143,20 @@ const tuesday: Schedule = {
     {
       begin: "10:00",
       end: "14:00",
-      title: "Workshops continue",
       sessions: [
         {
           type: SessionType.WORKSHOP,
           people: [people.m4Dz, people.varyaStepanova],
           title:
             "Design systems governance models and transitions between them",
-          description: `In this advanced session, you'll learn how to govern your design system work, what are the options, and how to move from one model to another. Bring your own problem(s)!`,
+          description: `In this advanced half-day session, you'll learn how to govern your design system work, what are the options, and how to move from one model to another. Bring your own problem(s)!`,
+          keywords: [],
+        },
+        {
+          type: SessionType.ORGANIZATIONAL,
+          people: [people.nikGraf],
+          title: "Advanced React",
+          description: `The workshop continues`,
           keywords: [],
         },
       ],
@@ -174,7 +206,7 @@ Bring your own project to test to get the most out of the workshop. I will prepa
           type: SessionType.WORKSHOP,
           people: [people.m4Dz, people.varyaStepanova],
           title: "Visual regression tests for design systems",
-          description: `In this advanced technical session, we discuss how to benefit from visual regression testing in design systems. Bring your own problems/projects!`,
+          description: `In this advanced half-day technical session, we discuss how to benefit from visual regression testing in design systems. Bring your own problems/projects!`,
           keywords: [],
         },
       ],
@@ -207,7 +239,7 @@ Bring your own project to test to get the most out of the workshop. I will prepa
           type: SessionType.WORKSHOP,
           people: [people.m4Dz, people.varyaStepanova],
           title: "Design system documentation",
-          description: `In this advanced technical session, we discuss how design systems can be used for documentation and what tools to use for the purpose. Bring your own problems/projects!`,
+          description: `In this advanced half-day technical session, we discuss how design systems can be used for documentation and what tools to use for the purpose. Bring your own problems/projects!`,
           keywords: [],
         },
       ],
@@ -298,7 +330,7 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "The weird things about React",
           description: "",
           people: [people.nikGraf],
           urls: {
