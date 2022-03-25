@@ -4,17 +4,17 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Laura Ojala",
   about:
-    "I have 15 years of full-time experience in leading high-performing agile project teams. Working hands-on in successful technology start-ups ensuring their cyber security governance, software testing, medical device ISO regulations standards and submitting US medical device premarket submission FDA 510(k). One of my passions is Creative Group Process Facilitation.",
+    "Laura Ojala (they/she) has over 15 years of experience in various agile testing roles from Quality Manager in Medical Device start-up to Test Manager in the Financial sector. Since early 2020 they’ve been a Senior Test Automation Developer at Oura Health, the company behind the Oura ring. Laura enjoys creative challenges and supporting others on their journey. One of their passions is Creative Group Process Facilitation.",
   image: {
     url: "people/laurao.jpg",
   },
   social: {
-    homepage: "",
-    twitter: "",
-    github: "",
+    homepage: "https://lauraojala.fi/",
+    twitter: "laojala",
+    github: "laojala",
     facebook: "",
     medium: "",
-    instagram: "",
+    instagram: "laojala",
     linkedin: "laojala",
     youtube: "",
     devto: "laojala",
