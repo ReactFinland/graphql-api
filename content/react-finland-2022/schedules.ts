@@ -341,7 +341,7 @@ const thursday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Notes to my younger self",
-          description: "",
+          description: `Learn how to get the most out of the company you are in, whether it’s a dead end job, perhaps the company are on the brink of collapse, maybe you’ve hit the job jackpot and are working in the most fantastic start up. Always something to learn. What would I tell myself so that Monday mornings are not painful, but are instead something that can be looked forward to. You’re job can be fun (honestly)! And of course the code, all those things I’ve done or not done over the years – would I do it all again the same? No!`,
           people: [people.kennethSutherland],
           urls: {
             video: "",
