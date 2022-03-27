@@ -1,4 +1,5 @@
 enum Keyword {
+  ANDROID = "Android",
   ANIMATION = "Animation",
   ARTIFICIAL_INTELLIGENCE = "Artificial Intelligence",
   ARCHITECTURE = "Architecture",
@@ -18,6 +19,7 @@ enum Keyword {
   GRAPHQLJS = "GraphQL.js",
   HEADLESS_COMPONENTS = "Headless components",
   IMMER = "Immer",
+  KOTLIN = "Kotlin",
   LAYOUT = "Layout",
   LIBRARIES = "Libraries",
   LEGACY = "Legacy",
