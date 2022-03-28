@@ -7,6 +7,7 @@ import ScheduleTemplate from "./ScheduleTemplate";
 import ThemeTemplate from "./ThemeTemplate";
 import TweetTemplate from "./TweetTemplate";
 import SessionTweetTemplate from "./SessionTweetTemplate";
+import WorkshopTweetTemplate from "./WorkshopTweetTemplate";
 
 export {
   BadgeTemplate,
@@ -18,4 +19,5 @@ export {
   ScheduleTemplate,
   TweetTemplate,
   SessionTweetTemplate,
+  WorkshopTweetTemplate,
 };
