@@ -186,6 +186,14 @@ const wednesday: Schedule = {
       sessions: [
         {
           type: SessionType.WORKSHOP,
+          people: [people.davidKhourshid],
+          title:
+            "Diagram, Develop, Deploy: Build bulletproof apps collaboratively with statecharts",
+          description: `We've come a long way from pen and paper. In this workshop, you'll learn how to build apps with statecharts - a method of drawing diagrams that can be executed as production code. This opens up new opportunities for collaboration - helping you improve the handoffs between product, design, and dev. We'll be using XState - an open-source statechart tool for JavaScript - and Stately's visual tools to build an internet banking app, from diagram to deploy. You'll learn how to model any piece of code using states, events, actions and services.`,
+          keywords: [],
+        },
+        {
+          type: SessionType.WORKSHOP,
           people: [people.eevis],
           title: "Accessibility testing for developers",
           description: `You don’t want to exclude any users. I know it. But sometimes, it can happen that your user interface doesn’t work for users who don’t use a mouse for navigating. Or for those who can’t see the interface or can see it only after zooming in. Or those who are trying to use your app or site in direct sunlight. We don’t always even know how to test for these scenarios, especially if we are sighted mouse users with good color sight.
@@ -226,6 +234,14 @@ Bring your own project to test to get the most out of the workshop. I will prepa
       begin: "10:00",
       end: "14:00",
       sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          people: [people.davidKhourshid],
+          title:
+            "Diagram, Develop, Deploy: Build bulletproof apps collaboratively with statecharts",
+          description: `The workshop continues`,
+          keywords: [],
+        },
         {
           type: SessionType.WORKSHOP,
           people: [people.matias],
@@ -365,7 +381,18 @@ const thursday: Schedule = {
       begin: "11:00",
       end: "12:30",
       title: "Statecharts",
-      sessions: [],
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.davidKhourshid],
+          urls: {
+            video: "",
+          },
+        },
+      ],
     },
     {
       begin: "12:30",
