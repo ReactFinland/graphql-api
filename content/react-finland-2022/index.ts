@@ -23,7 +23,11 @@ const silverSponsors = [
   allSponsors.nitor,
   allSponsors.gofore,
 ];
-const bronzeSponsors = [allSponsors.moonhighway, allSponsors.solita];
+const bronzeSponsors = [
+  allSponsors.moonhighway,
+  allSponsors.solita,
+  allSponsors.huuva,
+];
 const platformSponsors: Contact[] = [];
 const sponsors = partners.concat(
   goldSponsors,
