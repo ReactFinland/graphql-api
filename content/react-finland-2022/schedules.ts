@@ -304,6 +304,16 @@ const thursday: Schedule = {
             video: "",
           },
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: "",
+          people: [people.ryan],
+          urls: {
+            video: "",
+          },
+        },
       ],
     },
     {
