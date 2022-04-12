@@ -28,7 +28,8 @@ const monday: Schedule = {
           type: SessionType.WORKSHOP,
           people: [people.m4Dz],
           title: "Design systems for beginners",
-          description: `The design system workshop will provide you with all the basics and fundamentals of building a Design System, from scratch. It is mainly intended to Frontend / UI developers but can be valuable to other teammates. As long as you‘re working on any product interface, regardless of your position, this workshop will give you the keys to collaborate, from Design to System.
+          description:
+            `The design system workshop will provide you with all the basics and fundamentals of building a Design System, from scratch. It is mainly intended to Frontend / UI developers but can be valuable to other teammates. As long as you‘re working on any product interface, regardless of your position, this workshop will give you the keys to collaborate, from Design to System.
 
 The workshop is dedicated to learning Design Systems fundamentals, from a Developers perspective with a bit of Designers’ incentive. During this session, you will understand the basic of the Design System terminology (what Design Tokens are, how a Design System architecture is designed…) and we’ll go through what differentiates a Design System from a collection of themable components.
 
@@ -98,7 +99,8 @@ const tuesday: Schedule = {
           type: SessionType.WORKSHOP,
           people: [people.nikGraf],
           title: "Advanced React",
-          description: `React 18 was a long-awaited release. New APIs were introduced and certain behavior changed. Some of these changes have quite an impact on your daily development, while others rarely affect you. Nevertheless, only by knowing your tools can you best decide when to use which of them.
+          description:
+            `React 18 was a long-awaited release. New APIs were introduced and certain behavior changed. Some of these changes have quite an impact on your daily development, while others rarely affect you. Nevertheless, only by knowing your tools can you best decide when to use which of them.
 
 In order to get a deep understanding of these new APIs and behavior changes we will explore the following topics:
 
@@ -124,7 +126,8 @@ By the end of the workshop you will be able to leverage the new features of Reac
           type: SessionType.WORKSHOP,
           people: [people.m4Dz, people.varyaStepanova],
           title: "Design system ROI (return of investment)",
-          description: `In this advanced half-day session, we discuss how to improve ROI of your design system implementations. Bring your own projecsts/topics.`,
+          description:
+            `In this advanced half-day session, we discuss how to improve ROI of your design system implementations. Bring your own projecsts/topics.`,
           keywords: [],
         },
       ],
@@ -149,7 +152,8 @@ By the end of the workshop you will be able to leverage the new features of Reac
           people: [people.m4Dz, people.varyaStepanova],
           title:
             "Design systems governance models and transitions between them",
-          description: `In this advanced half-day session, you'll learn how to govern your design system work, what are the options, and how to move from one model to another. Bring your own problem(s)!`,
+          description:
+            `In this advanced half-day session, you'll learn how to govern your design system work, what are the options, and how to move from one model to another. Bring your own problem(s)!`,
           keywords: [],
         },
         {
@@ -189,14 +193,16 @@ const wednesday: Schedule = {
           people: [people.davidKhourshid],
           title:
             "Diagram, Develop, Deploy: Build bulletproof apps collaboratively with statecharts",
-          description: `We've come a long way from pen and paper. In this workshop, you'll learn how to build apps with statecharts - a method of drawing diagrams that can be executed as production code. This opens up new opportunities for collaboration - helping you improve the handoffs between product, design, and dev. We'll be using XState - an open-source statechart tool for JavaScript - and Stately's visual tools to build an internet banking app, from diagram to deploy. You'll learn how to model any piece of code using states, events, actions and services.`,
+          description:
+            `We've come a long way from pen and paper. In this workshop, you'll learn how to build apps with statecharts - a method of drawing diagrams that can be executed as production code. This opens up new opportunities for collaboration - helping you improve the handoffs between product, design, and dev. We'll be using XState - an open-source statechart tool for JavaScript - and Stately's visual tools to build an internet banking app, from diagram to deploy. You'll learn how to model any piece of code using states, events, actions and services.`,
           keywords: [],
         },
         {
           type: SessionType.WORKSHOP,
           people: [people.eevis],
           title: "Accessibility testing for developers",
-          description: `You don’t want to exclude any users. I know it. But sometimes, it can happen that your user interface doesn’t work for users who don’t use a mouse for navigating. Or for those who can’t see the interface or can see it only after zooming in. Or those who are trying to use your app or site in direct sunlight. We don’t always even know how to test for these scenarios, especially if we are sighted mouse users with good color sight.
+          description:
+            `You don’t want to exclude any users. I know it. But sometimes, it can happen that your user interface doesn’t work for users who don’t use a mouse for navigating. Or for those who can’t see the interface or can see it only after zooming in. Or those who are trying to use your app or site in direct sunlight. We don’t always even know how to test for these scenarios, especially if we are sighted mouse users with good color sight.
 
 In this workshop, we will look into some tools and techniques which help with that. In the workshop, you will learn:
 
@@ -212,9 +218,10 @@ Bring your own project to test to get the most out of the workshop. I will prepa
         },
         {
           type: SessionType.WORKSHOP,
-          people: [people.m4Dz, people.varyaStepanova],
+          people: [people.m4Dz, people.varyaStepanova, people.norbert],
           title: "Visual regression tests for design systems",
-          description: `In this advanced half-day technical session, we discuss how to benefit from visual regression testing in design systems. Bring your own problems/projects!`,
+          description:
+            `In this advanced half-day technical session, we discuss how to benefit from visual regression testing in design systems. Bring your own problems/projects!`,
           keywords: [],
         },
       ],
@@ -246,16 +253,18 @@ Bring your own project to test to get the most out of the workshop. I will prepa
           type: SessionType.WORKSHOP,
           people: [people.matias],
           title: "Web Components - Write once, run anywhere",
-          description: `In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
+          description:
+            `In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
 
 **Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similiar library.`,
           keywords: [],
         },
         {
           type: SessionType.WORKSHOP,
-          people: [people.m4Dz, people.varyaStepanova],
+          people: [people.m4Dz, people.varyaStepanova, people.norbert],
           title: "Design system documentation",
-          description: `In this advanced half-day technical session, we discuss how design systems can be used for documentation and what tools to use for the purpose. Bring your own problems/projects!`,
+          description:
+            `In this advanced half-day technical session, we discuss how design systems can be used for documentation and what tools to use for the purpose. Bring your own problems/projects!`,
           keywords: [],
         },
       ],
@@ -367,7 +376,8 @@ const thursday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Notes to my younger self",
-          description: `Learn how to get the most out of the company you are in, whether it’s a dead end job, perhaps the company are on the brink of collapse, maybe you’ve hit the job jackpot and are working in the most fantastic start up. Always something to learn. What would I tell myself so that Monday mornings are not painful, but are instead something that can be looked forward to. You’re job can be fun (honestly)! And of course the code, all those things I’ve done or not done over the years – would I do it all again the same? No!`,
+          description:
+            `Learn how to get the most out of the company you are in, whether it’s a dead end job, perhaps the company are on the brink of collapse, maybe you’ve hit the job jackpot and are working in the most fantastic start up. Always something to learn. What would I tell myself so that Monday mornings are not painful, but are instead something that can be looked forward to. You’re job can be fun (honestly)! And of course the code, all those things I’ve done or not done over the years – would I do it all again the same? No!`,
           people: [people.kennethSutherland],
           urls: {
             video: "",
@@ -424,7 +434,8 @@ const thursday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Mob programming",
-          description: `In this session we'll mob program a web application together.
+          description:
+            `In this session we'll mob program a web application together.
 
 Note that it's likely that Woody will join us remote due to travel restrictions so we'll do a mixed session.`,
           people: [people.davidC, people.laurao, people.woody],
