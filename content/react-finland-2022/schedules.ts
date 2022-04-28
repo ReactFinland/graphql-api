@@ -521,8 +521,10 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Avoiding vendor lock-in through Web Components",
+          description: `In this talk we'll discuss the current status of Web Component support in browsers and how developers can avoid locking themselves into certain key technologies by utilizing the Web platform itself.
+
+We'll go through what the web can actually accomplish on it's own at the moment, and some useful tools to assist in developing more vendorless, portable experiences.`,
           people: [people.matias],
           urls: {
             video: "",
