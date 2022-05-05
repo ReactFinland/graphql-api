@@ -7,7 +7,7 @@ const sponsor: Contact = {
     url: "sponsors/huuva.svg",
   },
   social: {
-    homepage: "https://www.huuva.io/careers",
+    homepage: "https://www.huuva.io/software-developer-recruitment",
     linkedin: "huuva",
     instagram: "huuvaio",
   },
