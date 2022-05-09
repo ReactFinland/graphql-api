@@ -296,8 +296,8 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "What do engineers, kintsugi and stained glass, and lotuses and clocks have in common?",
+          description: "In today's ever-evolving world, it can feel like we can't recover from the last change before the next one overwhelms us. We will travel through art, philosophy, and ourselves to see change from a new perspective. We will learn coping mechanisms to keep our mental health in check.",
           people: [people.jen],
           urls: {
             video: "",
