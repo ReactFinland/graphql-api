@@ -24,7 +24,7 @@ const person: Contact = {
       name: "Finland",
       code: "FI",
     },
-    city: "Helsinki",
+    city: "Vaasa",
   },
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
