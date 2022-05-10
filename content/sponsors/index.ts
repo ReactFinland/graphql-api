@@ -66,6 +66,7 @@ export { default as sae } from "./sae";
 export { default as smartly } from "./smartly";
 export { default as solita } from "./solita";
 export { default as stickermule } from "./stickermule";
+export { default as supermetrics } from "./supermetrics";
 export { default as survivejs } from "./survivejs";
 export { default as techEvents } from "./tech-events";
 export { default as typeof } from "./typeof";

@@ -22,6 +22,7 @@ const silverSponsors = [
   allSponsors.elisa,
   allSponsors.nitor,
   allSponsors.gofore,
+  allSponsors.supermetrics,
 ];
 const bronzeSponsors = [
   allSponsors.moonhighway,
@@ -33,7 +34,7 @@ const sponsors = partners.concat(
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
-  platformSponsors
+  platformSponsors,
 );
 
 const conference: Conference = {
