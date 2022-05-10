@@ -633,7 +633,7 @@ We'll go through what the web can actually accomplish on it's own at the moment,
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "Better accessibility with a user-centric view",
           description: "",
           people: [people.marianna],
           urls: {
