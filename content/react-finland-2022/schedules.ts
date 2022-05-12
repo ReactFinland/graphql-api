@@ -623,7 +623,7 @@ We'll go through what the web can actually accomplish on it's own at the moment,
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "Let’s Keep Our Promises - ARIA, Styles and Keyboard Navigation",
           description: "",
           people: [people.eevis],
           urls: {
