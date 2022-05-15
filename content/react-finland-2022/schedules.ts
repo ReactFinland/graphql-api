@@ -543,8 +543,9 @@ We'll go through what the web can actually accomplish on it's own at the moment,
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Faster content websites via SSR and progressive hydration of Web Components",
+          description: `One of the best performance tips is "do less" - transmit less data and do less processing. There are a million details but we will focus on transmitting less JavaScript.
+            We are going to tackle it by doing more work at build time which means we start with almost 0 JS and only load more as the users interacts with the page.`,
           people: [people.thomas],
           urls: {
             video: "",
