@@ -41,7 +41,7 @@ enum Keyword {
   RESCRIPT= "ReScript",
   RUST = "Rust",
   SSR = "SSR",
-  SSG = "Static Site Generator",
+  SSG = "Static Site Generators",
   SPEC = "Spec",
   REINFORCEMENT_LEARNING = "Reinforcement learning",
   SERVERLESS = "Serverless",
