@@ -13,6 +13,7 @@ const partners = [
   allSponsors.reactnorway,
   allSponsors.survivejs,
   allSponsors.reactbrussels,
+  allSponsors.reactindia,
   allSponsors.reactnativeeu,
   allSponsors.reactjsday,
   allSponsors.webexpo,
