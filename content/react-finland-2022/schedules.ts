@@ -644,7 +644,7 @@ We'll go through what the web can actually accomplish on it's own at the moment,
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "",
-          description: "",
+          description: "Don't lose focus – accessible navigation in single-page applications",
           people: [people.roosa],
           urls: {
             video: "",
