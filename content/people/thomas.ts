@@ -9,7 +9,7 @@ const person: Contact = {
     url: "people/thomas.jpg",
   },
   social: {
-    homepage: "",
+    homepage: "https://modern-web.dev",
     twitter: "daKmoR",
     github: "daKmoR",
     facebook: "",
@@ -17,7 +17,7 @@ const person: Contact = {
     instagram: "",
     linkedin: "thomas-allmer-1b264716",
     youtube: "",
-    devto: "",
+    devto: "https://dev.to/dakmor",
   },
   location: {
     country: {
@@ -26,7 +26,7 @@ const person: Contact = {
     },
     city: "Vienna",
   },
-  keywords: [Keyword.REACT],
+  keywords: [Keyword.WEB_COMPONENTS, Keyword.SSG, Keyword.OPEN_SOURCE],
   type: [ContactType.SPEAKER],
 };
 
