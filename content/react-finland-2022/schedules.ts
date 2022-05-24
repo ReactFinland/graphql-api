@@ -537,11 +537,11 @@ We'll go through what the web can actually accomplish on it's own at the moment,
           title: "SDKs vs Web Components: Place Your Bets",
           description: `You're offering a fantastic brand new service, and it'll revolutionize your customers' world! Because it's smart, it delivers an API-first solution wrapped in an edge architecture. And because you're smart, you're offering to your end-users several SDKs to let them use those APIs at their full potential: PHP, Java, Ruby, Go, Python, JavaScript… Wait, JavaScript?
 
-          When entering the world of frontend architecture in an API-first world, we should take time to answer this simple question: SDK or Web Components? The frontend world comes with a UI-first paradigm, so should we switch our mindset?
+When entering the world of frontend architecture in an API-first world, we should take time to answer this simple question: SDK or Web Components? The frontend world comes with a UI-first paradigm, so should we switch our mindset?
 
-          On the other hand, Web Components now have a mature ecosystem where you can build advanced UI elements that already embed all the logic they need.
+On the other hand, Web Components now have a mature ecosystem where you can build advanced UI elements that already embed all the logic they need.
 
-          API-first backend only requires HTTP streams, and Web Components embed the required network primitives. Should we distribute a JS SDK or a library of Web Components for our service? Here's the match between the two giants! SDKs vs Web Components: Place Your Bets.`,
+API-first backend only requires HTTP streams, and Web Components embed the required network primitives. Should we distribute a JS SDK or a library of Web Components for our service? Here's the match between the two giants! SDKs vs Web Components: Place Your Bets.`,
           people: [people.m4Dz],
           urls: {
             video: "",
@@ -550,7 +550,8 @@ We'll go through what the web can actually accomplish on it's own at the moment,
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Faster content websites via SSR and progressive hydration of Web Components",
+          title:
+            "Faster content websites via SSR and progressive hydration of Web Components",
           description: `One of the best performance tips is "do less" - transmit less data and do less processing. There are a million details but we will focus on transmitting less JavaScript.
             We are going to tackle it by doing more work at build time which means we start with almost zero JavaScript and only load more as the users interacts with the page.`,
           people: [people.thomas],
