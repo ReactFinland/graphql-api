@@ -138,6 +138,7 @@ export { default as taelurAlexis } from "./taelur-alexis";
 export { default as tanmaiGopal } from "./tanmai-gopal";
 export { default as tejasKumar } from "./tejas-kumar";
 export { default as teroParviainen } from "./tero-parviainen";
+export { default as thaisSantos } from "./thais-santos";
 export { default as thomas } from "./thomas";
 export { default as tobiasTimm } from "./tobias-timm";
 export { default as tomasKonrady } from "./tomas-konrady";

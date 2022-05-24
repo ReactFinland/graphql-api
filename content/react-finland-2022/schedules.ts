@@ -26,7 +26,7 @@ const monday: Schedule = {
       sessions: [
         {
           type: SessionType.WORKSHOP,
-          people: [people.m4Dz],
+          people: [people.m4Dz, people.thaisSantos],
           title: "Design systems for beginners",
           description: `The design system workshop will provide you with all the basics and fundamentals of building a Design System, from scratch. It is mainly intended to Frontend / UI developers but can be valuable to other teammates. As long as you‘re working on any product interface, regardless of your position, this workshop will give you the keys to collaborate, from Design to System.
 
