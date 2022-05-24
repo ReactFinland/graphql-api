@@ -181,7 +181,7 @@ const wednesday: Schedule = {
     },
     {
       begin: "06:00",
-      end: "04:00",
+      end: "14:00",
       sessions: [
         {
           type: SessionType.WORKSHOP,
