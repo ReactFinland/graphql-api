@@ -534,8 +534,14 @@ We'll go through what the web can actually accomplish on it's own at the moment,
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "SDKs vs Web Components: Place Your Bets",
+          description: `You're offering a fantastic brand new service, and it'll revolutionize your customers' world! Because it's smart, it delivers an API-first solution wrapped in an edge architecture. And because you're smart, you're offering to your end-users several SDKs to let them use those APIs at their full potential: PHP, Java, Ruby, Go, Python, JavaScript… Wait, JavaScript?
+
+          When entering the world of frontend architecture in an API-first world, we should take time to answer this simple question: SDK or Web Components? The frontend world comes with a UI-first paradigm, so should we switch our mindset?
+
+          On the other hand, Web Components now have a mature ecosystem where you can build advanced UI elements that already embed all the logic they need.
+
+          API-first backend only requires HTTP streams, and Web Components embed the required network primitives. Should we distribute a JS SDK or a library of Web Components for our service? Here's the match between the two giants! SDKs vs Web Components: Place Your Bets.`,
           people: [people.m4Dz],
           urls: {
             video: "",
