@@ -117,7 +117,7 @@ By the end of the workshop you will be able to leverage the new features of Reac
 
 **Preparation:** Please have Node 16+ and Yarn installed on your machine.
 
-**Length:** Full day.`,
+**Length:** One full day.`,
           keywords: [],
         },
       ],
@@ -189,6 +189,32 @@ const wednesday: Schedule = {
           title:
             "Diagram, Develop, Deploy: Build bulletproof apps collaboratively with statecharts",
           description: `We've come a long way from pen and paper. In this workshop, you'll learn how to build apps with statecharts - a method of drawing diagrams that can be executed as production code. This opens up new opportunities for collaboration - helping you improve the handoffs between product, design, and dev. We'll be using XState - an open-source statechart tool for JavaScript - and Stately's visual tools to build an internet banking app, from diagram to deploy. You'll learn how to model any piece of code using states, events, actions and services.`,
+          keywords: [],
+        },
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.nikGraf],
+          title: "Advanced React",
+          description: `React 18 was a long-awaited release. New APIs were introduced and certain behavior changed. Some of these changes have quite an impact on your daily development, while others rarely affect you. Nevertheless, only by knowing your tools can you best decide when to use which of them.
+
+In order to get a deep understanding of these new APIs and behavior changes we will explore the following topics:
+
+- introduction to <Suspense> and <SuspenseList>
+- new concurrent rendering APIs: startTransition, useDeferredValue
+- new Hooks: useId, useSyncExternalStore, useInsertionEffect
+- strict effects in the new Strict Mode
+- automatic batching and flushSync
+- sneak peek into what's coming after React 18
+
+The workshop is split into several modules. Each of them starts with a 20 min presentation, 30-50 min coding session and is followed by a 10 min retrospective. The final topic about what's coming after React 18 is only covered as a presentation.
+
+By the end of the workshop you will be able to leverage the new features of React 18 and be able to use them in production ready applications.
+
+**Prerequisites:** This workshop is targeted for intermediate and experienced React developers. You should be comfortable using Hooks (incl. useEffect, useRef) and basic understanding of [Concurrent Mode](https://reactjs.org/docs/concurrent-mode-intro.html) is recommended but not required.
+
+**Preparation:** Please have Node 16+ and Yarn installed on your machine.
+
+**Length:** One full day.`,
           keywords: [],
         },
       ],
