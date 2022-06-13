@@ -215,6 +215,7 @@ Bring your own project to test to get the most out of the workshop. I will prepa
 **Preparation:** Have the project (your own or cloned workshop example) up and running on your computer. I will add a link to the workshop project later.`,
           keywords: [],
         },
+        /*
         {
           type: SessionType.WORKSHOP,
           people: [people.m4Dz, people.varyaStepanova, people.norbert],
@@ -222,6 +223,7 @@ Bring your own project to test to get the most out of the workshop. I will prepa
           description: `In this advanced half-day technical session, we discuss how to benefit from visual regression testing in design systems. Bring your own problems/projects!`,
           keywords: [],
         },
+        */
       ],
     },
     {
@@ -248,6 +250,7 @@ Bring your own project to test to get the most out of the workshop. I will prepa
 **Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similiar library.`,
           keywords: [],
         },
+        /*
         {
           type: SessionType.WORKSHOP,
           people: [people.m4Dz, people.varyaStepanova, people.norbert],
@@ -255,6 +258,7 @@ Bring your own project to test to get the most out of the workshop. I will prepa
           description: `In this advanced half-day technical session, we discuss how design systems can be used for documentation and what tools to use for the purpose. Bring your own problems/projects!`,
           keywords: [],
         },
+        */
       ],
     },
   ],
