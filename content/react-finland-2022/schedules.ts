@@ -164,7 +164,7 @@ By the end of the workshop you will be able to leverage the new features of Reac
           title: "Web Components - Write once, run anywhere",
           description: `In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
 
-**Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similiar library.`,
+**Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similar library.`,
           keywords: [],
         },
       ],
@@ -282,7 +282,7 @@ Bring your own project to test to get the most out of the workshop. I will prepa
           title: "Web Components - Write once, run anywhere",
           description: `In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
 
-**Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similiar library.`,
+**Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similar library.`,
           keywords: [],
         },
         /*
