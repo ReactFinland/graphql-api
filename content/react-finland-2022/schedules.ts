@@ -158,6 +158,15 @@ By the end of the workshop you will be able to leverage the new features of Reac
           description: `In this advanced half-day session, you'll learn how to govern your design system work, what are the options, and how to move from one model to another. Bring your own problem(s)!`,
           keywords: [],
         },
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.matias],
+          title: "Web Components - Write once, run anywhere",
+          description: `In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
+
+**Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similiar library.`,
+          keywords: [],
+        },
       ],
     },
   ],
