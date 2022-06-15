@@ -98,7 +98,9 @@ const tuesday: Schedule = {
           type: SessionType.WORKSHOP,
           people: [people.nikGraf],
           title: "Advanced React",
-          description: `React 18 was a long-awaited release. New APIs were introduced and certain behavior changed. Some of these changes have quite an impact on your daily development, while others rarely affect you. Nevertheless, only by knowing your tools can you best decide when to use which of them.
+          description: `> Note that this workshop is held **twice** with the same content.
+
+React 18 was a long-awaited release. New APIs were introduced and certain behavior changed. Some of these changes have quite an impact on your daily development, while others rarely affect you. Nevertheless, only by knowing your tools can you best decide when to use which of them.
 
 In order to get a deep understanding of these new APIs and behavior changes we will explore the following topics:
 
@@ -162,7 +164,9 @@ By the end of the workshop you will be able to leverage the new features of Reac
           type: SessionType.WORKSHOP,
           people: [people.matias],
           title: "Web Components - Write once, run anywhere",
-          description: `In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
+          description: `> Note that this workshop is held **twice** with the same content.
+
+In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
 
 **Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similar library.`,
           keywords: [],
@@ -204,7 +208,9 @@ const wednesday: Schedule = {
           type: SessionType.WORKSHOP,
           people: [people.nikGraf],
           title: "Advanced React",
-          description: `React 18 was a long-awaited release. New APIs were introduced and certain behavior changed. Some of these changes have quite an impact on your daily development, while others rarely affect you. Nevertheless, only by knowing your tools can you best decide when to use which of them.
+          description: `> Note that this workshop is held **twice** with the same content.
+
+React 18 was a long-awaited release. New APIs were introduced and certain behavior changed. Some of these changes have quite an impact on your daily development, while others rarely affect you. Nevertheless, only by knowing your tools can you best decide when to use which of them.
 
 In order to get a deep understanding of these new APIs and behavior changes we will explore the following topics:
 
@@ -280,7 +286,9 @@ Bring your own project to test to get the most out of the workshop. I will prepa
           type: SessionType.WORKSHOP,
           people: [people.matias],
           title: "Web Components - Write once, run anywhere",
-          description: `In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
+          description: `> Note that this workshop is held **twice** with the same content.
+
+In this half-day workshop we look into how Web Components work, how you can easily create them and how they can utilized by you and your team in larger projects, no matter the library/framework you're using.
 
 **Requirements:** JavaScript skills, Preferably experience in writing UI elements with React, Vue or a similar library.`,
           keywords: [],
