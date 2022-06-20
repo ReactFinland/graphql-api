@@ -29,13 +29,14 @@ const bronzeSponsors = [
   allSponsors.moonhighway,
   allSponsors.solita,
   allSponsors.huuva,
+  allSponsors.knowit,
 ];
 const platformSponsors: Contact[] = [];
 const sponsors = partners.concat(
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
-  platformSponsors,
+  platformSponsors
 );
 
 const conference: Conference = {
