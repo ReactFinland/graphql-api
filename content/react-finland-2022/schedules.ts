@@ -707,6 +707,16 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
         },
       ],
     },
+    {
+      begin: "15:00",
+      end: "18:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "Afterparty",
+        },
+      ],
+    },
   ],
 };
 
