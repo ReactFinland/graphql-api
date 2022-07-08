@@ -135,6 +135,7 @@ export { default as shodipo } from "./shodipo";
 export { default as siaKaramalegos } from "./sia-karamalegos";
 export { default as svenSauleau } from "./sven-sauleau";
 export { default as taelurAlexis } from "./taelur-alexis";
+export { default as tanja } from "./tanja";
 export { default as tanmaiGopal } from "./tanmai-gopal";
 export { default as tejasKumar } from "./tejas-kumar";
 export { default as teroParviainen } from "./tero-parviainen";
