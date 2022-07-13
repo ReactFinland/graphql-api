@@ -70,6 +70,7 @@ export { default as supermetrics } from "./supermetrics";
 export { default as survivejs } from "./survivejs";
 export { default as techEvents } from "./tech-events";
 export { default as typeof } from "./typeof";
+export { default as utopia } from "./utopia";
 export { default as valamis } from "./valamis";
 export { default as verkkokauppa } from "./verkkokauppa";
 export { default as vincit } from "./vincit";
