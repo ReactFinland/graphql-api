@@ -676,10 +676,9 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title:
-            "Let’s Keep Our Promises - ARIA, Styles and Keyboard Navigation",
+          title: "Better accessibility with a user-centric view",
           description: "",
-          people: [people.eevis],
+          people: [people.marianna],
           urls: {
             video: "",
           },
@@ -687,9 +686,10 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Better accessibility with a user-centric view",
-          description: "",
-          people: [people.marianna],
+          title:
+            "Let’s Keep Our Promises - ARIA, Styles and Keyboard Navigation",
+          description: "Many websites and applications give false promises to users. For example, they promise interaction when there is none. In this talk, I will discuss some of those promises and how to create websites and applications that fulfill the promises given to users. After listening to this talk, you'll walk away knowing more about ARIA and keyboard navigation. You'll also learn how to create more inclusive websites and applications.",
+          people: [people.eevis],
           urls: {
             video: "",
           },
