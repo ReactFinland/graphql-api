@@ -6,6 +6,7 @@ import * as allSponsors from "../sponsors";
 import schedules from "./schedules";
 
 const partners = [
+  allSponsors.divriots,
   allSponsors.bejs,
   allSponsors.halfstack,
   allSponsors.koodiasuomesta,
