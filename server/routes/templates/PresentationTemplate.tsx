@@ -163,6 +163,12 @@ function intervalsToSlides(intervals) {
   }
 
   return flatMap(intervals, ({ title, begin, end, sessions }) => {
+    // Adjust from gmt+0 to gmt+3
+    const adjustedBegin =
+      parseInt(begin.split(":")[0], 10) + 3 + ":" + begin.split(":")[1];
+    const adjustedEnd =
+      parseInt(end.split(":")[0], 10) + 3 + ":" + end.split(":")[1];
+
     const titleSlide = title
       ? {
           layout: "TITLE",
@@ -171,14 +177,14 @@ function intervalsToSlides(intervals) {
               <TitleContainer>
                 <SpeakerTitle>{title}</SpeakerTitle>
                 <SpeakerTime>
-                  {begin}-{end}
+                  {adjustedBegin}-{adjustedEnd}
                 </SpeakerTime>
               </TitleContainer>
             ),
           },
         }
       : null;
-    const sessionSlides = sessions.map(session => {
+    const sessionSlides = sessions.map((session) => {
       const hasPerson = session.people && session.people[0];
       const RowContainer = hasPerson ? TitleRow : TitleRowSingle;
 
@@ -195,7 +201,7 @@ function intervalsToSlides(intervals) {
                   </SpeakerName>
                   {sessions.length === 1 && (
                     <SpeakerTime>
-                      {begin}-{end}
+                      {adjustedBegin}-{adjustedEnd}
                     </SpeakerTime>
                   )}
                 </SpeakerTextContainer>
@@ -237,7 +243,7 @@ ConnectedPresentationTemplate.filename = "presentation";
 ConnectedPresentationTemplate.variables = [
   {
     id: "conferenceId",
-    query: `query ConferenceIdQuery {  
+    query: `query ConferenceIdQuery {
   conferences {
     id
     name
