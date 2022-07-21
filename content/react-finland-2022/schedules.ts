@@ -480,10 +480,8 @@ const thursday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Mob programming",
-          description: `In this session we'll mob program a web application together.
-
-Note that it's likely that Woody will join us remote due to travel restrictions so we'll do a mixed session.`,
-          people: [people.davidC, people.laurao, people.woody],
+          description: `In this session we'll mob program a web application together.`,
+          people: [people.woody, people.davidC, people.laurao],
           urls: {
             video: "",
           },
@@ -688,7 +686,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           level: Level.INTERMEDIATE,
           title:
             "Let’s Keep Our Promises - ARIA, Styles and Keyboard Navigation",
-          description: "Many websites and applications give false promises to users. For example, they promise interaction when there is none. In this talk, I will discuss some of those promises and how to create websites and applications that fulfill the promises given to users. After listening to this talk, you'll walk away knowing more about ARIA and keyboard navigation. You'll also learn how to create more inclusive websites and applications.",
+          description:
+            "Many websites and applications give false promises to users. For example, they promise interaction when there is none. In this talk, I will discuss some of those promises and how to create websites and applications that fulfill the promises given to users. After listening to this talk, you'll walk away knowing more about ARIA and keyboard navigation. You'll also learn how to create more inclusive websites and applications.",
           people: [people.eevis],
           urls: {
             video: "",
