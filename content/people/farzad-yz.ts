@@ -2,9 +2,9 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
-  name: "Farzad YousefZadeh",
+  name: "Farzad Yousefzadeh",
   about:
-    "Lead engineer @epicgames. Into State machines and Statecharts. Coach @mentorcruise",
+    "Aerospace engineer and Astrophysicist turned Software engineer. Lead engineer @Stately.ai, leading development of Stately editor, a visual editor for modeling application logic using Statecharts",
   image: {
     url: "people/farzad.jpg",
   },
