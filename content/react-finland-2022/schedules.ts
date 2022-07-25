@@ -451,9 +451,9 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Pair coding",
-          description: "",
-          people: [people.davidKhourshid, people.nikGraf],
+          title: "State machines meet component libraries",
+          description: "In this talk, we will experiment with using state machines for modeling components in a React based component library. We will use the Stately visual editor to model components visually and see how we can use Storybook and Model based testing concepts to deal with test generation and documentation based on acceptance criteria.",
+          people: [people.farzadYousefzadeh],
           urls: {
             video: "",
           },
