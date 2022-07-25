@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Varya Stepanova",
   about:
-    "Varya Stepanova is a design systems expert from Helsinki. She has a long history working in a field of component-focused UI design and development, creating helpful tooling for the subject and spreading the practices across large organizations. Nowadays her focus is bringing design systems to the next level of success which includes cooperative work in the company development community and bridging the gap for designers, developers, and business specialists.",
+    "Varya Stepanova is a Design Systems Architect and Product Owner with extensive experience in management and development. During her tech career, Varya's primary focus was in component-focused UI design and development, creating helpful tooling for the subject and spreading the practices across organizations. Nowadays, she brings design systems to the next level of success through cooperative work in the company development community and bridging the gap for designers, developers, and business specialists.",
   image: {
     url: "people/varya.jpg",
   },

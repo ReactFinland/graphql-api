@@ -12,7 +12,6 @@ const talk: Session = {
   urls: {
     web: "",
     slides: "http://slides.graphql-finland.fi/2018/06-glenn-reyes.pdf",
-    video: "https://www.youtube.com/watch?v=BeQ5CjzCaUg",
   },
 };
 

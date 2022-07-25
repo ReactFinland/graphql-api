@@ -15,7 +15,7 @@ const person: Contact = {
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "https://www.linkedin.com/in/aapeli-haanpuu/",
+    linkedin: "aapeli-haanpuu",
     youtube: "",
     devto: "",
   },

@@ -16,6 +16,9 @@ export class SessionUrls {
 
   @Field((_) => String, { nullable: true })
   public video?: string;
+
+  @Field((_) => String, { nullable: true })
+  public demo?: string;
 }
 
 @ObjectType()

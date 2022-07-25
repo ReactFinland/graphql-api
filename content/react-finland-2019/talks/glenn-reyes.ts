@@ -11,7 +11,6 @@ const talk: Session = {
   urls: {
     slides: "https://slides.react-finland.fi/2019/glenn-reyes.pdf",
     web: "https://speakerdeck.com/glennreyes/drawing-the-line-between-3rd-party-and-handcrafted-code",
-    video: "https://www.youtube.com/watch?v=EdUJQYDYdPQ",
   },
 };
 

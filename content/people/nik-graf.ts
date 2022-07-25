@@ -4,9 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Nik Graf",
   about:
-    "Nik cares about good UX and development tools. He co-created several popular open source projects like DraftJS Plugins and Polished. Nik participated in Stripe’s Open Source Retreat and joined Serverless Inc. to deploy auto-scaling infrastructures. In his spare-time he enjoys writing code in Reason and play with WebVR as well as organising the ReactJS Vienna meetup.",
-  aboutShort:
-    "Nik cares about good UX and development tools. He co-created several popular open source projects like DraftJS Plugins and Polished. Nik isa also organizer of Reason Conf and React Vienna meetup.",
+    "Nik is the founder of Serenity and is passionate about cryptography, CRDTs, GraphQL and React. He co-created several popular open source projects like DraftJS Plugins and Polished and participated in Stripe’s Open Source Retreat. In his spare-time he enjoys ski touring, cycling and organising the ReactJS Vienna meetup.",
   image: {
     url: "people/nik.jpg",
   },

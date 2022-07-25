@@ -12,13 +12,13 @@ const cache = getExpeditiousCache({
   engine: expeditousEngineMemory(), // TODO: Set up Redis
 });
 
-async function routeAssetDesigner(router, projectRoot, scriptRoot) {
+function routeAssetDesigner(router, projectRoot, scriptRoot) {
   const Interactive = createInteractive(projectRoot, scriptRoot, __dirname);
 
   router.get(
     "/asset-designer",
     cache.withTtl("1 hour"),
-    async ({ url, query }, res) => {
+    ({ url, query }, res) => {
       const selectionId = query.selectionId;
       let bundlers = 0;
 
@@ -33,7 +33,7 @@ async function routeAssetDesigner(router, projectRoot, scriptRoot) {
             registerBundler: () => {
               bundlers++;
             },
-            bundlingCompleted: err => {
+            bundlingCompleted: (err) => {
               bundlers--;
 
               // TODO: Figure out how to handle Fusebox home directory
