@@ -343,8 +343,18 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: 
+            "Bringing the New React Native Architecture to the OSS community",
+          description: 
+            `At the end of 2021, we successfully rolled out the New React Native Architecture in the Facebook app.
+
+Now, it's time to empower every React Native developer on the globe to use the New React Native Architecture, both the new Fabric renderer and the new TurboModule system.
+
+But migrating an entire ecosystem to a New Architecture is no easy task.
+
+To support the whole community in this endeavor, we lined up a set of tools and materials that will help both app and library developers to join us in this journey.
+
+In the talk, we will present how the New React Native Architecture looks in the OSS space. We will discuss the impact this will have on developing React Native projects. Lastly, we will cover what we learned from the React Native New Architecture migration at Meta, and how you can tackle your migration in your organization.`,
           people: [people.nicola],
           urls: {
             video: "",
