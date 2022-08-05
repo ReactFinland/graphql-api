@@ -325,7 +325,7 @@ const thursday: Schedule = {
     },
     {
       begin: "06:00",
-      end: "07:45",
+      end: "07:30",
       title: "Opening",
       sessions: [
         {
@@ -373,8 +373,8 @@ In the talk, we will present how the New React Native Architecture looks in the 
       ],
     },
     {
-      begin: "07:45",
-      end: "08:15",
+      begin: "07:30",
+      end: "08:00",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -385,8 +385,8 @@ In the talk, we will present how the New React Native Architecture looks in the 
       ],
     },
     {
-      begin: "08:15",
-      end: "09:45",
+      begin: "08:00",
+      end: "09:30",
       title: "Techniques",
       sessions: [
         {
@@ -520,7 +520,7 @@ const friday: Schedule = {
     },
     {
       begin: "06:00",
-      end: "07:45",
+      end: "07:30",
       title: "Working in Finland",
       sessions: [
         {
@@ -556,8 +556,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "07:45",
-      end: "08:15",
+      begin: "07:30",
+      end: "08:00",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -568,8 +568,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "08:15",
-      end: "09:45",
+      begin: "08:00",
+      end: "09:30",
       title: "Web components",
       sessions: [
         {
@@ -615,7 +615,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
       ],
     },
     {
-      begin: "09:45",
+      begin: "09:30",
       end: "11:00",
       sessions: [
         {
