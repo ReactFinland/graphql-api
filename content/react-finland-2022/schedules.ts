@@ -708,7 +708,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title:
-            "Don't lose focus – accessible navigation in single-page applications",
+            "Accessible navigation in single-page applications",
           description: "",
           people: [people.roosa],
           urls: {
