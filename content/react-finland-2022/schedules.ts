@@ -343,10 +343,9 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: 
+          title:
             "Bringing the New React Native Architecture to the OSS community",
-          description: 
-            `At the end of 2021, we successfully rolled out the New React Native Architecture in the Facebook app.
+          description: `At the end of 2021, we successfully rolled out the New React Native Architecture in the Facebook app.
 
 Now, it's time to empower every React Native developer on the globe to use the New React Native Architecture, both the new Fabric renderer and the new TurboModule system.
 
@@ -363,8 +362,10 @@ In the talk, we will present how the New React Native Architecture looks in the 
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "The World Beyond Components",
+          description: `Components have been the foundation of how we've built web applications for almost a decade now. They've defined not only how we organize our code but how it runs.
+
+          In this talk, Ryan, author of SolidJS, will look at what comes after the component model. Driven by the need for more granularity, and empowered by compilation, reactivity is becoming the universal language of user interfaces.`,
           people: [people.ryan],
           urls: {
             video: "",
@@ -707,8 +708,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title:
-            "Accessible navigation in single-page applications",
+          title: "Accessible navigation in single-page applications",
           description: "",
           people: [people.roosa],
           urls: {
