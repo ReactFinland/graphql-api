@@ -44,7 +44,8 @@ After covering the building of few tokens-based components , with their relative
         {
           type: SessionType.LUNCH,
           title: "Lunch",
-          description: "We have Finnish food in store for you.",
+          description:
+            "We have Finnish food in store for people attending the workshop.",
         },
       ],
     },
@@ -144,7 +145,8 @@ By the end of the workshop you will be able to leverage the new features of Reac
         {
           type: SessionType.LUNCH,
           title: "Lunch",
-          description: "We have Finnish food in store for you.",
+          description:
+            "We have Finnish food in store for people attending full day workshops.",
         },
       ],
     },
@@ -274,7 +276,8 @@ Bring your own project to test to get the most out of the workshop. I will prepa
         {
           type: SessionType.LUNCH,
           title: "Lunch",
-          description: "We have Finnish food in store for you.",
+          description:
+            "We have Finnish food in store for people attending full day workshops.",
         },
       ],
     },
