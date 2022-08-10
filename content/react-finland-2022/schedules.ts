@@ -365,7 +365,7 @@ In the talk, we will present how the New React Native Architecture looks in the 
           title: "The World Beyond Components",
           description: `Components have been the foundation of how we've built web applications for almost a decade now. They've defined not only how we organize our code but how it runs.
 
-          In this talk, Ryan, author of SolidJS, will look at what comes after the component model. Driven by the need for more granularity, and empowered by compilation, reactivity is becoming the universal language of user interfaces.`,
+In this talk, Ryan, author of SolidJS, will look at what comes after the component model. Driven by the need for more granularity, and empowered by compilation, reactivity is becoming the universal language of user interfaces.`,
           people: [people.ryan],
           urls: {
             video: "",
