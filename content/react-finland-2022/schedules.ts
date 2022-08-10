@@ -527,8 +527,11 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title:
+            "The (sometimes harsh) reality of landing a relevant role in Finland",
+          description: `* How to land the role in Finland?
+* Many companies say no, why?
+* Identifying the right companies to apply if applying remotely`,
           people: [people.saku],
           urls: {
             video: "",
@@ -537,9 +540,11 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.tanja],
+          title:
+            "What do companies look for in a developer – the recruiter point of view",
+          description: `* Differences in CVs and interviews in different countries
+* How the skills and competences are assessed in interviews`,
+          people: [people.vismit],
           urls: {
             video: "",
           },
@@ -547,9 +552,12 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.vismit],
+          title: "The most common headaches in relocations",
+          description: `* Available services, free and commercial
+* Newcomer sessions to Finland for families
+* Find out about living in Helsinki region
+* How to cope with relocation in the first two weeks?`,
+          people: [people.tanja],
           urls: {
             video: "",
           },
