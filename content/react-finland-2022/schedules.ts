@@ -406,8 +406,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Good Code",
+          description: "What does good code mean to you? Really, who hasn’t heard that question at an interview. And who hasn’t cursed at the “bad” code of other engineers or - alright let’s face it - our past selves? There are plenty of opinions on naming conventions, testing strategies, commit history, review feedback, managing complexity. But how to pick out which of these things actually matter and what is just fluff? We’ll look at what you can do to write the best JavaScript code you can - at any stage of your career.",
           people: [people.kadiKraman],
           urls: {
             video: "",

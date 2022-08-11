@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Kadi Kraman",
   about:
-    "Kadi is a Software Engineer at Formidable, JavaScript enthusiast, believer in open source and a huge fan of sticking JavaScript on every possible platform.",
+    "Kadi is a Director of Engineering for Mobile Services at Formidable. She is a JavaScript enthusiast, believer in open source and a huge fan of sticking JavaScript on every possible platform.",
   image: {
     url: "people/kadi.jpg",
   },
