@@ -658,8 +658,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Testing design systems using storybook + Storybook 7.0 sneak peeks",
+          description: "Design systems are code, and code should be tested. How do you leverage Storybook stories for tests. I'll also show you some of the new features coming to Storybook 7.0!",
           people: [people.norbert],
           urls: {
             video: "",
