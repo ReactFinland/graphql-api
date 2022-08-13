@@ -397,7 +397,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Zorm - Type-safe <form> for React using Zod",
-          description: "",
+          description: "TypeScript has become the industry standard but there are still areas that are inherently hard to make type-safe. In this talk we explore how we can leverage the Zod library to make forms type-safe in React.",
           people: [people.esaMatti],
           urls: {
             video: "",
