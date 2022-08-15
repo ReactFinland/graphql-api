@@ -669,7 +669,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Breaking changes in Design system",
-          description: "",
+          description: "Breaking changes are usually inevitable in any library or system that lives long enough. So what are breaking changes in design system? What is the impact of them in different areas of the system? Is there a way to cheat the system and limit or even prevent this kind of change from happening? But when the inevitable happens, and you need to create a breaking change, what are the things you need to consider when doing this?",
           people: [people.rami],
           urls: {
             video: "",
