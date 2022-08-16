@@ -17,7 +17,7 @@ const monday: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration and breakfast",
           description:
-            "Register and enjoy breakfast on our behalf before the workshop",
+            "Register and enjoy breakfast on our behalf before the workshop.",
         },
       ],
     },
@@ -89,7 +89,7 @@ const tuesday: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration and breakfast",
           description:
-            "Register and enjoy breakfast (for full day and morning workshops only)",
+            "Register and enjoy breakfast (for full day and morning workshops only).",
         },
       ],
     },
@@ -193,7 +193,7 @@ const wednesday: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration",
           description:
-            "Register and enjoy breakfast (for full day and morning workshops only)",
+            "Register and enjoy breakfast (for full day and morning workshops only).",
         },
       ],
     },
@@ -325,7 +325,8 @@ const thursday: Schedule = {
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration",
-          description: "You can register later too.",
+          description:
+            "You can register later too if you cannot make it in the morning.",
         },
       ],
     },
@@ -523,7 +524,8 @@ const friday: Schedule = {
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration",
-          description: "You can register later too.",
+          description:
+            "You can register later too if you cannot make it in the morning.",
         },
       ],
     },
