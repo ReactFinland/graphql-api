@@ -15,8 +15,9 @@ const monday: Schedule = {
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Registration",
-          description: "You can register later too.",
+          title: "Registration and breakfast",
+          description:
+            "Register and enjoy breakfast on our behalf before the workshop",
         },
       ],
     },
@@ -86,8 +87,9 @@ const tuesday: Schedule = {
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Registration",
-          description: "You can register later too.",
+          title: "Registration and breakfast",
+          description:
+            "Register and enjoy breakfast (for full day and morning workshops only)",
         },
       ],
     },
@@ -190,7 +192,8 @@ const wednesday: Schedule = {
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration",
-          description: "You can register later too.",
+          description:
+            "Register and enjoy breakfast (for full day and morning workshops only)",
         },
       ],
     },
@@ -397,7 +400,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Zorm - Type-safe <form> for React using Zod",
-          description: "TypeScript has become the industry standard but there are still areas that are inherently hard to make type-safe. In this talk we explore how we can leverage the Zod library to make forms type-safe in React.",
+          description:
+            "TypeScript has become the industry standard but there are still areas that are inherently hard to make type-safe. In this talk we explore how we can leverage the Zod library to make forms type-safe in React.",
           people: [people.esaMatti],
           urls: {
             video: "",
@@ -407,7 +411,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Good Code",
-          description: "What does good code mean to you? Really, who hasn’t heard that question at an interview. And who hasn’t cursed at the “bad” code of other engineers or - alright let’s face it - our past selves? There are plenty of opinions on naming conventions, testing strategies, commit history, review feedback, managing complexity. But how to pick out which of these things actually matter and what is just fluff? We’ll look at what you can do to write the best JavaScript code you can - at any stage of your career.",
+          description:
+            "What does good code mean to you? Really, who hasn’t heard that question at an interview. And who hasn’t cursed at the “bad” code of other engineers or - alright let’s face it - our past selves? There are plenty of opinions on naming conventions, testing strategies, commit history, review feedback, managing complexity. But how to pick out which of these things actually matter and what is just fluff? We’ll look at what you can do to write the best JavaScript code you can - at any stage of your career.",
           people: [people.kadiKraman],
           urls: {
             video: "",
@@ -427,7 +432,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
     },
     {
       begin: "09:30",
-      end: "11:00",
+      end: "10:30",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -438,8 +443,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
       ],
     },
     {
-      begin: "11:00",
-      end: "12:30",
+      begin: "10:30",
+      end: "12:00",
       title: "Statecharts",
       sessions: [
         {
@@ -476,8 +481,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
       ],
     },
     {
-      begin: "12:30",
-      end: "13:00",
+      begin: "12:00",
+      end: "12:30",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -488,8 +493,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
       ],
     },
     {
-      begin: "13:00",
-      end: "14:30",
+      begin: "12:30",
+      end: "14:00",
       sessions: [
         {
           type: SessionType.TALK,
@@ -628,7 +633,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
     },
     {
       begin: "09:30",
-      end: "11:00",
+      end: "10:30",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -639,8 +644,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
       ],
     },
     {
-      begin: "11:00",
-      end: "12:30",
+      begin: "10:30",
+      end: "12:00",
       title: "Design systems",
       sessions: [
         {
@@ -658,8 +663,10 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Testing design systems using storybook + Storybook 7.0 sneak peeks",
-          description: "Design systems are code, and code should be tested. How do you leverage Storybook stories for tests. I'll also show you some of the new features coming to Storybook 7.0!",
+          title:
+            "Testing design systems using storybook + Storybook 7.0 sneak peeks",
+          description:
+            "Design systems are code, and code should be tested. How do you leverage Storybook stories for tests. I'll also show you some of the new features coming to Storybook 7.0!",
           people: [people.norbert],
           urls: {
             video: "",
@@ -669,7 +676,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Breaking changes in Design system",
-          description: "Breaking changes are usually inevitable in any library or system that lives long enough. So what are breaking changes in design system? What is the impact of them in different areas of the system? Is there a way to cheat the system and limit or even prevent this kind of change from happening? But when the inevitable happens, and you need to create a breaking change, what are the things you need to consider when doing this?",
+          description:
+            "Breaking changes are usually inevitable in any library or system that lives long enough. So what are breaking changes in design system? What is the impact of them in different areas of the system? Is there a way to cheat the system and limit or even prevent this kind of change from happening? But when the inevitable happens, and you need to create a breaking change, what are the things you need to consider when doing this?",
           people: [people.rami],
           urls: {
             video: "",
@@ -678,8 +686,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
       ],
     },
     {
-      begin: "12:30",
-      end: "13:00",
+      begin: "12:00",
+      end: "12:30",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -690,8 +698,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
       ],
     },
     {
-      begin: "13:00",
-      end: "14:30",
+      begin: "12:30",
+      end: "14:00",
       title: "Accessibility",
       sessions: [
         {
