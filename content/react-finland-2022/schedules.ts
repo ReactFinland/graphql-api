@@ -148,7 +148,7 @@ By the end of the workshop you will be able to leverage the new features of Reac
           type: SessionType.LUNCH,
           title: "Lunch",
           description:
-            "We have Finnish food in store for people attending full day workshops.",
+            "We have Finnish food in store for people attending full day workshops or two workshops (morning and evening sessions).",
         },
       ],
     },
@@ -280,7 +280,7 @@ Bring your own project to test to get the most out of the workshop. I will prepa
           type: SessionType.LUNCH,
           title: "Lunch",
           description:
-            "We have Finnish food in store for people attending full day workshops.",
+            "We have Finnish food in store for people attending full day workshops or two workshops (morning and evening sessions).",
         },
       ],
     },
