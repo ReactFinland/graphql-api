@@ -177,6 +177,23 @@ In this half-day workshop we look into how Web Components work, how you can easi
         },
       ],
     },
+    {
+      begin: "11:30",
+      end: "12:00",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee, tea, or water.",
+        },
+      ],
+    },
+    {
+      begin: "12:00",
+      end: "14:00",
+      title: "Workshops continue",
+      sessions: [],
+    },
   ],
 };
 
@@ -309,6 +326,23 @@ In this half-day workshop we look into how Web Components work, how you can easi
         },
         */
       ],
+    },
+    {
+      begin: "11:30",
+      end: "12:00",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee, tea, or water.",
+        },
+      ],
+    },
+    {
+      begin: "12:00",
+      end: "14:00",
+      title: "Workshops continue",
+      sessions: [],
     },
   ],
 };
