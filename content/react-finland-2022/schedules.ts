@@ -290,6 +290,27 @@ Bring your own project to test to get the most out of the workshop. I will prepa
       ],
     },
     {
+      begin: "07:15",
+      end: "09:00",
+      sessions: [
+        {
+          type: SessionType.PANEL,
+          people: [
+            people.juhoVepsalainen,
+            people.jen,
+            people.m4Dz,
+            people.ryan,
+          ],
+          title: "Fireside chat at Aalto University",
+          description: `As a part of unofficial program, we organize a fireside chat with some of our speakers in collaboration with Aalto University at their premises.
+
+Although it has been mainly aimed at students learning about web development, you are welcome to join.
+
+Location: TU1, TUAS Building, Maarintie 8, Espoo`,
+        },
+      ],
+    },
+    {
       begin: "09:00",
       end: "10:00",
       sessions: [
