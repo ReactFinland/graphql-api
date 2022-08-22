@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Color } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import get from "lodash/get";
+import flatMap from "lodash/flatMap";
 import desaturate from "polished/lib/color/desaturate";
 import * as React from "react";
 import { Interval } from "../../schema/Interval";
@@ -157,9 +158,29 @@ const ConnectedScheduleTemplate = connect(
     theme={theme}
     day={schedule && dayToFinnishLocale(schedule.day)}
     conferenceId={conferenceId}
-    intervals={get(schedule, "intervals")}
+    intervals={adjustTimezone(get(schedule, "intervals"))}
   />
 ));
+
+function adjustTimezone(intervals) {
+  if (!intervals) {
+    return [];
+  }
+
+  return flatMap(intervals, ({ begin, end, ...rest }) => {
+    // Adjust from gmt+0 to gmt+3
+    const adjustedBegin =
+      parseInt(begin.split(":")[0], 10) + 3 + ":" + begin.split(":")[1];
+    const adjustedEnd =
+      parseInt(end.split(":")[0], 10) + 3 + ":" + end.split(":")[1];
+
+    return {
+      ...rest,
+      begin: adjustedBegin,
+      end: adjustedEnd,
+    };
+  });
+}
 
 ConnectedScheduleTemplate.filename = "schedule";
 
@@ -171,7 +192,7 @@ ConnectedScheduleTemplate.variables = [
   },
   {
     id: "conferenceId",
-    query: `query ConferenceIdQuery {  
+    query: `query ConferenceIdQuery {
   conferences {
     id
     name
