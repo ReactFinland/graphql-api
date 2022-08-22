@@ -9,11 +9,11 @@ import { Theme } from "../../schema/Theme";
 
 // TODO: Move control for margin/height to consumer
 const ScheduleContainer = styled.dl`
-  margin-top: 0.7cm;
   width: 100%;
   display: flex;
   flex-flow: column wrap;
-  height: 12.5cm;
+  justify-content: center;
+  height: 10cm;
 `;
 
 const ScheduleContainerItem = styled.div`

@@ -28,7 +28,7 @@ const ScheduleTemplateContainer = styled.article`
     texture,
   }: SchedulePageContainerProps) => `linear-gradient(
       ${primaryColor},
-      ${desaturate(0.2, hexToRgba(secondaryColor, 0.79))}
+      ${desaturate(0.8, hexToRgba(secondaryColor, 0.89))}
     ),
     url("${texture}")`};
   background-size: cover;
@@ -91,18 +91,21 @@ const ScheduleFooterContainer = styled.section`
 const sponsorRules = {
   gold: {
     "max-height": "2cm",
-    "max-width": "3cm",
+    "max-width": "6cm",
+    width: "6cm",
     margin: "0 0.5cm 0.5cm 0.5cm",
     display: "block",
   },
   silver: {
-    "max-height": "1.25cm",
-    "max-width": "1.75cm",
+    "max-height": "2.5cm",
+    "max-width": "3cm",
+    width: "3cm",
     margin: "0.5cm",
   },
   bronze: {
     "max-height": "1.25cm",
     "max-width": "1.75cm",
+    width: "1.75cm",
     margin: "0.25cm 0.5cm 0cm 0.5cm",
   },
 };
