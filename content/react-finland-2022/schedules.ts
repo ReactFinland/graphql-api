@@ -198,7 +198,7 @@ const wednesday: Schedule = {
       sessions: [
         {
           type: SessionType.WORKSHOP,
-          people: [people.davidKhourshid],
+          people: [people.davidKhourshid, people.farzadYz],
           title:
             "Diagram, Develop, Deploy: Build bulletproof apps collaboratively with statecharts",
           description: `We've come a long way from pen and paper. In this workshop, you'll learn how to build apps with statecharts - a method of drawing diagrams that can be executed as production code. This opens up new opportunities for collaboration - helping you improve the handoffs between product, design, and dev. We'll be using XState - an open-source statechart tool for JavaScript - and Stately's visual tools to build an internet banking app, from diagram to deploy. You'll learn how to model any piece of code using states, events, actions and services.`,
