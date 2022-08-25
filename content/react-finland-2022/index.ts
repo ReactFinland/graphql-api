@@ -52,7 +52,7 @@ const conference: Conference = {
   endDate: "2022-09-16",
   websiteUrl: "https://react-finland.fi/",
   // TODO: Resolve locations based on data
-  locations: [locations.paasitorni],
+  locations: [locations.paasitorni, locations.babylonHelsinki],
   mcs: [people.janiEvakallio, people.saraVieira],
   organizers: [
     people.aleksiPousar,

@@ -809,6 +809,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           title: "Afterparty",
         },
       ],
+      location: locations.babylonHelsinki,
     },
   ],
 };
