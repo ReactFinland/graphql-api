@@ -194,6 +194,12 @@ In this half-day workshop we look into how Web Components work, how you can easi
       title: "Workshops continue",
       sessions: [],
     },
+    {
+      begin: "15:00",
+      end: "18:00",
+      title: "AWS Finland September meetup",
+      description: `AWS Finland will run their September meetup. You can [find more information and register at meetup.com](https://www.meetup.com/awsfin/events/287714546/).`,
+    },
   ],
 };
 
