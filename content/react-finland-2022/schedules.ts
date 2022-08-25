@@ -148,7 +148,7 @@ By the end of the workshop you will be able to leverage the new features of Reac
           type: SessionType.LUNCH,
           title: "Lunch",
           description:
-            "We have Finnish food in store for people attending full day workshops or two workshops (morning and evening sessions).",
+            "We have Finnish food in store for people attending full day workshops or two workshops (morning and afternoon sessions).",
         },
       ],
     },
@@ -324,7 +324,7 @@ Location: TU1, TUAS Building, Maarintie 8, Espoo`,
           type: SessionType.LUNCH,
           title: "Lunch",
           description:
-            "We have Finnish food in store for people attending full day workshops or two workshops (morning and evening sessions).",
+            "We have Finnish food in store for people attending full day workshops or two workshops (morning and afternoon sessions).",
         },
       ],
     },
