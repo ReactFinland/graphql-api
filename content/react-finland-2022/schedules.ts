@@ -785,7 +785,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Accessible navigation in single-page applications",
-          description: "",
+          description:
+            "Single Page Applications (SPAs) are lacking in accessibility by default. While a sighted user is able to tell the difference between different types of page updates, screen reader users might not separate the ones that resemble page loads from those that affect a single component. In my speech, I’ll introduce some techniques to tackle this problem.",
           people: [people.roosa],
           urls: {
             video: "",
