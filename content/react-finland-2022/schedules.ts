@@ -770,7 +770,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Better accessibility with a user-centric view",
-          description: "",
+          description:
+            "Web accessibility is much more than regulations and restrictions. It is based on real people with real problems and needs. By understanding all the users everything makes a lot more sense. In her talk Marianna addresses the ‘why’ of accessibility – and a little bit of the ‘how’, too.",
           people: [people.marianna],
           urls: {
             video: "",
