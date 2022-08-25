@@ -453,8 +453,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
         {
           type: SessionType.COFFEE_BREAK,
           title: "Break",
-          description:
-            "Drink coffee, live long and prosper. Play foosball at the sponsors' lounge.",
+          description: "Drink tasty Finnish coffee, live long and prosper.",
         },
       ],
     },
@@ -554,8 +553,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
         {
           type: SessionType.COFFEE_BREAK,
           title: "Break",
-          description:
-            "Drink coffee. Again. Take a massage at the sponsors' lounge.",
+          description: "Drink coffee. Again.",
         },
       ],
     },
@@ -647,8 +645,7 @@ const friday: Schedule = {
         {
           type: SessionType.COFFEE_BREAK,
           title: "Break",
-          description:
-            "Drink coffee, live long and prosper. Play foosball at the sponsors' lounge.",
+          description: "Drink tasty Finnish coffee, live long and prosper.",
         },
       ],
     },
@@ -760,8 +757,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
         {
           type: SessionType.COFFEE_BREAK,
           title: "Break",
-          description:
-            "Drink coffee. Again. Take a massage at the sponsors' lounge.",
+          description: "Drink coffee. Again.",
         },
       ],
     },
