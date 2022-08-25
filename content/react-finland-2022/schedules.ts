@@ -556,7 +556,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Mob programming",
-          description: `In this session we'll mob program a web application together.`,
+          description: `In this session we will introduce and try mob programming on stage.`,
           people: [people.woody, people.davidC, people.laurao],
           urls: {
             video: "",
