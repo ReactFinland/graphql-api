@@ -32,6 +32,7 @@ const bronzeSponsors = [
   allSponsors.huuva,
   allSponsors.knowit,
   allSponsors.utopia,
+  allSponsors.alma,
 ];
 const platformSponsors: Contact[] = [];
 const sponsors = partners.concat(
