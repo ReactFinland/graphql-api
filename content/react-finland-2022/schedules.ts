@@ -386,13 +386,24 @@ const thursday: Schedule = {
   intervals: [
     {
       begin: "05:00",
-      end: "06:00",
+      end: "05:55",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration",
           description:
             "You can register later too if you cannot make it in the morning.",
+        },
+      ],
+    },
+    {
+      begin: "05:55",
+      end: "06:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Welcome",
+          description: "Quick welcome to the conference at the main stage.",
         },
       ],
     },
@@ -573,6 +584,17 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
         },
       ],
     },
+    {
+      begin: "14:00",
+      end: "14:05",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Ending of the day",
+          description: "",
+        },
+      ],
+    },
   ],
 };
 
@@ -583,13 +605,24 @@ const friday: Schedule = {
   intervals: [
     {
       begin: "05:00",
-      end: "06:00",
+      end: "05:55",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration",
           description:
             "You can register later too if you cannot make it in the morning.",
+        },
+      ],
+    },
+    {
+      begin: "05:55",
+      end: "06:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Welcome",
+          description: "Quick welcome to the day at the main stage.",
         },
       ],
     },
@@ -799,6 +832,17 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           urls: {
             video: "",
           },
+        },
+      ],
+    },
+    {
+      begin: "14:00",
+      end: "14:05",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Goodbye",
+          description: "Conference ending.",
         },
       ],
     },
