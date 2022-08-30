@@ -386,7 +386,7 @@ const thursday: Schedule = {
   intervals: [
     {
       begin: "05:00",
-      end: "05:55",
+      end: "05:50",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -397,7 +397,7 @@ const thursday: Schedule = {
       ],
     },
     {
-      begin: "05:55",
+      begin: "05:50",
       end: "06:00",
       sessions: [
         {
@@ -586,7 +586,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
     },
     {
       begin: "14:00",
-      end: "14:05",
+      end: "14:10",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -605,7 +605,7 @@ const friday: Schedule = {
   intervals: [
     {
       begin: "05:00",
-      end: "05:55",
+      end: "05:50",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -616,7 +616,7 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "05:55",
+      begin: "05:50",
       end: "06:00",
       sessions: [
         {
@@ -837,7 +837,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
     },
     {
       begin: "14:00",
-      end: "14:05",
+      end: "14:10",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
