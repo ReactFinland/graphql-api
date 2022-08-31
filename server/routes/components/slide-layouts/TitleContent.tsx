@@ -13,7 +13,7 @@ const TitlePageContainer = styled.div`
 
 const Title = styled.h1`
   font-size: ${modularScale(7)};
-  color: ${props => props.color};
+  color: ${(props) => props.color};
   padding: 8vw;
 `;
 

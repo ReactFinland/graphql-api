@@ -9,6 +9,7 @@ import Slides, { Slide, SlidesProps } from "./Slides";
 const PresenterContainer = styled.div``;
 
 interface PresentationProps {
+  conferenceId: string;
   presentationID: string;
   slides: Slide[];
   theme: Theme;
@@ -46,7 +47,7 @@ class Presentation extends React.Component<PresentationProps, {}> {
     }
   }
 
-  public onKeydown = event => {
+  public onKeydown = (event) => {
     const { key } = event;
 
     if (key === "ArrowUp" || key === "ArrowLeft") {
@@ -86,7 +87,7 @@ class Presentation extends React.Component<PresentationProps, {}> {
     );
   };
 
-  public goToSlide = slide => {
+  public goToSlide = (slide) => {
     this.slide = slide;
     this.scrollToSlide(slide);
   };
@@ -100,11 +101,13 @@ class Presentation extends React.Component<PresentationProps, {}> {
   }
 
   public render() {
-    const { features, presentationID, slides, theme } = this.props;
+    const { features, conferenceId, presentationID, slides, theme } =
+      this.props;
 
     return (
       <PresenterContainer>
         <Slides
+          conferenceId={conferenceId}
           selectedSlide={this.slide}
           slides={slides}
           theme={theme}

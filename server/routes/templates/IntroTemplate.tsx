@@ -43,7 +43,12 @@ interface IntroTemplateProps {
   sideBarWidth: WidthProperty<string>;
 }
 
-function IntroTemplate({ theme, id, sideBarWidth }: IntroTemplateProps) {
+function IntroTemplate({
+  conferenceId,
+  theme,
+  id,
+  sideBarWidth,
+}: IntroTemplateProps) {
   return (
     <IntroTemplateContainer
       id={id}
@@ -53,6 +58,7 @@ function IntroTemplate({ theme, id, sideBarWidth }: IntroTemplateProps) {
       sideBarWidth={sideBarWidth}
     >
       <Presentation
+        conferenceId={conferenceId}
         presentationID="intro-presentation"
         slides={getSlides(theme)}
         theme={theme}
@@ -130,30 +136,26 @@ const PartnersContainer = styled.div`
 `;
 
 const connectSponsor = (type: string) =>
-  connect(
-    "/graphql",
-    sponsorQuery,
-    ({ conferenceId }) => ({ conferenceId })
-  )(({ conference, index }) => (
-    <Contacts
-      items={conference && conference[type] && [conference[type][index]]}
-      render={Sponsor}
-      renderProps={{ rules: sponsorRules, type }}
-    />
-  ));
+  connect("/graphql", sponsorQuery, ({ conferenceId }) => ({ conferenceId }))(
+    ({ conference, index }) => (
+      <Contacts
+        items={conference && conference[type] && [conference[type][index]]}
+        render={Sponsor}
+        renderProps={{ rules: sponsorRules, type }}
+      />
+    )
+  );
 
 const connectSponsors = (type: string) =>
-  connect(
-    "/graphql",
-    sponsorQuery,
-    ({ conferenceId }) => ({ conferenceId })
-  )(({ conference }) => (
-    <Contacts
-      items={conference && conference[type]}
-      render={Sponsor}
-      renderProps={{ rules: sponsorRules, type }}
-    />
-  ));
+  connect("/graphql", sponsorQuery, ({ conferenceId }) => ({ conferenceId }))(
+    ({ conference }) => (
+      <Contacts
+        items={conference && conference[type]}
+        render={Sponsor}
+        renderProps={{ rules: sponsorRules, type }}
+      />
+    )
+  );
 
 // const ConnectedGoldSponsors = connectSponsors("goldSponsors");
 const ConnectedGoldSponsor = connectSponsor("goldSponsors");

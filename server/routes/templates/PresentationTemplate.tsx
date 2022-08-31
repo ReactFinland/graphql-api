@@ -10,7 +10,10 @@ import { Theme } from "../../schema/Theme";
 import connect from "../components/connect";
 import Presentation from "../components/Presentation";
 import { dayToFinnishLocale } from "../date-utils";
+import Sponsors from "../components/Sponsors";
+import sponsorQuery from "../queries/sponsorQuery";
 import scheduleQuery from "../queries/scheduleQuery";
+
 interface SchedulePageContainerProps {
   id: string;
   primaryColor: Color;
@@ -48,6 +51,7 @@ interface PresentationTemplateProps {
 
 function PresentationTemplate({
   intervals,
+  conferenceId,
   theme,
   day,
   id,
@@ -62,8 +66,9 @@ function PresentationTemplate({
       sideBarWidth={sideBarWidth}
     >
       <Presentation
+        conferenceId={conferenceId}
         presentationID="schedule-presentation"
-        slides={getSlides(theme, day, intervals)}
+        slides={getSlides(theme, day, intervals, conferenceId)}
         theme={theme}
         features={{
           showSlideNumber: false,
@@ -90,7 +95,7 @@ const MainTitleDay = styled.h1`
   font-size: 400%;
 ` as React.FC<MainTitleDayProps>;
 
-function getSlides(theme: Theme, day, intervals) {
+function getSlides(theme: Theme, day, intervals, conferenceId) {
   const titleSlide = [
     {
       layout: "REACT",
@@ -109,7 +114,7 @@ function getSlides(theme: Theme, day, intervals) {
       },
     },
   ];
-  const intervalSlides = intervalsToSlides(intervals);
+  const intervalSlides = intervalsToSlides(intervals, conferenceId);
 
   return titleSlide.concat(intervalSlides);
 }
@@ -157,7 +162,41 @@ const SpeakerTime = styled.div`
   opacity: 0.8;
 `;
 
-function intervalsToSlides(intervals) {
+const sponsorRules = {
+  gold: {
+    "max-height": "2cm",
+    "max-width": "6cm",
+    width: "6cm",
+    margin: "0 0.5cm 0.5cm 0.5cm",
+    display: "block",
+  },
+  silver: {
+    "max-height": "2.5cm",
+    "max-width": "3cm",
+    width: "3cm",
+    margin: "0.5cm",
+  },
+  bronze: {
+    "max-height": "1.25cm",
+    "max-width": "1.75cm",
+    width: "1.75cm",
+    margin: "0.25cm 0.5cm 0cm 0.5cm",
+  },
+};
+
+const ConnectedSponsors = connect(
+  "/graphql",
+  sponsorQuery,
+  ({ conferenceId }: { conferenceId: string }) => ({ conferenceId })
+)(({ conference }) => <Sponsors {...conference} rules={sponsorRules} />);
+
+const SponsorsContainer = styled.div`
+  width: 100%;
+  background-color: white;
+  margin-top: 4cm;
+`;
+
+function intervalsToSlides(intervals, conferenceId) {
   if (!intervals) {
     return [];
   }
@@ -205,10 +244,14 @@ function intervalsToSlides(intervals) {
                     </SpeakerTime>
                   )}
                 </SpeakerTextContainer>
-                {hasPerson && session.people[0].image.url && (
+                {hasPerson && session.people[0].image.url ? (
                   <SpeakerImage
                     src={hasPerson && session.people[0].image.url}
                   />
+                ) : (
+                  <SponsorsContainer>
+                    <ConnectedSponsors conferenceId={conferenceId} />
+                  </SponsorsContainer>
                 )}
               </RowContainer>
             </TitleContainer>

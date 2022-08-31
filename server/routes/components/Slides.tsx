@@ -25,7 +25,7 @@ const SlideProgress = styled(excludeProps(["color", "ratio"], "div"))`
   width: ${({ ratio }) => ratio * 100}%;
   height: 3vh;
   top: 97vh;
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
   opacity: 0.8;
 `;
 
@@ -45,6 +45,7 @@ export interface SlidesProps {
   slides: Slide[];
   theme: Theme;
   presentationID: string;
+  conferenceId: string;
   features: {
     showSlideNumber: boolean;
     showSlideProgress: boolean;
@@ -56,6 +57,7 @@ function Slides({
   slides = [],
   theme,
   presentationID,
+  conferenceId,
   features,
 }: SlidesProps) {
   return (
@@ -68,6 +70,7 @@ function Slides({
           <Slide className={slideKey} key={slideKey}>
             {React.createElement(getLayout(slide.layout), {
               ...slide,
+              conferenceId,
               theme,
               presentationID,
             })}
