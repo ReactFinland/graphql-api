@@ -2,8 +2,8 @@ import { Location } from "../../server/schema/Location";
 
 // FIXME: These should be Contacts instead -> Location can become simpler again
 const location: Location = {
-  name: "Garden of Babylon",
-  about: "The afterparty takes place at Garden of Babylon.",
+  name: "Babylon Club & Garden",
+  about: "The afterparty takes place at Babylon Club & Garden.",
   social: {
     homepage: "https://babylonhki.fi/garden",
     googleMaps: "https://goo.gl/maps/DyUcawJzQNrkeEQo8",
