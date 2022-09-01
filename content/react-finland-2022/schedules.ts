@@ -165,11 +165,10 @@ By the end of the workshop you will be able to leverage the new features of Reac
 
 The topic of the lecture is "Web application development – Where we came from and where are we going". In other words, you'll learn a bit about the past of the web while getting some idea of where it's going.
 
-Although the lecture has been mainly aimed at students learning about web development, you are welcome to join.
-
-Location: TU1, TUAS Building, Maarintie 8, Espoo`,
+Although the lecture has been mainly aimed at students learning about web development, you are welcome to join.`,
         },
       ],
+      location: locations.tuas,
     },
     {
       begin: "10:00",
@@ -334,11 +333,10 @@ Bring your own project to test to get the most out of the workshop. I will prepa
           title: "Fireside chat at Aalto University",
           description: `As a part of unofficial program, we organize a fireside chat with some of our speakers in collaboration with Aalto University at their premises.
 
-Although it has been mainly aimed at students learning about web development, you are welcome to join.
-
-Location: TU1, TUAS Building, Maarintie 8, Espoo`,
+Although it has been mainly aimed at students learning about web development, you are welcome to join.`,
         },
       ],
+      location: locations.tuas,
     },
     {
       begin: "09:00",
