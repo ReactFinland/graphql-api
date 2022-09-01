@@ -153,6 +153,25 @@ By the end of the workshop you will be able to leverage the new features of Reac
       ],
     },
     {
+      begin: "09:15",
+      end: "11:00",
+      sessions: [
+        {
+          // hackfix: Actually a TALK but we don't want Juho to show up amongst speakers.
+          type: SessionType.PANEL,
+          people: [people.juhoVepsalainen],
+          title: "Lecture at Aalto University",
+          description: `As a part of unofficial program, we organize a lecture with Aalto University at their premises.
+
+The topic of the lecture is "Web application development – Where we came from and where are we going". In other words, you'll learn a bit about the past of the web while getting some idea of where it's going.
+
+Although the lecture has been mainly aimed at students learning about web development, you are welcome to join.
+
+Location: TU1, TUAS Building, Maarintie 8, Espoo`,
+        },
+      ],
+    },
+    {
       begin: "10:00",
       end: "14:00",
       sessions: [
