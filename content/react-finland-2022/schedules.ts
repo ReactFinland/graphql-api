@@ -545,7 +545,9 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "The weird things about React",
-          description: "",
+          description: `Conditional rendering issues in JSX, forwardRef, dozens of ways to create refs, render props (yeah they still exist), act, non-extendable classes, SuspenseList (well, maybe in 10 years) and of course our good old friend useEffect.
+
+All these weird things are part of our favourite library (not a framework™) and yet we still use and love it. Why actually? Let's talk about. Disclaimer: This is not a very serious talk, mostly …`,
           people: [people.nikGraf],
           urls: {
             video: "",
