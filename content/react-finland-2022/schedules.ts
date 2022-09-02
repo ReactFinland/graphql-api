@@ -554,8 +554,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "The two types of state management",
+          description: `All state management libraries and techniques can be categorized in two ways. One is easy, one is simple. One is quick, one is maintainable. From state mutation to statecharts, let's explore the various ways developers manage state and learn how we can choose the best strategy for efficient, robust state state management for different use-cases, and discover what these two categories are.`,
           people: [people.davidKhourshid],
           urls: {
             video: "",
