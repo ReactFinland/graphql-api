@@ -614,6 +614,22 @@ All these weird things are part of our favourite library (not a framework™) an
         },
       ],
     },
+    {
+      begin: "14:30",
+      end: "20:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "React Finland afterwork at Gofore",
+          description: `Warmly welcome to the React Finland goes Gofore afterparty after Thursday’s conference day, from 17.30 onwards! The evening is enjoyed in a relaxed atmosphere, toned by the rhythms of our own DJ. In addition to great company, we offer participants pizza and other snacks, and of course refreshing afterparty drinks!
+
+See you at the Gofore Kamppi office and let’s have a blast!
+
+[You have to register for this event separately using this link!](https://www.lyyti.in/React_Finland_After_Work_3686/en)`,
+        },
+      ],
+      location: locations.gofore,
+    },
   ],
 };
 
