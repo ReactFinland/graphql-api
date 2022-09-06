@@ -407,7 +407,7 @@ const thursday: Schedule = {
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Registration",
+          title: "Registration and light breakfast",
           description: `You can register later too.
 
 If you cannot make it to the conference, [follow it through YouTube live stream](https://www.youtube.com/watch?v=zE8PDM_7xoQ).`,
@@ -645,7 +645,7 @@ const friday: Schedule = {
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Registration",
+          title: "Registration and light breakfast",
           description: `You can register later too.
 
 If you cannot make it to the conference, [follow it through YouTube live stream](https://www.youtube.com/watch?v=rHjwZu0EmlQ).`,
