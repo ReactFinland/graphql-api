@@ -408,7 +408,7 @@ const thursday: Schedule = {
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration",
-          description: `You can register later too if you cannot make it in the morning.
+          description: `You can register later too.
 
 If you cannot make it to the conference, [follow it through YouTube live stream](https://www.youtube.com/watch?v=zE8PDM_7xoQ).`,
         },
@@ -646,7 +646,7 @@ const friday: Schedule = {
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Registration",
-          description: `You can register later too if you cannot make it in the morning.
+          description: `You can register later too.
 
 If you cannot make it to the conference, [follow it through YouTube live stream](https://www.youtube.com/watch?v=rHjwZu0EmlQ).`,
         },
