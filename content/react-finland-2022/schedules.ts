@@ -399,7 +399,7 @@ In this half-day workshop we look into how Web Components work, how you can easi
       sessions: [
         {
           type: SessionType.PARTY,
-          title: "Gaming Night at Utopia",
+          title: "Gaming Night at Arkade by Utopia Music",
           description: `Utopia Gaming Night is a special event for developers after the workshop days. Just come and relax - we’ll provide drinks, craft hot dogs and some new and vintage arcade games. Get there early - there’s some great tech-related prizes to win and a coding competition for an Oura ring!
 
 [You have to register for this event separately using this link!](https://utopiagamingnight.splashthat.com/)`,
