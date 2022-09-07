@@ -1,5 +1,6 @@
 export { default as amanda } from "./amanda";
 export { default as ankerSaal } from "./ankersaal";
+export { default as arkade } from "./arkade";
 export { default as babylonHelsinki } from "./babylon-helsinki";
 export { default as elisaAppelsiini } from "./elisa-appelsiini";
 export { default as gofore } from "./gofore";
