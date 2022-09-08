@@ -904,6 +904,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
         {
           type: SessionType.PARTY,
           title: "Afterparty",
+          description:
+            "[Register separately using this link](https://forms.gle/2NeK5PjaoFQ2GENVA). The registration helps us to have the right amount of everything.",
         },
       ],
       location: locations.babylonHelsinki,
