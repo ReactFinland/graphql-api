@@ -107,12 +107,11 @@ React 18 was a long-awaited release. New APIs were introduced and certain behavi
 
 In order to get a deep understanding of these new APIs and behavior changes we will explore the following topics:
 
-- introduction to <Suspense> and <SuspenseList>
-- new concurrent rendering APIs: startTransition, useDeferredValue
+- new concurrent rendering APIs: useTransition, startTransition, useDeferredValue
 - new Hooks: useId, useSyncExternalStore, useInsertionEffect
-- strict effects in the new Strict Mode
+- strict effects in the new Strict Mode and revisiting useEffect
 - automatic batching and flushSync
-- sneak peek into what's coming after React 18
+- sneak peek into what's coming after React 18 including a brief introduction into <Suspense> and <SuspenseList> for data fetching
 
 The workshop is split into several modules. Each of them starts with a 20 min presentation, 30-50 min coding session and is followed by a 10 min retrospective. The final topic about what's coming after React 18 is only covered as a presentation.
 
