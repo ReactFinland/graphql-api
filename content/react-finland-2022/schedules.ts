@@ -304,7 +304,7 @@ Bring your own project to test to get the most out of the workshop. I will prepa
 
 **Prerequisites:** When attending the workshop, you should have a basic understanding of React development.
 
-**Preparation:** Have the project (your own or cloned workshop example) up and running on your computer. I will add a link to the workshop project later.`,
+**Preparation:** Have the project (your own or cloned workshop example) up and running on your computer. If you want to use an example I've created, instead of your own project, you can find [the A11y workshop project from Github.](https://github.com/eevajonnapanula/a11y-workshop-project)`,
           keywords: [],
         },
         /*
