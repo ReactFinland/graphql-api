@@ -490,7 +490,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
     },
     {
       begin: "07:30",
-      end: "08:00",
+      end: "08:05",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -500,8 +500,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
       ],
     },
     {
-      begin: "08:00",
-      end: "09:30",
+      begin: "08:05",
+      end: "09:35",
       title: "Techniques",
       sessions: [
         {
@@ -539,7 +539,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
       ],
     },
     {
-      begin: "09:30",
+      begin: "09:35",
       end: "10:30",
       sessions: [
         {
