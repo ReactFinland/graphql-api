@@ -805,6 +805,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             "Benchmarking is one of the recommended practices when you are looking for what could be the next steps for your design system. But there are so many design systems, and they are very much different — it is confusing what should be the standard to benchmark with. Varya has studied dozens of design systems and committed reversive analysis on their features and attributes. This talk sheds light on the method and the results that help make strategic product decisions and suggest specific implementation approaches.",
           people: [people.varyaStepanova],
           urls: {
+            slides: "https://miro.com/app/board/uXjVPXCoofw=/",
             video: "",
           },
         },
