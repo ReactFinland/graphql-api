@@ -825,7 +825,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           people: [people.varyaStepanova],
           urls: {
             drawing: "drawings/2022/varya.png",
-            slides: "https://miro.com/app/board/uXjVPXCoofw=/",
+            web: "https://miro.com/app/board/uXjVPXCoofw=/",
             video: "",
           },
         },
