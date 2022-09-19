@@ -19,6 +19,9 @@ export class SessionUrls {
 
   @Field((_) => String, { nullable: true })
   public demo?: string;
+
+  @Field((_) => String, { nullable: true })
+  public drawing?: string;
 }
 
 @ObjectType()

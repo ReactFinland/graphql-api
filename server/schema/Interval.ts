@@ -25,4 +25,7 @@ export class Interval {
 
   @Field((_) => SessionUrls, { nullable: true })
   public urls?: SessionUrls;
+
+  @Field((_) => String, { nullable: true })
+  public drawing?: string;
 }

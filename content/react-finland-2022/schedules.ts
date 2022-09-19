@@ -452,6 +452,7 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
             "In today's ever-evolving world, it can feel like we can't recover from the last change before the next one overwhelms us. We will travel through art, philosophy, and ourselves to see change from a new perspective. We will learn coping mechanisms to keep our mental health in check.",
           people: [people.jen],
           urls: {
+            drawing: "drawings/2022/jen.jpg",
             video: "",
           },
         },
@@ -471,6 +472,7 @@ To support the whole community in this endeavor, we lined up a set of tools and 
 In the talk, we will present how the New React Native Architecture looks in the OSS space. We will discuss the impact this will have on developing React Native projects. Lastly, we will cover what we learned from the React Native New Architecture migration at Meta, and how you can tackle your migration in your organization.`,
           people: [people.nicola],
           urls: {
+            drawing: "drawings/2022/nicola.jpg",
             video: "",
           },
         },
@@ -483,6 +485,7 @@ In the talk, we will present how the New React Native Architecture looks in the 
 In this talk, Ryan, author of SolidJS, will look at what comes after the component model. Driven by the need for more granularity, and empowered by compilation, reactivity is becoming the universal language of user interfaces.`,
           people: [people.ryan],
           urls: {
+            drawing: "drawings/2022/ryan.jpg",
             video: "",
           },
         },
@@ -512,6 +515,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
             "TypeScript has become the industry standard but there are still areas that are inherently hard to make type-safe. In this talk we explore how we can leverage the Zod library to make forms type-safe in React.",
           people: [people.esaMatti],
           urls: {
+            drawing: "drawings/2022/esamatti.jpg",
             video: "",
           },
         },
@@ -523,6 +527,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
             "What does good code mean to you? Really, who hasn’t heard that question at an interview. And who hasn’t cursed at the “bad” code of other engineers or - alright let’s face it - our past selves? There are plenty of opinions on naming conventions, testing strategies, commit history, review feedback, managing complexity. But how to pick out which of these things actually matter and what is just fluff? We’ll look at what you can do to write the best JavaScript code you can - at any stage of your career.",
           people: [people.kadiKraman],
           urls: {
+            drawing: "drawings/2022/kadi.jpg",
             video: "",
           },
         },
@@ -533,6 +538,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           description: `Learn how to get the most out of the company you are in, whether it’s a dead end job, perhaps the company are on the brink of collapse, maybe you’ve hit the job jackpot and are working in the most fantastic start up. Always something to learn. What would I tell myself so that Monday mornings are not painful, but are instead something that can be looked forward to. You’re job can be fun (honestly)! And of course the code, all those things I’ve done or not done over the years – would I do it all again the same? No!`,
           people: [people.kennethSutherland],
           urls: {
+            drawing: "drawings/2022/kenneth.jpg",
             video: "",
           },
         },
@@ -564,6 +570,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
 All these weird things are part of our favourite library (not a framework™) and yet we still use and love it. Why actually? Let's talk about. Disclaimer: This is not a very serious talk, mostly …`,
           people: [people.nikGraf],
           urls: {
+            drawing: "drawings/2022/nik.jpg",
             video: "",
           },
         },
@@ -574,6 +581,7 @@ All these weird things are part of our favourite library (not a framework™) an
           description: `All state management libraries and techniques can be categorized in two ways. One is easy, one is simple. One is quick, one is maintainable. From state mutation to statecharts, let's explore the various ways developers manage state and learn how we can choose the best strategy for efficient, robust state state management for different use-cases, and discover what these two categories are.`,
           people: [people.davidKhourshid],
           urls: {
+            drawing: "drawings/2022/david.jpg",
             video: "",
           },
         },
@@ -585,6 +593,7 @@ All these weird things are part of our favourite library (not a framework™) an
             "In this talk, we will experiment with using state machines for modeling components in a React based component library. We will use the Stately visual editor to model components visually and see how we can use Storybook and Model based testing concepts to deal with test generation and documentation based on acceptance criteria.",
           people: [people.farzadYz],
           urls: {
+            drawing: "drawings/2022/farzad.jpg",
             video: "",
           },
         },
@@ -612,6 +621,7 @@ All these weird things are part of our favourite library (not a framework™) an
           description: `In this session we will introduce and try mob programming on stage.`,
           people: [people.woody, people.davidC, people.laurao],
           urls: {
+            // drawing: "drawings/2022/",
             video: "",
           },
         },
@@ -680,6 +690,7 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
       begin: "06:00",
       end: "07:30",
       title: "Working in Finland",
+      drawing: "drawings/2022/working-in-finland.png",
       sessions: [
         {
           type: SessionType.TALK,
@@ -691,6 +702,7 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
 * Identifying the right companies to apply if applying remotely`,
           people: [people.saku],
           urls: {
+            drawing: "drawings/2022/saku.png",
             video: "",
           },
         },
@@ -703,6 +715,7 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
 * How the skills and competences are assessed in interviews`,
           people: [people.vismit],
           urls: {
+            drawing: "drawings/2022/vismit.png",
             video: "",
           },
         },
@@ -716,6 +729,7 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
 * How to cope with relocation in the first two weeks?`,
           people: [people.tanja],
           urls: {
+            drawing: "drawings/2022/tanja.png",
             video: "",
           },
         },
@@ -736,6 +750,7 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
       begin: "08:00",
       end: "09:30",
       title: "Web components",
+      drawing: "drawings/2022/web-components.png",
       sessions: [
         {
           type: SessionType.TALK,
@@ -746,6 +761,7 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
 We'll go through what the web can actually accomplish on it's own at the moment, and some useful tools to assist in developing more vendorless, portable experiences.`,
           people: [people.matias],
           urls: {
+            drawing: "drawings/2022/matias.png",
             video: "",
           },
         },
@@ -762,6 +778,7 @@ On the other hand, Web Components now have a mature ecosystem where you can buil
 API-first backend only requires HTTP streams, and Web Components embed the required network primitives. Should we distribute a JS SDK or a library of Web Components for our service? Here's the match between the two giants! SDKs vs Web Components: Place Your Bets.`,
           people: [people.m4Dz],
           urls: {
+            drawing: "drawings/2022/m4dz.png",
             video: "",
           },
         },
@@ -774,6 +791,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             We are going to tackle it by doing more work at build time which means we start with almost zero JavaScript and only load more as the users interacts with the page.`,
           people: [people.thomas],
           urls: {
+            drawing: "drawings/2022/thomas.png",
             video: "",
           },
         },
@@ -795,6 +813,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
       begin: "10:30",
       end: "12:00",
       title: "Design systems",
+      drawing: "drawings/2022/design-systems.png",
       sessions: [
         {
           type: SessionType.TALK,
@@ -805,6 +824,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             "Benchmarking is one of the recommended practices when you are looking for what could be the next steps for your design system. But there are so many design systems, and they are very much different — it is confusing what should be the standard to benchmark with. Varya has studied dozens of design systems and committed reversive analysis on their features and attributes. This talk sheds light on the method and the results that help make strategic product decisions and suggest specific implementation approaches.",
           people: [people.varyaStepanova],
           urls: {
+            drawing: "drawings/2022/varya.png",
             slides: "https://miro.com/app/board/uXjVPXCoofw=/",
             video: "",
           },
@@ -818,6 +838,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             "Design systems are code, and code should be tested. How do you leverage Storybook stories for tests. I'll also show you some of the new features coming to Storybook 7.0!",
           people: [people.norbert],
           urls: {
+            drawing: "drawings/2022/norbert.png",
             video: "",
           },
         },
@@ -829,6 +850,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             "Breaking changes are usually inevitable in any library or system that lives long enough. So what are breaking changes in design system? What is the impact of them in different areas of the system? Is there a way to cheat the system and limit or even prevent this kind of change from happening? But when the inevitable happens, and you need to create a breaking change, what are the things you need to consider when doing this?",
           people: [people.rami],
           urls: {
+            drawing: "drawings/2022/rami.png",
             video: "",
           },
         },
@@ -849,6 +871,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
       begin: "12:30",
       end: "14:00",
       title: "Accessibility",
+      drawing: "drawings/2022/accessibility.png",
       sessions: [
         {
           type: SessionType.TALK,
@@ -858,6 +881,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             "Web accessibility is much more than regulations and restrictions. It is based on real people with real problems and needs. By understanding all the users everything makes a lot more sense. In her talk Marianna addresses the ‘why’ of accessibility – and a little bit of the ‘how’, too.",
           people: [people.marianna],
           urls: {
+            drawing: "drawings/2022/marianna.png",
             video: "",
           },
         },
@@ -870,6 +894,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             "Many websites and applications give false promises to users. For example, they promise interaction when there is none. In this talk, I will discuss some of those promises and how to create websites and applications that fulfill the promises given to users. After listening to this talk, you'll walk away knowing more about ARIA and keyboard navigation. You'll also learn how to create more inclusive websites and applications.",
           people: [people.eevis],
           urls: {
+            drawing: "drawings/2022/eeva-jonna.png",
             video: "",
           },
         },
@@ -881,6 +906,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             "Single Page Applications (SPAs) are lacking in accessibility by default. While a sighted user is able to tell the difference between different types of page updates, screen reader users might not separate the ones that resemble page loads from those that affect a single component. In my speech, I’ll introduce some techniques to tackle this problem.",
           people: [people.roosa],
           urls: {
+            drawing: "drawings/2022/roosa.png",
             video: "",
           },
         },
