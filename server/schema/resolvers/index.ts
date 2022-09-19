@@ -4,6 +4,7 @@ import IntervalResolver from "./IntervalResolver";
 import ScheduleResolver from "./ScheduleResolver";
 import SeriesResolver from "./SeriesResolver";
 import SessionResolver from "./SessionResolver";
+import SessionUrlsResolver from "./SessionUrlsResolver";
 import ThemeResolver from "./ThemeResolver";
 
 export {
@@ -13,5 +14,6 @@ export {
   ScheduleResolver,
   SeriesResolver,
   SessionResolver,
+  SessionUrlsResolver,
   ThemeResolver,
 };
