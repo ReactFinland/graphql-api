@@ -516,6 +516,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           people: [people.esaMatti],
           urls: {
             drawing: "drawings/2022/esamatti.jpg",
+            web: "https://docs.google.com/presentation/d/1PEjVuK1vfV_VfJtSnYNHdTUExEUrAURTDALFZZCU2DU/edit?usp=sharing",
             video: "",
           },
         },
