@@ -529,6 +529,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           people: [people.kadiKraman],
           urls: {
             drawing: "drawings/2022/kadi.jpg",
+            web: "https://app.pitch.com/app/public/player/92216e74-0219-44ac-a2d3-81010aff1087",
             video: "",
           },
         },
