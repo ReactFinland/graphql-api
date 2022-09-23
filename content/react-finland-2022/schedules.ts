@@ -781,6 +781,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           people: [people.m4Dz],
           urls: {
             drawing: "drawings/2022/m4dz.png",
+            web: "https://m4dz.net/t/sdk-vs-wc/",
             video: "",
           },
         },
