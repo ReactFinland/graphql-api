@@ -898,6 +898,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           people: [people.eevis],
           urls: {
             drawing: "drawings/2022/eeva-jonna.png",
+            web: "https://eevis.codes/talks/lets-keep-our-promises/",
             video: "",
           },
         },
