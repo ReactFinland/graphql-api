@@ -35,6 +35,9 @@ The workshop is dedicated to learning Design Systems fundamentals, from a Develo
 
 After covering the building of few tokens-based components , with their relatives documentation, stories, and tests ; we’ll go to practicing in a real world use-case, where you’ll start a Design System for a project from scratch, architecture it, build its first components and documentation, publish it, and use it in a dedicated React host app.`,
           keywords: [],
+          urls: {
+            web: "https://m4dz.net/s/F1jS8Dmr",
+          },
         },
       ],
     },
@@ -136,6 +139,9 @@ By the end of the workshop you will be able to leverage the new features of Reac
           title: "Design system ROI (return of investment)",
           description: `In this advanced half-day session, we discuss how to improve ROI of your design system implementations. Bring your own projecsts/topics.`,
           keywords: [],
+          urls: {
+            web: "https://bit.ly/3daIY1U",
+          },
         },
       ],
     },
@@ -180,6 +186,9 @@ Although the lecture has been mainly aimed at students learning about web develo
             "Design systems governance models and transitions between them",
           description: `In this advanced half-day session, you'll learn how to govern your design system work, what are the options, and how to move from one model to another. Bring your own problem(s)!`,
           keywords: [],
+          urls: {
+            web: "https://bit.ly/3Dnbkk6",
+          },
         },
         {
           type: SessionType.WORKSHOP,
