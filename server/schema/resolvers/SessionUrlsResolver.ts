@@ -6,6 +6,10 @@ import { SessionUrls } from "../Session";
 class SessionUrlsResolver {
   @FieldResolver((_) => String)
   public drawing(@Root() root, @Ctx() ctx: IContext) {
+    if (!root.drawing) {
+      return;
+    }
+
     // FIXME: Figure out why ctx can be missing
     return `${ctx ? ctx.mediaUrl : "/media"}/${root.drawing}`;
   }
