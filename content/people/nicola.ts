@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Nicola Corti",
-  about: "Nicola Corti is a Google Developer Expert for Kotlin. He has been working with the language since before version 1.0, and he is the maintainer of several open-source libraries and tools for mobile developers. He's currently working in the React Native Core team at Meta, building one of the most popular cross-platform mobile framework. Furthermore, he is an active member of the developer community. His involvement goes from speaking at international conferences to being a member of CFP committees and supporting developer communities across Europe. In his free time, he also loves baking, podcasting, and running.",
+  about:
+    "Nicola Corti is a Google Developer Expert for Kotlin. He has been working with the language since before version 1.0, and he is the maintainer of several open-source libraries and tools for mobile developers. He's currently working in the React Native Core team at Meta, building one of the most popular cross-platform mobile framework. Furthermore, he is an active member of the developer community. His involvement goes from speaking at international conferences to being a member of CFP committees and supporting developer communities across Europe. In his free time, he also loves baking, podcasting, and running.",
   aboutShort: "React Native Core @ Meta",
   image: {
     url: "people/nicola.jpg",

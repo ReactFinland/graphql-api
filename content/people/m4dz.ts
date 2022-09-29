@@ -25,11 +25,7 @@ const person: Contact = {
     },
     city: "Lyon",
   },
-  keywords: [
-    Keyword.REACT,
-    Keyword.DESIGN_SYSTEMS,
-    Keyword.TOOLING,
-  ], // TODO: check keywords for more
+  keywords: [Keyword.REACT, Keyword.DESIGN_SYSTEMS, Keyword.TOOLING], // TODO: check keywords for more
   type: [ContactType.SPEAKER],
 };
 
