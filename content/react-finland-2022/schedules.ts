@@ -632,7 +632,7 @@ All these weird things are part of our favourite library (not a framework™) an
           description: `In this session we will introduce and try mob programming on stage.`,
           people: [people.woody, people.davidC, people.laurao],
           urls: {
-            // drawing: "drawings/2022/",
+            drawing: "drawings/2022/mob-programming.jpg",
             video: "",
           },
         },
