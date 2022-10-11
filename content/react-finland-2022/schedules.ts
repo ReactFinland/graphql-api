@@ -593,6 +593,7 @@ All these weird things are part of our favourite library (not a framework™) an
           people: [people.davidKhourshid],
           urls: {
             drawing: "drawings/2022/david.jpg",
+            web: "https://slides.com/davidkhourshid/two-types-of-state-management",
             video: "",
           },
         },
