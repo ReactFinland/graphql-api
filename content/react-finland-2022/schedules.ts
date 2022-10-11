@@ -499,6 +499,7 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           people: [people.ryan],
           urls: {
             drawing: "drawings/2022/ryan.jpg",
+            web: "https://docs.google.com/presentation/d/11j-xrh8knB3eernOKhjMib1NZVLehHJ7yZRdfr_G9ec/edit?usp=sharing",
             video: "",
           },
         },
@@ -614,6 +615,7 @@ All these weird things are part of our favourite library (not a framework™) an
           people: [people.farzadYz],
           urls: {
             drawing: "drawings/2022/farzad.jpg",
+            web: "https://statelyai.slides.com/farzadyz/state-machines-component-lib",
             video: "",
           },
         },
