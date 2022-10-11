@@ -462,6 +462,8 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
           people: [people.jen],
           urls: {
             drawing: "drawings/2022/jen.jpg",
+            slides:
+              "https://drive.google.com/file/d/1ngA62J-w7Vyyq2kLPAjR9KLhcOdIL_4q/view?usp=sharing",
             video: "",
           },
         },
@@ -482,6 +484,8 @@ In the talk, we will present how the New React Native Architecture looks in the 
           people: [people.nicola],
           urls: {
             drawing: "drawings/2022/nicola.jpg",
+            slides:
+              "https://drive.google.com/file/d/1ZXy1MhzOloDV5nh22jLQK-mpLEaAVa4Z/view?usp=sharing",
             video: "",
           },
         },
@@ -550,6 +554,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           people: [people.kennethSutherland],
           urls: {
             drawing: "drawings/2022/kenneth.jpg",
+            slides:
+              "https://drive.google.com/file/d/1TSKtOOC-kCwLG8vo75bSk9Ym6aIiZw5j/view?usp=sharing",
             video: "",
           },
         },
@@ -582,6 +588,8 @@ All these weird things are part of our favourite library (not a framework™) an
           people: [people.nikGraf],
           urls: {
             drawing: "drawings/2022/nik.jpg",
+            slides:
+              "https://drive.google.com/file/d/1iX-6yxhzJhCwYuaShLZEYCJwKAQdvCs2/view?usp=sharing",
             video: "",
           },
         },
@@ -715,6 +723,8 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
           people: [people.saku],
           urls: {
             drawing: "drawings/2022/saku.png",
+            slides:
+              "https://drive.google.com/file/d/1x3X9i0Er4vD2Z0bohSrkt2htRIcNyHt7/view?usp=sharing",
             video: "",
           },
         },
@@ -728,6 +738,8 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
           people: [people.vismit],
           urls: {
             drawing: "drawings/2022/vismit.png",
+            slides:
+              "https://drive.google.com/file/d/1cfBHesZ22dpXjuJY5DQTkX32Dxk3zs6W/view?usp=sharing",
             video: "",
           },
         },
@@ -742,6 +754,8 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
           people: [people.tanja],
           urls: {
             drawing: "drawings/2022/tanja.png",
+            slides:
+              "https://drive.google.com/file/d/1NiDu8YYXFxt2YBiw9TLLDDIRMXm4Lytw/view?usp=sharing",
             video: "",
           },
         },
@@ -774,6 +788,8 @@ We'll go through what the web can actually accomplish on it's own at the moment,
           people: [people.matias],
           urls: {
             drawing: "drawings/2022/matias.png",
+            slides:
+              "https://drive.google.com/file/d/1qQMy-v0682ijDErUc4kvHS0WILPvDtmn/view?usp=sharing",
             video: "",
           },
         },
@@ -864,6 +880,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           people: [people.rami],
           urls: {
             drawing: "drawings/2022/rami.png",
+            slides:
+              "https://drive.google.com/file/d/1pqA_lDeArDipKT6Nr8KDAfUUXWn6_o-E/view?usp=sharing",
             video: "",
           },
         },
@@ -895,6 +913,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           people: [people.marianna],
           urls: {
             drawing: "drawings/2022/marianna.png",
+            slides:
+              "https://drive.google.com/file/d/1B7j4Vz01edApcbyiwlW6XizlIZMYfIiW/view?usp=sharing",
             video: "",
           },
         },
@@ -921,6 +941,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           people: [people.roosa],
           urls: {
             drawing: "drawings/2022/roosa.png",
+            slides:
+              "https://drive.google.com/file/d/1t8vjV_iKVLBjSqbWRMEC_I6_wYXrn2W_/view?usp=sharing",
             video: "",
           },
         },
