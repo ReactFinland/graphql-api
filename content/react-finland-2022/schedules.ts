@@ -823,6 +823,7 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           people: [people.thomas],
           urls: {
             drawing: "drawings/2022/thomas.png",
+            web: "https://docs.google.com/presentation/d/13hshxaN9pVRwIDZBWxH_V8_h7SA40h2k_3M70eCMSHY/edit?usp=sharing",
             video: "",
           },
         },
