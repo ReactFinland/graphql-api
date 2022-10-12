@@ -871,6 +871,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           people: [people.norbert],
           urls: {
             drawing: "drawings/2022/norbert.png",
+            slides:
+              "https://drive.google.com/file/d/1Ry5NYtWn3-MgKvsK0IQ70aOVkr2AhqAI/view?usp=sharing",
             video: "",
           },
         },
