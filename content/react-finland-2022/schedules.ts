@@ -444,6 +444,10 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
           type: SessionType.ORGANIZATIONAL,
           title: "Welcome",
           description: "Quick welcome to the conference at the main stage.",
+          urls: {
+            video:
+              "https://www.youtube.com/watch?v=kj6iQ1rR_lA&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=2&t=361s",
+          },
         },
       ],
     },
@@ -464,7 +468,8 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
             drawing: "drawings/2022/jen.jpg",
             slides:
               "https://drive.google.com/file/d/1ngA62J-w7Vyyq2kLPAjR9KLhcOdIL_4q/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=0ihYcjMhM-4&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=3",
           },
         },
         {
@@ -486,7 +491,8 @@ In the talk, we will present how the New React Native Architecture looks in the 
             drawing: "drawings/2022/nicola.jpg",
             slides:
               "https://drive.google.com/file/d/1ZXy1MhzOloDV5nh22jLQK-mpLEaAVa4Z/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=zyTYWAeORKg&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=4",
           },
         },
         {
@@ -500,7 +506,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           urls: {
             drawing: "drawings/2022/ryan.jpg",
             web: "https://docs.google.com/presentation/d/11j-xrh8knB3eernOKhjMib1NZVLehHJ7yZRdfr_G9ec/edit?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=O6xtMrDEhcE&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=5",
           },
         },
       ],
@@ -531,7 +538,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           urls: {
             drawing: "drawings/2022/esamatti.jpg",
             web: "https://docs.google.com/presentation/d/1PEjVuK1vfV_VfJtSnYNHdTUExEUrAURTDALFZZCU2DU/edit?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=tCyOdW4D6b8&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=6",
           },
         },
         {
@@ -544,7 +552,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
           urls: {
             drawing: "drawings/2022/kadi.jpg",
             web: "https://pitch.com/public/92216e74-0219-44ac-a2d3-81010aff1087/93be28df-3643-4a40-810d-ee765e7bb0ea",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=NIhXfXJmJF8&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=7",
           },
         },
         {
@@ -557,7 +566,8 @@ In this talk, Ryan, author of SolidJS, will look at what comes after the compone
             drawing: "drawings/2022/kenneth.jpg",
             slides:
               "https://drive.google.com/file/d/1TSKtOOC-kCwLG8vo75bSk9Ym6aIiZw5j/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=sizarzUoQTA&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=8",
           },
         },
       ],
@@ -591,7 +601,8 @@ All these weird things are part of our favourite library (not a framework™) an
             drawing: "drawings/2022/nik.jpg",
             slides:
               "https://drive.google.com/file/d/1iX-6yxhzJhCwYuaShLZEYCJwKAQdvCs2/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=25QQcPSzH8Y&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=9",
           },
         },
         {
@@ -603,7 +614,8 @@ All these weird things are part of our favourite library (not a framework™) an
           urls: {
             drawing: "drawings/2022/david.jpg",
             web: "https://slides.com/davidkhourshid/two-types-of-state-management",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=JevYDCy5HzA&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=10",
           },
         },
         {
@@ -616,7 +628,8 @@ All these weird things are part of our favourite library (not a framework™) an
           urls: {
             drawing: "drawings/2022/farzad.jpg",
             web: "https://statelyai.slides.com/farzadyz/state-machines-component-lib",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=bubX1q9hrAo&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=11",
           },
         },
       ],
@@ -644,7 +657,8 @@ All these weird things are part of our favourite library (not a framework™) an
           people: [people.woody, people.davidC, people.laurao],
           urls: {
             drawing: "drawings/2022/mob-programming.jpg",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=DRj1ScxWri4&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=12",
           },
         },
       ],
@@ -705,6 +719,10 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
           type: SessionType.ORGANIZATIONAL,
           title: "Welcome",
           description: "Quick welcome to the day at the main stage.",
+          urls: {
+            video:
+              "https://www.youtube.com/watch?v=F_4QaYxEq_g&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=13",
+          },
         },
       ],
     },
@@ -727,7 +745,8 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
             drawing: "drawings/2022/saku.png",
             slides:
               "https://drive.google.com/file/d/1x3X9i0Er4vD2Z0bohSrkt2htRIcNyHt7/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=YrmEF29kF1Q&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=14",
           },
         },
         {
@@ -742,7 +761,8 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
             drawing: "drawings/2022/vismit.png",
             slides:
               "https://drive.google.com/file/d/1cfBHesZ22dpXjuJY5DQTkX32Dxk3zs6W/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=aulujb2gdtI&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=15&t=3s",
           },
         },
         {
@@ -758,7 +778,8 @@ If you cannot make it to the conference, [follow it through YouTube live stream]
             drawing: "drawings/2022/tanja.png",
             slides:
               "https://drive.google.com/file/d/1NiDu8YYXFxt2YBiw9TLLDDIRMXm4Lytw/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=fkFaTzvj0mE&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=16",
           },
         },
       ],
@@ -792,7 +813,8 @@ We'll go through what the web can actually accomplish on it's own at the moment,
             drawing: "drawings/2022/matias.png",
             slides:
               "https://drive.google.com/file/d/1qQMy-v0682ijDErUc4kvHS0WILPvDtmn/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=oy1hiAO5Cl0&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=18",
           },
         },
         {
@@ -810,7 +832,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           urls: {
             drawing: "drawings/2022/m4dz.png",
             web: "https://m4dz.net/t/sdk-vs-wc/",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=NjZaNvxJAWE&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=19",
           },
         },
         {
@@ -824,7 +847,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           urls: {
             drawing: "drawings/2022/thomas.png",
             web: "https://docs.google.com/presentation/d/13hshxaN9pVRwIDZBWxH_V8_h7SA40h2k_3M70eCMSHY/edit?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=V2yjXFPYjVA&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=20",
           },
         },
       ],
@@ -851,20 +875,6 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title:
-            "The complete design system: what and how we could learn from the others",
-          description:
-            "Benchmarking is one of the recommended practices when you are looking for what could be the next steps for your design system. But there are so many design systems, and they are very much different — it is confusing what should be the standard to benchmark with. Varya has studied dozens of design systems and committed reversive analysis on their features and attributes. This talk sheds light on the method and the results that help make strategic product decisions and suggest specific implementation approaches.",
-          people: [people.varyaStepanova],
-          urls: {
-            drawing: "drawings/2022/varya.png",
-            web: "https://miro.com/app/board/uXjVPXCoofw=/",
-            video: "",
-          },
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title:
             "Testing design systems using storybook + Storybook 7.0 sneak peeks",
           description:
             "Design systems are code, and code should be tested. How do you leverage Storybook stories for tests. I'll also show you some of the new features coming to Storybook 7.0!",
@@ -873,7 +883,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             drawing: "drawings/2022/norbert.png",
             slides:
               "https://drive.google.com/file/d/1Ry5NYtWn3-MgKvsK0IQ70aOVkr2AhqAI/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=8ACxWOjrTfs&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=22",
           },
         },
         {
@@ -887,7 +898,23 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             drawing: "drawings/2022/rami.png",
             slides:
               "https://drive.google.com/file/d/1pqA_lDeArDipKT6Nr8KDAfUUXWn6_o-E/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=st8RoQIiqaE&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=23",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title:
+            "The complete design system: what and how we could learn from the others",
+          description:
+            "Benchmarking is one of the recommended practices when you are looking for what could be the next steps for your design system. But there are so many design systems, and they are very much different — it is confusing what should be the standard to benchmark with. Varya has studied dozens of design systems and committed reversive analysis on their features and attributes. This talk sheds light on the method and the results that help make strategic product decisions and suggest specific implementation approaches.",
+          people: [people.varyaStepanova],
+          urls: {
+            drawing: "drawings/2022/varya.png",
+            web: "https://miro.com/app/board/uXjVPXCoofw=/",
+            video:
+              "https://www.youtube.com/watch?v=oFj2aLxDaTs&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=24",
           },
         },
       ],
@@ -920,7 +947,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             drawing: "drawings/2022/marianna.png",
             slides:
               "https://drive.google.com/file/d/1B7j4Vz01edApcbyiwlW6XizlIZMYfIiW/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=2GZrkN2eUiA&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=25",
           },
         },
         {
@@ -934,7 +962,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           urls: {
             drawing: "drawings/2022/eeva-jonna.png",
             web: "https://eevis.codes/talks/lets-keep-our-promises/",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=zjuhVEav4qc&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=26",
           },
         },
         {
@@ -948,7 +977,8 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
             drawing: "drawings/2022/roosa.png",
             slides:
               "https://drive.google.com/file/d/1t8vjV_iKVLBjSqbWRMEC_I6_wYXrn2W_/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=ca2pKFwTsEI&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=27",
           },
         },
       ],
@@ -961,6 +991,10 @@ API-first backend only requires HTTP streams, and Web Components embed the requi
           type: SessionType.ORGANIZATIONAL,
           title: "Goodbye",
           description: "Conference ending.",
+          urls: {
+            video:
+              "https://www.youtube.com/watch?v=6Gsi_yOU1xg&list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&index=28",
+          },
         },
       ],
     },
