@@ -171,6 +171,9 @@ By the end of the workshop you will be able to leverage the new features of Reac
 The topic of the lecture is "Web application development – Where we came from and where are we going". In other words, you'll learn a bit about the past of the web while getting some idea of where it's going.
 
 Although the lecture has been mainly aimed at students learning about web development, you are welcome to join.`,
+          urls: {
+            video: "https://www.youtube.com/watch?v=gnPYRNL61Hk",
+          },
         },
       ],
       location: locations.tuas,
