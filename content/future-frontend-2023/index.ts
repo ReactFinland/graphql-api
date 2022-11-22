@@ -36,7 +36,7 @@ const conference: Conference = {
   series: "Future Frontend",
   name: "Future Frontend 2023",
   organizer: allSponsors.toska,
-  slogan: "Let's shape the future of frontend together",
+  slogan: "The future of frontend reimagined",
   year: "2023",
   startDate: "2023-06-05",
   endDate: "2023-06-09",
