@@ -28,7 +28,7 @@ const sponsors = partners.concat(
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
-  platformSponsors,
+  platformSponsors
 );
 
 const conference: Conference = {
