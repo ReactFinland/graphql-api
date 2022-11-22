@@ -9,6 +9,10 @@ To see the query API:
 1.  `NODE_ENV="development" npm start`
 2.  `http://localhost:3000/graphql` or `http://localhost:3000/calendar-2022.ics` (calendar)
 
+## Asset Designer
+
+You can access the asset designer through `http://localhost:3000/asset-designer`.
+
 ## Image Processing
 
 There's no special image processing in place at the moment.

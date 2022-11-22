@@ -69,6 +69,67 @@ const conferenceSeries: {
       },
     },
   },
+  "future-frontend": {
+    id: "future-frontend",
+    name: "Future Frontend",
+    conferences: ["future-frontend-2023"],
+    theme: {
+      id: "future-frontend",
+      textures: [{ url: "/media/assets/freezing-edge-bg.jpg" }],
+      colors: {
+        primary: "#FFFFFF",
+        secondary: "#A0FF00",
+        text: "#000000",
+        background: "#ffffff",
+      },
+      fonts: {
+        primary: "Eau",
+        secondary: "Work Sans",
+        variants: [
+          {
+            family: "Eau",
+            weight: "normal",
+            style: "normal",
+            fileName: "/media/fonts/eau_sans_book",
+            formats: ["ttf"],
+          },
+          {
+            family: "Work Sans",
+            weight: "normal",
+            style: "normal",
+            fileName: "/media/fonts/worksans-regular",
+            formats: ["woff2"],
+          },
+        ],
+      },
+      logos: {
+        black: {
+          withText: {
+            url: "/media/future-frontend/logo/ff-bw-logo-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/future-frontend/logo/ff-bw-logo.svg",
+          },
+        },
+        colored: {
+          withText: {
+            url: "/media/future-frontend/logo/ff-colored-logo-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/future-frontend/logo/ff-colored-logo.svg",
+          },
+        },
+        white: {
+          withText: {
+            url: "/media/future-frontend/logo/ff-bw-logo-with-text.svg",
+          },
+          withoutText: {
+            url: "/media/future-frontend/logo/ff-bw-logo.svg",
+          },
+        },
+      },
+    },
+  },
   techmovienight: {
     id: "techmovienight",
     name: "Tech Movie Night",

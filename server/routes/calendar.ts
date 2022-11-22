@@ -18,13 +18,13 @@ function routeCalendar(router) {
   });
 
   // TODO: Make a better abstraction for this
-  const calendarFile = "calendar-2022.ics";
+  const calendarFile = "calendar-2023.ics";
   router.all(
     `/${calendarFile}`,
     calendar({
       filename: calendarFile,
-      title: "React Finland 2022",
-      schedules: conferences["react-finland-2022"].schedules,
+      title: "Future Frontend 2023",
+      schedules: conferences["future-frontend-2023"].schedules,
     })
   );
 }
