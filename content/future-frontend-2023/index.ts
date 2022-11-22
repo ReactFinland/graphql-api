@@ -28,13 +28,13 @@ const sponsors = partners.concat(
   goldSponsors,
   silverSponsors,
   bronzeSponsors,
-  platformSponsors
+  platformSponsors,
 );
 
 const conference: Conference = {
   id: "future-frontend-2023",
-  series: "Future Frontend",
-  name: "Future Frontend 2023",
+  series: "Future Frontend", // TODO: Consider deprecating
+  name: "Future Frontend",
   organizer: allSponsors.toska,
   slogan: "The future of frontend reimagined",
   year: "2023",
