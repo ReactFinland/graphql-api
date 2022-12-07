@@ -1,7 +1,7 @@
 import { Schedule } from "../../server/schema/Schedule";
-import { /* Level, */ SessionType } from "../../server/schema/Session";
+import { Level, SessionType } from "../../server/schema/Session";
 // import * as locations from "../locations";
-// import * as people from "../people";
+import * as people from "../people";
 
 // All times are given in GMT+0
 const monday: Schedule = {
@@ -351,8 +351,21 @@ const friday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "Statecharts",
-      sessions: [],
+      title: "Design systems",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.thaisSantos],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
     },
     {
       begin: "12:00",
