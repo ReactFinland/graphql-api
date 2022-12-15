@@ -12,7 +12,7 @@
     "build": "npm run generate:all && rimraf build && tsc",
     "lint": "tslint --config tslint.json content/**/*.ts server/**/*.ts --fix",
     "start": "tsc-watch --onSuccess \"node ./build/server\" --onFailure \"echo Beep! Compilation Failed\"",
-    "heroku:start": "node ./server",
+    "heroku:start": "node ./build/server/index.js",
     "format": "prettier content/**/*.ts server/**/*.ts --write",
     "heroku-postbuild": "echo Skip build on Heroku"
   },
