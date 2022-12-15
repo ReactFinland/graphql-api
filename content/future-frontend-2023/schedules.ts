@@ -218,7 +218,32 @@ const thursday: Schedule = {
       begin: "06:00",
       end: "07:30",
       title: "Opening",
-      sessions: [],
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
     },
     {
       begin: "07:30",
@@ -234,8 +259,33 @@ const thursday: Schedule = {
     {
       begin: "08:05",
       end: "09:35",
-      title: "Techniques",
-      sessions: [],
+      title: "Sound",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.kenWheeler],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
     },
     {
       begin: "09:35",
@@ -251,8 +301,33 @@ const thursday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "Statecharts",
-      sessions: [],
+      title: "Static site generation",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Capri",
+          description: ``,
+          people: [people.felix],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
     },
     {
       begin: "12:00",
@@ -268,7 +343,33 @@ const thursday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      sessions: [],
+      title: "Edge computing",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.sunil],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
     },
     {
       begin: "14:00",
@@ -317,8 +418,33 @@ const friday: Schedule = {
     {
       begin: "06:00",
       end: "07:30",
-      title: "Opening",
-      sessions: [],
+      title: "Security",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.liran],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
     },
     {
       begin: "07:30",
@@ -334,8 +460,33 @@ const friday: Schedule = {
     {
       begin: "08:05",
       end: "09:35",
-      title: "Techniques",
-      sessions: [],
+      title: "Design systems",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.thaisSantos],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
     },
     {
       begin: "09:35",
@@ -351,14 +502,26 @@ const friday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "Design systems",
+      title: "Frameworks",
       sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Solid.js",
+          description: ``,
+          people: [people.ryan],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [people.thaisSantos],
+          people: [],
           urls: {
             drawing: "",
             slides: "",
@@ -381,7 +544,33 @@ const friday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      sessions: [],
+      title: "Future of interfaces",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
     },
     {
       begin: "14:00",
