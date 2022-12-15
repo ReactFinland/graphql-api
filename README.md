@@ -1,5 +1,3 @@
-[![Codeship Status for ReactFinland/graphql-api](https://app.codeship.com/projects/f27d4b30-0088-0137-84e3-2ae3d6f1076b/status?branch=master)](https://app.codeship.com/projects/324651)
-
 # GraphQL API for TOSKA conferences
 
 Simple GraphQL API for our conferences:
