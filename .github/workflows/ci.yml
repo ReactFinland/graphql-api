@@ -15,8 +15,9 @@ jobs:
         run: npm install
       - name: Build API
         run: npm run build
-      - uses: akhileshns/heroku-deploy@v3.12.12
+      - uses: CDNievas/heroku-action@v1.0 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "react-finland-api"
           heroku_email: ${{secrets.HEROKU_EMAIL}}
+          dynamicFiles: true
