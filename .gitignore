@@ -3,6 +3,7 @@
 node_modules/
 logs/
 attendees/
+build/
 server/types/
 media/scripts/
 utils/*.csv
