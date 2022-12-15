@@ -12,6 +12,8 @@ jobs:
         run: nvm use
       - name: Install modules
         run: npm install
+      - name: Build API
+        run: npm run build
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
