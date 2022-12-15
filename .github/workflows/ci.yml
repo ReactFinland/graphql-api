@@ -9,7 +9,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Use the right version of Node
-        run: nvm use
+        shell: bash -l {0}
+        run: nvm install
       - name: Install modules
         run: npm install
       - name: Build API
