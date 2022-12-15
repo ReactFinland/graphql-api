@@ -7,7 +7,7 @@ const Contact_1 = require("../../server/schema/Contact");
 const keywords_1 = __importDefault(require("../../server/schema/keywords"));
 const person = {
     name: "Thais Santos",
-    about: `Principal Developer Advocate at ‹div›RIOTS - makers of Backlight, a Design SDesign Systems crusader | Blockchain enthusiast | Design Lead @divriots | Making the IT world better one component at a time`,
+    about: `Principal Developer Advocate at [‹div›RIOTS](https://divriots.com/) - makers of [Backlight](https://backlight.dev/), a Design System creation system. Design Systems crusader | Blockchain enthusiast | Design Lead @divriots | Making the IT world better one component at a time`,
     image: {
         url: "people/thais.jpg",
     },
