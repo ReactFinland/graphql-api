@@ -20,3 +20,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "react-finland-api"
           heroku_email: ${{secrets.HEROKU_EMAIL}}
+          appdir: "./build/server"
