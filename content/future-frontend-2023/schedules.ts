@@ -285,7 +285,7 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [],
+          people: [people.teroParviainen],
           urls: {
             drawing: "",
             slides: "",
