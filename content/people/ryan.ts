@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Ryan Carniato",
   about:
-    "JavaScript performance enthusiast and fine-grained reactivity super fan. Works on @MarkoDevTeam at eBay. Author of the @solid_js.",
+    "JavaScript performance enthusiast and fine-grained reactivity super fan. Author of the @solid_js.",
   image: {
     url: "people/ryan.jpg",
   },
