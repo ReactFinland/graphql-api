@@ -149,19 +149,7 @@ const wednesday: Schedule = {
           type: SessionType.WORKSHOP,
           people: [people.kenWheeler],
           title: "Beats with Ken",
-          description: `### Who is the workshop for?
-
-This full-day workshop is for current or aspiring musicians, or people who are interested in synthesis in general.
-
-### What is it?
-
-It will be a well rounded workshop teaching the fundamentals of synthesis, web audio basics, and later some of the newest modern web Audio features.
-
-### What can I expect to learn?
-
-Web Audio API, Audio Worklets, Synthesis, Music Theory, Audio focused UI and visualization, and sequencing and composition.
-
-          `,
+          description: `This full-day workshop is for current or aspiring musicians, or people who are interested in synthesis in general. After the workshop, you will understand the fundamentals of synthesis, web audio basics, and some of the newest modern web Audio features. Expect to learn about the Web Audio API, Audio Worklets, Synthesis, Music Theory, Audio focused UI and visualization, and sequencing and composition.`,
         },
       ],
     },
