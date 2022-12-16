@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Sunil Pai",
-  about: "",
+  about:
+    "Previously at Cloudflare / Meta / Myntra / Yahoo. Made Glamor. Now building partykit.io. Plays a blue Les Paul.",
   image: {
     url: "people/sunil.png",
   },
@@ -13,7 +14,7 @@ const person: Contact = {
     github: "threepointone",
     facebook: "",
     medium: "",
-    instagram: "",
+    instagram: "threepointone",
     linkedin: "",
     youtube: "",
     devto: "",
