@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "CTO at @builderio, creator of @QwikDev, @angular, @angularjs, co-creator of #karmajs",
   image: {
-    url: "people/misko.jpg",
+    url: "people/misko.jpeg",
   },
   social: {
     homepage: "http://misko.hevery.com/",
