@@ -1,6 +1,6 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { Level, SessionType } from "../../server/schema/Session";
-// import * as locations from "../locations";
+import * as locations from "../locations";
 import * as people from "../people";
 
 // All times are given in GMT+0
@@ -194,7 +194,7 @@ const wednesday: Schedule = {
 const thursday: Schedule = {
   day: "2023-06-08",
   description: "Thursday – conference",
-  // location: locations.paasitorni,
+  location: locations.porssitalo,
   intervals: [
     {
       begin: "05:00",
@@ -396,7 +396,7 @@ const thursday: Schedule = {
 const friday: Schedule = {
   day: "2023-06-09",
   description: "Friday – conference",
-  // location: locations.paasitorni,
+  location: locations.porssitalo,
   intervals: [
     {
       begin: "05:00",
