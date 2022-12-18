@@ -1,5 +1,5 @@
 import { Conference } from "../../server/schema/Conference";
-// import * as locations from "../locations";
+import * as locations from "../locations";
 import * as people from "../people";
 import * as allSponsors from "../sponsors";
 import schedules from "./schedules";
@@ -40,9 +40,9 @@ const conference: Conference = {
   year: "2023",
   startDate: "2023-06-05",
   endDate: "2023-06-09",
-  websiteUrl: "https://future-frontend.com/",
+  websiteUrl: "https://futurefrontend.com/",
   // TODO: Resolve locations based on data
-  locations: [],
+  locations: [locations.porssitalo],
   mcs: [],
   organizers: [
     people.aleksiPousar,

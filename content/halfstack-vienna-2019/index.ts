@@ -15,7 +15,7 @@ const conferenceDate = "2019-09-19";
 const schedule: Schedule = {
   day: conferenceDate,
   description: "Conference day",
-  location: locations.ankerSaal,
+  location: locations.ankersaal,
   intervals: [],
 };
 
@@ -29,7 +29,7 @@ const conference: Conference = {
   startDate: conferenceDate,
   endDate: conferenceDate,
   websiteUrl: "https://halfstackconf.com/vienna/",
-  locations: [locations.ankerSaal],
+  locations: [locations.ankersaal],
   mcs: [],
   organizers: [],
   schedules: [schedule],
