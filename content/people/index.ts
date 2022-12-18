@@ -106,6 +106,7 @@ export { default as mika } from "./mika";
 export { default as mikeBerman } from "./mike-berman";
 export { default as mikhailNovikov } from "./mikhail-novikov";
 export { default as milecia } from "./milecia";
+export { default as misko } from "./misko";
 export { default as monicaLent } from "./monica-lent";
 export { default as naderDabit } from "./nader-dabit";
 export { default as naman } from "./naman";

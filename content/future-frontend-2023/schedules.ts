@@ -231,7 +231,7 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [],
+          people: [people.misko],
           urls: {
             drawing: "",
             slides: "",
@@ -241,9 +241,9 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "Solid.js",
           description: ``,
-          people: [],
+          people: [people.ryan],
           urls: {
             drawing: "",
             slides: "",
@@ -510,14 +510,14 @@ const friday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "Frameworks",
+      title: "Styling", // This might become Green computing
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Solid.js",
+          title: "",
           description: ``,
-          people: [people.ryan],
+          people: [],
           urls: {
             drawing: "",
             slides: "",
@@ -552,7 +552,7 @@ const friday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      title: "Future of interfaces",
+      title: "No code",
       sessions: [
         {
           type: SessionType.TALK,
@@ -571,7 +571,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [],
+          people: [people.misko],
           urls: {
             drawing: "",
             slides: "",
