@@ -23,7 +23,7 @@ const monday: Schedule = {
     },
     {
       begin: "06:00",
-      end: "13:30",
+      end: "14:00",
       sessions: [],
     },
     {
@@ -57,7 +57,7 @@ const monday: Schedule = {
     },
     {
       begin: "12:00",
-      end: "13:30",
+      end: "14:00",
       title: "Workshops continue",
       sessions: [],
     },
@@ -83,7 +83,7 @@ const tuesday: Schedule = {
     },
     {
       begin: "06:00",
-      end: "13:30",
+      end: "14:00",
       sessions: [],
     },
     {
@@ -117,7 +117,7 @@ const tuesday: Schedule = {
     },
     {
       begin: "12:00",
-      end: "13:30",
+      end: "14:00",
       title: "Workshops continue",
       sessions: [],
     },
@@ -143,7 +143,7 @@ const wednesday: Schedule = {
     },
     {
       begin: "06:00",
-      end: "13:30",
+      end: "14:00",
       sessions: [
         {
           type: SessionType.WORKSHOP,
@@ -194,7 +194,7 @@ Along the way, we will also look at what makes Qwik unique, and how resumability
     },
     {
       begin: "12:00",
-      end: "13:30",
+      end: "14:00",
       title: "Workshops continue",
       sessions: [],
     },
