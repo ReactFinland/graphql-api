@@ -562,14 +562,14 @@ const friday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      title: "No code",
+      title: "Demonstrations",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "No code demonstration",
           description: ``,
-          people: [],
+          people: [people.misko],
           urls: {
             drawing: "",
             slides: "",
@@ -579,9 +579,9 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "No code demonstration",
+          title: "",
           description: ``,
-          people: [people.misko],
+          people: [people.charlie],
           urls: {
             drawing: "",
             slides: "",
