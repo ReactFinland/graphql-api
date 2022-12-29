@@ -478,14 +478,14 @@ const friday: Schedule = {
     {
       begin: "08:05",
       end: "09:35",
-      title: "Design systems",
+      title: "Universal design systems",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [people.thaisSantos],
+          people: [people.mo],
           urls: {
             drawing: "",
             slides: "",
@@ -495,9 +495,9 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "Establishing the rules for a universal design system",
           description: ``,
-          people: [],
+          people: [people.thaisSantos],
           urls: {
             drawing: "",
             slides: "",
