@@ -483,7 +483,8 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title:
+            "Creating universal design systems across web and mobile with Utility First Styling",
           description: ``,
           people: [people.mo],
           urls: {
