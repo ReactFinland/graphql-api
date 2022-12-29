@@ -466,7 +466,7 @@ const friday: Schedule = {
     },
     {
       begin: "07:30",
-      end: "08:05",
+      end: "08:00",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -476,8 +476,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "08:05",
-      end: "09:35",
+      begin: "08:00",
+      end: "09:30",
       title: "Universal design systems",
       sessions: [
         {
@@ -508,7 +508,7 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "09:35",
+      begin: "09:30",
       end: "10:30",
       sessions: [
         {
