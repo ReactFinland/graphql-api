@@ -77,8 +77,8 @@ const conferenceSeries: {
       id: "future-frontend",
       textures: [{ url: "/media/assets/freezing-edge-bg.jpg" }],
       colors: {
-        primary: "#FFFFFF",
-        secondary: "#A0FF00",
+        primary: "#3a2fa6",
+        secondary: "#84ebec",
         text: "#000000",
         background: "#ffffff",
       },
@@ -105,26 +105,26 @@ const conferenceSeries: {
       logos: {
         black: {
           withText: {
-            url: "/media/future-frontend/logo/ff-bw-logo-with-text.svg",
+            url: "/media/future-frontend/logo/ff-black.svg",
           },
           withoutText: {
-            url: "/media/future-frontend/logo/ff-bw-logo.svg",
+            url: "/media/future-frontend/logo/icon.svg",
           },
         },
         colored: {
           withText: {
-            url: "/media/future-frontend/logo/ff-colored-logo-with-text.svg",
+            url: "/media/future-frontend/logo/ff-text.svg",
           },
           withoutText: {
-            url: "/media/future-frontend/logo/ff-colored-logo.svg",
+            url: "/media/future-frontend/logo/icon.svg",
           },
         },
         white: {
           withText: {
-            url: "/media/future-frontend/logo/ff-bw-logo-with-text.svg",
+            url: "/media/future-frontend/logo/ff-white.svg",
           },
           withoutText: {
-            url: "/media/future-frontend/logo/ff-bw-logo.svg",
+            url: "/media/future-frontend/logo/icon.svg",
           },
         },
       },
