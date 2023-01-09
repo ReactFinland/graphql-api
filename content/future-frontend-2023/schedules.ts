@@ -436,14 +436,14 @@ const friday: Schedule = {
     {
       begin: "06:00",
       end: "07:30",
-      title: "Security",
+      title: "Green computing",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [people.liran],
+          people: [people.janne],
           urls: {
             drawing: "",
             slides: "",
@@ -521,14 +521,14 @@ const friday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "Styling", // This might become Green computing
+      title: "Security",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [],
+          people: [people.liran],
           urls: {
             drawing: "",
             slides: "",
