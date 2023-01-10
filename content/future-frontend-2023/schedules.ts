@@ -526,8 +526,8 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title: "Moving application auth to the edge",
+          description: `Secure your application by handling auth at the edge - before a user hits your application. This would be primarily about building out a login/signup flow that happens at the edge, before a request reaches your app - which would only see user profile information for the currently logged in user.`,
           people: [people.samuel],
           urls: {
             drawing: "",
