@@ -264,7 +264,7 @@ const thursday: Schedule = {
     },
     {
       begin: "07:30",
-      end: "08:05",
+      end: "08:00",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -274,50 +274,8 @@ const thursday: Schedule = {
       ],
     },
     {
-      begin: "08:05",
-      end: "09:35",
-      title: "Sound",
-      sessions: [
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
-          people: [people.kenWheeler],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
-          people: [people.teroParviainen],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-        },
-      ],
-    },
-    {
-      begin: "09:35",
-      end: "10:30",
-      sessions: [
-        {
-          type: SessionType.LUNCH,
-          title: "Lunch",
-          description: "Lunch with a Finnish twist.",
-        },
-      ],
-    },
-    {
-      begin: "10:30",
-      end: "12:00",
+      begin: "08:00",
+      end: "09:30",
       title: "Static site generation",
       sessions: [
         {
@@ -347,6 +305,49 @@ const thursday: Schedule = {
       ],
     },
     {
+      begin: "09:30",
+      end: "10:30",
+      sessions: [
+        {
+          type: SessionType.LUNCH,
+          title: "Lunch",
+          description: "Lunch with a Finnish twist.",
+        },
+      ],
+    },
+    {
+      begin: "10:30",
+      end: "12:00",
+      title: "Universal design systems",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title:
+            "Creating universal design systems across web and mobile with Utility First Styling",
+          description: ``,
+          people: [people.mo],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Establishing the rules for a universal design system",
+          description: ``,
+          people: [people.thaisSantos],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
+    },
+    {
       begin: "12:00",
       end: "12:30",
       sessions: [
@@ -360,15 +361,14 @@ const thursday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      title: "Edge computing",
+      title: "Sound",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Everything's better with friends",
-          description:
-            "Software is best when shared; with friends and colleagues, in realtime, across the world. It's traditionally been hard and expensive to do this, but with the advent of edge computing and advances in CRDTs and the like, building multiplayer applications is now accessible to mere mortals like myself. In this talk, I'll share some of the work I've been doing in the space, and we'll have a demo to play with and break!",
-          people: [people.sunil],
+          title: "",
+          description: ``,
+          people: [people.kenWheeler],
           urls: {
             drawing: "",
             slides: "",
@@ -380,7 +380,7 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [],
+          people: [people.teroParviainen],
           urls: {
             drawing: "",
             slides: "",
@@ -478,15 +478,15 @@ const friday: Schedule = {
     {
       begin: "08:00",
       end: "09:30",
-      title: "Universal design systems",
+      title: "Edge computing",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title:
-            "Creating universal design systems across web and mobile with Utility First Styling",
-          description: ``,
-          people: [people.mo],
+          title: "Everything's better with friends",
+          description:
+            "Software is best when shared; with friends and colleagues, in realtime, across the world. It's traditionally been hard and expensive to do this, but with the advent of edge computing and advances in CRDTs and the like, building multiplayer applications is now accessible to mere mortals like myself. In this talk, I'll share some of the work I've been doing in the space, and we'll have a demo to play with and break!",
+          people: [people.sunil],
           urls: {
             drawing: "",
             slides: "",
@@ -496,9 +496,9 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Establishing the rules for a universal design system",
+          title: "",
           description: ``,
-          people: [people.thaisSantos],
+          people: [],
           urls: {
             drawing: "",
             slides: "",
@@ -528,7 +528,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [people.liran],
+          people: [],
           urls: {
             drawing: "",
             slides: "",
@@ -540,7 +540,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [],
+          people: [people.liran],
           urls: {
             drawing: "",
             slides: "",
