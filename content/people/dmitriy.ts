@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Dmitriy Akulov",
   about:
-    "Building fast global infrastructure. Creator of dnsperf/cdnperf and @jsdelivr - Ex-@cloudflare. Product Director at @G-Core Twice a startup founder",
+    "Building fast global infrastructure. Creator of [jsDelivr](https://www.jsdelivr.com/) - Product Director at Gcore. Ex-Cloudflare. Twice a startup founder.",
   image: {
     url: "people/dmitriy.jpeg",
   },
