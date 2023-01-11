@@ -542,6 +542,18 @@ const friday: Schedule = {
         },
       ],
     },
+    {
+      begin: "15:00",
+      end: "18:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "Afterparty",
+          description: "Epic afterparty at a location to be decided.",
+        },
+      ],
+      // location: locations.babylonHelsinki,
+    },
   ],
 };
 
