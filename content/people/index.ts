@@ -101,6 +101,7 @@ export { default as mark } from "./mark";
 export { default as matias } from "./matias";
 export { default as matt } from "./matt";
 export { default as matteo } from "./matteo";
+export { default as matthew } from "./matthew";
 export { default as max } from "./max";
 export { default as michael } from "./michael";
 export { default as michalChudziak } from "./michal-chudziak";
