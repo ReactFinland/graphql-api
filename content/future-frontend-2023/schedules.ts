@@ -4,66 +4,6 @@ import * as locations from "../locations";
 import * as people from "../people";
 
 // All times are given in GMT+0
-const monday: Schedule = {
-  day: "2023-06-05",
-  description: "Monday – workshops",
-  // location: locations.paasitorni,
-  intervals: [
-    {
-      begin: "05:00",
-      end: "06:00",
-      sessions: [
-        {
-          type: SessionType.ORGANIZATIONAL,
-          title: "Registration and breakfast",
-          description:
-            "Register and enjoy breakfast on our behalf before the workshop.",
-        },
-      ],
-    },
-    {
-      begin: "06:00",
-      end: "14:00",
-      sessions: [],
-    },
-    {
-      begin: "09:00",
-      end: "10:00",
-      sessions: [
-        {
-          type: SessionType.LUNCH,
-          title: "Lunch",
-          description:
-            "We have Finnish food in store for people attending the workshop.",
-        },
-      ],
-    },
-    {
-      begin: "10:00",
-      end: "11:30",
-      title: "Workshops continue",
-      sessions: [],
-    },
-    {
-      begin: "11:30",
-      end: "12:00",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description: "Drink coffee, tea, or water.",
-        },
-      ],
-    },
-    {
-      begin: "12:00",
-      end: "14:00",
-      title: "Workshops continue",
-      sessions: [],
-    },
-  ],
-};
-
 const tuesday: Schedule = {
   day: "2023-06-06",
   description: "Tuesday – workshops",
@@ -605,4 +545,4 @@ const friday: Schedule = {
   ],
 };
 
-export default [monday, tuesday, wednesday, thursday, friday];
+export default [tuesday, wednesday, thursday, friday];
