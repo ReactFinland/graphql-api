@@ -4,12 +4,12 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Tero Parviainen",
   about:
-    "Software developer, music hacker, and writer. Building the design tools of the future at @CreativeDotAI. ",
+    "Software developer, music hacker. One half of Counterpoint.",
   image: {
     url: "people/tero.jpg",
   },
   social: {
-    homepage: "https://teropa.info",
+    homepage: "https://ctpt.co",
     twitter: "teropa",
     github: "teropa",
   },
