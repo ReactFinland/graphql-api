@@ -138,6 +138,7 @@ export { default as saku } from "./saku";
 export { default as samuel } from "./samuel";
 export { default as samuliHakoniemi } from "./samuli-hakoniemi";
 export { default as saraVieira } from "./sara-vieira";
+export { default as satu } from "./satu";
 export { default as shayKeinan } from "./shay-keinan";
 export { default as shodipo } from "./shodipo";
 export { default as siaKaramalegos } from "./sia-karamalegos";

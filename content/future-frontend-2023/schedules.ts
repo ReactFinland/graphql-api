@@ -383,7 +383,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [people.janne],
+          people: [people.satu],
           urls: {
             drawing: "",
             slides: "",
@@ -395,7 +395,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [],
+          people: [people.janne],
           urls: {
             drawing: "",
             slides: "",
