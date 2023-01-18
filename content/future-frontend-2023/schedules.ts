@@ -24,7 +24,20 @@ const tuesday: Schedule = {
     {
       begin: "06:00",
       end: "14:00",
-      sessions: [],
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.samuel],
+          title: "Cloudflare Workers from zero to hero",
+          description: `Always wanted to try out Cloudflare Workers, but haven't known where to start? Maybe you've tried out Workers once or twice, but aren't sure how to fit all the parts together for a production-ready application? Maybe you're completely new to the idea of running code on the edge, but you want to find out more? This is the workshop for you!
+
+You'll be shown how to build a simple application on Cloudflare Workers, Cloudflare's platform for running your code on the edge, all the way from idea to deployed project. You'll learn:
+
+- How to bootstrap and configure a new project with Wrangler, Cloudflare's CLI tool for Workers.
+- Debugging and troubleshooting methods via developer tools, analytics, and integration with Sentry.
+- How to use Wrangler to develop your project locally, before deploying to the Cloudflare developer platform.`,
+        },
+      ],
     },
     {
       begin: "09:00",
