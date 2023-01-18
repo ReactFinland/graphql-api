@@ -3,8 +3,7 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Tero Parviainen",
-  about:
-    "Software developer, music hacker. One half of Counterpoint.",
+  about: "Software developer, music hacker. One half of Counterpoint.",
   image: {
     url: "people/tero.jpg",
   },
