@@ -37,6 +37,15 @@ You'll be shown how to build a simple application on Cloudflare Workers, Cloudfl
 - Debugging and troubleshooting methods via developer tools, analytics, and integration with Sentry.
 - How to use Wrangler to develop your project locally, before deploying to the Cloudflare developer platform.`,
         },
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.thaisSantos],
+          title:
+            "Wearing different hats: understanding and practicing the designer/developer workflow for digital products with a design system in place",
+          description: `There are developers who have an eye for design, or designers who understand and like to code. This understanding of the other side can really help increase the speed of product development, as well as help a team achieve better results because there's empathy for each other's efforts. This workshop is intended to showcase the reality of these two disciplines and bring practical tips to be implemented by any team.
+
+We will spend the day understanding the key aspects of a designer's and developer's work in a digital product and how a design system enhances this interaction. This is a hands-on workshop to empower you with better understanding of your colleagues and how to leverage the design system in this workflow. We will work with Figma files and an existing React component library, no prior knowledge is required.`,
+        },
       ],
     },
     {
