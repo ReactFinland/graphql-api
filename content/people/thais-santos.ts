@@ -3,7 +3,7 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Thais Santos",
-  about: `Principal Developer Advocate at [‹div›RIOTS](https://divriots.com/) - makers of [Backlight](https://backlight.dev/), a Design System creation system. Design Systems crusader | Blockchain enthusiast | Design Lead @divriots | Making the IT world better one component at a time`,
+  about: `Design Systems crusader 🧭 Currently lead design at [‹div›RIOTS](https://divriots.com/) - makers of [Backlight](https://backlight.dev/): a unique, all-in-one design system solution.`,
   image: {
     url: "people/thais.jpg",
   },
@@ -14,7 +14,7 @@ const person: Contact = {
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/thaissantosdesigner/",
     youtube: "",
     devto: "",
   },
@@ -26,7 +26,6 @@ const person: Contact = {
     city: "Amsterdam",
   },
   keywords: [
-    Keyword.REACT,
     Keyword.DESIGN_SYSTEMS,
     Keyword.STYLING,
     Keyword.TOOLING,
