@@ -14,7 +14,7 @@ const person: Contact = {
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "https://www.linkedin.com/in/thaissantosdesigner/",
+    linkedin: "thaissantosdesigner",
     youtube: "",
     devto: "",
   },
@@ -25,11 +25,7 @@ const person: Contact = {
     },
     city: "Amsterdam",
   },
-  keywords: [
-    Keyword.DESIGN_SYSTEMS,
-    Keyword.STYLING,
-    Keyword.TOOLING,
-  ], // TODO: check keywords for more
+  keywords: [Keyword.DESIGN_SYSTEMS, Keyword.STYLING, Keyword.TOOLING], // TODO: check keywords for more
   type: [ContactType.SPEAKER],
 };
 
