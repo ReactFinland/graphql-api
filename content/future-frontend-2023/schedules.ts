@@ -49,6 +49,24 @@ We will spend the day understanding the key aspects of a designer's and develope
       ],
     },
     {
+      begin: "06:00",
+      end: "09:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.liran],
+          title: "Developer Security Essentials with Snyk",
+          description: `Overwhelmed with security issues in your Node.js applications? Not entirely sure how to write secure code? Join us in this workshop where you’ll learn how to improve security without being a security professional. We’ll use Snyk Code’s VS Code extension to catch and find security issues while you code, automatically fix security issues in your open source libraries, and see first-hand how to weaponize vulnerabilities to exploit working Node.js applications.
+
+**Pre-requisites:**
+
+Attendees need to have the following requirements prepared to be able to successfully participate in the workshop: a Node.js LTS development environment, Git, an npm package manager, Docker or a local MongoDB server installed, their preferred IDE and a working Internet connection.
+
+**IMPORTANT!** This workshop runs in a half-day format and lunch is **not** included.`,
+        },
+      ],
+    },
+    {
       begin: "09:00",
       end: "10:00",
       sessions: [
