@@ -518,7 +518,7 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "Secure coding practices",
           description: ``,
           people: [people.liran],
           urls: {
