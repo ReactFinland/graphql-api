@@ -36,7 +36,7 @@ const sponsors = partners.concat(
 const conference: Conference = {
   id: "future-frontend-2023",
   series: "Future Frontend", // TODO: Consider deprecating
-  name: "Future Frontend",
+  name: "Future Frontend 2023",
   organizer: allSponsors.toska,
   slogan: "The future of frontend reimagined",
   year: "2023",
