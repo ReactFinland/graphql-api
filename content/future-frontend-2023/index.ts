@@ -7,12 +7,10 @@ import schedules from "./schedules";
 const partners = [
   // allSponsors.divriots,
   allSponsors.bejs,
-  /*
-  allSponsors.halfstack,
+  // allSponsors.halfstack,
   allSponsors.koodiasuomesta,
-  allSponsors.reactnewyork,
-  allSponsors.reactnorway,
-  */
+  // allSponsors.reactnewyork,
+  // allSponsors.reactnorway,
   allSponsors.survivejs,
   /*
   allSponsors.reactbrussels,
