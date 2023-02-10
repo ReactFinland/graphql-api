@@ -21,7 +21,7 @@ const partners = [
   */
 ];
 const goldSponsors = [];
-const silverSponsors = [];
+const silverSponsors = [allSponsors.gofore];
 const bronzeSponsors = [];
 const platformSponsors = [];
 const sponsors = partners.concat(
