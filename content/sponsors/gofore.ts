@@ -7,7 +7,7 @@ const sponsor: Contact = {
     url: "sponsors/gofore.svg",
   },
   social: {
-    homepage: "https://gofore.com/en/home/",
+    homepage: "https://gofore.com/",
     facebook: "GoforeGroup",
     github: "gofore",
     linkedin: "company/gofore",
