@@ -39,7 +39,7 @@ function calendar({
   schedules: Schedule[];
 }) {
   const timezone = "+00:00"; // GMT+0
-  const domain = "https://react-finland.fi";
+  const domain = "https://futurefrontend.com";
   const cal = ical({ domain, name: title });
 
   if (Array.isArray(schedules)) {
@@ -70,8 +70,7 @@ function calendar({
 
 function resolveLocation(location) {
   // TODO: Get the default from the current event!
-  const defaultLocation =
-    "Helsinki Congress Paasitorni, Paasivuorenkatu 5 A, 00530 Helsinki, Finland";
+  const defaultLocation = "Pörssitalo, Fabianinkatu 14, Helsinki, Finland";
 
   return location
     ? `${location.name}, ${location.address}, ${location.city}, ${location.country.name}`
