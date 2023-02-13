@@ -1,7 +1,6 @@
 // https://github.com/amazeeio/lagoon/blob/master/services/api/src/logger.js
 import * as fs from "fs";
 import * as path from "path";
-import { isString } from "util";
 import { createLogger, format, transports } from "winston";
 
 // Create the logs directory if it doesn't exist yet.
@@ -10,12 +9,12 @@ if (!fs.existsSync(directory)) {
   fs.mkdirSync(directory);
 }
 
-const ignorePingAndMedia = format(info => {
+const ignorePingAndMedia = format((info) => {
   const message = info.message;
 
   if (
-    isString(message) &&
-    ["GET /ping ", "GET /media"].some(match => message.includes(match))
+    typeof message === "string" &&
+    ["GET /ping ", "GET /media"].some((match) => message.includes(match))
   ) {
     return false;
   }
