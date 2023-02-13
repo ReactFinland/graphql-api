@@ -45,8 +45,6 @@
     "csstype": "^2.6.6",
     "flatmap": "0.0.3",
     "glob": "^7.1.7",
-    "husky": "^3.0.5",
-    "lint-staged": "^9.2.5",
     "mri": "^1.1.6",
     "prettier": "^2.3.1",
     "tsc-watch": "^4.4.0",
@@ -112,12 +110,6 @@
     "window-or-global": "^1.0.1",
     "winston": "^3.3.3",
     "zerofill": "^0.1.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run build",
-      "precommit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.--write": [
