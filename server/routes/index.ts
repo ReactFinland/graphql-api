@@ -1,6 +1,6 @@
 import cors from "cors";
 import express from "express";
-import { redirectToHTTPS } from "express-http-to-https";
+// import { redirectToHTTPS } from "express-http-to-https";
 import * as path from "path";
 import generateSchema from "../schema";
 import routeAssetDesigner from "./asset-designer";
@@ -21,7 +21,7 @@ async function createRouter() {
   const scriptPath = path.join(projectRoot, ".scripts");
 
   router.use(cors());
-  router.use(redirectToHTTPS([/localhost:(\d{4})/]));
+  // router.use(redirectToHTTPS([/localhost:(\d{4})/]));
 
   routeAssetDesigner(router, projectRoot, scriptPath);
   routeCalendar(router);
