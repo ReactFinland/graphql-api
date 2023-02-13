@@ -83,7 +83,7 @@
     "googleapis": "^42.0.0",
     "graphql": "^14.5.4",
     "graphql-request": "^1.8.2",
-    "helmet": "^3.21.0",
+    "helmet": "^6.0.1",
     "hex-to-rgba": "^2.0.1",
     "history": "^4.9.0",
     "ical-generator": "^1.7.2",
