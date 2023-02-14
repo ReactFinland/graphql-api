@@ -12,7 +12,6 @@ async function createApp() {
   // Wear a helmet for extra security.
   app.use(
     helmet({
-      contentSecurityPolicy: false,
       frameguard: false,
     })
   );
@@ -38,7 +37,7 @@ async function createApp() {
   app.use(
     morgan("combined", {
       stream: {
-        write: (message) => logger.info(message),
+        write: message => logger.info(message),
       },
     })
   );
