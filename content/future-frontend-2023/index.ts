@@ -19,6 +19,7 @@ const partners = [
   allSponsors.reactjsday,
   allSponsors.webexpo,
   */
+  allSponsors.nitor,
 ];
 const goldSponsors = [];
 const silverSponsors = [allSponsors.gofore, allSponsors.elisa];
