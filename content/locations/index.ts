@@ -5,6 +5,7 @@ export { default as babylonHelsinki } from "./babylon-helsinki";
 export { default as elisaAppelsiini } from "./elisa-appelsiini";
 export { default as gofore } from "./gofore";
 export { default as internet } from "./internet";
+export { default as nitor } from "./nitor";
 export { default as paasitorni } from "./paasitorni";
 export { default as porssitalo } from "./porssitalo";
 export { default as saeWien } from "./sae-wien";

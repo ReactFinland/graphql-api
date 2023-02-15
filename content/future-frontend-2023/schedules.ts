@@ -36,6 +36,7 @@ You'll be shown how to build a simple application on Cloudflare Workers, Cloudfl
 - How to bootstrap and configure a new project with Wrangler, Cloudflare's CLI tool for Workers.
 - Debugging and troubleshooting methods via developer tools, analytics, and integration with Sentry.
 - How to use Wrangler to develop your project locally, before deploying to the Cloudflare developer platform.`,
+          location: locations.nitor,
         },
         {
           type: SessionType.WORKSHOP,
@@ -130,6 +131,7 @@ const wednesday: Schedule = {
           people: [people.kenWheeler],
           title: "Beats with Ken",
           description: `This full-day workshop is for current or aspiring musicians, or people who are interested in synthesis in general. After the workshop, you will understand the fundamentals of synthesis, web audio basics, and some of the newest modern web Audio features. Expect to learn about the Web Audio API, Audio Worklets, Synthesis, Music Theory, Audio focused UI and visualization, and sequencing and composition.`,
+          location: locations.nitor,
         },
         {
           type: SessionType.WORKSHOP,
