@@ -10,7 +10,7 @@ const partners = [
   // allSponsors.halfstack,
   allSponsors.koodiasuomesta,
   // allSponsors.reactnewyork,
-  // allSponsors.reactnorway,
+  allSponsors.reactnorway,
   allSponsors.survivejs,
   /*
   allSponsors.reactbrussels,
