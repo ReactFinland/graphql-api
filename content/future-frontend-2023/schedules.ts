@@ -64,6 +64,7 @@ We will spend the day understanding the key aspects of a designer's and develope
 Attendees need to have the following requirements prepared to be able to successfully participate in the workshop: a Node.js LTS development environment, Git, an npm package manager, Docker or a local MongoDB server installed, their preferred IDE and a working Internet connection.
 
 **IMPORTANT!** This workshop runs in a half-day format and lunch is **not** included.`,
+          location: locations.futurice,
         },
       ],
     },

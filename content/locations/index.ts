@@ -3,6 +3,7 @@ export { default as ankersaal } from "./ankersaal";
 export { default as arkade } from "./arkade";
 export { default as babylonHelsinki } from "./babylon-helsinki";
 export { default as elisaAppelsiini } from "./elisa-appelsiini";
+export { default as futurice } from "./futurice";
 export { default as gofore } from "./gofore";
 export { default as internet } from "./internet";
 export { default as nitor } from "./nitor";
