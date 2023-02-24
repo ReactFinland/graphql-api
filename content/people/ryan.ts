@@ -26,6 +26,7 @@ const person: Contact = {
     },
     city: "San Jose",
   },
+  tagline: "Creator of Solid.js",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

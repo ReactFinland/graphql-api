@@ -25,6 +25,7 @@ const person: Contact = {
     },
     city: "Amsterdam",
   },
+  tagline: "Master of design systems",
   keywords: [Keyword.DESIGN_SYSTEMS, Keyword.STYLING, Keyword.TOOLING], // TODO: check keywords for more
   type: [ContactType.SPEAKER],
 };

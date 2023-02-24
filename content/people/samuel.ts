@@ -26,6 +26,7 @@ const person: Contact = {
     },
     city: "Edinburgh",
   },
+  tagline: "Secures your edge",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

@@ -1,5 +1,4 @@
 import { Contact, ContactType } from "../../server/schema/Contact";
-import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Miško Hevery",
@@ -30,7 +29,8 @@ const person: Contact = {
     },
     city: "Saratoga",
   },
-  keywords: [Keyword.REACT],
+  tagline: "Creator of Angular.js, Qwik",
+  keywords: [],
   type: [ContactType.SPEAKER],
 };
 

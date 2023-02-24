@@ -26,6 +26,7 @@ const person: Contact = {
     },
     city: "Seattle",
   },
+  tagline: "Hardware and JavaScript applied",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

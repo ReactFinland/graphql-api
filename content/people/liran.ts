@@ -26,6 +26,7 @@ const person: Contact = {
     },
     city: "Tel Aviv",
   },
+  tagline: "Security is his middle name",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

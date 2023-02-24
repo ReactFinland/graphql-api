@@ -27,6 +27,7 @@ const person: Contact = {
     },
     city: "Krakow",
   },
+  tagline: "Creator of jsDelivr",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

@@ -19,6 +19,7 @@ const person: Contact = {
     },
     city: "Helsinki",
   },
+  tagline: "Generates music",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

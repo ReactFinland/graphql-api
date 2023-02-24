@@ -26,6 +26,7 @@ const person: Contact = {
     },
     city: "Oulu",
   },
+  tagline: "Leads a growing small business",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

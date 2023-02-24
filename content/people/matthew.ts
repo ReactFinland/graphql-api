@@ -26,6 +26,7 @@ const person: Contact = {
     },
     city: "Louisville",
   },
+  tagline: "Creator of Astro",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

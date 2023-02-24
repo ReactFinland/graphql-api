@@ -26,6 +26,7 @@ const person: Contact = {
     },
     city: "Helsinki",
   },
+  tagline: "Makes your code green",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

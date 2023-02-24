@@ -26,6 +26,7 @@ const person: Contact = {
     },
     city: "London",
   },
+  tagline: "Creates universal design systems",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

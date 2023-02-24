@@ -21,6 +21,7 @@ const person: Contact = {
     },
     city: "Allenwood",
   },
+  tagline: "Made slick carousel, now makes beats",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };

@@ -26,6 +26,7 @@ const person: Contact = {
     },
     city: "Hamburg",
   },
+  tagline: "Creator of Capri",
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
 };
