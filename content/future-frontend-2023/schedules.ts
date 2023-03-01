@@ -361,7 +361,7 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "Adaptive Music for the Web With RNBO",
           description: ``,
           people: [people.teroParviainen],
           urls: {
