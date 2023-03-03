@@ -193,6 +193,8 @@ function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
   const logo = theme.logos.white.withText.url;
   const { name, image, talks, workshops } = contact;
 
+  // TODO: Restore: use secondary font instead of primary
+  // The problem is that Work Sans is missing a woff2
   return (
     <TweetContainer
       primaryColor={theme.colors.primary}
@@ -206,7 +208,7 @@ function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
         </TweetRow>
         <TweetText>{name}</TweetText>
         {Array.isArray(talks) && talks.length > 0 && (
-          <TweetDescription fontFamily={theme.fonts.secondary}>
+          <TweetDescription fontFamily={theme.fonts.primary}>
             {talks[0].title}
           </TweetDescription>
         )}
@@ -216,7 +218,7 @@ function SpeakerTweet({ days, contact, theme, conference }: TweetProps) {
           workshops.length > 0 && (
             <>
               <TweetText>Workshop</TweetText>
-              <TweetDescription fontFamily={theme.fonts.secondary}>
+              <TweetDescription fontFamily={theme.fonts.primary}>
                 {workshops[0].title}
               </TweetDescription>
             </>
@@ -417,7 +419,7 @@ ConnectedSpeakerTweetTemplate.filename = "speaker-tweet";
 ConnectedSpeakerTweetTemplate.variables = [
   {
     id: "conferenceId",
-    query: `query ConferenceIdQuery {  
+    query: `query ConferenceIdQuery {
   conferences {
     id
     name
