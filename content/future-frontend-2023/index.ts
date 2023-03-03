@@ -23,7 +23,7 @@ const partners = [
 ];
 const goldSponsors = [];
 const silverSponsors = [allSponsors.gofore, allSponsors.elisa];
-const bronzeSponsors = [];
+const bronzeSponsors = [allSponsors.alma];
 const platformSponsors = [];
 const sponsors = partners.concat(
   goldSponsors,
