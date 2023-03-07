@@ -12,6 +12,7 @@ const partners = [
   // allSponsors.reactnewyork,
   allSponsors.reactnorway,
   allSponsors.survivejs,
+  allSponsors.nodecongress,
   /*
   allSponsors.reactbrussels,
   allSponsors.reactindia,
