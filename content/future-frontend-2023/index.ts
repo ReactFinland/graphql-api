@@ -5,11 +5,9 @@ import * as allSponsors from "../sponsors";
 import schedules from "./schedules";
 
 const partners = [
-  // allSponsors.divriots,
   allSponsors.bejs,
   // allSponsors.halfstack,
   allSponsors.koodiasuomesta,
-  // allSponsors.reactnewyork,
   allSponsors.reactnorway,
   allSponsors.survivejs,
   allSponsors.nodecongress,
@@ -18,8 +16,8 @@ const partners = [
   allSponsors.reactindia,
   allSponsors.reactnativeeu,
   allSponsors.reactjsday,
-  allSponsors.webexpo,
   */
+  allSponsors.webexpo,
   allSponsors.nitor,
   allSponsors.futurice,
 ];
