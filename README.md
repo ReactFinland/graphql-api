@@ -15,7 +15,7 @@ You can access the asset designer through `http://localhost:3000/asset-designer`
 
 There's no special image processing in place at the moment.
 
-> You can access images through `http://localhost:3000/media`. Example: `http://localhost:3000/media/people/ken.jpg`.
+> You can access images through `http://localhost:3000/media`. Example: `http://localhost:3000/media/people/kenw.jpg`.
 
 ## Webhooks
 

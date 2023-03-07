@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "Technology Artist - Synthwave & Hip Hop Producer - Dad - Grilling Enthusiast",
   image: {
-    url: "people/ken.jpg",
+    url: "people/kenw.jpg",
   },
   social: {
     homepage: "",
