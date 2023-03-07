@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Node Congress",
   about: "The biggest event about JavaScript backends and devops",
   image: {
-    url: "sponsors/nodecongress.svg",
+    url: "sponsors/nodecongress.png",
   },
   social: {
     homepage: "https://nodecongress.com/",
