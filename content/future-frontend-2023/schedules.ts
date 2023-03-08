@@ -276,7 +276,7 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Astro",
+          title: "Bringing React into your Content Sites with Astro",
           description: ``,
           people: [people.matthew],
           urls: {
