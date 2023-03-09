@@ -264,8 +264,8 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Capri",
-          description: ``,
+          title: "You might not need a meta framework",
+          description: `In this talk we will explore how to generate static sites without a meta framework. We'll learn how to implement partial hydration and how to get live previews in a CMS without a build step. In short, we'll learn about the ideas behind Capri and how they can help you build a carbon-friendly website.`,
           people: [people.felix],
           urls: {
             drawing: "",
