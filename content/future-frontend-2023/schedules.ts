@@ -424,7 +424,19 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "Why going green is a must",
+          description: ``,
+          people: [people.satu, people.janne],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Carbon emissions of professional coding",
           description: ``,
           people: [people.satu],
           urls: {
@@ -436,7 +448,7 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "Energy consumption and countermeasures in modern software",
           description: ``,
           people: [people.janne],
           urls: {
