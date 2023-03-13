@@ -49,7 +49,7 @@ We will spend the day understanding the key aspects of a designer's and develope
         },
       ],
     },
-    {
+    /*{
       begin: "06:00",
       end: "09:00",
       sessions: [
@@ -67,7 +67,7 @@ Attendees need to have the following requirements prepared to be able to success
           location: locations.futurice,
         },
       ],
-    },
+    },*/
     {
       begin: "09:00",
       end: "10:00",
