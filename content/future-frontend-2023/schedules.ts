@@ -533,7 +533,8 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Secure coding practices",
+          title:
+            "Hack-Proof The Node.js runtime: The Mechanics and Defense of Path Traversal Attacks",
           description: ``,
           people: [people.liran],
           urls: {
