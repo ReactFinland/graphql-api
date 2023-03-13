@@ -67,6 +67,7 @@ export { default as johannesSchickling } from "./johannes-schickling";
 export { default as joniNevalainen } from "./joni-nevalainen";
 export { default as juan } from "./juan";
 export { default as juhaLinnanen } from "./juha-linnanen";
+export { default as juhis } from "./juhis";
 export { default as juhoVepsalainen } from "./juho-vepsalainen";
 export { default as juri } from "./juri";
 export { default as kadiKraman } from "./kadi-kraman";
