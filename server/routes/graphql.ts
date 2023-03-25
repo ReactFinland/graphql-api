@@ -27,7 +27,9 @@ function getHostname(req) {
     return process.env.HEROKU_HOSTNAME;
   }
 
-  return req.protocol + "://" + req.get("host");
+  // For some reason, protocol is http on render
+  return "https://" + req.get("host");
+  // return req.protocol + "://" + req.get("host");
 }
 
 export default routeGraphQL;
