@@ -52,7 +52,7 @@ export class Contact {
   public company?: string;
 
   // TODO: This might become a Contact reference eventually
-  @Field((_) => String)
+  @Field((_) => String, { nullable: true })
   public tagline?: string;
 
   @Field((_) => Image)
