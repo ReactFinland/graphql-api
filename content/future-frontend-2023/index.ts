@@ -19,7 +19,6 @@ const partners = [
   */
   allSponsors.webexpo,
   allSponsors.nitor,
-  allSponsors.futurice,
 ];
 const goldSponsors = [];
 const silverSponsors = [allSponsors.gofore, allSponsors.elisa];
