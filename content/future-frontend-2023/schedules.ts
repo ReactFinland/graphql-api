@@ -573,20 +573,18 @@ const friday: Schedule = {
             video: "",
           },
         },
-        /*
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [],
+          people: [people.aleksandra],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
         },
-        */
       ],
     },
     {
