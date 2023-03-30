@@ -234,7 +234,7 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Solid.js",
+          title: "SolidJS: Why all the Suspense?",
           description: ``,
           people: [people.ryan],
           urls: {
