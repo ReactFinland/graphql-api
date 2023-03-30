@@ -21,7 +21,11 @@ const partners = [
   allSponsors.nitor,
 ];
 const goldSponsors = [];
-const silverSponsors = [allSponsors.gofore, allSponsors.elisa];
+const silverSponsors = [
+  allSponsors.gofore,
+  allSponsors.elisa,
+  allSponsors.knowit,
+];
 const bronzeSponsors = [allSponsors.alma];
 const platformSponsors = [];
 const sponsors = partners.concat(
