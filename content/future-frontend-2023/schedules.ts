@@ -558,13 +558,13 @@ const friday: Schedule = {
     },
     {
       begin: "12:30",
-      end: "14:00",
+      end: "14:15",
       title: "Demonstrations",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "No code demonstration",
+          title: "Frontend",
           description: ``,
           people: [people.misko],
           urls: {
@@ -576,9 +576,21 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "Backend",
           description: ``,
           people: [people.aleksandra],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Hardware",
+          description: ``,
+          people: [people.stephanie],
           urls: {
             drawing: "",
             slides: "",
@@ -588,8 +600,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "14:00",
-      end: "14:10",
+      begin: "14:15",
+      end: "14:30",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,

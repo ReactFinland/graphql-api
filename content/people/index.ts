@@ -144,6 +144,7 @@ export { default as satu } from "./satu";
 export { default as shayKeinan } from "./shay-keinan";
 export { default as shodipo } from "./shodipo";
 export { default as siaKaramalegos } from "./sia-karamalegos";
+export { default as stephanie } from "./stephanie";
 export { default as sunil } from "./sunil";
 export { default as svenSauleau } from "./sven-sauleau";
 export { default as taelurAlexis } from "./taelur-alexis";
