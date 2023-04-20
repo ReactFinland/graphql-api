@@ -564,9 +564,9 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Server/Client unified execution model with Qwik",
-          description: `The concept of a unified execution model between server and client brings a new approach to building interactive applications that are both performant and flexible. By leveraging resumability as an alternative to traditional hydration, the execution of the application can seamlessly transition from server-side to client-side, reducing the eager download and execution of JavaScript. This results in instant-on applications, even on poor connections and slow devices.`,
-          people: [people.misko],
+          title: "Backend",
+          description: ``,
+          people: [people.aleksandra],
           urls: {
             drawing: "",
             slides: "",
@@ -576,9 +576,9 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Backend",
-          description: ``,
-          people: [people.aleksandra],
+          title: "Server/Client unified execution model with Qwik",
+          description: `The concept of a unified execution model between server and client brings a new approach to building interactive applications that are both performant and flexible. By leveraging resumability as an alternative to traditional hydration, the execution of the application can seamlessly transition from server-side to client-side, reducing the eager download and execution of JavaScript. This results in instant-on applications, even on poor connections and slow devices.`,
+          people: [people.misko],
           urls: {
             drawing: "",
             slides: "",
