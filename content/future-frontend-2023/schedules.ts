@@ -564,7 +564,7 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "The API R(evolution)",
+          title: "The API Evolution",
           description: `Delve into the cyclical nature of API evolution, discovering how revisiting and refining past solutions drives innovation and leads to more effective, streamlined approaches for your projects. Embrace the iterative journey to unlock the full potential of your API-driven projects in the ever-evolving digital landscape.`,
           people: [people.aleksandra],
           urls: {
