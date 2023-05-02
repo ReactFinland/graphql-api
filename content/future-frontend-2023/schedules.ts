@@ -308,7 +308,7 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title:
             "Creating universal design systems across web and mobile with Utility First Styling",
-          description: ``,
+          description: `Striking the right balance between consistency and platform-specific user experiences is essential for successfully creating a design system for web and mobile. In this talk, we'll explore how to create a universal design system that caters to the unique requirements of both platforms without losing their distinct identities. After all, nobody wants websites that look like apps, and apps that look like websites. We'll dive into the challenges and solutions of unifying design elements while acknowledging the fundamental differences between web and mobile interfaces. We'll take inspiration from utility first styling, and discuss how to establish consistent design tokens and primitives that enable a seamless cross-platform experience.`,
           people: [people.mo],
           urls: {
             drawing: "",
