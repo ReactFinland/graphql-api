@@ -320,7 +320,7 @@ const thursday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Establishing the rules for a universal design system",
-          description: ``,
+          description: `In this talk we will explore the challenges and opportunities of creating a common language for web, android, and iOS components. Defining a set of universal guiding principles can help with establishing consistency and ease of use across the various devices which, in turn, provides a better user experience for the product. Through case studies and best practices we will provide actionable insights and practical tips that take into account the differences of each technology. Join us to learn how to establish the rules for a design system that works across all platforms.`,
           people: [people.thaisSantos],
           urls: {
             drawing: "",
