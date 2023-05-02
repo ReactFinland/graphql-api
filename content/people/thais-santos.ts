@@ -2,7 +2,7 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
-  name: "Thais Santos",
+  name: "Thaís Santos",
   about: `Design Systems crusader 🧭 Currently lead design at [‹div›RIOTS](https://divriots.com/) - makers of [Backlight](https://backlight.dev/): a unique, all-in-one design system solution.`,
   image: {
     url: "people/thais.jpg",
