@@ -7,8 +7,7 @@ const sponsor: Contact = {
     url: "sponsors/stickermule.svg",
   },
   social: {
-    homepage:
-      "https://www.stickermule.com/eu/uses/laptop-stickers?utm_source=sponsorship&utm_medium=referral&utm_campaign=ReactFinland19",
+    homepage: "https://mule.to/p44p",
     github: "stickermule",
     facebook: "stickermule",
     instagram: "stickermule",
