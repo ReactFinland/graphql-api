@@ -3,6 +3,25 @@ import { Level, SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 import * as people from "../people";
 
+const monday: Schedule = {
+  day: "2023-06-05",
+  description: "Monday",
+  intervals: [
+    {
+      begin: "15:00",
+      end: "18:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "WWDC keynote watch party",
+          description:
+            "[Register at meetup separately](https://www.meetup.com/helsinkios-mac-and-ios-developers/events/292970480/).",
+        },
+      ],
+    },
+  ]
+}
+
 // All times are given in GMT+0
 const tuesday: Schedule = {
   day: "2023-06-06",
@@ -373,6 +392,18 @@ const thursday: Schedule = {
       ],
     },
     {
+      begin: "15:00",
+      end: "18:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "Party at Gofore",
+          description: "More information will become available later, including registration.",
+          location: locations.gofore,
+        },
+      ],
+    },
+    {
       begin: "14:00",
       end: "14:10",
       sessions: [
@@ -625,4 +656,4 @@ const friday: Schedule = {
   ],
 };
 
-export default [tuesday, wednesday, thursday, friday];
+export default [monday, tuesday, wednesday, thursday, friday];
