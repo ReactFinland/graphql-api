@@ -43,7 +43,7 @@ const conference: Conference = {
   organizer: allSponsors.toska,
   slogan: "The future of frontend reimagined",
   year: "2023",
-  startDate: "2023-06-06",
+  startDate: "2023-06-08",
   endDate: "2023-06-09",
   websiteUrl: "https://futurefrontend.com/",
   // TODO: Resolve locations based on data
