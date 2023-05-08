@@ -381,7 +381,9 @@ const thursday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Adaptive Music for the Web With RNBO",
-          description: ``,
+          description: `Max is a visual programming language for music. It has been around since the 1980s, and has been used by countless electronic musicians and sound artists to build musical instruments, installations, and generative compositions. Since a few months ago it has also been possible to also run Max programs in web browsers, using a new runtime called RNBO. This makes Max a viable new option for those of us who are interested in delivering adaptive sound and music experiences on the web.
+
+In this talk we'll make some generative music using Max's visual interactive patching environment. We'll then bundle the music system into a webapp that lets anyone run it in their web browser. In the process we'll get a taste of what Max is like, what it can do, and how it slots into web projects.`,
           people: [people.teroParviainen],
           urls: {
             drawing: "",
