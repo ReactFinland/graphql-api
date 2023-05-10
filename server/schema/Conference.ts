@@ -5,13 +5,14 @@ import { Contact, ContactType } from "./Contact";
 import { Location } from "./Location";
 import { Schedule } from "./Schedule";
 import { Session } from "./Session";
+import { Series } from "./Series";
 
 @ObjectType()
 export class Conference {
   @Field((_) => ID)
   public id!: string;
 
-  @Field((_) => String)
+  @Field((_) => Series)
   public series!: string;
 
   @Field((_) => String)

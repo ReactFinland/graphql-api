@@ -12,6 +12,7 @@ import * as people from "../../../content/people";
 import * as sponsors from "../../../content/sponsors";
 import { getConference } from "../Conference";
 import { Contact, ContactType, getSessionSpeakers } from "../Contact";
+import { Location } from "../Location";
 import { IContext } from "../Context";
 import { Country } from "../Country";
 import { Image } from "../Image";
@@ -59,7 +60,7 @@ class ContactResolver {
     return contact;
   }
 
-  @Query((_) => [Contact])
+  @Query((_) => [Location])
   public locations() {
     return Object.values(locations);
   }
