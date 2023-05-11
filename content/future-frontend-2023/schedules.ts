@@ -242,8 +242,8 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title: "Comparative study of reactivity across frameworks and implications for Resumability",
+          description: `All frameworks have reactivity. Change your state, and the UI updates accordingly. But how does it actually work under the hood? How do the frameworks learn enough about your application to enable reactivity? What are the implications of these choices, and how do frameworks compare to each other in how they are implemented? But most importantly, are these choices compatible with resumability going forward or are we stuck with Hydration forever?`,
           people: [people.misko],
           urls: {
             drawing: "",
