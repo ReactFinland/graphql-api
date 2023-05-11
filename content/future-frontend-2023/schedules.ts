@@ -651,7 +651,7 @@ const friday: Schedule = {
         {
           type: SessionType.PARTY,
           title: "Afterparty",
-          description: "We'll climb to the top of Stockmann nearby and finish the week at Rooftop Miami.",
+          description: "We'll climb to the top of Stockmann nearby and finish the week at Rooftop Miami. [To let us know whether or not you are coming, please register](https://ti.to/future-frontend/afterparty-at-rooftop-miami-2023).",
           location: locations.rooftopmiami,
         },
       ],
