@@ -10,6 +10,7 @@ export { default as internet } from "./internet";
 export { default as nitor } from "./nitor";
 export { default as paasitorni } from "./paasitorni";
 export { default as porssitalo } from "./porssitalo";
+export { default as rooftopmiami } from "./rooftopmiami";
 export { default as saeWien } from "./sae-wien";
 export { default as tiivistamo } from "./tiivistamo";
 export { default as tuas } from "./tuas";

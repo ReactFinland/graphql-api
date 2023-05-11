@@ -651,10 +651,10 @@ const friday: Schedule = {
         {
           type: SessionType.PARTY,
           title: "Afterparty",
-          description: "Epic afterparty at a location to be decided.",
+          description: "We'll climb to the top of Stockmann nearby and finish the week at Rooftop Miami.",
+          location: locations.rooftopmiami,
         },
       ],
-      // location: locations.babylonHelsinki,
     },
   ],
 };
