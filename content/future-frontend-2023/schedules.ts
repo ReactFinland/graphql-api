@@ -640,13 +640,14 @@ const friday: Schedule = {
         {
           type: SessionType.ORGANIZATIONAL,
           title: "Ending of the day",
-          description: "",
+          description: "Thanks for the fish.",
         },
       ],
     },
     {
       begin: "15:00",
       end: "18:00",
+      title: "Afterparty",
       sessions: [
         {
           type: SessionType.PARTY,
