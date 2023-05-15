@@ -395,13 +395,13 @@ In this talk we'll make some generative music using Max's visual interactive pat
       ],
     },
     {
-      begin: "15:00",
+      begin: "14:30",
       end: "18:00",
       sessions: [
         {
           type: SessionType.PARTY,
           title: "Party at Gofore",
-          description: "More information will become available later, including registration.",
+          description: "The evening is enjoyed in a relaxed atmosphere, toned by the rhythms of a DJ. In addition to a great company, we offer participants pizza and other snacks and refreshing afterparty drinks! [Register separately](https://www.lyyti.in/Future_Frontend_goes_Gofore_1366/en).",
           location: locations.gofore,
         },
       ],
