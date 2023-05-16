@@ -7,6 +7,7 @@ export { default as elisaAppelsiini } from "./elisa-appelsiini";
 export { default as futurice } from "./futurice";
 export { default as gofore } from "./gofore";
 export { default as internet } from "./internet";
+export { default as loihdefactor } from "./loihdefactor";
 export { default as nitor } from "./nitor";
 export { default as paasitorni } from "./paasitorni";
 export { default as porssitalo } from "./porssitalo";
