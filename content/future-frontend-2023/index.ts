@@ -20,6 +20,7 @@ const partners = [
   allSponsors.webexpo,
   allSponsors.nitor,
   allSponsors.columbiaroad,
+  allSponsors.loihdefactor,
   allSponsors.stickermule
 ];
 const goldSponsors = [];

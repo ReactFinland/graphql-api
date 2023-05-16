@@ -35,6 +35,7 @@ export { default as jscamp } from "./jscamp";
 export { default as jskongress } from "./jskongress";
 export { default as knowit } from "./knowit";
 export { default as koodiasuomesta } from "./koodiasuomesta";
+export { default as loihdefactor } from "./loihdefactor";
 export { default as meiko } from "./meiko";
 export { default as moonhighway } from "./moonhighway";
 export { default as motley } from "./motley";
