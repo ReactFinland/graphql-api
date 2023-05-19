@@ -4,7 +4,9 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Ken Wheeler",
   about:
-    "Technology Artist - Synthwave & Hip Hop Producer - Dad - Grilling Enthusiast",
+    `Technology Artist - Synthwave & Hip Hop Producer - Dad - Grilling Enthusiast.
+
+Note that due to external circumstances, Ken won't be present at the conference and will participate remotely!`,
   image: {
     url: "people/kenw.jpg",
   },

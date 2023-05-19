@@ -370,8 +370,10 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title: "Digital audio processing using audio worklets",
+          description: `In this talk, we'll learn how to use audio worklets for digital audio processing. In other words, expect to learn a lot unless you are into audio already.
+
+Note that Ken will speak remote due to external circumstances.`,
           people: [people.kenWheeler],
           urls: {
             drawing: "",
