@@ -512,18 +512,18 @@ const friday: Schedule = {
       end: "09:30",
       title: "Edge computing",
       sessions: [
-        /*{
+        {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "The story of jsDelivr",
-          description: `The story of how jsDelivr came to be and what was learned during the process.`,
-          people: [people.dmitriy],
+          title: "Solving the micro-frontend puzzle with fragments architecture",
+          description: `To help developers build better web applications we researched and devised a fragments architecture to build micro-frontends. This architecture uses the power and flexibility of lightweight server-side JavaScript runtimes such as Cloudflare Workers. Our approach enables application deployments that are lightning fast, cost-effective to develop and operate, and scale to the needs of the largest enterprise teams without compromising release velocity or user experience.`,
+          people: [people.pete],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
-        },*/
+        },
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,

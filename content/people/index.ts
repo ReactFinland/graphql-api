@@ -129,6 +129,7 @@ export { default as olavi } from "./olavi";
 export { default as patrickEcker } from "./patrick-ecker";
 export { default as patrickHund } from "./patrick-hund";
 export { default as paul } from "./paul";
+export { default as pete } from "./pete";
 export { default as rachelNabors } from "./rachel-nabors";
 export { default as rami } from "./rami";
 export { default as rebeccaHill } from "./rebecca-hill";
