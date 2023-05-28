@@ -512,7 +512,7 @@ const friday: Schedule = {
       end: "09:30",
       title: "Edge computing",
       sessions: [
-        {
+        /*{
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "The story of jsDelivr",
@@ -523,7 +523,7 @@ const friday: Schedule = {
             slides: "",
             video: "",
           },
-        },
+        },*/
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
@@ -567,7 +567,7 @@ const friday: Schedule = {
             video: "",
           },
         },
-        {
+        /*{
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title:
@@ -579,7 +579,7 @@ const friday: Schedule = {
             slides: "",
             video: "",
           },
-        },
+        },*/
       ],
     },
     {
