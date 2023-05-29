@@ -515,9 +515,9 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Solving the micro-frontend puzzle with fragments architecture",
-          description: `To help developers build better web applications we researched and devised a fragments architecture to build micro-frontends. This architecture uses the power and flexibility of lightweight server-side JavaScript runtimes such as Cloudflare Workers. Our approach enables application deployments that are lightning fast, cost-effective to develop and operate, and scale to the needs of the largest enterprise teams without compromising release velocity or user experience.`,
-          people: [people.pete],
+          title: "Beyond Cloud Computing: Towards the Edge",
+          description: `Cloud computing is the norm but what is to come next? Why might edge computing be the next big thing?`,
+          people: [people.pekka],
           urls: {
             drawing: "",
             slides: "",
@@ -527,10 +527,9 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Everything's better with friends",
-          description:
-            "Software is best when shared; with friends and colleagues, in realtime, across the world. It's traditionally been hard and expensive to do this, but with the advent of edge computing and advances in CRDTs and the like, building multiplayer applications is now accessible to mere mortals like myself. In this talk, I'll share some of the work I've been doing in the space, and we'll have a demo to play with and break!",
-          people: [people.sunil],
+          title: "Solving the micro-frontend puzzle with fragments architecture",
+          description: `To help developers build better web applications we researched and devised a fragments architecture to build micro-frontends. This architecture uses the power and flexibility of lightweight server-side JavaScript runtimes such as Cloudflare Workers. Our approach enables application deployments that are lightning fast, cost-effective to develop and operate, and scale to the needs of the largest enterprise teams without compromising release velocity or user experience.`,
+          people: [people.pete],
           urls: {
             drawing: "",
             slides: "",
@@ -553,7 +552,7 @@ const friday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "Security",
+      title: "Edge computing",
       sessions: [
         {
           type: SessionType.TALK,
@@ -567,19 +566,19 @@ const friday: Schedule = {
             video: "",
           },
         },
-        /*{
+        {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title:
-            "Hack-Proof The Node.js runtime: The Mechanics and Defense of Path Traversal Attacks",
-          description: ``,
-          people: [people.liran],
+          title: "Everything's better with friends",
+          description:
+            "Software is best when shared; with friends and colleagues, in realtime, across the world. It's traditionally been hard and expensive to do this, but with the advent of edge computing and advances in CRDTs and the like, building multiplayer applications is now accessible to mere mortals like myself. In this talk, I'll share some of the work I've been doing in the space, and we'll have a demo to play with and break!",
+          people: [people.sunil],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
-        },*/
+        },
       ],
     },
     {
