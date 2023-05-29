@@ -15,7 +15,7 @@ const person: Contact = {
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "peter-bacon-darwin-35b1ab86",
     youtube: "",
     devto: "",
   },
