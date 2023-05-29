@@ -516,7 +516,7 @@ const friday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Beyond Cloud Computing: Towards the Edge",
-          description: `Cloud computing is the norm but what is to come next? Why might edge computing be the next big thing?`,
+          description: `Edge and serverless computing are emerging as a go-to solution for many applications and use cases that require low latency and scalability. In this talk, we will examine how edge and serverless are different from the cloud computing paradigm, their impact on your application's compute and data, and some of the challenges ahead.`,
           people: [people.pekka],
           urls: {
             drawing: "",
