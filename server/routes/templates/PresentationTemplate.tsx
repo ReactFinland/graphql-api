@@ -18,6 +18,7 @@ interface SchedulePageContainerProps {
   id: string;
   primaryColor: Color;
   secondaryColor: Color;
+  textColor: Color;
   texture: string;
   sideBarWidth: WidthProperty<string>;
 }
@@ -35,6 +36,7 @@ const PresentationTemplateContainer = styled.article`
   background-size: cover;
   position: relative;
   padding: 0;
+  color: ${({ textColor }) => textColor };
   width: ${({ sideBarWidth }) =>
     sideBarWidth ? `calc(100vw - ${sideBarWidth})` : "100vw"};
   overflow: hidden;
@@ -62,6 +64,7 @@ function PresentationTemplate({
       id={id}
       primaryColor={theme.colors.primary}
       secondaryColor={theme.colors.secondary}
+      textColor={theme.colors.text}
       texture={theme.textures[0].url}
       sideBarWidth={sideBarWidth}
     >
