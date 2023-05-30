@@ -3,8 +3,7 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Jani Eväkallio",
-  about:
-    "Jani is a small-town Finnish boy far from home. Today he leads a team building cross-stack React mobile and web apps at Formidable London and, in his spare time, performs improvised comedy and speaks at conferences advocating for the React ecosystem, particularly React Native and GraphQL.",
+  about: `A web engineer with a passion for building rich, collaborative, real-time web applications. Open Source author, comedian, improviser and once an aspiring novelist, these days Jani is building AI-enhanced text editing tools to help others, and himself, write better.`,
   image: {
     url: "people/jani.jpg",
   },

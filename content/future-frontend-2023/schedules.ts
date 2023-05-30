@@ -365,16 +365,16 @@ const thursday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      title: "Sound",
+      title: "Audio and AI",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Digital audio processing using audio worklets",
-          description: `In this talk, we'll learn how to use audio worklets for digital audio processing. In other words, expect to learn a lot unless you are into audio already.
+          title: "Adaptive Music for the Web With RNBO",
+          description: `Max is a visual programming language for music. It has been around since the 1980s, and has been used by countless electronic musicians and sound artists to build musical instruments, installations, and generative compositions. Since a few months ago it has also been possible to also run Max programs in web browsers, using a new runtime called RNBO. This makes Max a viable new option for those of us who are interested in delivering adaptive sound and music experiences on the web.
 
-Note that Ken will speak remote due to external circumstances.`,
-          people: [people.kenWheeler],
+In this talk we'll make some generative music using Max's visual interactive patching environment. We'll then bundle the music system into a webapp that lets anyone run it in their web browser. In the process we'll get a taste of what Max is like, what it can do, and how it slots into web projects.`,
+          people: [people.teroParviainen],
           urls: {
             drawing: "",
             slides: "",
@@ -384,11 +384,13 @@ Note that Ken will speak remote due to external circumstances.`,
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Adaptive Music for the Web With RNBO",
-          description: `Max is a visual programming language for music. It has been around since the 1980s, and has been used by countless electronic musicians and sound artists to build musical instruments, installations, and generative compositions. Since a few months ago it has also been possible to also run Max programs in web browsers, using a new runtime called RNBO. This makes Max a viable new option for those of us who are interested in delivering adaptive sound and music experiences on the web.
+          title: "Building AI-powered user interfaces",
+          description: `As web engineers, we build user interfaces that make using our products simple, understandable and delightful. Over the years, we’ve built a toolkit of frameworks, patterns and practices to do so.
 
-In this talk we'll make some generative music using Max's visual interactive patching environment. We'll then bundle the music system into a webapp that lets anyone run it in their web browser. In the process we'll get a taste of what Max is like, what it can do, and how it slots into web projects.`,
-          people: [people.teroParviainen],
+In the next few years, more and more products will be built on top of Artificial Intelligence technologies, such as generative models like OpenAI’s GPT-3. In this world, which of our tools will remain helpful, and which problems will require new solutions?
+
+In this talk, I’ll explore some of the challenges our existing frameworks and mental models have in the age of generative AI. I’ll also introduce novel ways of thinking about user interfaces that we’ve discovered while designing and building an AI-powered web application for serious writers.`,
+          people: [people.janiEvakallio],
           urls: {
             drawing: "",
             slides: "",
