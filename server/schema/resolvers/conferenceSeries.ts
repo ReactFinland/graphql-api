@@ -79,7 +79,7 @@ const conferenceSeries: {
       colors: {
         primary: "#3a2fa6",
         secondary: "#84ebec",
-        text: "#000000",
+        text: "#ffffff",
         background: "#ffffff",
       },
       fonts: {
