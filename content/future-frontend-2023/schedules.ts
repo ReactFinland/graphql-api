@@ -411,7 +411,7 @@ In this talk, I’ll explore some of the challenges our existing frameworks and 
         },
       ],
     },
-    {
+    /*{
       begin: "14:00",
       end: "14:10",
       sessions: [
@@ -421,7 +421,7 @@ In this talk, I’ll explore some of the challenges our existing frameworks and 
           description: "",
         },
       ],
-    },
+    },*/
   ],
 };
 
