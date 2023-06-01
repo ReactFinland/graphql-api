@@ -19,8 +19,8 @@ const monday: Schedule = {
         },
       ],
     },
-  ]
-}
+  ],
+};
 
 // All times are given in GMT+0
 const tuesday: Schedule = {
@@ -149,7 +149,7 @@ const wednesday: Schedule = {
       sessions: [
         {
           type: SessionType.WORKSHOP,
-          people: [people.kenWheeler],
+          people: [people.teroParviainen, people.juhoVepsalainen],
           title: "Beats with Ken",
           description: `This full-day workshop is for current or aspiring musicians, or people who are interested in synthesis in general. After the workshop, you will understand the fundamentals of synthesis, web audio basics, and some of the newest modern web Audio features. Expect to learn about the Web Audio API, Audio Worklets, Synthesis, Music Theory, Audio focused UI and visualization, and sequencing and composition.`,
           location: locations.nitor,
@@ -243,7 +243,8 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Comparative study of reactivity across frameworks and implications for Resumability",
+          title:
+            "Comparative study of reactivity across frameworks and implications for Resumability",
           description: `All frameworks have reactivity. Change your state, and the UI updates accordingly. But how does it actually work under the hood? How do the frameworks learn enough about your application to enable reactivity? What are the implications of these choices, and how do frameworks compare to each other in how they are implemented? But most importantly, are these choices compatible with resumability going forward or are we stuck with Hydration forever?`,
           people: [people.misko],
           urls: {
@@ -406,7 +407,8 @@ In this talk, I’ll explore some of the challenges our existing frameworks and 
         {
           type: SessionType.PARTY,
           title: "Party at Gofore",
-          description: "The evening is enjoyed in a relaxed atmosphere, toned by the rhythms of a DJ. In addition to a great company, we offer participants pizza and other snacks and refreshing afterparty drinks! [Register separately](https://www.lyyti.in/Future_Frontend_goes_Gofore_1366/en).",
+          description:
+            "The evening is enjoyed in a relaxed atmosphere, toned by the rhythms of a DJ. In addition to a great company, we offer participants pizza and other snacks and refreshing afterparty drinks! [Register separately](https://www.lyyti.in/Future_Frontend_goes_Gofore_1366/en).",
           location: locations.gofore,
         },
       ],
@@ -529,7 +531,8 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Solving the micro-frontend puzzle with fragments architecture",
+          title:
+            "Solving the micro-frontend puzzle with fragments architecture",
           description: `To help developers build better web applications we researched and devised a fragments architecture to build micro-frontends. This architecture uses the power and flexibility of lightweight server-side JavaScript runtimes such as Cloudflare Workers. Our approach enables application deployments that are lightning fast, cost-effective to develop and operate, and scale to the needs of the largest enterprise teams without compromising release velocity or user experience.`,
           people: [people.pete],
           urls: {
@@ -626,7 +629,8 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Hacking meaningful connections with humans by talking to (toy) rodents",
+          title:
+            "Hacking meaningful connections with humans by talking to (toy) rodents",
           description: `Building weird little hardware projects has provided a space for me to feel technically competent when I have felt like an imposter. After being diagnosed with ADHD last year, I realized that hacking on hardware has been a sanctuary where I could explore my social awkwardness and human connection.  I've been experimenting to find out if I can turn unexpected and impractical soft objects into input devices that can lower my barriers to sustaining meaningful connections with others. In this talk, I’ll share my journey of building two explorations so far: a giant soft pompom that sends AI-generated motivational but esoteric art when it’s hugged and a toy hamster that I talk to that sends my voice messages (in a high-pitched, but oddly therapeutic voice) to my long-distance partner. Whether you’re neurodivergent or not, I hope to inspire you to start a project even if you feel intimidated by the technical details and find joy in the journey rather than the destination.`,
           people: [people.stephanie],
           urls: {
@@ -656,7 +660,8 @@ const friday: Schedule = {
         {
           type: SessionType.PARTY,
           title: "Afterparty at Rooftop Miami",
-          description: "We'll climb to the top of Stockmann nearby and finish the week at Rooftop Miami. [To let us know whether or not you are coming, please register](https://ti.to/future-frontend/afterparty-at-rooftop-miami-2023).",
+          description:
+            "We'll climb to the top of Stockmann nearby and finish the week at Rooftop Miami. [To let us know whether or not you are coming, please register](https://ti.to/future-frontend/afterparty-at-rooftop-miami-2023).",
           location: locations.rooftopmiami,
         },
       ],
