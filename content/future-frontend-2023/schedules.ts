@@ -88,7 +88,7 @@ Attendees need to have the following requirements prepared to be able to success
           location: locations.futurice,
         },
       ],
-    },*/
+    },
     {
       begin: "09:00",
       end: "10:00",
