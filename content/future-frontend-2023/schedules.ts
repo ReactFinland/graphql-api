@@ -3,6 +3,7 @@ import { Level, SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 import * as people from "../people";
 
+/*
 const monday: Schedule = {
   day: "2023-06-05",
   description: "Monday",
@@ -204,6 +205,7 @@ Along the way, we will also look at what makes Qwik unique, and how resumability
     },
   ],
 };
+*/
 
 const thursday: Schedule = {
   day: "2023-06-08",
