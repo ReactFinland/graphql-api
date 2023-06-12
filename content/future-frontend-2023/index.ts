@@ -21,7 +21,8 @@ const partners = [
   allSponsors.nitor,
   allSponsors.columbiaroad,
   allSponsors.loihdefactor,
-  allSponsors.stickermule
+  allSponsors.stickermule,
+  allSponsors.grusp, // TODO: Move to 2024 as well
 ];
 const goldSponsors = [];
 const silverSponsors = [

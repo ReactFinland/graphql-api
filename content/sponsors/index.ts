@@ -27,6 +27,7 @@ export { default as ginetta } from "./ginetta";
 export { default as gofore } from "./gofore";
 export { default as gqlhongkong } from "./gqlhongkong";
 export { default as graphqlFinland } from "./graphql-finland";
+export { default as grusp } from "./grusp";
 export { default as halfstack } from "./halfstack";
 export { default as hasura } from "./hasura";
 export { default as honeypot } from "./honeypot";
