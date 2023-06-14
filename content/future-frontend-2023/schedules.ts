@@ -619,7 +619,7 @@ const friday: Schedule = {
           people: [people.aleksandra],
           urls: {
             drawing: "",
-            slides: "",
+            slides: "https://slides.com/aleksandrasikora/api-revolution",
             video: "",
           },
         },
