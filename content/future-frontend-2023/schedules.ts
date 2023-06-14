@@ -3,7 +3,6 @@ import { Level, SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 import * as people from "../people";
 
-/*
 const monday: Schedule = {
   day: "2023-06-05",
   description: "Monday",
@@ -70,7 +69,7 @@ We will spend the day understanding the key aspects of a designer's and develope
         },
       ],
     },
-    /*{
+    {
       begin: "06:00",
       end: "09:00",
       sessions: [
@@ -205,7 +204,6 @@ Along the way, we will also look at what makes Qwik unique, and how resumability
     },
   ],
 };
-*/
 
 const thursday: Schedule = {
   day: "2023-06-08",
@@ -251,7 +249,8 @@ const thursday: Schedule = {
           people: [people.misko],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://docs.google.com/presentation/d/1kW9dc8NItnb4lpfEAWENXGuYQWh8rEzJZEW_g_7D8C0",
             video: "",
           },
         },
@@ -293,7 +292,8 @@ const thursday: Schedule = {
           people: [people.felix],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1kJ42P39GgAASxpT7lf2GqmKSBe0Kgds5/view?usp=drive_link",
             video: "",
           },
         },
@@ -305,7 +305,8 @@ const thursday: Schedule = {
           people: [people.matthew],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://slides.com/matthewphillips/bringing-react-into-your-content-sites-with-astro",
             video: "",
           },
         },
@@ -336,7 +337,8 @@ const thursday: Schedule = {
           people: [people.mo],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1SXHqRRJhzvx_QtLVRWTsEg8yMbgku8Eb/view?usp=drive_link",
             video: "",
           },
         },
@@ -348,7 +350,8 @@ const thursday: Schedule = {
           people: [people.thaisSantos],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1fuWA6IN7D0rMoZwoYGFu7utQ4UJFBMwB/view?usp=drive_link",
             video: "",
           },
         },
@@ -380,7 +383,8 @@ In this talk we'll make some generative music using Max's visual interactive pat
           people: [people.teroParviainen],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1OLMLlVrEvdvyM-lsNx_8Y-3BxnBto4es/view?usp=drive_link",
             video: "",
           },
         },
@@ -472,7 +476,8 @@ const friday: Schedule = {
           people: [people.satu, people.janne],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1RbhOX44bQEpf7FO9m3b3MSECiRRtGZLm/view?usp=drive_link",
             video: "",
           },
         },
@@ -526,7 +531,8 @@ const friday: Schedule = {
           people: [people.pekka],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1ZVw2TS71Mx12RZxLCqx93hDayTSszsI6/view?usp=drive_link",
             video: "",
           },
         },
@@ -539,7 +545,8 @@ const friday: Schedule = {
           people: [people.pete],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1WTNbvBOWQksThPiIZMtcf9f_MCKCSjN1/view?usp=drive_link",
             video: "",
           },
         },
@@ -671,5 +678,4 @@ const friday: Schedule = {
   ],
 };
 
-// export default [monday, tuesday, wednesday, thursday, friday];
-export default [thursday, friday];
+export default [monday, tuesday, wednesday, thursday, friday];
