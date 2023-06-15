@@ -243,7 +243,8 @@ const thursday: Schedule = {
           people: [people.ryan],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://docs.google.com/presentation/d/1NoJtBdpf13noV-4MebYMZkhJhWn4Y79-7f00SlSCAmc/edit?usp=sharing",
             video: "",
           },
         },
