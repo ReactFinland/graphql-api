@@ -576,7 +576,8 @@ const friday: Schedule = {
           people: [people.samuel],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1WHXQEloB0Y7zn9mGu2t6GpDlG0GKwAbb/view?usp=drive_link",
             video: "",
           },
         },
