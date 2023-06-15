@@ -645,7 +645,8 @@ const friday: Schedule = {
           people: [people.stephanie],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1wyo4N6NqbqL_4pm1vctUWhSYe3hoauZh/view?usp=drive_link",
             video: "",
           },
         },
