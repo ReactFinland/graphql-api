@@ -572,7 +572,8 @@ const friday: Schedule = {
           people: [people.sunil],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1RBeDPJ8OLpXE7krRD9hIVlQkyum1QZUD/view?usp=drive_link",
             video: "",
           },
         },
