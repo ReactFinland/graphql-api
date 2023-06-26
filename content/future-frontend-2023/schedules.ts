@@ -382,7 +382,8 @@ In this talk, I’ll explore some of the challenges our existing frameworks and 
           people: [people.janiEvakallio],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/16H81pPbCS2nEjOVK5yTzpN9Cjy-DZdo1/view?usp=drive_link",
             video: "",
           },
         },
