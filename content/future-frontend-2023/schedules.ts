@@ -287,6 +287,7 @@ const thursday: Schedule = {
           people: [people.matthew],
           urls: {
             drawing: "",
+            // pdf: https://drive.google.com/file/d/1GgRknAkB9F_3MTjWxALAHjNdnIxtDnkH/view?usp=drive_link
             slides:
               "https://slides.com/matthewphillips/bringing-react-into-your-content-sites-with-astro",
             video: "",
