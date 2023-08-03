@@ -232,7 +232,7 @@ const thursday: Schedule = {
             drawing: "",
             slides:
               "https://docs.google.com/presentation/d/1kW9dc8NItnb4lpfEAWENXGuYQWh8rEzJZEW_g_7D8C0",
-            video: "",
+            video: "https://youtu.be/vf1v7n2ApHI",
           },
         },
         {
@@ -244,8 +244,20 @@ const thursday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://docs.google.com/presentation/d/1NoJtBdpf13noV-4MebYMZkhJhWn4Y79-7f00SlSCAmc/edit?usp=sharing",
-            video: "",
+              "https://docs.google.com/presentation/d/1NoJtBdpf13noV-4MebYMZkhJhWn4Y79-7f00SlSCAmc",
+            video: "https://youtu.be/oQ1zn7cdtyU",
+          },
+        },
+        {
+          type: SessionType.PANEL,
+          level: Level.INTERMEDIATE,
+          title: "QA",
+          description: ``,
+          people: [people.misko, people.ryan],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "https://youtu.be/80L3Ts1t7v8",
           },
         },
       ],
@@ -275,8 +287,8 @@ const thursday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1kJ42P39GgAASxpT7lf2GqmKSBe0Kgds5/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/1kJ42P39GgAASxpT7lf2GqmKSBe0Kgds5",
+            video: "https://youtu.be/nHkNiu_Ehss",
           },
         },
         {
@@ -290,7 +302,19 @@ const thursday: Schedule = {
             // pdf: https://drive.google.com/file/d/1GgRknAkB9F_3MTjWxALAHjNdnIxtDnkH/view?usp=drive_link
             slides:
               "https://slides.com/matthewphillips/bringing-react-into-your-content-sites-with-astro",
-            video: "",
+            video: "https://youtu.be/Fouws8iKPKQ",
+          },
+        },
+        {
+          type: SessionType.PANEL,
+          level: Level.INTERMEDIATE,
+          title: "QA",
+          description: ``,
+          people: [people.felix, people.matthew],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "https://youtu.be/8w8NbvCHCFg",
           },
         },
       ],
@@ -321,8 +345,8 @@ const thursday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1SXHqRRJhzvx_QtLVRWTsEg8yMbgku8Eb/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/1SXHqRRJhzvx_QtLVRWTsEg8yMbgku8Eb/view",
+            video: "https://youtu.be/t7ptxuojuYA",
           },
         },
         {
@@ -334,8 +358,20 @@ const thursday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1fuWA6IN7D0rMoZwoYGFu7utQ4UJFBMwB/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/1fuWA6IN7D0rMoZwoYGFu7utQ4UJFBMwB/view",
+            video: "https://youtu.be/UtHDWYmDjGM",
+          },
+        },
+        {
+          type: SessionType.PANEL,
+          level: Level.INTERMEDIATE,
+          title: "QA",
+          description: ``,
+          people: [people.mo, people.thaisSantos],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "https://youtu.be/lgM_6iqwwBQ",
           },
         },
       ],
@@ -367,8 +403,8 @@ In this talk we'll make some generative music using Max's visual interactive pat
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1OLMLlVrEvdvyM-lsNx_8Y-3BxnBto4es/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/1OLMLlVrEvdvyM-lsNx_8Y-3BxnBto4es/view",
+            video: "https://youtu.be/dL_XHIKaWnI",
           },
         },
         {
@@ -384,8 +420,24 @@ In this talk, I’ll explore some of the challenges our existing frameworks and 
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/16H81pPbCS2nEjOVK5yTzpN9Cjy-DZdo1/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/16H81pPbCS2nEjOVK5yTzpN9Cjy-DZdo1/view",
+            video: "https://youtu.be/duXeYUipT_g",
+          },
+        },
+        {
+          type: SessionType.PANEL,
+          level: Level.INTERMEDIATE,
+          title: "QA",
+          description: ``,
+          people: [
+            people.teroParviainen,
+            people.janiEvakallio,
+            people.stephanie,
+          ],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "https://youtu.be/pzP_2faJCto",
           },
         },
       ],
