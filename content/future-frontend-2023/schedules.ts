@@ -513,8 +513,8 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1RbhOX44bQEpf7FO9m3b3MSECiRRtGZLm/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/1RbhOX44bQEpf7FO9m3b3MSECiRRtGZLm/view",
+            video: "https://youtu.be/DXe7H0Iy5Bc",
           },
         },
         {
@@ -568,8 +568,8 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1ZVw2TS71Mx12RZxLCqx93hDayTSszsI6/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/1ZVw2TS71Mx12RZxLCqx93hDayTSszsI6/view",
+            video: "https://youtu.be/jIQUy_wlkP8",
           },
         },
         {
@@ -582,8 +582,20 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1WTNbvBOWQksThPiIZMtcf9f_MCKCSjN1/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/1WTNbvBOWQksThPiIZMtcf9f_MCKCSjN1/view",
+            video: "https://youtu.be/lkb_2QP0lCM",
+          },
+        },
+        {
+          type: SessionType.PANEL,
+          level: Level.INTERMEDIATE,
+          title: "QA",
+          description: ``,
+          people: [people.pekka, people.pete],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "https://youtu.be/5IWMQ3p3FJM",
           },
         },
       ],
@@ -613,8 +625,8 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1WHXQEloB0Y7zn9mGu2t6GpDlG0GKwAbb/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/1WHXQEloB0Y7zn9mGu2t6GpDlG0GKwAbb/view",
+            video: "https://youtu.be/JqGSBgI8sWI",
           },
         },
         {
@@ -627,8 +639,20 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1RBeDPJ8OLpXE7krRD9hIVlQkyum1QZUD/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/1RBeDPJ8OLpXE7krRD9hIVlQkyum1QZUD/view",
+            video: "https://youtu.be/auFkJ2k28f4",
+          },
+        },
+        {
+          type: SessionType.PANEL,
+          level: Level.INTERMEDIATE,
+          title: "QA",
+          description: ``,
+          people: [people.samuel, people.sunil],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "https://youtu.be/k1txTsqDKQg",
           },
         },
       ],
@@ -658,7 +682,7 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides: "https://slides.com/aleksandrasikora/api-revolution",
-            video: "",
+            video: "https://youtu.be/EQ5v-tLp_sY",
           },
         },
         {
@@ -670,7 +694,7 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://youtu.be/OS4ojx-tI7M",
           },
         },
         {
@@ -683,8 +707,8 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1wyo4N6NqbqL_4pm1vctUWhSYe3hoauZh/view?usp=drive_link",
-            video: "",
+              "https://drive.google.com/file/d/1wyo4N6NqbqL_4pm1vctUWhSYe3hoauZh/view",
+            video: "https://youtu.be/f8XpeszsRLI",
           },
         },
       ],
@@ -697,6 +721,11 @@ const friday: Schedule = {
           type: SessionType.ORGANIZATIONAL,
           title: "Ending of the day",
           description: "Thanks for the fish.",
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "https://youtu.be/XOYL8Lg7ad0",
+          },
         },
       ],
     },
