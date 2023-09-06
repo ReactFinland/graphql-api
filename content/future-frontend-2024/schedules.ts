@@ -565,5 +565,4 @@ const friday: Schedule = {
   ],
 };
 
-// export default [monday, tuesday, wednesday, thursday, friday];
-export default [thursday, friday];
+export default [monday, tuesday, wednesday, thursday, friday];
