@@ -1,5 +1,6 @@
 import freezingEdge2020 from "../content/freezing-edge-2020";
 import futureFrontend2023 from "../content/future-frontend-2023";
+import futureFrontend2024 from "../content/future-frontend-2024";
 import graphQLFinland2018 from "../content/graphql-finland-2018";
 import graphQLFinland2020 from "../content/graphql-finland-2020";
 import halfstackVienna2019 from "../content/halfstack-vienna-2019";
@@ -16,6 +17,7 @@ import { Conference } from "./schema/Conference";
 const conferences: { [id: string]: Conference } = {
   ["freezing-edge-2020"]: attachParents(freezingEdge2020),
   ["future-frontend-2023"]: attachParents(futureFrontend2023),
+  ["future-frontend-2024"]: attachParents(futureFrontend2024),
   ["techmovienight"]: attachParents(techMovieNight),
   ["halfstack-vienna-2019"]: attachParents(halfstackVienna2019),
   ["reason-conf-2019"]: attachParents(reasonConf2019),

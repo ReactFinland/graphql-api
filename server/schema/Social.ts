@@ -48,5 +48,8 @@ export class Social {
   public devto?: string;
 
   @Field((_) => String, { nullable: true })
+  public tiktok?: string;
+
+  @Field((_) => String, { nullable: true })
   public twitch?: string;
 }

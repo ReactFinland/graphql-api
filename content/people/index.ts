@@ -11,6 +11,7 @@ export { default as annaDoubkova } from "./anna-doubkova";
 export { default as ante } from "./ante";
 export { default as artemSapegin } from "./artem-sapegin";
 export { default as artemZakharchenko } from "./artem-zakharchenko";
+export { default as ben } from "./ben";
 export { default as benjieGillam } from "./benjie-gillam";
 export { default as bodil } from "./bodil";
 export { default as bohdanLiashenko } from "./bohdan-liashenko";

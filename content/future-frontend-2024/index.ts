@@ -5,32 +5,34 @@ import * as allSponsors from "../sponsors";
 import schedules from "./schedules";
 
 const partners = [
-  allSponsors.bejs,
+  // allSponsors.bejs,
   // allSponsors.halfstack,
-  allSponsors.koodiasuomesta,
-  allSponsors.reactnorway,
+  // allSponsors.koodiasuomesta,
+  // allSponsors.reactnorway,
   allSponsors.survivejs,
-  allSponsors.nodecongress,
+  // allSponsors.nodecongress,
   /*
   allSponsors.reactbrussels,
   allSponsors.reactindia,
   allSponsors.reactnativeeu,
   allSponsors.reactjsday,
   */
-  allSponsors.webexpo,
-  allSponsors.nitor,
-  allSponsors.columbiaroad,
-  allSponsors.loihdefactor,
-  allSponsors.stickermule,
+  // allSponsors.webexpo,
+  // allSponsors.nitor,
+  // allSponsors.columbiaroad,
+  // allSponsors.loihdefactor,
+  // allSponsors.stickermule,
   allSponsors.grusp,
 ];
 const goldSponsors = [];
 const silverSponsors = [
-  allSponsors.gofore,
-  allSponsors.elisa,
-  allSponsors.knowit,
+  // allSponsors.gofore,
+  // allSponsors.elisa,
+  // allSponsors.knowit,
 ];
-const bronzeSponsors = [allSponsors.alma];
+const bronzeSponsors = [
+  // allSponsors.alma
+];
 const platformSponsors = [];
 const sponsors = partners.concat(
   goldSponsors,
@@ -40,17 +42,17 @@ const sponsors = partners.concat(
 );
 
 const conference: Conference = {
-  id: "future-frontend-2023",
+  id: "future-frontend-2024",
   series: "Future Frontend", // TODO: Consider deprecating
-  name: "Future Frontend 2023",
+  name: "Future Frontend 2024",
   organizer: allSponsors.toska,
   slogan: "The future of frontend reimagined",
-  year: "2023",
-  startDate: "2023-06-08",
-  endDate: "2023-06-09",
+  year: "2024",
+  startDate: "2024-06-13",
+  endDate: "2024-06-14",
   websiteUrl: "https://futurefrontend.com/",
   // TODO: Resolve locations based on data
-  locations: [locations.porssitalo],
+  locations: [locations.paasitorni],
   mcs: [people.janiEvakallio, people.tuuliTiilikainen],
   organizers: [
     people.aleksiPousar,
