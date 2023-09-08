@@ -45,6 +45,56 @@ const wednesday: Schedule = {
         },
       ],
     },
+    {
+      begin: "06:00",
+      end: "14:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.ben],
+          title: "Fast, efficient full-stack with Astro",
+          description: `Serverless, server components, hot reloading, hydration... There's countless buzzwords when building full-stack webapps. They all have a time and place, but the best framework lets you reach for new tools only when you need that complexity. That's where Astro's "zero JS by default" comes in.
+
+          In this workshop, we'll use Astro to traverse those modern JS technologies by building a "swag" store. We'll start with plain server-rendered HTML, add authentication middleware, use React for interactive "add to cart" flows, and apply adapters to deploy to your host of choice. By the end of the day, you'll truly understand your stack to confidently ship new features.`,
+          // location: locations.nitor,
+        },
+      ],
+    },
+    {
+      begin: "09:00",
+      end: "10:00",
+      sessions: [
+        {
+          type: SessionType.LUNCH,
+          title: "Lunch",
+          description:
+            "We have Finnish food in store for people attending workshops.",
+        },
+      ],
+    },
+    {
+      begin: "10:00",
+      end: "11:30",
+      title: "Workshops continue",
+      sessions: [],
+    },
+    {
+      begin: "11:30",
+      end: "12:00",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee, tea, or water.",
+        },
+      ],
+    },
+    {
+      begin: "12:00",
+      end: "14:00",
+      title: "Workshops continue",
+      sessions: [],
+    },
   ],
 };
 
