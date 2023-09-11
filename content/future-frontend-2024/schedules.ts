@@ -82,6 +82,26 @@ const wednesday: Schedule = {
           In this workshop, we'll use Astro to traverse those modern JS technologies by building a "swag" store. We'll start with plain server-rendered HTML, add authentication middleware, use React for interactive "add to cart" flows, and apply adapters to deploy to your host of choice. By the end of the day, you'll truly understand your stack to confidently ship new features.`,
           // location: locations.nitor,
         },
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.jason],
+          title: "Deep dive to TypeScript compiler API",
+          description: `You might have heard that TypeScript has a compiler API but how to leverage it and how to get most out of it. You will find out in this full day workshop. To attend, you should already understand TypeScript on an adequate level but you do not have to be an expert in compilers.`,
+          // location: locations.nitor,
+        },
+      ],
+    },
+    {
+      begin: "06:00",
+      end: "09:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.kevin],
+          title: "KV databases for busy people",
+          description: `In this half-day workshop, you will learn what makes KV databases tick and how to leverage them on top of Deno Deploy platform. You do not have to know anything about Deno or the edge beforehand but after the workshop you will be well equipped to work with both. Preferably you should understand the basics of JavaScript before enrolling to the workshop.`,
+          // location: locations.nitor,
+        },
       ],
     },
     {
