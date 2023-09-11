@@ -174,7 +174,7 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: ``,
-          people: [],
+          people: [people.jason],
           urls: {
             drawing: "",
             slides: "",
@@ -186,7 +186,7 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.misko],
+          people: [people.misko, people.jason],
           urls: {
             drawing: "",
             slides: "",
@@ -586,7 +586,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [],
+          people: [people.kevin],
           urls: {
             drawing: "",
             slides: "",
@@ -599,6 +599,18 @@ const friday: Schedule = {
           title: "",
           description: "",
           people: [people.stephanie],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.PANEL,
+          level: Level.INTERMEDIATE,
+          title: "QA",
+          description: ``,
+          people: [people.kevin, people.stephanie],
           urls: {
             drawing: "",
             slides: "",
