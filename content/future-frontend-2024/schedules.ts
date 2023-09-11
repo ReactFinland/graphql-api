@@ -48,6 +48,13 @@ QwikCity is a new meta-framework that allows you to build large-scale applicatio
 Along the way, we will also look at what makes Qwik unique, and how resumability enables constant startup performance no matter the application complexity.`,
           // location: locations.columbiaroad,
         },
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.jason],
+          title: "TypeScript for beginners",
+          description: `Maybe you have tried TypeScript already but can you leverage it well? The purpose of this workshop is to help you get started with TypeScript and build your confidence in using the language in your daily work. You should know JavaScript to some extent before taking this workshop.`,
+          // location: locations.nitor,
+        },
       ],
     },
   ],
