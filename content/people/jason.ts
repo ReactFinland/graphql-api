@@ -3,19 +3,21 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Jason Rametta",
-  about: "Certified TypeScript compiler API guru.",
+  about: `Jason is a creative and passionate full-stack developer with over a decade of experience. His expertise and passion revolves around increasing productivity, efficiency and reliability of large scale systems.
+
+Most recently, Jason was a senior developer at Unity 3D, leading the User Generated Content team. Currently, Jason is working on creating indie games with the Godot game engine.`,
   image: {
     url: "people/jason.jpg",
   },
   social: {
     homepage: "https://rametta.org/",
-    mastodon: "", // This has to be a whole link
-    twitter: "rametta", // Handle without @ is enough
+    mastodon: "",
+    twitter: "rametta",
     github: "rametta",
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "rametta",
     youtube: "",
     devto: "",
   },
@@ -24,9 +26,9 @@ const person: Contact = {
       name: "Canada",
       code: "CA",
     },
-    city: "",
+    city: "Montréal",
   },
-  keywords: [Keyword.REACT],
+  keywords: [Keyword.REACT, Keyword.TYPESCRIPT],
   type: [ContactType.SPEAKER],
 };
 
