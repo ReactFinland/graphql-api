@@ -51,8 +51,8 @@ Along the way, we will also look at what makes Qwik unique, and how resumability
         {
           type: SessionType.WORKSHOP,
           people: [people.jason],
-          title: "Typescript Essentials - From Novice to Expert",
-          description: `Typescript is becoming one of the most popular and powerful languages available for writing safe and reliable frontends. This workshop will go over everything you need to know to start leveraging Typescript in new projects, or bring it to existing JavaScript and React projects.
+          title: "TypeScript Essentials - From Novice to Expert",
+          description: `TypeScript is becoming one of the most popular and powerful languages available for writing safe and reliable frontends. This workshop will go over everything you need to know to start leveraging TypeScript in new projects, or bring it to existing JavaScript and React projects.
 
 Workshop Highlights:
 - Foundations - Basics of Static Types, Type Inference, and Type Checking
@@ -60,9 +60,9 @@ Workshop Highlights:
 - Tooling - Compiling, Linting, Bundling TypeScript
 - TypeScript with React - Typing React Components, Props, Hooks, I/O, correctly
 - Runtime vs Build-time Type Checking and when to use each
-- Resources and Documentation 
+- Resources and Documentation
 
-Each section comes with hands-on exercises that will be completed during the workshop. By the end of the workshop, attendees will be competent to use and integrate typescript into any project!`,
+Each section comes with hands-on exercises that will be completed during the workshop. By the end of the workshop, attendees will be competent to use and integrate TypeScript into any project!`,
           // location: locations.nitor,
         },
       ],
@@ -102,18 +102,19 @@ In this workshop, we'll use Astro to traverse those modern JS technologies by bu
         {
           type: SessionType.WORKSHOP,
           people: [people.jason],
-          title: "The Typescript Compiler API - Automation and Codegen for TypeScript",
-          description: `This intermediate/advanced workshop will cover topics that will supercharge your Typescript productivity!
+          title:
+            "The TypeScript Compiler API - Automation and Codegen for TypeScript",
+          description: `This intermediate/advanced workshop will cover topics that will supercharge your TypeScript productivity!
 
 Attendees will acquire the skills to eliminate the presence of boilerplate code within codebases by leveraging the Compiler API for automated code generation. This streamlines development but also mitigates the risk of bugs and inconsistencies, especially in large-scale projects. Additionally, attendees will delve into advanced topics such as automating processes and enhancing code type safety through the creation of custom linters and transformers.
 
 Workshop Highlights:
-- Basics of the Typescript Compiler API
+- Basics of the TypeScript Compiler API
 - Compiling modules with the API
-- Analyzing the Typescript Abstract Syntax Tree (AST) programatically
-- Writing a Typescript linter from scratch
-- Generating Typescript code programatically
-- Writing a Typescript transformer from scratch
+- Analyzing the TypeScript Abstract Syntax Tree (AST) programatically
+- Writing a TypeScript linter from scratch
+- Generating TypeScript code programatically
+- Writing a TypeScript transformer from scratch
 - Using the Type Checker API
 - Unit Testing our scripts`,
           // location: locations.nitor,
