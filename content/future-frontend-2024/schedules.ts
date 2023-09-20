@@ -32,7 +32,7 @@ const tuesday: Schedule = {
       sessions: [
         {
           type: SessionType.WORKSHOP,
-          people: [people.teroParviainen, people.juhoVepsalainen],
+          people: [people.teroParviainen],
           title: "Web Audio from zero to DAW",
           description: `This full-day workshop is for current or aspiring musicians, or people who are interested in synthesis in general. After the workshop, you will understand the fundamentals of synthesis, web audio basics, and some of the newest modern web Audio features. Expect to learn about the Web Audio API, Audio Worklets, Synthesis, Music Theory, Audio focused UI and visualization, and sequencing and composition.`,
           // location: locations.nitor,
