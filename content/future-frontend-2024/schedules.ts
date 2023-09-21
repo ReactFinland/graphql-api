@@ -409,6 +409,7 @@ const thursday: Schedule = {
         },
       ],
     },
+    /*
     {
       begin: "14:30",
       end: "18:00",
@@ -422,7 +423,7 @@ const thursday: Schedule = {
         },
       ],
     },
-    /*{
+    {
       begin: "14:00",
       end: "14:10",
       sessions: [
