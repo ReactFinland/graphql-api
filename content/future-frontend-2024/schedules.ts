@@ -4,14 +4,14 @@ import * as locations from "../locations";
 import * as people from "../people";
 
 const monday: Schedule = {
-  day: "2023-06-10",
+  day: "2024-06-10",
   description: "Monday",
   intervals: [],
 };
 
 // All times are given in GMT+0
 const tuesday: Schedule = {
-  day: "2023-06-11",
+  day: "2024-06-11",
   description: "Tuesday – workshops",
   // location: locations.paasitorni,
   intervals: [
@@ -71,7 +71,7 @@ Each section comes with hands-on exercises that will be completed during the wor
 };
 
 const wednesday: Schedule = {
-  day: "2023-06-12",
+  day: "2024-06-12",
   description: "Wednesday – workshops",
   // location: locations.paasitorni,
   intervals: [
@@ -175,7 +175,7 @@ Workshop Highlights:
 };
 
 const thursday: Schedule = {
-  day: "2023-06-13",
+  day: "2024-06-13",
   description: "Thursday – conference",
   location: locations.porssitalo,
   intervals: [
@@ -437,7 +437,7 @@ const thursday: Schedule = {
 };
 
 const friday: Schedule = {
-  day: "2023-06-14",
+  day: "2024-06-14",
   description: "Friday – conference",
   location: locations.porssitalo,
   intervals: [
