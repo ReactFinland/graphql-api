@@ -578,7 +578,7 @@ const friday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "Animation",
+      title: "User interaction",
       sessions: [
         {
           type: SessionType.TALK,
