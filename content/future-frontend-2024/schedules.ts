@@ -369,14 +369,18 @@ const thursday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      title: "Artificial Intelligence",
+      title: "UI, Design, and Edge",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [],
+          title: "Dynamic UI at the Edge",
+          description: `In this joint talk, we’ll explore using edge computing to build cross-platform apps with dynamic user interfaces. We’ll take a look at concepts like server-driven UI, the importance of respecting platform specific UI conventions, the edge, DurableObjects, and using WebSockets for collaboration.
+
+          We will define a high level structure for our server driven UI, and create a light implementation layer on web and mobile to render based off the configuration data stored on the edge.
+
+          We’ll look at two use-cases for shared experiences living on the edge. The first ensures continuity across a user’s experience of your app on both web and mobile, sharing their states. The second dives into collaborative apps, like shared meeting rooms with dynamic interfaces.`,
+          people: [people.mo, people.samuel],
           urls: {
             drawing: "",
             slides: "",
