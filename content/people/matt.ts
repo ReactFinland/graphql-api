@@ -1,33 +1,33 @@
 import { Contact, ContactType } from "../../server/schema/Contact";
-import Keyword from "../../server/schema/keywords";
+// import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
-  name: "Matt Pocock",
+  name: "Matt Webb",
   about:
-    "Lead Developer at Stately. Trying to bring on the visual coding revolution.",
+    "Exploring new products through thinking and making via Acts Not Facts, for me and for you too if you like.",
   image: {
-    url: "people/matt.jpg",
+    url: "people/matt-webb.jpg",
   },
   social: {
-    homepage: "",
-    twitter: "mpocock1",
-    github: "mattpocock",
+    homepage: "https://interconnected.org/",
+    mastodon: "https://mastodon.social/@genmon", // This has to be a whole link
+    twitter: "genmon", // Handle without @ is enough
+    github: "genmon",
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "genmon",
     youtube: "",
     devto: "",
-    twitch: "mpocock1",
   },
   location: {
     country: {
       name: "Great Britain",
       code: "GB",
     },
-    city: "Oxfordshire",
+    city: "London",
   },
-  keywords: [Keyword.REACT],
+  keywords: [],
   type: [ContactType.SPEAKER],
 };
 

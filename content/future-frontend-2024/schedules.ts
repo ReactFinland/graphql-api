@@ -261,14 +261,14 @@ const thursday: Schedule = {
     {
       begin: "08:00",
       end: "09:30",
-      title: "Architecture",
+      title: "Artificial intelligence",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [],
+          people: [people.matt],
           urls: {
             drawing: "",
             slides: "",
@@ -292,7 +292,7 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [],
+          people: [people.matt],
           urls: {
             drawing: "",
             slides: "",
@@ -388,23 +388,11 @@ const thursday: Schedule = {
           },
         },
         {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-        },
-        {
           type: SessionType.PANEL,
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [],
+          people: [people.mo, people.samuel],
           urls: {
             drawing: "",
             slides: "",
