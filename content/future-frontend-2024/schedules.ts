@@ -35,7 +35,7 @@ const tuesday: Schedule = {
           people: [people.kevin],
           title: "KV databases for busy people",
           description: `In this half-day workshop, you will learn what makes KV databases tick and how to leverage them on top of Deno Deploy platform. You do not have to know anything about Deno or the edge beforehand but after the workshop you will be well equipped to work with both. Preferably you should understand the basics of JavaScript before enrolling to the workshop.`,
-          // location: locations.yle,
+          location: locations.yle,
         },
       ],
     },

@@ -23,6 +23,7 @@ const partners = [
   // allSponsors.loihdefactor,
   // allSponsors.stickermule,
   allSponsors.grusp,
+  allSponsors.yle,
 ];
 const goldSponsors = [];
 const silverSponsors = [

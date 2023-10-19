@@ -17,3 +17,4 @@ export { default as tiivistamo } from "./tiivistamo";
 export { default as tuas } from "./tuas";
 export { default as valkoinenSali } from "./valkoinen-sali";
 export { default as wuWien } from "./wu-wien";
+export { default as yle } from "./yle";

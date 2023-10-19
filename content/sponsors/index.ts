@@ -82,5 +82,6 @@ export { default as vincit } from "./vincit";
 export { default as webexpo } from "./webexpo";
 export { default as wunder } from "./wunder";
 export { default as yglfkyiv } from "./yglfkyiv";
+export { default as yle } from "./yle";
 export { default as zapier } from "./zapier";
 export { default as zeroplusx } from "./zeroplusx";
