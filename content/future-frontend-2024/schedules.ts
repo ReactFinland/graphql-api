@@ -28,6 +28,19 @@ const tuesday: Schedule = {
     },
     {
       begin: "06:00",
+      end: "09:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.kevin],
+          title: "KV databases for busy people",
+          description: `In this half-day workshop, you will learn what makes KV databases tick and how to leverage them on top of Deno Deploy platform. You do not have to know anything about Deno or the edge beforehand but after the workshop you will be well equipped to work with both. Preferably you should understand the basics of JavaScript before enrolling to the workshop.`,
+          // location: locations.yle,
+        },
+      ],
+    },
+    {
+      begin: "06:00",
       end: "14:00",
       sessions: [
         {
@@ -119,19 +132,6 @@ Workshop Highlights:
 - Writing a TypeScript transformer from scratch
 - Using the Type Checker API
 - Unit Testing our scripts`,
-          // location: locations.nitor,
-        },
-      ],
-    },
-    {
-      begin: "06:00",
-      end: "09:00",
-      sessions: [
-        {
-          type: SessionType.WORKSHOP,
-          people: [people.kevin],
-          title: "KV databases for busy people",
-          description: `In this half-day workshop, you will learn what makes KV databases tick and how to leverage them on top of Deno Deploy platform. You do not have to know anything about Deno or the edge beforehand but after the workshop you will be well equipped to work with both. Preferably you should understand the basics of JavaScript before enrolling to the workshop.`,
           // location: locations.nitor,
         },
       ],
