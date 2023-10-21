@@ -111,7 +111,7 @@ const wednesday: Schedule = {
 
 In this workshop, we'll use Astro to traverse those modern JS technologies by building a "swag" store. We'll start with plain server-rendered HTML, add authentication middleware, use React for interactive "add to cart" flows, and apply adapters to deploy to your host of choice. By the end of the day, you'll truly understand your stack to confidently ship new features.
 
-Prerequisites: Fundamentals of JavaScript, `,
+Prerequisites: Fundamentals of JavaScript`,
           // location: locations.nitor,
         },
         {
@@ -132,6 +132,13 @@ Workshop Highlights:
 - Writing a TypeScript transformer from scratch
 - Using the Type Checker API
 - Unit Testing our scripts`,
+          // location: locations.nitor,
+        },
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.thaisSantos],
+          title: "Design systems and accessibility",
+          description: `To be done.`,
           // location: locations.nitor,
         },
       ],
@@ -322,7 +329,7 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [],
+          people: [people.thaisSantos],
           urls: {
             drawing: "",
             slides: "",
@@ -346,7 +353,7 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [],
+          people: [people.thaisSantos],
           urls: {
             drawing: "",
             slides: "",
