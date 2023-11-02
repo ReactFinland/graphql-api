@@ -174,3 +174,4 @@ export { default as woody } from "./woody";
 export { default as xiaoru } from "./xiaoru";
 export { default as yan } from "./yan";
 export { default as yang } from "./yang";
+export { default as zak } from "./zak";
