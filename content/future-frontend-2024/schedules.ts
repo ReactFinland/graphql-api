@@ -3,11 +3,13 @@ import { Level, SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 import * as people from "../people";
 
+/*
 const monday: Schedule = {
   day: "2024-06-10",
   description: "Monday",
   intervals: [],
 };
+*/
 
 // All times are given in GMT+0
 const tuesday: Schedule = {
