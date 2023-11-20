@@ -525,14 +525,14 @@ const friday: Schedule = {
     {
       begin: "08:00",
       end: "09:30",
-      title: "Data protection",
+      title: "Standardization",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [],
+          people: [people.yulia],
           urls: {
             drawing: "",
             slides: "",
@@ -556,7 +556,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [],
+          people: [people.yulia],
           urls: {
             drawing: "",
             slides: "",
