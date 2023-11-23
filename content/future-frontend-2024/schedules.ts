@@ -216,7 +216,7 @@ const thursday: Schedule = {
     {
       begin: "06:00",
       end: "07:30",
-      title: "Opening",
+      title: "Compilers",
       sessions: [
         {
           type: SessionType.TALK,
