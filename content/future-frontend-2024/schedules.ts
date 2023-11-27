@@ -47,13 +47,6 @@ const tuesday: Schedule = {
       sessions: [
         {
           type: SessionType.WORKSHOP,
-          people: [people.teroParviainen],
-          title: "Web Audio from zero to DAW",
-          description: `This full-day workshop is for current or aspiring musicians, or people who are interested in synthesis in general. After the workshop, you will understand the fundamentals of synthesis, web audio basics, and some of the newest modern web Audio features. Expect to learn about the Web Audio API, Audio Worklets, Synthesis, Music Theory, Audio focused UI and visualization, and sequencing and composition.`,
-          // location: locations.nitor,
-        },
-        {
-          type: SessionType.WORKSHOP,
           people: [people.misko],
           title: "Building Fast WebApps with QwikCity",
           description: `Building instant-on web applications at scale have been elusive. Real-world sites need tracking, analytics, and complex user interfaces and interactions. We always start with the best intentions but end up with a less-than-ideal site.
@@ -105,6 +98,13 @@ const wednesday: Schedule = {
       begin: "06:00",
       end: "14:00",
       sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.teroParviainen],
+          title: "Web Audio from zero to DAW",
+          description: `This full-day workshop is for current or aspiring musicians, or people who are interested in synthesis in general. After the workshop, you will understand the fundamentals of synthesis, web audio basics, and some of the newest modern web Audio features. Expect to learn about the Web Audio API, Audio Worklets, Synthesis, Music Theory, Audio focused UI and visualization, and sequencing and composition.`,
+          // location: locations.nitor,
+        },
         {
           type: SessionType.WORKSHOP,
           people: [people.ben],
