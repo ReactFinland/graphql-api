@@ -136,13 +136,13 @@ Workshop Highlights:
 - Unit Testing our scripts`,
           // location: locations.nitor,
         },
-        {
+        /*{
           type: SessionType.WORKSHOP,
           people: [people.thaisSantos],
           title: "Design systems and accessibility",
           description: `To be done.`,
           // location: locations.nitor,
-        },
+        },*/
       ],
     },
     {
