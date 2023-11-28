@@ -128,9 +128,9 @@ Attendees will acquire the skills to eliminate the presence of boilerplate code 
 Workshop Highlights:
 - Basics of the TypeScript Compiler API
 - Compiling modules with the API
-- Analyzing the TypeScript Abstract Syntax Tree (AST) programatically
+- Analyzing the TypeScript Abstract Syntax Tree (AST) programmatically
 - Writing a TypeScript linter from scratch
-- Generating TypeScript code programatically
+- Generating TypeScript code programmatically
 - Writing a TypeScript transformer from scratch
 - Using the Type Checker API
 - Unit Testing our scripts`,
