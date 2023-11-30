@@ -396,6 +396,8 @@ query SpeakerTweetTemplateQuery($conferenceId: ID!, $contactName: String!) {
   }
   conference(id: $conferenceId) {
     name
+    startDate
+    endDate
     slogan
     schedules {
       day
