@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Color, FontFamilyProperty } from "csstype";
 import hexToRgba from "hex-to-rgba";
 import get from "lodash/get";
-import map from "lodash/map";
+// import map from "lodash/map";
 import * as React from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 import titleCase from "to-title-case";
@@ -139,11 +139,11 @@ function SpeakerTweetTemplate({
   );
 }
 
-function getConferenceDays(conference): string {
-  const { schedules } = conference;
-  const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
-  const firstDay = conferenceDays[0];
-  const lastDay = conferenceDays[conferenceDays.length - 1];
+function getConferenceDays(conference: Conference): string {
+  // const { schedules } = conference;
+  // const conferenceDays = map(schedules, ({ day }) => dayToFinnishLocale(day));
+  const firstDay = dayToFinnishLocale(conference.startDate); // conferenceDays[0];
+  const lastDay = dayToFinnishLocale(conference.endDate); // conferenceDays[conferenceDays.length - 1];
 
   return `${firstDay}-${lastDay}`;
 }
