@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Stephanie Nemeth",
-  about: "Creating weird wonderful useless things with Raspberry Pi, Arduinos and LEDs. Engineer @ GitHub",
+  about:
+    "Creating weird wonderful useless things with Raspberry Pi, Arduinos and LEDs. Engineer @ GitHub",
   image: {
     url: "people/stephanie.jpg",
   },
@@ -15,7 +16,7 @@ const person: Contact = {
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "stephanienemeth",
     youtube: "",
     devto: "",
   },
