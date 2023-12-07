@@ -24,6 +24,7 @@ const partners = [
   // allSponsors.stickermule,
   allSponsors.grusp,
   allSponsors.yle,
+  allSponsors.nitor,
 ];
 const goldSponsors = [];
 const silverSponsors = [

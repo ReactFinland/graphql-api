@@ -71,7 +71,7 @@ Workshop Highlights:
 - Resources and Documentation
 
 Each section comes with hands-on exercises that will be completed during the workshop. By the end of the workshop, attendees will be competent to use and integrate TypeScript into any project!`,
-          // location: locations.nitor,
+          location: locations.nitor,
         },
       ],
     },
@@ -134,7 +134,7 @@ Workshop Highlights:
 - Writing a TypeScript transformer from scratch
 - Using the Type Checker API
 - Unit Testing our scripts`,
-          // location: locations.nitor,
+          location: locations.nitor,
         },
         /*{
           type: SessionType.WORKSHOP,
