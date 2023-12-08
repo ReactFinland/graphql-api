@@ -7,7 +7,7 @@ import schedules from "./schedules";
 const partners = [
   // allSponsors.bejs,
   // allSponsors.halfstack,
-  // allSponsors.koodiasuomesta,
+  allSponsors.koodiasuomesta,
   // allSponsors.reactnorway,
   allSponsors.survivejs,
   // allSponsors.nodecongress,
