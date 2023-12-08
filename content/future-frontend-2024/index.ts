@@ -18,7 +18,6 @@ const partners = [
   allSponsors.reactjsday,
   */
   // allSponsors.webexpo,
-  // allSponsors.nitor,
   // allSponsors.columbiaroad,
   // allSponsors.loihdefactor,
   // allSponsors.stickermule,
