@@ -42,6 +42,28 @@ const tuesday: Schedule = {
       ],
     },
     {
+      begin: "10:00",
+      end: "14:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          people: [people.zak],
+          title: "Introduction to augmenting your applications with AI",
+          description: `In this half-day workshop, you will learn how to integrate AI features to your applications. To showcase how to do this, we will leverage Nuxt, Svelte, Rust, and Go. To give you examples of what we’ll do during this time, consider the following:
+
+* Develop intuitive text command interfaces akin to Notion
+* Design sleek native OS command palettes reminiscent of Alfred
+* Build engaging GPT-powered chat applications
+* Check the power of predictive text technologies and learn the ideas behind “ghost predictions” similar to GitHub Copilot and Gmail’s Smart Compose
+
+As an introductionary workshop, the idea is to expose you to the core ideas behind the current developments behind AI so you can go and integrate some of the features to your own applications. The focus is specifically on AI but not on UI/UX.
+
+To participate, you should have basic level understanding of the web platform.`,
+          location: locations.yle,
+        },
+      ],
+    },
+    {
       begin: "06:00",
       end: "14:00",
       sessions: [
