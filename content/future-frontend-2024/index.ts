@@ -27,6 +27,7 @@ const partners = [
 ];
 const goldSponsors = [];
 const silverSponsors = [
+  allSponsors.evitec,
   // allSponsors.gofore,
   // allSponsors.elisa,
   // allSponsors.knowit,

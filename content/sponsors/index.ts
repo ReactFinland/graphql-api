@@ -17,6 +17,7 @@ export { default as divriots } from "./divriots";
 export { default as dna325 } from "./dna325";
 export { default as dynatrace } from "./dynatrace";
 export { default as elisa } from "./elisa";
+export { default as evitec } from "./evitec";
 export { default as fb } from "./fb";
 export { default as formidable } from "./formidable";
 export { default as futurice } from "./futurice";
