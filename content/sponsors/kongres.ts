@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Kongres Next.js",
   about: "All things frameworks, web",
   image: {
-    url: "sponsors/kongres.svg",
+    url: "sponsors/kongrespl.svg",
   },
   social: {
     homepage: "https://kongresnextjs.pl/",
