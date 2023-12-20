@@ -61,6 +61,7 @@ export { default as reactjsgirls } from "./reactjsgirls";
 export { default as reactnativeeu } from "./reactnativeeu";
 export { default as reactnewyork } from "./reactnewyork";
 export { default as reactnorway } from "./reactnorway";
+export { default as reactparis } from "./reactparis";
 export { default as reactsummit } from "./reactsummit";
 export { default as reactweek } from "./reactweek";
 export { default as reaktor } from "./reaktor";

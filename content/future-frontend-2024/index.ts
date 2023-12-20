@@ -23,6 +23,7 @@ const partners = [
   // allSponsors.stickermule,
   allSponsors.grusp,
   allSponsors.kongres,
+  allSponsors.reactparis,
   allSponsors.yle,
   allSponsors.nitor,
 ];
