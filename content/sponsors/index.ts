@@ -36,6 +36,7 @@ export { default as huuva } from "./huuva";
 export { default as jscamp } from "./jscamp";
 export { default as jskongress } from "./jskongress";
 export { default as knowit } from "./knowit";
+export { default as kongres } from "./kongres";
 export { default as koodiasuomesta } from "./koodiasuomesta";
 export { default as loihdefactor } from "./loihdefactor";
 export { default as meiko } from "./meiko";

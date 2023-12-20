@@ -22,6 +22,7 @@ const partners = [
   // allSponsors.loihdefactor,
   // allSponsors.stickermule,
   allSponsors.grusp,
+  allSponsors.kongres,
   allSponsors.yle,
   allSponsors.nitor,
 ];
