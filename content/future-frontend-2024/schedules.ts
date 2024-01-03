@@ -554,7 +554,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [people.yulia],
+          people: [],
           urls: {
             drawing: "",
             slides: "",
@@ -578,7 +578,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.yulia],
+          people: [],
           urls: {
             drawing: "",
             slides: "",
