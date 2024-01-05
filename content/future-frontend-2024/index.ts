@@ -8,7 +8,7 @@ const partners = [
   // allSponsors.bejs,
   // allSponsors.halfstack,
   allSponsors.koodiasuomesta,
-  // allSponsors.reactnorway,
+  allSponsors.reactnorway,
   allSponsors.survivejs,
   // allSponsors.nodecongress,
   /*
