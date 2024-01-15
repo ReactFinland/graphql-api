@@ -60,6 +60,7 @@ export { default as jan } from "./jan";
 export { default as janiEvakallio } from "./jani-evakallio";
 export { default as janne } from "./janne";
 export { default as jaredPalmer } from "./jared-palmer";
+export { default as jari } from "./jari";
 export { default as jasmin } from "./jasmin";
 export { default as jason } from "./jason";
 export { default as je } from "./je";

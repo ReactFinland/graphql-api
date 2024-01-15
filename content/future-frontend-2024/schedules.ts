@@ -512,7 +512,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [],
+          people: [people.jari],
           urls: {
             drawing: "",
             slides: "",
@@ -524,7 +524,7 @@ const friday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.ben],
+          people: [people.ben, people.jari],
           urls: {
             drawing: "",
             slides: "",
