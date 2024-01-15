@@ -24,6 +24,7 @@ const partners = [
   allSponsors.grusp,
   allSponsors.kongres,
   allSponsors.reactparis,
+  allSponsors.jsconfbp,
   allSponsors.friikit,
   allSponsors.yle,
   allSponsors.nitor,
