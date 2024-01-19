@@ -568,7 +568,7 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1ZVw2TS71Mx12RZxLCqx93hDayTSszsI6/view",
+              "https://drive.google.com/file/d/1aVgToflTZzVbppaf35Jj7HnsF5-M_zcf/view?usp=drive_link",
             video: "https://youtu.be/jIQUy_wlkP8",
           },
         },
