@@ -31,7 +31,6 @@ const bronzeSponsors = [
   allSponsors.solita,
   allSponsors.huuva,
   allSponsors.knowit,
-  allSponsors.utopia,
   allSponsors.alma,
 ];
 const platformSponsors: Contact[] = [];
