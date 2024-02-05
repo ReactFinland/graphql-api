@@ -7,7 +7,7 @@ const sponsor: Contact = {
     url: "sponsors/dojs.svg",
   },
   social: {
-    homepage: "https://devopsjsconf.com/",
+    homepage: "https://devopsjsconf.com?utm_source=ff",
     facebook: "",
     instagram: "",
     twitter: "",
