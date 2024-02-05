@@ -1,7 +1,7 @@
 import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
-  name: "devops.js",
+  name: "DevOps.js",
   about: "Learn to build, deploy, and monitor JavaScript apps",
   image: {
     url: "sponsors/dojs.svg",
