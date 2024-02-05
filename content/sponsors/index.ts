@@ -15,6 +15,7 @@ export { default as designsystemslondon } from "./designsystemslondon";
 export { default as digia } from "./digia";
 export { default as divriots } from "./divriots";
 export { default as dna325 } from "./dna325";
+export { default as dojs } from "./dojs";
 export { default as dynatrace } from "./dynatrace";
 export { default as elisa } from "./elisa";
 export { default as evitec } from "./evitec";

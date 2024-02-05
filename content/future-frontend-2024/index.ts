@@ -6,6 +6,7 @@ import schedules from "./schedules";
 
 const partners = [
   allSponsors.bejs,
+  allSponsors.dojs,
   // allSponsors.halfstack,
   allSponsors.koodiasuomesta,
   allSponsors.reactnorway,
