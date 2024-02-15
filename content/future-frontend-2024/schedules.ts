@@ -606,8 +606,8 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Return to Web Animation Wonderland",
+          description: "Ages ago, when CSS animations were young and the Web Animations API had yet to ship in all browsers, before the time of JavaScript frameworks when JQuery could still be found on job postings, Rachel Nabors made a series of interactive, hand drawn Alice in Wonderland storybooks using polyfills and some clever hacks. Today, jump down the rabbit hole again with brand new CSS and Web APIs that bring your wildest dreams to life. Join Alice, Rachel, and the Hipster White Rabbit as they refactor Alice in Web Animation Land.",
           people: [people.rachelNabors],
           urls: {
             drawing: "",
