@@ -1,3 +1,4 @@
+export { default as alma } from "./alma";
 export { default as amanda } from "./amanda";
 export { default as ankersaal } from "./ankersaal";
 export { default as arkade } from "./arkade";
