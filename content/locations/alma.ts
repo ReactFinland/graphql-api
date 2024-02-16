@@ -4,7 +4,6 @@ import { Location } from "../../server/schema/Location";
 const location: Location = {
   name: "Alma Media",
   about: "Alma is one of the workshop hosts of the event.",
-  image: {},
   social: {
     homepage: "https://www.almamedia.fi/",
     googleMaps: "https://maps.app.goo.gl/8zfW7i9Agq8QsXU39",
