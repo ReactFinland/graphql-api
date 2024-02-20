@@ -655,7 +655,7 @@ const friday: Schedule = {
     },
     {
       begin: "12:30",
-      end: "14:15",
+      end: "14:00",
       title: "Demonstrations",
       sessions: [
         {
@@ -697,8 +697,8 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "14:15",
-      end: "14:30",
+      begin: "14:00",
+      end: "14:15",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
