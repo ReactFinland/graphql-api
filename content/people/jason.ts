@@ -7,7 +7,7 @@ const person: Contact = {
 
 Most recently, Jason was a senior developer at Unity 3D, leading the User Generated Content team. Currently, Jason is working on creating indie games with the Godot game engine.`,
   image: {
-    url: "people/jason.jpg",
+    url: "people/jason.jpeg",
   },
   social: {
     homepage: "https://rametta.org/",

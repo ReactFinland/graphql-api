@@ -5,7 +5,7 @@ const person: Contact = {
   name: "Zak Allal",
   about: "Renaissance polymath. MD.",
   image: {
-    url: "people/zak.jpg",
+    url: "people/zak.jpeg",
   },
   social: {
     homepage: "https://www.zakallal.com/",

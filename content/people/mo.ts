@@ -5,7 +5,7 @@ const person: Contact = {
   name: "Mohammad Khazali",
   about: "",
   image: {
-    url: "people/mo.jpg",
+    url: "people/mo.jpeg",
   },
   social: {
     homepage: "",

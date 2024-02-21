@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "Exploring new products through thinking and making via Acts Not Facts, for me and for you too if you like.",
   image: {
-    url: "people/matt-webb.jpg",
+    url: "people/matt-webb.jpeg",
   },
   social: {
     homepage: "https://interconnected.org/",

@@ -5,7 +5,7 @@ const person: Contact = {
   name: "Thaís Santos",
   about: `Design Systems crusader | Blockchain enthusiast | Making the IT world better one component at a time`,
   image: {
-    url: "people/thais.jpg",
+    url: "people/thais.jpeg",
   },
   social: {
     homepage: "",

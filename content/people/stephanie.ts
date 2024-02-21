@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "Creating weird wonderful useless things with Raspberry Pi, Arduinos and LEDs. Engineer @ GitHub",
   image: {
-    url: "people/stephanie.jpg",
+    url: "people/stephanie.jpeg",
   },
   social: {
     homepage: "https://stephanie.lol",

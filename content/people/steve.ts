@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "Steve Ruiz is a developer and interaction designer in London, currently working with creative tools. He build lots of prototypes and sometimes those prototypes turn into products.",
   image: {
-    url: "people/steve.jpg",
+    url: "people/steve.jpeg",
   },
   social: {
     homepage: "https://www.steveruiz.me/",

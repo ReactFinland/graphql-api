@@ -5,7 +5,7 @@ const person: Contact = {
   name: "Tero Parviainen",
   about: "Software developer, music hacker. One half of Counterpoint.",
   image: {
-    url: "people/tero.jpg",
+    url: "people/tero.jpeg",
   },
   social: {
     homepage: "https://ctpt.co",
