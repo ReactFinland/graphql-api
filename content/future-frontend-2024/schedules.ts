@@ -619,8 +619,8 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Make Real: tldraw's accidental AI play",
+          description: `You might be familiar with [tldraw](https://www.tldraw.com/) but did you know an AI tool known as [Make Real](https://makereal.tldraw.com/) came out of it by accident. This talk is a rollercoaster ride of an accidental success with lessons on building your own product and betting on the web. Tune in for the ride as we try to understand what just happened and how AI is shaping product development.`,
           people: [people.steve],
           urls: {
             drawing: "",
