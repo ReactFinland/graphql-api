@@ -26,6 +26,7 @@ const partners = [
   allSponsors.kongres,
   allSponsors.reactparis,
   allSponsors.jsconfbp,
+  allSponsors.jsday,
   allSponsors.friikit,
   allSponsors.yle,
   allSponsors.nitor,

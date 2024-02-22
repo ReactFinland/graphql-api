@@ -37,6 +37,7 @@ export { default as honeypot } from "./honeypot";
 export { default as huuva } from "./huuva";
 export { default as jscamp } from "./jscamp";
 export { default as jsconfbp } from "./jsconfbp";
+export { default as jsday } from "./jsday";
 export { default as jskongress } from "./jskongress";
 export { default as knowit } from "./knowit";
 export { default as kongres } from "./kongres";
