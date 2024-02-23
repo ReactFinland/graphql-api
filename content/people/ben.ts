@@ -3,7 +3,9 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Ben Holmes",
-  about: "President of whiteboards",
+  about:
+    "Core developer of Astro. Frontend developer and designer working with teams to build accessible, compelling web experiences. 4+ years of frontend experience using HTML + CSS, ReactJS, AngularJS, and the Adobe design suite. Also experienced in OOP principles using Java (education) and C# (backend).",
+  tagline: "President of whiteboards",
   image: {
     url: "people/ben.jpeg",
   },
