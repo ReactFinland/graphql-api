@@ -243,8 +243,9 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Serialization, the secret to O(1) resumable applications",
+          description:
+            "What if JavaScript applications could be made lighter without losing the current benefits in terms of interactivity? Resumability is a new concept that addresses the problems of hydration. At the core of resumability, there is the concept of serialization. In this talk, we delve into serialization to understand why it makes a difference for frontend development.",
           people: [people.misko],
           urls: {
             drawing: "",
