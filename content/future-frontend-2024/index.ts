@@ -30,6 +30,7 @@ const partners = [
   allSponsors.friikit,
   allSponsors.yle,
   allSponsors.nitor,
+  allSponsors.vihat,
 ];
 const goldSponsors = [];
 const silverSponsors = [
