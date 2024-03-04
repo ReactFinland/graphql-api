@@ -678,7 +678,7 @@ In this session, we'll take a look at the tools and techniques available to writ
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [people.stephanie],
+          people: [],
           urls: {
             drawing: "",
             slides: "",
@@ -690,7 +690,7 @@ In this session, we'll take a look at the tools and techniques available to writ
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.kevin, people.stephanie],
+          people: [people.kevin],
           urls: {
             drawing: "",
             slides: "",
