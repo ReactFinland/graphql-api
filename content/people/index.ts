@@ -67,6 +67,7 @@ export { default as je } from "./je";
 export { default as jen } from "./jen";
 export { default as jeremyWagner } from "./jeremy-wagner";
 export { default as jimmyJia } from "./jimmy-jia";
+export { default as jo } from "./jo";
 export { default as johannesSchickling } from "./johannes-schickling";
 export { default as joniNevalainen } from "./joni-nevalainen";
 export { default as juan } from "./juan";

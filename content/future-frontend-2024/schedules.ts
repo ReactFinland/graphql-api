@@ -657,40 +657,14 @@ const friday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      title: "Demonstrations",
+      title: "Choose your own adventure",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Building and distributing cross-runtime TypeScript libraries",
-          description: `In 2024, JavaScript and TypeScript run in more places than just Node and web browsers. With alternative runtimes like Deno, Bun, workerd (Cloudflare Workers), and more on the way, it's time to rethink how you design and develop modules that can work in any JavaScript runtime.
-
-In this session, we'll take a look at the tools and techniques available to write reusable TypeScript code that runs across many different JavaScript runtimes. We'll show how you can use [jsr.io](https://jsr.io/) - the new superset of npm that is TypeScript-first and ESM-only - to ship TypeScript source files directly to the registry, and let JSR handle compiling and distributing your code appropriately on different runtimes. We'll also explore CI techniques, design patterns, and other tools you can add to your tool belt to consistently write and distribute code that runs anywhere.`,
-          people: [people.kevin],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-        },
-        {
-          type: SessionType.PANEL,
-          level: Level.INTERMEDIATE,
-          title: "QA",
-          description: ``,
-          people: [people.kevin],
+          title: "Deno and friends with Kevin and Jo",
+          description: `In this hands-on session, you will learn about authoring cross-runtime modules, [jsr](https://jsr.io/), [Deno](https://deno.com/), mixing frontend with backend, and many other upcoming topics.`,
+          people: [people.kevin, people.jo],
           urls: {
             drawing: "",
             slides: "",
