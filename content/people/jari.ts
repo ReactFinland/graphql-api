@@ -28,6 +28,7 @@ const person: Contact = {
     city: "Lappeenranta",
   },
   keywords: [],
+  tagline: "IT influencer of the year 2023 in Finland (Tivi)",
   type: [ContactType.SPEAKER],
 };
 
