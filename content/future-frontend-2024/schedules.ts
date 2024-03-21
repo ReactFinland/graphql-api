@@ -356,7 +356,7 @@ const thursday: Schedule = {
             "Design & Development Synergy: How the Digital Product Designer landscape has transformed through collaboration with development",
           description: `Designers have embraced development terminology such as ‘component,’ ‘responsiveness,’ and ‘version control,’ reshaping their workflow for success. This adoption likely began as companies increasingly encouraged collaboration between designers and developers. A collaboration that not only is beneficial to the overall digital product landscape, but also instrumental in facilitating rapid product launches and exceptional user experiences.
 
-          Along with redefining key aspects of the UX process, this dynamic partnership has also catalysed the growth of design systems and created tools that now form the backbone of every designer’s toolkit.
+Along with redefining key aspects of the UX process, this dynamic partnership has also catalysed the growth of design systems and created tools that now form the backbone of every designer’s toolkit.
 
 This talk aims to bring an insightful exploration into the various processes designers undertake to deliver user-friendly solutions and how collaboration with developers has fundamentally transformed their holistic approach to digital product creation.`,
           people: [people.thaisSantos],
