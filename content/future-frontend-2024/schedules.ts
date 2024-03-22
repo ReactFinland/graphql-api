@@ -369,8 +369,9 @@ This talk aims to bring an insightful exploration into the various processes des
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Learning Finnish using technology - Mission Impossible?",
+          description:
+            "In this talk, Zak will discuss his journey to learning Finnish fast and how he built technology to facilitate this. You will learn how language learning and technology came together as targeted design principles coupled with insights from neuroscience were applied to create series of tools to solve the mystery of Finnish language. In other words, expect to learn how technology can help you and your users to tackle impossible sounding tasks like learning Finnish.",
           people: [people.zak],
           urls: {
             drawing: "",
