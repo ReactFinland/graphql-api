@@ -67,7 +67,7 @@ To participate, you should have basic level understanding of the web platform.`,
       begin: "06:00",
       end: "14:00",
       sessions: [
-        {
+        /*{
           type: SessionType.WORKSHOP,
           people: [people.misko],
           title: "Building Fast WebApps with Qwik City",
@@ -77,7 +77,7 @@ Qwik City is a new meta-framework that allows you to build large-scale applicati
 
 Along the way, we will also look at what makes Qwik unique, and how resumability enables constant startup performance no matter the application complexity.`,
           // location: locations.columbiaroad,
-        },
+        },*/
         {
           type: SessionType.WORKSHOP,
           people: [people.jason],
