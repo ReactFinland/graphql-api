@@ -560,8 +560,9 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Introduction to TC39",
+          description:
+            "Several people from TC39, the standardization group behind ECMAScript, will join us in this session as we discuss what standardization is about and what are the latest movements in the standard.",
           people: [],
           urls: {
             drawing: "",
