@@ -28,7 +28,7 @@ const tuesday: Schedule = {
         },
       ],
     },
-    {
+    /*{
       begin: "06:00",
       end: "09:00",
       sessions: [
@@ -40,7 +40,7 @@ const tuesday: Schedule = {
           location: locations.yle,
         },
       ],
-    },
+    },*/
     {
       begin: "10:00",
       end: "14:00",
@@ -670,9 +670,9 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Deno and friends with Kevin and Jo",
+          title: "Deno and friends with Jo",
           description: `In this hands-on session, you will learn about authoring cross-runtime modules, [jsr](https://jsr.io/), [Deno](https://deno.com/), mixing frontend with backend, and many other upcoming topics.`,
-          people: [people.kevin, people.jo],
+          people: [people.jo],
           urls: {
             drawing: "",
             slides: "",
