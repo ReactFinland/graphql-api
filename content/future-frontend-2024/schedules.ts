@@ -1,4 +1,5 @@
 import { Schedule } from "../../server/schema/Schedule";
+import Keyword from "../../server/schema/keywords";
 import { Level, SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 import * as people from "../people";
@@ -60,6 +61,7 @@ As an introductionary workshop, the idea is to expose you to the core ideas behi
 
 To participate, you should have basic level understanding of the web platform.`,
           location: locations.yle,
+          keywords: [Keyword.AI],
         },
       ],
     },
@@ -94,6 +96,7 @@ Workshop Highlights:
 
 Each section comes with hands-on exercises that will be completed during the workshop. By the end of the workshop, attendees will be competent to use and integrate TypeScript into any project!`,
           location: locations.nitor,
+          keywords: [Keyword.DEVELOPMENT],
         },
       ],
     },
@@ -139,6 +142,7 @@ In this workshop, we'll use Astro to traverse those modern JS technologies by bu
 
 Prerequisites: Fundamentals of JavaScript`,
           location: locations.alma,
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.WORKSHOP,
@@ -159,6 +163,7 @@ Workshop Highlights:
 - Using the Type Checker API
 - Unit Testing our scripts`,
           location: locations.nitor,
+          keywords: [Keyword.DEVELOPMENT],
         },
         /*{
           type: SessionType.WORKSHOP,
@@ -253,6 +258,7 @@ const thursday: Schedule = {
             slides: "",
             video: "",
           },
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.TALK,
@@ -265,6 +271,7 @@ const thursday: Schedule = {
             slides: "",
             video: "",
           },
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
@@ -307,6 +314,7 @@ const thursday: Schedule = {
             slides: "",
             video: "",
           },
+          keywords: [Keyword.AI],
         },
         {
           type: SessionType.TALK,
@@ -319,6 +327,7 @@ const thursday: Schedule = {
             slides: "",
             video: "",
           },
+          keywords: [Keyword.AI],
         },
         {
           type: SessionType.PANEL,
@@ -366,6 +375,7 @@ This talk aims to bring an insightful exploration into the various processes des
             slides: "",
             video: "",
           },
+          keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.TALK,
@@ -379,6 +389,7 @@ This talk aims to bring an insightful exploration into the various processes des
             slides: "",
             video: "",
           },
+          keywords: [Keyword.AI, Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
@@ -425,6 +436,7 @@ We’ll look at two use-cases for shared experiences living on the edge. The fir
             slides: "",
             video: "",
           },
+          keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
@@ -514,6 +526,7 @@ const friday: Schedule = {
             slides: "",
             video: "",
           },
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.TALK,
@@ -526,6 +539,7 @@ const friday: Schedule = {
             slides: "",
             video: "",
           },
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
@@ -569,6 +583,7 @@ const friday: Schedule = {
             slides: "",
             video: "",
           },
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.TALK,
@@ -624,6 +639,7 @@ const friday: Schedule = {
             slides: "",
             video: "",
           },
+          keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.TALK,
@@ -636,6 +652,7 @@ const friday: Schedule = {
             slides: "",
             video: "",
           },
+          keywords: [Keyword.AI, Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
@@ -678,6 +695,7 @@ const friday: Schedule = {
             slides: "",
             video: "",
           },
+          keywords: [Keyword.DEVELOPMENT],
         },
       ],
     },

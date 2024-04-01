@@ -1,4 +1,5 @@
 enum Keyword {
+  AI = "AI",
   ANDROID = "Android",
   ANIMATION = "Animation",
   ARTIFICIAL_INTELLIGENCE = "Artificial Intelligence",
@@ -11,7 +12,9 @@ enum Keyword {
   CSS_GRID = "CSS Grid",
   CODE_QUALITY = "Code quality",
   DESIGN_SYSTEMS = "Design systems",
+  DESIGN = "Design",
   DETOX = "Detox",
+  DEVELOPMENT = "Development",
   EVENTS = "Events",
   GATSBY = "Gatsby",
   GENERATORS = "Generators",
