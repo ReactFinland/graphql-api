@@ -148,6 +148,13 @@ class ConferenceResolver {
   }
 
   @FieldResolver((_) => [Session])
+  public panelOnlySpeakers(@Root() conference: Conference) {
+    const talks = resolveSessions(conference.schedules, [SessionType.PANEL]);
+
+    return getSessionSpeakers(conference, talks, [SessionType.PANEL]);
+  }
+
+  @FieldResolver((_) => [Session])
   public workshops(@Root() conference: Conference) {
     return resolveSessions(conference.schedules, [SessionType.WORKSHOP]);
   }

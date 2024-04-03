@@ -82,6 +82,9 @@ export class Conference {
   public lightningTalkSpeakers?: Contact[];
 
   @Field((_) => [Contact], { nullable: true })
+  public panelOnlySpeakers?: Contact[];
+
+  @Field((_) => [Contact], { nullable: true })
   public workshopInstructors?: Contact[];
 
   @Field((_) => [Session], { nullable: true })
