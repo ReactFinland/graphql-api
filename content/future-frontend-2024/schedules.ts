@@ -605,10 +605,24 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Introduction to TC39",
+          title: "Brief intro to TC39 and how it works",
           description:
-            "Several people from TC39, the standardization group behind ECMAScript, will join us in this session as we discuss what standardization is about and what are the latest movements in the standard.",
-          people: [],
+            "You might have heard of TC39 but do you know what it is and how it works? After this brief introduction you will understand its position in JavaScript ecosystem and how you can contribute to improve standards.",
+          people: [people.uj],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Building polyfills in WebAssembly",
+          description: `ECMA-402 brings Unicode and internationalization features to the Web platform. These features are typically data-heavy and difficult to implement correctly in userland. As the i18n space continues to evolve, new features are made available to Web developers, but it can take time before these features are widely enough available across the Web platform.
+
+This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit in, and show how WebAssembly can be used to ship features before they are available in Web engines.`,
+          people: [people.shane],
           urls: {
             drawing: "",
             slides: "",
@@ -619,21 +633,44 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [],
+          title: "Types, TypeScript and the JIT",
+          description:
+            "Everyone loves a good static typechecker, so why hasn't one been added to JavaScript yet? In this talk, we’ll look at types, type checking, and inline caches, the mechanism used by a just-in-time (JIT) compiler to optimize dynamically typed code. We’ll see how the types used by TypeScript aren’t the same as the ones used by the JIT, learn about the Type Annotations proposal, and understand why it’s unlikely that JavaScript will ever have a static type system.",
+          people: [people.danielM],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
+          keywords: [Keyword.DEVELOPMENT],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Standardizing Source Maps",
+          description:
+            "Source maps, which are essential for debugging modern JavaScript apps, are often buggy themselves! They can fail to map certain source locations and identifier names, or sometimes, they fail to load at all. In a new subgroup of TC39, the JavaScript standards committee, we’re working on fixing these problems by proposing a new standard for the source map format. This talk will describe both the technical and organizational sides of fixing source maps through standardization.",
+          people: [people.danielE],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
           level: Level.INTERMEDIATE,
-          title: "QA",
+          title: "Panel with TC39",
           description: ``,
-          people: [],
+          people: [
+            // "Rob Palmer", // Host
+            people.uj,
+            people.shane,
+            people.danielM,
+            people.danielE,
+            // "Michael Ficarra",
+          ],
           urls: {
             drawing: "",
             slides: "",
