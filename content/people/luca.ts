@@ -9,7 +9,7 @@ const person: Contact = {
   },
   social: {
     homepage: "https://lcas.dev/",
-    mastodon: "", // This has to be a whole link
+    mastodon: "https://mastodon.social/@lcasdev", // This has to be a whole link
     twitter: "lcasdev", // Handle without @ is enough
     github: "lucacasonato",
     facebook: "",
