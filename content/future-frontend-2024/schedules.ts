@@ -513,6 +513,37 @@ const friday: Schedule = {
     {
       begin: "06:00",
       end: "07:30",
+      title: "Choose your own adventure",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Deno and friends with Jo and Luca",
+          description: `In this hands-on session, you will learn about authoring cross-runtime modules, [jsr](https://jsr.io/), [Deno](https://deno.com/), mixing frontend with backend, and many other upcoming topics.`,
+          people: [people.jo, people.luca],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DEVELOPMENT],
+        },
+      ],
+    },
+    {
+      begin: "07:30",
+      end: "08:00",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink tasty Finnish coffee, live long and prosper.",
+        },
+      ],
+    },
+    {
+      begin: "08:00",
+      end: "09:30",
       title: "Green computing",
       sessions: [
         {
@@ -556,19 +587,19 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "07:30",
-      end: "08:00",
+      begin: "09:30",
+      end: "10:30",
       sessions: [
         {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description: "Drink tasty Finnish coffee, live long and prosper.",
+          type: SessionType.LUNCH,
+          title: "Lunch",
+          description: "Lunch with a Finnish twist.",
         },
       ],
     },
     {
-      begin: "08:00",
-      end: "09:30",
+      begin: "10:30",
+      end: "12:00",
       title: "Standardization",
       sessions: [
         {
@@ -612,19 +643,19 @@ const friday: Schedule = {
       ],
     },
     {
-      begin: "09:30",
-      end: "10:30",
+      begin: "12:00",
+      end: "12:30",
       sessions: [
         {
-          type: SessionType.LUNCH,
-          title: "Lunch",
-          description: "Lunch with a Finnish twist.",
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee. Again.",
         },
       ],
     },
     {
-      begin: "10:30",
-      end: "12:00",
+      begin: "12:30",
+      end: "14:00",
       title: "User interaction",
       sessions: [
         {
@@ -665,37 +696,6 @@ const friday: Schedule = {
             slides: "",
             video: "",
           },
-        },
-      ],
-    },
-    {
-      begin: "12:00",
-      end: "12:30",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description: "Drink coffee. Again.",
-        },
-      ],
-    },
-    {
-      begin: "12:30",
-      end: "14:00",
-      title: "Choose your own adventure",
-      sessions: [
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "Deno and friends with Jo",
-          description: `In this hands-on session, you will learn about authoring cross-runtime modules, [jsr](https://jsr.io/), [Deno](https://deno.com/), mixing frontend with backend, and many other upcoming topics.`,
-          people: [people.jo],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DEVELOPMENT],
         },
       ],
     },

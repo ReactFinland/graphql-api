@@ -93,6 +93,7 @@ export { default as laurao } from "./laurao";
 export { default as lauri } from "./lauri";
 export { default as liran } from "./liran";
 export { default as lucaMatteis } from "./luca-matteis";
+export { default as luca } from "./luca";
 export { default as lukas } from "./lukas";
 export { default as lukeJackson } from "./luke-jackson";
 export { default as m4Dz } from "./m4dz";
