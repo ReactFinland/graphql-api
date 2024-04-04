@@ -83,17 +83,14 @@ export class Contact {
 // TODO: Maybe this should become a static method of Conference
 export function getSessionSpeakers(
   conference: Conference,
-  sessions: Session[],
-  sessionTypes?: SessionType[]
+  sessions: Session[]
 ): Contact[] {
-  if (!sessionTypes) {
-    sessionTypes = [
-      SessionType.LIGHTNING_TALK,
-      SessionType.PANEL,
-      SessionType.TALK,
-      SessionType.KEYNOTE,
-    ];
-  }
+  const sessionTypes = [
+    SessionType.LIGHTNING_TALK,
+    SessionType.PANEL,
+    SessionType.TALK,
+    SessionType.KEYNOTE,
+  ];
 
   const talks = resolveSessions(conference.schedules, sessionTypes);
   const workshops = resolveSessions(conference.schedules, [

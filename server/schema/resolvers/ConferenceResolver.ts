@@ -149,9 +149,16 @@ class ConferenceResolver {
 
   @FieldResolver((_) => [Session])
   public panelOnlySpeakers(@Root() conference: Conference) {
-    const talks = resolveSessions(conference.schedules, [SessionType.PANEL]);
+    const talks = resolveSessions(conference.schedules, [SessionType.TALK]);
+    const talkSpeakers = getSessionSpeakers(conference, talks);
+    const panels = resolveSessions(conference.schedules, [SessionType.PANEL]);
+    const panelSpeakers = getSessionSpeakers(conference, panels);
 
-    return getSessionSpeakers(conference, talks, [SessionType.PANEL]);
+    // The idea is to substract talk speakers from panel speakers.
+    // Likely there's a simpler way to do this but this is enough for now
+    return panelSpeakers.filter(
+      (s) => !talkSpeakers.map((t) => t.name).includes(s.name)
+    );
   }
 
   @FieldResolver((_) => [Session])
