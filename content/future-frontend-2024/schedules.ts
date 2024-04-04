@@ -647,9 +647,9 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Standardizing Source Maps",
+          title: "Standardizing Signals",
           description:
-            "Source maps, which are essential for debugging modern JavaScript apps, are often buggy themselves! They can fail to map certain source locations and identifier names, or sometimes, they fail to load at all. In a new subgroup of TC39, the JavaScript standards committee, we’re working on fixing these problems by proposing a new standard for the source map format. This talk will describe both the technical and organizational sides of fixing source maps through standardization.",
+            "Signals are a state management solution that has generated a lot of interest by the library authors during the past few years within the JavaScript ecosystem. Given the large interest, there is a need to come up with shared primitives to arrive at shared semantics. In this talk, we discuss [the signals proposal](https://github.com/proposal-signals/proposal-signals), its main characteristics, and potential impact on the ecosystem.",
           people: [people.danielE],
           urls: {
             drawing: "",
