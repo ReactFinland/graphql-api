@@ -62,7 +62,6 @@ const conference: Conference = {
   locations: [locations.paasitorni],
   mcs: [people.janiEvakallio, people.tuuliTiilikainen],
   organizers: [
-    people.aleksiPousar,
     people.eemeliAro,
     people.harriMaatta,
     people.juhoVepsalainen,
