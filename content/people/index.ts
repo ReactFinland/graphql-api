@@ -144,6 +144,7 @@ export { default as rachelNabors } from "./rachel-nabors";
 export { default as rami } from "./rami";
 export { default as rebeccaHill } from "./rebecca-hill";
 export { default as rickHanlon } from "./rick-hanlon";
+export { default as rob } from "./rob";
 export { default as roosa } from "./roosa";
 export { default as rotemMizrachiMeidan } from "./rotem-mizrachi-meidan";
 export { default as ryan } from "./ryan";

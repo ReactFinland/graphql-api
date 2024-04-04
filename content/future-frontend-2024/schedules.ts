@@ -664,12 +664,12 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
           title: "Panel with TC39",
           description: ``,
           people: [
-            // "Rob Palmer", // Host
+            people.rob,
             people.uj,
             people.shane,
             people.danielM,
             people.danielE,
-            // "Michael Ficarra",
+            people.michael,
           ],
           urls: {
             drawing: "",

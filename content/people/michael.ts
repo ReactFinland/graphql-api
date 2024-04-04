@@ -1,31 +1,32 @@
 import { Contact, ContactType } from "../../server/schema/Contact";
-import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
-  name: "Michael Shilman",
-  about: "Building Storybook and Chroma.",
+  name: "Michael Ficarra",
+  about:
+    "Distinguished Engineer at Shape Security, part of F5. Mainly interested in creating static analysis tools, working on parsers/compilers, and application security.",
   image: {
-    url: "people/michael.jpg",
+    url: "people/michael.jpeg",
   },
   social: {
-    homepage: "",
-    twitter: "mshilman",
-    github: "shilman",
+    homepage: "https://justgrahamthings.tumblr.com/",
+    mastodon: "https://mastodon.social/@michaelficarra", // This has to be a whole link
+    twitter: "smooshMap", // Handle without @ is enough
+    github: "michaelficarra",
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "mficarra",
     youtube: "",
     devto: "",
   },
   location: {
     country: {
-      name: "Taiwan",
-      code: "TW",
+      name: "United States",
+      code: "US",
     },
-    city: "Taipei",
+    city: "Denver",
   },
-  keywords: [Keyword.REACT],
+  keywords: [],
   type: [ContactType.SPEAKER],
 };
 
