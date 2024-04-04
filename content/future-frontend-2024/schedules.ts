@@ -250,7 +250,7 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "Qwik 2.0",
           description: "",
           people: [people.yoav],
           urls: {
