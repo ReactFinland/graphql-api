@@ -1,7 +1,7 @@
 import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
-  name: "Evitec",
+  name: "Evitec Solutions",
   about: "Inspiring innovations in finance",
   image: {
     url: "sponsors/evitec.svg",
