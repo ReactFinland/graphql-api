@@ -61,7 +61,7 @@ As an introductionary workshop, the idea is to expose you to the core ideas behi
 
 To participate, you should have basic level understanding of the web platform.`,
           location: locations.yle,
-          keywords: [Keyword.AI],
+          keywords: [Keyword.AI, Keyword.DEVELOPMENT],
         },
       ],
     },
