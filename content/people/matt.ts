@@ -7,7 +7,7 @@ const person: Contact = {
 
 Previously Matt has run startup accelerators, was co-founder and CEO of pioneering design studio BERG, and in 2004 he co-authored Mind Hacks (translated into seven languages), a pop science dive into cognitive neuroscience.
 
-He writes at [Interconnected](https://interconnected.org) and lives in London.`
+He writes at [Interconnected](https://interconnected.org) and lives in London.`,
   image: {
     url: "people/matt-webb.jpeg",
   },
