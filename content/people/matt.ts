@@ -3,8 +3,11 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 
 const person: Contact = {
   name: "Matt Webb",
-  about:
-    "Exploring new products through thinking and making via Acts Not Facts, for me and for you too if you like.",
+  about: `Matt Webb is founder of new studio [Acts Not Facts](https://www.actsnotfacts.com). For 20 years he has collaborated with some of the world’s largest firms on design-led product invention using new technology. He is currently manufacturing a clock that tells the time with AI-composed poems ([Poem/1](https://poem.town)).
+
+Previously Matt has run startup accelerators, was co-founder and CEO of pioneering design studio BERG, and in 2004 he co-authored Mind Hacks (translated into seven languages), a pop science dive into cognitive neuroscience.
+
+He writes at [Interconnected](https://interconnected.org) and lives in London.`
   image: {
     url: "people/matt-webb.jpeg",
   },

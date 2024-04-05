@@ -306,9 +306,9 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
+          title: "How to design and build your own LLMs?",
           description: "",
-          people: [people.matt],
+          people: [people.maggie],
           urls: {
             drawing: "",
             slides: "",
@@ -319,9 +319,10 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.maggie],
+          title: "Non-human teammates and AI clocks",
+          description:
+            "Matt explores human-AI interaction via projects and prototypes, and makes the argument for playful sketching as a path to meaningful product invention.",
+          people: [people.matt],
           urls: {
             drawing: "",
             slides: "",
