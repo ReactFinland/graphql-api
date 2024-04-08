@@ -306,8 +306,10 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "How to design and build your own LLMs?",
-          description: "",
+          title: "Squish Meets Structure — Designing with Shoggoth",
+          description: `Language models feel like squishy, alien minds we've organically grown inside a GPU cluster. They are unlike any of our existing computational tools. They're predictably unpredictable and break many of our pre-conceived notions of how computers work. How are we supposed to design with these messy, unwieldy, Shoggoth-like creatures?
+
+In her talk, Maggie will cover how to balance squish and structure, why compositionally matters, and explore the potential of treating models as small, single-purpose reasoning engines.`,
           people: [people.maggie],
           urls: {
             drawing: "",
