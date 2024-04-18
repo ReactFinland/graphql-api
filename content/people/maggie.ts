@@ -7,7 +7,7 @@ const person: Contact = {
 
 Titles and disciplines are fickle and fleeting. But my work fits under the umbrellas of UX design, visual interface design, and DX (developer experience). With some cultural analysis, writing, and visual illustration sprinkled on top.
 
-I currently lead design atElicitwhere we're exploring how machine learning can help researchers with open-ended reasoning.`,
+I currently lead design at Elicit where we're exploring how machine learning can help researchers with open-ended reasoning.`,
   image: {
     url: "people/maggie.jpeg",
   },
