@@ -250,7 +250,8 @@ const thursday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Qwik 2.0",
+          title:
+            "How Qwik's Optimizer (compiler) allows JavaScript streaming and automatic optimization",
           description: "",
           people: [people.yoav],
           urls: {
