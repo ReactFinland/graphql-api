@@ -4,7 +4,7 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 const person: Contact = {
   name: "Yoav Ganbar",
   about:
-    "DevRel 🥑 & DX @ Builder.io | Content Creator | Software Architect | Tech Lead | Podcast host | Community Organizer",
+    "Frontend Engineer | Web Developer | DevRel | Public Speaker | Content Creator | Frontend Architect | Tech Lead | Podcast host | Community Organizer",
   image: {
     url: "people/yoav.jpeg",
   },
