@@ -27,6 +27,7 @@ export { default as gatsby } from "./gatsby";
 export { default as geekle } from "./geekle";
 export { default as geniem } from "./geniem";
 export { default as ginetta } from "./ginetta";
+export { default as glorium } from "./glorium";
 export { default as gofore } from "./gofore";
 export { default as gqlhongkong } from "./gqlhongkong";
 export { default as graphqlFinland } from "./graphql-finland";
