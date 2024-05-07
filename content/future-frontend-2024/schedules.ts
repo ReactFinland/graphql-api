@@ -18,7 +18,7 @@ const tuesday: Schedule = {
   description: "Tuesday – workshops",
   // location: locations.paasitorni,
   intervals: [
-    {
+    /*{
       begin: "05:00",
       end: "06:00",
       sessions: [
@@ -29,7 +29,7 @@ const tuesday: Schedule = {
         },
       ],
     },
-    /*{
+    {
       begin: "06:00",
       end: "09:00",
       sessions: [
@@ -108,7 +108,7 @@ const wednesday: Schedule = {
   description: "Wednesday – workshops",
   // location: locations.paasitorni,
   intervals: [
-    {
+    /*{
       begin: "05:00",
       end: "06:00",
       sessions: [
@@ -118,7 +118,7 @@ const wednesday: Schedule = {
           description: "Register before the workshop.",
         },
       ],
-    },
+    },*/
     {
       begin: "06:00",
       end: "14:00",
