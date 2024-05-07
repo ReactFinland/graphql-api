@@ -174,41 +174,6 @@ Workshop Highlights:
         },*/
       ],
     },
-    {
-      begin: "09:00",
-      end: "10:00",
-      sessions: [
-        {
-          type: SessionType.LUNCH,
-          title: "Lunch",
-          description:
-            "We have Finnish food in store for people attending workshops.",
-        },
-      ],
-    },
-    {
-      begin: "10:00",
-      end: "11:30",
-      title: "Workshops continue",
-      sessions: [],
-    },
-    {
-      begin: "11:30",
-      end: "12:00",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description: "Drink coffee, tea, or water.",
-        },
-      ],
-    },
-    {
-      begin: "12:00",
-      end: "14:00",
-      title: "Workshops continue",
-      sessions: [],
-    },
   ],
 };
 
