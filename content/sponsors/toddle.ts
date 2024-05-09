@@ -8,9 +8,9 @@ const sponsor: Contact = {
   },
   social: {
     homepage: "https://toddle.dev/",
-    linkedin: "company/toddledev"
+    linkedin: "company/toddledev",
     twitter: "toddledev",
-    youtube: "@toddledev"
+    youtube: "@toddledev",
   },
   location: {
     country: {
