@@ -3,6 +3,7 @@ export { default as aarniKoskela } from "./aarni-koskela";
 export { default as adamMiskiewicz } from "./adam-miskiewicz";
 export { default as aleksandra } from "./aleksandra";
 export { default as aleksiPousar } from "./aleksi-pousar";
+export { default as andreas } from "./andreas";
 export { default as andrei } from "./andrei";
 export { default as andrewRhyne } from "./andrew-rhyne";
 export { default as andreyG } from "./andrey-g";

@@ -346,11 +346,24 @@ We’ll look at two use-cases for shared experiences living on the edge. The fir
           keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
         {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Developing web applications on web",
+          description: `What if the future of web development is on top of the web platform itself? In his talk, Andreas covers the angle by showcasing how Toddle bootstrapped a system to achieve exactly this.`,
+          people: [people.andreas],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
+        },
+        {
           type: SessionType.PANEL,
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.mo, people.samuel],
+          people: [people.mo, people.samuel, people.andreas],
           urls: {
             drawing: "",
             slides: "",
