@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Toddle",
   about: "Why use a text editor to build web apps?",
   image: {
-    url: "sponsors/toddle.svg",
+    url: "sponsors/toddle2.svg",
   },
   social: {
     homepage: "https://toddle.dev/",
