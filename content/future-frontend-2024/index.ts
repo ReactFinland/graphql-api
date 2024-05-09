@@ -41,7 +41,11 @@ const silverSponsors = [
   // allSponsors.elisa,
   // allSponsors.knowit,
 ];
-const bronzeSponsors = [allSponsors.alma, allSponsors.knowit];
+const bronzeSponsors = [
+  allSponsors.alma,
+  allSponsors.knowit,
+  allSponsors.toddle,
+];
 const platformSponsors = [];
 const sponsors = partners.concat(
   goldSponsors,

@@ -82,6 +82,7 @@ export { default as stickermule } from "./stickermule";
 export { default as supermetrics } from "./supermetrics";
 export { default as survivejs } from "./survivejs";
 export { default as techEvents } from "./tech-events";
+export { default as toddle } from "./toddle";
 export { default as toska } from "./toska";
 export { default as typeof } from "./typeof";
 export { default as utopia } from "./utopia";
