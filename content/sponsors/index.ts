@@ -21,6 +21,7 @@ export { default as elisa } from "./elisa";
 export { default as evitec } from "./evitec";
 export { default as fb } from "./fb";
 export { default as formidable } from "./formidable";
+export { default as frankenjs } from "./frankenjs";
 export { default as friikit } from "./friikit";
 export { default as futurice } from "./futurice";
 export { default as gatsby } from "./gatsby";
