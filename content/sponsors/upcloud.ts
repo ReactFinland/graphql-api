@@ -1,7 +1,7 @@
 import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
-  name: "Upcloud",
+  name: "UpCloud",
   about: "Fast, flexible, and reliable cloud",
   image: {
     url: "sponsors/upcloud.svg",
