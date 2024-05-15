@@ -348,8 +348,8 @@ We’ll look at two use-cases for shared experiences living on the edge. The fir
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Developing web applications on web",
-          description: `What if the future of web development is on top of the web platform itself? In his talk, Andreas covers the angle by showcasing how Toddle bootstrapped a system to achieve exactly this.`,
+          title: "Develop web applications with no duplicate work",
+          description: `What if the future of web development is on top of the web platform itself? In his talk, Andreas covers how you can do less tedious replication and focus on the build. He'll share how [toddle](https://www.toddle.dev/) bootstrapped a system to achieve exactly this.`,
           people: [people.andreas],
           urls: {
             drawing: "",
