@@ -34,7 +34,7 @@ const partners = [
   allSponsors.nitor,
   allSponsors.vihat,
 ];
-const goldSponsors = [];
+const goldSponsors = [allSponsors.digia];
 const silverSponsors = [
   allSponsors.evitec,
   allSponsors.upcloud,
