@@ -629,9 +629,9 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Standardizing Signals",
+          title: `Standardizing "Signals" in TC39`,
           description:
-            "Signals are a state management solution that has generated a lot of interest by the library authors during the past few years within the JavaScript ecosystem. Given the large interest, there is a need to come up with shared primitives to arrive at shared semantics. In this talk, we discuss [the signals proposal](https://github.com/proposal-signals/proposal-signals), its main characteristics, and potential impact on the ecosystem.",
+            "Modern web frameworks work with one-way data flow. What is displayed on the screen is a function of the application state, and updates to that state only update the particular part of the DOM to which it relates. Through their own paths, many other web frameworks have arrived at solutions which are analogous to each other, often called “Signals.” Now, a group of signal library authors and maintainers of front-end frameworks are working together in TC39 to standardize some of the core data structures and algorithms that will be required for JS implementations of Signals, and we could use your help pushing JavaScript forward.",
           people: [people.danielE],
           urls: {
             drawing: "",
