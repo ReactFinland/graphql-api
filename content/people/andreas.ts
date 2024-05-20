@@ -11,7 +11,7 @@ const person: Contact = {
   social: {
     homepage: "",
     mastodon: "", // This has to be a whole link
-    twitter: "", // Handle without @ is enough
+    twitter: "cullophid", // Handle without @ is enough
     github: "",
     facebook: "",
     medium: "",
