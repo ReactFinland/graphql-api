@@ -615,20 +615,6 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Types, TypeScript and the JIT",
-          description:
-            "Everyone loves a good static typechecker, so why hasn't one been added to JavaScript yet? In this talk, we’ll look at types, type checking, and inline caches, the mechanism used by a just-in-time (JIT) compiler to optimize dynamically typed code. We’ll see how the types used by TypeScript aren’t the same as the ones used by the JIT, learn about the Type Annotations proposal, and understand why it’s unlikely that JavaScript will ever have a static type system.",
-          people: [people.danielM],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DEVELOPMENT],
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
           title: `Standardizing "Signals" in TC39`,
           description:
             "Modern web frameworks work with one-way data flow. What is displayed on the screen is a function of the application state, and updates to that state only update the particular part of the DOM to which it relates. Through their own paths, many other web frameworks have arrived at solutions which are analogous to each other, often called “Signals.” Now, a group of signal library authors and maintainers of front-end frameworks are working together in TC39 to standardize some of the core data structures and algorithms that will be required for JS implementations of Signals, and we could use your help pushing JavaScript forward.",
@@ -649,7 +635,6 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
             people.rob,
             people.uj,
             people.shane,
-            people.danielM,
             people.danielE,
             people.michael,
           ],
