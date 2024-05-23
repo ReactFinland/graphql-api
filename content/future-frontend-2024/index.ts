@@ -21,7 +21,7 @@ const partners = [
   // allSponsors.webexpo,
   // allSponsors.columbiaroad,
   // allSponsors.loihdefactor,
-  // allSponsors.stickermule,
+  allSponsors.stickermule,
   allSponsors.glorium,
   allSponsors.grusp,
   allSponsors.kongres,
