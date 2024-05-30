@@ -748,4 +748,22 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
   ],
 };
 
-export default [tuesday, wednesday, thursday, friday];
+const saturday: Schedule = {
+  day: "2024-06-15",
+  description: "Enjoy sunny Helsinki",
+  intervals: [
+    {
+      begin: "08:00",
+      end: "23:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "Sideways music festival",
+          description: `[Sideways music festival](https://en.sidewayshelsinki.fi/) occurs at the same time with the conference and continues to Saturday when you can still catch up with the event.`,
+        },
+      ],
+    },
+  ],
+};
+
+export default [tuesday, wednesday, thursday, friday, saturday];
