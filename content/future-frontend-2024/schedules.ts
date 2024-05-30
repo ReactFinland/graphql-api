@@ -434,6 +434,19 @@ This talk aims to bring an insightful exploration into the various processes des
         },
       ],
     },
+    {
+      begin: "13:30",
+      end: "17:00",
+      title: "Meetup",
+      sessions: [
+        {
+          type: SessionType.MEETUP,
+          title: "FLUTTER Meetup - The Summer (is Crazy) 2024 edition!",
+          description: `Helsinki Flutter Meetup Group organizes a [Flutter](https://flutter.dev/) (Google's UI framework) related meetup. As the program begins at 17:00 and then trip takes around ten minutes, you can catch the meetup in time. In case you decide to join, [register to the meetup separately](https://www.meetup.com/Helsinki-Flutter-Meetup-Group/events/301314953).`,
+          // location: locations.rooftopmiami,
+        },
+      ],
+    },
     /*
     {
       begin: "14:30",
