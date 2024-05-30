@@ -16,6 +16,7 @@ export { default as rooftopmiami } from "./rooftopmiami";
 export { default as saeWien } from "./sae-wien";
 export { default as tiivistamo } from "./tiivistamo";
 export { default as tuas } from "./tuas";
+export { default as upcloud } from "./upcloud";
 export { default as valkoinenSali } from "./valkoinen-sali";
 export { default as wuWien } from "./wu-wien";
 export { default as yle } from "./yle";
