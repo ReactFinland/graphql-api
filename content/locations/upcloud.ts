@@ -2,7 +2,7 @@ import { Location } from "../../server/schema/Location";
 
 // FIXME: These should be Contacts instead -> Location can become simpler again
 const location: Location = {
-  name: "UpCloud",
+  name: "UpCloud HQ",
   about: "Fast, flexible, and reliable cloud.",
   social: {
     homepage: "https://upcloud.com/",

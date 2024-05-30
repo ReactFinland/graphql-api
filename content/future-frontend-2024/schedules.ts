@@ -739,7 +739,7 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
       sessions: [
         {
           type: SessionType.PARTY,
-          title: "Afterparty at UpCloud",
+          title: "Afterparty at UpCloud HQ",
           description:
             "Conference afterparty takes place at UpCloud offices. Make sure to register separately through the provided registration link.",
           location: locations.upcloud,
