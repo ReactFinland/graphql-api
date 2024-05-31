@@ -557,8 +557,10 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title:
+            "Challenges in green coding – the academic perspective and experiences",
+          description:
+            "In this talk the status of green coding is defined from the academic literature perspective as well as from the practical perspective of experiences from different universities.",
           people: [people.jari],
           urls: {
             drawing: "",
