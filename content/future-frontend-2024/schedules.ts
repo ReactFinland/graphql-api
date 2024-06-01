@@ -174,6 +174,18 @@ Workshop Highlights:
         },*/
       ],
     },
+    {
+      begin: "16:00",
+      end: "19:00",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "Football game - Gnistan vs. HJK",
+          description:
+            "In this football match, two local teams meet. Gnistan is the underdog while HJK is the reigning champion (four times in a row) that has been underperforming lately. You can [learn more about this football game online](https://www.tiketti.fi/if-gnistan-hjk-mustapekka-areena-helsinki-lippuja/100187?b=1&b=1).",
+        },
+      ],
+    },
   ],
 };
 
