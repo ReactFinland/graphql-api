@@ -545,7 +545,8 @@ const friday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Hammers, hurricanes, and HTML",
-          description: "",
+          description:
+            "What’s the environmental impact of your website? It’s a simple question, but no one seems to have a clear answer. So let’s explore the latest algorithms and heuristics to measure your carbon footprint. Then, we’ll apply JS libraries to real-world applications and test that footprint ourselves. I won’t promise a silver bullet, but you WILL walk away with tools to measure and reduce your impact for a better web. ",
           people: [people.ben],
           urls: {
             drawing: "",
