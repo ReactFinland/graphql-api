@@ -217,7 +217,8 @@ const thursday: Schedule = {
           level: Level.INTERMEDIATE,
           title:
             "How Qwik's Optimizer (compiler) allows JavaScript streaming and automatic optimization",
-          description: "",
+          description:
+            "Discover how Qwik's innovative compiler transforms development by enabling automatic optimization and JavaScript streaming. In this session, I'll share my journey with Qwik, explaining how it effortlessly solves performance challenges through its Rust and SWC-based compiler. By breaking down code into lazy loadable (and lazy excuted) asynchronous packets, Qwik allows JavaScript streaming. Through demos and real-world examples, you'll see why Qwik should be an essential part of your development toolkit, aligning with the trend of enhancing performance and developer experience in modern frameworks.",
           people: [people.yoav],
           urls: {
             drawing: "",
