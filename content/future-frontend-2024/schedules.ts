@@ -192,7 +192,7 @@ Workshop Highlights:
 const thursday: Schedule = {
   day: "2024-06-13",
   description: "Thursday – conference",
-  location: locations.porssitalo,
+  location: locations.paasitorni,
   intervals: [
     {
       begin: "05:00",
@@ -341,7 +341,7 @@ In her talk, Maggie will cover how to balance squish and structure, why composit
     {
       begin: "10:30",
       end: "12:00",
-      title: "UI, Design, and Edge",
+      title: "UI, design, and edge",
       sessions: [
         {
           type: SessionType.TALK,
@@ -402,7 +402,7 @@ We’ll look at two use-cases for shared experiences living on the edge. The fir
     {
       begin: "12:30",
       end: "14:00",
-      title: "Design",
+      title: "AI meets design",
       sessions: [
         {
           type: SessionType.TALK,
@@ -495,7 +495,7 @@ This talk aims to bring an insightful exploration into the various processes des
 const friday: Schedule = {
   day: "2024-06-14",
   description: "Friday – conference",
-  location: locations.porssitalo,
+  location: locations.paasitorni,
   intervals: [
     {
       begin: "05:00",
