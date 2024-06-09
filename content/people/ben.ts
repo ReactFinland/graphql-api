@@ -4,8 +4,8 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Ben Holmes",
   about:
-    "Core developer of Astro. Frontend developer and designer working with teams to build accessible, compelling web experiences. 4+ years of frontend experience using HTML + CSS, ReactJS, AngularJS, and the Adobe design suite. Also experienced in OOP principles using Java (education) and C# (backend).",
-  tagline: "President of whiteboards",
+    "Ben is an Astro core maintainer, content creator, and whiteboardist making the web a little better. You'll find him hacking with TypeScript or sharing bite-sized learnings on YouTube as [@bholmesdev](https://www.youtube.com/@bholmesdev).",
+  tagline: "Astro senior developer",
   image: {
     url: "people/ben.jpeg",
   },
