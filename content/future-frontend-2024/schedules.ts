@@ -561,10 +561,11 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Hammers, hurricanes, and HTML",
+          title:
+            "Challenges in green coding – the academic perspective and experiences",
           description:
-            "What’s the environmental impact of your website? It’s a simple question, but no one seems to have a clear answer. So let’s explore the latest algorithms and heuristics to measure your carbon footprint. Then, we’ll apply JS libraries to real-world applications and test that footprint ourselves. I won’t promise a silver bullet, but you WILL walk away with tools to measure and reduce your impact for a better web. ",
-          people: [people.ben],
+            "In this talk the status of green coding is defined from the academic literature perspective as well as from the practical perspective of experiences from different universities.",
+          people: [people.jari],
           urls: {
             drawing: "",
             slides: "",
@@ -575,11 +576,10 @@ const friday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title:
-            "Challenges in green coding – the academic perspective and experiences",
+          title: "Hammers, hurricanes, and HTML",
           description:
-            "In this talk the status of green coding is defined from the academic literature perspective as well as from the practical perspective of experiences from different universities.",
-          people: [people.jari],
+            "What’s the environmental impact of your website? It’s a simple question, but no one seems to have a clear answer. So let’s explore the latest algorithms and heuristics to measure your carbon footprint. Then, we’ll apply JS libraries to real-world applications and test that footprint ourselves. I won’t promise a silver bullet, but you WILL walk away with tools to measure and reduce your impact for a better web. ",
+          people: [people.ben],
           urls: {
             drawing: "",
             slides: "",
