@@ -2,7 +2,8 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 
 const person: Contact = {
   name: "Rob Palmer",
-  about: "Engineering Manager at Bloomberg LP.",
+  about:
+    "Rob Palmer leads JavaScript Infrastructure at Bloomberg. He serves as Co-chair of Ecma TC39 - the JavaScript language committee. He works on scaling JavaScript and TypeScript to power the Bloomberg Terminal with an emphasis on performance for users and developers. He enjoys collaborative investments in open source that expand the boundaries and applications of JavaScript.",
   image: {
     url: "people/rob.jpeg",
   },
