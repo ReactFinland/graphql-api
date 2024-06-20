@@ -247,7 +247,8 @@ const thursday: Schedule = {
           people: [people.jason],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://docs.google.com/presentation/d/11HF_GY86VG005OcX25OELOREVEbmkz4_U-ARKNPC5lg/edit#slide=id.p",
             video: "",
           },
           keywords: [Keyword.DEVELOPMENT],
@@ -417,7 +418,8 @@ This talk aims to bring an insightful exploration into the various processes des
           people: [people.thaisSantos],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1WlZunI0bgIRCaisC4McyS5WsFZGgNKCo/view?usp=sharing",
             video: "",
           },
           keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
@@ -707,7 +709,8 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
           people: [people.rachelNabors],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/168yuSLseKKOj-HpOyGwbqu03qRsmUl1h/view?usp=sharing",
             video: "",
           },
           keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
