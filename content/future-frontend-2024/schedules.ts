@@ -369,7 +369,8 @@ We’ll look at two use-cases for shared experiences living on the edge. The fir
           people: [people.andreas],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://docs.google.com/presentation/d/1Ii7UgXktDuZW26TdQkaAHDBSRp_AtFVznctMPYL0B90/edit#slide=id.g2b073b514a6_0_0",
             video: "",
           },
           keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
