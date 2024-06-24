@@ -62,6 +62,12 @@ As an introductionary workshop, the idea is to expose you to the core ideas behi
 To participate, you should have basic level understanding of the web platform.`,
           location: locations.yle,
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
+          urls: {
+            drawing: "",
+            slides:
+              "https://drive.google.com/file/d/1PCLrh8ybg3lLtWZSwgWk_EqMGlG5CO1A/view?usp=sharing",
+            video: "",
+          },
         },
       ],
     },
@@ -434,7 +440,8 @@ This talk aims to bring an insightful exploration into the various processes des
           people: [people.zak],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1DNotD-iWHfN--DFK56fdwgoAVxfEH9FI/view?usp=sharing",
             video: "",
           },
           keywords: [Keyword.AI, Keyword.DESIGN, Keyword.DEVELOPMENT],
