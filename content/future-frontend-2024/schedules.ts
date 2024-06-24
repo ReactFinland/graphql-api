@@ -571,7 +571,8 @@ const friday: Schedule = {
           people: [people.jari],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1OLaFmIjZvF5Gi2GngqZtZmto4DnYvR3y/view?usp=sharing",
             video: "",
           },
           keywords: [Keyword.DEVELOPMENT],
