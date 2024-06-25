@@ -314,7 +314,8 @@ In her talk, Maggie will cover how to balance squish and structure, why composit
           people: [people.matt],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1gR_013liR-jrNQ-4izOhiYt6YWV7PNhy/view?usp=sharing",
             video: "",
           },
           keywords: [Keyword.AI],
