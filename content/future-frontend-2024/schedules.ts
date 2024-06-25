@@ -309,8 +309,12 @@ In her talk, Maggie will cover how to balance squish and structure, why composit
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Non-human teammates and AI clocks",
-          description:
-            "Matt explores human-AI interaction via projects and prototypes, and makes the argument for playful sketching as a path to meaningful product invention.",
+          description: `Matt explores human-AI interaction via projects and prototypes, and makes the argument for playful sketching as a path to meaningful product invention.
+
+See the links below for further information:
+
+* [Lares smart home assistant: A toy AI agent demonstrating emergent behavior](https://interconnected.org/more/2024/lares/)
+* [Exploring AI interaction design and multiplayer with tldraw](https://blog.partykit.io/posts/ai-interactions-with-tldraw/)`,
           people: [people.matt],
           urls: {
             drawing: "",
