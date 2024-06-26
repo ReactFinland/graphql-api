@@ -240,7 +240,8 @@ const thursday: Schedule = {
           people: [people.yoav],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1dt-GNEXmdS2ju9ahp2VxCgA8vXr2U2dA/view?usp=sharing",
             video: "",
           },
           keywords: [Keyword.DEVELOPMENT],
