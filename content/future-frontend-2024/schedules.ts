@@ -541,13 +541,42 @@ const friday: Schedule = {
     {
       begin: "06:00",
       end: "07:30",
-      title: "Choose your own adventure",
+      title: "Deno",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Deno and friends with Jo and Luca",
-          description: `In this hands-on session, you will learn about authoring cross-runtime modules, [jsr](https://jsr.io/), [Deno](https://deno.com/), mixing frontend with backend, and many other upcoming topics.`,
+          title:
+            "JSR - A modern package registry for JavaScript and TypeScript",
+          description:
+            "In this talk, Luca describes [JSR](https://jsr.io/) and how it can be used as a replacement for the popular [npm](https://www.npmjs.com/) package registry while improving package authoring and consuming experience.",
+          people: [people.luca],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DEVELOPMENT],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Building an in-browser editor",
+          description:
+            "In this talk, Jo will show us how to build an in-browser editor using the [Deno](https://deno.com/) stack.",
+          people: [people.jo],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DEVELOPMENT],
+        },
+        {
+          type: SessionType.PANEL,
+          level: Level.INTERMEDIATE,
+          title: "QA",
+          description: ``,
           people: [people.jo, people.luca],
           urls: {
             drawing: "",
