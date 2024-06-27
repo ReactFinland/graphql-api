@@ -242,7 +242,8 @@ const thursday: Schedule = {
             drawing: "",
             slides:
               "https://drive.google.com/file/d/1dt-GNEXmdS2ju9ahp2VxCgA8vXr2U2dA/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=7UTMgCku11E&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=1&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -256,7 +257,8 @@ const thursday: Schedule = {
             drawing: "",
             slides:
               "https://docs.google.com/presentation/d/11HF_GY86VG005OcX25OELOREVEbmkz4_U-ARKNPC5lg/edit#slide=id.p",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=3f3Ev0zASsI&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=2&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -269,7 +271,8 @@ const thursday: Schedule = {
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=Ro4bgTxbWHE&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=3&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -302,7 +305,8 @@ In her talk, Maggie will cover how to balance squish and structure, why composit
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=zhtdGC70anA&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=4&pp=gAQBiAQB",
           },
           keywords: [Keyword.AI],
         },
@@ -321,7 +325,8 @@ See the links below for further information:
             drawing: "",
             slides:
               "https://drive.google.com/file/d/1gR_013liR-jrNQ-4izOhiYt6YWV7PNhy/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=dTMd0qdu8io&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=5&pp=gAQBiAQB",
           },
           keywords: [Keyword.AI],
         },
@@ -334,7 +339,8 @@ See the links below for further information:
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=-KZxZNqgD8s&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=6&pp=gAQBiAQB",
           },
           keywords: [Keyword.AI],
         },
@@ -369,7 +375,8 @@ We’ll look at two use-cases for shared experiences living on the edge. The fir
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=BRce-DHEoNc&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=7&pp=gAQBiAQB",
           },
           keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
@@ -383,7 +390,8 @@ We’ll look at two use-cases for shared experiences living on the edge. The fir
             drawing: "",
             slides:
               "https://docs.google.com/presentation/d/1Ii7UgXktDuZW26TdQkaAHDBSRp_AtFVznctMPYL0B90/edit#slide=id.g2b073b514a6_0_0",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=wxTO1Jo67UY&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=8&pp=gAQBiAQB",
           },
           keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
@@ -396,7 +404,8 @@ We’ll look at two use-cases for shared experiences living on the edge. The fir
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=2G0KGOfIvVU&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=9&pp=gAQBiAQB",
           },
           keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
@@ -433,7 +442,8 @@ This talk aims to bring an insightful exploration into the various processes des
             drawing: "",
             slides:
               "https://drive.google.com/file/d/1WlZunI0bgIRCaisC4McyS5WsFZGgNKCo/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=ded8rHHCVmo&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=10&pp=gAQBiAQB",
           },
           keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
@@ -448,7 +458,8 @@ This talk aims to bring an insightful exploration into the various processes des
             drawing: "",
             slides:
               "https://drive.google.com/file/d/1DNotD-iWHfN--DFK56fdwgoAVxfEH9FI/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=PtvA3CTFJZo&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=11&pp=gAQBiAQB",
           },
           keywords: [Keyword.AI, Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
@@ -461,7 +472,8 @@ This talk aims to bring an insightful exploration into the various processes des
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=RZj5jAaCDFM&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=12&pp=gAQBiAQB",
           },
           keywords: [Keyword.AI, Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
@@ -554,7 +566,8 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=r8uqJNatsJQ&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=13&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -568,7 +581,8 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=WXkwZ9E44x0&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=14&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -581,7 +595,8 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=vf_W5aIOwjY&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=15&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -615,7 +630,8 @@ const friday: Schedule = {
             drawing: "",
             slides:
               "https://drive.google.com/file/d/1OLaFmIjZvF5Gi2GngqZtZmto4DnYvR3y/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=XsRolnrlybY&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=16&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -630,7 +646,8 @@ const friday: Schedule = {
             drawing: "",
             slides:
               "https://drive.google.com/file/d/1kQGy8Vb50yznzRUgQQNOrdjaf-UXfNGw/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=EE0ERYEoWLo&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=17&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -643,7 +660,8 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=7n5HhWZPg_M&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=18&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -675,7 +693,8 @@ const friday: Schedule = {
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=ZTqNKLZ2vPg&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=19&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -690,7 +709,8 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=lM8zNOfhknw&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=20&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -704,7 +724,8 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=lFpTDmP-PjY&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=21&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -723,7 +744,8 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=cy6N3kynOGg&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=22&pp=gAQBiAQB",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -756,7 +778,8 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
             drawing: "",
             slides:
               "https://drive.google.com/file/d/168yuSLseKKOj-HpOyGwbqu03qRsmUl1h/view?usp=sharing",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=VJ9GD_S-wGs&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=23&pp=gAQBiAQB",
           },
           keywords: [Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
@@ -769,7 +792,8 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=WN-PJRIBAXk&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=24&pp=gAQBiAQB",
           },
           keywords: [Keyword.AI, Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
@@ -782,7 +806,8 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=IBjmgzsu-Zo&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=25&pp=gAQBiAQB",
           },
           keywords: [Keyword.AI, Keyword.DESIGN, Keyword.DEVELOPMENT],
         },
@@ -799,7 +824,8 @@ This talk will cover the i18n Stack on the Web Platform, how ICU and ICU4X fit i
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video:
+              "https://www.youtube.com/watch?v=9oAj8Bvsw64&list=PLKGgD1M40S4icv0bsHGriGw8pI9YjDZtk&index=26&pp=gAQBiAQB",
           },
         },
       ],
