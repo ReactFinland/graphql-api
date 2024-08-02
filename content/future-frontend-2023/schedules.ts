@@ -403,7 +403,7 @@ In this talk we'll make some generative music using Max's visual interactive pat
           urls: {
             drawing: "",
             slides:
-              "https://drive.google.com/file/d/1OLMLlVrEvdvyM-lsNx_8Y-3BxnBto4es/view",
+              "https://drive.google.com/file/d/1Gvb1TtF_tKefuw9Y6JIa7s6-P7JWU8V1/view?usp=sharing",
             video: "https://youtu.be/dL_XHIKaWnI",
           },
         },
