@@ -3,7 +3,7 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 const person: Contact = {
   name: "Olavi Haapala",
   about:
-    "Software Developer at Futurice helping clients build fast and accessible experiences on the web. Passionate about web performance and accessibility.",
+    "Software Developer at Iltametsuri helping clients build fast and accessible experiences on the web. Passionate about web performance and accessibility.",
   image: {
     url: "people/olavi.jpg",
   },

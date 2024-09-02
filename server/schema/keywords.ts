@@ -30,6 +30,7 @@ enum Keyword {
   LIVE_CODING = "Live coding",
   NEXT_JS = "Next.js",
   NPM = "npm",
+  ML = "Machine learning",
   MOBX = "Mobx",
   MOBX_STATE_TREE = "mobx-state-tree",
   MONACO_EDITOR = "Monaco editor",

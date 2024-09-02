@@ -4,6 +4,7 @@ export { default as ankersaal } from "./ankersaal";
 export { default as arkade } from "./arkade";
 export { default as babylonHelsinki } from "./babylon-helsinki";
 export { default as columbiaroad } from "./columbiaroad";
+export { default as dipoli } from "./dipoli";
 export { default as elisaAppelsiini } from "./elisa-appelsiini";
 export { default as futurice } from "./futurice";
 export { default as gofore } from "./gofore";

@@ -72,7 +72,11 @@ const conferenceSeries: {
   "future-frontend": {
     id: "future-frontend",
     name: "Future Frontend",
-    conferences: ["future-frontend-2023", "future-frontend-2024"],
+    conferences: [
+      "future-frontend-2023",
+      "future-frontend-2024",
+      "future-frontend-2025",
+    ],
     theme: {
       id: "future-frontend",
       textures: [{ url: "/media/assets/freezing-edge-bg.jpg" }],
