@@ -8,7 +8,19 @@ import * as people from "../people";
 const monday: Schedule = {
   day: "2025-05-26",
   description: "Monday - workshops",
-  intervals: [],
+  intervals: [
+    {
+      begin: "05:00",
+      end: "06:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Workshop registration",
+          description: `Please show up early to meet other attendees.`,
+        },
+      ],
+    },
+  ],
 };
 
 const tuesday: Schedule = {
@@ -22,7 +34,7 @@ const tuesday: Schedule = {
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Registration and light breakfast",
+          title: "Conference registration and light breakfast",
           description: `You can register later too.`,
         },
       ],
@@ -303,7 +315,7 @@ const wednesday: Schedule = {
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
-          title: "Registration and light breakfast",
+          title: "Conference registration and light breakfast",
           description: `You can register later too.`,
         },
       ],
