@@ -227,7 +227,7 @@ const tuesday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      title: "Demos",
+      title: "Demonstrations",
       sessions: [
         {
           type: SessionType.TALK,
@@ -357,7 +357,7 @@ const wednesday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [],
+          people: [people.georgios],
           urls: {
             drawing: "",
             slides: "",
@@ -370,7 +370,7 @@ const wednesday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.olavi],
+          people: [people.olavi, people.georgios],
           urls: {
             drawing: "",
             slides: "",

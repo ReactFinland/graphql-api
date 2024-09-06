@@ -51,6 +51,7 @@ export { default as felix } from "./felix";
 export { default as francois } from "./francois";
 export { default as gantLaborde } from "./gant-laborde";
 export { default as georgeMandis } from "./george-mandis";
+export { default as georgios } from "./georgios";
 export { default as gleb } from "./gleb";
 export { default as glennReyes } from "./glenn-reyes";
 export { default as harriMaatta } from "./harri-maatta";
