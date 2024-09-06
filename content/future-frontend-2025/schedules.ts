@@ -574,13 +574,20 @@ const wednesday: Schedule = {
       sessions: [
         {
           type: SessionType.PARTY,
-          title: "Afterparty at a mystery location",
-          description: "",
-          /* location: locations.upcloud, */
+          title: "Afterparty at Poliisien kesäkoti",
+          description:
+            "The afterparty of the conference will be held at Poliisien kesäkoti (literally summerhome of the Police). The location is by the coast of Helsinki and there will be two saunas available. We will also make sure there will be something nice to drink and to eat.",
+          location: locations.poliisienkesakoti,
         },
       ],
     },
   ],
 };
 
-export default [monday, tuesday, wednesday];
+const thursday: Schedule = {
+  day: "2025-05-29",
+  description: "Thursday - public holiday",
+  intervals: [],
+};
+
+export default [monday, tuesday, wednesday, thursday];
