@@ -3,7 +3,7 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 
 const person: Contact = {
   name: "Georgios Diamantopoulos",
-  about: `Founder at Zero to MVP. I leave no stone unturned. I focus on what matters and take action using a balanced approach. By applying engineering principles to create technical architectures that are fit-for-purpose, I maintain efficiency. With a strong knack for entrepreneurship I can confidently manage needs in both business and technology. Ten years of bringing new products and applications to life, leading from the front. I founded Zero to MVP because I believe that entrepreneurs and executives should be able to focus on running and growing their business and not software development. `,
+  about: `As an engineer, Georgios prides himself for being pragmatic and a generalist - engineering at its best is meant to bring an intention to life. To build a system that fulfills specific requirements over time. With over 12 years of experience working with or for startup organizations, he really knows what it takes to kickstart a project without sacrificing long-term goals like maintainability or scalability. Since he co-founded Zero to MVP in 2019, Georgios and his team have built over 25 systems that can pivot and scale.`,
   image: {
     url: "people/georgios.jpeg",
   },
@@ -11,7 +11,7 @@ const person: Contact = {
     homepage: "https://zerotomvp.dev/",
     mastodon: "", // This has to be a whole link
     twitter: "georgiosd",
-    github: "",
+    github: "georgiosd",
     facebook: "",
     medium: "",
     instagram: "",
@@ -24,7 +24,7 @@ const person: Contact = {
       name: "Greece",
       code: "GR",
     },
-    city: "Attiki",
+    city: "Athens",
   },
   keywords: [],
   type: [ContactType.SPEAKER],
