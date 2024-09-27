@@ -574,9 +574,9 @@ const wednesday: Schedule = {
       sessions: [
         {
           type: SessionType.PARTY,
-          title: "Afterparty at Poliisien kesäkoti",
+          title: "Sauna at Poliisien kesäkoti",
           description:
-            "The afterparty of the conference will be held at Poliisien kesäkoti (literally summerhome of the Police). The location is by the coast of Helsinki and there will be two saunas available. We will also make sure there will be something nice to drink and to eat.",
+            "The afterparty of the conference will be held at Poliisien kesäkoti (Länsiulapanpolku 27, 00200 Helsinki). The location is by the coast of Helsinki and there will be two saunas available. We will also make sure there will be something nice to drink and to eat.",
           location: locations.poliisienkesakoti,
         },
       ],
