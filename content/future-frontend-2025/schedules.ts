@@ -24,7 +24,7 @@ const monday: Schedule = {
 };
 
 const tuesday: Schedule = {
-  day: "2025-06-27",
+  day: "2025-05-27",
   description: "Tuesday – conference",
   location: locations.dipoli,
   intervals: [
