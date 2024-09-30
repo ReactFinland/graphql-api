@@ -13,6 +13,7 @@ export { default as ante } from "./ante";
 export { default as artemSapegin } from "./artem-sapegin";
 export { default as artemZakharchenko } from "./artem-zakharchenko";
 export { default as aurora } from "./aurora";
+export { default as barry } from "./barry";
 export { default as ben } from "./ben";
 export { default as benjieGillam } from "./benjie-gillam";
 export { default as bodil } from "./bodil";
