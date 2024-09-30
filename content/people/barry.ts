@@ -9,8 +9,8 @@ const person: Contact = {
     url: "people/barry.jpg",
   },
   social: {
-    homepage: "",
-    mastodon: "", // This has to be a whole link
+    homepage: "https://www.tunetheweb.com",
+    mastodon: "https://webperf.social/@tunetheweb", // This has to be a whole link
     twitter: "tunetheweb", // Handle without @ is enough
     github: "tunetheweb",
     facebook: "",
