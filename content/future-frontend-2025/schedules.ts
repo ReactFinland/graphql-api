@@ -485,7 +485,7 @@ const wednesday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [],
+          people: [people.juhani],
           urls: {
             drawing: "",
             slides: "",
@@ -511,7 +511,7 @@ const wednesday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [],
+          people: [people.juhani],
           urls: {
             drawing: "",
             slides: "",
