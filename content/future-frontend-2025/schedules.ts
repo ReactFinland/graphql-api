@@ -478,7 +478,7 @@ const wednesday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "To be announced",
+      title: "Cybersecurity",
       sessions: [
         {
           type: SessionType.TALK,
