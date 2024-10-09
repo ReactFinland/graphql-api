@@ -3,7 +3,8 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Jussi Eronen",
-  about: "",
+  about:
+    "Jussi is dedicated to keeping the internet safe. He works as a leading cybersecurity expert at the Cybersecurity center of Traficom.",
   image: {
     url: "people/juhani.jpg",
   },
