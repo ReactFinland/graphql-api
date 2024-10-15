@@ -44,7 +44,11 @@ To cover all the concepts, we will be building an interactive CRUD app for manag
           title: "Design Systems for Legacies",
           description: `Over the past few years, numerous workshops and talks have explored the implementation of Design Systems from scratch. While these sessions have been invaluable for education and promoting the benefits of a Design System philosophy, it's important to recognize that not all projects begin anew. More often than not, we need to integrate a Design System into existing tech stacks. This process involves not just introducing a new library of components but also establishing a comprehensive workflow to enhance collaboration and communication among stakeholders.
 
-This workshop draws on our experiences as designers and developers in implementing Design System components and infusing the Design System philosophy into legacy projects. Join us to learn practical strategies for seamless integration and to foster a collaborative design culture within your organization.
+In this workshop, we will explore the realities of implementing and integrating design systems into existing codebases. We’ll discuss how to engage stakeholders in conversations about design system practices, effectively transfer essential elements like design tokens from design teams to front-end developers, ensure consistent documentation across all teams, manage legacy templating, and more.
+
+This workshop isn’t about starting a design system from scratch. We will focus on real-world use cases and strategies for overcoming the challenges of integrating your new design system into legacy projects.
+
+The workshop draws on our experiences as designers and developers in implementing Design System components and infusing the Design System philosophy into legacy projects. Join us to learn practical strategies for seamless integration and to foster a collaborative design culture within your organization.
 
 ## Takeaways
 
