@@ -60,7 +60,7 @@ The workshop draws on our experiences as designers and developers in implementin
 * Workflows to pass data and enforce communication
 * Frameworks you want to use: documentation, design, tokens, components
 * Topography of legacies and their DS compatibility
-* Use-cases
+* Use cases
 
 ## Who should join the workshop?
 
