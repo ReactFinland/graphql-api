@@ -9,7 +9,7 @@ const person: Contact = {
   },
   social: {
     homepage: "https://m4dz.net/",
-    twitter: "m4d_z",
+    twitter: "",
     github: "m4dz",
     facebook: "",
     medium: "",
