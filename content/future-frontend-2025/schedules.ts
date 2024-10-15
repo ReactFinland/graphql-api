@@ -57,7 +57,11 @@ The workshop draws on our experiences as designers and developers in implementin
 * Workflows to pass data and enforce communication
 * Frameworks you want to use: documentation, design, tokens, components
 * Topography of legacies and their DS compatibility
-* Use-cases`,
+* Use-cases
+
+## Who should join the workshop?
+
+You’re a Designer, Tech Leader, Architect, or Tech Writer working within a Design System-compatible ecosystem, but you’re facing challenges in implementing a Design System philosophy due to legacy stacks, components, and stakeholders. We’ve got you covered with practical strategies and frameworks to help you move forward. Bring your own use cases, and we’ll work through them together!`,
           people: [people.thaisSantos, people.m4Dz],
         },
       ],
