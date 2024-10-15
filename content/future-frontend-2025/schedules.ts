@@ -30,13 +30,16 @@ const monday: Schedule = {
             "Hands-on React Server Components, Server Actions, and Forms in the Next.js App Router",
           description: `In this workshop, we will explore React's latest features: Server Components, Server Actions, and Forms. Discover how to optimize server-side rendering, build smooth user experiences with React Suspense and Transitions, enhance application interactivity with Server Actions and multiple new React 19 hooks, and create robust forms for efficient data handling and validation.
 
-Designed for developers of all levels, this workshop provides practical skills to build scalable, performant web applications.
-
-## Content & procedure
+## Content and procedure
 
 With the introduction of Server Components and the Next.js App Router come new patterns and strategies for developing performant and interactive apps. In addition, React 19 brings new hooks and API’s. It’s all very exciting, but can be confusing to grasp and keep up with.
 
-To cover all the concepts, we will be building an interactive CRUD app for managing contacts. Through the development process we will be learning each relevant concept step by step, and for each step use it to implement a feature in the application, until the application is completed.`,
+To cover all the concepts, we will be building an interactive CRUD app for managing contacts. Through the development process we will be learning each relevant concept step by step, and for each step use it to implement a feature in the application, until the application is completed.
+
+## Who should join the workshop?
+
+Designed for developers of all levels, this workshop provides practical skills to build scalable, performant web applications. Ideally you have some experience with React and JavaScript already.
+`,
           people: [people.devlin, people.aurora],
         },
         {
