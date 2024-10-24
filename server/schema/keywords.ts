@@ -35,6 +35,7 @@ enum Keyword {
   MOBX_STATE_TREE = "mobx-state-tree",
   MONACO_EDITOR = "Monaco editor",
   OPEN_SOURCE = "Open source",
+  PERSONAL_DEVELOPMENT = "Personal development",
   POSTGRAPHILE = "Postgraphile",
   PRISMA = "Prisma",
   REACT = "React.js",

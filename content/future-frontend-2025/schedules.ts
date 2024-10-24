@@ -41,6 +41,7 @@ To cover all the concepts, we will be building an interactive CRUD app for manag
 Designed for developers of all levels, this workshop provides practical skills to build scalable, performant web applications. Ideally you have some experience with React and JavaScript already.
 `,
           people: [people.devlin, people.aurora],
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.WORKSHOP,
@@ -66,6 +67,31 @@ The workshop draws on our experiences as designers and developers in implementin
 
 You’re a Designer, Tech Leader, Architect, or Tech Writer working within a Design System-compatible ecosystem, but you’re facing challenges in implementing a Design System philosophy due to legacy stacks, components, and stakeholders. We’ve got you covered with practical strategies and frameworks to help you move forward. Bring your own use cases, and we’ll work through them together!`,
           people: [people.thaisSantos, people.m4Dz],
+          keywords: [Keyword.DESIGN],
+        },
+        {
+          type: SessionType.WORKSHOP,
+          title:
+            "Human and machine: Undoing the impact of living a tech-native life",
+          description: `Living a tech-native life comes with a cost to ourselves. There is plenty of research showing that our spine and joint health is deterioring faster than ever, due to our continuous use of electronic devices. This effect has been described by health professionals as an epidemic, and sitting is being described as worse than smoking. Given this background, what can we do to live a lifetime of ability free of pain and injuries?
+
+This workshop has been designed to allow you to create habits that propel you to the right direction. It is based on 20% of theory and 80% of practice so you can try out the ideas. By joining this workshop, you will gain the following learnings:
+
+- A fundamental understanding of key anatomical facts about the different systems that suffer when we deprive ourselves of movement.
+- Awareness exercises to train your preprioception (your ability to understand what is going on with your body).
+- Simple but effective joint mobility and movement exercises to reset your body on a daily basis, from the imprints of stress and the sitting posture.
+
+## Quick FAQ
+
+**1. Are there physical requirements to join the workshop?**
+
+Any fitness level is appropriate, because none of the exercises shown in the workshop will be particularly demanding. If in doubt, please consult your physician. Other than that, come along!
+
+**2. What should I wear?**
+
+Please wear a comfortable outfit that allows you to move freely.`,
+          people: [people.georgios],
+          keywords: [Keyword.PERSONAL_DEVELOPMENT],
         },
       ],
     },
