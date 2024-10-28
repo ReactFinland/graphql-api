@@ -580,8 +580,10 @@ const wednesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title:
+            "GrayWall Strategy: Securing Your Frontend from Pentesters and Reverse Engineers",
+          description:
+            "This talk will share strategies on how to harden your frontend to block pentesters and reverse engineers by reducing what’s exposed to the client. We’ll walk through concrete steps, like cutting down API exposure by handling data in memory on the server side instead of sending it to the client, using Go with Cap'n'Proto for fast, secure in-memory operations. We'll cover how compiled languages and a binary server will make your server and application more secure and safer. We’ll cover how server-side rendering can reduce attack surfaces, and how switching from traditional HTTP APIs to gRPC and WebSockets limits what attackers can reverse-engineer. You’ll also see a real example of how we rebuilt a system after a ransomware attack, shifting from a vulnerable API setup to a secure, server-focused architecture.",
           people: [people.zak],
           urls: {
             drawing: "",
