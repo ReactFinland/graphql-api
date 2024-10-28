@@ -45,6 +45,36 @@ Designed for developers of all levels, this workshop provides practical skills t
         },
         {
           type: SessionType.WORKSHOP,
+          title:
+            "Designing and Implementing Practical Industry Level Frontend AI solutions",
+          description: `This workshop provides an intensive, hands-on experience focused on selecting, implementing, and optimizing AI-driven features in modern applications. You’ll learn how to choose the best Large Language Model (LLM) knowledge retrieval method, whether prompt engineering, Retrieval-Augmented Generation (RAG), or fine-tuning, by understanding their specific strengths, limitations, and ideal use cases. We’ll dive into concrete applications in sectors like healthcare and government, and explore how to choose high-performance, real-time backend languages tailored for AI applications. Should you go with Go, Rust, Zig, Nim, or Swift? Through benchmarking and performance analysis, you’ll be prepared to justify your language choice, from developer experience and prototyping speed to overall system performance, ensuring a fast and responsive AI-powered application.
+
+## Takeaways
+
+By the end of this workshop, you’ll be able to:
+
+* Select the most effective LLM knowledge retrieval technique for your use case, with a clear understanding of the pros and cons of each option.
+* Build secure, privacy-compliant browser extensions using locally loaded language models on the browser.
+* Design a UI component that enhances user experience through adaptive predictive text.
+* Choose the best high-performance systems language for real-time AI backends, using developer experience, prototyping speed, and benchmarking metrics to guide your choice.
+
+## Content Outline
+
+* Optimizing AI Integration for UI: We’ll break down advanced AI strategies for user interfaces by comparing prompt engineering, RAG, and fine-tuning. Each method is examined through hands-on use cases with a straightforward pros-and-cons analysis, helping you pick the best approach for your needs and align each technique with real-world applications for optimal performance.
+* Browser Extension for Data Interaction: Build a browser extension that directly interacts with displayed data and leverages a local language model layer. Focused on privacy-compliant use cases in critical sectors like healthcare and government, this segment demonstrates how to meet data security requirements by running models directly within the browser, achieving both usability and data ownership.
+* Adaptive Text and Predictive Prompts: Implement adaptive text prediction and ghost prompts that adjust to user input, inspired by tools like GitHub Copilot and Gmail’s Smart Compose. This part emphasizes customization of predictive elements tailored to your application’s requirements, enhancing user engagement and responsiveness.
+* Choosing the Right Language for Real-Time AI Backends: We’ll review the top contenders for real-time AI backend development, prioritizing safe, compiled languages over JavaScript, PHP, and Python. You’ll get a detailed look at the performance and safety advantages of Go, Rust, Nim, Zig, and Swift, with guidance on benchmarking to select the ideal language for high-performance, real-time AI applications.
+
+## Target Audience: intermediate/advanced
+
+This workshop is for developers familiar with basic AI concepts and have proficient experience with one or more web frameworks, and master proficiently in one or more programming languages, and want to deepen their skills in AI-driven UI customization. Also suitable for project managers and architects and senior developers looking to broaden and discover new ideas and applications.
+
+**Not for:** Those with no prior experience in AI, backend languages, or web development basics, or those looking exclusively for beginner-level or purely theoretical content.`,
+          people: [people.zak],
+          keywords: [Keyword.AI, Keyword.DEVELOPMENT],
+        },
+        {
+          type: SessionType.WORKSHOP,
           title: "Design Systems for Legacies",
           description: `Over the past few years, numerous workshops and talks have explored the implementation of Design Systems from scratch. While these sessions have been invaluable for education and promoting the benefits of a Design System philosophy, it's important to recognize that not all projects begin anew. More often than not, we need to integrate a Design System into existing tech stacks. This process involves not just introducing a new library of components but also establishing a comprehensive workflow to enhance collaboration and communication among stakeholders.
 
@@ -67,7 +97,7 @@ The workshop draws on our experiences as designers and developers in implementin
 
 You’re a Designer, Tech Leader, Architect, or Tech Writer working within a Design System-compatible ecosystem, but you’re facing challenges in implementing a Design System philosophy due to legacy stacks, components, and stakeholders. We’ve got you covered with practical strategies and frameworks to help you move forward. Bring your own use cases, and we’ll work through them together!`,
           people: [people.thaisSantos, people.m4Dz],
-          keywords: [Keyword.DESIGN],
+          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
         {
           type: SessionType.WORKSHOP,
@@ -258,7 +288,7 @@ const tuesday: Schedule = {
             slides: "",
             video: "",
           },
-          keywords: [Keyword.DESIGN_SYSTEMS],
+          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
         {
           type: SessionType.TALK,
@@ -277,7 +307,7 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
             slides: "",
             video: "",
           },
-          keywords: [Keyword.DESIGN_SYSTEMS],
+          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
         {
           type: SessionType.PANEL,
@@ -290,7 +320,7 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
             slides: "",
             video: "",
           },
-          keywords: [Keyword.DESIGN_SYSTEMS],
+          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
       ],
     },
@@ -321,7 +351,7 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.AI, Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.TALK,
@@ -334,7 +364,7 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.AI, Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
@@ -347,7 +377,7 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.AI, Keyword.DEVELOPMENT],
         },
       ],
     },
@@ -431,7 +461,7 @@ const wednesday: Schedule = {
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.PERSONAL_DEVELOPMENT],
         },
         {
           type: SessionType.TALK,
@@ -444,7 +474,7 @@ const wednesday: Schedule = {
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.PERSONAL_DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
@@ -457,7 +487,7 @@ const wednesday: Schedule = {
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.PERSONAL_DEVELOPMENT],
         },
       ],
     },
@@ -488,7 +518,7 @@ const wednesday: Schedule = {
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.TALK,
@@ -501,7 +531,7 @@ const wednesday: Schedule = {
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
@@ -514,7 +544,7 @@ const wednesday: Schedule = {
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.DEVELOPMENT],
         },
       ],
     },
@@ -545,33 +575,33 @@ const wednesday: Schedule = {
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [],
+          people: [people.zak],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.juhani],
+          people: [people.juhani, people.zak],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
-          keywords: [],
+          keywords: [Keyword.DEVELOPMENT],
         },
       ],
     },
