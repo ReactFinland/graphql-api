@@ -280,19 +280,6 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.thaisSantos],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
           title: "You weren’t ready for Design systems",
           description: `And suddenly, Design systems emerged—promising innovation, collaboration, and a bridge between designers, developers, accessibility experts, and security specialists... the stakes for frontend delivery are huge.
 
@@ -310,6 +297,21 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
         {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title:
+            "Evolving Design Tools and the Future of Digital Product Design",
+          description:
+            "The designers' toolbox has evolved significantly over the years, much like JavaScript technologies. It has progressed from creating static JPEG images for website designs to prototyping interfaces and handing over full code directly from design tools. These platforms have revolutionized how designers visualize interactions and embraced the concept of components, aka design systems, to ensure consistency and efficiency. By allowing designers to distribute reusable elements and styles much like developers do, these tools have advanced to close the collaboration gap between the two disciplines. In this talk, we'll explore the contemporary workflow of designers, highlighting the dynamic collaboration facilitated by tools like Figma. Looking ahead, as the trend of integrating 3D elements into digital interfaces grows, we'll discuss how upcoming platforms such as Unity are becoming increasingly relevant. Finally, we'll spotlight the rapid advancements in AI and their transformative effects on the design landscape. Join us to gain a comprehensive understanding of the current state and future direction of digital product design, and learn how to effectively navigate and integrate these innovations into your workflow.",
+          people: [people.thaisSantos],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS, Keyword.AI],
+        },
+        {
           type: SessionType.PANEL,
           level: Level.INTERMEDIATE,
           title: "QA",
@@ -320,7 +322,7 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
             slides: "",
             video: "",
           },
-          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
+          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS, Keyword.AI],
         },
       ],
     },
