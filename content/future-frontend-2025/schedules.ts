@@ -223,22 +223,16 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.devlin],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DEVELOPMENT],
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.aurora],
+          title:
+            "Next.js, React Server Components, and TanStack Start: Building Fast, Modern Web Apps",
+          description: `In this session, we’ll cover the latest updates in React frameworks to help you build fast, interactive applications. We’ll start with a quick overview of today’s web landscape and how different frameworks handle rendering strategies.
+
+First, we’ll look at React Server Components (RSC) in Next.js 15, showing how RSC boosts app performance by rendering on the server and streaming components to the client in real-time. With the strategic use of modern React 19 features to optimize load times and interactivity, we’ll demonstrate how RSC can make your app more responsive.
+
+Next, we’ll cover TanStack Start, which provides robust support for full-stack React apps. With type-safe routing via TanStack Router, smooth client-server communication, and built-in support for Server-Side Rendering (SSR) and RSC, TanStack Start enables fast, scalable applications. We’ll share real-world examples and demos to show how its server functions, streaming capabilities, and flexible deployment options—whether serverless or CDN-based—create a strong foundation for modern apps.
+
+We’ll finish with a 15-minute Q&A. By the end, you’ll be up to speed on these tools and frameworks, helping you keep your React projects fast, interactive, and ready for the future.`,
+          people: [people.aurora, people.devlin],
           urls: {
             drawing: "",
             slides: "",
@@ -251,7 +245,7 @@ const tuesday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.devlin, people.aurora],
+          people: [people.aurora, people.devlin],
           urls: {
             drawing: "",
             slides: "",
