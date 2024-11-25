@@ -168,7 +168,7 @@ const tuesday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [],
+          people: [people.jec],
           urls: {
             drawing: "",
             slides: "",
