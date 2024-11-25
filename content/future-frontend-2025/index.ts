@@ -9,7 +9,7 @@ const partners = [
   // allSponsors.dojs,
   // allSponsors.halfstack,
   allSponsors.koodiasuomesta,
-  // allSponsors.reactnorway,
+  allSponsors.reactnorway,
   allSponsors.survivejs,
   // allSponsors.nodecongress,
   /*
