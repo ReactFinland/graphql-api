@@ -8,10 +8,10 @@ const person: Contact = {
     url: "people/jec.jpg",
   },
   social: {
-    homepage: "",
-    mastodon: "", // This has to be a whole link
+    homepage: "https://jec.fish",
+    mastodon: "https://indieweb.social/@jecfish", // This has to be a whole link
     twitter: "jecfish", // Handle without @ is enough
-    github: "",
+    github: "jecfish",
     facebook: "",
     medium: "",
     instagram: "",
