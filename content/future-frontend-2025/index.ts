@@ -27,7 +27,7 @@ const partners = [
   // allSponsors.kongres,
   // allSponsors.reactparis,
   // allSponsors.jsconfbp,
-  // allSponsors.jsday,
+  allSponsors.jsday,
   // allSponsors.frankenjs,
   // allSponsors.friikit,
   // allSponsors.yle,
