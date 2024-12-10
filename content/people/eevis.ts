@@ -4,20 +4,20 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Eeva-Jonna 'Eevis' Panula",
   about:
-    "Eevis is a software developer and accessibility specialist based in Finland. She loves sharing information about topics like accessibility, React and GraphQL, and is active in different communities aiming to increase equality in the tech field in Finland. When not coding, she explores the world around her with a kayak. ",
+    "Eeva-Jonna, or Eevis, is an accessibility specialist and senior Android developer. She is also Android GDE and Women Techmakers Ambassador. Her passion is to share knowledge, and she speaks and writes a blog. When she is not doing that, she explores the beautiful Finnish nature either by foot or kayak, or knits.",
   image: {
     url: "people/eevis.jpg",
   },
   social: {
     homepage: "https://eevis.codes",
-    twitter: "EevisPanula",
+    twitter: "",
     github: "eevajonnapanula",
     facebook: "",
-    medium: "",
+    medium: "@eevajonna",
     instagram: "",
     linkedin: "eevajonna",
     youtube: "",
-    devto: "",
+    devto: "eevajonnapanula",
   },
   location: {
     country: {
@@ -26,7 +26,7 @@ const person: Contact = {
     },
     city: "Helsinki",
   },
-  keywords: [Keyword.REACT],
+  keywords: [Keyword.ANDROID],
   type: [ContactType.SPEAKER],
 };
 
