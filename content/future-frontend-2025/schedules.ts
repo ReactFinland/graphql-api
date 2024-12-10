@@ -508,7 +508,7 @@ const wednesday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [people.eevis],
+          people: [people.marianna],
           urls: {
             drawing: "",
             slides: "",
@@ -519,9 +519,11 @@ const wednesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.marianna],
+          title: "Clicks, Taps, and Swipes: How Accessibility Varies Across Digital Platforms",
+          description: `Designing for accessibility is different on web and mobile platforms. Users rely on mouse, clicking, and using keyboards on the web, while mobile devices use taps, swipes, and gestures. These differences mean we need different approaches, like adjusting layouts for smaller screens or making touch navigation easier. What do these differences mean for how we make both web and mobile accessible?
+
+In this talk, I will give you an overview of the differences between web and mobile accessibility. After listening to this talk, you'll know the first considerations when moving from desktop to mobile. Whether new to the topic or looking to expand your knowledge, this session will equip you with the tools to create more inclusive mobile experiences.`,
+          people: [people.eevis],
           urls: {
             drawing: "",
             slides: "",
