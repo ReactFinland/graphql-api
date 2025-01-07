@@ -4,14 +4,14 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Stephanie Nemeth",
   about:
-    "Creating weird wonderful useless things with Raspberry Pi, Arduinos and LEDs. Engineer @ GitHub",
+    "Senior Software Engineer. Proudly neurodivergent. Spends her free time camping in nature in a self-built off-road campervan as far away from other humans as possible, dreaming about iceland, befriending neighborhood crows, and occasionally building weird wonderful useless things with hardware.",
   image: {
     url: "people/stephanie.jpeg",
   },
   social: {
     homepage: "https://stephanie.lol",
     mastodon: "https://mastodon.social/@steph",
-    twitter: "stephaniecodes",
+    twitter: "",
     github: "traumverloren",
     facebook: "",
     medium: "",
