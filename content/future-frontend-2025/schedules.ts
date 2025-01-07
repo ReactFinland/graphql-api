@@ -519,7 +519,8 @@ const wednesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Clicks, Taps, and Swipes: How Accessibility Varies Across Digital Platforms",
+          title:
+            "Clicks, Taps, and Swipes: How Accessibility Varies Across Digital Platforms",
           description: `Designing for accessibility is different on web and mobile platforms. Users rely on mouse, clicking, and using keyboards on the web, while mobile devices use taps, swipes, and gestures. These differences mean we need different approaches, like adjusting layouts for smaller screens or making touch navigation easier. What do these differences mean for how we make both web and mobile accessible?
 
 In this talk, I will give you an overview of the differences between web and mobile accessibility. After listening to this talk, you'll know the first considerations when moving from desktop to mobile. Whether new to the topic or looking to expand your knowledge, this session will equip you with the tools to create more inclusive mobile experiences.`,
@@ -637,12 +638,13 @@ In this talk, I will give you an overview of the differences between web and mob
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "The Joy of Finally Finishing Something: Rebooting Myself by Restarting a Discarded Project",
+          title:
+            "The Joy of Finally Finishing Something: Rebooting Myself by Restarting a Discarded Project",
           description: `Going through burnout has felt like losing a part of my identity. Finding the energy to come up with project ideas, let alone execute them, became overwhelming, and I struggled to find the joy that I once felt while coding. In an effort to regain this part of myself, I decided to pick up an abandoned project and see it to completion.
-          
-          This talk will share the journey of how embracing an unfinished side project helped me rebuild my relationship with coding and creativity. I will delve into the how I finally transformed a discarded sewing project inspired by the soft polka-dotted art of Yayoi Kusama into an interactive musical artwork that invites physical touch in order to trigger musical elements. Using AI, these elements are combined together to form cohesive compositions, transforming playful physical interactions into harmonious music.
-          
-          Whether you are feeling creatively stuck yourself or simply curious about blending art and technology, I hope my story inspires you to embrace your unfinished ideas and rediscover the joy of making.`,
+
+This talk will share the journey of how embracing an unfinished side project helped me rebuild my relationship with coding and creativity. I will delve into the how I finally transformed a discarded sewing project inspired by the soft polka-dotted art of Yayoi Kusama into an interactive musical artwork that invites physical touch in order to trigger musical elements. Using AI, these elements are combined together to form cohesive compositions, transforming playful physical interactions into harmonious music.
+
+Whether you are feeling creatively stuck yourself or simply curious about blending art and technology, I hope my story inspires you to embrace your unfinished ideas and rediscover the joy of making.`,
           people: [people.stephanie],
           urls: {
             drawing: "",
