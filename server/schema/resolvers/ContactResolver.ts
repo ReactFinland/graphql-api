@@ -137,6 +137,7 @@ class ContactResolver {
     const rules: IRules = {
       homepage: social.homepage,
       mastodon: social.mastodon,
+      bluesky: social.bluesky && `https://bsky.app/profile/${social.twitter}`,
       facebook: social.facebook && `https://facebook.com/${social.facebook}`,
       github: social.github && `https://github.com/${social.github}`,
       linkedin: resolveLinkedin(social.linkedin),

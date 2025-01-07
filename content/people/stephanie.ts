@@ -11,6 +11,7 @@ const person: Contact = {
   social: {
     homepage: "https://stephanie.lol",
     mastodon: "https://mastodon.social/@steph",
+    bluesky: "stephaniecodes.bsky.social",
     twitter: "",
     github: "traumverloren",
     facebook: "",

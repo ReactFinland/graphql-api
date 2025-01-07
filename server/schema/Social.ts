@@ -9,6 +9,9 @@ export class Social {
   public mastodon?: string;
 
   @Field((_) => String, { nullable: true })
+  public bluesky?: string;
+
+  @Field((_) => String, { nullable: true })
   public twitter?: string;
 
   @Field((_) => String, { nullable: true })
