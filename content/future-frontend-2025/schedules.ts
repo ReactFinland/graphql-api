@@ -166,22 +166,15 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.jec],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DEVELOPMENT],
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.barry],
+          title: "Supercharge your debugging with the new features in Chrome’s DevTools",
+          description: `The Chrome DevTool team have been releasing new features at a furious rate over the past year, especially in the Performance and AI spaces.
+
+On the Performance side, the team has reimagined the Performance Panel with many new features including the all new Live Metrics view, Insights, and better collaborating features like annotations to name but a few.
+
+AI is everywhere and DevTools is no exception with the addition of the AI assistance panel to assist developers with coding issues. Gone are the days of searching documentation and forums or guessing at solutions to see if they work. With Ask AI you no longer need to be a Performance or CSS expert to be able to fix issues!
+
+You no doubt have seen some of these changes, but Jecelyn and Barry will take you through all the new features they can fit in and you’re sure to learn something to help supercharge your debugging!`,
+          people: [people.jec, people.barry],
           urls: {
             drawing: "",
             slides: "",
@@ -194,7 +187,7 @@ const tuesday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.barry],
+          people: [people.jec, people.barry],
           urls: {
             drawing: "",
             slides: "",
