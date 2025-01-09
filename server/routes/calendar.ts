@@ -70,7 +70,7 @@ function calendar({
 
 function resolveLocation(location) {
   // TODO: Get the default from the current event!
-  const defaultLocation = "Pörssitalo, Fabianinkatu 14, Helsinki, Finland";
+  const defaultLocation = "Dipoli, Otakaari 24, Espoo, Finland";
 
   return location
     ? `${location.name}, ${location.address}, ${location.city}, ${location.country.name}`
