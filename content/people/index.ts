@@ -160,6 +160,7 @@ export { default as samuel } from "./samuel";
 export { default as samuliHakoniemi } from "./samuli-hakoniemi";
 export { default as saraVieira } from "./sara-vieira";
 export { default as satu } from "./satu";
+export { default as sebastian } from "./sebastian";
 export { default as shane } from "./shane";
 export { default as shayKeinan } from "./shay-keinan";
 export { default as shodipo } from "./shodipo";

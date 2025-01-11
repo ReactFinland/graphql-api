@@ -2,22 +2,22 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
-  name: "Stephanie Nemeth",
+  name: "Sebastian Obel",
   about:
-    "Senior Software Engineer. Proudly neurodivergent. Spends her free time camping in nature far away from other humans in a self-built campervan, dreaming about iceland, & befriending crows.",
+    `Engineer for Theatre and Event Technology & Artist, Collector of Dys's: Dyslexia, Dyscalculia, Dysgraphia & ADHD. Hyperfocuses: Cable Management (long-standing), Hull Design of Icebreaker Ships (current)
+.`,
   image: {
-    url: "people/stephanie.jpeg",
+    url: "people/sebastian.jpeg",
   },
   social: {
-    homepage: "https://stephanie.lol",
-    mastodon: "https://mastodon.social/@steph",
-    bluesky: "stephaniecodes.bsky.social",
+    homepage: "https://bainom.github.io",
+    mastodon: "",
     twitter: "",
-    github: "traumverloren",
+    github: "bainom",
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "stephanienemeth",
+    linkedin: "",
     youtube: "",
     devto: "",
   },
