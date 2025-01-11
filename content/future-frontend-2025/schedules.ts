@@ -635,7 +635,7 @@ In this talk, I will give you an overview of the differences between web and mob
           description: `I will share the journey of how embracing an unfinished side project helped me rebuild my relationship with coding and creativity during a period of burnout. This talk will delve into the how I finally transformed a discarded sewing project inspired by the soft polka-dotted art of Yayoi Kusama into an interactive musical artwork that invites touch in order to trigger musical elements. Using AI, these elements are combined together to form cohesive compositions, transforming playful physical interactions into harmonious music.
           
  Whether you are feeling creatively stuck or simply curious about blending art and technology, I hope this story inspires you to embrace your unfinished ideas and rediscover the joy of making.`,
-          people: [people.stephanie],
+          people: [people.stephanie, people.sebastian],
           urls: {
             drawing: "",
             slides: "",
