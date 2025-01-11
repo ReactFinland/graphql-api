@@ -7,7 +7,7 @@ const person: Contact = {
     `Engineer for Theatre and Event Technology & Artist, Collector of Dys's: Dyslexia, Dyscalculia, Dysgraphia & ADHD. Hyperfocuses: Cable Management (long-standing), Hull Design of Icebreaker Ships (current)
 .`,
   image: {
-    url: "people/sebastian.jpeg",
+    url: "people/sebastian.jpg",
   },
   social: {
     homepage: "https://bainom.github.io",
