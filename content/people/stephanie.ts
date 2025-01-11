@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Stephanie Nemeth",
   about:
-    "Senior Software Engineer. Proudly neurodivergent. Spends her free time camping in nature in a self-built off-road campervan as far away from other humans as possible, dreaming about iceland, befriending neighborhood crows, and occasionally building weird wonderful useless things with hardware.",
+    "Senior Software Engineer. Proudly neurodivergent. Spends her free time camping in nature far away from other humans in a self-built campervan, dreaming about iceland, & befriending crows.",
   image: {
     url: "people/stephanie.jpeg",
   },
