@@ -166,7 +166,8 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Supercharge your debugging with the new features in Chrome’s DevTools",
+          title:
+            "Supercharge your debugging with the new features in Chrome’s DevTools",
           description: `The Chrome DevTool team have been releasing new features at a furious rate over the past year, especially in the Performance and AI spaces.
 
 On the Performance side, the team has reimagined the Performance Panel with many new features including the all new Live Metrics view, Insights, and better collaborating features like annotations to name but a few.
@@ -499,9 +500,11 @@ const wednesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "The Standards Behind Accessibility - Everything You Need to Know As a Developer",
-          description: "Imagine if you could sit back, relax and learn about the legal side of accessibility without restraining yourself. Your dreams may just come true! Accessibility Specialist Marianna Österlund has done the reading for you and will brief you into the new EU-directive and the changes it brings into the legislation in different countries. But worry not, the talk is far from boring!
-This talk is especially beneficial for anyone working in public services or e-commerce – but anyone in any field can benefit from it. Awareness leads to more inclusive digital services and improved human rights, especially for disabled people. Let's take the first step together!",
+          title:
+            "The Standards Behind Accessibility - Everything You Need to Know As a Developer",
+          description: `Imagine if you could sit back, relax and learn about the legal side of accessibility without restraining yourself. Your dreams may just come true! Accessibility Specialist Marianna Österlund has done the reading for you and will brief you into the new EU-directive and the changes it brings into the legislation in different countries. But worry not, the talk is far from boring!
+
+This talk is especially beneficial for anyone working in public services or e-commerce – but anyone in any field can benefit from it. Awareness leads to more inclusive digital services and improved human rights, especially for disabled people. Let's take the first step together!`,
           people: [people.marianna],
           urls: {
             drawing: "",
@@ -632,9 +635,10 @@ In this talk, I will give you an overview of the differences between web and mob
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "The Joy of Finally Finishing Something: Rebooting Myself by Restarting a Discarded Project",
+          title:
+            "The Joy of Finally Finishing Something: Rebooting Myself by Restarting a Discarded Project",
           description: `I will share the journey of how embracing an unfinished side project helped me rebuild my relationship with coding and creativity during a period of burnout. This talk will delve into the how I finally transformed a discarded sewing project inspired by the soft polka-dotted art of Yayoi Kusama into an interactive musical artwork that invites touch in order to trigger musical elements. Using AI, these elements are combined together to form cohesive compositions, transforming playful physical interactions into harmonious music.
-          
+
  Whether you are feeling creatively stuck or simply curious about blending art and technology, I hope this story inspires you to embrace your unfinished ideas and rediscover the joy of making.`,
           people: [people.stephanie, people.sebastian],
           urls: {
