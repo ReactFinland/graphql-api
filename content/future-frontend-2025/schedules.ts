@@ -653,7 +653,7 @@ In this talk, I will give you an overview of the differences between web and mob
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.rachelNabors, people.stephanie],
+          people: [people.rachelNabors, people.stephanie, people.sebastian],
           urls: {
             drawing: "",
             slides: "",
