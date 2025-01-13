@@ -622,8 +622,12 @@ In this talk, I will give you an overview of the differences between web and mob
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "In ten years, Internet browsers may be nostalgic memories",
+          description: `“Information wants to be free,” but the internet has evolved from an open information highway into a congested maze of walled gardens, ad-powered content, and algorithmic manipulation. This is what Cory Doctorow terms "enshitification" and it happens to all products as they mature and are monetized. However, this complexity has created an opportunity for AI-powered solutions to put users back in the driver’s seat.
+
+This talk explores how AI agents can transform our relationship with the internet, shifting from platform-centric to user-centric interactions. We'll examine how AI can create adaptive interfaces that adapt to individual needs and preferences while providing privacy and accessibility features unmatched by browser providers. We'll also dive into the technical implications of this shift, discussing how AI agents are using techniques honed by the web scraping community to bypass traditional data monopolies and extract content buried in HTML soup. We’ll explore emerging and existing technologies and methods for direct content distribution and access, from RSS feeds to the AT Protocol, and the infrastructure needed to support this new paradigm of internet interaction.
+
+Discover how AI agents aren't just tools for automation—they're the key to reclaiming the internet's original promise of universal information accessibility while building a more user-centric digital future.`,
           people: [people.rachelNabors],
           urls: {
             drawing: "",
