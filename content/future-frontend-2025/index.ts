@@ -45,6 +45,7 @@ const silverSponsors = [
   // allSponsors.knowit,
 ];
 const bronzeSponsors = [
+  allSponsors.smartly,
   // allSponsors.alma,
   // allSponsors.knowit,
   // allSponsors.toddle,
