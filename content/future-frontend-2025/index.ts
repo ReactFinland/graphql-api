@@ -22,7 +22,7 @@ const partners = [
   // allSponsors.columbiaroad,
   // allSponsors.loihdefactor,
   // allSponsors.stickermule,
-  // allSponsors.glorium,
+  allSponsors.glorium,
   // allSponsors.grusp,
   // allSponsors.kongres,
   // allSponsors.reactparis,
