@@ -13,6 +13,7 @@ export { default as columbiaroad } from "./columbiaroad";
 export { default as cybercom } from "./cybercom";
 export { default as designsystemslondon } from "./designsystemslondon";
 export { default as digia } from "./digia";
+export { default as digitalExpert } from "./digital-expert";
 export { default as divriots } from "./divriots";
 export { default as dna325 } from "./dna325";
 export { default as dojs } from "./dojs";
