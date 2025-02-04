@@ -96,7 +96,7 @@ The workshop draws on our experiences as designers and developers in implementin
 ## Who should join the workshop?
 
 You’re a Designer, Tech Leader, Architect, or Tech Writer working within a Design System-compatible ecosystem, but you’re facing challenges in implementing a Design System philosophy due to legacy stacks, components, and stakeholders. We’ve got you covered with practical strategies and frameworks to help you move forward. Bring your own use cases, and we’ll work through them together!`,
-          people: [people.thaisSantos, people.m4Dz],
+          people: [people.m4Dz],
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
         {
@@ -284,7 +284,7 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
           },
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
-        {
+        /*{
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title:
@@ -298,13 +298,13 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
             video: "",
           },
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS, Keyword.AI],
-        },
+        },*/
         {
           type: SessionType.PANEL,
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.thaisSantos, people.m4Dz],
+          people: [people.m4Dz],
           urls: {
             drawing: "",
             slides: "",
