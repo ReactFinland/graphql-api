@@ -96,7 +96,7 @@ The workshop draws on our experiences as designers and developers in implementin
 ## Who should join the workshop?
 
 You’re a Designer, Tech Leader, Architect, or Tech Writer working within a Design System-compatible ecosystem, but you’re facing challenges in implementing a Design System philosophy due to legacy stacks, components, and stakeholders. We’ve got you covered with practical strategies and frameworks to help you move forward. Bring your own use cases, and we’ll work through them together!`,
-          people: [people.m4Dz],
+          people: [people.m4Dz, people.julien],
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
         {
@@ -284,27 +284,25 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
           },
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
-        /*{
+        {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title:
-            "Evolving Design Tools and the Future of Digital Product Design",
-          description:
-            "The designers' toolbox has evolved significantly over the years, much like JavaScript technologies. It has progressed from creating static JPEG images for website designs to prototyping interfaces and handing over full code directly from design tools. These platforms have revolutionized how designers visualize interactions and embraced the concept of components, aka design systems, to ensure consistency and efficiency. By allowing designers to distribute reusable elements and styles much like developers do, these tools have advanced to close the collaboration gap between the two disciplines. In this talk, we'll explore the contemporary workflow of designers, highlighting the dynamic collaboration facilitated by tools like Figma. Looking ahead, as the trend of integrating 3D elements into digital interfaces grows, we'll discuss how upcoming platforms such as Unity are becoming increasingly relevant. Finally, we'll spotlight the rapid advancements in AI and their transformative effects on the design landscape. Join us to gain a comprehensive understanding of the current state and future direction of digital product design, and learn how to effectively navigate and integrate these innovations into your workflow.",
-          people: [people.thaisSantos],
+          title: "",
+          description: "",
+          people: [people.julien],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS, Keyword.AI],
-        },*/
+        },
         {
           type: SessionType.PANEL,
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.m4Dz],
+          people: [people.m4Dz, people.julien],
           urls: {
             drawing: "",
             slides: "",

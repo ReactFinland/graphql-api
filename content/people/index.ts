@@ -83,6 +83,7 @@ export { default as juhaLinnanen } from "./juha-linnanen";
 export { default as juhani } from "./juhani";
 export { default as juhis } from "./juhis";
 export { default as juhoVepsalainen } from "./juho-vepsalainen";
+export { default as julien } from "./julien";
 export { default as juri } from "./juri";
 export { default as kadiKraman } from "./kadi-kraman";
 export { default as kasiaJastrzebska } from "./kasia-jastrzebska";
