@@ -3,15 +3,16 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Julien Sulpis",
-  about: "Tech lead at Zenika.",
+  about: "Tech lead and web consultant at Zenika. Passionate about web technologies, he likes well-crafted UIs that make no compromise between performance, accessibility, and standout design.",
   image: {
     url: "people/julien.jpeg",
   },
   social: {
     homepage: "",
-    mastodon: "", // This has to be a whole link
-    twitter: "", // Handle without @ is enough
-    github: "",
+    mastodon: "",
+    bluesky: "jsulpis.dev",
+    twitter: "jsulpis",
+    github: "jsulpis",
     facebook: "",
     medium: "",
     instagram: "",
@@ -24,7 +25,7 @@ const person: Contact = {
       name: "France",
       code: "FR",
     },
-    city: "Villeurbanne",
+    city: "Lyon",
   },
   keywords: [Keyword.REACT],
   type: [ContactType.SPEAKER],
