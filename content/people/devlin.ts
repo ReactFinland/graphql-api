@@ -12,6 +12,7 @@ const person: Contact = {
     homepage: "https://devlinduldulao.pro/",
     mastodon: "", // This has to be a whole link
     twitter: "DevlinDuldulao", // Handle without @ is enough
+    bluesky: "devlinduldulao.pro",
     github: "webmasterdevlin",
     facebook: "",
     medium: "",
