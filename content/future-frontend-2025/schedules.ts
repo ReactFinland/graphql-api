@@ -287,15 +287,19 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Building Future-Proof Design Systems: A Practical Guide to Framework Independence",
+          description: `So you want to build a Design System for your company? That’s awesome! A library of components and guidelines shared between designers and developers will boost everyone’s productivity. But here’s the big question: how do you implement a Design System that won’t tie you to the JavaScript tools you’re using today?
+
+In this talk, we’ll explore practical strategies to future-proof your Design System and overcome JavaScript Fatigue. A hint: use the platform! We’ll talk about design tokens, CSS, package architecture, and Web Components to build a Design System that lasts. Switching to a new JS framework? No problem. Dropping TailwindCSS? Easy. Just working with plain HTML? Absolutely!
+
+This session is aimed at large-scale Design Systems used by multiple teams across different frameworks, but many of these techniques can be applied to smaller systems too.`,
           people: [people.julien],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
-          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS, Keyword.AI],
+          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS, Keyword.WEB_COMPONENTS, Keyword.ARCHITECTURE, Keyword.TOOLING],
         },
         {
           type: SessionType.PANEL,
