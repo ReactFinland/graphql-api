@@ -12,6 +12,7 @@ const person: Contact = {
     homepage: "http://rachelnabors.com",
     twitter: "rachelnabors",
     github: "rachelnabors",
+    bsky: "nearestnabors.com",
     facebook: "",
     medium: "",
     instagram: "",
