@@ -287,7 +287,8 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Building Future-Proof Design Systems: A Practical Guide to Framework Independence",
+          title:
+            "Building Future-Proof Design Systems: A Practical Guide to Framework Independence",
           description: `So you want to build a Design System for your company? That’s awesome! A library of components and guidelines shared between designers and developers will boost everyone’s productivity. But here’s the big question: how do you implement a Design System that won’t tie you to the JavaScript tools you’re using today?
 
 In this talk, we’ll explore practical strategies to future-proof your Design System and overcome JavaScript Fatigue. A hint: use the platform! We’ll talk about design tokens, CSS, package architecture, and Web Components to build a Design System that lasts. Switching to a new JS framework? No problem. Dropping TailwindCSS? Easy. Just working with plain HTML? Absolutely!
@@ -299,7 +300,13 @@ This session is aimed at large-scale Design Systems used by multiple teams acros
             slides: "",
             video: "",
           },
-          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS, Keyword.WEB_COMPONENTS, Keyword.ARCHITECTURE, Keyword.TOOLING],
+          keywords: [
+            Keyword.DESIGN,
+            Keyword.DESIGN_SYSTEMS,
+            Keyword.WEB_COMPONENTS,
+            Keyword.ARCHITECTURE,
+            Keyword.TOOLING,
+          ],
         },
         {
           type: SessionType.PANEL,
@@ -445,9 +452,12 @@ const wednesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.olavi],
+          title:
+            "Shifting the trajectory: Undoing the the damage of working in front of a computer screen",
+          description: `Many successful engineers that I know are overweight, unfit and with consistent issues with their lower back, spine, vision etc. For a time I thought I was immune to the effects of the sitting in a chair in front of a screen all day until I reached my personal tipping point.
+
+What is the state of the art research telling us about our future as technology workers, and what can-should-need to be doing to shift the trajectory of our lives towards a healthy future where we can still move freely through life and pursue our dreams?`,
+          people: [people.georgios],
           urls: {
             drawing: "",
             slides: "",
@@ -460,7 +470,7 @@ const wednesday: Schedule = {
           level: Level.INTERMEDIATE,
           title: "",
           description: "",
-          people: [people.georgios],
+          people: [people.olavi],
           urls: {
             drawing: "",
             slides: "",
