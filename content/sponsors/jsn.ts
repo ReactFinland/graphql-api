@@ -1,16 +1,16 @@
 import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
-  name: "React Summit",
-  about: "The Biggest React Conference Worldwide",
+  name: "JSNation",
+  about: "The main JS conference",
   image: {
-    url: "sponsors/react-summit.svg",
+    url: "sponsors/jsn.svg",
   },
   social: {
-    homepage: "https://reactsummit.com?utm_source=ff",
+    homepage: "https://jsnation.com?utm_source=ff",
     facebook: "",
     twitter: "",
-    youtube: "ReactConferences",
+    youtube: "",
   },
   location: {
     country: {

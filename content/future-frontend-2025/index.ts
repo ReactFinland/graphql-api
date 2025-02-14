@@ -12,6 +12,8 @@ const partners = [
   allSponsors.koodiasuomesta,
   allSponsors.reactnorway,
   allSponsors.survivejs,
+  allSponsors.reactsummit,
+  allSponsors.jsn,
   // allSponsors.nodecongress,
   /*
   allSponsors.reactbrussels,
