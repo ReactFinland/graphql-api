@@ -86,6 +86,7 @@ export { default as survivejs } from "./survivejs";
 export { default as techEvents } from "./tech-events";
 export { default as toddle } from "./toddle";
 export { default as toska } from "./toska";
+export { default as twir } from "./twir";
 export { default as typeof } from "./typeof";
 export { default as upcloud } from "./upcloud";
 export { default as utopia } from "./utopia";
