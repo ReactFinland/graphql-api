@@ -77,6 +77,7 @@ export { default as reasonconf } from "./reasonconf";
 export { default as relex } from "./relex";
 export { default as rlc } from "./rlc";
 export { default as rohea } from "./rohea";
+export { default as rp } from "./rp";
 export { default as sae } from "./sae";
 export { default as smartly } from "./smartly";
 export { default as solita } from "./solita";

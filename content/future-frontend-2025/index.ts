@@ -14,6 +14,7 @@ const partners = [
   allSponsors.survivejs,
   allSponsors.reactsummit,
   allSponsors.jsn,
+  allSponsors.rp,
   // allSponsors.nodecongress,
   /*
   allSponsors.reactbrussels,
