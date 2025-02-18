@@ -7,7 +7,7 @@ const sponsor: Contact = {
     url: "sponsors/rp.png",
   },
   social: {
-    homepage: "https://react.paris/",
+    homepage: "https://react.paris?utm_source=ff",
     facebook: "",
     instagram: "",
     twitter: "",
