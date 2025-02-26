@@ -96,6 +96,7 @@ export { default as verkkokauppa } from "./verkkokauppa";
 export { default as vihat } from "./vihat";
 export { default as vincit } from "./vincit";
 export { default as webexpo } from "./webexpo";
+export { default as wonna } from "./wonna";
 export { default as wunder } from "./wunder";
 export { default as yglfkyiv } from "./yglfkyiv";
 export { default as yle } from "./yle";

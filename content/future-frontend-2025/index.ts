@@ -55,6 +55,7 @@ const bronzeSponsors = [
   // allSponsors.knowit,
   // allSponsors.toddle,
   // allSponsors.columbiaroad,
+  allSponsors.wonna,
 ];
 const platformSponsors = [];
 const sponsors = partners.concat(
