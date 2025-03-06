@@ -48,6 +48,7 @@ export { default as emma } from "./emma";
 export { default as emmi } from "./emmi";
 export { default as erikRasmussen } from "./erik-rasmussen";
 export { default as esaMatti } from "./esa-matti";
+export { default as ewa } from "./ewa";
 export { default as facundo } from "./facundo";
 export { default as farzadYz } from "./farzad-yz";
 export { default as felix } from "./felix";
