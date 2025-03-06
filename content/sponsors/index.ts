@@ -98,6 +98,7 @@ export { default as vincit } from "./vincit";
 export { default as webexpo } from "./webexpo";
 export { default as wonna } from "./wonna";
 export { default as wunder } from "./wunder";
+export { default as wunderdog } from "./wunderdog";
 export { default as yglfkyiv } from "./yglfkyiv";
 export { default as yle } from "./yle";
 export { default as zapier } from "./zapier";
