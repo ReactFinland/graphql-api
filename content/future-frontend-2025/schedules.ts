@@ -355,8 +355,12 @@ This session is aimed at large-scale Design Systems used by multiple teams acros
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Listening to Imaginary Places: How to Explore AI-Generated Soundscapes In Your Browser",
+          description: `Imagine the sound of a forest meadow. Or a crackling fireplace. Or a street corner in your favourite city. Or the bottom of the sea. Or the cargo hold of a drifting interstellar spaceship. What does it sound like there?
+
+Well, thanks to the increasingly strange technologies we now have in our hands, we can now just go to these places and listen to them - kind of! We can generate machine portrayals of all kinds of places that exist, as well as places that definitely don't.
+
+In this talk I'll give a technical runthrough of how an immersive sonic experience like this can be built with a combination of web technologies, generative audio models, foundation AI models, speech-to-text, prompt engineering, and a bit of magic.`,
           people: [people.teroParviainen],
           urls: {
             drawing: "",
