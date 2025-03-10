@@ -355,7 +355,8 @@ This session is aimed at large-scale Design Systems used by multiple teams acros
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Listening to Imaginary Places: How to Explore AI-Generated Soundscapes In Your Browser",
+          title:
+            "Listening to Imaginary Places: How to Explore AI-Generated Soundscapes In Your Browser",
           description: `Imagine the sound of a forest meadow. Or a crackling fireplace. Or a street corner in your favourite city. Or the bottom of the sea. Or the cargo hold of a drifting interstellar spaceship. What does it sound like there?
 
 Well, thanks to the increasingly strange technologies we now have in our hands, we can now just go to these places and listen to them - kind of! We can generate machine portrayals of all kinds of places that exist, as well as places that definitely don't.
@@ -472,8 +473,9 @@ What is the state of the art research telling us about our future as technology 
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title:
+            "Versatility for Work Well-Being: Balancing Physical and Mental Work",
+          description: `In this inspiring and educational talk, Olavi shares his experiences on how versatile working has improved his well-being both mentally and physically. Olavi will talk about his journey as a lumberjack and web developer, and how he manages to enhance work well-being by combining two completely opposite fields and how for some parts they aren't that different after all. Join Olavi to hear his story and gain fresh perspectives on entrepreneurship and work-life balance.`,
           people: [people.olavi],
           urls: {
             drawing: "",
