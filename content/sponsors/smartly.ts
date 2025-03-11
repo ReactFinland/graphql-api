@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Smartly",
   about: "Powering Beautifully Effective Ads",
   image: {
-    url: "sponsors/smartly.svg",
+    url: "sponsors/smartly.png",
   },
   social: {
     homepage: "https://www.smartly.io",
