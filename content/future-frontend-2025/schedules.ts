@@ -581,8 +581,15 @@ In this talk, I will give you an overview of the differences between web and mob
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title:
+            "Cyber Hygiene 101: Simple Steps for Safer Software Development",
+          description: `In modern software development, writing secure code isn't just an option - it's essential. Cybercriminals continuously scan the internet for vulnerable systems, not caring if you're a large corporation or an independent developer working on a small project. Many mistakenly believe they're too insignificant to be targeted, but automated attacks don't discriminate. Everyone is a potential target, and proactive security measures are your best defense.
+
+This talk examines how writing clean, high-quality code naturally strengthens security. We'll discuss how most security breaches can be prevented with basic cyber hygiene practices. Adopting best practices and modern frameworks can significantly reduce vulnerabilities.
+
+We'll dive into threat modeling, explaining why it's a must-have step for every project, no matter how secure your code seems.  We'll also discuss the risks introduced by complexity and technical debt.
+
+Finally, we'll explore how artificial intelligence is transforming code generation and quality assurance processes. While AI provides powerful tools to improve code quality, we'll emphasize that it doesn't replace the need for developers' vigilance and judgment.`,
           people: [people.juhani],
           urls: {
             drawing: "",
