@@ -39,6 +39,14 @@ To cover all the concepts, we will be building an interactive CRUD app for manag
 ## Who should join the workshop?
 
 Designed for developers of all levels, this workshop provides practical skills to build scalable, performant web applications. Ideally you have some experience with React and JavaScript already.
+
+## Testimonials
+
+> I really like this workshop. I was able to touch the technology with that I didn't work on real projects and get the fresh information about the latest React version. Aurora is good and funny speaker.
+
+> The topics presented were all very new and the trainer was well versed in all the concepts involved. She was very entertaining and kept you engaged at all times (helpful too!). It had everything such a workshop should have.
+
+> Great experience! Aurora was really caring and helpful throughout the entire workshop, providing as much information as she should.
 `,
           people: [people.devlin, people.aurora],
           keywords: [Keyword.DEVELOPMENT],
