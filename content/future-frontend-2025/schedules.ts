@@ -212,40 +212,50 @@ You no doubt have seen some of these changes, but Jecelyn and Barry will take yo
     {
       begin: "08:00",
       end: "09:30",
-      title: "React",
+      title: "Work-life balance",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title:
-            "Next.js, React Server Components, and TanStack Start: Building Fast, Modern Web Apps",
-          description: `In this session, we’ll cover the latest updates in React frameworks to help you build fast, interactive applications. We’ll start with a quick overview of today’s web landscape and how different frameworks handle rendering strategies.
+            "Shifting the trajectory: Undoing the the damage of working in front of a computer screen",
+          description: `Many successful engineers that I know are overweight, unfit and with consistent issues with their lower back, spine, vision etc. For a time I thought I was immune to the effects of the sitting in a chair in front of a screen all day until I reached my personal tipping point.
 
-First, we’ll look at React Server Components (RSC) in Next.js 15, showing how RSC boosts app performance by rendering on the server and streaming components to the client in real-time. With the strategic use of modern React 19 features to optimize load times and interactivity, we’ll demonstrate how RSC can make your app more responsive.
-
-Next, we’ll cover TanStack Start, which provides robust support for full-stack React apps. With type-safe routing via TanStack Router, smooth client-server communication, and built-in support for Server-Side Rendering (SSR) and RSC, TanStack Start enables fast, scalable applications. We’ll share real-world examples and demos to show how its server functions, streaming capabilities, and flexible deployment options—whether serverless or CDN-based—create a strong foundation for modern apps.
-
-We’ll finish with a 15-minute Q&A. By the end, you’ll be up to speed on these tools and frameworks, helping you keep your React projects fast, interactive, and ready for the future.`,
-          people: [people.aurora, people.devlin],
+What is the state of the art research telling us about our future as technology workers, and what can-should-need to be doing to shift the trajectory of our lives towards a healthy future where we can still move freely through life and pursue our dreams?`,
+          people: [people.georgios],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
-          keywords: [Keyword.DEVELOPMENT],
+          keywords: [Keyword.PERSONAL_DEVELOPMENT],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title:
+            "Versatility for Work Well-Being: Balancing Physical and Mental Work",
+          description: `In this inspiring and educational talk, Olavi shares his experiences on how versatile working has improved his well-being both mentally and physically. Olavi will talk about his journey as a lumberjack and web developer, and how he manages to enhance work well-being by combining two completely opposite fields and how for some parts they aren't that different after all. Join Olavi to hear his story and gain fresh perspectives on entrepreneurship and work-life balance.`,
+          people: [people.olavi],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.PERSONAL_DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.aurora, people.devlin],
+          people: [people.olavi, people.georgios],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
-          keywords: [Keyword.DEVELOPMENT],
+          keywords: [Keyword.PERSONAL_DEVELOPMENT],
         },
       ],
     },
@@ -343,7 +353,7 @@ This session is aimed at large-scale Design Systems used by multiple teams acros
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Motion control with multimodal LLMs",
-          description: `What if you could use multimodal LLMs to interact with websites or IoT devices using motion control? 
+          description: `What if you could use multimodal LLMs to interact with websites or IoT devices using motion control?
 As advancements in multimodal AI offer new opportunities to push the boundaries of what can be done with this technology, I started wondering how it could be leveraged from the perspective of human-computer interaction.
 In this talk, I will take you through my research experimenting with building motion-controlled prototypes using LLMs in JavaScript.
 `,
@@ -404,6 +414,20 @@ In this talk I'll give a technical runthrough of how an immersive sonic experien
         },
       ],
     },
+    {
+      begin: "15:00",
+      end: "18:00",
+      title: "Afterparty",
+      sessions: [
+        {
+          type: SessionType.PARTY,
+          title: "Sauna at AYY rantasauna",
+          description:
+            "The afterparty of the conference will be held at AYY rantasauna nearby (Jämeräntaival 5). There will be two saunas available. We will also make sure there will be something nice to drink and to eat.",
+          location: locations.rantasauna,
+        },
+      ],
+    },
     /*
     {
       begin: "15:00",
@@ -455,50 +479,40 @@ const wednesday: Schedule = {
     {
       begin: "06:00",
       end: "07:30",
-      title: "Work-life balance",
+      title: "React",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title:
-            "Shifting the trajectory: Undoing the the damage of working in front of a computer screen",
-          description: `Many successful engineers that I know are overweight, unfit and with consistent issues with their lower back, spine, vision etc. For a time I thought I was immune to the effects of the sitting in a chair in front of a screen all day until I reached my personal tipping point.
+            "Next.js, React Server Components, and TanStack Start: Building Fast, Modern Web Apps",
+          description: `In this session, we’ll cover the latest updates in React frameworks to help you build fast, interactive applications. We’ll start with a quick overview of today’s web landscape and how different frameworks handle rendering strategies.
 
-What is the state of the art research telling us about our future as technology workers, and what can-should-need to be doing to shift the trajectory of our lives towards a healthy future where we can still move freely through life and pursue our dreams?`,
-          people: [people.georgios],
+First, we’ll look at React Server Components (RSC) in Next.js 15, showing how RSC boosts app performance by rendering on the server and streaming components to the client in real-time. With the strategic use of modern React 19 features to optimize load times and interactivity, we’ll demonstrate how RSC can make your app more responsive.
+
+Next, we’ll cover TanStack Start, which provides robust support for full-stack React apps. With type-safe routing via TanStack Router, smooth client-server communication, and built-in support for Server-Side Rendering (SSR) and RSC, TanStack Start enables fast, scalable applications. We’ll share real-world examples and demos to show how its server functions, streaming capabilities, and flexible deployment options—whether serverless or CDN-based—create a strong foundation for modern apps.
+
+We’ll finish with a 15-minute Q&A. By the end, you’ll be up to speed on these tools and frameworks, helping you keep your React projects fast, interactive, and ready for the future.`,
+          people: [people.aurora, people.devlin],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
-          keywords: [Keyword.PERSONAL_DEVELOPMENT],
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title:
-            "Versatility for Work Well-Being: Balancing Physical and Mental Work",
-          description: `In this inspiring and educational talk, Olavi shares his experiences on how versatile working has improved his well-being both mentally and physically. Olavi will talk about his journey as a lumberjack and web developer, and how he manages to enhance work well-being by combining two completely opposite fields and how for some parts they aren't that different after all. Join Olavi to hear his story and gain fresh perspectives on entrepreneurship and work-life balance.`,
-          people: [people.olavi],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.PERSONAL_DEVELOPMENT],
+          keywords: [Keyword.DEVELOPMENT],
         },
         {
           type: SessionType.PANEL,
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.olavi, people.georgios],
+          people: [people.aurora, people.devlin],
           urls: {
             drawing: "",
             slides: "",
             video: "",
           },
-          keywords: [Keyword.PERSONAL_DEVELOPMENT],
+          keywords: [Keyword.DEVELOPMENT],
         },
       ],
     },
@@ -708,20 +722,6 @@ Discover how AI agents aren't just tools for automation—they're the key to rec
             slides: "",
             video: "",
           },
-        },
-      ],
-    },
-    {
-      begin: "15:00",
-      end: "18:00",
-      title: "Afterparty",
-      sessions: [
-        {
-          type: SessionType.PARTY,
-          title: "Sauna at Poliisien kesäkoti",
-          description:
-            "The afterparty of the conference will be held at Poliisien kesäkoti (Länsiulapanpolku 27, 00200 Helsinki). The location is by the coast of Helsinki and there will be two saunas available. We will also make sure there will be something nice to drink and to eat.",
-          location: locations.poliisienkesakoti,
         },
       ],
     },

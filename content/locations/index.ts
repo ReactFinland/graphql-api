@@ -14,6 +14,7 @@ export { default as nitor } from "./nitor";
 export { default as paasitorni } from "./paasitorni";
 export { default as poliisienkesakoti } from "./poliisienkesakoti";
 export { default as porssitalo } from "./porssitalo";
+export { default as rantasauna } from "./rantasauna";
 export { default as rooftopmiami } from "./rooftopmiami";
 export { default as saeWien } from "./sae-wien";
 export { default as tiivistamo } from "./tiivistamo";
