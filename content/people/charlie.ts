@@ -12,6 +12,7 @@ const person: Contact = {
     homepage: "https://charliegerard.dev/",
     twitter: "devdevcharlie",
     github: "charliegerard",
+    bluesky: "devdevcharlie.com",
     facebook: "",
     medium: "",
     instagram: "",
