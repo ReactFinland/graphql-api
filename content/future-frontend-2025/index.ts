@@ -78,7 +78,7 @@ const conference: Conference = {
   websiteUrl: "https://futurefrontend.com/",
   // TODO: Resolve locations based on data
   locations: [locations.dipoli],
-  mcs: [people.janiEvakallio, people.tuuliTiilikainen],
+  mcs: [people.daniel, people.tuuliTiilikainen],
   organizers: [
     people.juhoVepsalainen,
     people.eemeliAro,

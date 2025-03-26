@@ -2,17 +2,18 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
-  name: "",
-  about: "",
+  name: "Daniel Yuschick",
+  about:
+    "Passionate about great chocolate, beautiful tattoos and bridging design and development to create accessible and resilient design systems.",
   image: {
-    url: "people/TODO.jpg",
+    url: "people/daniel.jpeg",
   },
   social: {
     homepage: "",
     mastodon: "", // This has to be a whole link
     twitter: "", // Handle without @ is enough
-    bluesky: "",
-    github: "",
+    bluesky: "daniel-yuschick.bsky.social",
+    github: "yuschick",
     facebook: "",
     medium: "",
     instagram: "",
@@ -22,12 +23,12 @@ const person: Contact = {
   },
   location: {
     country: {
-      name: "",
-      code: "",
+      name: "Finland",
+      code: "FI",
     },
-    city: "",
+    city: "Helsinki",
   },
-  keywords: [Keyword.REACT],
+  keywords: [],
   type: [ContactType.SPEAKER],
 };
 
