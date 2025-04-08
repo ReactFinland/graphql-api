@@ -751,7 +751,7 @@ const friday: Schedule = {
       end: "12:00",
       sessions: [
         {
-          type: SessionType.TALK,
+          type: SessionType.PARTY,
           title: "Doctoral defense of Juho Vepsäläinen",
           description: `The director of Future Frontend, Juho Vepsäläinen, will have his public doctoral defense about the topic "Emergence of hybrid rendering models in web application development" at Aalto University. [Register online.](https://www.meetabit.com/events/doctoral-defense-of-juho-vepsalainen)`,
         },
