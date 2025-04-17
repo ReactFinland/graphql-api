@@ -45,6 +45,7 @@ const goldSponsors = [
 const silverSponsors = [
   allSponsors.smartly,
   allSponsors.wunderdog,
+  allSponsors.alma,
   // allSponsors.evitec,
   // allSponsors.upcloud,
   // allSponsors.gofore,
@@ -52,7 +53,6 @@ const silverSponsors = [
   // allSponsors.knowit,
 ];
 const bronzeSponsors = [
-  // allSponsors.alma,
   // allSponsors.knowit,
   // allSponsors.toddle,
   // allSponsors.columbiaroad,
