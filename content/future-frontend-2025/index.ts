@@ -35,7 +35,7 @@ const partners = [
   // allSponsors.frankenjs,
   // allSponsors.friikit,
   // allSponsors.yle,
-  // allSponsors.nitor,
+  allSponsors.nitor,
   // allSponsors.vihat,
   allSponsors.twir,
 ];
