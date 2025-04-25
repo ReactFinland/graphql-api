@@ -80,6 +80,7 @@ This workshop is for developers familiar with basic AI concepts and have profici
 **Not for:** Those with no prior experience in AI, backend languages, or web development basics, or those looking exclusively for beginner-level or purely theoretical content.`,
           people: [people.zak],
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
+          location: locations.nitor,
         },
         {
           type: SessionType.WORKSHOP,
