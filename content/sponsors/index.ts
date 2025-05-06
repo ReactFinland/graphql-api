@@ -36,6 +36,7 @@ export { default as graphqlFinland } from "./graphql-finland";
 export { default as grusp } from "./grusp";
 export { default as halfstack } from "./halfstack";
 export { default as hasura } from "./hasura";
+export { default as hbc } from "./hbc";
 export { default as honeypot } from "./honeypot";
 export { default as huuva } from "./huuva";
 export { default as jscamp } from "./jscamp";

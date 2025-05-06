@@ -38,6 +38,7 @@ const partners = [
   allSponsors.nitor,
   // allSponsors.vihat,
   allSponsors.twir,
+  allSponsors.hbc,
 ];
 const goldSponsors = [
   // allSponsors.digia
