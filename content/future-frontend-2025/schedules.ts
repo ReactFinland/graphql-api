@@ -50,6 +50,7 @@ Designed for developers of all levels, this workshop provides practical skills t
 `,
           people: [people.devlin, people.aurora],
           keywords: [Keyword.DEVELOPMENT],
+          location: locations.hbc,
         },
         {
           type: SessionType.WORKSHOP,
