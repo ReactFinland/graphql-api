@@ -13,7 +13,7 @@ const location: Location = {
     code: "FI",
   },
   city: "Helsinki",
-  address: "Rautatieläisenkatu 5, 00520 Helsinki",
+  address: "Rautatieläisenkatu 5",
 };
 
 export default location;
