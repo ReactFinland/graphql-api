@@ -118,7 +118,7 @@ You’re a Designer, Tech Leader, Architect, or Tech Writer working within a Des
 This workshop has been designed to allow you to create habits that propel you to the right direction. It is based on 20% of theory and 80% of practice so you can try out the ideas. By joining this workshop, you will gain the following learnings:
 
 - A fundamental understanding of key anatomical facts about the different systems that suffer when we deprive ourselves of movement.
-- Awareness exercises to train your preprioception (your ability to understand what is going on with your body).
+- Awareness exercises to train your proprioception (your ability to understand what is going on with your body).
 - Simple but effective joint mobility and movement exercises to reset your body on a daily basis, from the imprints of stress and the sitting posture.
 
 ## Quick FAQ
