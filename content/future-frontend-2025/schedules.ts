@@ -129,9 +129,15 @@ Any fitness level is appropriate, because none of the exercises shown in the wor
 
 **2. What should I wear?**
 
-Please wear a comfortable outfit that allows you to move freely.`,
+Please wear a comfortable outfit that allows you to move freely.
+
+**3. Where does the workshop take place?**
+
+It's held at Business College Helsinki, Rautatieläisenkatu 5, 00520 Helsinki. Room 271.
+`,
           people: [people.georgios],
           keywords: [Keyword.PERSONAL_DEVELOPMENT],
+          location: locations.hbc,
         },
       ],
     },

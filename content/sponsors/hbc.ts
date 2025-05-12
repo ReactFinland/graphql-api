@@ -1,7 +1,7 @@
 import { Contact, ContactType } from "../../server/schema/Contact";
 
 const sponsor: Contact = {
-  name: "Helsinki Business College",
+  name: "Business College Helsinki",
   about: "Welcome to study, future professionals",
   image: {
     url: "sponsors/hbc.svg",
