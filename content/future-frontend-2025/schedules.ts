@@ -103,11 +103,18 @@ The workshop draws on our experiences as designers and developers in implementin
 * Topography of legacies and their DS compatibility
 * Use cases
 
-## Who should join the workshop?
+## Quick FAQ
 
-You’re a Designer, Tech Leader, Architect, or Tech Writer working within a Design System-compatible ecosystem, but you’re facing challenges in implementing a Design System philosophy due to legacy stacks, components, and stakeholders. We’ve got you covered with practical strategies and frameworks to help you move forward. Bring your own use cases, and we’ll work through them together!`,
+**Who should join the workshop?**
+
+You’re a Designer, Tech Leader, Architect, or Tech Writer working within a Design System-compatible ecosystem, but you’re facing challenges in implementing a Design System philosophy due to legacy stacks, components, and stakeholders. We’ve got you covered with practical strategies and frameworks to help you move forward. Bring your own use cases, and we’ll work through them together!
+
+**Where does the workshop take place?**
+
+The workshop is held at Dipoli, room Takka.`,
           people: [people.m4Dz, people.julien],
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
+          location: locations.dipoli,
         },
         {
           type: SessionType.WORKSHOP,
