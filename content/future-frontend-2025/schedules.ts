@@ -346,7 +346,7 @@ This session is aimed at large-scale Design Systems used by multiple teams acros
           level: Level.INTERMEDIATE,
           title: "QA",
           description: ``,
-          people: [people.m4Dz, people.julien],
+          people: [people.m4Dz, people.julien, people.joonas],
           urls: {
             drawing: "",
             slides: "",

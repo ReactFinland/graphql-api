@@ -80,6 +80,7 @@ export { default as jimmyJia } from "./jimmy-jia";
 export { default as jo } from "./jo";
 export { default as johannesSchickling } from "./johannes-schickling";
 export { default as joniNevalainen } from "./joni-nevalainen";
+export { default as joonas } from "./joonas";
 export { default as juan } from "./juan";
 export { default as juhaLinnanen } from "./juha-linnanen";
 export { default as juhani } from "./juhani";
