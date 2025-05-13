@@ -2,8 +2,8 @@ import { Location } from "../../server/schema/Location";
 
 // FIXME: These should be Contacts instead -> Location can become simpler again
 const location: Location = {
-  name: "Helsinki Business College",
-  about: "Helsinki Business College is one of the workshop hosts of the event.",
+  name: "Business College Helsinki",
+  about: "Business College Helsinki is one of the workshop hosts of the event.",
   social: {
     homepage: "https://www.bc.fi/",
     googleMaps: "https://maps.app.goo.gl/s4oVDndnj8bFyx6E8",
