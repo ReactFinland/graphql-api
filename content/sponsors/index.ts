@@ -4,6 +4,7 @@ export { default as alma } from "./alma";
 export { default as amazon } from "./amazon";
 export { default as apiops } from "./apiops";
 export { default as apollo } from "./apollo";
+export { default as backscreen } from "./backscreen";
 export { default as bangalore } from "./bangalore";
 export { default as bejs } from "./bejs";
 export { default as brella } from "./brella";
