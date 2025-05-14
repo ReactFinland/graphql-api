@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Backscreen",
   about: "You made it. We keep your audience.",
   image: {
-    url: "sponsors/backscreen.svg",
+    url: "sponsors/backscreen-only.svg",
   },
   social: {
     homepage: "https://www.backscreen.com/",
