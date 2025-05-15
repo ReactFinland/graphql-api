@@ -9,10 +9,10 @@ const person: Contact = {
     url: "people/devlin.jpg",
   },
   social: {
-    homepage: "https://devlinduldulao.pro/",
+    // homepage: "https://devlinduldulao.pro/",
     mastodon: "", // This has to be a whole link
     twitter: "DevlinDuldulao", // Handle without @ is enough
-    bluesky: "devlinduldulao.pro",
+    bluesky: "did:plc:hfth7bd6aqjkbpftpoiw3mbv",
     github: "webmasterdevlin",
     facebook: "",
     medium: "",
