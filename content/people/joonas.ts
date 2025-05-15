@@ -17,7 +17,7 @@ const person: Contact = {
     facebook: "",
     medium: "",
     instagram: "",
-    linkedin: "",
+    linkedin: "joonas-kykkänen-300b2ba4",
     youtube: "",
     devto: "",
   },
