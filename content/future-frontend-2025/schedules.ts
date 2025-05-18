@@ -241,7 +241,7 @@ You no doubt have seen some of these changes, but Jecelyn and Barry will take yo
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title:
-            "Shifting the trajectory: Undoing the the damage of working in front of a computer screen",
+            "Shifting the trajectory: Undoing the damage of working in front of a computer screen",
           description: `Many successful engineers that I know are overweight, unfit and with consistent issues with their lower back, spine, vision etc. For a time I thought I was immune to the effects of the sitting in a chair in front of a screen all day until I reached my personal tipping point.
 
 What is the state of the art research telling us about our future as technology workers, and what can-should-need to be doing to shift the trajectory of our lives towards a healthy future where we can still move freely through life and pursue our dreams?`,
