@@ -748,6 +748,23 @@ Discover how AI agents aren't just tools for automation—they're the key to rec
         },
       ],
     },
+    {
+      begin: "14:30",
+      end: "18:00",
+      sessions: [
+        {
+          type: SessionType.MEETUP,
+          title: "HelsinkiJS - May edition",
+          description:
+            "Local HelsinkiJS meetup takes place nearby at [Juurideli (Keilaranta 9)](https://www.google.com/maps/search/Juurideli%0AKeilaranta+9,+02150+Espoo,+Finland) (about 15 minute walk). You are welcome to join and you should [register at Meetabit](https://www.meetabit.com/events/helsinkijs-may-2025) in case you want to check out the local meetup scene.",
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
+    },
   ],
 };
 
