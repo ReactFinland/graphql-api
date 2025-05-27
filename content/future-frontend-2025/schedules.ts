@@ -301,25 +301,6 @@ What is the state of the art research telling us about our future as technology 
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "You weren’t ready for Design systems",
-          description: `And suddenly, Design systems emerged—promising innovation, collaboration, and a bridge between designers, developers, accessibility experts, and security specialists... the stakes for frontend delivery are huge.
-
-On a homogeneous full-stack JS/TS app, the technical challenge is relatively straightforward. With older backends boasting a solid API, a Backend for Frontend can do the trick, given a bit of sweat. But what about all the rest?
-
-Join us for insights from implementing a Design System architecture within an aging backend (18 years old, aged in Python casks) that wasn’t intended for a complete rewrite but still manages server-side view rendering (HTML) and frontend asset delivery—all without sacrificing developer experience!
-
-Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an old Django setup: we’re closing that time loop and jumping on board! You weren’t ready for Design systems, but we made it happen anyway!`,
-          people: [people.m4Dz],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
           title:
             "Building Future-Proof Design Systems: A Practical Guide to Framework Independence",
           description: `So you want to build a Design System for your company? That’s awesome! A library of components and guidelines shared between designers and developers will boost everyone’s productivity. But here’s the big question: how do you implement a Design System that won’t tie you to the JavaScript tools you’re using today?
@@ -340,6 +321,25 @@ This session is aimed at large-scale Design Systems used by multiple teams acros
             Keyword.ARCHITECTURE,
             Keyword.TOOLING,
           ],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "You weren’t ready for Design systems",
+          description: `And suddenly, Design systems emerged—promising innovation, collaboration, and a bridge between designers, developers, accessibility experts, and security specialists... the stakes for frontend delivery are huge.
+
+On a homogeneous full-stack JS/TS app, the technical challenge is relatively straightforward. With older backends boasting a solid API, a Backend for Frontend can do the trick, given a bit of sweat. But what about all the rest?
+
+Join us for insights from implementing a Design System architecture within an aging backend (18 years old, aged in Python casks) that wasn’t intended for a complete rewrite but still manages server-side view rendering (HTML) and frontend asset delivery—all without sacrificing developer experience!
+
+Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an old Django setup: we’re closing that time loop and jumping on board! You weren’t ready for Design systems, but we made it happen anyway!`,
+          people: [people.m4Dz],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
         {
           type: SessionType.PANEL,
