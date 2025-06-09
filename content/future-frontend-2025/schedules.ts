@@ -377,7 +377,9 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
           level: Level.INTERMEDIATE,
           title: "Motion control with multimodal LLMs",
           description: `What if you could use multimodal LLMs to interact with websites or IoT devices using motion control?
+
 As advancements in multimodal AI offer new opportunities to push the boundaries of what can be done with this technology, I started wondering how it could be leveraged from the perspective of human-computer interaction.
+
 In this talk, I will take you through my research experimenting with building motion-controlled prototypes using LLMs in JavaScript.
 `,
           people: [people.charlie],
