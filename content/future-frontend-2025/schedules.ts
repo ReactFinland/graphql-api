@@ -197,7 +197,7 @@ On the Performance side, the team has reimagined the Performance Panel with many
 
 AI is everywhere and DevTools is no exception with the addition of the AI assistance panel to assist developers with coding issues. Gone are the days of searching documentation and forums or guessing at solutions to see if they work. With Ask AI you no longer need to be a Performance or CSS expert to be able to fix issues!
 
-You no doubt have seen some of these changes, but Jecelyn and Barry will take you through all the new features they can fit in and you’re sure to learn something to help supercharge your debugging!`,
+You no doubt have seen some of these changes, but Ewa and Barry will take you through all the new features they can fit in and you’re sure to learn something to help supercharge your debugging!`,
           people: [people.ewa, people.barry],
           urls: {
             drawing: "",
