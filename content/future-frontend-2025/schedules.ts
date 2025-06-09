@@ -202,7 +202,7 @@ You no doubt have seen some of these changes, but Ewa and Barry will take you th
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=hhkCm_o1XkA",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -249,7 +249,7 @@ What is the state of the art research telling us about our future as technology 
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=CFiY06IAfdQ",
           },
           keywords: [Keyword.PERSONAL_DEVELOPMENT],
         },
@@ -263,7 +263,7 @@ What is the state of the art research telling us about our future as technology 
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=3g5-UQsU-4w",
           },
           keywords: [Keyword.PERSONAL_DEVELOPMENT],
         },
@@ -276,7 +276,7 @@ What is the state of the art research telling us about our future as technology 
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=VKpWIXyNXyc",
           },
           keywords: [Keyword.PERSONAL_DEVELOPMENT],
         },
@@ -312,7 +312,7 @@ This session is aimed at large-scale Design Systems used by multiple teams acros
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=9Jhx-I6Zc1k",
           },
           keywords: [
             Keyword.DESIGN,
@@ -337,7 +337,7 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=_-exJbTmoSE",
           },
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
         },
@@ -350,7 +350,7 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=xO5csdx1Rxk",
           },
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS, Keyword.AI],
         },
@@ -386,7 +386,7 @@ In this talk, I will take you through my research experimenting with building mo
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=2DviBv_wUPQ",
           },
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
         },
@@ -404,7 +404,7 @@ In this talk I'll give a technical runthrough of how an immersive sonic experien
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=fBUsFtRtA4U",
           },
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
         },
@@ -417,7 +417,7 @@ In this talk I'll give a technical runthrough of how an immersive sonic experien
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=DCTpcsz8PwU",
           },
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
         },
@@ -522,7 +522,7 @@ We’ll finish with a 15-minute Q&A. By the end, you’ll be up to speed on thes
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=o4hNF09GoBE",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -569,7 +569,7 @@ This talk is especially beneficial for anyone working in public services or e-co
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=F7CXnMGBAdM",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -585,7 +585,7 @@ In this talk, I will give you an overview of the differences between web and mob
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=eDsfEQGpe0A",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -598,7 +598,7 @@ In this talk, I will give you an overview of the differences between web and mob
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=F_RpAJ_pPbs",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -636,7 +636,7 @@ Finally, we'll explore how artificial intelligence is transforming code generati
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=7VE2RWNR6gQ",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -651,7 +651,7 @@ Finally, we'll explore how artificial intelligence is transforming code generati
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=yDXUPXwNe2A",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -664,7 +664,7 @@ Finally, we'll explore how artificial intelligence is transforming code generati
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=ddrVUhH974o",
           },
           keywords: [Keyword.DEVELOPMENT],
         },
@@ -699,7 +699,7 @@ Discover how AI agents aren't just tools for automation—they're the key to rec
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=kWqbT_vmo4o",
           },
           keywords: [Keyword.AI, Keyword.ML],
         },
@@ -715,7 +715,7 @@ Discover how AI agents aren't just tools for automation—they're the key to rec
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=9GksTFDXqQk",
           },
           keywords: [Keyword.AI, Keyword.ML],
         },
@@ -728,7 +728,7 @@ Discover how AI agents aren't just tools for automation—they're the key to rec
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=dCQ7FOuRxJs",
           },
           keywords: [Keyword.AI, Keyword.ML],
         },
@@ -745,7 +745,7 @@ Discover how AI agents aren't just tools for automation—they're the key to rec
           urls: {
             drawing: "",
             slides: "",
-            video: "",
+            video: "https://www.youtube.com/watch?v=0n0c1EXM0gU",
           },
         },
       ],
