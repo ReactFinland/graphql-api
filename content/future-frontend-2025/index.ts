@@ -88,6 +88,8 @@ const conference: Conference = {
     people.toniRistola,
     people.tuuliTiilikainen,
     people.juhis,
+    people.emilia,
+    people.jussi,
   ],
   schedules,
   sponsors,

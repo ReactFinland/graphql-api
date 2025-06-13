@@ -7,7 +7,7 @@ const person: Contact = {
     url: "people/tuuli.jpg",
   },
   social: {
-    homepage: "https://www.columbiaroad.com/people/tuuli-tiilikainen",
+    homepage: "",
   },
   location: {
     country: {
