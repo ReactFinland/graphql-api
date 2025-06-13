@@ -336,7 +336,7 @@ Integrating modern frontend tools—Vite.js, Stimulus, Storybook...—into an ol
           people: [people.m4Dz],
           urls: {
             drawing: "",
-            slides: "",
+            slides: "https://m4dz.net/t/design-systems-legacies/",
             video: "https://www.youtube.com/watch?v=_-exJbTmoSE",
           },
           keywords: [Keyword.DESIGN, Keyword.DESIGN_SYSTEMS],
