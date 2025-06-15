@@ -698,7 +698,8 @@ Discover how AI agents aren't just tools for automation—they're the key to rec
           people: [people.rachelNabors],
           urls: {
             drawing: "",
-            slides: "",
+            slides:
+              "https://drive.google.com/file/d/1GyoXip3lwC9Ftz5n1RLQtoY0VdLzJUyY/view?usp=sharing",
             video: "https://www.youtube.com/watch?v=kWqbT_vmo4o",
           },
           keywords: [Keyword.AI, Keyword.ML],
