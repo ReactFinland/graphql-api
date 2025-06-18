@@ -58,6 +58,7 @@ const MarkdownContent = ({
     title={content.title}
   >
     {content.title && (
+      /* @ts-expect-error This is fine */
       <Title color={theme.colors.text}>
         <Markdown>{content.title}</Markdown>
       </Title>

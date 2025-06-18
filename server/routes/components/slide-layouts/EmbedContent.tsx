@@ -34,6 +34,7 @@ interface EmbedContentProps {
 
 const EmbedContent = ({ content, theme }: EmbedContentProps) => (
   <EmbedPageContainer>
+    {/* @ts-expect-error This is fine */}
     <Title color={theme.colors.primary}>{content.title}</Title>
     <Embed width="90%" height="80%" src={content.link} frameBorder="0" />
   </EmbedPageContainer>

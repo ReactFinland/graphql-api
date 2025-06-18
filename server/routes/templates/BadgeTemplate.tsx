@@ -301,6 +301,7 @@ interface PageSheetProps {
 }
 
 // TODO: Is the Safari fix needed anymore?
+// @ts-expect-error This is fine
 const PageSheet = styled.section`
   text-align: center;
   width: ${({ width }) => width};

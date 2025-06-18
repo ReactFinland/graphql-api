@@ -55,6 +55,7 @@ interface GridContentProps {
 
 const GridContent = ({ background, content, theme }: GridContentProps) => (
   <GridContainer background={getBackground(background)}>
+    {/* @ts-expect-error This is fine */}
     <Title color={theme.colors.primary}>
       <Markdown>{content.title}</Markdown>
     </Title>

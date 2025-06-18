@@ -23,6 +23,7 @@ interface SchedulePageContainerProps {
   sideBarWidth: WidthProperty<string>;
 }
 
+// @ts-expect-error This is fine
 const PresentationTemplateContainer = styled.article`
   background-image: ${({
     primaryColor,

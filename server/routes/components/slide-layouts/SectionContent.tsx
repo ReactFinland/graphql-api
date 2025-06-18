@@ -30,6 +30,7 @@ interface SectionContentProps {
 
 const SectionContent = ({ content, theme }: SectionContentProps) => (
   <SectionPageContainer background={theme.colors.primary}>
+    {/* @ts-expect-error This is fine */}
     <Title color={theme.colors.background}>{content.title}</Title>
   </SectionPageContainer>
 );

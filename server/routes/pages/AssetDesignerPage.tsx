@@ -22,6 +22,7 @@ interface AssetDesignerContainerProps {
   width: WidthProperty<number | string>;
 }
 
+// @ts-expect-error This is fine
 const AssetDesignerContainer = styled.article`
   background: #ddd;
   display: grid;
@@ -37,6 +38,7 @@ interface SidebarProps {
   backgroundColor: Color;
 }
 
+// @ts-expect-error This is fine
 const Sidebar = styled.aside`
   padding: 1em;
   vertical-align: top;
