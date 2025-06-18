@@ -81,6 +81,7 @@
     "fuse-box": "^3.7.1",
     "googleapis": "^42.0.0",
     "graphql": "^14.5.4",
+    "graphql-depth-limit": "^1.1.0",
     "graphql-http": "^1.22.4",
     "graphql-request": "^1.8.2",
     "helmet": "^3.21.0",

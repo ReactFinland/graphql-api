@@ -1,11 +1,13 @@
-import { createHandler as graphql } from "graphql-http/lib/use/express";
 import process from "process";
+import { createHandler as graphql } from "graphql-http/lib/use/express";
+import depthLimit from "graphql-depth-limit";
 
 function routeGraphQL(router, schema, projectRoot, mediaUrl) {
   router.all(
     "/graphql",
     graphql({
       schema,
+      validationRules: [depthLimit(7)],
       context: (req) => {
         const hostname = getHostname(req);
 
