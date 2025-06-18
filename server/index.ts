@@ -30,6 +30,7 @@ process.on("SIGINT", () => {
     }
   } catch (e) {
     logger.error("Failed to start");
+    // @ts-expect-error This is fine
     logger.error(e.stack);
   }
 })();

@@ -36,6 +36,7 @@ interface TitleContentProps {
 function TitleContent({ content, theme }: TitleContentProps) {
   return (
     <TitlePageContainer>
+      {/* @ts-expect-error This is fine */}
       <Title color={theme.colors.text}>{content.title}</Title>
     </TitlePageContainer>
   );

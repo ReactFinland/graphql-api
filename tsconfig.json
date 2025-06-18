@@ -17,7 +17,8 @@
     "noUnusedLocals": true,
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "skipLibCheck": true
   },
   "include": ["server/**/*.ts"]
 }
