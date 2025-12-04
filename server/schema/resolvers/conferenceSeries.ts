@@ -76,6 +76,7 @@ const conferenceSeries: {
       "future-frontend-2023",
       "future-frontend-2024",
       "future-frontend-2025",
+      "future-frontend-2026",
     ],
     theme: {
       id: "future-frontend",

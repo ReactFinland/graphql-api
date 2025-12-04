@@ -4,7 +4,7 @@ import { Level, SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
 import * as people from "../people";
 
-// All times are given in GMT+0 (adjusted to GMT+3 at the frontnend)
+// All times are given in GMT+0 (adjusted to GMT+3 at the frontend)
 const monday: Schedule = {
   day: "2025-05-26",
   description: "Monday - workshops",

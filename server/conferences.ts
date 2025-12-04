@@ -2,6 +2,7 @@ import freezingEdge2020 from "../content/freezing-edge-2020";
 import futureFrontend2023 from "../content/future-frontend-2023";
 import futureFrontend2024 from "../content/future-frontend-2024";
 import futureFrontend2025 from "../content/future-frontend-2025";
+import futureFrontend2026 from "../content/future-frontend-2026";
 import graphQLFinland2018 from "../content/graphql-finland-2018";
 import graphQLFinland2020 from "../content/graphql-finland-2020";
 import halfstackVienna2019 from "../content/halfstack-vienna-2019";
@@ -20,6 +21,7 @@ const conferences: { [id: string]: Conference } = {
   ["future-frontend-2023"]: attachParents(futureFrontend2023),
   ["future-frontend-2024"]: attachParents(futureFrontend2024),
   ["future-frontend-2025"]: attachParents(futureFrontend2025),
+  ["future-frontend-2026"]: attachParents(futureFrontend2026),
   ["techmovienight"]: attachParents(techMovieNight),
   ["halfstack-vienna-2019"]: attachParents(halfstackVienna2019),
   ["reason-conf-2019"]: attachParents(reasonConf2019),
