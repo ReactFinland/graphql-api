@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "Building [Mastra](https://mastra.ai/) and helping you to code AI agents.",
   image: {
-    url: "people/alex-booker.jpeg",
+    url: "people/alex-booker.jpg",
   },
   social: {
     homepage: "https://booker.codes/",
