@@ -1,4 +1,5 @@
 enum Keyword {
+  AGENTS = "AGENTS",
   AI = "AI",
   ANDROID = "Android",
   ANIMATION = "Animation",
@@ -21,6 +22,7 @@ enum Keyword {
   GRAPHQL = "GraphQL",
   GRAPHQLJS = "GraphQL.js",
   HEADLESS_COMPONENTS = "Headless components",
+  HTML = "HTML",
   IMMER = "Immer",
   KOTLIN = "Kotlin",
   LAYOUT = "Layout",

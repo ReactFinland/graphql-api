@@ -91,7 +91,7 @@ const conference: Conference = {
     people.juhis,
     people.emilia,
     people.jussi,
-    // TODO: Add Juho
+    people.juhoLehtinen,
   ],
   schedules,
   sponsors,

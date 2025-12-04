@@ -1,14 +1,13 @@
 import { Schedule } from "../../server/schema/Schedule";
-//import Keyword from "../../server/schema/keywords";
-//import { Level, SessionType } from "../../server/schema/Session";
-import { SessionType } from "../../server/schema/Session";
+import Keyword from "../../server/schema/keywords";
+import { Level, SessionType } from "../../server/schema/Session";
 import * as locations from "../locations";
-//import * as people from "../people";
+import * as people from "../people";
 
 // All times are given in GMT+0 (adjusted to GMT+3 at the frontend)
 const monday: Schedule = {
   day: "2026-06-08",
-  description: "Monday – Conference design day",
+  description: "Monday – Design day",
   intervals: [
     {
       begin: "05:00",
@@ -89,8 +88,22 @@ const monday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      title: "",
-      sessions: [],
+      title: "Designing for the next web",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.rachelNabors],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [], // Keyword.AI, Keyword.ML],
+        },
+      ],
     },
     {
       begin: "14:00",
@@ -113,7 +126,7 @@ const monday: Schedule = {
 
 const tuesday: Schedule = {
   day: "2026-06-09",
-  description: "Tuesday – Conference development day",
+  description: "Tuesday – Development day",
   location: locations.dipoli,
   intervals: [
     {
@@ -144,8 +157,22 @@ const tuesday: Schedule = {
     {
       begin: "06:00",
       end: "07:30",
-      title: "",
-      sessions: [],
+      title: "Simplicity",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "The Platform and a Stylesheet",
+          description: ``,
+          people: [people.tonyEnnis],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.HTML],
+        },
+      ],
     },
     {
       begin: "07:30",
@@ -161,8 +188,22 @@ const tuesday: Schedule = {
     {
       begin: "08:00",
       end: "09:30",
-      title: "",
-      sessions: [],
+      title: "Self-development",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.georgios],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.PERSONAL_DEVELOPMENT],
+        },
+      ],
     },
     {
       begin: "09:30",
@@ -178,8 +219,22 @@ const tuesday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "",
-      sessions: [],
+      title: "Agents",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.alexBooker, people.tonyKovanen],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.AGENTS],
+        },
+      ],
     },
     {
       begin: "12:00",
