@@ -30,7 +30,7 @@ const partners: Contact[] = [
   // allSponsors.glorium,
   // allSponsors.grusp,
   // allSponsors.kongres,
-  // allSponsors.reactparis,
+  allSponsors.reactparis,
   // allSponsors.jsconfbp,
   // allSponsors.jsday,
   // allSponsors.frankenjs,
