@@ -148,6 +148,19 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.una],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
           title: "The Platform and a Stylesheet",
           description: ``,
           people: [people.tonyEnnis],

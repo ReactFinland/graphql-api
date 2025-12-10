@@ -192,6 +192,7 @@ export { default as tonyKovanen } from "./tony-kovanen";
 export { default as travis } from "./travis";
 export { default as tuuliTiilikainen } from "./tuuli-tiilikainen";
 export { default as uj } from "./uj";
+export { default as una } from "./una";
 export { default as varyaStepanova } from "./varya-stepanova";
 export { default as villeImmonen } from "./ville-immonen";
 export { default as villePelkonen } from "./ville-pelkonen";
