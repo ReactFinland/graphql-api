@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "Ohjelmistofriikit",
   about: "Finland’s fastest-growing freelancer network",
   image: {
-    url: "sponsors/ohjelmistofriikit.svg",
+    url: "sponsors/ohjelmistofriikit-black.svg",
   },
   social: {
     homepage: "https://ohjelmistofriikit.fi/",
