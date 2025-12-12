@@ -54,6 +54,7 @@ const silverSponsors: Contact[] = [
   // allSponsors.gofore,
   // allSponsors.elisa,
   // allSponsors.knowit,
+  allSponsors.ohjelmistofriikit,
 ];
 const bronzeSponsors: Contact[] = [
   // allSponsors.knowit,

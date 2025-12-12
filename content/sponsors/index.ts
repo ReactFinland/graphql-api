@@ -56,6 +56,7 @@ export { default as netum } from "./netum";
 export { default as nightingale } from "./nightingale";
 export { default as nitor } from "./nitor";
 export { default as nodecongress } from "./nodecongress";
+export { default as ohjelmistofriikit } from "./ohjelmistofriikit";
 export { default as osaango } from "./osaango";
 export { default as postgraphile } from "./postgraphile";
 export { default as prisma } from "./prisma";
