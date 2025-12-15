@@ -88,8 +88,32 @@ const monday: Schedule = {
     {
       begin: "12:30",
       end: "14:00",
-      title: "",
-      sessions: [],
+      title: "Color",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title:
+            "Accessibility Adventures - The Lost Secrets of Forced Colors Mode",
+          description: `Guiding us through this adventure is Rami, our AI-generated, raccoon treasure hunter, equal parts explorer and troublemaker, armed with a mysterious treasure map and an ancient planchette lens to decode its mysteries. Each segment of the talk represents a new “clue” on the map, where we’ll dive into demos of web interfaces through the lens of Forced Colors Mode, uncovering what breaks, what disappears, and how we can bring clarity back to the screen.
+
+Together, we’ll explore:
+- What is Forced Colors Mode and how do browsers translate system color schemes?
+- How can we detect and support the forced-colors media query?
+- How do CSS keywords, color tokens, and custom properties behave in high-contrast settings?
+- What are the best practices for building resilient, inclusive interfaces in Forced Colors Mode?
+- When (and how) should we override forced rendering safely?
+
+Throughout the talk, we’ll alternate between screen reader–guided demos and visual “treasure map” sequences, immersing the audience in the challenges users face when Forced Colors Mode is ignored, and the breakthroughs that happen when it’s embraced.`,
+          people: [people.daniel],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DESIGN],
+        },
+      ],
     },
     {
       begin: "14:00",
