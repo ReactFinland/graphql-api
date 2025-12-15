@@ -282,7 +282,7 @@ What you'll learn:
     {
       begin: "12:30",
       end: "14:00",
-      title: "Pressure",
+      title: "",
       sessions: [
         {
           type: SessionType.TALK,
