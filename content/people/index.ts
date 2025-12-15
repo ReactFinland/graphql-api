@@ -63,6 +63,7 @@ export { default as gleb } from "./gleb";
 export { default as glennReyes } from "./glenn-reyes";
 export { default as harriMaatta } from "./harri-maatta";
 export { default as helenZhukova } from "./helen-zhukova";
+export { default as henrik } from "./henrik";
 export { default as isaSilveira } from "./isa-silveira";
 export { default as ivanGoncharov } from "./ivan-goncharov";
 export { default as ivanOrlov } from "./ivan-orlov";
