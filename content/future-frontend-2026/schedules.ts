@@ -37,7 +37,7 @@ const monday: Schedule = {
     {
       begin: "06:00",
       end: "07:30",
-      title: "",
+      title: "Future",
       sessions: [],
     },
     {
@@ -54,7 +54,7 @@ const monday: Schedule = {
     {
       begin: "08:00",
       end: "09:30",
-      title: "",
+      title: "Work",
       sessions: [],
     },
     {
@@ -71,24 +71,7 @@ const monday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "",
-      sessions: [],
-    },
-    {
-      begin: "12:00",
-      end: "12:30",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description: "Drink coffee. Again.",
-        },
-      ],
-    },
-    {
-      begin: "12:30",
-      end: "14:00",
-      title: "Color",
+      title: "Accessibility",
       sessions: [
         {
           type: SessionType.TALK,
@@ -112,6 +95,37 @@ Throughout the talk, we’ll alternate between screen reader–guided demos and 
             video: "",
           },
           keywords: [Keyword.DESIGN],
+        },
+      ],
+    },
+    {
+      begin: "12:00",
+      end: "12:30",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee. Again.",
+        },
+      ],
+    },
+    {
+      begin: "12:30",
+      end: "14:00",
+      title: "Habits",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.georgios],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DEVELOPMENT, Keyword.PERSONAL_DEVELOPMENT],
         },
       ],
     },
@@ -228,6 +242,23 @@ const tuesday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
+      title: "Security",
+      sessions: [],
+    },
+    {
+      begin: "12:00",
+      end: "12:30",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee. Again.",
+        },
+      ],
+    },
+    {
+      begin: "12:30",
+      end: "14:00",
       title: "Agents",
       sessions: [
         {
@@ -265,37 +296,6 @@ What you'll learn:
             video: "",
           },
           keywords: [Keyword.AI, Keyword.DESIGN],
-        },
-      ],
-    },
-    {
-      begin: "12:00",
-      end: "12:30",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description: "Drink coffee. Again.",
-        },
-      ],
-    },
-    {
-      begin: "12:30",
-      end: "14:00",
-      title: "",
-      sessions: [
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
-          people: [people.georgios],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DEVELOPMENT, Keyword.PERSONAL_DEVELOPMENT],
         },
       ],
     },
