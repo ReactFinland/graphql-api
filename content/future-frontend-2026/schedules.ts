@@ -242,7 +242,7 @@ const tuesday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "Security",
+      title: "Best practices",
       sessions: [],
     },
     {
