@@ -289,8 +289,17 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title:
+            "Shielding Your Software: Best Practices for Securing the Supply Chain in Modern Development",
+          description: `After Log4Shell and the "GitHub Actions" based attacks, the most significant security vulnerabilities of the past few years, controlling the software supply chain is top of mind for every security-conscious development team. We realize that embedding open-source libraries in our applications has substantial security risks. Still, no major software artifact can be built without OSS components these days. 
+In this session, we will use the recommendations of the most popular supply chain frameworks to explore a series of practical software development and system architecture best practices you can follow to secure your builds, sources, and dependencies.
+We will look at how you can protect your application from two classes of risks: internal and external. The former focuses on insider threats and compromised accounts, and the latter concentrates on open-source libraries embedded in your software projects. 
+
+**Session Takeaways:**
+
+- How to use supply chain security frameworks to assess the security posture of an application
+- Define best practices to secure your builds, sources, and dependencies.
+- How to protect an application's CI/CD pipelines from insider threats and compromised credentials.`,
           people: [people.federico],
           urls: {
             drawing: "",
