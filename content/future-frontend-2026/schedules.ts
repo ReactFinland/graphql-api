@@ -285,7 +285,34 @@ const tuesday: Schedule = {
       begin: "10:30",
       end: "12:00",
       title: "Best practices",
-      sessions: [],
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.federico],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DEVELOPMENT],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.matthewM],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DEVELOPMENT],
+        },
+      ],
     },
     {
       begin: "12:00",
