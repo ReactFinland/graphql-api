@@ -267,23 +267,6 @@ const tuesday: Schedule = {
     {
       begin: "08:00",
       end: "09:30",
-      title: "Hypermedia",
-      sessions: [],
-    },
-    {
-      begin: "09:30",
-      end: "10:30",
-      sessions: [
-        {
-          type: SessionType.LUNCH,
-          title: "Lunch",
-          description: "Lunch with a Finnish twist.",
-        },
-      ],
-    },
-    {
-      begin: "10:30",
-      end: "12:00",
       title: "Best practices",
       sessions: [
         {
@@ -322,6 +305,23 @@ We will look at how you can protect your application from two classes of risks: 
           keywords: [Keyword.DEVELOPMENT],
         },
       ],
+    },
+    {
+      begin: "09:30",
+      end: "10:30",
+      sessions: [
+        {
+          type: SessionType.LUNCH,
+          title: "Lunch",
+          description: "Lunch with a Finnish twist.",
+        },
+      ],
+    },
+    {
+      begin: "10:30",
+      end: "12:00",
+      title: "Hypermedia",
+      sessions: [],
     },
     {
       begin: "12:00",
