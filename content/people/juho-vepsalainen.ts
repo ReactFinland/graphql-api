@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Juho Vepsäläinen",
   about:
-    "Juho Vepsäläinen is behind the SurviveJS effort. He has been active in the open source scene since the early 2000s and participated in projects like Blender and webpack as a core team member. Blue Arrow Awards winner.",
+    "Juho Vepsäläinen, DSc, has decades of experience with open source development. Besides a developer, he is also an academic researcher and teacher focused on web development. He is also the director of Future Frontend conference and is responsible for crafting its program and concept.",
   image: {
     url: "people/juho.jpg",
   },

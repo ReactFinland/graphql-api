@@ -348,7 +348,21 @@ We will look at how you can protect your application from two classes of risks: 
       begin: "10:30",
       end: "12:00",
       title: "Hypermedia",
-      sessions: [],
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Hypermedia – the solution for lighter web applications?",
+          description: `It is well understood many web applications are more complex than they should. My thesis is that this is because due to prevailing mainstream trends, we ended up taking a path leading us to this complexity. It turns out that an old idea, hypermedia, might allow us to overcome this complexity while making our websites agent friendly. In this talk I show you why hypermedia is more relevant than ever today and what kind of benefits it can provide for web developers. I will cover concrete solutions, such as Datastar or htmx, and give you a starting point for your explorations with hypermedia driven web application development.`,
+          people: [people.juhoVepsalainen],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DEVELOPMENT],
+        },
+      ],
     },
     {
       begin: "12:00",
