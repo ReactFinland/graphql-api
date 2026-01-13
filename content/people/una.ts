@@ -3,7 +3,8 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 
 const person: Contact = {
   name: "Una Kravets",
-  about: "",
+  about:
+    "Hi, I'm Una! I’ve spent my career working on making the web a better place for designers and developers. Currently, I lead the Web UI Developer Relations team at Google Chrome, where I support millions of developers through improvements to native web capabilities and platform APIs.",
   image: {
     url: "people/una.jpg",
   },
