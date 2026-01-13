@@ -399,7 +399,58 @@ What you'll learn:
 const wednesday: Schedule = {
   day: "2026-06-10",
   description: "Wednesday - workshops",
-  intervals: [],
+  intervals: [
+    {
+      begin: "05:00",
+      end: "06:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Workshop registration",
+          description: `Please show up early to meet other attendees.`,
+        },
+      ],
+    },
+    {
+      begin: "06:00",
+      end: "14:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          title: "Agent Skills driven design",
+          description: `Over the past year, model intelligence has skyrocketed, and agent tooling has improved significantly. However, there's still a gap: most AI agents don't have the procedural, domain-specific expertise needed to do real work inside real products, especially in React apps, where a small behaviour change turns into user-facing regressions.
+
+In this workshop, I'll show you how leveraging Agent Skills changes how you build AI features in React: from prompt tweaking to shipping packaged guides, resources and scripts that turn a general-purpose agent into a product-specific one via the Agent Skills protocol (adopted by OpenAI, Anthropic and Cursor).  I'll also show a practical way to do this in React apps without changing your current frameworks or LLM, with evals and versioning in place to prevent regressions.
+
+## What you’ll build
+
+You’ll implement a real React/Next.js AI feature (server route/action + UI) and begin with a large prompt and several tools/MCPs.  We will use the Vercel AI SDK for a quick start.
+
+Next step, we will refactor it into an Agent Skills-driven design. You’ll intentionally break the feature in realistic ways (output drift, tool misuse, injection attempts) and then harden it using a small Skills pack. Finally, you’ll add versioning + lightweight evals so updates don’t regress your UI.
+
+By the end, you'd have learned not just the basics of building Agentic AI apps, but taken it a step further by making them reliable with Agent Skills.
+
+React teams are on the front line: agent failures become UI failures. This workshop is designed around React realities: typed contracts, predictable component states, safe fallbacks, and preventing “it worked yesterday” incidents, without requiring you to switch frameworks or lock into one LLM/provider.
+
+## Key outcomes
+
+- A working React/Next.js reference project using Agent Skills
+- A reusable Skills pack template (think SOPs + scripts + guardrails)
+- A working evaluation framework to catch regressions 
+- A checklist for shipping agent-powered UI features safely
+
+## Workshop prerequisites
+
+- Intermediate React + basic Next.js familiarity (routes/actions helpful)
+- Node.js installed; ability to run a repo locally
+- No prior “agent framework” knowledge required`,
+          people: [people.ohans],
+          keywords: [Keyword.AI],
+          // location: locations.hbc,
+        },
+      ],
+    },
+  ],
 };
 
 const thursday: Schedule = {

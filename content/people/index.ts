@@ -153,6 +153,7 @@ export { default as nikGraf } from "./nik-graf";
 export { default as niklas } from "./niklas";
 export { default as norbert } from "./norbert";
 export { default as nur } from "./nur";
+export { default as ohans } from "./ohans";
 export { default as olavi } from "./olavi";
 export { default as pasi } from "./pasi";
 export { default as patrickEcker } from "./patrick-ecker";
