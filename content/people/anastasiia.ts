@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "I’ve spent over 13 years in tech: first as a developer, then as a co-founder and COO of a growing IT company. Now, I help business founders do the same: fix the chaos in operations and finances, build real structure, and grow.",
   image: {
-    url: "people/anastasiia.jpeg",
+    url: "people/anastasiia.jpg",
   },
   social: {
     homepage: "",

@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "Helping software teams ship faster with AI at Wonna | Crafting early-stage, secure, and ethical AI products to help people grow, succeed, and thrive / Founder / Consultant / M.Sc. in CS.",
   image: {
-    url: "people/TODO.jpeg",
+    url: "people/laura.jpeg",
   },
   social: {
     homepage: "",
