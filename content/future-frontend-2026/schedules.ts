@@ -486,7 +486,7 @@ React teams are on the front line: agent failures become UI failures. This works
 - Node.js installed; ability to run a repo locally
 - No prior “agent framework” knowledge required`,
           people: [people.ohans],
-          keywords: [Keyword.AI],
+          keywords: [Keyword.AI, Keyword.DEVELOPMENT],
           // location: locations.hbc,
         },
       ],
