@@ -81,7 +81,7 @@ const monday: Schedule = {
     {
       begin: "08:00",
       end: "09:30",
-      title: "Work",
+      title: "Future of work",
       sessions: [
         {
           type: SessionType.TALK,
