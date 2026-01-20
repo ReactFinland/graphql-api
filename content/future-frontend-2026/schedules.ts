@@ -475,7 +475,78 @@ React teams are on the front line: agent failures become UI failures. This works
 const thursday: Schedule = {
   day: "2026-06-11",
   description: "Thursday - workshops",
-  intervals: [],
+  intervals: [
+    {
+      begin: "05:00",
+      end: "06:00",
+      sessions: [
+        {
+          type: SessionType.ORGANIZATIONAL,
+          title: "Workshop registration",
+          description: `Please show up early to meet other attendees.`,
+        },
+      ],
+    },
+    {
+      begin: "06:00",
+      end: "14:00",
+      sessions: [
+        {
+          type: SessionType.WORKSHOP,
+          title: "Claude Code Development & Workflows",
+          description: `Autonomous coding agents, specifically LLM's wrapped inside what we called harnesses have the possibility to multiply software development efficiency. This efficiency starts from individual usage but eventually changes teamwork dynamics.
+
+As creating code takes less time, other avenues of software development gain significance. This training is about maximising the value of AI-enabled code creation and the resulting changes in teamwork.
+
+## What will you learn?
+
+In this workshop, you'll learn how to configure, run and manage Claude Code. You will also get a sense what other similar coding agents and harnesses can do and how they differ.
+
+We go from running agents individually to creating proper engineering workflows that add value to your whole team, not just software developers.
+
+The main studies are:
+
+* basic setup and usage
+* memory and context management
+* management of several parallel AI's
+* integrate project management and MCP servers to your workflow
+* sub-agents, commands, skills
+* advance usage patterns
+* develop a "compounding engineering" guardrails
+* develop a mindset of curiosity and agentic thinking
+* pricing and economics of AI agents & tools
+ 
+After this training you'll be able think ahead of new bottlenecks and how to solve them in novel ways. The goals is not only to enhance all-around development efficiency & team productivity, but to create AI integration momentum for your team!
+
+## AI tools
+
+We use a selection of tools available to anyone. We'll focus more on principles than the details of these tools, so you can carry the knowledge as the tooling eventually changes.
+
+The tools we use:
+* Claude Code for agentic development (plus we'll look at Codex, Gemini/Antigravity and Opencode)
+* Cursor/VSCode integrations
+* Tools like Warp or Conductor to help manage multiple parallel agents
+* Linear and Github for task/project management
+ 
+We will start off with a little theory, then spend most of our time working with Claude Code together.
+
+## Who is the workshop for?
+
+This is for tech-minded people who are not afraid of console and coding tools. For software developers and people working with them. Programming proficiency is a benefit but not a must.
+
+* Software developers
+* Designers
+* Project managers
+* Product Owners
+
+We will be mostly typing in English instead of any programming language.`,
+          people: [people.joonas],
+          keywords: [Keyword.AI, Keyword.DEVELOPMENT],
+          // location: locations.hbc,
+        },
+      ],
+    },
+  ],
 };
 
 const friday: Schedule = {
