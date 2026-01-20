@@ -540,7 +540,7 @@ This is for tech-minded people who are not afraid of console and coding tools. F
 * Product Owners
 
 We will be mostly typing in English instead of any programming language.`,
-          people: [people.joonas],
+          people: [people.joonasP],
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
           // location: locations.hbc,
         },
