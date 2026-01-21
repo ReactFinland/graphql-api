@@ -4,7 +4,7 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 const person: Contact = {
   name: "Una Kravets",
   about:
-    "Hi, I'm Una! I’ve spent my career working on making the web a better place for designers and developers. Currently, I lead the Web UI Developer Relations team at Google Chrome, where I support millions of developers through improvements to native web capabilities and platform APIs.",
+    "Una leads the Web UI DevRel team at Google Chrome, focusing on making the web platform a more robust and powerful tool for developers through new CSS, HTML, and JavaScript APIs. She is also a member of the CSS Working Group and OpenUI Community Group. Before that, Una worked on building scalable and expressive design systems as a Developer Advocate on the Material Design team, as the Director of Product Design at Bustle Digital Group, and as a UI Engineer at DigitalOcean and IBM Design. Offline, Una loves gardening, sewing, and traveling as much as possible.",
   image: {
     url: "people/una.jpg",
   },

@@ -262,8 +262,8 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title: "Back to the future: of web development",
+          description: `The future of web development isn't about chasing the latest library or framework—it's about rediscovering the evolving power of the platform. This talk will challenge your assumptions, and show you how the most exciting advances for the web are happening right now in HTML and CSS. Learn how to build complex patterns like hover cards and customizable drop down menus with _zero JavaScript_. You'll unlock the potential of modern, functional CSS and built-in semantic components to make building performant, accessible UI's faster and easier. The future is bright, and it's simpler than you think.`,
           people: [people.una],
           urls: {
             drawing: "",
