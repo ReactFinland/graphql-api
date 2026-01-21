@@ -99,8 +99,15 @@ const monday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title:
+            "Not Loud, Still Powerful - Taking Agency Without Becoming Someone Else",
+          description: `The future of work is not something that happens to techies. It is something we actively build. Still, many developers and tech professionals don’t see themselves as “influencers” of any kind. Many of us are more comfortable with systems than social arenas.
+
+This session challenges the idea that shaping the future requires loud voices, charisma, or constant visibility. Influence in tech can be quiet, analytical, structured, and deeply thoughtful. It can happen through design choices, questions asked at the right moment, boundaries set, or values embedded into code and processes.
+
+As AI reshapes work, tech professionals have more influence than they often realize. Personality plays a role, but agency is shaped far more by values, perspective, and skills that can be developed over time.
+
+We’ll explore ways to take responsibility and exert influence that respect different neurotypes and energy levels. The key message is simple: you don’t need to become someone else to shape the future of work. Recognizing that your way of thinking matters - and finding connection with peers who share your values - is not only how influence grows but also how work becomes more meaningful and sustainable.`,
           people: [people.laura],
           urls: {
             drawing: "",
