@@ -188,7 +188,7 @@ In this talk, we will fix accessibility problems in a real React login component
     {
       begin: "12:30",
       end: "14:00",
-      title: "Habits",
+      title: "Resilience",
       sessions: [
         {
           type: SessionType.TALK,
