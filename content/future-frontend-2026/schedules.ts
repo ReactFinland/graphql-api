@@ -282,7 +282,7 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "The Platform and a Stylesheet",
+          title: "Building beautiful web applications the HTML First way",
           description: ``,
           people: [people.tonyEnnis],
           urls: {
