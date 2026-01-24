@@ -86,19 +86,6 @@ const monday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
-          people: [people.anastasiia],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DESIGN],
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
           title:
             "Not Loud, Still Powerful - Taking Agency Without Becoming Someone Else",
           description: `The future of work is not something that happens to techies. It is something we actively build. Still, many developers and tech professionals don’t see themselves as “influencers” of any kind. Many of us are more comfortable with systems than social arenas.
@@ -109,6 +96,25 @@ As AI reshapes work, tech professionals have more influence than they often real
 
 We’ll explore ways to take responsibility and exert influence that respect different neurotypes and energy levels. The key message is simple: you don’t need to become someone else to shape the future of work. Recognizing that your way of thinking matters - and finding connection with peers who share your values - is not only how influence grows but also how work becomes more meaningful and sustainable.`,
           people: [people.laura],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DESIGN],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Designing Leadership Growth in Tech Teams (When Developers Just Want to Code)",
+          description: `Many tech companies say they want developers to take ownership and grow into tech leads - but at the same time they control decisions, avoid hard conversations, and expect people to “figure it out themselves”.
+
+In this talk, Anastasiia Zvenigorodskaia shares practical lessons from growing tech leads inside small and mid-sized engineering teams. Based on her path from developer to COO, she shows how leadership can be treated as a skill set, not a job title - and how developers can grow influence without giving up coding.
+
+The session covers how to spot leadership potential in developers, how to support growth without forcing people into management, and how trust and clear expectations directly affect motivation. It also looks at common mistakes companies make when they want mature teams but design systems that block growth.
+
+This talk focuses on what teams can change today to grow stronger tech leads - and sets the foundation for discussing how these skills will matter even more in the future of work.`,
+          people: [people.anastasiia],
           urls: {
             drawing: "",
             slides: "",
