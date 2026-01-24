@@ -106,7 +106,8 @@ We’ll explore ways to take responsibility and exert influence that respect dif
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Designing Leadership Growth in Tech Teams (When Developers Just Want to Code)",
+          title:
+            "Designing Leadership Growth in Tech Teams (When Developers Just Want to Code)",
           description: `Many tech companies say they want developers to take ownership and grow into tech leads - but at the same time they control decisions, avoid hard conversations, and expect people to “figure it out themselves”.
 
 In this talk, Anastasiia Zvenigorodskaia shares practical lessons from growing tech leads inside small and mid-sized engineering teams. Based on her path from developer to COO, she shows how leadership can be treated as a skill set, not a job title - and how developers can grow influence without giving up coding.
@@ -307,14 +308,14 @@ const tuesday: Schedule = {
     {
       begin: "08:00",
       end: "09:30",
-      title: "Best practices",
+      title: "Hypermedia",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
-          people: [people.matthewM],
+          title: "Hypermedia – the solution for lighter web applications?",
+          description: `It is well understood many web applications are more complex than they should. My thesis is that this is because due to prevailing mainstream trends, we ended up taking a path leading us to this complexity. It turns out that an old idea, hypermedia, might allow us to overcome this complexity while making our websites agent friendly. In this talk I show you why hypermedia is more relevant than ever today and what kind of benefits it can provide for web developers. I will cover concrete solutions, such as Datastar or htmx, and give you a starting point for your explorations with hypermedia driven web application development.`,
+          people: [people.juhoVepsalainen],
           urls: {
             drawing: "",
             slides: "",
@@ -338,14 +339,14 @@ const tuesday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "Hypermedia",
+      title: "Best practices",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Hypermedia – the solution for lighter web applications?",
-          description: `It is well understood many web applications are more complex than they should. My thesis is that this is because due to prevailing mainstream trends, we ended up taking a path leading us to this complexity. It turns out that an old idea, hypermedia, might allow us to overcome this complexity while making our websites agent friendly. In this talk I show you why hypermedia is more relevant than ever today and what kind of benefits it can provide for web developers. I will cover concrete solutions, such as Datastar or htmx, and give you a starting point for your explorations with hypermedia driven web application development.`,
-          people: [people.juhoVepsalainen],
+          title: "",
+          description: ``,
+          people: [people.matthewM],
           urls: {
             drawing: "",
             slides: "",
