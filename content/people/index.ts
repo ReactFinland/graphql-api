@@ -32,6 +32,7 @@ export { default as danSchafer } from "./dan-schafer";
 export { default as danielE } from "./daniel-e";
 export { default as danielM } from "./daniel-m";
 export { default as daniel } from "./daniel";
+export { default as dario } from "./dario";
 export { default as davidC } from "./david-c";
 export { default as davidKhourshid } from "./david-khourshid";
 export { default as david } from "./david";

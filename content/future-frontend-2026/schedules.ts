@@ -200,6 +200,26 @@ In this talk, we will fix accessibility problems in a real React login component
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
+          title:
+            "This is not the tech I signed up for! – An approach to permacomputing",
+          description: `I think I am not alone in thinking that current technology trends are exhausting. More power, more chips, more AI, more productivity, less humans.
+
+It is while reflecting on what I can bring to the table in terms of societal change that I stumbled upon permacomputing, a concept that channeled all my energy for change.
+
+In this talk I hope to provide a different point of view by presenting to you the world of permacomputing, a framework for approaching many of the problems today’s computing presents us.
+
+Think before doing. Care for the chips. Minimalistic aesthetics. By talking about these topics I hope (hope is important) to provide you with ideas to bring change (even if small) and imagine possible futures where our relationship with technology is vastly different and healthier.`,
+          people: [people.dario],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DEVELOPMENT, Keyword.PERSONAL_DEVELOPMENT],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
           title: "",
           description: ``,
           people: [people.georgios],
