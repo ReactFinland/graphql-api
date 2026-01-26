@@ -583,10 +583,12 @@ We will be mostly typing in English instead of any programming language.`,
   ],
 };
 
+/*
 const friday: Schedule = {
   day: "2026-06-12",
   description: "Friday - workshops",
   intervals: [],
 };
+*/
 
-export default [monday, tuesday, wednesday, thursday, friday];
+export default [monday, tuesday, wednesday, thursday];
