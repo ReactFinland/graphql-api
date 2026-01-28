@@ -359,14 +359,27 @@ const tuesday: Schedule = {
     {
       begin: "10:30",
       end: "12:00",
-      title: "Best practices",
+      title: "Architecture",
       sessions: [
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title: "Bringing a bit of architecture in your frontend application",
+          description: `This talk explores how modern frontend frameworks, with their lean learning curves and rapid adoption, often make developers forget the foundational software development principles — leading to unmaintainable and fragile code. Matthew Mamonov demonstrates how clean architecture principles remain highly relevant in the frontend realm, even though many developers assume they apply only to backend systems.`,
           people: [people.matthewM],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DEVELOPMENT],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "AI-first frontend architecture",
+          description: `AI-first frontend architecture treats artificial intelligence as a core platform capability, embedding agentic decision-making into rendering, state management, accessibility, and personalization rather than layering AI on top of the UI. The frontend becomes adaptive, context-aware, and self-optimizing, dynamically shaping experiences based on user behavior, intent, and real-time signals.`,
+          people: [people.rashmi],
           urls: {
             drawing: "",
             slides: "",
