@@ -13,7 +13,7 @@ const person: Contact = {
     mastodon: "", // This has to be a whole link
     twitter: "", // Handle without @ is enough
     bluesky: "",
-    github: "",
+    github: "smellyshovel",
     facebook: "",
     medium: "",
     instagram: "",
