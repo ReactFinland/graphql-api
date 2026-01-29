@@ -42,8 +42,23 @@ const monday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "We Don't Have an Idea Problem. We Have a Permission Problem.",
+          description: `Most organizations don’t suffer from a lack of ideas — they suffer from a lack of permission.
+
+In product development, creativity is quietly constrained by how ideas are discussed, evaluated, and prematurely optimized. The result? The most interesting ideas rarely survive long enough to reach a meeting — let alone a roadmap.
+
+This talk challenges common assumptions about creativity in engineering teams. We'll look at why ideas disappear, how early judgment kills innovation, and what it really takes to awaken the hidden genius already inside organizations.
+
+No fluff. No inspiration theater.
+Just a clear look at how creativity is either enabled — or silently shut down — long before execution begins.
+
+We'll cover:
+- Reframing creativity in product development 
+- Why good ideas don’t show up in meetings 
+- The danger of premature optimization 
+- Awakening the hidden genius
+- Practical creativity triggers (no fluff)
+- The real role of leadership and senior engineers`,
           people: [people.pasi],
           urls: {
             drawing: "",
@@ -148,14 +163,14 @@ This talk focuses on what teams can change today to grow stronger tech leads - a
             "Accessibility Adventures - The Lost Secrets of Forced Colors Mode",
           description: `Guiding us through this adventure is Rami, our AI-generated, raccoon treasure hunter, equal parts explorer and troublemaker, armed with a mysterious treasure map and an ancient planchette lens to decode its mysteries. Each segment of the talk represents a new “clue” on the map, where we’ll dive into demos of web interfaces through the lens of Forced Colors Mode, uncovering what breaks, what disappears, and how we can bring clarity back to the screen.
 
-Together, we’ll explore:
+Together, we'll explore:
 - What is Forced Colors Mode and how do browsers translate system color schemes?
 - How can we detect and support the forced-colors media query?
 - How do CSS keywords, color tokens, and custom properties behave in high-contrast settings?
 - What are the best practices for building resilient, inclusive interfaces in Forced Colors Mode?
 - When (and how) should we override forced rendering safely?
 
-Throughout the talk, we’ll alternate between screen reader–guided demos and visual “treasure map” sequences, immersing the audience in the challenges users face when Forced Colors Mode is ignored, and the breakthroughs that happen when it’s embraced.`,
+Throughout the talk, we'll alternate between screen reader–guided demos and visual “treasure map” sequences, immersing the audience in the challenges users face when Forced Colors Mode is ignored, and the breakthroughs that happen when it’s embraced.`,
           people: [people.daniel],
           urls: {
             drawing: "",
@@ -167,7 +182,7 @@ Throughout the talk, we’ll alternate between screen reader–guided demos and 
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "The Cake Is a Lie... And So Is Your Login’s Accessibility",
+          title: "The Cake Is a Lie... And So Is Your Login's Accessibility",
           description: `Much like the promise of cake in Portal, login forms are everywhere in web development. While they may seem functional at first glance, many users with disabilities perceive a maze of invisible walls, from keyboard traps to inaccessible CAPTCHA. It's as if GLaDOS designed these forms herself to test us!
 
 In this talk, we will fix accessibility problems in a real React login component together. We will explore how simple changes can significantly improve the user experience. For example, by using ARIA tags correctly and managing focus more effectively, and what matters for authentication in particular. The promise of cake may be a lie (or isn't it? 🤔), but accessibility can and should be!`,
