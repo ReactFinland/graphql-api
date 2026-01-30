@@ -70,8 +70,20 @@ We'll cover:
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: "",
+          title: "Endineering",
+          description: `Face it, all your projects are going to die, and you haven’t even designed the end. 
+
+In a world flooded with new apps and services, we can no longer assume our products are immune to the evolutionary cycle of the "next big thing." While we focus on onboarding and usage, we overlook the "End Gap"—the barren, emotional void at the close of the consumer lifecycle.
+
+This talk reveals how the consumer experience shatters without a coherent ending. 
+
+We will explore:
+- The Hubris of Medical Tech: Why "helpful" tech for the most venerable, fails to consider the long-term burden of bodily embedded e-waste.
+- Broken Boundaries: How the boundaries of state and space are shifting, challenging the assumption of "longstanding" platforms like Windows and AWS.
+- Individual Agency: The lack of coherence in modern identity systems and how the once-tangible "Kill Switch" has dissolved into a subjective, political issue.
+- I will share techniques and approaches to help you discuss, design, and deliver endings that empower consumers rather than abandoning them. 
+
+Stop ignoring the exit. Become an Endineer and design the end.`,
           people: [people.joe],
           urls: {
             drawing: "",
