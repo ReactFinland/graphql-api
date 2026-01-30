@@ -541,6 +541,41 @@ React teams are on the front line: agent failures become UI failures. This works
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
           // location: locations.hbc,
         },
+        {
+          type: SessionType.WORKSHOP,
+          title: "Designing the End",
+          description: `Or in other words, why ends really matter for your products.
+
+Face it, all your projects are going to die and you haven’t even designed the end. Well you better get stated learning – What does a good ending look like?
+
+This workshop aims to equip the attendees with all the tools to answer this question. 
+
+## What will you learn
+
+- You will learn how to identity what type of ending needs to happen and why. 
+- You will learn, why the transaction types influence and empower at the end. 
+- Why the phases of the end inspire the end of the product story. Bringing resolution, meaning and emotion.
+- Consider the fascinating varieties of psychology that influence endings and how to use the most appropriate method.
+- And ultimately use endings as a place of brand and business benefits, celebrating the consumer and improving the bottom line.
+
+You will become a qualified Endineer. Joining 1000 others who have graduated this course around the world. 
+
+## Who is it for
+
+This workshop is accessible for all conference attendees. It is aimed broadly for people who work in product development, design and tech.
+The workshop is a mixture of presentations, tools, group and individual work. 
+
+## Testimonials
+
+> It was such a revelation. I couldn’t stop thinking about how everything ends, and how a better endings should be. Thank you for the continuous support and wisdom Joe Macleod! 
+
+> Yeah! Yesterday was graduation day. I am now a certified #Endineer. Thanks to Joe Macleod who poured all his knowledge and dedication into creating this course. Highly recommended for everybody, no matter what your job title is.
+
+> Did you have an old iPhone that slowed down and its battery didn’t last until lunchtime? It’s probably because Apple didn’t have an Endineer in their team. Yes, Endineer, not Engineer. Haven’t heard of Endineering before? It’s all about starting with the END in mind.`,
+          people: [people.joe],
+          keywords: [Keyword.DESIGN],
+          // location: locations.hbc,
+        },
       ],
     },
   ],
