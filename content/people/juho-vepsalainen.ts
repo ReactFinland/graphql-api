@@ -4,7 +4,7 @@ import Keyword from "../../server/schema/keywords";
 const person: Contact = {
   name: "Juho Vepsäläinen",
   about:
-    "Juho Vepsäläinen, DSc, has decades of experience with open source development. Besides a developer, he is also an academic researcher and teacher focused on web development. He is also the director of Future Frontend conference and is responsible for crafting its program and concept.",
+    "Juho Vepsäläinen, a doctor of science (DSc), has decades of experience with open source development. Besides a developer, he is also an academic researcher and teacher focused on web development. He is also the director of Future Frontend conference and is responsible for crafting its program and concept.",
   image: {
     url: "people/juho.jpg",
   },
