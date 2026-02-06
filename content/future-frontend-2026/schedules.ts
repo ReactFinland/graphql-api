@@ -361,7 +361,14 @@ const tuesday: Schedule = {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Hypermedia – the solution for lighter web applications?",
-          description: `It is well understood many web applications are more complex than they should. My thesis is that this is because due to prevailing mainstream trends, we ended up taking a path leading us to this complexity. It turns out that an old idea, hypermedia, might allow us to overcome this complexity while making our websites agent friendly. In this talk I show you why hypermedia is more relevant than ever today and what kind of benefits it can provide for web developers. I will cover concrete solutions, such as Datastar or htmx, and give you a starting point for your explorations with hypermedia driven web application development.`,
+          description: `It is well understood many web applications are more complex than they should. My thesis is that this is because due to prevailing mainstream trends, we ended up taking a path leading us to this complexity. It turns out that an old idea, hypermedia, might allow us to overcome this complexity while making our websites agent friendly.
+
+You will learn:
+
+1. Why hypermedia-driven applications (HDAs) are more relevant than ever today
+2. How HDAs enable conceptual simplicity, high performance, agentic support, and a high degree of personalization
+3. What kind of solutions exist in the space already (Datastar, htmx, unpoly etc.) and what do they solve exactly compared to the mainstream options
+4. What kind of challenges remain to consider`,
           people: [people.juhoVepsalainen],
           urls: {
             drawing: "",
