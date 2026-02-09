@@ -660,6 +660,41 @@ We will be mostly typing in English instead of any programming language.`,
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
           // location: locations.hbc,
         },
+        {
+          type: SessionType.WORKSHOP,
+          title: "Drawing as a tool – The ABC of visual facilitation",
+          description: `"Drawing as a tool" is an engaging workshop for practicing drawing techniques
+and visualization. The workshop is designed to be an inspiring and motivational
+experience for all participants. Its goal is to enhance participants' ability to use
+visual elements effectively in communication and as a support for their own
+learning.
+
+We will explore the basics of drawing, such as the use of lines, shapes, and shading,
+so that everyone can find their own creative way to express thoughts through
+drawing, thereby improving their own learning and communication. Additionally,
+we will go through the principles of visualization and visual facilitation.
+
+The workshop offers the opportunity to learn new skills in a relaxed and
+encouraging environment where each participant’s input and creativity are
+valuable. Welcome to experience how visuality can enrich interaction and learning!
+
+The workshop focuses on easy drawing and visualization techniques. During the
+workshop, we will cover a bit of theory and engage in practical exercises as follows:
+
+1.Introduction to the day's theme - Check-in to the space, expectations/warm-up task
+2.Introduction to the basics of visual facilitation and drawing
+  - We focus on the importance of lines, shapes, and shading in drawing. You’ll learn how to use these elements to express thoughts visually.
+  - Brief introduction to the history and principles of visual facilitation
+3.Creative exercises
+  - The aim is to apply what we have learned in practice realizing why visual communication is effective! The theme is either goals or storytelling and familiarization.
+4.Drawing ABCs - We create our own visual vocabulary
+5.Application to your own work - template task
+6.Final summary and feedback
+  - We review how the learned skills can be applied both atwork and in everyday life, and gather feedback on the workshop using visual tools.`,
+          people: [people.salla],
+          keywords: [Keyword.DESIGN],
+          // location: locations.hbc,
+        },
       ],
     },
   ],

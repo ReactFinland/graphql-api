@@ -176,6 +176,7 @@ export { default as roosa } from "./roosa";
 export { default as rotemMizrachiMeidan } from "./rotem-mizrachi-meidan";
 export { default as ryan } from "./ryan";
 export { default as saku } from "./saku";
+export { default as salla } from "./salla";
 export { default as samuel } from "./samuel";
 export { default as samuliHakoniemi } from "./samuli-hakoniemi";
 export { default as saraVieira } from "./sara-vieira";
