@@ -681,15 +681,15 @@ valuable. Welcome to experience how visuality can enrich interaction and learnin
 The workshop focuses on easy drawing and visualization techniques. During the
 workshop, we will cover a bit of theory and engage in practical exercises as follows:
 
-1.Introduction to the day's theme - Check-in to the space, expectations/warm-up task
-2.Introduction to the basics of visual facilitation and drawing
+1. Introduction to the day's theme - Check-in to the space, expectations/warm-up task
+2. Introduction to the basics of visual facilitation and drawing
   - We focus on the importance of lines, shapes, and shading in drawing. You’ll learn how to use these elements to express thoughts visually.
   - Brief introduction to the history and principles of visual facilitation
-3.Creative exercises
+3. Creative exercises
   - The aim is to apply what we have learned in practice realizing why visual communication is effective! The theme is either goals or storytelling and familiarization.
-4.Drawing ABCs - We create our own visual vocabulary
-5.Application to your own work - template task
-6.Final summary and feedback
+4. Drawing ABCs - We create our own visual vocabulary
+5. Application to your own work - template task
+6. Final summary and feedback
   - We review how the learned skills can be applied both atwork and in everyday life, and gather feedback on the workshop using visual tools.`,
           people: [people.salla],
           keywords: [Keyword.DESIGN],
