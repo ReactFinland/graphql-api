@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "MonoLisa",
   about: "Font follows function",
   image: {
-    url: "sponsors/monolisa.png",
+    url: "sponsors/monolisa.svg",
   },
   social: {
     homepage: "https://www.monolisa.dev?utm_source=ff",
