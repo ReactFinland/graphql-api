@@ -10,7 +10,7 @@ const partners: Contact[] = [
   // allSponsors.dojs,
   // allSponsors.halfstack,
   // allSponsors.digitalExpert,
-  // allSponsors.koodiasuomesta,
+  allSponsors.koodiasuomesta,
   allSponsors.reactnorway,
   allSponsors.survivejs,
   // allSponsors.reactsummit,
