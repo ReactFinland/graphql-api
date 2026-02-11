@@ -2,18 +2,18 @@ import { Location } from "../../server/schema/Location";
 
 // FIXME: These should be Contacts instead -> Location can become simpler again
 const location: Location = {
-  name: "Business College Helsinki",
-  about: "Business College Helsinki is one of the workshop hosts of the event.",
+  name: "Haaga-Helia",
+  about: "Haaga-Helia (Helsinki) is one of the workshop hosts of the event.",
   social: {
-    homepage: "https://www.bc.fi/",
-    googleMaps: "https://maps.app.goo.gl/s4oVDndnj8bFyx6E8",
+    homepage: "https://www.haaga-helia.fi/",
+    googleMaps: "https://maps.app.goo.gl/qJ5rRUpAhjY3tz8J8",
   },
   country: {
     name: "Finland",
     code: "FI",
   },
   city: "Helsinki",
-  address: "Rautatieläisenkatu 5",
+  address: "Ratapihantie 13",
 };
 
 export default location;

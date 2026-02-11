@@ -518,6 +518,7 @@ const wednesday: Schedule = {
         {
           type: SessionType.WORKSHOP,
           title: "Agent Skills driven design",
+          location: locations.hbc,
           description: `Over the past year, model intelligence has skyrocketed, and agent tooling has improved significantly. However, there's still a gap: most AI agents don't have the procedural, domain-specific expertise needed to do real work inside real products, especially in React apps, where a small behaviour change turns into user-facing regressions.
 
 In this workshop, I'll show you how leveraging Agent Skills changes how you build AI features in React: from prompt tweaking to shipping packaged guides, resources and scripts that turn a general-purpose agent into a product-specific one via the Agent Skills protocol (adopted by OpenAI, Anthropic and Cursor).  I'll also show a practical way to do this in React apps without changing your current frameworks or LLM, with evals and versioning in place to prevent regressions.
@@ -551,6 +552,7 @@ React teams are on the front line: agent failures become UI failures. This works
         {
           type: SessionType.WORKSHOP,
           title: "Designing the End",
+          location: locations.nitor,
           description: `Or in other words, why ends really matter for your products.
 
 Face it, all your projects are going to die and you haven’t even designed the end. Well you better get stated learning – What does a good ending look like?
@@ -581,7 +583,6 @@ The workshop is a mixture of presentations, tools, group and individual work.
 > Did you have an old iPhone that slowed down and its battery didn’t last until lunchtime? It’s probably because Apple didn’t have an Endineer in their team. Yes, Endineer, not Engineer. Haven’t heard of Endineering before? It’s all about starting with the END in mind.`,
           people: [people.joe],
           keywords: [Keyword.DESIGN],
-          // location: locations.hbc,
         },
       ],
     },
@@ -610,6 +611,7 @@ const thursday: Schedule = {
         {
           type: SessionType.WORKSHOP,
           title: "Claude Code Development & Workflows",
+          location: locations.nitor,
           description: `Autonomous coding agents, specifically LLM's wrapped inside what we called harnesses have the possibility to multiply software development efficiency. This efficiency starts from individual usage but eventually changes teamwork dynamics.
 
 As creating code takes less time, other avenues of software development gain significance. This training is about maximising the value of AI-enabled code creation and the resulting changes in teamwork.
@@ -658,10 +660,10 @@ This is for tech-minded people who are not afraid of console and coding tools. F
 We will be mostly typing in English instead of any programming language.`,
           people: [people.joonasP],
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
-          // location: locations.hbc,
         },
         {
           type: SessionType.WORKSHOP,
+          location: locations.hbc,
           title: "Drawing as a tool – The ABC of visual facilitation",
           description: `"Drawing as a tool" is an engaging workshop for practicing drawing techniques
 and visualization. The workshop is designed to be an inspiring and motivational
@@ -693,7 +695,6 @@ workshop, we will cover a bit of theory and engage in practical exercises as fol
   - We review how the learned skills can be applied both atwork and in everyday life, and gather feedback on the workshop using visual tools.`,
           people: [people.salla],
           keywords: [Keyword.DESIGN],
-          // location: locations.hbc,
         },
       ],
     },

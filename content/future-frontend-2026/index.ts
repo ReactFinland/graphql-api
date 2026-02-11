@@ -40,6 +40,9 @@ const partners: Contact[] = [
   // allSponsors.vihat,
   // allSponsors.twir,
   // allSponsors.hbc,
+  allSponsors.apidays,
+  allSponsors.haagahelia,
+  allSponsors.monolisa,
 ];
 const goldSponsors: Contact[] = [
   // allSponsors.digia
@@ -89,7 +92,7 @@ const conference: Conference = {
     people.harriMaatta,
     people.toniRistola,
     people.tuuliTiilikainen,
-    people.juhis,
+    //people.juhis,
     people.emilia,
     people.jussi,
     people.juhoLehtinen,
