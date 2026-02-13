@@ -6,7 +6,7 @@ const person: Contact = {
   about:
     "Host, ConTejas Code Podcast. Best Selling Author, Fluent React. Investor. Advisor. Formerly at ▲ Vercel, Spotify, Xata, and more. Working on AI at IBM.",
   image: {
-    url: "people/tejas.jpg",
+    url: "people/tejas.jpeg",
   },
   social: {
     homepage: "",
