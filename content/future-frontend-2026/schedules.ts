@@ -355,44 +355,6 @@ const tuesday: Schedule = {
     {
       begin: "08:00",
       end: "09:30",
-      title: "Hypermedia",
-      sessions: [
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "Hypermedia – the solution for lighter web applications?",
-          description: `It is well understood many web applications are more complex than they should. My thesis is that this is because due to prevailing mainstream trends, we ended up taking a path leading us to this complexity. It turns out that an old idea, hypermedia, might allow us to overcome this complexity while making our websites agent friendly.
-
-You will learn:
-
-1. Why hypermedia-driven applications (HDAs) are more relevant than ever today
-2. How HDAs enable conceptual simplicity, high performance, agentic support, and a high degree of personalization
-3. What kind of solutions exist in the space already (Datastar, htmx, unpoly etc.) and what do they solve exactly compared to the mainstream options
-4. What kind of challenges remain to consider`,
-          people: [people.juhoVepsalainen],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DEVELOPMENT],
-        },
-      ],
-    },
-    {
-      begin: "09:30",
-      end: "10:30",
-      sessions: [
-        {
-          type: SessionType.LUNCH,
-          title: "Lunch",
-          description: "Lunch with a Finnish twist.",
-        },
-      ],
-    },
-    {
-      begin: "10:30",
-      end: "12:00",
       title: "Architecture",
       sessions: [
         {
@@ -424,6 +386,50 @@ You will learn:
       ],
     },
     {
+      begin: "09:30",
+      end: "10:30",
+      sessions: [
+        {
+          type: SessionType.LUNCH,
+          title: "Lunch",
+          description: "Lunch with a Finnish twist.",
+        },
+      ],
+    },
+    {
+      begin: "10:30",
+      end: "12:00",
+      title: "Agentic development",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.tejasKumar],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.AGENTS, Keyword.AI, Keyword.DEVELOPMENT],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.ohans],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.AGENTS, Keyword.AI, Keyword.DEVELOPMENT],
+        },
+      ],
+    },
+    {
       begin: "12:00",
       end: "12:30",
       sessions: [
@@ -437,7 +443,7 @@ You will learn:
     {
       begin: "12:30",
       end: "14:00",
-      title: "Agents",
+      title: "Agentic use cases",
       sessions: [
         {
           type: SessionType.TALK,

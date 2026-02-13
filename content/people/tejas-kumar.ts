@@ -3,14 +3,16 @@ import Keyword from "../../server/schema/keywords";
 
 const person: Contact = {
   name: "Tejas Kumar",
-  about: "I write code and love life.",
+  about:
+    "Host, ConTejas Code Podcast. Best Selling Author, Fluent React. Investor. Advisor. Formerly at ▲ Vercel, Spotify, Xata, and more. Working on AI at IBM.",
   image: {
     url: "people/tejas.jpg",
   },
   social: {
     homepage: "",
-    twitter: "TejasKumar_",
+    twitter: "tejask",
     github: "tejasq",
+    linkedin: "tejasq",
   },
   location: {
     country: {
