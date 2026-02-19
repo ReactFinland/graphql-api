@@ -3,7 +3,8 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 
 const person: Contact = {
   name: "Tony Kovanen",
-  about: "Founding Engineer at [mastra.ai](https://mastra.ai/).",
+  about:
+    "Founding Engineer at [mastra.ai](https://mastra.ai/). Previously co-founder/CTO @ Vercel, co-creator of Next.js, CTO @ based.io, principal engineer @ Gatsby etc.",
   image: {
     url: "people/tony-kovanen.jpeg",
   },
