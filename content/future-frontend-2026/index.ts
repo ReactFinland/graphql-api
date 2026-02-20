@@ -36,7 +36,6 @@ const partners: Contact[] = [
   // allSponsors.frankenjs,
   // allSponsors.friikit,
   // allSponsors.yle,
-  allSponsors.nitor,
   // allSponsors.vihat,
   // allSponsors.twir,
   // allSponsors.hbc,
@@ -58,6 +57,7 @@ const silverSponsors: Contact[] = [
   // allSponsors.elisa,
   // allSponsors.knowit,
   allSponsors.ohjelmistofriikit,
+  allSponsors.nitor,
 ];
 const bronzeSponsors: Contact[] = [
   // allSponsors.knowit,
