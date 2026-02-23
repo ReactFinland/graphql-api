@@ -109,3 +109,4 @@ export { default as yglfkyiv } from "./yglfkyiv";
 export { default as yle } from "./yle";
 export { default as zapier } from "./zapier";
 export { default as zeroplusx } from "./zeroplusx";
+export { default as zurichjs } from "./zurichjs";

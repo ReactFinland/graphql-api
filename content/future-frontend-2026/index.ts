@@ -42,6 +42,7 @@ const partners: Contact[] = [
   allSponsors.apidays,
   allSponsors.haagahelia,
   allSponsors.monolisa,
+  allSponsors.zurichjs,
 ];
 const goldSponsors: Contact[] = [
   // allSponsors.digia
