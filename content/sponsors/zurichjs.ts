@@ -4,7 +4,7 @@ const sponsor: Contact = {
   name: "ZurichJS",
   about: "ZurichJS Conf 2026",
   image: {
-    url: "sponsors/zurichjs.svg",
+    url: "sponsors/zurichjs-square.png",
   },
   social: {
     homepage:
