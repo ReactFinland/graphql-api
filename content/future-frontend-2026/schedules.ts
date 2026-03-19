@@ -247,8 +247,14 @@ Think before doing. Care for the chips. Minimalistic aesthetics. By talking abou
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title: "Building Resilience: Origins",
+          description: `Engineers design for resilience every day — redundancy, graceful degradation, monitoring, recovery. But these patterns weren't invented in a data center. They were borrowed from the most battle-tested system in existence: the human body.
+
+This talk traces resilience back to its origin and asks an uncomfortable question. If we already know how resilient systems work, why do we neglect the one system we can never rewrite, migrate, or redeploy? Why do we fight for infrastructure maintenance at work and allocate none for ourselves?
+
+We'll explore how the body's own adaptation mechanisms — the same ones that inspired our engineering patterns — are quietly working against us in sedentary environments. How the developer stereotype crystallized around a technological constraint that no longer exists. And why no one in the current health landscape is watching the slow, invisible space where a resilient body becomes a fragile one.
+
+You'll leave with a practical framework for treating your body not as a thing that carries you to the keyboard, but as the foundation everything you build depends on.`,
           people: [people.georgios],
           urls: {
             drawing: "",
