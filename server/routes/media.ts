@@ -22,7 +22,7 @@ async function handleMediaRequest(
       return new Response("Not found", { status: 404 });
     }
 
-    const body = await fs.readFile(filePath);
+    const body = new Uint8Array(await fs.readFile(filePath));
 
     return new Response(body, {
       headers: {

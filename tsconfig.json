@@ -10,7 +10,6 @@
     "outDir": "build",
     "resolveJsonModule": true,
     "typeRoots": ["node_modules/@types"],
-    "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitAny": false,
