@@ -74,8 +74,8 @@ Check these endpoints on the deployed domain:
 
 ## Environment variables
 
-The application requires a `TOKEN` value at runtime for all non-media routes.
+The application requires a `TOKEN` value at runtime for all Worker-handled routes.
 
 For local Wrangler development, provide the values in `.dev.vars` or `.env`. The example in [.env.template](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.env.template) is:
 
-- `TOKEN` for authenticating all non-media routes through a `TOKEN` request header
+- `TOKEN` for authenticating all Worker-handled routes through a `TOKEN` request header

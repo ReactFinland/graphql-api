@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import createRequestHandler from "../server/app";
+import createRequestHandler from "../server/create-request-handler";
 
 interface Env {
   TOKEN: string;
@@ -12,7 +12,6 @@ function getHandleRequest(env: Env) {
   if (!handleRequestPromise || cachedToken !== env.TOKEN) {
     cachedToken = env.TOKEN;
     handleRequestPromise = createRequestHandler({
-      enableMedia: false,
       expectedToken: env.TOKEN,
       projectRoot: "/bundle",
     });

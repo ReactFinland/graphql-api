@@ -1,28 +1,21 @@
-import * as path from "path";
 import generateSchema from "./schema";
 import handleCalendarRequest from "./routes/calendar";
 import createGraphQLRequestHandler from "./routes/graphql";
-import handleMediaRequest, { isPublicImagePath } from "./routes/media";
 import handlePingRequest from "./routes/ping";
 
 export interface CreateRequestHandlerOptions {
-  enableMedia?: boolean;
-  mediaPath?: string;
   mediaUrl?: string;
-  projectRoot?: string;
+  projectRoot: string;
   expectedToken?: string;
 }
 
-async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
-  const projectRoot = options.projectRoot || path.resolve(__dirname, "../..");
+async function createRequestHandler(options: CreateRequestHandlerOptions) {
   const mediaUrl = options.mediaUrl || "/media";
-  const mediaPath = options.mediaPath || path.join(projectRoot, "media");
-  const enableMedia = options.enableMedia !== false;
   const expectedToken = options.expectedToken;
   const schema = await generateSchema();
   const graphqlHandler = createGraphQLRequestHandler(
     schema,
-    projectRoot,
+    options.projectRoot,
     mediaUrl
   );
 
@@ -34,9 +27,7 @@ async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
     const pathname = new URL(request.url).pathname;
     let response: Response | null = null;
 
-    if (enableMedia && isPublicImagePath(pathname, mediaUrl)) {
-      response = await handleMediaRequest(pathname, mediaUrl, mediaPath);
-    } else if (!hasValidToken(request, expectedToken)) {
+    if (!hasValidToken(request, expectedToken)) {
       response = new Response("Unauthorized", { status: 401 });
     } else if (pathname === "/ping") {
       response = handlePingRequest();
@@ -58,7 +49,7 @@ function hasValidToken(request: Request, expectedToken?: string) {
   );
 }
 
-function withDefaultHeaders(response: Response) {
+export function withDefaultHeaders(response: Response) {
   const headers = new Headers(response.headers);
 
   headers.set("access-control-allow-origin", "*");

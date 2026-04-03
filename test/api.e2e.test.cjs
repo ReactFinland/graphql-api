@@ -4,7 +4,7 @@ const test = require("node:test");
 
 require("reflect-metadata");
 
-const createRequestHandler = require("../build/server/app").default;
+const createRequestHandler = require("../build/server/create-request-handler").default;
 
 let server;
 let baseUrl;
@@ -142,23 +142,6 @@ test("GET /calendar/:id is no longer exposed", async () => {
 
   assert.equal(response.status, 404);
   assert.match(body, /Not found/i);
-});
-
-test("GET /media/* serves checked-in assets", async () => {
-  const response = await fetch(
-    new URL("/media/typeof/logo/logo-white.svg", baseUrl)
-  );
-  const body = await response.text();
-
-  assert.equal(response.status, 200);
-  assert.match(response.headers.get("content-type"), /image\/svg\+xml/i);
-  assert.match(body, /<svg/i);
-});
-
-test("GET /media/* rejects non-image assets", async () => {
-  const response = await request("/media/react-finland/logo/v2/README.md");
-
-  assert.equal(response.status, 404);
 });
 
 test("protected routes reject requests without TOKEN", async () => {
