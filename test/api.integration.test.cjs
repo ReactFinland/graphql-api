@@ -134,6 +134,12 @@ test("GET /calendar-2026.ics returns the published calendar file", async () => {
   assert.match(body, /futurefrontend\.com/i);
 });
 
+test("GET /calendar-2026.ics is public", async () => {
+  const response = await fetch(new URL("/calendar-2026.ics", baseUrl));
+
+  assert.equal(response.status, 200);
+});
+
 test("GET /calendar/:id is no longer exposed", async () => {
   const response = await request("/calendar/future-frontend-2026");
   const body = await response.text();
