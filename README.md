@@ -15,9 +15,8 @@ This repository serves conference data over GraphQL and exposes a small set of s
 Use the original Node.js server for local development:
 
 1. Install dependencies with `npm install`.
-2. Start the server with `NODE_ENV=development npm start`.
-3. Open `http://localhost:3000/graphql`.
-4. Run the API e2e suite with `npm test`.
+2. Run the API e2e suite with `npm test`.
+3. Open `http://localhost:3000/graphql` while the test server is running, or start the compiled server manually with `node build/server`.
 
 Other useful local endpoints:
 
