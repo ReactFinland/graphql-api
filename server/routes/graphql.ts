@@ -1,42 +1,30 @@
 // import process from "process";
-import { createHandler as graphql } from "graphql-http/lib/use/express";
+import { createHandler as graphql } from "graphql-http/lib/use/fetch";
 import depthLimit from "graphql-depth-limit";
 
-function routeGraphQL(router, schema, projectRoot, mediaUrl) {
-  router.all(
-    "/graphql",
-    graphql({
-      schema,
-      validationRules: [depthLimit(7)],
-      context: (req) => {
-        const rawRequest = req.raw || req;
+function createGraphQLRequestHandler(schema, projectRoot, mediaUrl) {
+  return graphql({
+    schema,
+    validationRules: [depthLimit(7)],
+    context: (request) => {
+      const rawRequest = request.raw || request;
 
-        return {
-          hostname: getHostname(rawRequest),
-          mediaUrl: `${getHostname(rawRequest)}${mediaUrl}`,
-          projectRoot,
-        };
-      },
-    })
-  );
+      return {
+        hostname: getHostname(rawRequest),
+        mediaUrl: `${getHostname(rawRequest)}${mediaUrl}`,
+        projectRoot,
+      };
+    },
+  });
 }
 
-function getHostname(req) {
-  const forwardedProtocol = getHeader(req, "x-forwarded-proto");
-  const protocol = forwardedProtocol || req.protocol || "http";
-  const host = getHeader(req, "host");
+function getHostname(request: { headers: Headers; url: string }) {
+  const forwardedProtocol = request.headers.get("x-forwarded-proto");
+  const protocol =
+    forwardedProtocol || new URL(request.url).protocol.replace(":", "");
+  const host = request.headers.get("host") || new URL(request.url).host;
 
   return `${protocol}://${host}`;
 }
 
-function getHeader(req, name) {
-  if (typeof req.get === "function") {
-    return req.get(name);
-  }
-
-  const value = req.headers?.[name];
-
-  return Array.isArray(value) ? value[0] : value;
-}
-
-export default routeGraphQL;
+export default createGraphQLRequestHandler;

@@ -1,7 +1,7 @@
-function routePing(router) {
-  const serverVersion = new Date().toString();
+const serverVersion = new Date().toString();
 
-  router.get("/ping", (req, res) => res.status(200).json({ serverVersion }));
+function handlePingRequest() {
+  return Response.json({ serverVersion });
 }
 
-export default routePing;
+export default handlePingRequest;

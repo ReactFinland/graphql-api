@@ -1,13 +1,13 @@
-import { httpServerHandler } from "cloudflare:node";
 import "reflect-metadata";
-import createApp from "../server/app";
-import createCloudflareRouter from "../server/routes/cloudflare";
+import createRequestHandler from "../server/app";
 
-const port = 3000;
-const app = await createApp({
-  createRouter: createCloudflareRouter,
+const handleRequest = await createRequestHandler({
+  enableMedia: false,
+  projectRoot: "/bundle",
 });
 
-app.listen(port);
-
-export default httpServerHandler({ port });
+export default {
+  fetch(request) {
+    return handleRequest(request);
+  },
+};

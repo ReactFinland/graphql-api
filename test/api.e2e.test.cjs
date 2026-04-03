@@ -1,22 +1,20 @@
 const assert = require("node:assert/strict");
-const { once } = require("node:events");
 const test = require("node:test");
 
 require("reflect-metadata");
 
-const createApp = require("../build/server/app").default;
+const createServer = require("../build/server/server").default;
 
 let server;
 let baseUrl;
 
 test.before(async () => {
   process.env.NODE_ENV = "test";
-
-  const app = await createApp();
-
-  server = app.listen(0, "127.0.0.1");
-
-  await once(server, "listening");
+  server = await createServer({
+    logRequests: false,
+    logStartup: false,
+    port: 0,
+  });
 
   const address = server.address();
 

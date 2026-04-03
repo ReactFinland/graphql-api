@@ -1,59 +1,68 @@
-import { json, urlencoded } from "body-parser";
-import compression from "compression";
-import express from "express";
-import helmet from "helmet";
-import morgan from "morgan";
-import logger from "./logger";
+import * as path from "path";
+import generateSchema from "./schema";
+import handleCalendarRequest from "./routes/calendar";
+import createGraphQLRequestHandler from "./routes/graphql";
+import handleMediaRequest from "./routes/media";
+import handlePingRequest from "./routes/ping";
 
-type CreateRouter = () => Promise<express.Router>;
-
-interface CreateAppOptions {
-  createRouter?: CreateRouter;
+export interface CreateRequestHandlerOptions {
+  enableMedia?: boolean;
+  mediaPath?: string;
+  mediaUrl?: string;
+  projectRoot?: string;
 }
 
-async function createApp(options: CreateAppOptions = {}) {
-  const app = express();
-  const getRouter =
-    options.createRouter || (await import("./routes")).default;
-
-  // Wear a helmet for extra security.
-  app.use(
-    helmet({
-      frameguard: false,
-    })
+async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
+  const projectRoot = options.projectRoot || path.resolve(__dirname, "../..");
+  const mediaUrl = options.mediaUrl || "/media";
+  const mediaPath = options.mediaPath || path.join(projectRoot, "media");
+  const enableMedia = options.enableMedia !== false;
+  const schema = await generateSchema();
+  const graphqlHandler = createGraphQLRequestHandler(
+    schema,
+    projectRoot,
+    mediaUrl
   );
 
-  // Use compression (gzip) for responses.
-  app.use(compression());
+  return async function handleRequest(request: Request): Promise<Response> {
+    if (request.method === "OPTIONS") {
+      return withDefaultHeaders(new Response(null, { status: 204 }));
+    }
 
-  // Automatically decode json.
-  app.use(
-    json({
-      limit: "50mb",
-    })
-  );
+    const pathname = new URL(request.url).pathname;
+    let response: Response | null = null;
 
-  // Automatically decode POST.
-  app.use(
-    urlencoded({
-      extended: true,
-    })
-  );
+    if (pathname === "/ping") {
+      response = handlePingRequest();
+    } else if (pathname === "/calendar-2026.ics") {
+      response = handleCalendarRequest(pathname);
+    } else if (pathname.startsWith("/calendar/")) {
+      response = handleCalendarRequest(pathname);
+    } else if (pathname === "/graphql") {
+      response = await graphqlHandler(request);
+    } else if (enableMedia && pathname.startsWith(`${mediaUrl}/`)) {
+      response = await handleMediaRequest(pathname, mediaUrl, mediaPath);
+    }
 
-  // Add custom configured logger (morgan through winston).
-  app.use(
-    morgan("combined", {
-      stream: {
-        write: message => logger.info(message),
-      },
-    })
-  );
-
-  const routes = await getRouter();
-
-  app.use("/", routes);
-
-  return app;
+    return withDefaultHeaders(
+      response || new Response("Not found", { status: 404 })
+    );
+  };
 }
 
-export default createApp;
+function withDefaultHeaders(response: Response) {
+  const headers = new Headers(response.headers);
+
+  headers.set("access-control-allow-origin", "*");
+  headers.set("access-control-allow-headers", "content-type");
+  headers.set("access-control-allow-methods", "GET,POST,OPTIONS");
+  headers.set("x-content-type-options", "nosniff");
+
+  return new Response(response.body, {
+    headers,
+    status: response.status,
+    statusText: response.statusText,
+  });
+}
+
+export default createRequestHandler;

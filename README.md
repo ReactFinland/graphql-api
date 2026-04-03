@@ -49,7 +49,7 @@ The project already includes a Worker entrypoint at [worker/index.ts](/Users/juh
 
 The current configuration:
 
-- runs the Express app inside Cloudflare Workers using `cloudflare:node`
+- runs a fetch-native request handler in Cloudflare Workers
 - routes `/graphql`, `/ping`, and calendar endpoints through the Worker
 - serves `/media/*` from static assets in the repository
 

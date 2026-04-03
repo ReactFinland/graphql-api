@@ -2,31 +2,31 @@ import ical from "ical-generator";
 import conferences from "../conferences";
 import { Schedule } from "../schema/Schedule";
 
-function routeCalendar(router) {
-  router.all("/calendar/:id", (req, res) => {
-    const conference = conferences[req.params.id];
-
-    if (conference) {
-      calendar({
-        filename: `calendar-${conference.id}`,
-        title: conference.name,
-        schedules: conference.schedules,
-      })(req, res);
-    } else {
-      res.status(404).end("Not found");
-    }
-  });
-
-  // TODO: Make a better abstraction for this
-  const calendarFile = "calendar-2026.ics";
-  router.all(
-    `/${calendarFile}`,
-    calendar({
-      filename: calendarFile,
+function handleCalendarRequest(pathname: string) {
+  if (pathname === "/calendar-2026.ics") {
+    return calendar({
+      filename: "calendar-2026.ics",
       title: "Future Frontend 2026",
       schedules: conferences["future-frontend-2026"].schedules,
-    })
-  );
+    });
+  }
+
+  if (!pathname.startsWith("/calendar/")) {
+    return null;
+  }
+
+  const conferenceId = decodeURIComponent(pathname.replace("/calendar/", ""));
+  const conference = conferences[conferenceId];
+
+  if (!conference) {
+    return new Response("Not found", { status: 404 });
+  }
+
+  return calendar({
+    filename: `calendar-${conference.id}`,
+    title: conference.name,
+    schedules: conference.schedules,
+  });
 }
 
 function calendar({
@@ -59,13 +59,13 @@ function calendar({
     });
   }
 
-  return (_, response) => {
-    response.writeHead(200, {
-      "Content-Type": "text/calendar; charset=utf-8",
-      "Content-Disposition": `attachment; filename="${filename}"`,
-    });
-    response.end(cal.toString());
-  };
+  return new Response(cal.toString(), {
+    headers: {
+      "content-disposition": `attachment; filename="${filename}"`,
+      "content-type": "text/calendar; charset=utf-8",
+    },
+    status: 200,
+  });
 }
 
 function resolveLocation(location) {
@@ -77,4 +77,4 @@ function resolveLocation(location) {
     : defaultLocation;
 }
 
-export default routeCalendar;
+export default handleCalendarRequest;
