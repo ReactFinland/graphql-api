@@ -53,3 +53,5 @@ Check these endpoints on the deployed domain:
 - `/ping`
 - `/calendar-2026.ics`
 - `/media/people/kenw.jpg`
+
+Note that the first two require a `TOKEN` header.
