@@ -1,6 +1,6 @@
 import Keyword from "../../../server/schema/keywords";
 import { Session, SessionType } from "../../../server/schema/Session";
-import { internet } from "../../locations";
+import { internet } from "../../generated";
 import andrey from "../../people/andrey-okonetchnikov";
 import artem from "../../people/artem-sapegin";
 

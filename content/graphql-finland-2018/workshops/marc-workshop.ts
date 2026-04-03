@@ -1,6 +1,6 @@
 import { Session, SessionType } from "../../../server/schema/Session";
 import Keyword from "../../../server/schema/keywords";
-import { paasitorni } from "../../locations";
+import { paasitorni } from "../../generated";
 import marc from "../../people/marc-andre-giroux";
 
 const workshop: Session = {

@@ -1,9 +1,11 @@
 import { Conference } from "../../server/schema/Conference";
 import { SessionType } from "../../server/schema/Session";
-import * as locations from "../locations";
-import * as people from "../people";
-import * as allSponsors from "../sponsors";
-import * as talks from "./talks";
+import {
+  locations,
+  people,
+  rf202001Talks as talks,
+  sponsors as allSponsors,
+} from "../generated";
 
 const partners = [
   allSponsors.agentconf,

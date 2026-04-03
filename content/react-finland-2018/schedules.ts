@@ -1,7 +1,9 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
-import * as talks from "./talks";
-import * as workshops from "./workshops";
+import {
+  reactFinland2018Talks as talks,
+  reactFinland2018Workshops as workshops,
+} from "../generated";
 
 const workshopDay: Schedule = {
   day: "2018-04-24",

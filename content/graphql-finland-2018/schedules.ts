@@ -1,7 +1,9 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
-import * as talks from "./talks";
-import * as allWorkshops from "./workshops";
+import {
+  graphqlFinland2018Talks as talks,
+  graphqlFinland2018Workshops as allWorkshops,
+} from "../generated";
 
 const workshops = Object.values(allWorkshops);
 

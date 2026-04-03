@@ -7,9 +7,7 @@ import {
   Resolver,
   Root,
 } from "type-graphql";
-import * as locations from "../../../content/locations";
-import * as people from "../../../content/people";
-import * as sponsors from "../../../content/sponsors";
+import { locations, people, sponsors } from "../../../content/generated";
 import { getConference } from "../Conference";
 import { Contact, ContactType, getSessionSpeakers } from "../Contact";
 import { Location } from "../Location";

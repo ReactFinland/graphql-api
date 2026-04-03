@@ -1,6 +1,6 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { internet } from "../../locations";
-import { nikGraf } from "../../people";
+import { internet } from "../../generated";
+import { nikGraf } from "../../generated";
 
 const workshop: Session = {
   type: SessionType.WORKSHOP,

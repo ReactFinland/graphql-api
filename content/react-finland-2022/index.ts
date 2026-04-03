@@ -1,8 +1,8 @@
 import { Conference } from "../../server/schema/Conference";
 import { Contact } from "../../server/schema/Contact";
-import * as locations from "../locations";
-import * as people from "../people";
-import * as allSponsors from "../sponsors";
+import { locations } from "../generated";
+import { people } from "../generated";
+import { sponsors as allSponsors } from "../generated";
 import schedules from "./schedules";
 
 const partners = [

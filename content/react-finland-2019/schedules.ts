@@ -1,9 +1,11 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
-import * as locations from "../locations";
-import * as people from "../people";
-import * as talks from "./talks";
-import * as allWorkshops from "./workshops";
+import {
+  locations,
+  people,
+  reactFinland2019Talks as talks,
+  reactFinland2019Workshops as allWorkshops,
+} from "../generated";
 
 const workshops = Object.values(allWorkshops);
 
