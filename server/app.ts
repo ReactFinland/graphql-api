@@ -41,9 +41,7 @@ async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
     } else if (pathname === "/ping") {
       response = handlePingRequest();
     } else if (pathname === "/calendar-2026.ics") {
-      response = handleCalendarRequest(pathname);
-    } else if (pathname.startsWith("/calendar/")) {
-      response = handleCalendarRequest(pathname);
+      response = handleCalendarRequest();
     } else if (pathname === "/graphql") {
       response = await graphqlHandler(request);
     }

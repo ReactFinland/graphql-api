@@ -13,6 +13,6 @@
   },
   "assets": {
     "directory": ".",
-    "run_worker_first": ["/graphql", "/ping", "/calendar/*", "/calendar-2026.ics"]
+    "run_worker_first": ["/graphql", "/ping", "/calendar-2026.ics"]
   }
 }

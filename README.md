@@ -4,7 +4,6 @@ This repository serves conference data over GraphQL and exposes a small set of s
 
 - `/graphql`
 - `/ping`
-- `/calendar/:id`
 - `/calendar-2026.ics`
 - `/media/*`
 
@@ -45,7 +44,7 @@ The project already includes a Worker entrypoint at [worker/index.ts](/Users/juh
 The current configuration:
 
 - runs a fetch-native request handler in Cloudflare Workers
-- routes `/graphql`, `/ping`, and calendar endpoints through the Worker
+- routes `/graphql`, `/ping`, and `/calendar-2026.ics` through the Worker
 - serves only image files under `/media/*` from static assets in the repository
 - reuses a cached Worker handler per isolate instead of rebuilding the schema on each request
 - emits structured console logs with Cloudflare Workers observability enabled

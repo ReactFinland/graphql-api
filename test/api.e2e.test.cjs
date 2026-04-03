@@ -126,8 +126,8 @@ test("GET /ping returns server metadata", async () => {
   assert.ok(payload.serverVersion.length > 0);
 });
 
-test("GET /calendar/future-frontend-2026 returns an ICS calendar", async () => {
-  const response = await request("/calendar/future-frontend-2026");
+test("GET /calendar-2026.ics returns the published calendar file", async () => {
+  const response = await request("/calendar-2026.ics");
   const body = await response.text();
 
   assert.equal(response.status, 200);
@@ -136,17 +136,8 @@ test("GET /calendar/future-frontend-2026 returns an ICS calendar", async () => {
   assert.match(body, /futurefrontend\.com/i);
 });
 
-test("GET /calendar-2026.ics returns the published calendar file", async () => {
-  const response = await request("/calendar-2026.ics");
-  const body = await response.text();
-
-  assert.equal(response.status, 200);
-  assert.match(response.headers.get("content-type"), /text\/calendar/i);
-  assert.match(body, /BEGIN:VCALENDAR/);
-});
-
-test("GET /calendar/:id returns 404 for an unknown conference", async () => {
-  const response = await request("/calendar/does-not-exist");
+test("GET /calendar/:id is no longer exposed", async () => {
+  const response = await request("/calendar/future-frontend-2026");
   const body = await response.text();
 
   assert.equal(response.status, 404);

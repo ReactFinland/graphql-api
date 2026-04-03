@@ -2,30 +2,11 @@ import ical from "ical-generator";
 import conferences from "../conferences";
 import { Schedule } from "../schema/Schedule";
 
-function handleCalendarRequest(pathname: string) {
-  if (pathname === "/calendar-2026.ics") {
-    return calendar({
-      filename: "calendar-2026.ics",
-      title: "Future Frontend 2026",
-      schedules: conferences["future-frontend-2026"].schedules,
-    });
-  }
-
-  if (!pathname.startsWith("/calendar/")) {
-    return null;
-  }
-
-  const conferenceId = decodeURIComponent(pathname.replace("/calendar/", ""));
-  const conference = conferences[conferenceId];
-
-  if (!conference) {
-    return new Response("Not found", { status: 404 });
-  }
-
+function handleCalendarRequest() {
   return calendar({
-    filename: `calendar-${conference.id}`,
-    title: conference.name,
-    schedules: conference.schedules,
+    filename: "calendar-2026.ics",
+    title: "Future Frontend 2026",
+    schedules: conferences["future-frontend-2026"].schedules,
   });
 }
 
