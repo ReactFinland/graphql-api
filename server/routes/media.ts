@@ -2,6 +2,8 @@ import * as path from "path";
 import * as fs from "fs-extra";
 import logger from "../logger";
 
+const publicImageExtensions = new Set([".ico", ".jpeg", ".jpg", ".png", ".svg"]);
+
 async function handleMediaRequest(
   pathname: string,
   mediaUrl: string,
@@ -11,7 +13,7 @@ async function handleMediaRequest(
   const rootPath = path.resolve(mediaPath);
   const filePath = path.resolve(rootPath, asset);
 
-  if (!isInsideRoot(filePath, rootPath)) {
+  if (!isInsideRoot(filePath, rootPath) || !isPublicImageAsset(asset)) {
     return new Response("Not found", { status: 404 });
   }
 
@@ -35,30 +37,34 @@ async function handleMediaRequest(
   }
 }
 
+export function isPublicImagePath(pathname: string, mediaUrl: string) {
+  if (!pathname.startsWith(`${mediaUrl}/`)) {
+    return false;
+  }
+
+  const asset = decodeURIComponent(pathname.slice(mediaUrl.length + 1));
+
+  return isPublicImageAsset(asset);
+}
+
 function getContentType(filePath: string) {
   switch (path.extname(filePath).toLowerCase()) {
-    case ".eot":
-      return "application/vnd.ms-fontobject";
     case ".ico":
       return "image/x-icon";
     case ".jpeg":
     case ".jpg":
       return "image/jpeg";
-    case ".md":
-      return "text/markdown; charset=utf-8";
     case ".png":
       return "image/png";
     case ".svg":
       return "image/svg+xml";
-    case ".ttf":
-      return "font/ttf";
-    case ".woff":
-      return "font/woff";
-    case ".woff2":
-      return "font/woff2";
     default:
       return "application/octet-stream";
   }
+}
+
+function isPublicImageAsset(asset: string) {
+  return publicImageExtensions.has(path.extname(asset).toLowerCase());
 }
 
 function isInsideRoot(filePath: string, rootPath: string) {

@@ -2,7 +2,7 @@ import * as path from "path";
 import generateSchema from "./schema";
 import handleCalendarRequest from "./routes/calendar";
 import createGraphQLRequestHandler from "./routes/graphql";
-import handleMediaRequest from "./routes/media";
+import handleMediaRequest, { isPublicImagePath } from "./routes/media";
 import handlePingRequest from "./routes/ping";
 
 export interface CreateRequestHandlerOptions {
@@ -10,6 +10,7 @@ export interface CreateRequestHandlerOptions {
   mediaPath?: string;
   mediaUrl?: string;
   projectRoot?: string;
+  expectedToken?: string;
 }
 
 async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
@@ -17,7 +18,7 @@ async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
   const mediaUrl = options.mediaUrl || "/media";
   const mediaPath = options.mediaPath || path.join(projectRoot, "media");
   const enableMedia = options.enableMedia !== false;
-  const expectedToken = process.env.TOKEN;
+  const expectedToken = options.expectedToken ?? process.env.TOKEN;
   const schema = await generateSchema();
   const graphqlHandler = createGraphQLRequestHandler(
     schema,
@@ -33,7 +34,7 @@ async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
     const pathname = new URL(request.url).pathname;
     let response: Response | null = null;
 
-    if (enableMedia && pathname.startsWith(`${mediaUrl}/`)) {
+    if (enableMedia && isPublicImagePath(pathname, mediaUrl)) {
       response = await handleMediaRequest(pathname, mediaUrl, mediaPath);
     } else if (!hasValidToken(request, expectedToken)) {
       response = new Response("Unauthorized", { status: 401 });
@@ -63,7 +64,7 @@ function withDefaultHeaders(response: Response) {
   const headers = new Headers(response.headers);
 
   headers.set("access-control-allow-origin", "*");
-  headers.set("access-control-allow-headers", "content-type");
+  headers.set("access-control-allow-headers", "content-type, TOKEN");
   headers.set("access-control-allow-methods", "GET,POST,OPTIONS");
   headers.set("x-content-type-options", "nosniff");
 

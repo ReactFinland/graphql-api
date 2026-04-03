@@ -1,14 +1,17 @@
 import "reflect-metadata";
 import createRequestHandler from "../server/app";
 
-const handleRequestPromise = createRequestHandler({
-  enableMedia: false,
-  projectRoot: "/bundle",
-});
+interface Env {
+  TOKEN: string;
+}
 
 export default {
-  async fetch(request) {
-    const handleRequest = await handleRequestPromise;
+  async fetch(request: Request, env: Env) {
+    const handleRequest = await createRequestHandler({
+      enableMedia: false,
+      expectedToken: env.TOKEN,
+      projectRoot: "/bundle",
+    });
 
     return handleRequest(request);
   },

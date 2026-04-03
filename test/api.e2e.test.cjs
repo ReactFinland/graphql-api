@@ -105,10 +105,28 @@ test("GET /media/* serves checked-in assets", async () => {
   assert.match(body, /<svg/i);
 });
 
+test("GET /media/* rejects non-image assets", async () => {
+  const response = await request("/media/react-finland/logo/v2/README.md");
+
+  assert.equal(response.status, 404);
+});
+
 test("protected routes reject requests without TOKEN", async () => {
   const response = await fetch(new URL("/ping", baseUrl));
 
   assert.equal(response.status, 401);
+});
+
+test("OPTIONS exposes TOKEN in CORS allow headers", async () => {
+  const response = await fetch(new URL("/graphql", baseUrl), {
+    method: "OPTIONS",
+  });
+
+  assert.equal(response.status, 204);
+  assert.match(
+    response.headers.get("access-control-allow-headers"),
+    /TOKEN/i
+  );
 });
 
 test("POST /graphql returns conference data", async () => {

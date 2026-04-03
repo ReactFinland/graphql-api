@@ -4,6 +4,9 @@
   "main": "./worker/index.ts",
   "compatibility_date": "2026-04-03",
   "compatibility_flags": ["nodejs_compat"],
+  "secrets": {
+    "required": ["TOKEN"]
+  },
   "assets": {
     "directory": ".",
     "run_worker_first": ["/graphql", "/ping", "/calendar/*", "/calendar-2026.ics"]

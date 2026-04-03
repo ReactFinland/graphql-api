@@ -43,6 +43,7 @@ Wrangler uses [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/g
 - Node.js and npm installed
 - Dependencies installed with `npm install`
 - Wrangler authenticated with `npx wrangler login`
+- A `TOKEN` secret configured for the Worker
 
 ### Configure the Worker
 
@@ -55,6 +56,8 @@ The current configuration:
 - serves `/media/*` from static assets in the repository
 
 If you want a different Worker name, change the `name` field in `wrangler.jsonc`.
+Set the runtime token before deploy with `npx wrangler secret put TOKEN`.
+For local Worker development, provide the same value in `.dev.vars` or `.env` so Wrangler can load it into the Worker `env` bindings.
 
 ### Deploy
 
