@@ -10,25 +10,9 @@ This repository serves conference data over GraphQL and exposes a small set of s
 
 ## Local development
 
-### Node.js server
-
-Use the original Node.js server for local development:
-
-1. Use Node.js 24, for example with `nvm use`.
-2. Install dependencies with `npm install`.
-3. Run the API e2e suite with `npm test`.
-4. Open `http://localhost:3000/graphql` while the test server is running, or start the compiled server manually with `node build/server`.
-
-Before deploying or after larger refactors, run `npm run quality:gate` to execute both typechecks and the API test suite.
-
-Other useful local endpoints:
-
-- `http://localhost:3000/calendar-2026.ics`
-- `http://localhost:3000/media/people/kenw.jpg`
-
 ### Cloudflare Worker
 
-Use the Worker runtime when you want to verify the Cloudflare deployment path locally:
+Use the Worker runtime for local development:
 
 1. Use Node.js 24, for example with `nvm use`.
 2. Install dependencies with `npm install`.
@@ -36,6 +20,22 @@ Use the Worker runtime when you want to verify the Cloudflare deployment path lo
 4. Start the Worker locally with `npm run cf:dev`.
 
 Wrangler uses [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/wrangler.jsonc) and serves public image assets from the repository through the static-assets configuration in [.assetsignore](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.assetsignore).
+
+Before deploying or after larger refactors, run `npm run quality:gate` to execute both typechecks and the API test suite.
+
+Other useful local endpoints:
+
+- `http://localhost:8787/calendar-2026.ics`
+- `http://localhost:8787/media/people/kenw.jpg`
+
+### Node.js fallback
+
+If you need to run the old Node entrypoint directly:
+
+1. Use Node.js 24, for example with `nvm use`.
+2. Install dependencies with `npm install`.
+3. Compile the project with `npx tsc`.
+4. Start the compiled server with `node build/server`.
 
 ## Deploying to Cloudflare
 
