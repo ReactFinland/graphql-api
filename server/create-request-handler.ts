@@ -1,4 +1,4 @@
-import generateSchema from "./schema";
+import generateSchema from "./schema/graphql-schema";
 import handleCalendarRequest from "./routes/calendar";
 import createGraphQLRequestHandler from "./routes/graphql";
 import handlePingRequest from "./routes/ping";
