@@ -1,13 +1,15 @@
 import "reflect-metadata";
 import createRequestHandler from "../server/app";
 
-const handleRequest = await createRequestHandler({
+const handleRequestPromise = createRequestHandler({
   enableMedia: false,
   projectRoot: "/bundle",
 });
 
 export default {
-  fetch(request) {
+  async fetch(request) {
+    const handleRequest = await handleRequestPromise;
+
     return handleRequest(request);
   },
 };

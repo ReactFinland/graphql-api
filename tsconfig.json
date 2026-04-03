@@ -20,5 +20,5 @@
     "experimentalDecorators": true,
     "skipLibCheck": true
   },
-  "include": ["server/**/*.ts"]
+  "include": ["content/**/*.ts", "server/**/*.ts", "worker/**/*.ts"]
 }
