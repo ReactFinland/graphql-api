@@ -1,4 +1,3 @@
-import kebabCase from "just-kebab-case";
 import * as path from "path";
 import {
   Arg,
@@ -91,7 +90,7 @@ class ConferenceResolver {
         `${path.join(
           ctx.projectRoot,
           "attendees",
-          kebabCase(conference.name)
+          toKebabCase(conference.name)
         )}.csv`
       )
     );
@@ -172,6 +171,15 @@ class ConferenceResolver {
 
     return getSessionSpeakers(conference, talks);
   }
+}
+
+function toKebabCase(value: string) {
+  return value
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 export default ConferenceResolver;

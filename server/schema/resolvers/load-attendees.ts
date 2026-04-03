@@ -1,13 +1,14 @@
 import { parse } from "csv-parse/sync"; // TODO: Use the async version instead?
-import * as fs from "fs-extra";
+import { existsSync } from "node:fs";
+import { readFile } from "node:fs/promises";
 import { Conference } from "../Conference";
 import { Contact, ContactType } from "../Contact";
 
 async function loadAttendees(conference: Conference, csvPath: string) {
-  if (fs.existsSync(csvPath)) {
+  if (existsSync(csvPath)) {
     return convertData(
       getSponsors(conference),
-      parse(await fs.readFile(csvPath, { encoding: "utf8" }), {
+      parse(await readFile(csvPath, { encoding: "utf8" }), {
         columns: true,
         skip_empty_lines: true,
       })

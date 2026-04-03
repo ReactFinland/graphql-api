@@ -1,5 +1,5 @@
+import { readFile } from "node:fs/promises";
 import * as path from "path";
-import * as fs from "fs-extra";
 import logger from "../logger";
 
 const publicImageExtensions = new Set([".ico", ".jpeg", ".jpg", ".png", ".svg"]);
@@ -18,11 +18,7 @@ async function handleMediaRequest(
   }
 
   try {
-    if (!(await fs.pathExists(filePath))) {
-      return new Response("Not found", { status: 404 });
-    }
-
-    const body = new Uint8Array(await fs.readFile(filePath));
+    const body = new Uint8Array(await readFile(filePath));
 
     return new Response(body, {
       headers: {
