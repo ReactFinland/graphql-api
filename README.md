@@ -48,6 +48,7 @@ The current configuration:
 - routes `/graphql`, `/ping`, and calendar endpoints through the Worker
 - serves only image files under `/media/*` from static assets in the repository
 - reuses a cached Worker handler per isolate instead of rebuilding the schema on each request
+- emits structured console logs with Cloudflare Workers observability enabled
 
 If you want a different Worker name, change the `name` field in `wrangler.jsonc`.
 Set the runtime token before deploy with `npx wrangler secret put TOKEN`.
