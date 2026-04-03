@@ -5,8 +5,8 @@
   "description": "React Finland GraphQL API",
   "scripts": {
     "generate:indices": "tsc && node build/utils/generate-indices.js content --verbose",
-    "cf:deploy": "npx wrangler deploy",
-    "cf:dev": "npx wrangler dev",
+    "cf:deploy": "wrangler deploy",
+    "cf:dev": "wrangler dev",
     "types:check": "tsc --noEmit",
     "test": "tsc && node --test test/api.e2e.test.cjs",
     "quality:gate": "npm run types:check && npm test"
@@ -21,7 +21,8 @@
     "@types/node": "24.0.3",
     "glob": "13.0.6",
     "mri": "1.2.0",
-    "typescript": "6.0.2"
+    "typescript": "6.0.2",
+    "wrangler": "4.80.0"
   },
   "repository": {
     "type": "git",
