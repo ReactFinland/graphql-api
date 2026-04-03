@@ -1,4 +1,3 @@
-import { InterpolationWithTheme } from "@emotion/core";
 import { Field, ObjectType } from "type-graphql";
 
 @ObjectType()
@@ -16,5 +15,5 @@ export class Image {
   public title?: string;
 
   @Field((_) => Style, { nullable: true })
-  public style?: InterpolationWithTheme<any>;
+  public style?: Style;
 }
