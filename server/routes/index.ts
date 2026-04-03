@@ -11,8 +11,7 @@ import routePing from "./ping";
 const projectRoot = path.resolve(__dirname, "../../../");
 
 async function createRouter() {
-  // @ts-ignore
-  const router = new express.Router();
+  const router = express.Router();
   const schema = await generateSchema();
   const mediaUrl = "/media";
   const mediaPath = path.join(projectRoot, "media");

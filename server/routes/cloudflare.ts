@@ -6,8 +6,7 @@ import routeGraphQL from "./graphql";
 import routePing from "./ping";
 
 async function createCloudflareRouter() {
-  // @ts-ignore
-  const router = new express.Router();
+  const router = express.Router();
   const schema = await generateSchema();
   const mediaUrl = "/media";
 
