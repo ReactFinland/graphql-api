@@ -5,10 +5,7 @@
   "description": "React Finland GraphQL API",
   "main": "./build/server",
   "scripts": {
-    "generate:all": "npm run generate:indices",
     "generate:indices": "node utils/generate-indices.js content --verbose",
-    "generate:reason-conf": "node utils/generate-reason-conf.js",
-    "generate:typeof": "node utils/generate-typeof.js",
     "build": "rimraf build && tsc",
     "cf:deploy": "npx wrangler deploy",
     "cf:dev": "npx wrangler dev",
