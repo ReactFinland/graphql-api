@@ -9,13 +9,9 @@ function routeGraphQL(router, schema, projectRoot, mediaUrl) {
       schema,
       validationRules: [depthLimit(7)],
       context: (req) => {
-        // const hostname = getHostname(req);
-        // @ts-expect-error This is fine
-        const hostname = req.headers.host;
-
         return {
-          hostname,
-          mediaUrl: `${hostname}${mediaUrl}`,
+          hostname: getHostname(req),
+          mediaUrl: `${getHostname(req)}${mediaUrl}`,
           projectRoot,
         };
       },
@@ -23,17 +19,12 @@ function routeGraphQL(router, schema, projectRoot, mediaUrl) {
   );
 }
 
-// TODO: Move to utils
-/*
 function getHostname(req) {
-  if (process.env.HEROKU_HOSTNAME) {
-    return process.env.HEROKU_HOSTNAME;
-  }
+  const forwardedProtocol = req.get("x-forwarded-proto");
+  const protocol = forwardedProtocol || req.protocol || "http";
+  const host = req.get("host");
 
-  // For some reason, protocol is http on render
-  return "https://" + req.get("host");
-  // return req.protocol + "://" + req.get("host");
+  return `${protocol}://${host}`;
 }
-  */
 
 export default routeGraphQL;

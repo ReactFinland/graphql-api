@@ -4,10 +4,17 @@ import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 import logger from "./logger";
-import createRouter from "./routes";
 
-async function createApp() {
+type CreateRouter = () => Promise<express.Router>;
+
+interface CreateAppOptions {
+  createRouter?: CreateRouter;
+}
+
+async function createApp(options: CreateAppOptions = {}) {
   const app = express();
+  const getRouter =
+    options.createRouter || (await import("./routes")).default;
 
   // Wear a helmet for extra security.
   app.use(
@@ -42,7 +49,7 @@ async function createApp() {
     })
   );
 
-  const routes = await createRouter();
+  const routes = await getRouter();
 
   app.use("/", routes);
 
