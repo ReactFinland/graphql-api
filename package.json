@@ -10,6 +10,8 @@
     "cf:deploy": "npx wrangler deploy",
     "cf:dev": "npx wrangler dev",
     "lint": "tslint --config tslint.json content/**/*.ts server/**/*.ts --fix",
+    "test": "npm run test:e2e",
+    "test:e2e": "npm run build && node --test test/api.e2e.test.cjs",
     "start": "tsc-watch --onSuccess \"node ./build/server\" --onFailure \"echo Beep! Compilation Failed\"",
     "format": "prettier content/**/*.ts server/**/*.ts --write"
   },

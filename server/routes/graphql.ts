@@ -9,9 +9,11 @@ function routeGraphQL(router, schema, projectRoot, mediaUrl) {
       schema,
       validationRules: [depthLimit(7)],
       context: (req) => {
+        const rawRequest = req.raw || req;
+
         return {
-          hostname: getHostname(req),
-          mediaUrl: `${getHostname(req)}${mediaUrl}`,
+          hostname: getHostname(rawRequest),
+          mediaUrl: `${getHostname(rawRequest)}${mediaUrl}`,
           projectRoot,
         };
       },
@@ -20,11 +22,21 @@ function routeGraphQL(router, schema, projectRoot, mediaUrl) {
 }
 
 function getHostname(req) {
-  const forwardedProtocol = req.get("x-forwarded-proto");
+  const forwardedProtocol = getHeader(req, "x-forwarded-proto");
   const protocol = forwardedProtocol || req.protocol || "http";
-  const host = req.get("host");
+  const host = getHeader(req, "host");
 
   return `${protocol}://${host}`;
+}
+
+function getHeader(req, name) {
+  if (typeof req.get === "function") {
+    return req.get(name);
+  }
+
+  const value = req.headers?.[name];
+
+  return Array.isArray(value) ? value[0] : value;
 }
 
 export default routeGraphQL;
