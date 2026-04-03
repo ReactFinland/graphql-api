@@ -15,6 +15,9 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "engines": {
+    "node": "24.x"
+  },
   "devDependencies": {
     "@types/node": "24.0.3",
     "glob": "13.0.6",

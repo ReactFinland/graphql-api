@@ -14,9 +14,10 @@ This repository serves conference data over GraphQL and exposes a small set of s
 
 Use the original Node.js server for local development:
 
-1. Install dependencies with `npm install`.
-2. Run the API e2e suite with `npm test`.
-3. Open `http://localhost:3000/graphql` while the test server is running, or start the compiled server manually with `node build/server`.
+1. Use Node.js 24, for example with `nvm use`.
+2. Install dependencies with `npm install`.
+3. Run the API e2e suite with `npm test`.
+4. Open `http://localhost:3000/graphql` while the test server is running, or start the compiled server manually with `node build/server`.
 
 Before deploying or after larger refactors, run `npm run quality:gate` to execute both typechecks and the API test suite.
 
@@ -29,9 +30,10 @@ Other useful local endpoints:
 
 Use the Worker runtime when you want to verify the Cloudflare deployment path locally:
 
-1. Install dependencies with `npm install`.
-2. Authenticate Wrangler with `npx wrangler login`.
-3. Start the Worker locally with `npm run cf:dev`.
+1. Use Node.js 24, for example with `nvm use`.
+2. Install dependencies with `npm install`.
+3. Authenticate Wrangler with `npx wrangler login`.
+4. Start the Worker locally with `npm run cf:dev`.
 
 Wrangler uses [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/wrangler.jsonc) and serves public image assets from the repository through the static-assets configuration in [.assetsignore](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.assetsignore).
 
@@ -40,7 +42,7 @@ Wrangler uses [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/g
 ### Prerequisites
 
 - A Cloudflare account with Workers enabled
-- Node.js and npm installed
+- Node.js 24 and npm installed
 - Dependencies installed with `npm install`
 - Wrangler authenticated with `npx wrangler login`
 - A `TOKEN` secret configured for the Worker
