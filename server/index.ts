@@ -8,7 +8,6 @@ dotenv.config({
 });
 
 import logger from "./logger";
-import rebuildSites from "./rebuild-sites";
 import createServer from "./server";
 
 process.on("SIGINT", () => {
@@ -24,10 +23,6 @@ process.on("SIGINT", () => {
     await createServer();
 
     logger.debug("Running");
-
-    if (process.env.NODE_ENV === "production") {
-      rebuildSites(process.env.REBUILD_SITES);
-    }
   } catch (e) {
     logger.error("Failed to start");
     // @ts-expect-error This is fine

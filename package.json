@@ -14,9 +14,7 @@
     "cf:dev": "npx wrangler dev",
     "lint": "tslint --config tslint.json content/**/*.ts server/**/*.ts --fix",
     "start": "tsc-watch --onSuccess \"node ./build/server\" --onFailure \"echo Beep! Compilation Failed\"",
-    "heroku:start": "node ./build/server/index.js",
-    "format": "prettier content/**/*.ts server/**/*.ts --write",
-    "heroku-postbuild": "echo Skip build on Heroku"
+    "format": "prettier content/**/*.ts server/**/*.ts --write"
   },
   "keywords": [],
   "author": "",
@@ -117,6 +115,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "heroku-run-build-script": true
+  }
 }

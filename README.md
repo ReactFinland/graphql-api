@@ -1,30 +1,88 @@
 # GraphQL API for TOSKA conferences
 
-Simple GraphQL API for our conferences:
+This repository serves conference data over GraphQL and exposes a small set of supporting routes:
 
-To see the query API:
+- `/graphql`
+- `/ping`
+- `/calendar/:id`
+- `/calendar-2026.ics`
+- `/media/*`
 
-1. `NODE_ENV="development" npm start`
-2. `http://localhost:3000/graphql` or `http://localhost:3000/calendar-2022.ics` (calendar)
+## Local development
 
-## Asset Designer
+### Node.js server
 
-You can access the asset designer through `http://localhost:3000/asset-designer`.
+Use the original Node.js server for local development:
 
-## Image Processing
+1. Install dependencies with `npm install`.
+2. Start the server with `NODE_ENV=development npm start`.
+3. Open `http://localhost:3000/graphql`.
 
-There's no special image processing in place at the moment.
+Other useful local endpoints:
 
-> You can access images through `http://localhost:3000/media`. Example: `http://localhost:3000/media/people/kenw.jpg`.
+- `http://localhost:3000/calendar-2026.ics`
+- `http://localhost:3000/media/people/kenw.jpg`
 
-## Webhooks
+### Cloudflare Worker
 
-See the webhooks below.
+Use the Worker runtime when you want to verify the Cloudflare deployment path locally:
 
-### Heroku to Netlify
+1. Install dependencies with `npm install`.
+2. Authenticate Wrangler with `npx wrangler login`.
+3. Start the Worker locally with `npm run cf:dev`.
 
-The API has been connected to the site using a webhook so that it builds whenever the API changes:
+Wrangler uses [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/wrangler.jsonc) and serves media files from the repository root through the static-assets configuration in [.assetsignore](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.assetsignore).
 
-- `heroku config:set REBUILD_SITES=<Netlify urls separate by comma go here> -a react-finland-api`
+## Deploying to Cloudflare
 
-> Remember to run the server in production mode. That will enable site rebuilding hook!
+### Prerequisites
+
+- A Cloudflare account with Workers enabled
+- Node.js and npm installed
+- Dependencies installed with `npm install`
+- Wrangler authenticated with `npx wrangler login`
+
+### Configure the Worker
+
+The project already includes a Worker entrypoint at [worker/index.ts](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/worker/index.ts) and a Wrangler configuration at [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/wrangler.jsonc).
+
+The current configuration:
+
+- runs the Express app inside Cloudflare Workers using `cloudflare:node`
+- routes `/graphql`, `/ping`, and calendar endpoints through the Worker
+- serves `/media/*` from static assets in the repository
+
+If you want a different Worker name, change the `name` field in `wrangler.jsonc`.
+
+### Deploy
+
+Run:
+
+```sh
+npm run cf:deploy
+```
+
+That executes `npx wrangler deploy` using the checked-in configuration.
+
+### Verify after deploy
+
+Check these endpoints on the deployed domain:
+
+- `/graphql`
+- `/ping`
+- `/calendar-2026.ics`
+- `/media/people/kenw.jpg`
+
+## Environment variables
+
+The application does not currently require Cloudflare Worker secrets for runtime startup.
+
+The `.env` file is only relevant for local scripts and the Node.js entrypoint. The example in [.env.template](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.env.template) is:
+
+- `TITO_TOKEN` for Tito-related utility scripts
+
+## Notes
+
+- The old asset designer route has been removed.
+- Legacy platform-specific deployment files and workflow have been removed.
+- If you rely on attendee CSV files, verify that they are available in the deployment environment before using attendee-related GraphQL queries.
