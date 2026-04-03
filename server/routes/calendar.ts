@@ -39,8 +39,15 @@ function calendar({
   schedules: Schedule[];
 }) {
   const timezone = "+00:00"; // GMT+0
-  const domain = "https://futurefrontend.com";
-  const cal = ical({ domain, name: title });
+  const domain = "futurefrontend.com";
+  const siteUrl = `https://${domain}`;
+  const cal = ical({
+    name: title,
+    prodId: {
+      company: domain,
+      product: title,
+    },
+  });
 
   if (Array.isArray(schedules)) {
     schedules.forEach(({ day, intervals }) => {
@@ -52,7 +59,7 @@ function calendar({
             summary,
             description,
             location: resolveLocation(location),
-            url: domain,
+            url: siteUrl,
           });
         });
       });
