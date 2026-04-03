@@ -80,9 +80,3 @@ For local Wrangler development, provide the values in `.dev.vars` or `.env`. The
 
 - `TOKEN` for authenticating all non-media routes through a `TOKEN` request header
 - `TITO_TOKEN` for Tito-related utility scripts
-
-## Notes
-
-- The old asset designer route has been removed.
-- Legacy platform-specific deployment files and workflow have been removed.
-- If you rely on attendee CSV files, verify that they are available in the deployment environment before using attendee-related GraphQL queries.
