@@ -1,7 +1,5 @@
-import * as path from "path";
 import {
   Arg,
-  Ctx,
   FieldResolver,
   ID,
   Query,
@@ -11,12 +9,10 @@ import {
 import conferences from "../../conferences";
 import { Conference, getConference } from "../Conference";
 import { Contact, getSessionSpeakers } from "../Contact";
-import { IContext } from "../Context";
 import { resolveSessions } from "../Schedule";
 import { Series } from "../Series";
 import { Session, SessionType } from "../Session";
 import series from "./conferenceSeries";
-import loadAttendees from "./load-attendees";
 
 @Resolver((_) => Conference)
 class ConferenceResolver {
@@ -69,31 +65,6 @@ class ConferenceResolver {
     const talks = resolveSessions(conference.schedules, [SessionType.TALK]);
 
     return getSessionSpeakers(conference, talks);
-  }
-
-  @FieldResolver((_) => [Contact])
-  public async attendees(@Root() conference: Conference, @Ctx() ctx: IContext) {
-    const speakers = getSessionSpeakers(
-      conference,
-      resolveSessions(conference.schedules, [
-        SessionType.KEYNOTE,
-        SessionType.LIGHTNING_TALK,
-        SessionType.TALK,
-        SessionType.WORKSHOP,
-      ])
-    );
-
-    return conference.organizers.concat(
-      speakers,
-      await loadAttendees(
-        conference,
-        `${path.join(
-          ctx.projectRoot,
-          "attendees",
-          toKebabCase(conference.name)
-        )}.csv`
-      )
-    );
   }
 
   @FieldResolver((_) => [Session], {
@@ -171,15 +142,6 @@ class ConferenceResolver {
 
     return getSessionSpeakers(conference, talks);
   }
-}
-
-function toKebabCase(value: string) {
-  return value
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
 }
 
 export default ConferenceResolver;
