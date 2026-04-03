@@ -1,5 +1,3 @@
-import flatMap from "lodash/flatMap";
-import uniq from "lodash/uniq";
 import { Field, ObjectType } from "type-graphql";
 import { Interval } from "./Interval";
 import { Location } from "./Location";
@@ -24,13 +22,13 @@ export function resolveSessions(
   schedules: Schedule[],
   sessionTypes: SessionType[]
 ) {
-  return uniq(
-    flatMap(schedules, ({ intervals }) =>
-      flatMap(intervals, ({ sessions }) =>
-        flatMap(sessions, (session) =>
-          [session].concat(session.sessions || [])
-        ).filter(({ type }) => sessionTypes.includes(type))
-      )
+  const sessions = schedules.flatMap(({ intervals }) =>
+    intervals.flatMap(({ sessions }) =>
+      sessions
+        .flatMap((session) => [session].concat(session.sessions || []))
+        .filter(({ type }) => sessionTypes.includes(type))
     )
   );
+
+  return Array.from(new Set(sessions));
 }

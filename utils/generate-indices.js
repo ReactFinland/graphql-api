@@ -2,7 +2,6 @@ const fs = require("fs-extra");
 const path = require("path");
 const camelCase = require("camelcase");
 const { globSync } = require("glob");
-const { groupBy } = require("lodash");
 const mri = require("mri");
 const argv = process.argv.slice(2);
 
@@ -30,14 +29,21 @@ function main() {
 }
 
 function categorize(filenames) {
-  return groupBy(
-    filenames.map(filename => ({
+  return filenames
+    .map(filename => ({
       basename: path.basename(filename, path.extname(filename)),
       dirname: path.dirname(filename),
       extname: path.extname(filename),
-    })),
-    "dirname"
-  );
+    }))
+    .reduce((result, file) => {
+      if (!result[file.dirname]) {
+        result[file.dirname] = [];
+      }
+
+      result[file.dirname].push(file);
+
+      return result;
+    }, {});
 }
 
 function generateIndices(categorizedFilenames, format) {

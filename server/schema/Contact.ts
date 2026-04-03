@@ -1,5 +1,3 @@
-import flatMap from "lodash/flatMap";
-import uniqBy from "lodash/uniqBy";
 import { Field, ObjectType } from "type-graphql";
 import { Conference } from "./Conference";
 import { Image } from "./Image";
@@ -96,15 +94,14 @@ export function getSessionSpeakers(
   const workshops = resolveSessions(conference.schedules, [
     SessionType.WORKSHOP,
   ]);
-  const speakers = uniqBy(
-    flatMap(sessions, (session) =>
+  const speakers = uniqByName(
+    sessions.flatMap((session) =>
       (session.people || []).concat(
         session.sessions
-          ? flatMap(session.sessions, (session) => session.people || [])
+          ? session.sessions.flatMap((childSession) => childSession.people || [])
           : []
       )
-    ),
-    "name"
+    )
   );
 
   return speakers.map((speaker) => ({
@@ -122,4 +119,18 @@ export function getSessionSpeakers(
         )
       : [],
   }));
+}
+
+function uniqByName(contacts: Contact[]) {
+  const names = new Set<string>();
+
+  return contacts.filter(({ name }) => {
+    if (names.has(name)) {
+      return false;
+    }
+
+    names.add(name);
+
+    return true;
+  });
 }

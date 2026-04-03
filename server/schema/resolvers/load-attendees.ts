@@ -1,10 +1,5 @@
 import { parse } from "csv-parse/sync"; // TODO: Use the async version instead?
 import * as fs from "fs-extra";
-import filter from "lodash/filter";
-import map from "lodash/map";
-import mapValues from "lodash/mapValues";
-import trimStart from "lodash/trimStart";
-import upperFirst from "lodash/upperFirst";
 import { Conference } from "../Conference";
 import { Contact, ContactType } from "../Contact";
 
@@ -29,12 +24,10 @@ function getSponsors(conference: Conference): Contact[] {
 }
 
 function convertData(sponsors: Contact[], tickets): Contact[] {
-  return map(
-    filter(
-      map(tickets, row => mapValues(row, v => (v === "-" ? null : v))),
-      t => !t["Void Status"] && !t.Ticket.startsWith("Workshop only")
-    ),
-    row => ({
+  return tickets
+    .map(row => mapObjectValues(row, v => (v === "-" ? null : v)))
+    .filter((ticket) => !ticket["Void Status"] && !ticket.Ticket.startsWith("Workshop only"))
+    .map((row) => ({
       name: getName(row),
       firstName: getFirstName(row),
       lastName: getLastName(row),
@@ -53,8 +46,7 @@ function convertData(sponsors: Contact[], tickets): Contact[] {
       social: {
         twitter: getTwitter(row.Twitter || row["What's your Twitter handle?"]),
       },
-    })
-  );
+    }));
 }
 
 function getName(row) {
@@ -142,7 +134,31 @@ function getTwitter(twitter): string {
     return "";
   }
 
-  return trimStart(twitter, "'@") || "";
+  return trimPrefix(twitter || "", "'@");
+}
+
+function mapObjectValues(row, mapValue) {
+  return Object.fromEntries(
+    Object.entries(row).map(([key, value]) => [key, mapValue(value)])
+  );
+}
+
+function upperFirst(value = ""): string {
+  if (!value) {
+    return "";
+  }
+
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
+function trimPrefix(value: string, characters: string): string {
+  let index = 0;
+
+  while (index < value.length && characters.includes(value[index])) {
+    index += 1;
+  }
+
+  return value.slice(index);
 }
 
 export default loadAttendees;

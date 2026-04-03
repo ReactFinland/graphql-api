@@ -1,4 +1,3 @@
-import map from "lodash/map";
 import { Field, ID, ObjectType } from "type-graphql";
 import conferences from "../conferences";
 import { Contact, ContactType } from "./Contact";
@@ -124,7 +123,7 @@ function attachSponsorTypes(
     partners,
   } = conference;
 
-  return map(sponsors, ({ name, type, ...rest }) => ({
+  return sponsors.map(({ name, type, ...rest }) => ({
     ...rest,
     name,
     type: type
