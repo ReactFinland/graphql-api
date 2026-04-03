@@ -33,7 +33,7 @@ Use the Worker runtime when you want to verify the Cloudflare deployment path lo
 2. Authenticate Wrangler with `npx wrangler login`.
 3. Start the Worker locally with `npm run cf:dev`.
 
-Wrangler uses [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/wrangler.jsonc) and serves media files from the repository root through the static-assets configuration in [.assetsignore](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.assetsignore).
+Wrangler uses [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/wrangler.jsonc) and serves public image assets from the repository through the static-assets configuration in [.assetsignore](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.assetsignore).
 
 ## Deploying to Cloudflare
 
@@ -53,7 +53,8 @@ The current configuration:
 
 - runs a fetch-native request handler in Cloudflare Workers
 - routes `/graphql`, `/ping`, and calendar endpoints through the Worker
-- serves `/media/*` from static assets in the repository
+- serves only image files under `/media/*` from static assets in the repository
+- reuses a cached Worker handler per isolate instead of rebuilding the schema on each request
 
 If you want a different Worker name, change the `name` field in `wrangler.jsonc`.
 Set the runtime token before deploy with `npx wrangler secret put TOKEN`.
