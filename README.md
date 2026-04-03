@@ -80,6 +80,7 @@ The application does not currently require Cloudflare Worker secrets for runtime
 The `.env` file is only relevant for local scripts and the Node.js entrypoint. The example in [.env.template](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.env.template) is:
 
 - `TITO_TOKEN` for Tito-related utility scripts
+- `REBUILD_SITES` for optional comma-separated webhook URLs that should be `POST`ed once after the Node server starts in production
 
 ## Notes
 
