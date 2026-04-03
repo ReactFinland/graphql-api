@@ -1,4 +1,4 @@
-import parse from "csv-parse/lib/sync"; // TODO: Use the async version instead?
+import { parse } from "csv-parse/sync"; // TODO: Use the async version instead?
 import * as fs from "fs-extra";
 import filter from "lodash/filter";
 import map from "lodash/map";

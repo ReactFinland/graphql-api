@@ -1,8 +1,7 @@
 const fs = require("fs-extra");
 const path = require("path");
 const camelCase = require("camelcase");
-const flatmap = require("flatmap");
-const glob = require("glob");
+const { globSync } = require("glob");
 const { groupBy } = require("lodash");
 const mri = require("mri");
 const argv = process.argv.slice(2);
@@ -18,11 +17,11 @@ function main() {
   });
   const { _: rootDirs, format, verbose } = args;
 
-  const indexableDirs = flatmap(rootDirs, dir =>
-    glob.sync(`${dir}/**/.index-modules`)
-  ).map(p => path.dirname(p));
-  const filenames = flatmap(indexableDirs, dir =>
-    glob.sync(`${dir}/**/*.${format}`)
+  const indexableDirs = rootDirs
+    .flatMap(dir => globSync(`${dir}/**/.index-modules`))
+    .map(p => path.dirname(p));
+  const filenames = indexableDirs.flatMap(dir =>
+    globSync(`${dir}/**/*.${format}`)
   );
   const categorizedFilenames = categorize(filenames);
   const indexFiles = generateIndices(categorizedFilenames, format);
