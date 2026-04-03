@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "future-frontend-graphql-api",
+  "name": "graphql-api",
   "main": "./worker/index.ts",
   "compatibility_date": "2026-04-03",
   "compatibility_flags": ["nodejs_compat"],
