@@ -17,6 +17,7 @@ async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
   const mediaUrl = options.mediaUrl || "/media";
   const mediaPath = options.mediaPath || path.join(projectRoot, "media");
   const enableMedia = options.enableMedia !== false;
+  const expectedToken = process.env.TOKEN;
   const schema = await generateSchema();
   const graphqlHandler = createGraphQLRequestHandler(
     schema,
@@ -32,7 +33,11 @@ async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
     const pathname = new URL(request.url).pathname;
     let response: Response | null = null;
 
-    if (pathname === "/ping") {
+    if (enableMedia && pathname.startsWith(`${mediaUrl}/`)) {
+      response = await handleMediaRequest(pathname, mediaUrl, mediaPath);
+    } else if (!hasValidToken(request, expectedToken)) {
+      response = new Response("Unauthorized", { status: 401 });
+    } else if (pathname === "/ping") {
       response = handlePingRequest();
     } else if (pathname === "/calendar-2026.ics") {
       response = handleCalendarRequest(pathname);
@@ -40,14 +45,18 @@ async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
       response = handleCalendarRequest(pathname);
     } else if (pathname === "/graphql") {
       response = await graphqlHandler(request);
-    } else if (enableMedia && pathname.startsWith(`${mediaUrl}/`)) {
-      response = await handleMediaRequest(pathname, mediaUrl, mediaPath);
     }
 
     return withDefaultHeaders(
       response || new Response("Not found", { status: 404 })
     );
   };
+}
+
+function hasValidToken(request: Request, expectedToken?: string) {
+  return Boolean(
+    expectedToken && request.headers.get("TOKEN") === expectedToken
+  );
 }
 
 function withDefaultHeaders(response: Response) {

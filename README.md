@@ -75,10 +75,11 @@ Check these endpoints on the deployed domain:
 
 ## Environment variables
 
-The application does not currently require Cloudflare Worker secrets for runtime startup.
+The application requires a `TOKEN` value at runtime for all non-media routes.
 
 The `.env` file is only relevant for local scripts and the Node.js entrypoint. The example in [.env.template](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.env.template) is:
 
+- `TOKEN` for authenticating all non-media routes through a `TOKEN` request header
 - `TITO_TOKEN` for Tito-related utility scripts
 - `REBUILD_SITES` for optional comma-separated webhook URLs that should be `POST`ed once after the Node server starts in production
 

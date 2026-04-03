@@ -7,9 +7,11 @@ const createServer = require("../build/server/server").default;
 
 let server;
 let baseUrl;
+const token = "test-token";
 
 test.before(async () => {
   process.env.NODE_ENV = "test";
+  process.env.TOKEN = token;
   server = await createServer({
     logRequests: false,
     logStartup: false,
@@ -41,7 +43,16 @@ test.after(async () => {
 });
 
 async function request(pathname, init) {
-  return fetch(new URL(pathname, baseUrl), init);
+  const headers = new Headers(init?.headers);
+
+  if (!headers.has("TOKEN")) {
+    headers.set("TOKEN", token);
+  }
+
+  return fetch(new URL(pathname, baseUrl), {
+    ...init,
+    headers,
+  });
 }
 
 test("GET /ping returns server metadata", async () => {
@@ -84,12 +95,20 @@ test("GET /calendar/:id returns 404 for an unknown conference", async () => {
 });
 
 test("GET /media/* serves checked-in assets", async () => {
-  const response = await request("/media/typeof/logo/logo-white.svg");
+  const response = await fetch(
+    new URL("/media/typeof/logo/logo-white.svg", baseUrl)
+  );
   const body = await response.text();
 
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type"), /image\/svg\+xml/i);
   assert.match(body, /<svg/i);
+});
+
+test("protected routes reject requests without TOKEN", async () => {
+  const response = await fetch(new URL("/ping", baseUrl));
+
+  assert.equal(response.status, 401);
 });
 
 test("POST /graphql returns conference data", async () => {
