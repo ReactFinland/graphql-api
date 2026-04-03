@@ -1,8 +1,7 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { SessionType } from "../../server/schema/Session";
-import * as locations from "../locations";
-// import * as people from "../people";
-import * as talks from "./talks";
+import { freezingEdge2020Talks as talks, locations } from "../generated";
+// import { people } from "../generated";
 
 const presentationDay: Schedule = {
   day: "2020-06-01",

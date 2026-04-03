@@ -1,8 +1,8 @@
 import { Conference } from "../../server/schema/Conference";
 import { ContactType } from "../../server/schema/Contact";
 import { SessionType } from "../../server/schema/Session";
-import * as people from "../people";
-import * as allSponsors from "../sponsors";
+import { people } from "../generated";
+import { sponsors as allSponsors } from "../generated";
 import scheduleData from "./data.json";
 
 const sponsors = [];

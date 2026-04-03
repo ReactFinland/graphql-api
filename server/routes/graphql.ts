@@ -1,39 +1,30 @@
 // import process from "process";
-import { createHandler as graphql } from "graphql-http/lib/use/express";
+import { createHandler as graphql } from "graphql-http/lib/use/fetch";
 import depthLimit from "graphql-depth-limit";
 
-function routeGraphQL(router, schema, projectRoot, mediaUrl) {
-  router.all(
-    "/graphql",
-    graphql({
-      schema,
-      validationRules: [depthLimit(7)],
-      context: (req) => {
-        // const hostname = getHostname(req);
-        // @ts-expect-error This is fine
-        const hostname = req.headers.host;
+function createGraphQLRequestHandler(schema, projectRoot, mediaUrl) {
+  return graphql({
+    schema,
+    validationRules: [depthLimit(7)],
+    context: (request) => {
+      const rawRequest = request.raw || request;
 
-        return {
-          hostname,
-          mediaUrl: `${hostname}${mediaUrl}`,
-          projectRoot,
-        };
-      },
-    })
-  );
+      return {
+        hostname: getHostname(rawRequest),
+        mediaUrl: `${getHostname(rawRequest)}${mediaUrl}`,
+        projectRoot,
+      };
+    },
+  });
 }
 
-// TODO: Move to utils
-/*
-function getHostname(req) {
-  if (process.env.HEROKU_HOSTNAME) {
-    return process.env.HEROKU_HOSTNAME;
-  }
+function getHostname(request: { headers: Headers; url: string }) {
+  const forwardedProtocol = request.headers.get("x-forwarded-proto");
+  const protocol =
+    forwardedProtocol || new URL(request.url).protocol.replace(":", "");
+  const host = request.headers.get("host") || new URL(request.url).host;
 
-  // For some reason, protocol is http on render
-  return "https://" + req.get("host");
-  // return req.protocol + "://" + req.get("host");
+  return `${protocol}://${host}`;
 }
-  */
 
-export default routeGraphQL;
+export default createGraphQLRequestHandler;

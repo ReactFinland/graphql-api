@@ -1,7 +1,7 @@
 import { Schedule } from "../../server/schema/Schedule";
 import { Level, SessionType } from "../../server/schema/Session";
-import * as locations from "../locations";
-import * as people from "../people";
+import { locations } from "../generated";
+import { people } from "../generated";
 
 // All times are given in GMT+0
 const monday: Schedule = {

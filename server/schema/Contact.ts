@@ -1,6 +1,3 @@
-import flatMap from "lodash/flatMap";
-import uniqBy from "lodash/uniqBy";
-import { Field, ObjectType } from "type-graphql";
 import { Conference } from "./Conference";
 import { Image } from "./Image";
 import Keyword from "./keywords";
@@ -27,84 +24,45 @@ export enum ContactType {
   ATTENDEE = "ATTENDEE",
 }
 
-@ObjectType()
-export class Contact {
-  // Needed for badges
-  @Field((_) => String)
-  public firstName?: string;
-
-  // Needed for badges
-  @Field((_) => String)
-  public lastName?: string;
-
-  // Combine with first/lastName somehow? Problematic for companies.
-  @Field((_) => String)
-  public name!: string;
-
-  @Field((_) => String)
-  public about!: string;
-
-  @Field((_) => String, { nullable: true })
-  public aboutShort?: string;
-
-  // TODO: This might become a Contact reference eventually
-  @Field((_) => String, { nullable: true })
-  public company?: string;
-
-  // TODO: This might become a Contact reference eventually
-  @Field((_) => String, { nullable: true })
-  public tagline?: string;
-
-  @Field((_) => Image)
-  public image!: Image;
-
-  @Field((_) => [ContactType])
-  public type!: ContactType[];
-
-  @Field((_) => Social)
-  public social!: Social;
-
-  @Field((_) => [String], { nullable: true })
-  public keywords?: Keyword[];
-
-  @Field((_) => Location)
-  public location!: Location;
-
-  @Field((_) => [Session], { nullable: true })
-  public talks?: Session[];
-
-  @Field((_) => [Session], { nullable: true })
-  public workshops?: Session[];
-
-  @Field((_) => Boolean, { nullable: true })
-  public noPhotography?: boolean;
+export interface Contact {
+  firstName?: string;
+  lastName?: string;
+  name: string;
+  about: string;
+  aboutShort?: string;
+  company?: string;
+  tagline?: string;
+  image: Image;
+  type: ContactType[];
+  social: Social;
+  keywords?: Keyword[];
+  location: Location;
+  talks?: Session[];
+  workshops?: Session[];
+  noPhotography?: boolean;
 }
 
-// TODO: Maybe this should become a static method of Conference
 export function getSessionSpeakers(
   conference: Conference,
   sessions: Session[]
 ): Contact[] {
-  const sessionTypes = [
+  const talks = resolveSessions(conference.schedules, [
     SessionType.LIGHTNING_TALK,
     SessionType.PANEL,
     SessionType.TALK,
     SessionType.KEYNOTE,
-  ];
-
-  const talks = resolveSessions(conference.schedules, sessionTypes);
+  ]);
   const workshops = resolveSessions(conference.schedules, [
     SessionType.WORKSHOP,
   ]);
-  const speakers = uniqBy(
-    flatMap(sessions, (session) =>
+  const speakers = uniqByName(
+    sessions.flatMap((session) =>
       (session.people || []).concat(
         session.sessions
-          ? flatMap(session.sessions, (session) => session.people || [])
+          ? session.sessions.flatMap((childSession) => childSession.people || [])
           : []
       )
-    ),
-    "name"
+    )
   );
 
   return speakers.map((speaker) => ({
@@ -122,4 +80,18 @@ export function getSessionSpeakers(
         )
       : [],
   }));
+}
+
+function uniqByName(contacts: Contact[]) {
+  const names = new Set<string>();
+
+  return contacts.filter(({ name }) => {
+    if (names.has(name)) {
+      return false;
+    }
+
+    names.add(name);
+
+    return true;
+  });
 }

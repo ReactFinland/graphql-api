@@ -1,30 +1,57 @@
 # GraphQL API for TOSKA conferences
 
-Simple GraphQL API for our conferences:
+This repository serves conference data over GraphQL and exposes a small set of supporting routes:
 
-To see the query API:
+- `/graphql`
+- `/ping`
+- `/calendar-2026.ics`
+- `/media/*`
 
-1. `NODE_ENV="development" npm start`
-2. `http://localhost:3000/graphql` or `http://localhost:3000/calendar-2022.ics` (calendar)
+Development setup lives in [DEVELOPMENT.md](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/DEVELOPMENT.md).
 
-## Asset Designer
+## Deploying to Cloudflare
 
-You can access the asset designer through `http://localhost:3000/asset-designer`.
+### Prerequisites
 
-## Image Processing
+- A Cloudflare account with Workers enabled
+- Node.js 24 and npm installed
+- Dependencies installed with `npm install`
+- Wrangler authenticated with `npx wrangler login`
+- A `TOKEN` secret configured for the Worker
 
-There's no special image processing in place at the moment.
+### Configure the Worker
 
-> You can access images through `http://localhost:3000/media`. Example: `http://localhost:3000/media/people/kenw.jpg`.
+The project already includes a Worker entrypoint at [worker/index.ts](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/worker/index.ts) and a Wrangler configuration at [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/wrangler.jsonc).
 
-## Webhooks
+The current configuration:
 
-See the webhooks below.
+- runs a fetch-native request handler in Cloudflare Workers
+- routes `/graphql`, `/ping`, and `/calendar-2026.ics` through the Worker
+- serves only image files under `/media/*` from static assets in the repository
+- reuses a cached Worker handler per isolate instead of rebuilding the schema on each request
+- emits structured console logs with Cloudflare Workers observability enabled
 
-### Heroku to Netlify
+If you want a different Worker name, change the `name` field in `wrangler.jsonc`.
+Set the runtime token before deploy with `npx wrangler secret put TOKEN`.
+For local Worker development, provide the same value in `.dev.vars` or `.env` so Wrangler can load it into the Worker `env` bindings.
 
-The API has been connected to the site using a webhook so that it builds whenever the API changes:
+### Deploy
 
-- `heroku config:set REBUILD_SITES=<Netlify urls separate by comma go here> -a react-finland-api`
+Run:
 
-> Remember to run the server in production mode. That will enable site rebuilding hook!
+```sh
+npm run cf:deploy
+```
+
+That executes `npx wrangler deploy` using the checked-in configuration.
+
+### Verify after deploy
+
+Check these endpoints on the deployed domain:
+
+- `/graphql`
+- `/ping`
+- `/calendar-2026.ics`
+- `/media/people/kenw.jpg`
+
+Note that the first two require a `TOKEN` header.

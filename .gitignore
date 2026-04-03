@@ -5,6 +5,9 @@ node_modules/
 logs/
 attendees/
 build/
+.wrangler/
+.wrangler-dry-run/
+.npm/
 server/types/
 media/scripts/
 utils/*.csv
@@ -13,4 +16,3 @@ utils/diversity-*
 .env
 .fusebox
 .scripts
-

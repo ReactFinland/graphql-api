@@ -1,0 +1,8 @@
+*
+!media/
+!media/**/
+!media/**/*.ico
+!media/**/*.jpeg
+!media/**/*.jpg
+!media/**/*.png
+!media/**/*.svg

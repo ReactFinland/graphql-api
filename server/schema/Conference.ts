@@ -1,5 +1,3 @@
-import map from "lodash/map";
-import { Field, ID, ObjectType } from "type-graphql";
 import conferences from "../conferences";
 import { Contact, ContactType } from "./Contact";
 import { Location } from "./Location";
@@ -7,111 +5,50 @@ import { Schedule } from "./Schedule";
 import { Session } from "./Session";
 import { Series } from "./Series";
 
-@ObjectType()
-export class Conference {
-  @Field((_) => ID)
-  public id!: string;
-
-  @Field((_) => Series)
-  public series!: string;
-
-  @Field((_) => String)
-  public name!: string;
-
-  @Field((_) => Contact)
-  public organizer!: Contact;
-
-  @Field((_) => String)
-  public year!: string;
-
-  @Field((_) => String)
-  public startDate!: string;
-
-  @Field((_) => String)
-  public endDate!: string;
-
-  @Field((_) => String)
-  public slogan!: string;
-
-  @Field((_) => String)
-  public websiteUrl!: string;
-
-  @Field((_) => [Location], { nullable: true })
-  public locations?: Location[];
-
-  @Field((_) => [Contact])
-  public organizers!: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public mcs?: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public partners?: Contact[];
-
-  @Field((_) => [Contact])
-  public sponsors!: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public goldSponsors!: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public silverSponsors!: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public bronzeSponsors!: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public platformSponsors!: Contact[];
-
-  @Field((_) => [Schedule])
-  public schedules!: Schedule[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public allSpeakers?: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public speakers?: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public keynoteSpeakers?: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public fullTalkSpeakers?: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public lightningTalkSpeakers?: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public panelOnlySpeakers?: Contact[];
-
-  @Field((_) => [Contact], { nullable: true })
-  public workshopInstructors?: Contact[];
-
-  @Field((_) => [Session], { nullable: true })
-  public talks?: Session[];
-
-  @Field((_) => [Session], { nullable: true })
-  public workshops?: Session[];
-
-  @Field((_) => [Contact])
-  public attendees?: Contact[];
+export interface Conference {
+  id: string;
+  series: string | Series;
+  name: string;
+  organizer: Contact;
+  year: string;
+  startDate: string;
+  endDate: string;
+  slogan: string;
+  websiteUrl: string;
+  locations?: Location[];
+  organizers: Contact[];
+  mcs?: Contact[];
+  partners?: Contact[];
+  sponsors: Contact[];
+  goldSponsors?: Contact[];
+  silverSponsors?: Contact[];
+  bronzeSponsors?: Contact[];
+  platformSponsors?: Contact[];
+  schedules: Schedule[];
+  allSpeakers?: Contact[];
+  speakers?: Contact[];
+  keynoteSpeakers?: Contact[];
+  fullTalkSpeakers?: Contact[];
+  lightningTalkSpeakers?: Contact[];
+  panelOnlySpeakers?: Contact[];
+  workshopInstructors?: Contact[];
+  talks?: Session[];
+  workshops?: Session[];
 }
 
-// TODO: Maybe this should become a static method of Conference
 export function getConference(id: string): Conference {
-  if (conferences[id]) {
-    const conference = conferences[id];
-
-    return {
-      ...conference,
-      sponsors: attachSponsorTypes(conference, conference.sponsors),
-    };
-  } else {
+  if (!conferences[id]) {
     throw new Error("Unknown conference");
   }
+
+  const conference = conferences[id];
+
+  return {
+    ...conference,
+    sponsors: attachSponsorTypes(conference, conference.sponsors),
+  };
 }
 
-// TODO: Extract sponsor levels to this code won't be needed anymore
 function attachSponsorTypes(
   conference: Conference,
   sponsors: Conference["sponsors"]
@@ -124,21 +61,24 @@ function attachSponsorTypes(
     partners,
   } = conference;
 
-  return map(sponsors, ({ name, type, ...rest }) => ({
+  return sponsors.map(({ name, type, ...rest }) => ({
     ...rest,
     name,
-    type: type
-      .concat(
+    type: [
+      ...type,
         isSponsor(goldSponsors, name, ContactType.GOLD_SPONSOR),
         isSponsor(silverSponsors, name, ContactType.SILVER_SPONSOR),
         isSponsor(bronzeSponsors, name, ContactType.BRONZE_SPONSOR),
         isSponsor(platformSponsors, name, ContactType.PLATFORM_SPONSOR),
         isSponsor(partners, name, ContactType.PARTNER)
-      )
-      .filter(Boolean),
+      ].filter((contactType): contactType is ContactType => Boolean(contactType)),
   }));
 }
 
-function isSponsor(sponsors, sponsorName, contactType) {
-  return sponsors.find(({ name }) => sponsorName === name) ? contactType : null;
+function isSponsor(
+  sponsors: Conference["sponsors"] | undefined,
+  sponsorName: string,
+  contactType: ContactType
+) {
+  return sponsors?.find(({ name }) => sponsorName === name) ? contactType : null;
 }

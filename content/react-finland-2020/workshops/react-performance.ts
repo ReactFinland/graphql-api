@@ -1,6 +1,6 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { internet } from "../../locations";
-import { kentCDodds } from "../../people";
+import { internet } from "../../generated-core";
+import { kentCDodds } from "../../generated-core";
 
 const workshop: Session = {
   type: SessionType.WORKSHOP,

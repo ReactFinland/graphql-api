@@ -1,6 +1,6 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { paasitorni } from "../../locations";
-import { nikGraf } from "../../people";
+import { paasitorni } from "../../generated-core";
+import { nikGraf } from "../../generated-core";
 
 const workshop: Session = {
   type: SessionType.WORKSHOP,
