@@ -17,7 +17,7 @@ import Level from "./Level";
 import { Location } from "./Location";
 import { resolveSessions } from "./Schedule";
 import { Session, SessionType } from "./Session";
-import conferenceSeries from "./resolvers/conferenceSeries";
+import conferenceSeries from "./conference-series";
 
 const ContactTypeEnum = createEnumType("ContactType", ContactType);
 const SessionTypeEnum = createEnumType("SessionType", SessionType);
