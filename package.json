@@ -8,7 +8,9 @@
     "generate:indices": "node utils/generate-indices.js content --verbose",
     "cf:deploy": "npx wrangler deploy",
     "cf:dev": "npx wrangler dev",
-    "test": "tsc && node --test test/api.e2e.test.cjs"
+    "types:check": "tsc --noEmit",
+    "test": "tsc && node --test test/api.e2e.test.cjs",
+    "quality:gate": "npm run types:check && npm test"
   },
   "keywords": [],
   "author": "",

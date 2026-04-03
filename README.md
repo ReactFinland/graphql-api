@@ -18,6 +18,8 @@ Use the original Node.js server for local development:
 2. Run the API e2e suite with `npm test`.
 3. Open `http://localhost:3000/graphql` while the test server is running, or start the compiled server manually with `node build/server`.
 
+Before deploying or after larger refactors, run `npm run quality:gate` to execute both typechecks and the API test suite.
+
 Other useful local endpoints:
 
 - `http://localhost:3000/calendar-2026.ics`
