@@ -80,4 +80,3 @@ The application requires a `TOKEN` value at runtime for all non-media routes.
 For local Wrangler development, provide the values in `.dev.vars` or `.env`. The example in [.env.template](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.env.template) is:
 
 - `TOKEN` for authenticating all non-media routes through a `TOKEN` request header
-- `TITO_TOKEN` for Tito-related utility scripts
