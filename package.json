@@ -4,7 +4,7 @@
   "private": true,
   "description": "React Finland GraphQL API",
   "scripts": {
-    "generate:indices": "node utils/generate-indices.js content --verbose",
+    "generate:indices": "tsc && node build/utils/generate-indices.js content --verbose",
     "cf:deploy": "npx wrangler deploy",
     "cf:dev": "npx wrangler dev",
     "types:check": "tsc --noEmit",

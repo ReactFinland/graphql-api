@@ -1,11 +1,28 @@
-const fs = require("node:fs");
-const path = require("path");
-const { globSync } = require("glob");
-const mri = require("mri");
-const argv = process.argv.slice(2);
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { globSync } from "glob";
+import mri from "mri";
+
+interface FileDescriptor {
+  basename: string;
+  dirname: string;
+}
+
+interface IndexFile {
+  content: string;
+  name: string;
+}
+
+type CategorizedFilenames = Record<string, FileDescriptor[]>;
+
+interface CliOptions {
+  _: string[];
+  format: string;
+  verbose: boolean;
+}
 
 function main() {
-  const args = mri(argv, {
+  const args = mri<CliOptions>(process.argv.slice(2), {
     default: {
       format: "ts",
       verbose: false,
@@ -14,27 +31,27 @@ function main() {
     string: ["format"],
   });
   const { _: rootDirs, format, verbose } = args;
-
   const indexableDirs = rootDirs
-    .flatMap(dir => globSync(`${dir}/**/.index-modules`))
-    .map(p => path.dirname(p));
-  const filenames = indexableDirs.flatMap(dir =>
+    .flatMap((dir) => globSync(`${dir}/**/.index-modules`))
+    .sort((left, right) => left.localeCompare(right))
+    .map((markerPath) => path.dirname(markerPath));
+  const filenames = indexableDirs.flatMap((dir) =>
     globSync(`${dir}/**/*.${format}`)
-  );
+  )
+    .sort((left, right) => left.localeCompare(right));
   const categorizedFilenames = categorize(filenames);
   const indexFiles = generateIndices(categorizedFilenames, format);
 
   writeFiles(indexFiles, verbose);
 }
 
-function categorize(filenames) {
+function categorize(filenames: string[]): CategorizedFilenames {
   return filenames
-    .map(filename => ({
+    .map((filename) => ({
       basename: path.basename(filename, path.extname(filename)),
       dirname: path.dirname(filename),
-      extname: path.extname(filename),
     }))
-    .reduce((result, file) => {
+    .reduce<CategorizedFilenames>((result, file) => {
       if (!result[file.dirname]) {
         result[file.dirname] = [];
       }
@@ -45,38 +62,43 @@ function categorize(filenames) {
     }, {});
 }
 
-function generateIndices(categorizedFilenames, format) {
+function generateIndices(
+  categorizedFilenames: CategorizedFilenames,
+  format: string
+): IndexFile[] {
   return Object.keys(categorizedFilenames)
-    .map(dirname => {
+    .sort((left, right) => left.localeCompare(right))
+    .map((dirname) => {
       const files = categorizedFilenames[dirname].filter(
-        f => f.basename !== "index"
-      );
+        (file) => file.basename !== "index"
+      )
+        .sort((left, right) => left.basename.localeCompare(right.basename));
 
       if (files.length < 1) {
         return null;
       }
 
       return {
+        content: generateIndex(files.map((file) => file.basename)),
         name: path.join(dirname, `index.${format}`),
-        content: generateIndex(files.map(f => f.basename)),
       };
     })
-    .filter(Boolean);
+    .filter((indexFile): indexFile is IndexFile => indexFile !== null);
 }
 
-function generateIndex(basenames) {
+function generateIndex(basenames: string[]): string {
   return (
     basenames
       .map(
-        basename =>
+        (basename) =>
           `export { default as ${toCamelCase(basename)} } from "./${basename}";`
       )
       .join("\n") + "\n"
   );
 }
 
-function writeFiles(indexFiles, verbose) {
-  indexFiles.forEach(file => {
+function writeFiles(indexFiles: IndexFile[], verbose: boolean) {
+  indexFiles.forEach((file) => {
     const oldContent = fs.readFileSync(file.name, { encoding: "utf8" });
     const contentDiffers = file.content.trim() !== oldContent.trim();
 
@@ -84,12 +106,13 @@ function writeFiles(indexFiles, verbose) {
       if (verbose) {
         console.log(`Writing ${file.name}`);
       }
+
       fs.writeFileSync(file.name, file.content, "utf8");
     }
   });
 }
 
-function toCamelCase(value) {
+function toCamelCase(value: string): string {
   const normalized = value
     .replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, "")
     .split(/[^a-zA-Z0-9]+/)
@@ -103,9 +126,14 @@ function toCamelCase(value) {
     .map((part, index) => {
       const lower = part.toLowerCase();
 
-      return index === 0
+      const camelPart =
+        index === 0
         ? lower
         : lower.charAt(0).toUpperCase() + lower.slice(1);
+
+      return camelPart.replace(/(\d+)([a-z])/g, (_, digits, character) => {
+        return `${digits}${character.toUpperCase()}`;
+      });
     })
     .join("");
 }

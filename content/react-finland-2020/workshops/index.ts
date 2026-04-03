@@ -1,6 +1,6 @@
 export { default as advancedReact } from "./advanced-react";
-export { default as designSystems101 } from "./design-systems-101";
 export { default as designSystems } from "./design-systems";
+export { default as designSystems101 } from "./design-systems-101";
 export { default as fromLegacyToReact } from "./from-legacy-to-react";
 export { default as fullStack } from "./full-stack";
 export { default as modernForms } from "./modern-forms";

@@ -1,8 +1,8 @@
 export { default as andreyOkonetchnikov } from "./andrey-okonetchnikov";
 export { default as christianAlfoni } from "./christian-alfoni";
 export { default as davidKhourshid } from "./david-khourshid";
-export { default as eemeliAro2 } from "./eemeli-aro-2";
 export { default as eemeliAro } from "./eemeli-aro";
+export { default as eemeliAro2 } from "./eemeli-aro-2";
 export { default as gantLaborde } from "./gant-laborde";
 export { default as janiEvakallio } from "./jani-evakallio";
 export { default as juhoVepsalainen } from "./juho-vepsalainen";
