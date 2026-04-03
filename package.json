@@ -15,7 +15,7 @@
     "ci:local:all": "npm run agent-ci:patch && node ./scripts/run-agent-ci.mjs run --all",
     "ci:local:retry": "npm run agent-ci:patch && node ./scripts/run-agent-ci.mjs retry",
     "types:check": "tsc --noEmit",
-    "test": "tsc && node --test test/api.e2e.test.cjs",
+    "test": "tsc && node --test test/api.integration.test.cjs",
     "quality:gate:fast": "npm run types:check && npm test && npm run cf:check",
     "quality:gate": "npm run ci:local:quiet"
   },
