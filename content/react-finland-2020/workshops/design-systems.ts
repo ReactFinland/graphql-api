@@ -1,6 +1,6 @@
 import Keyword from "../../../server/schema/keywords";
 import { Session, SessionType } from "../../../server/schema/Session";
-import { internet } from "../../generated";
+import { internet } from "../../generated-core";
 import andrey from "../../people/andrey-okonetchnikov";
 
 const workshop: Session = {

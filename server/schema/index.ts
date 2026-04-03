@@ -1,4 +1,8 @@
-import { buildSchema, registerEnumType, type NonEmptyArray } from "type-graphql";
+import {
+  buildSchema,
+  registerEnumType,
+  type NonEmptyArray,
+} from "type-graphql";
 import { ContactType } from "./Contact";
 import * as resolvers from "./resolvers";
 import { Level, SessionType } from "./Session";
@@ -25,6 +29,7 @@ export default async function generateSchema() {
 
   return await buildSchema({
     resolvers: schemaResolvers,
+    validate: false,
     // scalarsMap: [{ type: Url, scalar: UrlScalar }],
     // TODO: Emitting the schema could be useful for query checks.
     // emitSchemaFile: true, // use path for a specific location

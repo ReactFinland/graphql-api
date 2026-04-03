@@ -1,5 +1,5 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { valkoinenSali } from "../../generated";
+import { valkoinenSali } from "../../generated-core";
 import sara from "../../people/sara-vieira";
 
 const workshop: Session = {

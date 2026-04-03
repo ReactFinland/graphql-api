@@ -20,7 +20,7 @@ Use the Worker runtime for local development:
 
 Wrangler uses [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/wrangler.jsonc) and serves public image assets from the repository through the static-assets configuration in [.assetsignore](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.assetsignore).
 
-Before deploying or after larger refactors, run `npm run quality:gate` to execute both typechecks and the API test suite.
+Before deploying or after larger refactors, run `npm run quality:gate` to execute the checked-in CI workflow locally through `agent-ci`. The direct checks that workflow runs are also available as `npm run quality:gate:fast`.
 
 Other useful local endpoints:
 

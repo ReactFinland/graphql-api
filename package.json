@@ -3,13 +3,21 @@
   "version": "0.0.0",
   "private": true,
   "description": "React Finland GraphQL API",
+  "packageManager": "npm@11.11.0",
   "scripts": {
+    "agent-ci:patch": "node ./scripts/patch-agent-ci.mjs",
     "generate:indices": "tsc && node build/utils/generate-indices.js content --verbose",
+    "cf:check": "TOKEN=test-token HOME=$PWD wrangler deploy --dry-run --outdir .wrangler-dry-run",
     "cf:deploy": "wrangler deploy",
     "cf:dev": "wrangler dev",
+    "ci:local": "npm run agent-ci:patch && node ./scripts/run-agent-ci.mjs run --workflow .github/workflows/ci.yml",
+    "ci:local:quiet": "npm run agent-ci:patch && node ./scripts/run-agent-ci.mjs run --quiet --workflow .github/workflows/ci.yml",
+    "ci:local:all": "npm run agent-ci:patch && node ./scripts/run-agent-ci.mjs run --all",
+    "ci:local:retry": "npm run agent-ci:patch && node ./scripts/run-agent-ci.mjs retry",
     "types:check": "tsc --noEmit",
     "test": "tsc && node --test test/api.e2e.test.cjs",
-    "quality:gate": "npm run types:check && npm test"
+    "quality:gate:fast": "npm run types:check && npm test && npm run cf:check",
+    "quality:gate": "npm run ci:local:quiet"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +26,7 @@
     "node": "24.x"
   },
   "devDependencies": {
+    "@redwoodjs/agent-ci": "0.6.0",
     "@types/node": "24.0.3",
     "glob": "13.0.6",
     "mri": "1.2.0",

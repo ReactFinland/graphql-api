@@ -1,6 +1,6 @@
 import { Session, SessionType } from "../../../server/schema/Session";
-import { internet } from "../../generated";
-import { erikRasmussen } from "../../generated";
+import { internet } from "../../generated-core";
+import { erikRasmussen } from "../../generated-core";
 
 const workshop: Session = {
   type: SessionType.WORKSHOP,
