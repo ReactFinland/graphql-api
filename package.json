@@ -44,8 +44,6 @@
     "graphql": "16.13.2",
     "graphql-depth-limit": "1.1.0",
     "graphql-http": "1.22.4",
-    "ical-generator": "10.1.0",
-    "reflect-metadata": "0.2.2",
-    "type-graphql": "2.0.0-rc.3"
+    "ical-generator": "10.1.0"
   }
 }

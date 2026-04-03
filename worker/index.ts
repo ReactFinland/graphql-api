@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import createRequestHandler from "../server/create-request-handler";
 
 interface Env {

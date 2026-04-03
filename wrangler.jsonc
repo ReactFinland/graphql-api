@@ -4,9 +4,6 @@
   "main": "./worker/index.ts",
   "compatibility_date": "2026-04-03",
   "compatibility_flags": ["nodejs_compat"],
-  "alias": {
-    "class-validator": "./worker/shims/class-validator.ts"
-  },
   "observability": {
     "enabled": true,
     "head_sampling_rate": 1

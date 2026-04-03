@@ -2,8 +2,6 @@ const assert = require("node:assert/strict");
 const http = require("node:http");
 const test = require("node:test");
 
-require("reflect-metadata");
-
 const createRequestHandler = require("../build/server/create-request-handler").default;
 
 let server;
