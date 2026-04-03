@@ -28,15 +28,6 @@ Other useful local endpoints:
 - `http://localhost:8787/calendar-2026.ics`
 - `http://localhost:8787/media/people/kenw.jpg`
 
-### Node.js fallback
-
-If you need to run the old Node entrypoint directly:
-
-1. Use Node.js 24, for example with `nvm use`.
-2. Install dependencies with `npm install`.
-3. Compile the project with `npx tsc`.
-4. Start the compiled server with `node build/server`.
-
 ## Deploying to Cloudflare
 
 ### Prerequisites
@@ -85,11 +76,10 @@ Check these endpoints on the deployed domain:
 
 The application requires a `TOKEN` value at runtime for all non-media routes.
 
-The `.env` file is only relevant for local scripts and the Node.js entrypoint. The example in [.env.template](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.env.template) is:
+For local Wrangler development, provide the values in `.dev.vars` or `.env`. The example in [.env.template](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.env.template) is:
 
 - `TOKEN` for authenticating all non-media routes through a `TOKEN` request header
 - `TITO_TOKEN` for Tito-related utility scripts
-- `REBUILD_SITES` for optional comma-separated webhook URLs that should be `POST`ed once after the Node server starts in production
 
 ## Notes
 

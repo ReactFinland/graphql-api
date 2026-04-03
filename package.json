@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "csv-parse": "6.2.1",
-    "dotenv": "17.4.0",
     "graphql": "16.13.2",
     "graphql-depth-limit": "1.1.0",
     "graphql-http": "1.22.4",

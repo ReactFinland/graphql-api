@@ -18,7 +18,7 @@ async function createRequestHandler(options: CreateRequestHandlerOptions = {}) {
   const mediaUrl = options.mediaUrl || "/media";
   const mediaPath = options.mediaPath || path.join(projectRoot, "media");
   const enableMedia = options.enableMedia !== false;
-  const expectedToken = options.expectedToken ?? process.env.TOKEN;
+  const expectedToken = options.expectedToken;
   const schema = await generateSchema();
   const graphqlHandler = createGraphQLRequestHandler(
     schema,

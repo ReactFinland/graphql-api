@@ -1,21 +1,35 @@
 const assert = require("node:assert/strict");
+const http = require("node:http");
 const test = require("node:test");
 
 require("reflect-metadata");
 
-const createServer = require("../build/server/server").default;
+const createRequestHandler = require("../build/server/app").default;
 
 let server;
 let baseUrl;
 const token = "test-token";
 
 test.before(async () => {
-  process.env.NODE_ENV = "test";
-  process.env.TOKEN = token;
-  server = await createServer({
-    logRequests: false,
-    logStartup: false,
-    port: 0,
+  const handleRequest = await createRequestHandler({
+    expectedToken: token,
+  });
+  server = http.createServer(async (req, res) => {
+    try {
+      const response = await handleRequest(toRequest(req));
+
+      await sendResponse(res, response);
+    } catch (error) {
+      res.writeHead(500).end(String(error));
+    }
+  });
+
+  await new Promise((resolve, reject) => {
+    server.once("error", reject);
+    server.listen(0, "127.0.0.1", () => {
+      server.off("error", reject);
+      resolve();
+    });
   });
 
   const address = server.address();
@@ -53,6 +67,51 @@ async function request(pathname, init) {
     ...init,
     headers,
   });
+}
+
+function toRequest(req) {
+  const url = new URL(req.url || "/", `http://${req.headers.host || "localhost"}`);
+  const headers = new Headers();
+
+  Object.entries(req.headers).forEach(([key, value]) => {
+    if (Array.isArray(value)) {
+      value.forEach((entry) => headers.append(key, entry));
+    } else if (value !== undefined) {
+      headers.set(key, value);
+    }
+  });
+
+  const init = {
+    headers,
+    method: req.method,
+  };
+
+  if (req.method === "GET" || req.method === "HEAD") {
+    return new Request(url, init);
+  }
+
+  return new Request(url, {
+    ...init,
+    body: req,
+    duplex: "half",
+  });
+}
+
+async function sendResponse(res, response) {
+  response.headers.forEach((value, key) => {
+    res.setHeader(key, value);
+  });
+
+  res.statusCode = response.status;
+  res.statusMessage = response.statusText;
+
+  if (!response.body) {
+    res.end();
+
+    return;
+  }
+
+  res.end(Buffer.from(await response.arrayBuffer()));
 }
 
 test("GET /ping returns server metadata", async () => {
