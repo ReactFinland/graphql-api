@@ -561,7 +561,7 @@ React teams are on the front line: agent failures become UI failures. This works
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
           // location: locations.hbc,
         },
-        {
+        /*{
           type: SessionType.WORKSHOP,
           title: "Designing the End",
           location: locations.nitor,
@@ -595,7 +595,7 @@ The workshop is a mixture of presentations, tools, group and individual work.
 > Did you have an old iPhone that slowed down and its battery didn’t last until lunchtime? It’s probably because Apple didn’t have an Endineer in their team. Yes, Endineer, not Engineer. Haven’t heard of Endineering before? It’s all about starting with the END in mind.`,
           people: [people.joe],
           keywords: [Keyword.DESIGN],
-        },
+        },*/
       ],
     },
   ],
@@ -673,7 +673,7 @@ We will be mostly typing in English instead of any programming language.`,
           people: [people.joonasP],
           keywords: [Keyword.AI, Keyword.DEVELOPMENT],
         },
-        {
+        /*{
           type: SessionType.WORKSHOP,
           location: locations.hbc,
           title: "Drawing as a tool – The ABC of visual facilitation",
@@ -707,7 +707,7 @@ workshop, we will cover a bit of theory and engage in practical exercises as fol
   - We review how the learned skills can be applied both atwork and in everyday life, and gather feedback on the workshop using visual tools.`,
           people: [people.salla],
           keywords: [Keyword.DESIGN],
-        },
+        },*/
       ],
     },
   ],
