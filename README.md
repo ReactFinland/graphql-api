@@ -7,8 +7,6 @@ This repository serves conference data over GraphQL and exposes a small set of s
 - `/calendar-2026.ics`
 - `/media/*`
 
-Development setup lives in [DEVELOPMENT.md](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/DEVELOPMENT.md).
-
 ## Deploying to Cloudflare
 
 ### Prerequisites
@@ -21,7 +19,7 @@ Development setup lives in [DEVELOPMENT.md](/Users/juhovepsalainen/Projects/futu
 
 ### Configure the Worker
 
-The project already includes a Worker entrypoint at [worker/index.ts](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/worker/index.ts) and a Wrangler configuration at [wrangler.jsonc](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/wrangler.jsonc).
+The project already includes a Worker entrypoint at [worker/index.ts](./worker/index.ts) and a Wrangler configuration at [wrangler.jsonc](./wrangler.jsonc).
 
 The current configuration:
 
