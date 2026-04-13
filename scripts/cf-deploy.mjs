@@ -1,7 +1,11 @@
 import { spawnSync } from "node:child_process";
 import { constants as fsConstants } from "node:fs";
 import { accessSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
+
+const REBUILD_TRIGGER_PATH = "/__internal/rebuild-sites";
+const WRANGLER_CONFIG_URL = new URL("../wrangler.jsonc", import.meta.url);
 
 loadOptionalEnvFiles([".env", ".dev.vars"]);
 
@@ -10,10 +14,8 @@ if (isEntrypoint()) {
 }
 
 export async function main() {
-  const hookUrls = parseHookUrls(process.env.REBUILD_SITES);
-
   runWranglerDeploy();
-  await triggerRebuildHooks(hookUrls);
+  await triggerPostDeployRebuilds();
 }
 
 function runWranglerDeploy() {
@@ -74,6 +76,80 @@ async function triggerRebuildHooks(urls) {
   }
 }
 
+async function triggerPostDeployRebuilds() {
+  const workerOrigin = getWorkerOrigin();
+
+  if (workerOrigin && process.env.TOKEN) {
+    await triggerWorkerManagedRebuilds(workerOrigin);
+    return;
+  }
+
+  const hookUrls = parseHookUrls(process.env.REBUILD_SITES);
+
+  if (hookUrls.length > 0) {
+    console.log(
+      "[cf:deploy] Falling back to local REBUILD_SITES because the deployed Worker cannot be called."
+    );
+    await triggerRebuildHooks(hookUrls);
+    return;
+  }
+
+  if (!process.env.TOKEN) {
+    console.log(
+      "[cf:deploy] No local TOKEN available, skipping Worker-managed downstream rebuild trigger."
+    );
+    return;
+  }
+
+  console.log(
+    "[cf:deploy] No public Worker route found in wrangler.jsonc, skipping downstream rebuild trigger."
+  );
+}
+
+async function triggerWorkerManagedRebuilds(workerOrigin) {
+  const url = new URL(REBUILD_TRIGGER_PATH, workerOrigin);
+
+  console.log(
+    `[cf:deploy] Asking the deployed Worker to trigger downstream rebuilds via ${url.href}.`
+  );
+
+  const response = await fetch(url, {
+    headers: {
+      TOKEN: process.env.TOKEN,
+    },
+    method: "POST",
+  });
+  const payload = await readJsonIfPossible(response);
+
+  if (!response.ok) {
+    const details =
+      payload && typeof payload === "object"
+        ? JSON.stringify(payload)
+        : response.statusText;
+
+    throw new Error(
+      `[cf:deploy] Worker-managed rebuild trigger failed: HTTP ${response.status} ${details}`.trim()
+    );
+  }
+
+  if (payload?.skipped) {
+    console.log(
+      "[cf:deploy] The deployed Worker has no REBUILD_SITES configured, skipping downstream rebuilds."
+    );
+    return;
+  }
+
+  console.log(
+    `[cf:deploy] The deployed Worker triggered ${payload?.triggered ?? 0} downstream rebuild${payload?.triggered === 1 ? "" : "s"}.`
+  );
+
+  if (Array.isArray(payload?.buildIds) && payload.buildIds.length > 0) {
+    console.log(
+      `[cf:deploy] Accepted downstream builds: ${payload.buildIds.join(", ")}`
+    );
+  }
+}
+
 async function postDeployHook(url) {
   const response = await fetch(url, { method: "POST" });
   const payload = await readJsonIfPossible(response);
@@ -121,6 +197,43 @@ function formatError(error) {
 
 function getWranglerCommand() {
   return process.platform === "win32" ? "wrangler.cmd" : "wrangler";
+}
+
+function getWorkerOrigin() {
+  try {
+    const config = JSON.parse(readFileSync(WRANGLER_CONFIG_URL, "utf8"));
+    const routes = Array.isArray(config.routes) ? config.routes : [];
+
+    for (const route of routes) {
+      const pattern =
+        typeof route === "string" ? route : typeof route?.pattern === "string" ? route.pattern : null;
+      const hostname = parseRouteHostname(pattern);
+
+      if (hostname) {
+        return `https://${hostname}`;
+      }
+    }
+  } catch (error) {
+    console.warn(
+      `[cf:deploy] Failed to read wrangler.jsonc for the public Worker route: ${formatError(error)}`
+    );
+  }
+
+  return null;
+}
+
+function parseRouteHostname(pattern) {
+  if (typeof pattern !== "string") {
+    return null;
+  }
+
+  const hostname = pattern.trim().split("/")[0];
+
+  if (!hostname || hostname.includes("*")) {
+    return null;
+  }
+
+  return hostname;
 }
 
 function loadOptionalEnvFiles(paths) {

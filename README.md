@@ -33,7 +33,8 @@ The current configuration:
 
 If you want a different Worker name, change the `name` field in `wrangler.jsonc`.
 Set the runtime token before deploy with `npx wrangler secret put TOKEN`.
-For local Worker development, provide the same value in `.dev.vars` or `.env` so Wrangler can load it into the Worker `env` bindings.
+If you want post-deploy downstream rebuild hooks, also set `REBUILD_SITES` as an optional Worker secret with `npx wrangler secret put REBUILD_SITES`.
+For local Worker development, provide the same values in `.dev.vars` or `.env` so Wrangler can load them into the Worker `env` bindings.
 
 ### Deploy
 
@@ -44,7 +45,8 @@ npm run cf:deploy
 ```
 
 That executes `wrangler deploy` using the checked-in configuration.
-If `REBUILD_SITES` is set, the deploy script also `POST`s each comma-separated deploy hook URL after the Worker deployment succeeds.
+After the deployment succeeds, the script calls an internal Worker endpoint so the Worker can read its own `REBUILD_SITES` secret and `POST` each configured deploy hook.
+Keep `TOKEN` available in your local shell as well when running `npm run cf:deploy`, so the script can authenticate that internal post-deploy call.
 
 ### Verify after deploy
 
