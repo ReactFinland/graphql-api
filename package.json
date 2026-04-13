@@ -2,7 +2,7 @@
   "name": "@react-finland/graphql-api",
   "version": "0.0.0",
   "private": true,
-  "description": "React Finland GraphQL API",
+  "description": "Toska osk. GraphQL API",
   "packageManager": "npm@11.11.0",
   "scripts": {
     "agent-ci:patch": "node ./scripts/patch-agent-ci.mjs",
