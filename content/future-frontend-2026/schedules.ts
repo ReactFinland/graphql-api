@@ -410,8 +410,8 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title: "Frontend after AI: The new UX",
+          description: `What even is the role of frontend anymore? Do we still present users with carousels, tabs, cards, and the regular design primitives we've become familiar with? Or is this evolving? In this talk, we will explore how UX is changing and how to build for the agentic future.`,
           people: [people.tejasKumar],
           urls: {
             drawing: "",
