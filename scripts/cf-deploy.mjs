@@ -1,7 +1,9 @@
 import { spawnSync } from "node:child_process";
+import { constants as fsConstants } from "node:fs";
+import { accessSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
-process.loadEnvFile?.();
+loadOptionalEnvFiles([".env", ".dev.vars"]);
 
 if (isEntrypoint()) {
   await main();
@@ -119,6 +121,29 @@ function formatError(error) {
 
 function getWranglerCommand() {
   return process.platform === "win32" ? "wrangler.cmd" : "wrangler";
+}
+
+function loadOptionalEnvFiles(paths) {
+  if (typeof process.loadEnvFile !== "function") {
+    return;
+  }
+
+  for (const path of paths) {
+    if (!fileExists(path)) {
+      continue;
+    }
+
+    process.loadEnvFile(path);
+  }
+}
+
+function fileExists(path) {
+  try {
+    accessSync(path, fsConstants.F_OK);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function isEntrypoint() {
