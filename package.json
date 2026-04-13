@@ -8,7 +8,7 @@
     "agent-ci:patch": "node ./scripts/patch-agent-ci.mjs",
     "generate:indices": "tsc && node build/utils/generate-indices.js content --verbose",
     "cf:check": "TOKEN=test-token HOME=$PWD wrangler deploy --dry-run --outdir .wrangler-dry-run",
-    "cf:deploy": "wrangler deploy",
+    "cf:deploy": "node ./scripts/cf-deploy.mjs",
     "cf:dev": "wrangler dev",
     "ci:local": "npm run agent-ci:patch && node ./scripts/run-agent-ci.mjs run --workflow .github/workflows/ci.yml",
     "ci:local:quiet": "npm run agent-ci:patch && node ./scripts/run-agent-ci.mjs run --quiet --workflow .github/workflows/ci.yml",

@@ -43,7 +43,8 @@ Run:
 npm run cf:deploy
 ```
 
-That executes `npx wrangler deploy` using the checked-in configuration.
+That executes `wrangler deploy` using the checked-in configuration.
+If `REBUILD_SITES` is set, the deploy script also `POST`s each comma-separated deploy hook URL after the Worker deployment succeeds.
 
 ### Verify after deploy
 

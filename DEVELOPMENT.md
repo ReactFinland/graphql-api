@@ -39,3 +39,4 @@ The application requires a `TOKEN` value at runtime for protected Worker-handled
 For local Wrangler development, provide the values in `.dev.vars` or `.env`. The example in [.env.template](/Users/juhovepsalainen/Projects/future-frontend/graphql-api/.env.template) is:
 
 - `TOKEN` for authenticating protected Worker-handled routes through a `TOKEN` request header
+- `REBUILD_SITES` for optional comma-separated downstream Cloudflare deploy hooks triggered after `npm run cf:deploy`
