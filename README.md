@@ -56,3 +56,7 @@ Check these endpoints on the deployed domain:
 - `/media/people/kenw.jpg`
 
 Note that the first two require a `TOKEN` header.
+
+## License
+
+MIT.
