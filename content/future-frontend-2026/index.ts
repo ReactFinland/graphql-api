@@ -50,7 +50,6 @@ const goldSponsors: Contact[] = [
 const silverSponsors: Contact[] = [
   // allSponsors.smartly,
   // allSponsors.wunderdog,
-  // allSponsors.alma,
   // allSponsors.backscreen,
   // allSponsors.evitec,
   // allSponsors.upcloud,
@@ -61,6 +60,7 @@ const silverSponsors: Contact[] = [
   allSponsors.nitor,
 ];
 const bronzeSponsors: Contact[] = [
+  allSponsors.alma,
   // allSponsors.knowit,
   // allSponsors.toddle,
   // allSponsors.columbiaroad,
