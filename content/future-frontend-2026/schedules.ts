@@ -349,7 +349,7 @@ const tuesday: Schedule = {
     },
     {
       begin: "07:30",
-      end: "08:00",
+      end: "07:45",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -359,8 +359,8 @@ const tuesday: Schedule = {
       ],
     },
     {
-      begin: "08:00",
-      end: "09:30",
+      begin: "07:45",
+      end: "09:15",
       title: "Architecture",
       sessions: [
         {
@@ -392,8 +392,8 @@ const tuesday: Schedule = {
       ],
     },
     {
-      begin: "09:30",
-      end: "10:30",
+      begin: "09:15",
+      end: "10:00",
       sessions: [
         {
           type: SessionType.LUNCH,
@@ -403,8 +403,8 @@ const tuesday: Schedule = {
       ],
     },
     {
-      begin: "10:30",
-      end: "12:00",
+      begin: "10:00",
+      end: "11:30",
       title: "Agentic development",
       sessions: [
         {
@@ -436,8 +436,8 @@ const tuesday: Schedule = {
       ],
     },
     {
-      begin: "12:00",
-      end: "12:30",
+      begin: "11:30",
+      end: "12:00",
       sessions: [
         {
           type: SessionType.COFFEE_BREAK,
@@ -447,8 +447,8 @@ const tuesday: Schedule = {
       ],
     },
     {
-      begin: "12:30",
-      end: "14:00",
+      begin: "12:00",
+      end: "13:30",
       title: "Agentic use cases",
       sessions: [
         {
@@ -490,8 +490,8 @@ What you'll learn:
       ],
     },
     {
-      begin: "14:00",
-      end: "14:15",
+      begin: "13:30",
+      end: "13:45",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
