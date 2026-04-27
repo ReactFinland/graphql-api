@@ -335,8 +335,9 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "A Canon for the Vanilla Web",
-          description: `How pairing modern platform features with a small set of conventions lets us build beautiful web UI in half the tokens.`,
+          title:
+            "A Canon for the Vanilla Web – How pairing modern platform features with a small set of conventions lets us build beautiful web UI in half the tokens",
+          description: ``,
           people: [people.tonyEnnis],
           urls: {
             drawing: "",
