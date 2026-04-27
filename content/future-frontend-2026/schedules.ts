@@ -335,8 +335,8 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Building beautiful web applications the HTML First way",
-          description: ``,
+          title: "A Canon for the Vanilla Web",
+          description: `How pairing modern platform features with a small set of conventions lets us build beautiful web UI in half the tokens.`,
           people: [people.tonyEnnis],
           urls: {
             drawing: "",
