@@ -166,62 +166,6 @@ This talk focuses on what teams can change today to grow stronger tech leads - a
     {
       begin: "10:30",
       end: "12:00",
-      title: "Accessibility",
-      sessions: [
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title:
-            "Accessibility Adventures - The Lost Secrets of Forced Colors Mode",
-          description: `Guiding us through this adventure is Rami, our AI-generated, raccoon treasure hunter, equal parts explorer and troublemaker, armed with a mysterious treasure map and an ancient planchette lens to decode its mysteries. Each segment of the talk represents a new “clue” on the map, where we’ll dive into demos of web interfaces through the lens of Forced Colors Mode, uncovering what breaks, what disappears, and how we can bring clarity back to the screen.
-
-Together, we'll explore:
-- What is Forced Colors Mode and how do browsers translate system color schemes?
-- How can we detect and support the forced-colors media query?
-- How do CSS keywords, color tokens, and custom properties behave in high-contrast settings?
-- What are the best practices for building resilient, inclusive interfaces in Forced Colors Mode?
-- When (and how) should we override forced rendering safely?
-
-Throughout the talk, we'll alternate between screen reader–guided demos and visual “treasure map” sequences, immersing the audience in the challenges users face when Forced Colors Mode is ignored, and the breakthroughs that happen when it’s embraced.`,
-          people: [people.daniel],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DESIGN],
-        },
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "The Cake Is a Lie... And So Is Your Login's Accessibility",
-          description: `Much like the promise of cake in Portal, login forms are everywhere in web development. While they may seem functional at first glance, many users with disabilities perceive a maze of invisible walls, from keyboard traps to inaccessible CAPTCHA. It's as if GLaDOS designed these forms herself to test us!
-
-In this talk, we will fix accessibility problems in a real React login component together. We will explore how simple changes can significantly improve the user experience. For example, by using ARIA tags correctly and managing focus more effectively, and what matters for authentication in particular. The promise of cake may be a lie (or isn't it? 🤔), but accessibility can and should be!`,
-          people: [people.ramona],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.DESIGN],
-        },
-      ],
-    },
-    {
-      begin: "12:00",
-      end: "12:30",
-      sessions: [
-        {
-          type: SessionType.COFFEE_BREAK,
-          title: "Break",
-          description: "Drink coffee. Again.",
-        },
-      ],
-    },
-    {
-      begin: "12:30",
-      end: "14:00",
       title: "Resilience",
       sessions: [
         {
@@ -266,8 +210,77 @@ You'll leave with a practical framework for treating your body not as a thing th
       ],
     },
     {
-      begin: "14:00",
+      begin: "12:00",
+      end: "12:30",
+      sessions: [
+        {
+          type: SessionType.COFFEE_BREAK,
+          title: "Break",
+          description: "Drink coffee. Again.",
+        },
+      ],
+    },
+    {
+      begin: "12:30",
       end: "14:15",
+      title: "Accessibility",
+      sessions: [
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title:
+            "Accessibility Adventures - The Lost Secrets of Forced Colors Mode",
+          description: `Guiding us through this adventure is Rami, our AI-generated, raccoon treasure hunter, equal parts explorer and troublemaker, armed with a mysterious treasure map and an ancient planchette lens to decode its mysteries. Each segment of the talk represents a new “clue” on the map, where we’ll dive into demos of web interfaces through the lens of Forced Colors Mode, uncovering what breaks, what disappears, and how we can bring clarity back to the screen.
+
+Together, we'll explore:
+- What is Forced Colors Mode and how do browsers translate system color schemes?
+- How can we detect and support the forced-colors media query?
+- How do CSS keywords, color tokens, and custom properties behave in high-contrast settings?
+- What are the best practices for building resilient, inclusive interfaces in Forced Colors Mode?
+- When (and how) should we override forced rendering safely?
+
+Throughout the talk, we'll alternate between screen reader–guided demos and visual “treasure map” sequences, immersing the audience in the challenges users face when Forced Colors Mode is ignored, and the breakthroughs that happen when it’s embraced.`,
+          people: [people.daniel],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DESIGN],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "The Cake Is a Lie... And So Is Your Login's Accessibility",
+          description: `Much like the promise of cake in Portal, login forms are everywhere in web development. While they may seem functional at first glance, many users with disabilities perceive a maze of invisible walls, from keyboard traps to inaccessible CAPTCHA. It's as if GLaDOS designed these forms herself to test us!
+
+In this talk, we will fix accessibility problems in a real React login component together. We will explore how simple changes can significantly improve the user experience. For example, by using ARIA tags correctly and managing focus more effectively, and what matters for authentication in particular. The promise of cake may be a lie (or isn't it? 🤔), but accessibility can and should be!`,
+          people: [people.ramona],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.DESIGN],
+        },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "Frontend after AI: The new UX",
+          description: `What even is the role of frontend anymore? Do we still present users with carousels, tabs, cards, and the regular design primitives we've become familiar with? Or is this evolving? In this talk, we will explore how UX is changing and how to build for the agentic future.`,
+          people: [people.tejasKumar],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.AGENTS, Keyword.AI, Keyword.DEVELOPMENT],
+        },
+      ],
+    },
+    {
+      begin: "14:15",
+      end: "14:20",
       sessions: [
         {
           type: SessionType.ORGANIZATIONAL,
@@ -408,19 +421,6 @@ const tuesday: Schedule = {
       end: "11:30",
       title: "Agentic development",
       sessions: [
-        {
-          type: SessionType.TALK,
-          level: Level.INTERMEDIATE,
-          title: "Frontend after AI: The new UX",
-          description: `What even is the role of frontend anymore? Do we still present users with carousels, tabs, cards, and the regular design primitives we've become familiar with? Or is this evolving? In this talk, we will explore how UX is changing and how to build for the agentic future.`,
-          people: [people.tejasKumar],
-          urls: {
-            drawing: "",
-            slides: "",
-            video: "",
-          },
-          keywords: [Keyword.AGENTS, Keyword.AI, Keyword.DEVELOPMENT],
-        },
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
