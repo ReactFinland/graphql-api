@@ -803,6 +803,7 @@ import sponsors__knowit from "./sponsors/knowit";
 import sponsors__kongres from "./sponsors/kongres";
 import sponsors__koodiasuomesta from "./sponsors/koodiasuomesta";
 import sponsors__loihdefactor from "./sponsors/loihdefactor";
+import sponsors__mastra from "./sponsors/mastra";
 import sponsors__meiko from "./sponsors/meiko";
 import sponsors__monolisa from "./sponsors/monolisa";
 import sponsors__moonhighway from "./sponsors/moonhighway";
@@ -917,6 +918,7 @@ export const sponsors = {
   kongres: sponsors__kongres,
   koodiasuomesta: sponsors__koodiasuomesta,
   loihdefactor: sponsors__loihdefactor,
+  mastra: sponsors__mastra,
   meiko: sponsors__meiko,
   monolisa: sponsors__monolisa,
   moonhighway: sponsors__moonhighway,

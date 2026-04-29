@@ -43,6 +43,7 @@ const partners: Contact[] = [
   allSponsors.haagahelia,
   allSponsors.monolisa,
   allSponsors.zurichjs,
+  allSponsors.mastra,
 ];
 const goldSponsors: Contact[] = [
   // allSponsors.digia
