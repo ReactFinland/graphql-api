@@ -424,8 +424,20 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title: "The AI Velocity Trap: Shipping Faster Without Breaking More",
+          description: `LLMs and coding agents have made it dramatically easier to produce code. But if
+every velocity gain also increases regressions, incidents, and error rates, we
+have not improved software delivery; we have only moved the bottleneck
+downstream.
+
+We’ll explore:
+
+- Why AI-assisted velocity is a liability without stronger feedback loops.
+- How agents can harden the lifecycle before, during, and after code is written.
+- How an agent team can verify plans, inspect changes, challenge assumptions, and catch issues before human review.
+- How deployment awareness and production monitoring change the role of coding agents.
+- How teams can ship faster without turning every release into a reliability gamble.
+- The new SDLC loop: moving from requirements → build → verify → observe → repeat.`,
           people: [people.ohans],
           urls: {
             drawing: "",
