@@ -446,6 +446,19 @@ We’ll explore:
           },
           keywords: [Keyword.AGENTS, Keyword.AI, Keyword.DEVELOPMENT],
         },
+        {
+          type: SessionType.TALK,
+          level: Level.INTERMEDIATE,
+          title: "",
+          description: ``,
+          people: [people.christofferNiska],
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+          keywords: [Keyword.AGENTS, Keyword.AI, Keyword.DEVELOPMENT],
+        },
       ],
     },
     {
