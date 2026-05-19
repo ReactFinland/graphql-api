@@ -547,6 +547,22 @@ What you'll learn:
         },
       ],
     },
+    {
+      begin: "14:30",
+      end: "18:00",
+      sessions: [
+        {
+          type: SessionType.MEETUP,
+          title: "HelsinkiJS meetup",
+          description: `This meetup continues our discussion from the conference as Rachel-Lee Nabors will be there. The meetup is a short walk from the venue and takes place at the Learning Hub of Tietotekniikantalo (Konemiehentie 2, Espoo). If you want to participate, [register separately online](https://www.meetabit.com/events/helsinkijs-june-2026).`,
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
+    },
   ],
 };
 
