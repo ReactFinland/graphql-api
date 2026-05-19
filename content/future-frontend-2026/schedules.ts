@@ -294,6 +294,22 @@ In this talk, we will fix accessibility problems in a real React login component
         },
       ],
     },
+    {
+      begin: "14:30",
+      end: "17:30",
+      sessions: [
+        {
+          type: SessionType.MEETUP,
+          title: "Mobile Mates meetup",
+          description: `This meetup titled "AI in Design: Useful, Unreliable, Unavoidable?" takes place at Codemate Ltd. If you want to participate, [register separately online](https://www.eventbrite.fi/e/ai-in-design-useful-unreliable-unavoidable-tickets-1989816165716).`,
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
+    },
   ],
 };
 
