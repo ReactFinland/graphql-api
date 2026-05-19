@@ -301,7 +301,7 @@ In this talk, we will fix accessibility problems in a real React login component
         {
           type: SessionType.MEETUP,
           title: "Mobile Mates meetup",
-          description: `This meetup titled "AI in Design: Useful, Unreliable, Unavoidable?" takes place at Codemate Ltd. If you want to participate, [register separately online](https://www.eventbrite.fi/e/ai-in-design-useful-unreliable-unavoidable-tickets-1989816165716).`,
+          description: `This meetup titled "AI in Design: Useful, Unreliable, Unavoidable?" takes place at Codemate Ltd. (Kaisaniemenkatu 1 B). If you want to participate, [register separately online](https://www.eventbrite.fi/e/ai-in-design-useful-unreliable-unavoidable-tickets-1989816165716).`,
           urls: {
             drawing: "",
             slides: "",
