@@ -656,6 +656,22 @@ The workshop is a mixture of presentations, tools, group and individual work.
         },*/
       ],
     },
+    {
+      begin: "14:30",
+      end: "18:00",
+      sessions: [
+        {
+          type: SessionType.MEETUP,
+          title: "Vibe Coding Finland",
+          description: `See [Vibe Coding Finland meetup](https://www.meetup.com/vibe-coding-finland/) for details as this one is still to be announced.`,
+          urls: {
+            drawing: "",
+            slides: "",
+            video: "",
+          },
+        },
+      ],
+    },
   ],
 };
 
