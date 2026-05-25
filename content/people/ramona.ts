@@ -4,7 +4,7 @@ import { Contact, ContactType } from "../../server/schema/Contact";
 const person: Contact = {
   name: "Ramona Schwering",
   about:
-    "I currently work as a Developer Advocate at Auth0 by Okta. I love to pass on my knowledge and expertise and my great love for frontend development, quality in this area, and design to others as a speaker at large conferences with a lot of heart and soul. For me, one thing counts above all: I hope that I can become the role model I wished for myself at the beginning of my career.",
+    "I currently work as a Developer Relations Engineer at Mittwald. I love to pass on my knowledge and expertise and my great love for frontend development, quality in this area, and design to others as a speaker at large conferences with a lot of heart and soul. For me, one thing counts above all: I hope that I can become the role model I wished for myself at the beginning of my career.",
   image: {
     url: "people/ramona.jpeg",
   },
