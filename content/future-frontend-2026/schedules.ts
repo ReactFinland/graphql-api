@@ -465,8 +465,12 @@ We’ll explore:
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title: "Building My Own Coding Agent",
+          description: `I wanted an AI coding assistant I could fully own. Run on my own machine, switch models freely, observe every decision, change anything I didn't like. No existing tool gave me that. So I built one.
+
+This talk is the real journey: what a coding agent actually is, where behavior comes from, and why I deleted thousands of lines of working code because the models had outgrown it.
+
+If you've used an AI coding tool and wondered what's happening on the other side, this is that talk.`,
           people: [people.christofferNiska],
           urls: {
             drawing: "",
