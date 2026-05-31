@@ -500,8 +500,10 @@ If you've used an AI coding tool and wondered what's happening on the other side
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "",
-          description: ``,
+          title: "Agents at the Application Layer",
+          description: `AI is advancing across the stack - hardware, models, and inference - but we believe the biggest opportunities are at the application layer. The most successful AI products of the next decade won't come from simply calling a model, but from building the right harness and UX around it.
+
+In this talk, we'll use Mastra as a lens for how production agents are actually built. After a quick foundation, we'll cover the building blocks that give agents real capabilities - memory, tools, workflows, sandboxes, evals, guardrails, durable execution, and how to stream agent output to the frontend smoothly. You'll see real agents in production and leave with a clear mental model for how the most successful agentic applications will be built.`,
           people: [people.alexBooker, people.tonyKovanen],
           urls: {
             drawing: "",
