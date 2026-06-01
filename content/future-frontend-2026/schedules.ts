@@ -669,7 +669,7 @@ The workshop is a mixture of presentations, tools, group and individual work.
         {
           type: SessionType.MEETUP,
           title: "Vibe Coding Finland",
-          description: `See [Vibe Coding Finland meetup](https://www.meetup.com/vibe-coding-finland/) for details as this one is still to be announced.`,
+          description: `See [Vibe Coding Finland meetup](https://www.meetup.com/vibe-coding-finland/events/315009601/) for details.`,
           urls: {
             drawing: "",
             slides: "",
