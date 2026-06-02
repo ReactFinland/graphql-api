@@ -94,7 +94,7 @@ const conference: Conference = {
     people.harriMaatta,
     people.toniRistola,
     people.tuuliTiilikainen,
-    //people.juhis,
+    people.juhis,
     people.emilia,
     people.jussi,
     people.juhoLehtinen,
