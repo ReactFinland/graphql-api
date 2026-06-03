@@ -364,10 +364,9 @@ const tuesday: Schedule = {
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title:
-            "A Canon for the Vanilla Web – How pairing modern platform features with a small set of conventions lets us build beautiful web UI in half the tokens",
-          description: ``,
-          people: [people.tonyEnnis],
+          title: "Hypermedia – the solution for lighter web applications?",
+          description: `It is well understood many web applications are more complex than they should. My thesis is that this is because due to prevailing mainstream trends, we ended up taking a path leading us to this complexity. It turns out that an old idea, hypermedia, might allow us to overcome this complexity while making our websites agent friendly.`,
+          people: [people.juhoVepsalainen],
           urls: {
             drawing: "",
             slides: "",
