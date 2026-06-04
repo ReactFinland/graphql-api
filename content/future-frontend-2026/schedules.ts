@@ -465,11 +465,16 @@ We’ll explore:
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
           title: "Building My Own Coding Agent",
-          description: `I wanted an AI coding assistant I could fully own. Run on my own machine, switch models freely, observe every decision, change anything I didn't like. No existing tool gave me that. So I built one.
+          description: `Building a coding agent from scratch reveals what's actually going on inside all of them. Most of what makes them work or fail isn't the model — it's the structure surrounding it.
 
-This talk is the real journey: what a coding agent actually is, where behavior comes from, and why I deleted thousands of lines of working code because the models had outgrown it.
+We'll cover:
 
-If you've used an AI coding tool and wondered what's happening on the other side, this is that talk.`,
+- What the agent loop actually is and why the model never runs code itself.
+- Why the same model produces different results in different tools.
+- How adding one tool made thousands of lines of prompt tuning unnecessary.
+- Why the hardest part of building an AI coding tool isn't the AI.
+- Why thousands of lines of working code were deleted — and why that was the right call.
+- What it means to trust the model, and what gets in the way.`,
           people: [people.christofferNiska],
           urls: {
             drawing: "",
