@@ -191,14 +191,14 @@ Think before doing. Care for the chips. Minimalistic aesthetics. By talking abou
         {
           type: SessionType.TALK,
           level: Level.INTERMEDIATE,
-          title: "Building Resilience: Origins",
+          title: "Building Resilience: Sustain the Maker",
           description: `Engineers design for resilience every day — redundancy, graceful degradation, monitoring, recovery. But these patterns weren't invented in a data center. They were borrowed from the most battle-tested system in existence: the human body.
 
-This talk traces resilience back to its origin and asks an uncomfortable question. If we already know how resilient systems work, why do we neglect the one system we can never rewrite, migrate, or redeploy? Why do we fight for infrastructure maintenance at work and allocate none for ourselves?
+This talk runs the borrowing back the other way. If we already know how resilient systems work, why do we neglect the one system we can never rewrite, migrate, or redeploy? Why do we fight for maintenance budget at work and allocate none for ourselves?
 
-We'll explore how the body's own adaptation mechanisms — the same ones that inspired our engineering patterns — are quietly working against us in sedentary environments. How the developer stereotype crystallized around a technological constraint that no longer exists. And why no one in the current health landscape is watching the slow, invisible space where a resilient body becomes a fragile one.
+We'll look at how the body's own adaptation mechanisms — the same ones that inspired our engineering patterns — quietly work against us in a sedentary environment; how the developer identity fossilized around a constraint that no longer exists; and why no one in the health landscape is watching the slow, invisible stretch where a resilient body becomes a fragile one. Then we'll build the maintenance system for it — identity, environment, a sustainable start, feedback, accountability, recovery — the same discipline you already give production.
 
-You'll leave with a practical framework for treating your body not as a thing that carries you to the keyboard, but as the foundation everything you build depends on.`,
+You'll leave treating your body not as the thing that carries you to the keyboard, but as the infrastructure your life runs on — the maker, not just the machine.`,
           people: [people.georgios],
           urls: {
             drawing: "",
