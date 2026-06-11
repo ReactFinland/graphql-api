@@ -61,8 +61,10 @@ We'll cover:
 - The real role of leadership and senior engineers`,
           people: [people.pasi],
           urls: {
-            drawing: "",
-            slides: "",
+            drawing:
+              "https://drive.google.com/file/d/1Pm18mFaDbTSHZlnArKHFW7yG2FXbghic/view",
+            slides:
+              "https://drive.google.com/file/d/1Ga9ItTB0cXwzvTNCeHMRasB0dVz5HTpC/view",
             video: "",
           },
           keywords: [Keyword.DESIGN],
@@ -86,8 +88,10 @@ We will explore:
 Stop ignoring the exit. Become an Endineer and design the end.`,
           people: [people.joe],
           urls: {
-            drawing: "",
-            slides: "",
+            drawing:
+              "https://drive.google.com/file/d/1clFx3gAdFAlOholkmkBPTz6Os79cDntD/view",
+            slides:
+              "https://drive.google.com/file/d/1bIfPHo83Ug9fVCi3U7-6n3h0k2YIQMXX/view",
             video: "",
           },
           keywords: [Keyword.DESIGN],
@@ -124,7 +128,8 @@ As AI reshapes work, tech professionals have more influence than they often real
 We’ll explore ways to take responsibility and exert influence that respect different neurotypes and energy levels. The key message is simple: you don’t need to become someone else to shape the future of work. Recognizing that your way of thinking matters - and finding connection with peers who share your values - is not only how influence grows but also how work becomes more meaningful and sustainable.`,
           people: [people.laura],
           urls: {
-            drawing: "",
+            drawing:
+              "https://drive.google.com/file/d/1JHTkYWBs4iiKlZBjJ9qTdPgOUIRBbpoS/view",
             slides: "",
             video: "",
           },
@@ -144,8 +149,9 @@ The session covers how to spot leadership potential in developers, how to suppor
 This talk focuses on what teams can change today to grow stronger tech leads - and sets the foundation for discussing how these skills will matter even more in the future of work.`,
           people: [people.anastasiia],
           urls: {
-            drawing: "",
-            slides: "",
+            drawing:
+              "https://drive.google.com/file/d/17FKZHQlz0HYrsMWDWO7lWomL1CmjxYZI/view",
+            slides: "https://canva.link/x9s3n8c2gqllse8",
             video: "",
           },
           keywords: [Keyword.DESIGN],
@@ -182,8 +188,9 @@ In this talk I hope to provide a different point of view by presenting to you th
 Think before doing. Care for the chips. Minimalistic aesthetics. By talking about these topics I hope (hope is important) to provide you with ideas to bring change (even if small) and imagine possible futures where our relationship with technology is vastly different and healthier.`,
           people: [people.dario],
           urls: {
-            drawing: "",
-            slides: "",
+            drawing:
+              "https://drive.google.com/file/d/1baUzCFQyDNoxjGUkJisGoK_MmzNIZGJF/view",
+            slides: "https://ff2026.dariogmori.com/",
             video: "",
           },
           keywords: [Keyword.DEVELOPMENT, Keyword.PERSONAL_DEVELOPMENT],
@@ -201,7 +208,8 @@ We'll look at how the body's own adaptation mechanisms — the same ones that in
 You'll leave treating your body not as the thing that carries you to the keyboard, but as the infrastructure your life runs on — the maker, not just the machine.`,
           people: [people.georgios],
           urls: {
-            drawing: "",
+            drawing:
+              "https://drive.google.com/file/d/1gp1SLZ0Pp75Wq4zaT2YSV8f9G-z169kh/view",
             slides: "",
             video: "",
           },
@@ -242,8 +250,10 @@ Together, we'll explore:
 Throughout the talk, we'll alternate between screen reader–guided demos and visual “treasure map” sequences, immersing the audience in the challenges users face when Forced Colors Mode is ignored, and the breakthroughs that happen when it’s embraced.`,
           people: [people.daniel],
           urls: {
-            drawing: "",
-            slides: "",
+            drawing:
+              "https://drive.google.com/file/d/1ovH2jBFdQ4MkkR_72VWVGuiYva1Sfppl/view",
+            slides:
+              "https://drive.google.com/file/d/1Y6uyV42tyqChMMkeaokjjuHCptCbXxxU/view",
             video: "",
           },
           keywords: [Keyword.DESIGN],
@@ -257,7 +267,8 @@ Throughout the talk, we'll alternate between screen reader–guided demos and vi
 In this talk, we will fix accessibility problems in a real React login component together. We will explore how simple changes can significantly improve the user experience. For example, by using ARIA tags correctly and managing focus more effectively, and what matters for authentication in particular. The promise of cake may be a lie (or isn't it? 🤔), but accessibility can and should be!`,
           people: [people.ramona],
           urls: {
-            drawing: "",
+            drawing:
+              "https://drive.google.com/file/d/1jZuhQF51INMduLT3b5T5MxNkxKExHvUj/view",
             slides: "",
             video: "",
           },
@@ -270,7 +281,8 @@ In this talk, we will fix accessibility problems in a real React login component
           description: `What even is the role of frontend anymore? Do we still present users with carousels, tabs, cards, and the regular design primitives we've become familiar with? Or is this evolving? In this talk, we will explore how UX is changing and how to build for the agentic future.`,
           people: [people.tejasKumar],
           urls: {
-            drawing: "",
+            drawing:
+              "https://drive.google.com/file/d/1V8WaDhjL2_JsSLlBiMxHo5TIx7C5UQ05/view",
             slides: "",
             video: "",
           },
@@ -355,7 +367,8 @@ const tuesday: Schedule = {
           description: `The future of web development isn't about chasing the latest library or framework—it's about rediscovering the evolving power of the platform. This talk will challenge your assumptions, and show you how the most exciting advances for the web are happening right now in HTML and CSS. Learn how to build complex patterns like hover cards and customizable drop down menus with _zero JavaScript_. You'll unlock the potential of modern, functional CSS and built-in semantic components to make building performant, accessible UI's faster and easier. The future is bright, and it's simpler than you think.`,
           people: [people.una],
           urls: {
-            drawing: "",
+            drawing:
+              "https://drive.google.com/file/d/1aymuRLzeT3XKvOSDy23G9Xqfo5bF5mbk/view",
             slides: "",
             video: "",
           },
@@ -368,8 +381,10 @@ const tuesday: Schedule = {
           description: `It is well understood many web applications are more complex than they should. My thesis is that this is because due to prevailing mainstream trends, we ended up taking a path leading us to this complexity. It turns out that an old idea, hypermedia, might allow us to overcome this complexity while making our websites agent friendly.`,
           people: [people.juhoVepsalainen],
           urls: {
-            drawing: "",
-            slides: "",
+            drawing:
+              "https://drive.google.com/file/d/1lsxyh8sVWpJPK7DAmPvo6YxHvi7DgXAj/view",
+            slides:
+              "https://drive.google.com/file/d/1MeDdvf9Gn5wfrJdy6lryQQ44llkwEXGr/view",
             video: "",
           },
           keywords: [Keyword.DEVELOPMENT, Keyword.HTML],
@@ -399,7 +414,8 @@ const tuesday: Schedule = {
           description: `This talk explores how modern frontend frameworks, with their lean learning curves and rapid adoption, often make developers forget the foundational software development principles — leading to unmaintainable and fragile code. Matthew Mamonov demonstrates how clean architecture principles remain highly relevant in the frontend realm, even though many developers assume they apply only to backend systems.`,
           people: [people.matthewM],
           urls: {
-            drawing: "",
+            drawing:
+              "https://drive.google.com/file/d/11duOQnxD1LFd58-FeatsHxQnMbR7JAhM/view",
             slides: "",
             video: "",
           },
@@ -412,8 +428,10 @@ const tuesday: Schedule = {
           description: `AI-first frontend architecture treats artificial intelligence as a core platform capability, embedding agentic decision-making into rendering, state management, accessibility, and personalization rather than layering AI on top of the UI. The frontend becomes adaptive, context-aware, and self-optimizing, dynamically shaping experiences based on user behavior, intent, and real-time signals.`,
           people: [people.rashmi],
           urls: {
-            drawing: "",
-            slides: "",
+            drawing:
+              "https://drive.google.com/file/d/1O74OCywLHzTu9UYssyQkB62UB36WMXJO/view",
+            slides:
+              "https://drive.google.com/file/d/1AQZ25wkAG8EJ3ch5bAH6MajeJ3Cq-Iyy/view",
             video: "",
           },
           keywords: [Keyword.DEVELOPMENT],
@@ -455,8 +473,10 @@ We’ll explore:
 - The new SDLC loop: moving from requirements → build → verify → observe → repeat.`,
           people: [people.ohans],
           urls: {
-            drawing: "",
-            slides: "",
+            drawing:
+              "https://drive.google.com/file/d/1fsyC8jj_aKAby3pnGeGyuaBizeiHJMXn/view",
+            slides:
+              "https://drive.google.com/file/d/1B0N781LTPPEoNQc3knZBJrQFVmKWRROv/view",
             video: "",
           },
           keywords: [Keyword.AGENTS, Keyword.AI, Keyword.DEVELOPMENT],
@@ -477,7 +497,8 @@ We'll cover:
 - What it means to trust the model, and what gets in the way.`,
           people: [people.christofferNiska],
           urls: {
-            drawing: "",
+            drawing:
+              "https://drive.google.com/file/d/1vdZen37wXCMIEbbBd_MbulU6_P9aSEZv/view",
             slides: "",
             video: "",
           },
@@ -510,7 +531,8 @@ We'll cover:
 In this talk, we'll use Mastra as a lens for how production agents are actually built. After a quick foundation, we'll cover the building blocks that give agents real capabilities - memory, tools, workflows, sandboxes, evals, guardrails, durable execution, and how to stream agent output to the frontend smoothly. You'll see real agents in production and leave with a clear mental model for how the most successful agentic applications will be built.`,
           people: [people.alexBooker, people.tonyKovanen],
           urls: {
-            drawing: "",
+            drawing:
+              "https://drive.google.com/file/d/1JOa5WgNQeJoD8s-qcwVIM45UvJHahHUH/view",
             slides: "",
             video: "",
           },
@@ -533,7 +555,8 @@ What you'll learn:
 * How to build an MCP server that streams interactive UI to agents`,
           people: [people.rachelNabors],
           urls: {
-            drawing: "",
+            drawing:
+              "https://drive.google.com/file/d/1BdShrPaFtGdWIvjnANcfJnp_zi35BXgL/view",
             slides: "",
             video: "",
           },
