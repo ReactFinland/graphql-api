@@ -96,25 +96,31 @@ const LocationType = new GraphQLObjectType<Location, IContext>({
   }),
 });
 
-const SessionUrlsType = new GraphQLObjectType<Record<string, string>, IContext>({
-  name: "SessionUrls",
-  fields: {
-    web: { type: GraphQLString },
-    slides: { type: GraphQLString },
-    video: { type: GraphQLString },
-    demo: { type: GraphQLString },
-    drawing: {
-      type: GraphQLString,
-      resolve(root, _args, ctx) {
-        if (!root.drawing) {
-          return null;
-        }
+const SessionUrlsType = new GraphQLObjectType<Record<string, string>, IContext>(
+  {
+    name: "SessionUrls",
+    fields: {
+      web: { type: GraphQLString },
+      slides: { type: GraphQLString },
+      video: { type: GraphQLString },
+      demo: { type: GraphQLString },
+      drawing: {
+        type: GraphQLString,
+        resolve(root, _args, ctx) {
+          if (!root.drawing) {
+            return null;
+          }
 
-        return `${ctx.mediaUrl}/${root.drawing}`;
+          if (root.drawing.startsWith("http")) {
+            return root.drawing;
+          }
+
+          return `${ctx.mediaUrl}/${root.drawing}`;
+        },
       },
     },
-  },
-});
+  }
+);
 
 const IntervalType = new GraphQLObjectType({
   name: "Interval",
@@ -123,7 +129,9 @@ const IntervalType = new GraphQLObjectType({
     end: { type: new GraphQLNonNull(GraphQLString) },
     title: { type: GraphQLString },
     sessions: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(SessionTypeObject))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(SessionTypeObject))
+      ),
       resolve(interval: { sessions: Session[] }) {
         return interval.sessions.map((session) => ({
           ...session,
@@ -145,7 +153,9 @@ const ScheduleType = new GraphQLObjectType({
     location: { type: LocationType },
     description: { type: GraphQLString },
     intervals: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(IntervalType))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(IntervalType))
+      ),
     },
   }),
 });
@@ -234,7 +244,9 @@ const ContactObjectType = new GraphQLObjectType<Contact, IContext>({
       },
     },
     type: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ContactTypeEnum))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(ContactTypeEnum))
+      ),
       resolve(contact) {
         return contact.type || [];
       },
@@ -251,15 +263,18 @@ const ContactObjectType = new GraphQLObjectType<Contact, IContext>({
         const rules: Record<string, string | undefined> = {
           homepage: social.homepage,
           mastodon: social.mastodon,
-          bluesky: social.bluesky && `https://bsky.app/profile/${social.bluesky}`,
-          facebook: social.facebook && `https://facebook.com/${social.facebook}`,
+          bluesky:
+            social.bluesky && `https://bsky.app/profile/${social.bluesky}`,
+          facebook:
+            social.facebook && `https://facebook.com/${social.facebook}`,
           github: social.github && `https://github.com/${social.github}`,
           linkedin: resolveLinkedin(social.linkedin),
           medium: social.medium && `https:// medium.com/${social.medium}`,
           instagram:
             social.instagram && `https://instagram.com/${social.instagram}`,
           twitter: social.twitter && `https://twitter.com/${social.twitter}`,
-          youtube: social.youtube && `https://www.youtube.com/${social.youtube}`,
+          youtube:
+            social.youtube && `https://www.youtube.com/${social.youtube}`,
           vk: social.vk && `https://vk.com/${social.vk}`,
         };
         const result: Record<string, string> = {};
@@ -296,7 +311,9 @@ const SeriesType = new GraphQLObjectType({
     id: { type: new GraphQLNonNull(GraphQLID) },
     name: { type: new GraphQLNonNull(GraphQLString) },
     conferences: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ConferenceType))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(ConferenceType))
+      ),
       resolve(series: { name: string }) {
         return Object.values(conferences).filter(
           (conference) => series.name === conference.series
@@ -333,7 +350,9 @@ const FontsType = new GraphQLObjectType({
   fields: {
     primary: { type: new GraphQLNonNull(GraphQLString) },
     secondary: { type: new GraphQLNonNull(GraphQLString) },
-    variants: { type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(FontType))) },
+    variants: {
+      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(FontType))),
+    },
   },
 });
 
@@ -359,7 +378,9 @@ const ThemeType = new GraphQLObjectType({
   fields: {
     id: { type: new GraphQLNonNull(GraphQLID) },
     fonts: { type: new GraphQLNonNull(FontsType) },
-    textures: { type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ImageType))) },
+    textures: {
+      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ImageType))),
+    },
     colors: { type: new GraphQLNonNull(ColorsType) },
     logos: { type: new GraphQLNonNull(LogosType) },
   },
@@ -392,19 +413,25 @@ const ConferenceType = new GraphQLObjectType<Conference, IContext>({
     websiteUrl: { type: new GraphQLNonNull(GraphQLString) },
     locations: { type: new GraphQLList(LocationType) },
     organizers: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ContactObjectType))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(ContactObjectType))
+      ),
     },
     mcs: { type: new GraphQLList(ContactObjectType) },
     partners: { type: new GraphQLList(ContactObjectType) },
     sponsors: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ContactObjectType))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(ContactObjectType))
+      ),
     },
     goldSponsors: { type: new GraphQLList(ContactObjectType) },
     silverSponsors: { type: new GraphQLList(ContactObjectType) },
     bronzeSponsors: { type: new GraphQLList(ContactObjectType) },
     platformSponsors: { type: new GraphQLList(ContactObjectType) },
     schedules: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ScheduleType))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(ScheduleType))
+      ),
     },
     allSpeakers: {
       type: new GraphQLList(ContactObjectType),
@@ -481,12 +508,16 @@ const ConferenceType = new GraphQLObjectType<Conference, IContext>({
       resolve(conference) {
         const talks = resolveSessions(conference.schedules, [SessionType.TALK]);
         const talkSpeakers = getSessionSpeakers(conference, talks);
-        const panels = resolveSessions(conference.schedules, [SessionType.PANEL]);
+        const panels = resolveSessions(conference.schedules, [
+          SessionType.PANEL,
+        ]);
         const panelSpeakers = getSessionSpeakers(conference, panels);
 
         return panelSpeakers.filter(
           (speaker) =>
-            !talkSpeakers.map((talkSpeaker) => talkSpeaker.name).includes(speaker.name)
+            !talkSpeakers
+              .map((talkSpeaker) => talkSpeaker.name)
+              .includes(speaker.name)
         );
       },
     },
@@ -533,13 +564,17 @@ const QueryType = new GraphQLObjectType({
       },
     },
     conferences: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ConferenceType))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(ConferenceType))
+      ),
       resolve() {
         return Object.values(conferences);
       },
     },
     allConferences: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ConferenceType))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(ConferenceType))
+      ),
       deprecationReason: "Use `conferences` instead",
       resolve() {
         return Object.values(conferences);
@@ -577,7 +612,9 @@ const QueryType = new GraphQLObjectType({
         let result: unknown;
 
         conference.schedules.forEach(({ intervals }) => {
-          const found = intervals.find(({ title }) => title === args.intervalTitle);
+          const found = intervals.find(
+            ({ title }) => title === args.intervalTitle
+          );
 
           if (found) {
             result = found;
@@ -624,10 +661,7 @@ const QueryType = new GraphQLObjectType({
         contactName: { type: new GraphQLNonNull(GraphQLString) },
         conferenceId: { type: new GraphQLNonNull(GraphQLID) },
       },
-      resolve(
-        _source,
-        args: { contactName: string; conferenceId: string }
-      ) {
+      resolve(_source, args: { contactName: string; conferenceId: string }) {
         const conference = getConference(args.conferenceId);
         const sponsor = conference.sponsors.find(
           ({ name }) => name === args.contactName
@@ -647,9 +681,10 @@ const QueryType = new GraphQLObjectType({
         const workshops = resolveSessions(conference.schedules, [
           SessionType.WORKSHOP,
         ]);
-        const workshopInstructor = getSessionSpeakers(conference, workshops).find(
-          ({ name }) => name === args.contactName
-        );
+        const workshopInstructor = getSessionSpeakers(
+          conference,
+          workshops
+        ).find(({ name }) => name === args.contactName);
         const mc =
           conference.mcs &&
           conference.mcs.find(({ name }) => name === args.contactName);
@@ -664,19 +699,25 @@ const QueryType = new GraphQLObjectType({
       },
     },
     locations: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(LocationType))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(LocationType))
+      ),
       resolve() {
         return Object.values(locations);
       },
     },
     people: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ContactObjectType))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(ContactObjectType))
+      ),
       resolve() {
         return Object.values(people);
       },
     },
     sponsors: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(ContactObjectType))),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(ContactObjectType))
+      ),
       resolve() {
         return Object.values(sponsors);
       },
