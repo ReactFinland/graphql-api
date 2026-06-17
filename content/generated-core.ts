@@ -135,6 +135,7 @@ import people__eli from "./people/eli";
 import people__elisa from "./people/elisa";
 import people__ellieDay from "./people/ellie-day";
 import people__eloyDuran from "./people/eloy-duran";
+import people__elsa from "./people/elsa";
 import people__emilia from "./people/emilia";
 import people__emma from "./people/emma";
 import people__emmi from "./people/emmi";
@@ -357,6 +358,7 @@ export const people = {
   elisa: people__elisa,
   ellieDay: people__ellieDay,
   eloyDuran: people__eloyDuran,
+  elsa: people__elsa,
   emilia: people__emilia,
   emma: people__emma,
   emmi: people__emmi,
@@ -579,6 +581,7 @@ export const eli = people.eli;
 export const elisa = people.elisa;
 export const ellieDay = people.ellieDay;
 export const eloyDuran = people.eloyDuran;
+export const elsa = people.elsa;
 export const emilia = people.emilia;
 export const emma = people.emma;
 export const emmi = people.emmi;
